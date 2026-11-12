@@ -16,6 +16,11 @@ Réglages dans `ops/dispatch.py` (fréquences, plafond de sessions par tick).
 ## 0. Préparer le dépôt
 - Le dépôt est déjà cloné. Travaille sur **`main`** : `git fetch origin main && git checkout main && git pull --rebase origin main`.
 - Si un push renvoie 403 : n'insiste pas, arrête-toi (l'absence de journal sera repérée par l'analyste).
+- Réseau : les sessions tournent dans l'environnement cloud « 10aday ». Hôtes autorisés en plus des registres de paquets :
+  `lawatch.github.io` (site publié), `api.github.com`, `10aday.goatcounter.com` (stats), et les sources officielles
+  `www.legifrance.gouv.fr`, `code.travail.gouv.fr`, `travail-emploi.gouv.fr`, `www.service-public.fr`, `entreprendre.service-public.fr`,
+  `www.urssaf.fr`, `www.impots.gouv.fr`. WebSearch/WebFetch fonctionnent en général pour le reste.
+  Un hôte indispensable est bloqué ? Ajoute une demande dans `HUMAN_QUEUE.md` avec l'hôte exact et pourquoi.
 
 ## 1. Verrou de ton couloir
 - Fichier : `state/locks/<couloir>.lock`, contenu : `AAAA-MM-JJTHH:MMZ <rôle>`.
