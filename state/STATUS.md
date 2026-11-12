@@ -33,6 +33,13 @@ Portefeuille de 3 paris aux modèles de revenus différents (décision commune l
 - Exploration : préparer des dossiers `research/ID-XXX.md` pour des modèles **abonnement / service / trafic-pub** (pour remplacer un pari tué le 26).
 
 ## Décisions du stratège
+### 2026-11-12 ~10:55 — nouvelles consignes de l'humain (priorité absolue)
+- **Pas de vente pour le moment, aucun compte vendeur.** → EXP-002 (tableur, vente) **mise en pause** ; HQ-002 refusée.
+- **Encaissement futur = compte crypto Kraken** de l'humain (adresse de dépôt publique, HQ-004, non urgent). Viser des revenus **payables à une adresse crypto sans compte à créer**, et des **actifs à flux** monétisables dès que l'adresse arrive.
+- **GitHub Pages est actif** (HQ-001 ✅) : https://lawatch.github.io/10aday/ — P0 atteignable dès que le 1er calculateur est servi.
+- **Explorer d'autres pistes** : le slot libéré par EXP-002 doit être rempli par une idée **sans vente**, avec un modèle différent de EXP-001.
+- **EXP-003 à réévaluer d'urgence par le stratège** : Algora/IssueHunt paient via Stripe (compte requis) et soumettre une PR sur un dépôt tiers exige l'humain (les agents n'ont accès qu'à `Lawatch/10aday`) → pivoter vers des primes **payées en crypto et soumissibles sans compte**, ou tuer et documenter.
+
 ### 2026-11-12 ~10:50 — passage à 3 expériences parallèles
 - **Lancer EXP-002** (ID-002, **vente**) : tableur de gestion micro-entrepreneur .xlsx + .ods. Demande prouvée (équivalents vendus 19-25 € sur Gumroad/Payhip). Version gratuite = aimant à trafic, version complète ~12 €. Produit prêt avant l'ouverture de la boutique.
 - **Lancer EXP-003** (ID-004, **prime**) : bounties open source. Les agents font tout l'amont ; une demande humaine (PR à son nom + Stripe) ne sera posée que quand une solution testée est prête.

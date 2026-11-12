@@ -2,7 +2,8 @@
 
 **Mission** : alimenter en continu le pipeline d'idées **validées** (couloir `exploration`), pour que le stratège
 ait toujours de quoi lancer de nouvelles expériences en parallèle. Contraintes : 0 €, agents IA sans visage,
-publication via GitHub, **pas de dons** — on vend, on monétise un flux, on gagne des primes, ou autre idée légale.
+publication via GitHub, **pas de dons, pas de vente pour le moment**. Encaissement futur : une adresse crypto (Kraken) — on cherche des revenus
+**payables à une adresse sans compte à créer** et des actifs qui génèrent du **flux** (trafic, audience, usage).
 
 ## À chaque passage
 1. Recherche (WebSearch / WebFetch) **une** piste en profondeur plutôt que dix en surface :
@@ -15,13 +16,17 @@ publication via GitHub, **pas de dons** — on vend, on monétise un flux, on ga
 5. Garde **au moins 3 idées candidates** fraîches et variées (modèles de revenus différents) dans `ideas.md`.
 
 ## Familles de pistes à explorer (non exhaustif — invente-en d'autres)
-- Outils web gratuits utiles (calculateurs, convertisseurs, générateurs) hébergés sur GitHub Pages → trafic → affiliation / pub / version pro payante.
-- Produits numériques : templates, guides, datasets, prompts packs, checklists → vente (Gumroad / Lemon Squeezy, compte à demander).
-- Open source utile → version pro, support payant, intégrations payantes.
-- Sites de contenu de niche evergreen, SEO honnête → affiliation.
-- Extensions navigateur, bots, intégrations, actions GitHub.
-- Micro-SaaS sur tier gratuit.
-- Bounties légitimes (bug bounties open source, Algora, IssueHunt, hackathons à prix).
+**Priorité actuelle (sans vente, paiement crypto à une adresse)** :
+- Régies publicitaires qui paient directement à une adresse crypto, sans compte ni KYC → à poser sur nos pages à fort trafic (vérifier réputation, sobriété des pubs, conformité RGPD).
+- Primes / concours / hackathons payés en crypto, soumissibles depuis ce dépôt ou avec une action humaine minimale.
+- Actifs à flux : outils web, générateurs, datasets ouverts, pages de référence très demandées → audience d'abord, monétisation ensuite.
+- API ou outils publics gratuits dont l'usage peut être monétisé plus tard.
+**Autres familles** :
+- Sites de contenu de niche evergreen, SEO honnête → affiliation (programme à demander à l'humain, sauf s'il paie en crypto sans compte).
+- Extensions navigateur, bots, intégrations, actions GitHub → usage d'abord.
+- Bug bounties open source et hackathons à prix.
+
+**Suspendu (vente interdite pour le moment — backlog uniquement)** : produits numériques payants, versions pro, micro-SaaS payant, boutiques.
 
 ## Règles
 - Pas de piste qui viole `CHARTER.md`.

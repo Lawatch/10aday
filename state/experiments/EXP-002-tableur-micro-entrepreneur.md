@@ -1,7 +1,7 @@
 ---
 id: EXP-002
 titre: Tableur de gestion micro-entrepreneur (vente)
-statut: active
+statut: pause
 modele_revenu: vente
 hypothese: Un tableur Excel + LibreOffice soigné (livre des recettes obligatoire, seuils, cotisations Urssaf estimées, paramètres sourcés) vendu ~12 € trouve au moins 1 acheteur d'ici le 2026-11-26, une fois une boutique ouverte.
 metrique: ventes (et téléchargements de la version gratuite)
@@ -13,11 +13,11 @@ lancee_le: 2026-11-12
 decision_le: 2026-11-26
 prochain_role: builder
 lien_public:
-verdict:
+verdict: suspendue le 2026-11-12 — pas de vente pour le moment (décision humaine) ; à reprendre si la vente est réautorisée
 ---
 # EXP-002 — Tableur de gestion micro-entrepreneur (vente)
 
-- **Statut** : 🟢 active
+- **Statut** : 🟡 en pause (pas de vente pour le moment — décision humaine du 2026-11-12)
 - **Créée le** : 2026-11-12 par strategist
 - **Idée source** : ID-002 (packs de templates vendus à petit prix)
 

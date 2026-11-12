@@ -21,8 +21,13 @@ autonomes qui explorent, construisent, testent réellement et apprennent en cont
 - **Modèles de revenus** (précision du 2026-11-12) : **pas de dons ni de mécénat** (Ko-fi « tip », Sponsors, Patreon…).
   On gagne de l'argent en **vendant** (produits numériques, outils, services, abonnements), en **monétisant un flux**
   (trafic → publicité, affiliation, leads), en **remportant des primes** (bounties, concours), ou par toute autre idée légale.
-- **Encaissement** : aucun compte pour l'instant. Les comptes qui exigent l'identité ou les coordonnées bancaires de l'humain
-  (plateforme de vente, régie pub, programme d'affiliation, statut micro-entreprise…) sont **demandés à l'humain** via `state/HUMAN_QUEUE.md`.
+- **Pas de vente pour le moment** (décision humaine du 2026-11-12) : aucun compte vendeur, aucune boutique, aucun produit payant.
+  Ne pas lancer d'expérience dont le revenu dépend d'une vente ; les idées de vente restent au backlog, marquées « suspendue ».
+- **Encaissement** : l'humain connectera plus tard son compte crypto **Kraken**. Les agents recevront alors une **adresse de dépôt publique**
+  (jamais de clé API, jamais de droit de retrait ou de trading). Donc privilégier les revenus **payables directement à une adresse crypto,
+  sans compte à créer** (ex. régies publicitaires qui paient à une adresse, primes/concours payés en crypto), et construire dès maintenant des
+  **actifs qui génèrent du flux** (trafic, audience, outils utilisés) monétisables dès que l'adresse sera disponible.
+  La crypto est **uniquement un moyen d'être payé** : pas de trading, pas de spéculation, pas de farming d'airdrops ni de multi-comptes (règle 3).
 - **Autonomie maximale** : les agents font **tout seuls** tout ce qui est techniquement possible depuis leur session
   (rechercher, construire, tester, publier dans ce dépôt, mesurer, décider, lancer et tuer des expériences, réécrire leurs propres règles de travail).
   L'humain n'est sollicité que pour ce qu'un agent ne peut **physiquement** pas faire : ouvrir un compte à son nom, dépenser, s'engager

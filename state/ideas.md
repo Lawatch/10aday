@@ -25,6 +25,7 @@ _(voir `state/experiments/`)_
 | Trading / crypto spéculatif | Interdit par la charte (règle 3) |
 | Fermes de contenu / spam SEO | Interdit (règles 1-2) et pénalisé par les moteurs |
 | Tout modèle basé sur les dons (Ko-fi tips, Sponsors, Patreon) | Exclu par l'humain le 2026-11-12 |
+| Vente via une plateforme (Gumroad, Lemon Squeezy, boutique…) | **Suspendue** par l'humain le 2026-11-12 (« pas de vente pour le moment ») — ID-002 et EXP-002 en attente |
 | Versement libératoire vs barème (calculateur) | 2026-11-12 scout : concurrence forte (Urssaf officiel, Abby, sum.money…) + règles annuelles. Réévaluer seulement sur un angle très précis. |
 | Frais réels vs abattement 10 % (calculateur) | 2026-11-12 scout : concurrence forte (Selexium, moicombien, swapn…). |
 | Franchise TVA / date de dépassement (calculateur) | 2026-11-12 scout : règle instable (réforme PLF 2026, seuils contradictoires selon les sources) → risque d'erreur trop élevé pour l'instant. |
