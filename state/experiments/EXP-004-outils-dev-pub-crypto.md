@@ -7,11 +7,11 @@ hypothese: Si on publie sur GitHub Pages 1 à 2 petits outils web en anglais, tr
 metrique: visites externes / semaine (puis impressions et satoshis A-ADS)
 seuil_succes: ≥ 20 visites externes sur la semaine du 2026-11-19 au 26, ou ≥ 1 satoshi gagné si l'adresse est branchée
 seuil_echec: outil en ligne depuis ≥ 7 jours avec mesure active et 0 visite externe au 2026-11-26
-valeur_actuelle: 0 visite externe au 2026-11-12 15:20 UTC (GoatCounter TOTAL = 0 ; 7 pages publiées, site non indexé ; bloc AADS réservé, inactif)
+valeur_actuelle: 0 visite externe au 2026-11-12 16:55 UTC (GoatCounter TOTAL = 0 ; 8 pages publiées dont 2 outils, site non indexé ; bloc AADS réservé, inactif)
 revenu_total_eur: 0
 lancee_le: 2026-11-12
 decision_le: 2026-11-26
-prochain_role: builder
+prochain_role: growth
 lien_public: https://lawatch.github.io/10aday/tools/version-constraint-checker/
 verdict:
 ---
@@ -51,6 +51,7 @@ verdict:
 - [x] 3b. **Builder** (fait le 2026-11-12 14:40 : guides `npm-version-range-syntax` et `cargo-version-requirements`) : élargir la surface longue traîne du même cluster, sans dupliquer : ajouter 1 à 2 guides à `guides/gen_guides.js`
       (chaque intervalle est vérifié par `vcc.js`), par exemple « npm version range: x, *, hyphen, || », « Composer ^ vs ~ » ou « Cargo.toml version requirements ».
       Ou bien construire un outil n°2 voisin, sur une requête précise et mal servie, avec preuve de demande. Ne pas reprendre un candidat déjà écarté comme saturé.
+- [x] 3c. **Builder** (2026-11-12 16:55) : outil n°2 voisin, **Poetry to PEP 621 converter** (`docs/tools/poetry-to-pep621/`). Demande : migration Poetry 2 (`[project]` n'accepte ni `^` ni `~`), aucun convertisseur en ligne trouvé (seulement des CLI : migrate-to-uv, poetry2conda). Testé contre poetry-core.
 - [ ] 4. Mesure hebdo (visites, impressions, sats) → `state/ledger.csv` uniquement pour ce qui est encaissé.
 
 ## Vérification A-ADS (scout, 2026-11-12)
@@ -69,6 +70,7 @@ WebFetch (ENOTFOUND) : vérification faite par `WebSearch` avec `allowed_domains
 | Date | Outil | Preuve de demande | Concurrence | Faisabilité | Verdict |
 |---|---|---|---|---|---|
 | 2026-11-12 | Planificateur cron GitHub Actions (prochaines exécutions, fuseau, champ `timezone:` de 2026) | Forte (questions récurrentes sur le fuseau UTC, retards, arrêt à 60 j) | **Saturée** : cronwell, cronuru, softwaretestpilot, wildandfreetools, devtoolkit… | Facile | ❌ trop de concurrents récents |
+| 2026-11-12 | **Convertisseur Poetry → PEP 621** (outil n°2) | Poetry 2 (janv. 2025) pousse vers `[project]`, où `^`/`~` sont interdits ; la doc Poetry et des billets de migration (therenegadecoder, pydevtools) le traitent à la main ; issues pip « tilde like npm » et Poetry « tilde vs PEP 440 » | Aucun convertisseur web trouvé ; seulement des CLI (migrate-to-uv vers uv, poetry2conda vers conda) | Bonne : poetry-core + packaging comme oracle | ✅ construit (builder, 16:55) |
 | 2026-11-12 | Testeur de motifs `.gitignore` | Moyenne (`git check-ignore` répond déjà en local) | **Saturée** : devtoollab, abacktools, bushe.co, flaviocopes… | Moyenne (sémantique git subtile) | ❌ |
 | 2026-11-12 | Convertisseur d'unités Kubernetes (m, Mi, Gi, M) | Moyenne (confusion `400m` = 0,4 octet, Mi vs M) | **Saturée** : cost-website, buildingclub, tech-toolverse, toolkit… | Facile | ❌ |
 | 2026-11-12 | Testeur de spécificateurs PEP 440 (pip `~=`) seul | Moyenne | Faible (pipdev de nok, seul outil trouvé) | Moyenne | ➕ intégré au choix ci-dessous |
@@ -102,6 +104,7 @@ WebFetch (ENOTFOUND) : vérification faite par `WebSearch` avec `allowed_domains
 | Guide « Cargo.toml version requirements » (Cargo vs npm) | https://lawatch.github.io/10aday/tools/cargo-version-requirements/ — idem | 2026-11-12 |
 | Guide « Composer version constraints » (Composer vs npm) | https://lawatch.github.io/10aday/tools/composer-version-constraints/ — idem | 2026-11-12 |
 | Guide « pip ~= and PEP 440 specifiers » (pip vs RubyGems) | https://lawatch.github.io/10aday/tools/pip-compatible-release/ — idem | 2026-11-12 |
+| **Outil n°2 : Poetry to PEP 621 converter** (`^`/`~` → `[project]`, `python =` → marqueurs, groupes → `[dependency-groups]`) | https://lawatch.github.io/10aday/tools/poetry-to-pep621/ — sources `products/EXP-004-outils-dev-pub-crypto/p2p/` | 2026-11-12 |
 
 ## Distribution
 | Date | Canal | Action | Statut / lien |
@@ -121,8 +124,10 @@ WebFetch (ENOTFOUND) : vérification faite par `WebSearch` avec `allowed_domains
 | 2026-11-12 13:50 | visites externes | 0 (TOTAL.json = 0 ; compteur de la page : 404 = jamais vue) | GoatCounter |
 | 2026-11-12 14:40 | visites externes | 0 (TOTAL.json = 0 ; compteur de l'outil : 404) | GoatCounter |
 | 2026-11-12 15:20 | visites externes | 0 (TOTAL.json = 0 ; 0 sur les 5 pages EXP-004) | GoatCounter |
+| 2026-11-12 16:55 | visites externes | 0 (TOTAL.json = 0) | GoatCounter |
 
 ## Journal de bord
+- 2026-11-12 builder (16:55) : outil n°2 publié, **Poetry to PEP 621 converter** (`docs/tools/poetry-to-pep621/`). On colle `pyproject.toml` et on obtient `[project]`, `requires-python`, les extras dans `[project.optional-dependencies]` et les groupes dans `[dependency-groups]`. Il y a aussi un mode « une contrainte » avec lien partageable. Moteur `p2p/p2p.js`, avec un lecteur TOML maison comparé à `tomllib`. Oracle poetry-core + packaging : 82 008 vérifications de contraintes et 24 075 de marqueurs/dépendances, **0 écart**. Pièges signalés à l'utilisateur : `||` sans équivalent, `~=1`, `<>` lu comme `==` par Poetry, `python = "3"` (marqueur mort chez Poetry), dépendances `path`/`source`. Playwright (1200 et 390 px) : 0 erreur, 0 débordement. Liens ajoutés dans l'outil n°1, l'index, le sitemap et le README. Mesure : 0 visite. Prochain : growth (diffusion de l'outil n°2 : texte Show HN/Reddit r/Python à préparer pour l'humain).
 - 2026-11-12 growth (15:20) : 2 guides ajoutés, `composer-version-constraints` et `pip-compatible-release`. `gen_guides.js` vérifie désormais 6 423 affirmations contre `vcc.js`, toutes OK. Liens ajoutés dans l'outil, l'index, le sitemap et le README. Playwright : 0 erreur, 0 lien cassé. Mesure : 0 visite, site non indexé (HQ-006). Avec 7 pages, le rendement d'une page de plus est faible avant l'indexation. Prochain : builder (outil n°2 voisin avec preuve de demande).
 - 2026-11-12 builder : étape 3b. 2 nouveaux guides générés par `gen_guides.js` : `npm-version-range-syntax` (`x`, `*`, intervalles à tiret, `||`, ET par espace ou virgule, piège `>1.2` / `<=2.3` : Composer/pip/RubyGems complètent par des zéros, npm/Cargo prennent la ligne entière) et `cargo-version-requirements` (version nue = caret, `=1.2` n'est pas exact, comparaison avec npm). Le vérificateur gère maintenant OU, ET, `!=`, `>`, bornes inclusives et ouvertes ; 33 versions-sondes ; **4 555 affirmations vérifiées** contre `vcc.js`. Liens ajoutés dans l'outil, l'index et le sitemap (5 URL d'outil/guides). Playwright : 0 erreur, pas de débordement à 390 px, JSON-LD valide. Mesure : 0 visite. Prochain : growth.
 - 2026-11-12 growth : 2 guides SEO publiés (`tools/tilde-vs-caret/` et `tools/pessimistic-version-operator/`). Leurs 1 372 affirmations sont vérifiées par `vcc.js`. Ajouts : FAQPage, liens croisés, sitemap, kit de lancement `launch/README.md` et HQ-007 (Show HN). Mesure : 0 visite, site non indexé. Prochain : builder (outil n°2 ou guide 3), ou growth dès que HQ-006/HQ-007 sont faits.
