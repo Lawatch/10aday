@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Poetry Caret (^) and Tilde (~) Explained, with PEP 440 Equivalents for pyproject.toml</title>
+<meta name="description" content="What ^1.2.3, ^0.2.3, ~1.2.3, ~1.2, 1.2.* and a bare 1.2.3 mean in Poetry, the exact PEP 440 specifier for each (for [project] dependencies, pip and uv), and the common ~= translation mistake.">
+<link rel="canonical" href="https://lawatch.github.io/10aday/tools/poetry-version-constraints/">
+<meta property="og:title" content="Poetry Caret (^) and Tilde (~) Explained, with PEP 440 Equivalents for pyproject.toml">
+<meta property="og:description" content="What ^1.2.3, ^0.2.3, ~1.2.3, ~1.2, 1.2.* and a bare 1.2.3 mean in Poetry, the exact PEP 440 specifier for each (for [project] dependencies, pip and uv), and the common ~= translation mistake.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://lawatch.github.io/10aday/tools/poetry-version-constraints/">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does ^ mean in Poetry?","acceptedAnswer":{"@type":"Answer","text":"It is a caret requirement: updates that do not change the left-most non-zero number are allowed. ^1.2.3 = ≥1.2.3 &lt;2.0.0, ^0.2.3 = ≥0.2.3 &lt;0.3.0, ^0.0.3 = ≥0.0.3 &lt;0.0.4. In PEP 440 you write &gt;=1.2.3,&lt;2.0.0."}},{"@type":"Question","name":"What does ~ mean in Poetry?","acceptedAnswer":{"@type":"Answer","text":"A tilde requirement. With two or three numbers only the last one may increase, starting from the second: ~1.2.3 = ≥1.2.3 &lt;1.3.0 and ~1.2 = ≥1.2 &lt;1.3. With one number, ~1 = ≥1 &lt;2."}},{"@type":"Question","name":"Is ^1.2.3 the same as ~=1.2.3?","acceptedAnswer":{"@type":"Answer","text":"No. ~=1.2.3 stops before 1.3.0; ^1.2.3 goes up to 2.0.0. The PEP 440 form of ^1.2.3 is &gt;=1.2.3,&lt;2.0.0. For ^1.2, ~=1.2 is equivalent."}},{"@type":"Question","name":"Can I use ^ in [project] dependencies with Poetry 2?","acceptedAnswer":{"@type":"Answer","text":"No. Poetry 2 reads PEP 621 [project] metadata, where only PEP 440 specifiers are valid; ^ and ~ are only accepted in [tool.poetry.dependencies]. uv and pip reject them too."}},{"@type":"Question","name":"How do I write ^1.2 || ^2.0 in PEP 440?","acceptedAnswer":{"@type":"Answer","text":"You cannot in one specifier: PEP 440 has no “or”. Here the two ranges touch, so &gt;=1.2,&lt;3.0 is equivalent. When they do not touch, pick one range or split the dependency with environment markers."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"10aday","item":"https://lawatch.github.io/10aday/"},{"@type":"ListItem","position":2,"name":"Version Constraint Checker","item":"https://lawatch.github.io/10aday/tools/version-constraint-checker/"},{"@type":"ListItem","position":3,"name":"Poetry ^ and ~ to PEP 440","item":"https://lawatch.github.io/10aday/tools/poetry-version-constraints/"}]}</script>
+<style>
+  body{font-family:system-ui,-apple-system,Segoe UI,sans-serif;max-width:900px;margin:2rem auto;padding:0 1rem;line-height:1.6;color:#1d1d1f}
+  h1{font-size:1.6rem;margin:.2rem 0 .6rem} h2{font-size:1.2rem;margin-top:2rem}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+  table{border-collapse:collapse;width:100%;margin:.6rem 0;font-size:.92rem}
+  th,td{border:1px solid #ddd;padding:.35rem .5rem;text-align:left;vertical-align:top}
+  th{background:#f6f6f6} td.hl{background:#fff4d6;font-weight:600} .na{color:#999}
+  .muted{color:#666} .cta{background:#eef4ff;border:1px solid #b8cdf5;padding:.7rem .9rem;border-radius:6px}
+  footer{margin-top:3rem;font-size:.85rem;color:#666;border-top:1px solid #ddd;padding-top:1rem}
+</style>
+</head>
+<body>
+<p class="muted"><a href="../../">10aday</a> › <a href="../version-constraint-checker/">Version Constraint Checker</a> › Poetry ^ and ~ to PEP 440</p>
+<h1>Poetry <code>^</code> and <code>~</code> version constraints, and how to write them in PEP 440</h1>
+<p><strong>Short answer:</strong> in Poetry, <code>^1.2.3</code> means ≥1.2.3 &lt;2.0.0: anything up to the next change of the left-most non-zero number. So <code>^0.2.3</code> means ≥0.2.3 &lt;0.3.0.
+<code>~1.2.3</code> means ≥1.2.3 &lt;1.3.0 (patch updates), but <code>~1</code> means &lt;2. A bare <code>1.2.3</code> is an exact pin.
+Neither <code>^</code> nor <code>~</code> exist in PEP 440, so the <code>[project]</code> table used by Poetry 2, uv, pip and Hatch rejects them. Write the bounds out: <code>^1.2.3</code> → <code>&gt;=1.2.3,&lt;2.0.0</code>.
+Careful: <code>~=1.2.3</code> is <em>not</em> the same as <code>^1.2.3</code>.</p>
+<p class="cta">Migrating a whole file to Poetry 2 or uv? Paste your <code>pyproject.toml</code> into the <a href="../poetry-to-pep621/"><strong>Poetry to PEP 621 converter</strong></a>: it rewrites every dependency, the <code>python</code> constraint and the groups.</p><p class="cta">Have a constraint and a list of versions? Paste them into the <a href="../version-constraint-checker/"><strong>Version Constraint Checker</strong></a>: it shows, side by side, what npm, Cargo, Composer, pip and RubyGems accept.</p>
+<h2>Poetry constraints and their PEP 440 form</h2>
+<p>Middle column: the exact text to put in <code>[project] dependencies</code>, <code>requirements.txt</code> or <code>uv add</code>. It is what our converter outputs, and each range is checked with pip's rules.</p>
+<div style="overflow-x:auto"><table><tr><th>Poetry (<code>[tool.poetry]</code>)</th><th>PEP 440 (<code>[project]</code>, pip, uv)</th><th>Allows</th></tr>
+<tr><td><code>^1.2.3</code></td><td><code>&gt;=1.2.3,&lt;2.0.0</code></td><td>≥1.2.3 &lt;2.0.0</td></tr>
+<tr><td><code>^1.2</code></td><td><code>&gt;=1.2,&lt;2.0</code></td><td>≥1.2.0 &lt;2.0.0</td></tr>
+<tr><td><code>^1</code></td><td><code>&gt;=1,&lt;2</code></td><td>≥1.0.0 &lt;2.0.0</td></tr>
+<tr><td><code>^0.2.3</code><br><small>below 1.0, the minor is the breaking number</small></td><td class="hl"><code>&gt;=0.2.3,&lt;0.3.0</code></td><td>≥0.2.3 &lt;0.3.0</td></tr>
+<tr><td><code>^0.0.3</code><br><small>only 0.0.3</small></td><td class="hl"><code>&gt;=0.0.3,&lt;0.0.4</code></td><td>≥0.0.3 &lt;0.0.4</td></tr>
+<tr><td><code>^0</code></td><td><code>&gt;=0,&lt;1</code></td><td>≥0.0.0 &lt;1.0.0</td></tr>
+<tr><td><code>~1.2.3</code></td><td><code>&gt;=1.2.3,&lt;1.3.0</code></td><td>≥1.2.3 &lt;1.3.0</td></tr>
+<tr><td><code>~1.2</code></td><td><code>&gt;=1.2,&lt;1.3</code></td><td>≥1.2.0 &lt;1.3.0</td></tr>
+<tr><td><code>~1</code><br><small>one number: same as ^1</small></td><td class="hl"><code>&gt;=1,&lt;2</code></td><td>≥1.0.0 &lt;2.0.0</td></tr>
+<tr><td><code>~0.2.3</code></td><td><code>&gt;=0.2.3,&lt;0.3.0</code></td><td>≥0.2.3 &lt;0.3.0</td></tr>
+<tr><td><code>~=1.2</code><br><small>already PEP 440</small></td><td><code>~=1.2</code></td><td>≥1.2.0 &lt;2.0.0</td></tr>
+<tr><td><code>~=1</code><br><small>Poetry accepts it, pip does not</small></td><td class="hl"><code>&gt;=1,&lt;2</code></td><td>≥1.0.0 &lt;2.0.0</td></tr>
+<tr><td><code>1.2.*</code></td><td><code>==1.2.*</code></td><td>≥1.2.0 &lt;1.3.0</td></tr>
+<tr><td><code>*</code></td><td><code>""</code> (no specifier)</td><td>any version</td></tr>
+<tr><td><code>1.2.3</code><br><small>bare version: exact pin (Cargo would read ^)</small></td><td class="hl"><code>==1.2.3</code></td><td>exactly 1.2.3</td></tr>
+<tr><td><code>&gt;=1.2 &lt;2.0</code><br><small>space or comma = and</small></td><td><code>&gt;=1.2,&lt;2.0</code></td><td>≥1.2.0 &lt;2.0.0</td></tr>
+<tr><td><code>^1.2 || ^2.0</code></td><td class="hl"><code>&gt;=1.2,&lt;2.0</code> <b>or</b> <code>&gt;=2.0,&lt;3.0</code><br><small>no single PEP 440 form</small></td><td>≥1.2.0 &lt;2.0.0 <b>or</b> ≥2.0.0 &lt;3.0.0</td></tr>
+</table></div>
+<p class="muted">Ranges shown for final releases. Poetry and pip both skip pre-releases (<code>2.0.0rc1</code>) unless you ask for them, but their edge rules differ; the <a href="../poetry-to-pep621/">converter</a> lists the cases it cannot translate exactly.</p>
+<h2>The usual mistake: translating ^ into ~=</h2>
+<p>Both look like “compatible release”, so <code>^</code> is often rewritten as <code>~=</code> with the same numbers. That is right for <code>^1.2</code> and <code>^0.2.3</code>, wrong for <code>^1.2.3</code> and <code>^0.2</code>:</p>
+<div style="overflow-x:auto"><table><tr><th>Poetry</th><th>Wrong translation</th><th>It allows</th><th>Should allow</th></tr>
+<tr><td><code>^1.2.3</code></td><td><code>~=1.2.3</code></td><td class="hl">≥1.2.3 &lt;1.3.0</td><td>≥1.2.3 &lt;2.0.0</td></tr>
+<tr><td><code>^0.2</code></td><td><code>~=0.2</code></td><td class="hl">≥0.2.0 &lt;1.0.0</td><td>≥0.2.0 &lt;0.3.0</td></tr>
+<tr><td><code>^1.2</code></td><td><code>~=1.2</code> (fine)</td><td>≥1.2.0 &lt;2.0.0</td><td>≥1.2.0 &lt;2.0.0</td></tr>
+<tr><td><code>^0.2.3</code></td><td><code>~=0.2.3</code> (fine)</td><td>≥0.2.3 &lt;0.3.0</td><td>≥0.2.3 &lt;0.3.0</td></tr>
+</table></div>
+<p><code>~=1.2.3</code> blocks the 1.3 minor release that <code>^1.2.3</code> allowed: you silently stop getting features and fixes.
+<code>~=0.2</code> lets 0.3 and later 0.x releases in, which <code>^0.2</code> excluded on purpose, since before 1.0 a minor bump may break the API.</p>
+<h2>Where each syntax is accepted</h2>
+<ul>
+<li><strong><code>[tool.poetry.dependencies]</code></strong> (Poetry 1 and 2): <code>^</code>, <code>~</code>, <code>*</code>, <code>||</code>, a bare version, and PEP 440 operators.</li>
+<li><strong><code>[project] dependencies</code></strong> (PEP 621: Poetry 2, uv, Hatch, PDM, setuptools): PEP 440 only. Poetry's documentation says caret and tilde are not supported there.</li>
+<li><strong>pip, <code>requirements.txt</code>, <code>uv add</code></strong>: PEP 440 only. Same for the Python version: <code>python = "^3.10"</code> becomes <code>requires-python = "&gt;=3.10,&lt;4.0"</code>, though many projects simply write <code>"&gt;=3.10"</code>.</li>
+</ul>
+<!-- AADS slot: activate after HQ-004 -->
+<h2>Common questions</h2>
+<h3>What does ^ mean in Poetry?</h3>
+<p>It is a caret requirement: updates that do not change the left-most non-zero number are allowed. <code>^1.2.3</code> = ≥1.2.3 &lt;2.0.0, <code>^0.2.3</code> = ≥0.2.3 &lt;0.3.0, <code>^0.0.3</code> = ≥0.0.3 &lt;0.0.4. In PEP 440 you write <code>&gt;=1.2.3,&lt;2.0.0</code>.</p>
+<h3>What does ~ mean in Poetry?</h3>
+<p>A tilde requirement. With two or three numbers only the last one may increase, starting from the second: <code>~1.2.3</code> = ≥1.2.3 &lt;1.3.0 and <code>~1.2</code> = ≥1.2 &lt;1.3. With one number, <code>~1</code> = ≥1 &lt;2.</p>
+<h3>Is ^1.2.3 the same as ~=1.2.3?</h3>
+<p>No. <code>~=1.2.3</code> stops before 1.3.0; <code>^1.2.3</code> goes up to 2.0.0. The PEP 440 form of <code>^1.2.3</code> is <code>&gt;=1.2.3,&lt;2.0.0</code>. For <code>^1.2</code>, <code>~=1.2</code> is equivalent.</p>
+<h3>Can I use ^ in [project] dependencies with Poetry 2?</h3>
+<p>No. Poetry 2 reads PEP 621 <code>[project]</code> metadata, where only PEP 440 specifiers are valid; <code>^</code> and <code>~</code> are only accepted in <code>[tool.poetry.dependencies]</code>. uv and pip reject them too.</p>
+<h3>How do I write ^1.2 || ^2.0 in PEP 440?</h3>
+<p>You cannot in one specifier: PEP 440 has no “or”. Here the two ranges touch, so <code>&gt;=1.2,&lt;3.0</code> is equivalent. When they do not touch, pick one range or split the dependency with environment markers.</p>
+<h2>Related</h2>
+<ul><li><a href="../version-constraint-checker/">Version Constraint Checker</a> — test any constraint against your versions in five package managers</li><li><a href="../poetry-to-pep621/">Poetry to PEP 621 converter</a> — turn Poetry <code>^</code> and <code>~</code> into <code>[project]</code> dependencies (Poetry 2, uv)</li><li><a href="../tilde-vs-caret/">Tilde vs caret</a></li><li><a href="../pessimistic-version-operator/">~> vs ~= vs ~</a></li><li><a href="../npm-version-range-syntax/">x, *, hyphen and || ranges</a></li><li><a href="../cargo-version-requirements/">Cargo.toml version requirements</a></li><li><a href="../composer-version-constraints/">Composer version constraints</a></li><li><a href="../pip-compatible-release/">pip ~= and version specifiers</a></li></ul>
+<h2>Sources</h2>
+<ul>
+<li>npm: <a href="https://github.com/npm/node-semver#advanced-range-syntax">node-semver, advanced range syntax</a></li>
+<li>Cargo: <a href="https://doc.rust-lang.org/cargo/reference/specifying-dependencies.html">Specifying dependencies</a></li>
+<li>Composer: <a href="https://getcomposer.org/doc/articles/versions.md">Versions and constraints</a></li>
+<li>pip: <a href="https://packaging.python.org/en/latest/specifications/version-specifiers/#compatible-release">Version specifiers, compatible release</a></li>
+<li>RubyGems: <a href="https://guides.rubygems.org/patterns/#pessimistic-version-constraint">Pessimistic version constraint</a></li>
+</ul>
+<footer>
+<p><strong>Built by AI agents</strong> as part of the <a href="../../">10aday</a> project. Every range on this page is generated by the engine of the
+<a href="../version-constraint-checker/">Version Constraint Checker</a> and checked on probe versions. That engine agrees 100% with node-semver 7.8.5, the Rust <code>semver</code> crate 1.0.28,
+composer/semver 3.6.0, Python <code>packaging</code> 26.3 and RubyGems 3.5.22 on about 330,000 test pairs. Found a mistake? <a href="https://github.com/Lawatch/10aday/issues">Open an issue</a>.</p>
+</footer>
+<script data-goatcounter="https://10aday.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

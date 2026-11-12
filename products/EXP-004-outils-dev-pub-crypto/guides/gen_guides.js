@@ -6,6 +6,7 @@ const fs = require('fs'); const path = require('path');
 const ROOT = path.join(__dirname, '..');
 global.nodeSemver = (function () { const m = {}; const src = fs.readFileSync(path.join(ROOT, 'semver.min.js'), 'utf8'); new Function('globalThis', src + ';globalThis.nodeSemver=nodeSemver;')(m); return m.nodeSemver; })();
 const VCC = require(path.join(ROOT, 'vcc.js'));
+const P2P = require(path.join(ROOT, 'p2p', 'p2p.js'));
 const cmp = (a, b) => { const x = a.split('.').map(Number), y = b.split('.').map(Number); for (let i = 0; i < 3; i++) if (x[i] !== y[i]) return x[i] - y[i]; return 0; };
 const BASE = 'https://lawatch.github.io/10aday/tools/';
 const CHECKER = BASE + 'version-constraint-checker/';
@@ -35,6 +36,32 @@ function verify(eco, c, spec) {
     if (got !== want) throw new Error(`${eco} ${JSON.stringify(c)} on ${v}: engine says ${got}, page says ${want} (${JSON.stringify(spec)})`);
     checks++;
   }
+}
+
+// Poetry rows: the PEP 440 text written on the page must be exactly what the converter (p2p.js, 0 mismatch vs poetry-core)
+// produces, and the range shown must match pip's engine (vcc.js) on every probe version.
+function verifyPoetry(c, pep, spec) {
+  const r = P2P.constraint(c);
+  const got = r.spec === null ? r.groups.map(g => g.join(',')) : [r.spec];
+  const want = Array.isArray(pep) ? pep : [pep];
+  if (JSON.stringify(got) !== JSON.stringify(want)) throw new Error(`poetry ${c}: converter says ${JSON.stringify(got)}, page says ${JSON.stringify(want)}`);
+  checks++;
+  const sets = want.map(x => VCC.pip.parse(x));
+  for (const v of PROBES) {
+    const g = sets.some(s => s.test(v)), w = contains(spec, v);
+    if (g !== w) throw new Error(`poetry ${c} -> ${want} on ${v}: pip engine says ${g}, page says ${w}`);
+    checks++;
+  }
+}
+function verifyPip(pep, spec) { verify('pip', pep, spec); }
+function poetryTable(rows) {
+  let h = '<div style="overflow-x:auto"><table><tr><th>Poetry (<code>[tool.poetry]</code>)</th><th>PEP 440 (<code>[project]</code>, pip, uv)</th><th>Allows</th></tr>\n';
+  for (const r of rows) {
+    verifyPoetry(r.c, r.pep, r.spec);
+    const pep = Array.isArray(r.pep) ? r.pep.map(x => `<code>${esc(x)}</code>`).join(' <b>or</b> ') + '<br><small>no single PEP 440 form</small>' : (r.pep === '' ? '<code>""</code> (no specifier)' : `<code>${esc(r.pep)}</code>`);
+    h += `<tr><td><code>${esc(r.c)}</code>${r.note ? `<br><small>${r.note}</small>` : ''}</td><td${r.hl ? ' class="hl"' : ''}>${pep}</td><td>${show(r.spec)}</td></tr>\n`;
+  }
+  return h + '</table></div>';
 }
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 function show(spec) {
@@ -105,7 +132,7 @@ function page(g) {
 <p class="muted"><a href="../../">10aday</a> › <a href="../version-constraint-checker/">Version Constraint Checker</a> › ${g.short}</p>
 <h1>${g.h1}</h1>
 ${g.intro}
-<p class="cta">Have a constraint and a list of versions? Paste them into the <a href="../version-constraint-checker/"><strong>Version Constraint Checker</strong></a>: it shows, side by side, what npm, Cargo, Composer, pip and RubyGems accept.</p>
+${g.cta || ''}<p class="cta">Have a constraint and a list of versions? Paste them into the <a href="../version-constraint-checker/"><strong>Version Constraint Checker</strong></a>: it shows, side by side, what npm, Cargo, Composer, pip and RubyGems accept.</p>
 ${g.body(table)}
 <!-- AADS slot: activate after HQ-004 -->
 <h2>Common questions</h2>
@@ -405,6 +432,64 @@ ${t(['pip', 'npm', 'composer'], [
 <li>For a library that follows semver, <code>~=1.4</code> (any 1.x from 1.4) is the usual choice; <code>~=1.4.2</code> allows bug-fix releases only.</li>
 <li>Python has no caret: <code>^1.4</code> is a Poetry extension, rejected by pip and by the <code>[project]</code> table of pyproject.toml.</li>
 <li>Coming from Ruby? <code>~=</code> is your <code>~&gt;</code>, except that it needs two numbers. Coming from npm? See <a href="../pessimistic-version-operator/">~&gt; vs ~= vs ~</a>.</li>
+</ul>`
+},
+{
+  slug: 'poetry-version-constraints',
+  short: 'Poetry ^ and ~ to PEP 440',
+  title: 'Poetry Caret (^) and Tilde (~) Explained, with PEP 440 Equivalents for pyproject.toml',
+  h1: 'Poetry <code>^</code> and <code>~</code> version constraints, and how to write them in PEP 440',
+  description: 'What ^1.2.3, ^0.2.3, ~1.2.3, ~1.2, 1.2.* and a bare 1.2.3 mean in Poetry, the exact PEP 440 specifier for each (for [project] dependencies, pip and uv), and the common ~= translation mistake.',
+  cta: `<p class="cta">Migrating a whole file to Poetry 2 or uv? Paste your <code>pyproject.toml</code> into the <a href="../poetry-to-pep621/"><strong>Poetry to PEP 621 converter</strong></a>: it rewrites every dependency, the <code>python</code> constraint and the groups.</p>`,
+  intro: `<p><strong>Short answer:</strong> in Poetry, <code>^1.2.3</code> means ≥1.2.3 &lt;2.0.0: anything up to the next change of the left-most non-zero number. So <code>^0.2.3</code> means ≥0.2.3 &lt;0.3.0.
+<code>~1.2.3</code> means ≥1.2.3 &lt;1.3.0 (patch updates), but <code>~1</code> means &lt;2. A bare <code>1.2.3</code> is an exact pin.
+Neither <code>^</code> nor <code>~</code> exist in PEP 440, so the <code>[project]</code> table used by Poetry 2, uv, pip and Hatch rejects them. Write the bounds out: <code>^1.2.3</code> → <code>&gt;=1.2.3,&lt;2.0.0</code>.
+Careful: <code>~=1.2.3</code> is <em>not</em> the same as <code>^1.2.3</code>.</p>`,
+  faq: [
+    ['What does ^ mean in Poetry?', 'It is a caret requirement: updates that do not change the left-most non-zero number are allowed. <code>^1.2.3</code> = ≥1.2.3 &lt;2.0.0, <code>^0.2.3</code> = ≥0.2.3 &lt;0.3.0, <code>^0.0.3</code> = ≥0.0.3 &lt;0.0.4. In PEP 440 you write <code>&gt;=1.2.3,&lt;2.0.0</code>.'],
+    ['What does ~ mean in Poetry?', 'A tilde requirement. With two or three numbers only the last one may increase, starting from the second: <code>~1.2.3</code> = ≥1.2.3 &lt;1.3.0 and <code>~1.2</code> = ≥1.2 &lt;1.3. With one number, <code>~1</code> = ≥1 &lt;2.'],
+    ['Is ^1.2.3 the same as ~=1.2.3?', 'No. <code>~=1.2.3</code> stops before 1.3.0; <code>^1.2.3</code> goes up to 2.0.0. The PEP 440 form of <code>^1.2.3</code> is <code>&gt;=1.2.3,&lt;2.0.0</code>. For <code>^1.2</code>, <code>~=1.2</code> is equivalent.'],
+    ['Can I use ^ in [project] dependencies with Poetry 2?', 'No. Poetry 2 reads PEP 621 <code>[project]</code> metadata, where only PEP 440 specifiers are valid; <code>^</code> and <code>~</code> are only accepted in <code>[tool.poetry.dependencies]</code>. uv and pip reject them too.'],
+    ['How do I write ^1.2 || ^2.0 in PEP 440?', 'You cannot in one specifier: PEP 440 has no “or”. Here the two ranges touch, so <code>&gt;=1.2,&lt;3.0</code> is equivalent. When they do not touch, pick one range or split the dependency with environment markers.'],
+  ],
+  body: () => `<h2>Poetry constraints and their PEP 440 form</h2>
+<p>Middle column: the exact text to put in <code>[project] dependencies</code>, <code>requirements.txt</code> or <code>uv add</code>. It is what our converter outputs, and each range is checked with pip's rules.</p>
+${poetryTable([
+  { c: '^1.2.3', pep: '>=1.2.3,<2.0.0', spec: ['1.2.3', '2.0.0'] },
+  { c: '^1.2', pep: '>=1.2,<2.0', spec: ['1.2.0', '2.0.0'] },
+  { c: '^1', pep: '>=1,<2', spec: ['1.0.0', '2.0.0'] },
+  { c: '^0.2.3', pep: '>=0.2.3,<0.3.0', spec: ['0.2.3', '0.3.0'], hl: 1, note: 'below 1.0, the minor is the breaking number' },
+  { c: '^0.0.3', pep: '>=0.0.3,<0.0.4', spec: ['0.0.3', '0.0.4'], hl: 1, note: 'only 0.0.3' },
+  { c: '^0', pep: '>=0,<1', spec: ['0.0.0', '1.0.0'] },
+  { c: '~1.2.3', pep: '>=1.2.3,<1.3.0', spec: ['1.2.3', '1.3.0'] },
+  { c: '~1.2', pep: '>=1.2,<1.3', spec: ['1.2.0', '1.3.0'] },
+  { c: '~1', pep: '>=1,<2', spec: ['1.0.0', '2.0.0'], hl: 1, note: 'one number: same as ^1' },
+  { c: '~0.2.3', pep: '>=0.2.3,<0.3.0', spec: ['0.2.3', '0.3.0'] },
+  { c: '~=1.2', pep: '~=1.2', spec: ['1.2.0', '2.0.0'], note: 'already PEP 440' },
+  { c: '~=1', pep: '>=1,<2', spec: ['1.0.0', '2.0.0'], hl: 1, note: 'Poetry accepts it, pip does not' },
+  { c: '1.2.*', pep: '==1.2.*', spec: ['1.2.0', '1.3.0'] },
+  { c: '*', pep: '', spec: [null, null] },
+  { c: '1.2.3', pep: '==1.2.3', spec: ['=', '1.2.3'], hl: 1, note: 'bare version: exact pin (Cargo would read ^)' },
+  { c: '>=1.2 <2.0', pep: '>=1.2,<2.0', spec: ['1.2.0', '2.0.0'], note: 'space or comma = and' },
+  { c: '^1.2 || ^2.0', pep: ['>=1.2,<2.0', '>=2.0,<3.0'], spec: { or: [['1.2.0', '2.0.0'], ['2.0.0', '3.0.0']] }, hl: 1 },
+])}
+<p class="muted">Ranges shown for final releases. Poetry and pip both skip pre-releases (<code>2.0.0rc1</code>) unless you ask for them, but their edge rules differ; the <a href="../poetry-to-pep621/">converter</a> lists the cases it cannot translate exactly.</p>
+<h2>The usual mistake: translating ^ into ~=</h2>
+<p>Both look like “compatible release”, so <code>^</code> is often rewritten as <code>~=</code> with the same numbers. That is right for <code>^1.2</code> and <code>^0.2.3</code>, wrong for <code>^1.2.3</code> and <code>^0.2</code>:</p>
+<div style="overflow-x:auto"><table><tr><th>Poetry</th><th>Wrong translation</th><th>It allows</th><th>Should allow</th></tr>
+${[['^1.2.3', '~=1.2.3', ['1.2.3', '1.3.0'], ['1.2.3', '2.0.0']], ['^0.2', '~=0.2', ['0.2.0', '1.0.0'], ['0.2.0', '0.3.0']], ['^1.2', '~=1.2', ['1.2.0', '2.0.0'], ['1.2.0', '2.0.0']], ['^0.2.3', '~=0.2.3', ['0.2.3', '0.3.0'], ['0.2.3', '0.3.0']]].map(([c, wrong, got, want]) => {
+  verifyPip(wrong, got); verifyPoetry(c, P2P.constraint(c).spec, want);
+  const same = JSON.stringify(got) === JSON.stringify(want);
+  return `<tr><td><code>${esc(c)}</code></td><td><code>${esc(wrong)}</code>${same ? ' (fine)' : ''}</td><td${same ? '' : ' class="hl"'}>${show(got)}</td><td>${show(want)}</td></tr>`;
+}).join('\n')}
+</table></div>
+<p><code>~=1.2.3</code> blocks the 1.3 minor release that <code>^1.2.3</code> allowed: you silently stop getting features and fixes.
+<code>~=0.2</code> lets 0.3 and later 0.x releases in, which <code>^0.2</code> excluded on purpose, since before 1.0 a minor bump may break the API.</p>
+<h2>Where each syntax is accepted</h2>
+<ul>
+<li><strong><code>[tool.poetry.dependencies]</code></strong> (Poetry 1 and 2): <code>^</code>, <code>~</code>, <code>*</code>, <code>||</code>, a bare version, and PEP 440 operators.</li>
+<li><strong><code>[project] dependencies</code></strong> (PEP 621: Poetry 2, uv, Hatch, PDM, setuptools): PEP 440 only. Poetry's documentation says caret and tilde are not supported there.</li>
+<li><strong>pip, <code>requirements.txt</code>, <code>uv add</code></strong>: PEP 440 only. Same for the Python version: <code>python = "^3.10"</code> becomes <code>requires-python = "&gt;=3.10,&lt;4.0"</code>, though many projects simply write <code>"&gt;=3.10"</code>.</li>
 </ul>`
 },
 ];
