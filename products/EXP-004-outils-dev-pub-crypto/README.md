@@ -23,3 +23,8 @@ Page publiée : `docs/tools/poetry-to-pep621/` → https://lawatch.github.io/10a
   `node p2p/oracle/deps.js > /tmp/d.json && python3 p2p/oracle/check_deps.py /tmp/d.json` (marqueurs `python =` et dépendances complètes comparés à `Dependency.to_pep_508()`) ;
   `node p2p/test.js` (fichier complet ; le lecteur TOML est comparé à `tomllib`, chaque ligne est validée par `packaging.Requirement`).
 - Résultat au 2026-11-12 : 82 008 + 24 075 vérifications, 0 écart. Divergences voulues et signalées à l'utilisateur : label local `+…` dans une comparaison ordonnée (interdit par PEP 440), `python = "3"` (Poetry écrit un marqueur qui ne correspond à aucun interpréteur).
+
+## Outil n°3 : requires-python checker (`rpc/`)
+Page publiée : `docs/tools/requires-python-checker/` → https://lawatch.github.io/10aday/tools/requires-python-checker/
+- `rpc/rpc.js` : pour un spécificateur `requires-python`, liste les versions de Python acceptées (2.7 à 4.0, patchs .0 à .40) et signale les pièges (`<=3.12`, `==3.10`, `>3.10`, `~=3.10.2`, plafonds, syntaxe Poetry `^`/`~` traduite par `p2p.js`). Le moteur réutilise `vcc.js` (pip) et `p2p.js` ; la page charge les copies publiées des outils n°1 et n°2.
+- Oracle : `node rpc/dump.js SEED > f.json && python3 rpc/oracle.py f.json` (≈ 330 spécificateurs × 779 versions = 256 291 vérifications contre `packaging`, 0 écart sur les graines 1 à 8). `node rpc/test.js` : copie publiée identique + cas clés.
