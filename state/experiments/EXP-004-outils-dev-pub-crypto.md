@@ -7,11 +7,11 @@ hypothese: Si on publie sur GitHub Pages 1 à 2 petits outils web en anglais, tr
 metrique: visites externes / semaine (puis impressions et satoshis A-ADS)
 seuil_succes: ≥ 20 visites externes sur la semaine du 2026-11-19 au 26, ou ≥ 1 satoshi gagné si l'adresse est branchée
 seuil_echec: outil en ligne depuis ≥ 7 jours avec mesure active et 0 visite externe au 2026-11-26
-valeur_actuelle: 0 visite externe (outil n°1 publié le 2026-11-12, GoatCounter actif ; bloc AADS réservé, inactif)
+valeur_actuelle: 0 visite externe au 2026-11-12 13:50 UTC (GoatCounter TOTAL = 0 ; 3 pages publiées, site non indexé ; bloc AADS réservé, inactif)
 revenu_total_eur: 0
 lancee_le: 2026-11-12
 decision_le: 2026-11-26
-prochain_role: growth
+prochain_role: builder
 lien_public: https://lawatch.github.io/10aday/tools/version-constraint-checker/
 verdict:
 ---
@@ -47,7 +47,10 @@ verdict:
       réalisable en 100 % client-side ; consigner 5 candidats évalués et le choix ici. Puis `prochain_role: growth`.
 - [x] 2. **Builder** : construire l'outil (logique + tests exhaustifs), page publiée dans `docs/tools/<slug>/` avec SEO on-page, bloc pub
       prêt mais **désactivé** tant que HQ-004 n'est pas fait (emplacement réservé, pas de faux bloc). Ligne dans `docs/index.html`.
-- [ ] 3. **Growth** : sitemap, liens internes, soumission possible sans compte ; quand HQ-004 arrive : activer A-ADS.
+- [~] 3. **Growth** : sitemap, liens internes, soumission possible sans compte ; quand HQ-004 arrive : activer A-ADS. → fait le 2026-11-12 : 2 guides SEO, FAQPage, liens croisés, sitemap, kit de lancement + HQ-007 (Show HN). Reste : AADS (HQ-004).
+- [ ] 3b. **Builder** : élargir la surface longue traîne du même cluster, sans dupliquer : ajouter 1 à 2 guides à `guides/gen_guides.js`
+      (chaque intervalle est vérifié par `vcc.js`), par exemple « npm version range: x, *, hyphen, || », « Composer ^ vs ~ » ou « Cargo.toml version requirements ».
+      Ou bien construire un outil n°2 voisin, sur une requête précise et mal servie, avec preuve de demande. Ne pas reprendre un candidat déjà écarté comme saturé.
 - [ ] 4. Mesure hebdo (visites, impressions, sats) → `state/ledger.csv` uniquement pour ce qui est encaissé.
 
 ## Vérification A-ADS (scout, 2026-11-12)
@@ -93,13 +96,27 @@ WebFetch (ENOTFOUND) : vérification faite par `WebSearch` avec `allowed_domains
 | Quoi | Lien / chemin | Date |
 |---|---|---|
 | Version Constraint Checker (npm, Cargo, Composer, pip, RubyGems) | https://lawatch.github.io/10aday/tools/version-constraint-checker/ — sources `products/EXP-004-outils-dev-pub-crypto/` | 2026-11-12 |
+| Guide « Tilde vs caret » (npm, Cargo, Composer) | https://lawatch.github.io/10aday/tools/tilde-vs-caret/ — généré par `guides/gen_guides.js` | 2026-11-12 |
+| Guide « ~> vs ~= vs ~ » (5 gestionnaires) | https://lawatch.github.io/10aday/tools/pessimistic-version-operator/ — idem | 2026-11-12 |
+
+## Distribution
+| Date | Canal | Action | Statut / lien |
+|---|---|---|---|
+| 2026-11-12 | SEO on-page | FAQPage + BreadcrumbList JSON-LD, twitter:card, section « Guides » sur l'outil, 2 guides ciblant « tilde vs caret », « composer tilde », « gemfile ~> », « pip ~= » | fait (agent) |
+| 2026-11-12 | Sitemap / index | 2 nouvelles URL dans `docs/sitemap.xml`, liens dans `docs/index.html` | fait (agent) |
+| 2026-11-12 | Search Console / Bing | soumission du sitemap | en attente humain (HQ-006) |
+| 2026-11-12 | IndexNow | 3 liens de ping prêts (`launch/README.md` §1) ; `api.indexnow.org` bloqué depuis les sessions | en attente humain |
+| 2026-11-12 | Show HN | texte prêt (`launch/README.md` §2) | en attente humain (HQ-007) |
+| 2026-11-12 | Listes awesome | recherche : seule `JohnTitor/awesome-semver` (★2, inactive) → pas de PR | écarté |
 
 ## Métriques (historique)
 | Date | Métrique | Valeur | Source |
 |---|---|---|---|
 | 2026-11-12 | visites externes | 0 (page tout juste publiée) | GoatCounter |
+| 2026-11-12 13:50 | visites externes | 0 (TOTAL.json = 0 ; compteur de la page : 404 = jamais vue) | GoatCounter |
 
 ## Journal de bord
+- 2026-11-12 growth : 2 guides SEO publiés (`tools/tilde-vs-caret/` et `tools/pessimistic-version-operator/`). Leurs 1 372 affirmations sont vérifiées par `vcc.js`. Ajouts : FAQPage, liens croisés, sitemap, kit de lancement `launch/README.md` et HQ-007 (Show HN). Mesure : 0 visite, site non indexé. Prochain : builder (outil n°2 ou guide 3), ou growth dès que HQ-006/HQ-007 sont faits.
 - 2026-11-12 builder : outil n°1 publié (`docs/tools/version-constraint-checker/`). Le moteur `vcc.js` réimplémente Cargo, Composer, pip et RubyGems en JS ; pour npm, il embarque node-semver. Il est testé contre les 5 implémentations de référence : 9 816/9 816 sur le jeu fixe, 100 % sur 8 graines aléatoires (≈ 330 000 vérifications). La page contient la matrice version × écosystème, un bandeau « ne veut pas dire la même chose partout », la section pré-versions, une antisèche statique, une FAQ, les sources officielles et un lien de partage. GoatCounter est en place et l'emplacement AADS est réservé (commentaire). Ligne ajoutée dans `docs/index.html` et dans `sitemap.xml`. Prochain : growth.
 - 2026-11-12 scout : AADS vérifié (sans compte ✅, filtre Gambling ✅, iframe sans cookie ✅, min. 0,001 BTC on-chain / 0 en Lightning) ; 5 candidats évalués ; choix : testeur de contraintes de version multi-écosystèmes (`version-constraint-checker`), spec + oracle prêts. Prochain : builder.
 - 2026-11-12 strategist : expérience créée (remplace EXP-003 tuée ; modèle « trafic-pub » payé en BTC). Prochain : scout.

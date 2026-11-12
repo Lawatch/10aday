@@ -65,3 +65,9 @@ Format :
 - Ne rien écrire ici d'autre que « fait » (pas d'e-mail ni d'identifiant). Le fichier de validation Google n'est pas secret.
 - Réponse :
 
+
+### HQ-007 — Poster un « Show HN » pour l'outil dev EXP-004 (≈ 5 min + réponses aux commentaires)  [🟡 ouvert — après HQ-006]
+- Demandé par / le : growth (exp-EXP-004), 2026-11-12
+- Pourquoi : c'est le canal légitime le plus direct vers des développeurs anglophones pour un outil gratuit sans inscription (« Show HN » est fait pour ça). Le SEO seul mettra des semaines (site non indexé). Un post peut apporter les premières visites externes (P1) et des liens entrants qui accélèrent l'indexation. Aucun agent ne peut le faire : il faut un compte Hacker News.
+- Action exacte : sur https://news.ycombinator.com/submit, un jour de semaine vers 14-16 h UTC. Titre, URL et premier commentaire **prêts à coller** dans `products/EXP-004-outils-dev-pub-crypto/launch/README.md` §2. Un seul post. Rester 1 h pour répondre aux questions si possible. Facultatif : poser les 3 liens IndexNow du §1 du même fichier.
+- Réponse :
