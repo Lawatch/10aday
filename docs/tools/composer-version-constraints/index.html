@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Composer Version Constraints Explained: ~, ^, *, Exact and Ranges in composer.json (vs npm)</title>
+<meta name="description" content="Exact ranges for every composer.json constraint: ~1.2 (&gt;=1.2 &lt;2.0), ~1.2.3, ^0.3, 1.2.*, bare &quot;1.2&quot; (exactly 1.2.0), hyphen ranges, || and comma. Where Composer and npm disagree.">
+<link rel="canonical" href="https://lawatch.github.io/10aday/tools/composer-version-constraints/">
+<meta property="og:title" content="Composer Version Constraints Explained: ~, ^, *, Exact and Ranges in composer.json (vs npm)">
+<meta property="og:description" content="Exact ranges for every composer.json constraint: ~1.2 (&gt;=1.2 &lt;2.0), ~1.2.3, ^0.3, 1.2.*, bare &quot;1.2&quot; (exactly 1.2.0), hyphen ranges, || and comma. Where Composer and npm disagree.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://lawatch.github.io/10aday/tools/composer-version-constraints/">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does ~1.2 mean in composer.json?","acceptedAnswer":{"@type":"Answer","text":"≥1.2.0 and &lt;2.0.0: the last number you wrote (2) may increase. npm and Cargo read the same ~1.2 as ≥1.2.0 &lt;1.3.0. Write ~1.2.0 in Composer if you want patch updates only."}},{"@type":"Question","name":"What is the difference between ^ and ~ in Composer?","acceptedAnswer":{"@type":"Answer","text":"With three numbers: ^1.2.3 = ≥1.2.3 &lt;2.0.0 and ~1.2.3 = ≥1.2.3 &lt;1.3.0. With two numbers they are the same for 1.x and above: ^1.2 = ~1.2 = ≥1.2.0 &lt;2.0.0. Below 1.0 they differ: ^0.3 = &lt;0.4.0 but ~0.3 = &lt;1.0.0."}},{"@type":"Question","name":"Does \"1.2\" in composer.json mean 1.2.x?","acceptedAnswer":{"@type":"Answer","text":"No. A bare version without an operator or wildcard is an exact constraint, padded with zeros: \"1.2\" matches 1.2.0 only. Write \"1.2.*\" for the whole 1.2.x line. (In npm, a bare 1.2 means 1.2.x.)"}},{"@type":"Question","name":"How do I write \"and\" and \"or\" in Composer?","acceptedAnswer":{"@type":"Answer","text":"A space or a comma means “and” (&gt;=1.2 &lt;2.0 or &gt;=1.2,&lt;2.0); || means “or” (^1.2 || ^2.0). Hyphen ranges like 1.2 - 2.3 include the whole 2.3.x line."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"10aday","item":"https://lawatch.github.io/10aday/"},{"@type":"ListItem","position":2,"name":"Version Constraint Checker","item":"https://lawatch.github.io/10aday/tools/version-constraint-checker/"},{"@type":"ListItem","position":3,"name":"Composer version constraints","item":"https://lawatch.github.io/10aday/tools/composer-version-constraints/"}]}</script>
+<style>
+  body{font-family:system-ui,-apple-system,Segoe UI,sans-serif;max-width:900px;margin:2rem auto;padding:0 1rem;line-height:1.6;color:#1d1d1f}
+  h1{font-size:1.6rem;margin:.2rem 0 .6rem} h2{font-size:1.2rem;margin-top:2rem}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+  table{border-collapse:collapse;width:100%;margin:.6rem 0;font-size:.92rem}
+  th,td{border:1px solid #ddd;padding:.35rem .5rem;text-align:left;vertical-align:top}
+  th{background:#f6f6f6} td.hl{background:#fff4d6;font-weight:600} .na{color:#999}
+  .muted{color:#666} .cta{background:#eef4ff;border:1px solid #b8cdf5;padding:.7rem .9rem;border-radius:6px}
+  footer{margin-top:3rem;font-size:.85rem;color:#666;border-top:1px solid #ddd;padding-top:1rem}
+</style>
+</head>
+<body>
+<p class="muted"><a href="../../">10aday</a> › <a href="../version-constraint-checker/">Version Constraint Checker</a> › Composer version constraints</p>
+<h1>Composer version constraints: what <code>~1.2</code>, <code>^1.2</code>, <code>1.2.*</code> and <code>"1.2"</code> really allow in composer.json</h1>
+<p><strong>Short answer:</strong> in <code>composer.json</code>, <code>^1.2.3</code> allows ≥1.2.3 &lt;2.0.0 (like npm). The tilde lets the <strong>last number you wrote</strong> move:
+<code>~1.2</code> = ≥1.2.0 &lt;2.0.0, <code>~1.2.3</code> = ≥1.2.3 &lt;1.3.0. A bare version is <strong>exact</strong>, even a partial one: <code>"1.2"</code> means 1.2.0 only.
+Those last two rules are where people coming from npm get surprised.</p>
+<p class="cta">Have a constraint and a list of versions? Paste them into the <a href="../version-constraint-checker/"><strong>Version Constraint Checker</strong></a>: it shows, side by side, what npm, Cargo, Composer, pip and RubyGems accept.</p>
+<h2>Every Composer constraint form, next to npm</h2>
+<p>Highlighted: npm reads the same string differently.</p>
+<div style="overflow-x:auto"><table><tr><th>Constraint</th><th>Composer</th><th>npm</th><th></th></tr>
+<tr><td><code>&quot;1.2.3&quot; (bare)</code></td><td>exactly 1.2.3</td><td>exactly 1.2.3</td><td><a href="../version-constraint-checker/?c=1.2.3&amp;v=0.3.0%2C0.9.9%2C1.2.0%2C1.2.3%2C1.2.9%2C1.3.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>&quot;1.2&quot; (bare)</code><br><small>Composer: exactly 1.2.0</small></td><td>exactly 1.2.0</td><td class="hl">≥1.2.0 &lt;1.3.0</td><td><a href="../version-constraint-checker/?c=1.2&amp;v=0.3.0%2C0.9.9%2C1.2.0%2C1.2.3%2C1.2.9%2C1.3.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>~1.2.3</code></td><td>≥1.2.3 &lt;1.3.0</td><td>≥1.2.3 &lt;1.3.0</td><td><a href="../version-constraint-checker/?c=~1.2.3&amp;v=0.3.0%2C0.9.9%2C1.2.0%2C1.2.3%2C1.2.9%2C1.3.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>~1.2</code></td><td>≥1.2.0 &lt;2.0.0</td><td class="hl">≥1.2.0 &lt;1.3.0</td><td><a href="../version-constraint-checker/?c=~1.2&amp;v=0.3.0%2C0.9.9%2C1.2.0%2C1.2.3%2C1.2.9%2C1.3.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>~1</code></td><td>≥1.0.0 &lt;2.0.0</td><td>≥1.0.0 &lt;2.0.0</td><td><a href="../version-constraint-checker/?c=~1&amp;v=0.3.0%2C0.9.9%2C1.2.0%2C1.2.3%2C1.2.9%2C1.3.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>~0.3</code></td><td>≥0.3.0 &lt;1.0.0</td><td class="hl">≥0.3.0 &lt;0.4.0</td><td><a href="../version-constraint-checker/?c=~0.3&amp;v=0.3.0%2C0.9.9%2C1.2.0%2C1.2.3%2C1.2.9%2C1.3.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>^1.2.3</code></td><td>≥1.2.3 &lt;2.0.0</td><td>≥1.2.3 &lt;2.0.0</td><td><a href="../version-constraint-checker/?c=%5E1.2.3&amp;v=0.3.0%2C0.9.9%2C1.2.0%2C1.2.3%2C1.2.9%2C1.3.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>^1.2</code></td><td>≥1.2.0 &lt;2.0.0</td><td>≥1.2.0 &lt;2.0.0</td><td><a href="../version-constraint-checker/?c=%5E1.2&amp;v=0.3.0%2C0.9.9%2C1.2.0%2C1.2.3%2C1.2.9%2C1.3.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>^0.3</code><br><small>below 1.0: minor = breaking</small></td><td>≥0.3.0 &lt;0.4.0</td><td>≥0.3.0 &lt;0.4.0</td><td><a href="../version-constraint-checker/?c=%5E0.3&amp;v=0.3.0%2C0.9.9%2C1.2.0%2C1.2.3%2C1.2.9%2C1.3.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>^0.0.3</code></td><td>≥0.0.3 &lt;0.0.4</td><td>≥0.0.3 &lt;0.0.4</td><td><a href="../version-constraint-checker/?c=%5E0.0.3&amp;v=0.3.0%2C0.9.9%2C1.2.0%2C1.2.3%2C1.2.9%2C1.3.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>1.2.*</code></td><td>≥1.2.0 &lt;1.3.0</td><td>≥1.2.0 &lt;1.3.0</td><td><a href="../version-constraint-checker/?c=1.2.*&amp;v=0.3.0%2C0.9.9%2C1.2.0%2C1.2.3%2C1.2.9%2C1.3.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>1.*</code></td><td>≥1.0.0 &lt;2.0.0</td><td>≥1.0.0 &lt;2.0.0</td><td><a href="../version-constraint-checker/?c=1.*&amp;v=0.3.0%2C0.9.9%2C1.2.0%2C1.2.3%2C1.2.9%2C1.3.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>*</code></td><td>any version</td><td>any version</td><td><a href="../version-constraint-checker/?c=*&amp;v=0.3.0%2C0.9.9%2C1.2.0%2C1.2.3%2C1.2.9%2C1.3.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>&gt;=1.2 &lt;2.0</code></td><td>≥1.2.0 &lt;2.0.0</td><td>≥1.2.0 &lt;2.0.0</td><td><a href="../version-constraint-checker/?c=%3E%3D1.2%20%3C2.0&amp;v=0.3.0%2C0.9.9%2C1.2.0%2C1.2.3%2C1.2.9%2C1.3.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>&gt;=1.2,&lt;2.0</code><br><small>npm has no comma</small></td><td>≥1.2.0 &lt;2.0.0</td><td class="hl"><span class="na">not valid</span></td><td><a href="../version-constraint-checker/?c=%3E%3D1.2%2C%3C2.0&amp;v=0.3.0%2C0.9.9%2C1.2.0%2C1.2.3%2C1.2.9%2C1.3.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>&gt;1.2</code></td><td>&gt;1.2.0</td><td class="hl">≥1.3.0</td><td><a href="../version-constraint-checker/?c=%3E1.2&amp;v=0.3.0%2C0.9.9%2C1.2.0%2C1.2.3%2C1.2.9%2C1.3.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>!=1.2.3</code></td><td>not 1.2.3</td><td class="hl"><span class="na">not valid</span></td><td><a href="../version-constraint-checker/?c=!%3D1.2.3&amp;v=0.3.0%2C0.9.9%2C1.2.0%2C1.2.3%2C1.2.9%2C1.3.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>1.2 - 2.3</code></td><td>≥1.2.0 &lt;2.4.0</td><td>≥1.2.0 &lt;2.4.0</td><td><a href="../version-constraint-checker/?c=1.2%20-%202.3&amp;v=0.3.0%2C0.9.9%2C1.2.0%2C1.2.3%2C1.2.9%2C1.3.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>^1.2 || ^3.0</code></td><td>≥1.2.0 &lt;2.0.0 <b>or</b> ≥3.0.0 &lt;4.0.0</td><td>≥1.2.0 &lt;2.0.0 <b>or</b> ≥3.0.0 &lt;4.0.0</td><td><a href="../version-constraint-checker/?c=%5E1.2%20%7C%7C%20%5E3.0&amp;v=0.3.0%2C0.9.9%2C1.2.0%2C1.2.3%2C1.2.9%2C1.3.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+</table></div>
+<p class="muted">Ranges shown for stable releases. Composer also filters by stability (<code>minimum-stability</code>, <code>@dev</code>, <code>@beta</code> flags), which this table does not cover; the
+<a href="../version-constraint-checker/">checker</a> shows how pre-releases such as <code>1.3.0-RC1</code> are handled.</p>
+<h2>Rules of thumb for composer.json</h2>
+<ul>
+<li>Use <code>^</code> by default (<code>composer require</code> writes it for you): it follows semantic versioning, including the 0.x rule.</li>
+<li>Use <code>~</code> with <strong>three numbers</strong> (<code>~1.2.3</code>) to allow patch updates only. With two numbers it behaves like Ruby's <code>~&gt;</code> and pip's <code>~=</code>: see <a href="../pessimistic-version-operator/">~&gt; vs ~= vs ~</a>.</li>
+<li>Never write a bare partial version (<code>"1.2"</code>) expecting a range: it is an exact pin on 1.2.0.</li>
+</ul>
+<!-- AADS slot: activate after HQ-004 -->
+<h2>Common questions</h2>
+<h3>What does ~1.2 mean in composer.json?</h3>
+<p>≥1.2.0 and &lt;2.0.0: the last number you wrote (2) may increase. npm and Cargo read the same <code>~1.2</code> as ≥1.2.0 &lt;1.3.0. Write <code>~1.2.0</code> in Composer if you want patch updates only.</p>
+<h3>What is the difference between ^ and ~ in Composer?</h3>
+<p>With three numbers: <code>^1.2.3</code> = ≥1.2.3 &lt;2.0.0 and <code>~1.2.3</code> = ≥1.2.3 &lt;1.3.0. With two numbers they are the same for 1.x and above: <code>^1.2</code> = <code>~1.2</code> = ≥1.2.0 &lt;2.0.0. Below 1.0 they differ: <code>^0.3</code> = &lt;0.4.0 but <code>~0.3</code> = &lt;1.0.0.</p>
+<h3>Does "1.2" in composer.json mean 1.2.x?</h3>
+<p>No. A bare version without an operator or wildcard is an exact constraint, padded with zeros: <code>"1.2"</code> matches 1.2.0 only. Write <code>"1.2.*"</code> for the whole 1.2.x line. (In npm, a bare <code>1.2</code> means 1.2.x.)</p>
+<h3>How do I write "and" and "or" in Composer?</h3>
+<p>A space or a comma means “and” (<code>&gt;=1.2 &lt;2.0</code> or <code>&gt;=1.2,&lt;2.0</code>); <code>||</code> means “or” (<code>^1.2 || ^2.0</code>). Hyphen ranges like <code>1.2 - 2.3</code> include the whole 2.3.x line.</p>
+<h2>Related</h2>
+<ul><li><a href="../version-constraint-checker/">Version Constraint Checker</a> — test any constraint against your versions in five package managers</li><li><a href="../tilde-vs-caret/">Tilde vs caret</a></li><li><a href="../pessimistic-version-operator/">~> vs ~= vs ~</a></li><li><a href="../npm-version-range-syntax/">x, *, hyphen and || ranges</a></li><li><a href="../cargo-version-requirements/">Cargo.toml version requirements</a></li><li><a href="../pip-compatible-release/">pip ~= and version specifiers</a></li></ul>
+<h2>Sources</h2>
+<ul>
+<li>npm: <a href="https://github.com/npm/node-semver#advanced-range-syntax">node-semver, advanced range syntax</a></li>
+<li>Cargo: <a href="https://doc.rust-lang.org/cargo/reference/specifying-dependencies.html">Specifying dependencies</a></li>
+<li>Composer: <a href="https://getcomposer.org/doc/articles/versions.md">Versions and constraints</a></li>
+<li>pip: <a href="https://packaging.python.org/en/latest/specifications/version-specifiers/#compatible-release">Version specifiers, compatible release</a></li>
+<li>RubyGems: <a href="https://guides.rubygems.org/patterns/#pessimistic-version-constraint">Pessimistic version constraint</a></li>
+</ul>
+<footer>
+<p><strong>Built by AI agents</strong> as part of the <a href="../../">10aday</a> project. Every range on this page is generated by the engine of the
+<a href="../version-constraint-checker/">Version Constraint Checker</a> and checked on probe versions. That engine agrees 100% with node-semver 7.8.5, the Rust <code>semver</code> crate 1.0.28,
+composer/semver 3.6.0, Python <code>packaging</code> 26.3 and RubyGems 3.5.22 on about 330,000 test pairs. Found a mistake? <a href="https://github.com/Lawatch/10aday/issues">Open an issue</a>.</p>
+</footer>
+<script data-goatcounter="https://10aday.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

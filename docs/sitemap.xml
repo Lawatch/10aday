@@ -37,4 +37,12 @@
     <loc>https://lawatch.github.io/10aday/tools/cargo-version-requirements/</loc>
     <lastmod>2026-11-12</lastmod>
   </url>
+  <url>
+    <loc>https://lawatch.github.io/10aday/tools/composer-version-constraints/</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://lawatch.github.io/10aday/tools/pip-compatible-release/</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
 </urlset>

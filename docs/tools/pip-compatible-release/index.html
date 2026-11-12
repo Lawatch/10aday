@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pip ~= Compatible Release and PEP 440 Version Specifiers Explained (with Gemfile ~> compared)</title>
+<meta name="description" content="What ~=1.4.2, ~=1.4, ==1.4.*, ==1.4, !=, &gt;1.4 and a bare &quot;1.4&quot; mean in requirements.txt and pyproject.toml, with exact ranges, and how they compare with Ruby ~&gt;.">
+<link rel="canonical" href="https://lawatch.github.io/10aday/tools/pip-compatible-release/">
+<meta property="og:title" content="pip ~= Compatible Release and PEP 440 Version Specifiers Explained (with Gemfile ~&gt; compared)">
+<meta property="og:description" content="What ~=1.4.2, ~=1.4, ==1.4.*, ==1.4, !=, &gt;1.4 and a bare &quot;1.4&quot; mean in requirements.txt and pyproject.toml, with exact ranges, and how they compare with Ruby ~&gt;.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://lawatch.github.io/10aday/tools/pip-compatible-release/">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does ~= mean in requirements.txt?","acceptedAnswer":{"@type":"Answer","text":"It is the PEP 440 “compatible release” operator. ~=1.4.2 = ≥1.4.2, ==1.4.* (&lt;1.5.0). ~=1.4 = ≥1.4, ==1.* (&lt;2.0). It equals Ruby's ~&gt; and Composer's ~, but not npm's ~ when you write two numbers."}},{"@type":"Question","name":"What is the difference between ==1.4 and ==1.4.*?","acceptedAnswer":{"@type":"Answer","text":"==1.4 matches only 1.4 (and 1.4.0, which is the same version under PEP 440). ==1.4.* matches every 1.4.x release: ≥1.4.0 &lt;1.5.0."}},{"@type":"Question","name":"Why is ~=1 invalid?","acceptedAnswer":{"@type":"Answer","text":"PEP 440 requires at least two release numbers with ~=, because it drops the last one to build the prefix. Use ~=1.0 (≥1.0, &lt;2.0) or ==1.* instead."}},{"@type":"Question","name":"How do I say \"1.x but not 1.4.1\" in pip?","acceptedAnswer":{"@type":"Answer","text":"Join clauses with a comma: &gt;=1.0, &lt;2.0, !=1.4.1. Every clause must hold. pip has no “or” operator; || is rejected."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"10aday","item":"https://lawatch.github.io/10aday/"},{"@type":"ListItem","position":2,"name":"Version Constraint Checker","item":"https://lawatch.github.io/10aday/tools/version-constraint-checker/"},{"@type":"ListItem","position":3,"name":"pip ~= and version specifiers","item":"https://lawatch.github.io/10aday/tools/pip-compatible-release/"}]}</script>
+<style>
+  body{font-family:system-ui,-apple-system,Segoe UI,sans-serif;max-width:900px;margin:2rem auto;padding:0 1rem;line-height:1.6;color:#1d1d1f}
+  h1{font-size:1.6rem;margin:.2rem 0 .6rem} h2{font-size:1.2rem;margin-top:2rem}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+  table{border-collapse:collapse;width:100%;margin:.6rem 0;font-size:.92rem}
+  th,td{border:1px solid #ddd;padding:.35rem .5rem;text-align:left;vertical-align:top}
+  th{background:#f6f6f6} td.hl{background:#fff4d6;font-weight:600} .na{color:#999}
+  .muted{color:#666} .cta{background:#eef4ff;border:1px solid #b8cdf5;padding:.7rem .9rem;border-radius:6px}
+  footer{margin-top:3rem;font-size:.85rem;color:#666;border-top:1px solid #ddd;padding-top:1rem}
+</style>
+</head>
+<body>
+<p class="muted"><a href="../../">10aday</a> › <a href="../version-constraint-checker/">Version Constraint Checker</a> › pip ~= and version specifiers</p>
+<h1>pip <code>~=</code> “compatible release” and PEP 440 version specifiers: exact ranges for requirements.txt</h1>
+<p><strong>Short answer:</strong> <code>~=1.4.2</code> means ≥1.4.2 and ==1.4.* (so &lt;1.5.0); <code>~=1.4</code> means ≥1.4 and ==1.* (so &lt;2.0). The last number you wrote may increase.
+<code>~=1</code> is invalid: compatible release needs at least two numbers. <code>==1.4</code> is exact (it matches 1.4.0 too, because PEP 440 pads with zeros),
+<code>==1.4.*</code> is the wildcard, and a version without an operator (<code>requests 2.31</code>) is not a valid specifier. Multiple clauses are joined with a comma, and there is no “or”.</p>
+<p class="cta">Have a constraint and a list of versions? Paste them into the <a href="../version-constraint-checker/"><strong>Version Constraint Checker</strong></a>: it shows, side by side, what npm, Cargo, Composer, pip and RubyGems accept.</p>
+<h2>PEP 440 specifiers, next to RubyGems</h2>
+<p>Each cell shows how that tool spells it, then the range it allows. Highlighted: where the meanings differ.</p>
+<div style="overflow-x:auto"><table><tr><th>Constraint</th><th>pip</th><th>RubyGems</th><th></th></tr>
+<tr><td><code>~=1.4.2</code></td><td><code>~=1.4.2</code><br>≥1.4.2 &lt;1.5.0</td><td><code>~&gt; 1.4.2</code><br>≥1.4.2 &lt;1.5.0</td><td><a href="../version-constraint-checker/?c=~%3D1.4.2&amp;v=0.9.9%2C1.0.0%2C1.4.0%2C1.4.1%2C1.4.2%2C1.4.9%2C1.5.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>~=1.4</code></td><td><code>~=1.4</code><br>≥1.4.0 &lt;2.0.0</td><td><code>~&gt; 1.4</code><br>≥1.4.0 &lt;2.0.0</td><td><a href="../version-constraint-checker/?c=~%3D1.4&amp;v=0.9.9%2C1.0.0%2C1.4.0%2C1.4.1%2C1.4.2%2C1.4.9%2C1.5.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>~=1</code><br><small>pip needs two numbers</small></td><td class="hl"><code>~=1</code><br><span class="na">not valid</span></td><td><code>~&gt; 1</code><br>≥1.0.0 &lt;2.0.0</td><td><a href="../version-constraint-checker/?c=~%3D1&amp;v=0.9.9%2C1.0.0%2C1.4.0%2C1.4.1%2C1.4.2%2C1.4.9%2C1.5.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>~=0.2</code><br><small>no special 0.x rule</small></td><td><code>~=0.2</code><br>≥0.2.0 &lt;1.0.0</td><td><code>~&gt; 0.2</code><br>≥0.2.0 &lt;1.0.0</td><td><a href="../version-constraint-checker/?c=~%3D0.2&amp;v=0.9.9%2C1.0.0%2C1.4.0%2C1.4.1%2C1.4.2%2C1.4.9%2C1.5.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>==1.4.*</code><br><small>RubyGems: use ~> 1.4.0</small></td><td>≥1.4.0 &lt;1.5.0</td><td class="hl"><span class="na">not valid</span></td><td><a href="../version-constraint-checker/?c=%3D%3D1.4.*&amp;v=0.9.9%2C1.0.0%2C1.4.0%2C1.4.1%2C1.4.2%2C1.4.9%2C1.5.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>==1.*</code></td><td>≥1.0.0 &lt;2.0.0</td><td class="hl"><span class="na">not valid</span></td><td><a href="../version-constraint-checker/?c=%3D%3D1.*&amp;v=0.9.9%2C1.0.0%2C1.4.0%2C1.4.1%2C1.4.2%2C1.4.9%2C1.5.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>==1.4</code></td><td><code>==1.4</code><br>exactly 1.4.0</td><td><code>= 1.4</code><br>exactly 1.4.0</td><td><a href="../version-constraint-checker/?c=%3D%3D1.4&amp;v=0.9.9%2C1.0.0%2C1.4.0%2C1.4.1%2C1.4.2%2C1.4.9%2C1.5.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>1.4 (bare)</code><br><small>pip requires an operator</small></td><td class="hl"><span class="na">not valid</span></td><td>exactly 1.4.0</td><td><a href="../version-constraint-checker/?c=1.4&amp;v=0.9.9%2C1.0.0%2C1.4.0%2C1.4.1%2C1.4.2%2C1.4.9%2C1.5.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>!=1.4.1</code></td><td>not 1.4.1</td><td>not 1.4.1</td><td><a href="../version-constraint-checker/?c=!%3D1.4.1&amp;v=0.9.9%2C1.0.0%2C1.4.0%2C1.4.1%2C1.4.2%2C1.4.9%2C1.5.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>&gt;1.4</code></td><td>&gt;1.4.0</td><td>&gt;1.4.0</td><td><a href="../version-constraint-checker/?c=%3E1.4&amp;v=0.9.9%2C1.0.0%2C1.4.0%2C1.4.1%2C1.4.2%2C1.4.9%2C1.5.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>&lt;=2.3</code></td><td>≤2.3.0</td><td>≤2.3.0</td><td><a href="../version-constraint-checker/?c=%3C%3D2.3&amp;v=0.9.9%2C1.0.0%2C1.4.0%2C1.4.1%2C1.4.2%2C1.4.9%2C1.5.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>&gt;=1.4, &lt;2</code></td><td>≥1.4.0 &lt;2.0.0</td><td>≥1.4.0 &lt;2.0.0</td><td><a href="../version-constraint-checker/?c=%3E%3D1.4%2C%20%3C2&amp;v=0.9.9%2C1.0.0%2C1.4.0%2C1.4.1%2C1.4.2%2C1.4.9%2C1.5.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>&gt;=1.0, &lt;2.0, !=1.4.1</code></td><td>≥1.0.0 &lt;2.0.0, not 1.4.1</td><td>≥1.0.0 &lt;2.0.0, not 1.4.1</td><td><a href="../version-constraint-checker/?c=%3E%3D1.0%2C%20%3C2.0%2C%20!%3D1.4.1&amp;v=0.9.9%2C1.0.0%2C1.4.0%2C1.4.1%2C1.4.2%2C1.4.9%2C1.5.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+</table></div>
+<p class="muted">Ranges shown for final releases. pip skips pre-releases (<code>1.5.0rc1</code>) unless the specifier names one or you pass <code>--pre</code>;
+post-releases (<code>1.4.2.post1</code>) and local versions have their own rules. The <a href="../version-constraint-checker/">checker</a> handles pre-releases.</p>
+<h2>Same string, other package managers</h2>
+<div style="overflow-x:auto"><table><tr><th>Constraint</th><th>pip</th><th>npm</th><th>Composer</th><th></th></tr>
+<tr><td><code>~=1.4</code><br><small>npm reads ~= as its own ~</small></td><td>≥1.4.0 &lt;2.0.0</td><td class="hl">≥1.4.0 &lt;1.5.0</td><td><span class="na">not valid</span></td><td><a href="../version-constraint-checker/?c=~%3D1.4&amp;v=1.4.0%2C1.4.9%2C1.5.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>&gt;=1.4, &lt;2</code><br><small>npm: use a space</small></td><td>≥1.4.0 &lt;2.0.0</td><td class="hl"><span class="na">not valid</span></td><td>≥1.4.0 &lt;2.0.0</td><td><a href="../version-constraint-checker/?c=%3E%3D1.4%2C%20%3C2&amp;v=1.4.0%2C1.4.9%2C1.5.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+</table></div>
+<h2>Rules of thumb for requirements.txt and pyproject.toml</h2>
+<ul>
+<li>For a library that follows semver, <code>~=1.4</code> (any 1.x from 1.4) is the usual choice; <code>~=1.4.2</code> allows bug-fix releases only.</li>
+<li>Python has no caret: <code>^1.4</code> is a Poetry extension, rejected by pip and by the <code>[project]</code> table of pyproject.toml.</li>
+<li>Coming from Ruby? <code>~=</code> is your <code>~&gt;</code>, except that it needs two numbers. Coming from npm? See <a href="../pessimistic-version-operator/">~&gt; vs ~= vs ~</a>.</li>
+</ul>
+<!-- AADS slot: activate after HQ-004 -->
+<h2>Common questions</h2>
+<h3>What does ~= mean in requirements.txt?</h3>
+<p>It is the PEP 440 “compatible release” operator. <code>~=1.4.2</code> = ≥1.4.2, ==1.4.* (&lt;1.5.0). <code>~=1.4</code> = ≥1.4, ==1.* (&lt;2.0). It equals Ruby's <code>~&gt;</code> and Composer's <code>~</code>, but not npm's <code>~</code> when you write two numbers.</p>
+<h3>What is the difference between ==1.4 and ==1.4.*?</h3>
+<p><code>==1.4</code> matches only 1.4 (and 1.4.0, which is the same version under PEP 440). <code>==1.4.*</code> matches every 1.4.x release: ≥1.4.0 &lt;1.5.0.</p>
+<h3>Why is ~=1 invalid?</h3>
+<p>PEP 440 requires at least two release numbers with <code>~=</code>, because it drops the last one to build the prefix. Use <code>~=1.0</code> (≥1.0, &lt;2.0) or <code>==1.*</code> instead.</p>
+<h3>How do I say "1.x but not 1.4.1" in pip?</h3>
+<p>Join clauses with a comma: <code>&gt;=1.0, &lt;2.0, !=1.4.1</code>. Every clause must hold. pip has no “or” operator; <code>||</code> is rejected.</p>
+<h2>Related</h2>
+<ul><li><a href="../version-constraint-checker/">Version Constraint Checker</a> — test any constraint against your versions in five package managers</li><li><a href="../tilde-vs-caret/">Tilde vs caret</a></li><li><a href="../pessimistic-version-operator/">~> vs ~= vs ~</a></li><li><a href="../npm-version-range-syntax/">x, *, hyphen and || ranges</a></li><li><a href="../cargo-version-requirements/">Cargo.toml version requirements</a></li><li><a href="../composer-version-constraints/">Composer version constraints</a></li></ul>
+<h2>Sources</h2>
+<ul>
+<li>npm: <a href="https://github.com/npm/node-semver#advanced-range-syntax">node-semver, advanced range syntax</a></li>
+<li>Cargo: <a href="https://doc.rust-lang.org/cargo/reference/specifying-dependencies.html">Specifying dependencies</a></li>
+<li>Composer: <a href="https://getcomposer.org/doc/articles/versions.md">Versions and constraints</a></li>
+<li>pip: <a href="https://packaging.python.org/en/latest/specifications/version-specifiers/#compatible-release">Version specifiers, compatible release</a></li>
+<li>RubyGems: <a href="https://guides.rubygems.org/patterns/#pessimistic-version-constraint">Pessimistic version constraint</a></li>
+</ul>
+<footer>
+<p><strong>Built by AI agents</strong> as part of the <a href="../../">10aday</a> project. Every range on this page is generated by the engine of the
+<a href="../version-constraint-checker/">Version Constraint Checker</a> and checked on probe versions. That engine agrees 100% with node-semver 7.8.5, the Rust <code>semver</code> crate 1.0.28,
+composer/semver 3.6.0, Python <code>packaging</code> 26.3 and RubyGems 3.5.22 on about 330,000 test pairs. Found a mistake? <a href="https://github.com/Lawatch/10aday/issues">Open an issue</a>.</p>
+</footer>
+<script data-goatcounter="https://10aday.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

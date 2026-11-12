@@ -314,6 +314,99 @@ ${t(['cargo', 'npm'], [
 <li><code>~</code> in Cargo behaves like npm's tilde, not like Composer's or Ruby's <code>~&gt;</code>: see <a href="../tilde-vs-caret/">tilde vs caret</a> and <a href="../pessimistic-version-operator/">~&gt; vs ~= vs ~</a>.</li>
 </ul>`
 },
+{
+  slug: 'composer-version-constraints',
+  short: 'Composer version constraints',
+  title: 'Composer Version Constraints Explained: ~, ^, *, Exact and Ranges in composer.json (vs npm)',
+  h1: 'Composer version constraints: what <code>~1.2</code>, <code>^1.2</code>, <code>1.2.*</code> and <code>"1.2"</code> really allow in composer.json',
+  description: 'Exact ranges for every composer.json constraint: ~1.2 (>=1.2 <2.0), ~1.2.3, ^0.3, 1.2.*, bare "1.2" (exactly 1.2.0), hyphen ranges, || and comma. Where Composer and npm disagree.',
+  intro: `<p><strong>Short answer:</strong> in <code>composer.json</code>, <code>^1.2.3</code> allows ≥1.2.3 &lt;2.0.0 (like npm). The tilde lets the <strong>last number you wrote</strong> move:
+<code>~1.2</code> = ≥1.2.0 &lt;2.0.0, <code>~1.2.3</code> = ≥1.2.3 &lt;1.3.0. A bare version is <strong>exact</strong>, even a partial one: <code>"1.2"</code> means 1.2.0 only.
+Those last two rules are where people coming from npm get surprised.</p>`,
+  faq: [
+    ['What does ~1.2 mean in composer.json?', '≥1.2.0 and &lt;2.0.0: the last number you wrote (2) may increase. npm and Cargo read the same <code>~1.2</code> as ≥1.2.0 &lt;1.3.0. Write <code>~1.2.0</code> in Composer if you want patch updates only.'],
+    ['What is the difference between ^ and ~ in Composer?', 'With three numbers: <code>^1.2.3</code> = ≥1.2.3 &lt;2.0.0 and <code>~1.2.3</code> = ≥1.2.3 &lt;1.3.0. With two numbers they are the same for 1.x and above: <code>^1.2</code> = <code>~1.2</code> = ≥1.2.0 &lt;2.0.0. Below 1.0 they differ: <code>^0.3</code> = &lt;0.4.0 but <code>~0.3</code> = &lt;1.0.0.'],
+    ['Does "1.2" in composer.json mean 1.2.x?', 'No. A bare version without an operator or wildcard is an exact constraint, padded with zeros: <code>"1.2"</code> matches 1.2.0 only. Write <code>"1.2.*"</code> for the whole 1.2.x line. (In npm, a bare <code>1.2</code> means 1.2.x.)'],
+    ['How do I write "and" and "or" in Composer?', 'A space or a comma means “and” (<code>&gt;=1.2 &lt;2.0</code> or <code>&gt;=1.2,&lt;2.0</code>); <code>||</code> means “or” (<code>^1.2 || ^2.0</code>). Hyphen ranges like <code>1.2 - 2.3</code> include the whole 2.3.x line.'],
+  ],
+  body: t => `<h2>Every Composer constraint form, next to npm</h2>
+<p>Highlighted: npm reads the same string differently.</p>
+${t(['composer', 'npm'], [
+  { c: '1.2.3', label: '"1.2.3" (bare)', composer: ['=', '1.2.3'], npm: ['=', '1.2.3'] },
+  { c: '1.2', label: '"1.2" (bare)', composer: ['=', '1.2.0'], npm: ['1.2.0', '1.3.0'], hl: ['npm'], note: 'Composer: exactly 1.2.0' },
+  { c: '~1.2.3', composer: ['1.2.3', '1.3.0'], npm: ['1.2.3', '1.3.0'] },
+  { c: '~1.2', composer: ['1.2.0', '2.0.0'], npm: ['1.2.0', '1.3.0'], hl: ['npm'] },
+  { c: '~1', composer: ['1.0.0', '2.0.0'], npm: ['1.0.0', '2.0.0'] },
+  { c: '~0.3', composer: ['0.3.0', '1.0.0'], npm: ['0.3.0', '0.4.0'], hl: ['npm'] },
+  { c: '^1.2.3', composer: ['1.2.3', '2.0.0'], npm: ['1.2.3', '2.0.0'] },
+  { c: '^1.2', composer: ['1.2.0', '2.0.0'], npm: ['1.2.0', '2.0.0'] },
+  { c: '^0.3', composer: ['0.3.0', '0.4.0'], npm: ['0.3.0', '0.4.0'], note: 'below 1.0: minor = breaking' },
+  { c: '^0.0.3', composer: ['0.0.3', '0.0.4'], npm: ['0.0.3', '0.0.4'] },
+  { c: '1.2.*', composer: ['1.2.0', '1.3.0'], npm: ['1.2.0', '1.3.0'] },
+  { c: '1.*', composer: ['1.0.0', '2.0.0'], npm: ['1.0.0', '2.0.0'] },
+  { c: '*', composer: [null, null], npm: [null, null] },
+  { c: '>=1.2 <2.0', composer: ['1.2.0', '2.0.0'], npm: ['1.2.0', '2.0.0'] },
+  { c: '>=1.2,<2.0', composer: ['1.2.0', '2.0.0'], npm: 'invalid', hl: ['npm'], note: 'npm has no comma' },
+  { c: '>1.2', composer: ['>', '1.2.0'], npm: ['1.3.0', null], hl: ['npm'] },
+  { c: '!=1.2.3', composer: ['!=', '1.2.3'], npm: 'invalid', hl: ['npm'] },
+  { c: '1.2 - 2.3', composer: ['1.2.0', '2.4.0'], npm: ['1.2.0', '2.4.0'] },
+  { c: '^1.2 || ^3.0', composer: { or: [['1.2.0', '2.0.0'], ['3.0.0', '4.0.0']] }, npm: { or: [['1.2.0', '2.0.0'], ['3.0.0', '4.0.0']] } },
+], ['0.3.0', '0.9.9', '1.2.0', '1.2.3', '1.2.9', '1.3.0', '1.9.9', '2.0.0'])}
+<p class="muted">Ranges shown for stable releases. Composer also filters by stability (<code>minimum-stability</code>, <code>@dev</code>, <code>@beta</code> flags), which this table does not cover; the
+<a href="../version-constraint-checker/">checker</a> shows how pre-releases such as <code>1.3.0-RC1</code> are handled.</p>
+<h2>Rules of thumb for composer.json</h2>
+<ul>
+<li>Use <code>^</code> by default (<code>composer require</code> writes it for you): it follows semantic versioning, including the 0.x rule.</li>
+<li>Use <code>~</code> with <strong>three numbers</strong> (<code>~1.2.3</code>) to allow patch updates only. With two numbers it behaves like Ruby's <code>~&gt;</code> and pip's <code>~=</code>: see <a href="../pessimistic-version-operator/">~&gt; vs ~= vs ~</a>.</li>
+<li>Never write a bare partial version (<code>"1.2"</code>) expecting a range: it is an exact pin on 1.2.0.</li>
+</ul>`
+},
+{
+  slug: 'pip-compatible-release',
+  short: 'pip ~= and version specifiers',
+  title: 'pip ~= Compatible Release and PEP 440 Version Specifiers Explained (with Gemfile ~> compared)',
+  h1: 'pip <code>~=</code> “compatible release” and PEP 440 version specifiers: exact ranges for requirements.txt',
+  description: 'What ~=1.4.2, ~=1.4, ==1.4.*, ==1.4, !=, >1.4 and a bare "1.4" mean in requirements.txt and pyproject.toml, with exact ranges, and how they compare with Ruby ~>.',
+  intro: `<p><strong>Short answer:</strong> <code>~=1.4.2</code> means ≥1.4.2 and ==1.4.* (so &lt;1.5.0); <code>~=1.4</code> means ≥1.4 and ==1.* (so &lt;2.0). The last number you wrote may increase.
+<code>~=1</code> is invalid: compatible release needs at least two numbers. <code>==1.4</code> is exact (it matches 1.4.0 too, because PEP 440 pads with zeros),
+<code>==1.4.*</code> is the wildcard, and a version without an operator (<code>requests 2.31</code>) is not a valid specifier. Multiple clauses are joined with a comma, and there is no “or”.</p>`,
+  faq: [
+    ['What does ~= mean in requirements.txt?', 'It is the PEP 440 “compatible release” operator. <code>~=1.4.2</code> = ≥1.4.2, ==1.4.* (&lt;1.5.0). <code>~=1.4</code> = ≥1.4, ==1.* (&lt;2.0). It equals Ruby\'s <code>~&gt;</code> and Composer\'s <code>~</code>, but not npm\'s <code>~</code> when you write two numbers.'],
+    ['What is the difference between ==1.4 and ==1.4.*?', '<code>==1.4</code> matches only 1.4 (and 1.4.0, which is the same version under PEP 440). <code>==1.4.*</code> matches every 1.4.x release: ≥1.4.0 &lt;1.5.0.'],
+    ['Why is ~=1 invalid?', 'PEP 440 requires at least two release numbers with <code>~=</code>, because it drops the last one to build the prefix. Use <code>~=1.0</code> (≥1.0, &lt;2.0) or <code>==1.*</code> instead.'],
+    ['How do I say "1.x but not 1.4.1" in pip?', 'Join clauses with a comma: <code>&gt;=1.0, &lt;2.0, !=1.4.1</code>. Every clause must hold. pip has no “or” operator; <code>||</code> is rejected.'],
+  ],
+  body: t => `<h2>PEP 440 specifiers, next to RubyGems</h2>
+<p>Each cell shows how that tool spells it, then the range it allows. Highlighted: where the meanings differ.</p>
+${t(['pip', 'rubygems'], [
+  { c: '~=1.4.2', per: { rubygems: '~> 1.4.2' }, pip: ['1.4.2', '1.5.0'], rubygems: ['1.4.2', '1.5.0'] },
+  { c: '~=1.4', per: { rubygems: '~> 1.4' }, pip: ['1.4.0', '2.0.0'], rubygems: ['1.4.0', '2.0.0'] },
+  { c: '~=1', per: { rubygems: '~> 1' }, pip: 'invalid', rubygems: ['1.0.0', '2.0.0'], hl: ['pip'], note: 'pip needs two numbers' },
+  { c: '~=0.2', per: { rubygems: '~> 0.2' }, pip: ['0.2.0', '1.0.0'], rubygems: ['0.2.0', '1.0.0'], note: 'no special 0.x rule' },
+  { c: '==1.4.*', pip: ['1.4.0', '1.5.0'], rubygems: 'invalid', hl: ['rubygems'], note: 'RubyGems: use ~> 1.4.0' },
+  { c: '==1.*', pip: ['1.0.0', '2.0.0'], rubygems: 'invalid', hl: ['rubygems'] },
+  { c: '==1.4', per: { rubygems: '= 1.4' }, pip: ['=', '1.4.0'], rubygems: ['=', '1.4.0'] },
+  { c: '1.4', label: '1.4 (bare)', pip: 'invalid', rubygems: ['=', '1.4.0'], hl: ['pip'], note: 'pip requires an operator' },
+  { c: '!=1.4.1', pip: ['!=', '1.4.1'], rubygems: ['!=', '1.4.1'] },
+  { c: '>1.4', pip: ['>', '1.4.0'], rubygems: ['>', '1.4.0'] },
+  { c: '<=2.3', pip: ['<=', null, '2.3.0'], rubygems: ['<=', null, '2.3.0'] },
+  { c: '>=1.4, <2', pip: ['1.4.0', '2.0.0'], rubygems: ['1.4.0', '2.0.0'] },
+  { c: '>=1.0, <2.0, !=1.4.1', pip: { and: [['1.0.0', '2.0.0'], ['!=', '1.4.1']] }, rubygems: { and: [['1.0.0', '2.0.0'], ['!=', '1.4.1']] } },
+], ['0.9.9', '1.0.0', '1.4.0', '1.4.1', '1.4.2', '1.4.9', '1.5.0', '1.9.9', '2.0.0'])}
+<p class="muted">Ranges shown for final releases. pip skips pre-releases (<code>1.5.0rc1</code>) unless the specifier names one or you pass <code>--pre</code>;
+post-releases (<code>1.4.2.post1</code>) and local versions have their own rules. The <a href="../version-constraint-checker/">checker</a> handles pre-releases.</p>
+<h2>Same string, other package managers</h2>
+${t(['pip', 'npm', 'composer'], [
+  { c: '~=1.4', pip: ['1.4.0', '2.0.0'], npm: ['1.4.0', '1.5.0'], composer: 'invalid', hl: ['npm'], note: 'npm reads ~= as its own ~' },
+  { c: '>=1.4, <2', pip: ['1.4.0', '2.0.0'], npm: 'invalid', composer: ['1.4.0', '2.0.0'], hl: ['npm'], note: 'npm: use a space' },
+], ['1.4.0', '1.4.9', '1.5.0', '1.9.9', '2.0.0'])}
+<h2>Rules of thumb for requirements.txt and pyproject.toml</h2>
+<ul>
+<li>For a library that follows semver, <code>~=1.4</code> (any 1.x from 1.4) is the usual choice; <code>~=1.4.2</code> allows bug-fix releases only.</li>
+<li>Python has no caret: <code>^1.4</code> is a Poetry extension, rejected by pip and by the <code>[project]</code> table of pyproject.toml.</li>
+<li>Coming from Ruby? <code>~=</code> is your <code>~&gt;</code>, except that it needs two numbers. Coming from npm? See <a href="../pessimistic-version-operator/">~&gt; vs ~= vs ~</a>.</li>
+</ul>`
+},
 ];
 
 for (const g of GUIDES) {
