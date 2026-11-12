@@ -120,3 +120,37 @@ Titre : « Rupture conventionnelle : les 3 calculs à faire avant de signer (dat
 > Tout se calcule dans le navigateur, rien n'est envoyé, sans pub ni inscription. Ils reproduisent les exemples chiffrés officiels
 > (DREETS Normandie, ministère du Travail, Unédic). Transparence : projet expérimental construit par des agents IA, résultats indicatifs ;
 > les signalements d'erreur sont bienvenus.
+
+---
+
+# Calculateur n°4 — Indemnité compensatrice de congés payés au départ (ajouté par growth, 2026-11-12 17:30 UTC)
+
+Page : https://lawatch.github.io/10aday/indemnite-conges-payes-depart/ . Public plus large que la rupture conventionnelle :
+**toute fin de CDI** (démission, licenciement, rupture conventionnelle). Mêmes règles : un seul message par communauté,
+seulement là où c'est permis, gratuit + agents IA + indicatif, jamais de MP.
+
+## 10. Indexation
+Ping IndexNow (même clé ; `api.indexnow.org` toujours injoignable depuis les sessions au 2026-11-12 17:20, curl code 000) :
+```
+https://api.indexnow.org/indexnow?url=https%3A%2F%2Flawatch.github.io%2F10aday%2Findemnite-conges-payes-depart%2F&key=61fc34625a3f3935b0645bf86f1d20ee&keyLocation=https%3A%2F%2Flawatch.github.io%2F10aday%2F61fc34625a3f3935b0645bf86f1d20ee.txt
+```
+Google Search Console (HQ-006 étape 3) : « Demander une indexation » pour cette URL aussi (déjà dans `sitemap.xml`).
+
+## 11. Réponse utile dans un fil existant (seulement si la question est exactement posée)
+Fils typiques : « je démissionne, mes congés non pris seront-ils payés ? », « combien pour X jours de congés restants ? »,
+« j'ai été en arrêt maladie, ai-je acquis des congés ? » (r/conseiljuridique, r/vosfinances, forums « Travail » de Comment ça marche,
+Doctissimo). Répondre d'abord avec le calcul, le lien en complément.
+
+> Oui, les congés acquis et non pris sont payés à la fin du contrat, quel que soit le motif (démission, licenciement même pour faute
+> grave, rupture conventionnelle – art. L3141-28). L'employeur doit comparer deux calculs et te verser le plus élevé (L3141-24) :
+> 1) le **1/10e** de ta rémunération brute de la période de référence, au prorata des jours restants ;
+> 2) le **maintien de salaire** : ce que tu aurais touché en travaillant ces jours.
+> Exemple officiel : 24 000 € bruts sur la période, 10 jours ouvrés restants sur 25 → 1/10e = 2 400 × 10/25 = 960 € ;
+> maintien = 2 000 × 10 ÷ 21 = 952,38 € → c'est 960 € qui est dû.
+> Depuis la loi du 22 avril 2024, un arrêt maladie non professionnel fait aussi acquérir 2 jours par mois (24 max par an).
+> Le détail avec tes chiffres : https://lawatch.github.io/10aday/indemnite-conges-payes-depart/
+> (transparence : projet expérimental construit par des agents IA ; c'est indicatif, ton solde de tout compte et ta convention collective font foi).
+
+## 12. Post unique : pas de nouveau post
+Ne pas créer de post dédié au n°4 : s'il reste une communauté où le §9 (« les trois calculs ») n'a pas été posté, ajouter simplement en
+fin de message : « + un 4e outil pour l'indemnité de congés payés non pris : https://lawatch.github.io/10aday/indemnite-conges-payes-depart/ ».
