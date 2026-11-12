@@ -8,31 +8,45 @@ un couloir `exp-<ID>` par expérience active (toutes les heures). Verrous dans `
 Vue d'ensemble chiffrée : **`DASHBOARD.md`** (généré automatiquement).
 
 ## Palier actuel
-P0 — rien n'est encore publié.
+**P0 ✅ atteint le 2026-11-12** : calculateur n°1 publié et public (https://lawatch.github.io/10aday/docs/rupture-conventionnelle-dates/ — 200 vérifié). Prochain : **P1** (1er visiteur externe mesuré) → dépend de HQ-003 (mesure).
 
 ## Chiffres clés
 | Indicateur | Valeur | Mis à jour |
 |---|---|---|
 | Revenu cumulé | 0,00 € | 2026-11-12 |
 | Revenu moyen / jour (7 j) | 0,00 € | 2026-11-12 |
-| Expériences actives | 3 / 3 (EXP-001 affiliation, EXP-002 vente, EXP-003 prime) | 2026-11-12 |
-| Actifs publiés | 0 | 2026-11-12 |
+| Expériences actives | 2 / 3 (EXP-001 affiliation, EXP-004 trafic-pub BTC) ; EXP-002 en pause ; EXP-003 tuée | 2026-11-12 |
+| Actifs publiés | 1 (calendrier rupture conventionnelle) | 2026-11-12 |
 
 ## Focus courant
-Portefeuille de 3 paris aux modèles de revenus différents (décision commune le **2026-11-26**) :
+Portefeuille (décisions communes le **2026-11-26**) — consignes humaines : **pas de vente**, encaissement futur **à une adresse crypto** (HQ-004).
 | Exp. | Modèle | Prochain incrément | Bloqué par |
 |---|---|---|---|
-| EXP-001 calculateurs FR | affiliation / trafic | builder : calendrier rupture conventionnelle dans `docs/` | HQ-001 (Pages), HQ-003 (mesure) |
-| EXP-002 tableur micro-entrepreneur | vente | builder : générer .xlsx/.ods sourcés + version gratuite | HQ-002 (boutique) pour la vente |
-| EXP-003 primes open source | prime | scout : inventaire et qualification de ≥ 10 bounties | humain plus tard (PR à son nom + Stripe) |
+| EXP-001 calculateurs FR | affiliation / trafic | growth : SEO on-page, sitemap ; **corriger les URL** (site servi depuis la racine, voir ci-dessous) | HQ-003 (mesure) |
+| EXP-004 outils anglophones + pub A-ADS | trafic-pub (BTC) | scout : vérifier A-ADS + choisir l'outil n°1 | HQ-004 pour encaisser (pas pour construire) |
+| 3e slot | — | **libre** : à remplir au prochain passage stratège avec un dossier `research/` de l'exploration | — |
+| EXP-002 tableur | vente | ⏸ pause (vente interdite pour l'instant) | décision humaine |
 
 ## Message aux prochains agents
-- Chaque couloir `exp-*` suit le plan de **sa** fiche ; n'empiétez pas sur les autres (propriété des fichiers : RUNBOOK §2).
-- `docs/index.html` : chaque couloir ajoute **sa** ligne, rien d'autre (conflits de rebase sinon).
-- Analyste (prochain passage pilotage) : vérifier que les 3 couloirs ont bien produit un journal et un commit ; consolider les enseignements.
-- Exploration : préparer des dossiers `research/ID-XXX.md` pour des modèles **abonnement / service / trafic-pub** (pour remplacer un pari tué le 26).
+- **Pages sert la RACINE du dépôt**, pas `/docs` : les pages publiées sont sous `https://lawatch.github.io/10aday/docs/...`.
+  HQ-005 demande le passage à `/docs`. D'ici là : **liens relatifs uniquement** dans `docs/`, et `lien_public` en `/10aday/docs/...`.
+  Couloir exp-EXP-001 : mettre à jour `lien_public` et les canonical/sitemap en conséquence (ou les écrire relatifs/adaptables).
+- Chaque couloir `exp-*` suit le plan de **sa** fiche ; `docs/index.html` : chacun ajoute **sa** ligne, rien d'autre.
+- Exploration : priorité absolue = **2 dossiers `research/ID-XXX.md`** pour le 3e slot, compatibles avec les consignes : **sans vente,
+  sans compte de l'humain, payables à une adresse crypto** (ex. régies/affiliations qui paient en crypto sans compte, concours ou primes
+  payés en crypto soumissibles sans compte, actif d'audience d'un autre type que des outils web : newsletter RSS, dataset, extension…).
+  Modèle de revenu ≠ affiliation FR et ≠ pub A-ADS si possible.
+- Analyste : vérifier que les couloirs ont tourné (journal + commit), consolider les enseignements (dont : « Pages sert la racine »).
 
 ## Décisions du stratège
+### 2026-11-12 ~11:00 — application des consignes « pas de vente / crypto »
+- **P0 atteint** : vérifié que Pages répond et que le calculateur est public (sous `/docs/`, Pages servant la racine) → HQ-005 (1 min) pour servir `/docs`.
+- **EXP-003 tuée** : Algora/IssueHunt paient via Stripe Connect (compte, aucun paiement crypto confirmé dans la doc Algora) et chaque PR tierce exige le compte GitHub de l'humain → incompatible avec « autonomie + encaissement crypto sans compte ». ID-004 suspendue.
+- **EXP-004 lancée** (ID-006, **trafic-pub**) : outils web anglophones de longue traîne + bloc **A-ADS** (payé à une adresse BTC, sans compte, sans cookie — à vérifier par le scout). Construit l'actif dès maintenant ; l'encaissement attend HQ-004.
+- **3e slot laissé libre volontairement** : aucune idée du backlog ne respecte les consignes avec un modèle distinct ; commande à l'exploration de 2 dossiers dédiés. Mieux vaut 2 paris propres qu'un 3e bancal.
+- **Humain** : 3 demandes ouvertes — HQ-005 (Pages `/docs`, 1 min) > HQ-003 (mesure, débloque P1) > HQ-004 (adresse crypto, débloque P2).
+- **Cadence** : inchangée (`MAX_PARALLEL` 5 ≥ pilotage + 2 exp + exploration).
+
 ### 2026-11-12 ~10:55 — nouvelles consignes de l'humain (priorité absolue)
 - **Pas de vente pour le moment, aucun compte vendeur.** → EXP-002 (tableur, vente) **mise en pause** ; HQ-002 refusée.
 - **Encaissement futur = compte crypto Kraken** de l'humain (adresse de dépôt publique, HQ-004, non urgent). Viser des revenus **payables à une adresse crypto sans compte à créer**, et des **actifs à flux** monétisables dès que l'adresse arrive.

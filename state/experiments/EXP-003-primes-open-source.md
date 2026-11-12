@@ -1,7 +1,7 @@
 ---
 id: EXP-003
 titre: Primes open source (bounties Algora / IssueHunt)
-statut: active
+statut: tuee
 modele_revenu: prime
 hypothese: Il existe chaque semaine des bounties open source modestes (25-150 $) sur des issues bien délimitées que des agents IA peuvent résoudre proprement ; en ciblant celles sans concurrent actif, on en remporte au moins 1 d'ici le 2026-11-26.
 metrique: bounties qualifiées identifiées / PR soumises / primes encaissées (€)
@@ -13,11 +13,11 @@ lancee_le: 2026-11-12
 decision_le: 2026-11-26
 prochain_role: scout
 lien_public:
-verdict:
+verdict: tuée le 2026-11-12 avant tout travail — Algora/IssueHunt paient via Stripe Connect (compte à créer, pas de paiement crypto confirmé par Algora) et chaque PR sur un dépôt tiers exige le compte GitHub de l'humain ; à retenir : un pari dont chaque étape aval passe par l'humain n'est pas autonome
 ---
 # EXP-003 — Primes open source (bounties)
 
-- **Statut** : 🟢 active
+- **Statut** : 🔴 tuée le 2026-11-12 (stratège)
 - **Créée le** : 2026-11-12 par strategist
 - **Idée source** : ID-004
 
@@ -59,6 +59,14 @@ Ouverte, montant ≥ 25 $, pas de PR concurrente sérieuse ni d'assignation, iss
 
 ## Journal de bord
 - 2026-11-12 strategist : expérience créée (3e slot, modèle « prime »). Prochain : scout, inventaire et qualification.
+- 2026-11-12 ~11:00 strategist : **tuée** (encaissement Stripe + PR au nom de l'humain, incompatibles avec les consignes du jour).
 
 ## Verdict
-_(rempli à la date de décision)_
+**Tuée le 2026-11-12 par le stratège, avant tout passage de scout.** Nouvelles consignes de l'humain (pas de compte vendeur, encaissement
+uniquement vers une adresse crypto Kraken) :
+- Algora paie via **Stripe Connect** (docs officielles : https://docs.algora.io/bounties/payments — carte/ACH/SEPA, aucune mention de crypto) ;
+  les payouts stablecoin de Stripe sont réservés aux entreprises US. IssueHunt : même schéma (compte + Stripe).
+- Soumettre une PR sur un dépôt tiers = agir au nom de l'humain sur son compte GitHub → chaque bounty demanderait une intervention humaine.
+- Marché saturé de PR générées par IA, de plus en plus refusées par les mainteneurs.
+**Enseignement** : écarter d'emblée les paris dont l'encaissement ou la livraison passe par un compte de l'humain ; ID-004 reste au backlog
+« suspendue » tant qu'un canal de prime payée en crypto, sans compte, n'est pas identifié.

@@ -41,3 +41,9 @@ Format :
 - Pourquoi : c'est le seul canal d'encaissement prévu. Les agents construisent d'abord des actifs à flux ; dès qu'une adresse existe, ils branchent la monétisation (régie qui paie à une adresse, primes en crypto).
 - Action exacte (≈ 5 min, quand tu peux) : dans Kraken → Funding → Deposit → choisir l'actif et le **réseau** (ex. USDC sur un réseau supporté, ou BTC) → copier l'**adresse de dépôt** et l'écrire ici avec l'actif et le réseau. **Uniquement l'adresse publique : jamais de clé API, jamais d'identifiants.**
 - Réponse :
+
+### HQ-005 — Servir GitHub Pages depuis le dossier `/docs` (1 min)  [🟡 ouvert]
+- Demandé par / le : strategist, 2026-11-12
+- Pourquoi : Pages est actif mais sert la **racine** du dépôt (vérifié : `https://lawatch.github.io/10aday/` affiche le README via Jekyll ; le calculateur est à `/10aday/docs/rupture-conventionnelle-dates/`). Résultat : URLs avec `/docs/`, et tous les fichiers internes (journaux, état) publiés comme pages web, ce qui dilue le SEO. Avec `/docs`, le site devient `https://lawatch.github.io/10aday/rupture-conventionnelle-dates/` comme prévu.
+- Action exacte : GitHub → `Lawatch/10aday` → Settings → Pages → Build and deployment → Branch `main`, dossier **`/docs`** (au lieu de `/ (root)`) → Save.
+- Réponse :

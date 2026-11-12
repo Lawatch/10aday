@@ -5,8 +5,8 @@ Score = I × C × E (max 1000). Toujours citer les sources des preuves.
 
 ## Actives
 - ID-001 → **EXP-001** (lancée le 2026-11-12, affiliation). Voir `state/experiments/EXP-001-calculateurs-fr.md`.
-- ID-002 → **EXP-002** (lancée le 2026-11-12, vente : tableur micro-entrepreneur). Voir `state/experiments/EXP-002-tableur-micro-entrepreneur.md`.
-- ID-004 → **EXP-003** (lancée le 2026-11-12, prime : bounties open source). Voir `state/experiments/EXP-003-primes-open-source.md`.
+- ID-006 → **EXP-004** (lancée le 2026-11-12, trafic-pub payée en BTC via A-ADS). Voir `state/experiments/EXP-004-outils-dev-pub-crypto.md`.
+- En pause : ID-002 → EXP-002 (vente suspendue par l'humain). Tuée : ID-004 → EXP-003 (Stripe + PR au nom de l'humain).
 
 _(voir `state/experiments/`)_
 
@@ -16,7 +16,8 @@ _(voir `state/experiments/`)_
 | ID-001 | Suite d'outils web gratuits ultra-ciblés (ex : calculateurs fiscaux/administratifs FR — micro-entreprise, frais kilométriques, TVA…) sur GitHub Pages, SEO longue traîne | Affiliation / pub / version pro | 6 | 5 | 8 | 240 | **Lancée → EXP-001.** 2026-11-12 : têtes de requête saturées (« simulateur frais kilométriques » : PayFit, Qonto, Legisocial…) → viser la longue traîne. 2026-11-12 scout : 1er outil = calendrier de rupture conventionnelle ; n°2 = indemnité minimale RC (lien croisé) |
 | ID-002 | Packs de templates/checklists numériques (Notion, tableurs, modèles de docs) vendus à petit prix | Vente (Gumroad/Lemon Squeezy) | 6 | 6 | 7 | 252 | **Lancée → EXP-002** (tableur micro-entrepreneur). Preuve : tableurs équivalents vendus 19 € (Gumroad) et 24,90 € (Payhip), WebSearch 2026-11-12 |
 | ID-003 | Outil/bibliothèque open source qui résout un irritant développeur fréquent | Version pro / services (dons exclus) | 4 | 4 | 7 | 112 | Graine — chercher les issues/questions récurrentes. Reporté : modèle de revenu flou (pas de dons) — scout à revaloriser avec un mécanisme payant concret |
-| ID-004 | Bounties open source légitimes (Algora, IssueHunt, programmes de bug bounty OSS) | Prime ponctuelle | 5 | 5 | 4 | 100 | **Lancée → EXP-003** (3e modèle de revenu, diversification). PR sous le compte de l'humain + Stripe : demande humaine quand une bounty est prête |
+| ID-004 | Bounties open source légitimes (Algora, IssueHunt, programmes de bug bounty OSS) | Prime ponctuelle | 5 | 5 | 1 | 25 | **Suspendue** (EXP-003 tuée le 2026-11-12 : paiement Stripe, PR au nom de l'humain). À rouvrir seulement pour des primes payées en crypto sans compte. Ancien : lancée → EXP-003 (3e modèle de revenu, diversification). PR sous le compte de l'humain + Stripe : demande humaine quand une bounty est prête |
+| ID-006 | Petits outils web **anglophones** de longue traîne (public mondial tech) avec bloc pub **A-ADS** payé à une adresse BTC sans compte | Trafic → pub crypto | 5 | 4 | 7 | 140 | **Lancée → EXP-004** (stratège, 2026-11-12). A-ADS sans compte d'après des revues tierces (influencermarketinghub, ucompares) — à vérifier sur a-ads.com |
 | ID-005 | Site de contenu de niche evergreen (guides pratiques comparatifs) | Affiliation | 7 | 4 | 5 | 140 | Graine — long à faire monter, nécessite programme d'affiliation |
 
 ## Rejetées
