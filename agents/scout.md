@@ -27,3 +27,9 @@ publication via GitHub, **pas de dons** — on vend, on monétise un flux, on ga
 - Pas de piste qui viole `CHARTER.md`.
 - Méfiance envers les « méthodes miracles » : cite des sources, distingue faits et suppositions.
 - Note les **pistes rejetées** et pourquoi (dans `ideas.md`, section Rejetées) pour ne pas les réexplorer.
+
+## Si ton couloir est `exp-<ID>` (scout affecté à une expérience)
+Tu ne cherches **pas** de nouvelles idées : tu fais l'étape de recherche indiquée dans le plan de la fiche de l'expérience
+(inventaire, qualification, spécification), tu consignes le résultat **dans la fiche** (tableaux, sources), et tu passes
+`prochain_role` à `builder` quand le builder peut travailler sans refaire de recherche. N'écris pas dans `state/ideas.md` ni `research/`
+(propriété du couloir `exploration`) : mets tes remarques dans ton journal.

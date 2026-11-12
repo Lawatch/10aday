@@ -25,6 +25,7 @@ Format :
 - Demandé par / le : cadrage initial, 2026-11-12 (révisé : dons exclus par l'humain)
 - Pourquoi : sans moyen de vendre, le palier P2 (premier euro) est impossible. Les agents produisent des produits numériques/outils à vendre ; il faut une boutique.
 - Action exacte : créer un compte vendeur sur une plateforme gratuite à la commission (ex. **Gumroad** ou **Lemon Squeezy** — pas d'abonnement, commission prélevée à la vente), puis écrire ici l'URL publique de la boutique. Vérifier au passage l'obligation de déclarer ces revenus (micro-entreprise). **Ne jamais écrire d'identifiants ici.**
+- Mise à jour 2026-11-12 (strategist) : le 1er produit est en cours (EXP-002, tableur micro-entrepreneur ~12 €) ; la fiche boutique sera prête à coller.
 - Note : les agents prépareront chaque produit (fichier, description, prix) prêt à mettre en ligne ; si la plateforme a une API, ils pourront ensuite publier seuls.
 - Réponse :
 

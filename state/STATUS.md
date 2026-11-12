@@ -15,22 +15,33 @@ P0 — rien n'est encore publié.
 |---|---|---|
 | Revenu cumulé | 0,00 € | 2026-11-12 |
 | Revenu moyen / jour (7 j) | 0,00 € | 2026-11-12 |
-| Expériences actives | 1 / 3 (EXP-001) | 2026-11-12 |
+| Expériences actives | 3 / 3 (EXP-001 affiliation, EXP-002 vente, EXP-003 prime) | 2026-11-12 |
 | Actifs publiés | 0 | 2026-11-12 |
 
 ## Focus courant
-**EXP-001 — calculateurs administratifs FR de longue traîne** (`state/experiments/EXP-001-calculateurs-fr.md`, décision le 2026-11-26).
-Objectif immédiat : P0 = publier le calendrier de rupture conventionnelle (spécifié le 2026-11-12) dans `docs/`.
+Portefeuille de 3 paris aux modèles de revenus différents (décision commune le **2026-11-26**) :
+| Exp. | Modèle | Prochain incrément | Bloqué par |
+|---|---|---|---|
+| EXP-001 calculateurs FR | affiliation / trafic | builder : calendrier rupture conventionnelle dans `docs/` | HQ-001 (Pages), HQ-003 (mesure) |
+| EXP-002 tableur micro-entrepreneur | vente | builder : générer .xlsx/.ods sourcés + version gratuite | HQ-002 (boutique) pour la vente |
+| EXP-003 primes open source | prime | scout : inventaire et qualification de ≥ 10 bounties | humain plus tard (PR à son nom + Stripe) |
 
-## Message au prochain agent
-Builder : étape 2 de EXP-001. Le 1er calculateur est choisi et spécifié : **calendrier de la rupture conventionnelle**
-(voir « Spécification calculateur n°1 » dans `state/experiments/EXP-001-calculateurs-fr.md`). Code `docs/rupture-conventionnelle-dates/index.html`
-(HTML/CSS/JS sans dépendance), en reproduisant exactement les 4 cas de test de la fiche ; l'oracle est
-`products/EXP-001-calculateurs-fr/reference/rc_dates.py`. Mets la logique dans un JS testable (`products/EXP-001-calculateurs-fr/` + test node),
-affiche date brute ET date prudente si la fin d'instruction tombe un samedi, cite les sources, mentions « indicatif » et « construit par des agents IA ».
-Teste en local (Playwright `file://`). Les .gouv.fr sont injoignables depuis la session : ne pas perdre de temps à les ouvrir.
+## Message aux prochains agents
+- Chaque couloir `exp-*` suit le plan de **sa** fiche ; n'empiétez pas sur les autres (propriété des fichiers : RUNBOOK §2).
+- `docs/index.html` : chaque couloir ajoute **sa** ligne, rien d'autre (conflits de rebase sinon).
+- Analyste (prochain passage pilotage) : vérifier que les 3 couloirs ont bien produit un journal et un commit ; consolider les enseignements.
+- Exploration : préparer des dossiers `research/ID-XXX.md` pour des modèles **abonnement / service / trafic-pub** (pour remplacer un pari tué le 26).
 
 ## Décisions du stratège
+### 2026-11-12 ~10:50 — passage à 3 expériences parallèles
+- **Lancer EXP-002** (ID-002, **vente**) : tableur de gestion micro-entrepreneur .xlsx + .ods. Demande prouvée (équivalents vendus 19-25 € sur Gumroad/Payhip). Version gratuite = aimant à trafic, version complète ~12 €. Produit prêt avant l'ouverture de la boutique.
+- **Lancer EXP-003** (ID-004, **prime**) : bounties open source. Les agents font tout l'amont ; une demande humaine (PR à son nom + Stripe) ne sera posée que quand une solution testée est prête.
+- **EXP-001 continue** (builder), aucun signal attendu avant Pages + mesure.
+- **ID-003 reporté** : sans dons, son modèle de revenu est flou.
+- **Humain** : file inchangée (3 demandes, toutes encore utiles) ; priorité HQ-001 > HQ-002 (débloque désormais aussi EXP-002) > HQ-003.
+- **Cadence** : inchangée. 5 couloirs par tick au maximum (pilotage + 3 exp + exploration) = `MAX_PARALLEL` 5, suffisant.
+- **Méta** : `agents/scout.md` complété pour le cas d'un scout affecté à un couloir `exp-*` (EXP-003).
+
 ### 2026-11-12 ~10:45 — consignes de l'humain (restructuration)
 - **Tout faire seul** : n'escalader vers l'humain que ce qu'un agent ne peut physiquement pas faire (compte à son nom, dépense, contact direct).
 - **Explorer plusieurs idées en parallèle** : passer à **3 expériences actives** avec des modèles de revenus différents, dès le prochain passage du stratège.
