@@ -94,6 +94,25 @@ function table(cols, rows, versions) {
   }
   return h + '</table></div>';
 }
+
+// Pre-release guide: "what gets installed" table. Values live in prerelease_cases.json; npm and Cargo are re-checked here
+// with vcc.js, and check_prerelease_guide.sh re-checks npm, pip, RubyGems and Composer with the real tools.
+const PRE = require(path.join(__dirname, 'prerelease_cases.json'));
+const ECOS = ['npm', 'cargo', 'composer', 'pip', 'rubygems'];
+function prereleaseTable() {
+  const best = (eco, list) => { if (!list.length) return null; if (eco === 'npm') return list.reduce((a, b) => nodeSemver.gt(b, a) ? b : a); return list[list.length - 1]; };
+  let h = '<div style="overflow-x:auto"><table><tr><th>Constraint</th>' + ECOS.map(e => `<th>${NAMES[e]}</th>`).join('') + '</tr>\n';
+  for (const r of PRE.rows) {
+    for (const e of ['npm', 'cargo']) {
+      const p = VCC[e].parse(r.per[e]); if (!p.valid) throw new Error(`${e} ${r.per[e]} invalid`);
+      const got = best(e, PRE.available[e].filter(v => p.test(v)));
+      if (got !== r.pick[e]) throw new Error(`prerelease ${e} ${r.per[e]}: engine picks ${got}, page says ${r.pick[e]}`);
+      checks++;
+    }
+    h += `<tr><td>${esc(r.label)}</td>` + ECOS.map(e => `<td${r.hl && r.hl.includes(e) ? ' class="hl"' : ''}><code>${esc(r.per[e])}</code><br>→ ${r.pick[e] ? `<strong>${esc(r.pick[e])}</strong>` : '<span class="na">nothing</span>'}</td>`).join('') + '</tr>\n';
+  }
+  return h + '</table></div>';
+}
 function page(g) {
   const url = BASE + g.slug + '/';
   const faqLd = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: g.faq.map(([q, a]) => ({ '@type': 'Question', name: q.replace(/<[^>]+>/g, ''), acceptedAnswer: { '@type': 'Answer', text: a.replace(/<[^>]+>/g, '') } })) };
@@ -491,6 +510,46 @@ ${[['^1.2.3', '~=1.2.3', ['1.2.3', '1.3.0'], ['1.2.3', '2.0.0']], ['^0.2', '~=0.
 <li><strong><code>[project] dependencies</code></strong> (PEP 621: Poetry 2, uv, Hatch, PDM, setuptools): PEP 440 only. Poetry's documentation says caret and tilde are not supported there.</li>
 <li><strong>pip, <code>requirements.txt</code>, <code>uv add</code></strong>: PEP 440 only. Same for the Python version: <code>python = "^3.10"</code> becomes <code>requires-python = "&gt;=3.10,&lt;4.0"</code>, though many projects simply write <code>"&gt;=3.10"</code>.</li>
 </ul>`
+},
+{
+  slug: 'prerelease-versions',
+  short: 'Pre-release versions (beta, rc)',
+  title: 'Does ^1.2.0 Match 1.3.0-beta? Pre-release Versions in npm, Cargo, Composer, pip and RubyGems',
+  h1: 'Does <code>^1.2.0</code> match <code>1.3.0-beta</code>? Pre-release versions in five package managers',
+  description: 'When do npm, Cargo, Composer, pip and RubyGems install a beta or release candidate? The same constraint gives different answers. Tested with each real tool, with the opt-in for each.',
+  intro: `<p><strong>Short answer:</strong> no, not by default. All five package managers skip pre-releases (<code>-beta</code>, <code>-rc</code>, <code>b1</code>, <code>.rc1</code>) unless you ask for them.
+But “asking” works differently in each one. Put a pre-release in the constraint, and npm and Cargo only open the door for that exact <code>x.y.z</code>. Composer, pip and RubyGems then accept any newer pre-release.
+And in RubyGems, <code>&lt; 2</code> lets <code>2.0.0.rc1</code> through.</p>`,
+  faq: [
+    ['Does ^1.2.0 match 1.3.0-beta.1 in npm?', 'No. In npm a pre-release only matches if the range itself contains a pre-release on the same major.minor.patch. <code>^1.2.0-beta.1</code> matches <code>1.2.0-beta.2</code> but still not <code>1.3.0-beta.1</code>. Cargo follows the same rule.'],
+    ['How do I install a beta or release candidate?', 'npm and Cargo: write it in the constraint, e.g. <code>^2.0.0-rc.1</code>. Composer: <code>^2.0@RC</code>, a constraint with <code>-RC1</code>, or <code>"minimum-stability"</code>. pip: <code>pip install --pre</code> or a specifier that names a pre-release, e.g. <code>&gt;=2.0.0rc1</code>. RubyGems: <code>gem install --pre</code> or a requirement such as <code>&gt;= 2.0.0.rc1</code>.'],
+    ['Why did pip install a release candidate I did not ask for?', 'pip accepts a pre-release when no final release satisfies the specifier. With 1.2.5 and 2.0.0rc1 published, <code>&gt;1.2.5</code> installs 2.0.0rc1. Composer, npm, Cargo and RubyGems install nothing in that case.'],
+    ['Does <2.0.0 include 2.0.0-rc.1?', 'Not in npm, Cargo, Composer or pip (PEP 440 says <code>&lt;V</code> excludes pre-releases of V). In RubyGems, <code>2.0.0.rc1</code> sorts below <code>2.0.0</code>, so <code>&lt; 2</code> accepts it as soon as pre-releases are allowed.'],
+    ['Why does Composer ^1.2.0-beta1 install 1.3.0-beta1?', 'Writing <code>-beta1</code> in a root requirement sets the stability for that package to beta. Every beta in the range is then allowed, and Composer takes the highest one. Use <code>"prefer-stable": true</code> to keep stable releases when one fits.'],
+  ],
+  body: () => `<h2>What gets installed</h2>
+<p>Suppose the package has published three versions: <strong>1.2.5</strong>, <strong>1.3.0-beta.1</strong> and <strong>2.0.0-rc.1</strong> (written in each tool's own syntax). Each cell shows the constraint and the version the tool picks.
+Highlighted cells are where one tool behaves differently from the others.</p>
+${prereleaseTable()}
+<p class="muted">Tested on 2026-11-12 with node-semver (npm's resolver library), the Cargo rules of the <code>semver</code> crate, a real <code>composer update</code> (Composer 2.8, default <code>minimum-stability</code>), Python <code>packaging</code> 26.3 (the library pip uses) and RubyGems 3.5.22.
+Pip and Composer also look at other packages and options; this is the default case with one dependency.</p>
+<h2>The rule in each package manager</h2>
+<ul>
+<li><strong>npm</strong>: a pre-release matches only if a comparator in the same range has a pre-release on the same <code>major.minor.patch</code>. So <code>&gt;=2.0.0-rc.1</code> accepts <code>2.0.0-rc.2</code>, but never <code>2.1.0-beta.1</code>.</li>
+<li><strong>Cargo</strong>: the same idea. A pre-release is only selected when the requirement names one, and only on that <code>major.minor.patch</code>.</li>
+<li><strong>Composer</strong>: the constraint itself does include pre-releases (<code>^1.2.0</code> means ≥1.2.0.0-dev). It is <code>minimum-stability</code>, <code>stable</code> by default, that filters them out. A flag such as <code>@beta</code>, or a <code>-beta1</code> in the constraint, lowers it for that package.</li>
+<li><strong>pip</strong> (PEP 440): pre-releases are skipped unless the specifier names one, you pass <code>--pre</code>, or <em>only</em> pre-releases match. <code>&lt;2.0</code> never matches <code>2.0rc1</code>.</li>
+<li><strong>RubyGems / Bundler</strong>: pre-releases are skipped unless the requirement names one or you pass <code>--pre</code>. Once they are allowed, plain version order applies: <code>2.0.0.rc1</code> is below <code>2</code>.</li>
+</ul>
+<h2>How to opt in</h2>
+<div style="overflow-x:auto"><table><tr><th>Tool</th><th>Get the release candidate of 2.0</th></tr>
+<tr><td>npm</td><td><code>"^2.0.0-rc.1"</code> in package.json</td></tr>
+<tr><td>Cargo</td><td><code>"2.0.0-rc.1"</code> in Cargo.toml (a bare version is a caret requirement)</td></tr>
+<tr><td>Composer</td><td><code>"^2.0@RC"</code>, or <code>"^2.0.0-RC1"</code></td></tr>
+<tr><td>pip</td><td><code>pip install --pre pkg</code>, or <code>pkg&gt;=2.0.0rc1</code></td></tr>
+<tr><td>RubyGems</td><td><code>gem install pkg --pre</code>, or <code>gem "pkg", "&gt;= 2.0.0.rc1"</code> in the Gemfile</td></tr>
+</table></div>
+<p>To see how each tool orders <code>1.0.0-1</code>, <code>1.0.0rc1</code> or <code>1.0.0.beta</code> against the final release, paste them into the <a href="../version-sorter/">Version sorter</a>.</p>`
 },
 ];
 

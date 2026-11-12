@@ -84,6 +84,7 @@ The same string often means different things: <code>~1.2</code> stops before 1.3
 <tr><td>pip</td><td>This page shows PEP 440 range membership with pre-releases allowed. pip itself installs a pre-release only with <code>--pre</code>, when the specifier names a pre-release, or when no final release matches. Note that <code>&lt;2.0</code> never matches <code>2.0.0a1</code>.</td></tr>
 <tr><td>RubyGems</td><td>Pre-releases (<code>1.3.0.rc1</code>, or <code>1.3.0-rc.1</code> read as <code>1.3.0.pre.rc.1</code>) sort before the release and are compared normally. <code>gem install</code> and Bundler only pick them when you ask for pre-releases.</td></tr>
 </table>
+<p>What actually gets installed, tested with each real tool: <a href="../prerelease-versions/">pre-release versions in five package managers</a>.</p>
 
 <h2>Cheat sheet: the same syntax in five package managers</h2>
 <p class="muted">Generated from the official implementations (node-semver 7.8.5, Rust semver 1.0.28, composer/semver 3.6.0, Python packaging 26.3, RubyGems 3.5.22). "invalid" means the tool rejects the constraint.</p>
@@ -136,6 +137,7 @@ Below 1.0.0 the caret is stricter: <code>^0.2.3</code> means ≥0.2.3 &lt;0.3.0,
 <li><a href="../composer-version-constraints/">Composer version constraints</a> — why <code>~1.2</code> is &lt;2.0 and a bare <code>"1.2"</code> is exactly 1.2.0 in composer.json</li>
 <li><a href="../pip-compatible-release/">pip <code>~=</code> and PEP 440 specifiers</a> — <code>~=1.4</code>, <code>==1.4.*</code>, <code>!=</code> in requirements.txt, compared with Ruby <code>~&gt;</code></li>
 <li><a href="../poetry-version-constraints/">Poetry <code>^</code> and <code>~</code> to PEP 440</a> — what <code>^0.2.3</code> or <code>~1.2</code> means in Poetry and how to write it in <code>[project]</code></li>
+<li><a href="../prerelease-versions/">Pre-release versions (beta, rc)</a> — which beta or release candidate each package manager actually installs, and how to opt in</li>
 </ul>
 
 <h2>Sources</h2>

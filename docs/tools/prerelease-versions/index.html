@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Does ^1.2.0 Match 1.3.0-beta? Pre-release Versions in npm, Cargo, Composer, pip and RubyGems</title>
+<meta name="description" content="When do npm, Cargo, Composer, pip and RubyGems install a beta or release candidate? The same constraint gives different answers. Tested with each real tool, with the opt-in for each.">
+<link rel="canonical" href="https://lawatch.github.io/10aday/tools/prerelease-versions/">
+<meta property="og:title" content="Does ^1.2.0 Match 1.3.0-beta? Pre-release Versions in npm, Cargo, Composer, pip and RubyGems">
+<meta property="og:description" content="When do npm, Cargo, Composer, pip and RubyGems install a beta or release candidate? The same constraint gives different answers. Tested with each real tool, with the opt-in for each.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://lawatch.github.io/10aday/tools/prerelease-versions/">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does ^1.2.0 match 1.3.0-beta.1 in npm?","acceptedAnswer":{"@type":"Answer","text":"No. In npm a pre-release only matches if the range itself contains a pre-release on the same major.minor.patch. ^1.2.0-beta.1 matches 1.2.0-beta.2 but still not 1.3.0-beta.1. Cargo follows the same rule."}},{"@type":"Question","name":"How do I install a beta or release candidate?","acceptedAnswer":{"@type":"Answer","text":"npm and Cargo: write it in the constraint, e.g. ^2.0.0-rc.1. Composer: ^2.0@RC, a constraint with -RC1, or \"minimum-stability\". pip: pip install --pre or a specifier that names a pre-release, e.g. &gt;=2.0.0rc1. RubyGems: gem install --pre or a requirement such as &gt;= 2.0.0.rc1."}},{"@type":"Question","name":"Why did pip install a release candidate I did not ask for?","acceptedAnswer":{"@type":"Answer","text":"pip accepts a pre-release when no final release satisfies the specifier. With 1.2.5 and 2.0.0rc1 published, &gt;1.2.5 installs 2.0.0rc1. Composer, npm, Cargo and RubyGems install nothing in that case."}},{"@type":"Question","name":"Does <2.0.0 include 2.0.0-rc.1?","acceptedAnswer":{"@type":"Answer","text":"Not in npm, Cargo, Composer or pip (PEP 440 says &lt;V excludes pre-releases of V). In RubyGems, 2.0.0.rc1 sorts below 2.0.0, so &lt; 2 accepts it as soon as pre-releases are allowed."}},{"@type":"Question","name":"Why does Composer ^1.2.0-beta1 install 1.3.0-beta1?","acceptedAnswer":{"@type":"Answer","text":"Writing -beta1 in a root requirement sets the stability for that package to beta. Every beta in the range is then allowed, and Composer takes the highest one. Use \"prefer-stable\": true to keep stable releases when one fits."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"10aday","item":"https://lawatch.github.io/10aday/"},{"@type":"ListItem","position":2,"name":"Version Constraint Checker","item":"https://lawatch.github.io/10aday/tools/version-constraint-checker/"},{"@type":"ListItem","position":3,"name":"Pre-release versions (beta, rc)","item":"https://lawatch.github.io/10aday/tools/prerelease-versions/"}]}</script>
+<style>
+  body{font-family:system-ui,-apple-system,Segoe UI,sans-serif;max-width:900px;margin:2rem auto;padding:0 1rem;line-height:1.6;color:#1d1d1f}
+  h1{font-size:1.6rem;margin:.2rem 0 .6rem} h2{font-size:1.2rem;margin-top:2rem}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+  table{border-collapse:collapse;width:100%;margin:.6rem 0;font-size:.92rem}
+  th,td{border:1px solid #ddd;padding:.35rem .5rem;text-align:left;vertical-align:top}
+  th{background:#f6f6f6} td.hl{background:#fff4d6;font-weight:600} .na{color:#999}
+  .muted{color:#666} .cta{background:#eef4ff;border:1px solid #b8cdf5;padding:.7rem .9rem;border-radius:6px}
+  footer{margin-top:3rem;font-size:.85rem;color:#666;border-top:1px solid #ddd;padding-top:1rem}
+</style>
+</head>
+<body>
+<p class="muted"><a href="../../">10aday</a> › <a href="../version-constraint-checker/">Version Constraint Checker</a> › Pre-release versions (beta, rc)</p>
+<h1>Does <code>^1.2.0</code> match <code>1.3.0-beta</code>? Pre-release versions in five package managers</h1>
+<p><strong>Short answer:</strong> no, not by default. All five package managers skip pre-releases (<code>-beta</code>, <code>-rc</code>, <code>b1</code>, <code>.rc1</code>) unless you ask for them.
+But “asking” works differently in each one. Put a pre-release in the constraint, and npm and Cargo only open the door for that exact <code>x.y.z</code>. Composer, pip and RubyGems then accept any newer pre-release.
+And in RubyGems, <code>&lt; 2</code> lets <code>2.0.0.rc1</code> through.</p>
+<p class="cta">Have a constraint and a list of versions? Paste them into the <a href="../version-constraint-checker/"><strong>Version Constraint Checker</strong></a>: it shows, side by side, what npm, Cargo, Composer, pip and RubyGems accept.</p>
+<h2>What gets installed</h2>
+<p>Suppose the package has published three versions: <strong>1.2.5</strong>, <strong>1.3.0-beta.1</strong> and <strong>2.0.0-rc.1</strong> (written in each tool's own syntax). Each cell shows the constraint and the version the tool picks.
+Highlighted cells are where one tool behaves differently from the others.</p>
+<div style="overflow-x:auto"><table><tr><th>Constraint</th><th>npm</th><th>Cargo</th><th>Composer</th><th>pip</th><th>RubyGems</th></tr>
+<tr><td>^1.2.0 (or its equivalent)</td><td><code>^1.2.0</code><br>→ <strong>1.2.5</strong></td><td><code>^1.2.0</code><br>→ <strong>1.2.5</strong></td><td><code>^1.2.0</code><br>→ <strong>1.2.5</strong></td><td><code>&gt;=1.2.0,&lt;2</code><br>→ <strong>1.2.5</strong></td><td><code>~&gt; 1.2</code><br>→ <strong>1.2.5</strong></td></tr>
+<tr><td>&gt;=1.0.0</td><td><code>&gt;=1.0.0</code><br>→ <strong>1.2.5</strong></td><td><code>&gt;=1.0.0</code><br>→ <strong>1.2.5</strong></td><td><code>&gt;=1.0.0</code><br>→ <strong>1.2.5</strong></td><td><code>&gt;=1.0.0</code><br>→ <strong>1.2.5</strong></td><td><code>&gt;= 1.0.0</code><br>→ <strong>1.2.5</strong></td></tr>
+<tr><td>^1.2.0-beta.1 (a pre-release in the constraint)</td><td><code>^1.2.0-beta.1</code><br>→ <strong>1.2.5</strong></td><td><code>^1.2.0-beta.1</code><br>→ <strong>1.2.5</strong></td><td class="hl"><code>^1.2.0-beta1</code><br>→ <strong>1.3.0-beta1</strong></td><td class="hl"><code>&gt;=1.2.0b1,&lt;2</code><br>→ <strong>1.3.0b1</strong></td><td class="hl"><code>&gt;= 1.2.0.beta1, &lt; 2</code><br>→ <strong>2.0.0.rc1</strong></td></tr>
+<tr><td>&gt;=2.0.0-rc.1</td><td><code>&gt;=2.0.0-rc.1</code><br>→ <strong>2.0.0-rc.1</strong></td><td><code>&gt;=2.0.0-rc.1</code><br>→ <strong>2.0.0-rc.1</strong></td><td><code>&gt;=2.0.0-RC1</code><br>→ <strong>2.0.0-RC1</strong></td><td><code>&gt;=2.0.0rc1</code><br>→ <strong>2.0.0rc1</strong></td><td><code>&gt;= 2.0.0.rc1</code><br>→ <strong>2.0.0.rc1</strong></td></tr>
+<tr><td>^1.3.0-beta.1</td><td><code>^1.3.0-beta.1</code><br>→ <strong>1.3.0-beta.1</strong></td><td><code>^1.3.0-beta.1</code><br>→ <strong>1.3.0-beta.1</strong></td><td><code>^1.3.0-beta1</code><br>→ <strong>1.3.0-beta1</strong></td><td><code>&gt;=1.3.0b1,&lt;2</code><br>→ <strong>1.3.0b1</strong></td><td class="hl"><code>&gt;= 1.3.0.beta1, &lt; 2</code><br>→ <strong>2.0.0.rc1</strong></td></tr>
+<tr><td>&gt;1.2.5 (only pre-releases are newer)</td><td><code>&gt;1.2.5</code><br>→ <span class="na">nothing</span></td><td><code>&gt;1.2.5</code><br>→ <span class="na">nothing</span></td><td><code>&gt;1.2.5</code><br>→ <span class="na">nothing</span></td><td class="hl"><code>&gt;1.2.5</code><br>→ <strong>2.0.0rc1</strong></td><td><code>&gt; 1.2.5</code><br>→ <span class="na">nothing</span></td></tr>
+</table></div>
+<p class="muted">Tested on 2026-11-12 with node-semver (npm's resolver library), the Cargo rules of the <code>semver</code> crate, a real <code>composer update</code> (Composer 2.8, default <code>minimum-stability</code>), Python <code>packaging</code> 26.3 (the library pip uses) and RubyGems 3.5.22.
+Pip and Composer also look at other packages and options; this is the default case with one dependency.</p>
+<h2>The rule in each package manager</h2>
+<ul>
+<li><strong>npm</strong>: a pre-release matches only if a comparator in the same range has a pre-release on the same <code>major.minor.patch</code>. So <code>&gt;=2.0.0-rc.1</code> accepts <code>2.0.0-rc.2</code>, but never <code>2.1.0-beta.1</code>.</li>
+<li><strong>Cargo</strong>: the same idea. A pre-release is only selected when the requirement names one, and only on that <code>major.minor.patch</code>.</li>
+<li><strong>Composer</strong>: the constraint itself does include pre-releases (<code>^1.2.0</code> means ≥1.2.0.0-dev). It is <code>minimum-stability</code>, <code>stable</code> by default, that filters them out. A flag such as <code>@beta</code>, or a <code>-beta1</code> in the constraint, lowers it for that package.</li>
+<li><strong>pip</strong> (PEP 440): pre-releases are skipped unless the specifier names one, you pass <code>--pre</code>, or <em>only</em> pre-releases match. <code>&lt;2.0</code> never matches <code>2.0rc1</code>.</li>
+<li><strong>RubyGems / Bundler</strong>: pre-releases are skipped unless the requirement names one or you pass <code>--pre</code>. Once they are allowed, plain version order applies: <code>2.0.0.rc1</code> is below <code>2</code>.</li>
+</ul>
+<h2>How to opt in</h2>
+<div style="overflow-x:auto"><table><tr><th>Tool</th><th>Get the release candidate of 2.0</th></tr>
+<tr><td>npm</td><td><code>"^2.0.0-rc.1"</code> in package.json</td></tr>
+<tr><td>Cargo</td><td><code>"2.0.0-rc.1"</code> in Cargo.toml (a bare version is a caret requirement)</td></tr>
+<tr><td>Composer</td><td><code>"^2.0@RC"</code>, or <code>"^2.0.0-RC1"</code></td></tr>
+<tr><td>pip</td><td><code>pip install --pre pkg</code>, or <code>pkg&gt;=2.0.0rc1</code></td></tr>
+<tr><td>RubyGems</td><td><code>gem install pkg --pre</code>, or <code>gem "pkg", "&gt;= 2.0.0.rc1"</code> in the Gemfile</td></tr>
+</table></div>
+<p>To see how each tool orders <code>1.0.0-1</code>, <code>1.0.0rc1</code> or <code>1.0.0.beta</code> against the final release, paste them into the <a href="../version-sorter/">Version sorter</a>.</p>
+<!-- AADS slot: activate after HQ-004 -->
+<h2>Common questions</h2>
+<h3>Does ^1.2.0 match 1.3.0-beta.1 in npm?</h3>
+<p>No. In npm a pre-release only matches if the range itself contains a pre-release on the same major.minor.patch. <code>^1.2.0-beta.1</code> matches <code>1.2.0-beta.2</code> but still not <code>1.3.0-beta.1</code>. Cargo follows the same rule.</p>
+<h3>How do I install a beta or release candidate?</h3>
+<p>npm and Cargo: write it in the constraint, e.g. <code>^2.0.0-rc.1</code>. Composer: <code>^2.0@RC</code>, a constraint with <code>-RC1</code>, or <code>"minimum-stability"</code>. pip: <code>pip install --pre</code> or a specifier that names a pre-release, e.g. <code>&gt;=2.0.0rc1</code>. RubyGems: <code>gem install --pre</code> or a requirement such as <code>&gt;= 2.0.0.rc1</code>.</p>
+<h3>Why did pip install a release candidate I did not ask for?</h3>
+<p>pip accepts a pre-release when no final release satisfies the specifier. With 1.2.5 and 2.0.0rc1 published, <code>&gt;1.2.5</code> installs 2.0.0rc1. Composer, npm, Cargo and RubyGems install nothing in that case.</p>
+<h3>Does <2.0.0 include 2.0.0-rc.1?</h3>
+<p>Not in npm, Cargo, Composer or pip (PEP 440 says <code>&lt;V</code> excludes pre-releases of V). In RubyGems, <code>2.0.0.rc1</code> sorts below <code>2.0.0</code>, so <code>&lt; 2</code> accepts it as soon as pre-releases are allowed.</p>
+<h3>Why does Composer ^1.2.0-beta1 install 1.3.0-beta1?</h3>
+<p>Writing <code>-beta1</code> in a root requirement sets the stability for that package to beta. Every beta in the range is then allowed, and Composer takes the highest one. Use <code>"prefer-stable": true</code> to keep stable releases when one fits.</p>
+<h2>Related</h2>
+<ul><li><a href="../version-constraint-checker/">Version Constraint Checker</a> — test any constraint against your versions in five package managers</li><li><a href="../poetry-to-pep621/">Poetry to PEP 621 converter</a> — turn Poetry <code>^</code> and <code>~</code> into <code>[project]</code> dependencies (Poetry 2, uv)</li><li><a href="../tilde-vs-caret/">Tilde vs caret</a></li><li><a href="../pessimistic-version-operator/">~> vs ~= vs ~</a></li><li><a href="../npm-version-range-syntax/">x, *, hyphen and || ranges</a></li><li><a href="../cargo-version-requirements/">Cargo.toml version requirements</a></li><li><a href="../composer-version-constraints/">Composer version constraints</a></li><li><a href="../pip-compatible-release/">pip ~= and version specifiers</a></li><li><a href="../poetry-version-constraints/">Poetry ^ and ~ to PEP 440</a></li></ul>
+<h2>Sources</h2>
+<ul>
+<li>npm: <a href="https://github.com/npm/node-semver#advanced-range-syntax">node-semver, advanced range syntax</a></li>
+<li>Cargo: <a href="https://doc.rust-lang.org/cargo/reference/specifying-dependencies.html">Specifying dependencies</a></li>
+<li>Composer: <a href="https://getcomposer.org/doc/articles/versions.md">Versions and constraints</a></li>
+<li>pip: <a href="https://packaging.python.org/en/latest/specifications/version-specifiers/#compatible-release">Version specifiers, compatible release</a></li>
+<li>RubyGems: <a href="https://guides.rubygems.org/patterns/#pessimistic-version-constraint">Pessimistic version constraint</a></li>
+</ul>
+<footer>
+<p><strong>Built by AI agents</strong> as part of the <a href="../../">10aday</a> project. Every range on this page is generated by the engine of the
+<a href="../version-constraint-checker/">Version Constraint Checker</a> and checked on probe versions. That engine agrees 100% with node-semver 7.8.5, the Rust <code>semver</code> crate 1.0.28,
+composer/semver 3.6.0, Python <code>packaging</code> 26.3 and RubyGems 3.5.22 on about 330,000 test pairs. Found a mistake? <a href="https://github.com/Lawatch/10aday/issues">Open an issue</a>.</p>
+</footer>
+<script data-goatcounter="https://10aday.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
