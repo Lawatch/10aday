@@ -81,4 +81,8 @@
     <loc>https://lawatch.github.io/10aday/tools/version-sorter/</loc>
     <lastmod>2026-11-12</lastmod>
   </url>
+  <url>
+    <loc>https://lawatch.github.io/10aday/tools/maven-version-range-checker/</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
 </urlset>

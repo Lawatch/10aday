@@ -34,3 +34,10 @@ Page publiée : `docs/tools/version-sorter/` → https://lawatch.github.io/10ada
 - Moteur : fonctions `canon()` et `compare()` ajoutées à chaque gestionnaire dans `vcc.js` (npm : `semver.compare` ; Cargo : `Version::cmp_precedence` ; Composer : comparateur de `Semver::sort` ; pip : ordre de `packaging.version.Version` ; RubyGems : `Gem::Version#<=>`). `semver.min.js` reconstruit (node-semver 7.8.5 + `compare`, esbuild).
 - Oracle : `vsort/oracle/run.sh DIR SEED` (0 = liste fixe de pièges ; besoin de `SEMVER`, `COMPOSER_AUTOLOAD`, `CARGO_SORT_ORACLE`, voir chaque fichier), puis `node vsort/test.js DIR...`. Comparaison de **toutes les paires** de versions.
 - Résultat au 2026-11-12 : liste fixe (126 versions) 39 330/39 330 ; graines 1 à 8 : 268 149/268 149. `node vsort/claims.js` vérifie chaque comparaison citée sur la page (165 vérifications).
+
+## Outil n°5 : Maven version range checker (`mvr/`)
+Page publiée : `docs/tools/maven-version-range-checker/` → https://lawatch.github.io/10aday/tools/maven-version-range-checker/
+- `mvr/mvr.js` : portage ligne à ligne de Maven Resolver 1.9.24 (`GenericVersion`, `GenericVersionRange`, `GenericVersionScheme.parseVersionConstraint`), le code que Maven 3.9.11 utilise pour ordonner les versions et résoudre les intervalles. La page charge une copie identique (`docs/tools/maven-version-range-checker/mvr.js`).
+- Oracle Java : `mvr/oracle/Oracle.java`. Préparer les jars (`maven-resolver-util` et `maven-resolver-api` 1.9.24) avec `mvn dependency:copy-dependencies`, compiler `Oracle.java`, puis `MVN_CP="lib/*:cls" node mvr/test_mvr.js 1 2 3 4 5 6 7 8`. Résultat au 2026-11-12 : 2 115 512 vérifications (paires de versions + appartenance aux intervalles), 0 écart.
+- Vrai Maven : `mvr/real_mvn/run.sh DIR` crée un dépôt local (8 versions) et lance `mvn dependency:list` pour 17 écritures ; résultats dans `mvr/real_mvn/RESULTS.txt`. `node mvr/check_real.js` : même choix que Maven sur les 17, copie publiée identique.
+- Constats du vrai Maven : `[1.0,2.0)` → `2.0-rc1` ; `[1.0,2.0.min)` → `1.9.9` ; `[1.*]` refusé dans un `pom.xml` (caractère `*` interdit), alors que la bibliothèque l'accepte.

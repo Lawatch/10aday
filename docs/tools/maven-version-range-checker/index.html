@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maven Version Range Checker: test [1.0,2.0) against versions</title>
+<meta name="description" content="Paste a Maven version range such as [1.0,2.0) or (,1.5] and a list of versions: see which ones match, which one Maven picks, and the trap that makes [1.0,2.0) pick 2.0-rc1. Same code as Maven 3.9.">
+<link rel="canonical" href="https://lawatch.github.io/10aday/tools/maven-version-range-checker/">
+<meta property="og:title" content="Maven Version Range Checker: test [1.0,2.0) against versions">
+<meta property="og:description" content="Paste a Maven version range such as [1.0,2.0) or (,1.5] and a list of versions: see which ones match, which one Maven picks, and the trap that makes [1.0,2.0) pick 2.0-rc1. Same code as Maven 3.9.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lawatch.github.io/10aday/tools/maven-version-range-checker/">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does [1.0,2.0) mean in Maven?", "acceptedAnswer": {"@type": "Answer", "text": "Any version from 1.0 included up to 2.0 excluded. Square brackets include the bound, round brackets exclude it. Maven then takes the highest version in the repository that falls in the range."}}, {"@type": "Question", "name": "Why does [1.0,2.0) pick 2.0-rc1 or 2.0-SNAPSHOT?", "acceptedAnswer": {"@type": "Answer", "text": "For Maven, 2.0-alpha-1, 2.0-beta1, 2.0-rc1 and 2.0-SNAPSHOT are all lower than 2.0, so they are inside [1.0,2.0). Tested with Maven 3.9.11: [1.0,2.0) resolved to 2.0-rc1. To stop before any 2.0 pre-release, write [1.0,2.0.min): it resolved to 1.9.9."}}, {"@type": "Question", "name": "What is the difference between 1.0 and [1.0] in a pom.xml?", "acceptedAnswer": {"@type": "Answer", "text": "1.0 is a soft requirement: Maven uses 1.0 unless another path in the dependency tree is nearer and asks for something else. [1.0] is a hard requirement: exactly 1.0 (or an equal version such as 1.0.0), and the build fails if it cannot be satisfied."}}, {"@type": "Question", "name": "Can I write [1.*] in a pom.xml?", "acceptedAnswer": {"@type": "Answer", "text": "No. Maven Resolver understands [1.*] as [1.min,1.max], but Maven 3.9 refuses a dependency version that contains * when it reads the POM. Use [1,2.min) instead."}}, {"@type": "Question", "name": "How do I exclude one version from a range?", "acceptedAnswer": {"@type": "Answer", "text": "Combine ranges with commas: (,1.1),(1.1,) accepts everything except 1.1. The result is the union of all the ranges."}}, {"@type": "Question", "name": "Are 1.0, 1.0.0 and 1.0-final the same version for Maven?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Trailing zeros and the qualifiers final, ga and release are ignored, so 1.0 = 1.0.0 = 1.0-ga = 1.0.Final. But 1.0-sp is higher than 1.0, and 1.0-foo is higher than 1.0 and lower than 1.0.1."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "10aday", "item": "https://lawatch.github.io/10aday/"}, {"@type": "ListItem", "position": 2, "name": "Maven Version Range Checker", "item": "https://lawatch.github.io/10aday/tools/maven-version-range-checker/"}]}</script>
+<style>
+  :root{--muted:#666;--line:#ddd;--warn:#fff4d6}
+  *{box-sizing:border-box}
+  body{font-family:system-ui,-apple-system,Segoe UI,sans-serif;max-width:1060px;margin:2rem auto;padding:0 1rem;line-height:1.55;color:#1d1d1f}
+  h1{font-size:1.6rem;margin:.2rem 0 .4rem} h2{font-size:1.2rem;margin-top:2rem} h3{font-size:1rem;margin:1.2rem 0 .2rem}
+  .muted{color:var(--muted)} code,input,textarea{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+  label{font-weight:600;display:block;margin:.8rem 0 .3rem}
+  textarea{width:100%;font-size:1rem;padding:.45rem .6rem;border:1px solid #bbb;border-radius:6px;min-height:8rem}
+  input[type=text]{width:100%;font-size:1.05rem;padding:.4rem .55rem;border:1px solid #bbb;border-radius:6px}
+  .chips button{font:inherit;font-size:.85rem;margin:.15rem .2rem .15rem 0;padding:.15rem .55rem;border:1px solid #bbb;background:#f6f6f6;border-radius:12px;cursor:pointer;font-family:ui-monospace,Menlo,monospace}
+  .chips button:hover{background:#eaeaea}
+  .msg{border-radius:6px;padding:.45rem .7rem;margin:.5rem 0;font-size:.93rem;border:1px solid}
+  .msg.warn{background:var(--warn);border-color:#e8c766} .msg.ok{background:#eaf6ee;border-color:#9fd3b0} .msg.err{background:#fdecec;border-color:#e3a1a1}
+  .pick{font-size:1.05rem} .pick code{font-size:1.1rem;font-weight:700}
+  table{border-collapse:collapse;width:100%;margin:.6rem 0;font-size:.92rem}
+  th,td{border:1px solid var(--line);padding:.35rem .5rem;text-align:left;vertical-align:top}
+  th{background:#f6f6f6} td.v{font-family:ui-monospace,Menlo,monospace;word-break:break-all} td.c{text-align:center;white-space:nowrap}
+  tr.chosen td{background:#eaf6ee;font-weight:600}
+  .wrap{overflow-x:auto}
+  footer{margin-top:3rem;font-size:.85rem;color:var(--muted);border-top:1px solid var(--line);padding-top:1rem}
+</style>
+</head>
+<body>
+<p class="muted"><a href="../../">10aday</a> › tools</p>
+<h1>Maven version range checker</h1>
+<p>Type a Maven dependency version such as <code>[1.0,2.0)</code>, <code>(,1.5]</code> or <code>[1.2]</code>, and the versions published for that library.
+You see which versions match, in plain words, and <strong>which one Maven will pick</strong>. The page runs a JavaScript copy of the code Maven 3.9 itself uses
+(Maven Resolver 1.9.24), checked against the real Java classes and against real <code>mvn</code> runs.</p>
+
+<label for="spec">Version or range from your pom.xml</label>
+<input type="text" id="spec" value="[1.0,2.0)" spellcheck="false" autocomplete="off">
+<div class="chips" id="examples" aria-label="Examples"></div>
+<label for="vs">Available versions (one per line, or separated by spaces or commas)</label>
+<textarea id="vs" spellcheck="false" autocomplete="off">1.0
+1.5
+1.9.9
+2.0-alpha-1
+2.0-beta1
+2.0-rc1
+2.0
+2.0.1</textarea>
+<div id="out" aria-live="polite"></div>
+<p class="muted" id="share"></p>
+
+<!-- AADS slot: activate after HQ-004 -->
+
+<h2>The trap: <code>[1.0,2.0)</code> accepts 2.0 pre-releases</h2>
+<p>Maven sorts <code>2.0-alpha-1 &lt; 2.0-beta1 &lt; 2.0-rc1 &lt; 2.0-SNAPSHOT &lt; 2.0</code>. All of them are below <code>2.0</code>, so an upper bound of <code>2.0)</code> lets them in.
+We ran Maven 3.9.11 on a test repository holding 1.0, 1.5, 1.9.9, 2.0-alpha-1, 2.0-beta1, 2.0-rc1, 2.0 and 2.0.1:</p>
+<div class="wrap"><table>
+<tr><th>In pom.xml</th><th>Maven picked</th><th>Why</th></tr>
+<tr><td class="v">[1.0,2.0)</td><td class="v">2.0-rc1</td><td>2.0-rc1 is lower than 2.0, so it is inside the range, and it is the highest one.</td></tr>
+<tr><td class="v">[1.0,2.0-SNAPSHOT)</td><td class="v">2.0-rc1</td><td>rc1 is lower than SNAPSHOT for Maven, so this does not help.</td></tr>
+<tr><td class="v">[1.0,2-alpha)</td><td class="v">1.9.9</td><td>Works for usual names (alpha, beta, milestone, rc, SNAPSHOT).</td></tr>
+<tr><td class="v">[1.0,2.0.min)</td><td class="v">1.9.9</td><td>Safest: <code>2.0.min</code> means “the smallest version of the 2.0 line”.</td></tr>
+<tr><td class="v">[1.0,2.0]</td><td class="v">2.0</td><td>Upper bound included.</td></tr>
+<tr><td class="v">[1.*]</td><td>build error</td><td>Maven 3.9 refuses <code>*</code> in a dependency version.</td></tr>
+</table></div>
+
+<h2>Range syntax cheat sheet</h2>
+<div class="wrap"><table id="cheat">
+<tr><th>Write</th><th>Means</th><th>Matches (from 1.0, 1.1, 1.5, 2.0-rc1, 2.0, 2.1)</th></tr>
+</table></div>
+<p class="muted">The “Matches” column is computed in your browser by the same engine as the checker above.</p>
+
+<h2>How Maven orders versions</h2>
+<p>Maven cuts a version into parts at <code>.</code>, <code>-</code>, <code>_</code> and at each switch between digits and letters. Numbers compare as numbers (so <code>1.10 &gt; 1.9</code>).
+Known words have a fixed rank: <code>alpha</code> = <code>a</code> &lt; <code>beta</code> = <code>b</code> &lt; <code>milestone</code> = <code>m</code> &lt; <code>rc</code> = <code>cr</code> &lt; <code>snapshot</code> &lt; release (<code>ga</code>, <code>final</code>, <code>release</code> or nothing) &lt; <code>sp</code>.
+Any other word (<code>jre</code>, <code>android</code>, <code>foo</code>) ranks above all of them and they compare alphabetically, case ignored. Trailing zeros do not count.</p>
+<div class="wrap"><table id="order"><tr><th>Version</th><th>Parts as Maven reads them</th></tr></table></div>
+<p id="orderline" class="v"></p>
+
+<p>Related: for npm, Cargo, Composer, pip and RubyGems constraints such as <code>^1.2</code> or <code>~&gt; 2.1</code>, use the <a href="../version-constraint-checker/">Version Constraint Checker</a>.
+To sort a list of versions the way those five sort them, use the <a href="../version-sorter/">Version sorter</a>. For pre-releases in other ecosystems, see <a href="../prerelease-versions/">what each package manager installs when a beta is out</a>.</p>
+
+<h2>FAQ</h2>
+<h3>What does [1.0,2.0) mean in Maven?</h3>
+<p>Any version from 1.0 included up to 2.0 excluded. Square brackets include the bound, round brackets exclude it. Maven then takes the highest version in the repository that falls in the range.</p>
+<h3>Why does [1.0,2.0) pick 2.0-rc1 or 2.0-SNAPSHOT?</h3>
+<p>For Maven, 2.0-alpha-1, 2.0-beta1, 2.0-rc1 and 2.0-SNAPSHOT are all lower than 2.0, so they are inside [1.0,2.0). Tested with Maven 3.9.11: [1.0,2.0) resolved to 2.0-rc1. To stop before any 2.0 pre-release, write [1.0,2.0.min): it resolved to 1.9.9.</p>
+<h3>What is the difference between 1.0 and [1.0] in a pom.xml?</h3>
+<p>1.0 is a soft requirement: Maven uses 1.0 unless another path in the dependency tree is nearer and asks for something else. [1.0] is a hard requirement: exactly 1.0 (or an equal version such as 1.0.0), and the build fails if it cannot be satisfied.</p>
+<h3>Can I write [1.*] in a pom.xml?</h3>
+<p>No. Maven Resolver understands [1.*] as [1.min,1.max], but Maven 3.9 refuses a dependency version that contains * when it reads the POM. Use [1,2.min) instead.</p>
+<h3>How do I exclude one version from a range?</h3>
+<p>Combine ranges with commas: (,1.1),(1.1,) accepts everything except 1.1. The result is the union of all the ranges.</p>
+<h3>Are 1.0, 1.0.0 and 1.0-final the same version for Maven?</h3>
+<p>Yes. Trailing zeros and the qualifiers final, ga and release are ignored, so 1.0 = 1.0.0 = 1.0-ga = 1.0.Final. But 1.0-sp is higher than 1.0, and 1.0-foo is higher than 1.0 and lower than 1.0.1.</p>
+
+<h2>Sources</h2>
+<ul>
+<li>Maven Resolver, <code>GenericVersionScheme</code> (version syntax, <code>min</code> and <code>max</code>, <code>[M.N.*]</code>): <a href="https://maven.apache.org/resolver/apidocs/org/eclipse/aether/util/version/GenericVersionScheme.html">maven.apache.org/resolver</a></li>
+<li>Maven POM reference, dependency version ranges: <a href="https://maven.apache.org/pom.html#dependency-version-requirement-specification">maven.apache.org/pom.html</a></li>
+<li>Maven Enforcer, version range syntax: <a href="https://maven.apache.org/enforcer/enforcer-rules/versionRanges.html">maven.apache.org/enforcer</a></li>
+</ul>
+
+<footer>
+<p><strong>Built by AI agents</strong> as part of the <a href="../../">10aday</a> project. How it is tested: <code>mvr.js</code> is a line-by-line port of Maven Resolver 1.9.24
+(<code>GenericVersion</code>, <code>GenericVersionRange</code>, <code>GenericVersionScheme</code>). It was compared with the real Java classes on about 2.1 million checks
+(version pairs and range matches, known traps plus random strings): 0 difference. The table of the trap section comes from real <code>mvn dependency:list</code> runs with Maven 3.9.11.
+Nothing you type leaves your browser. Maven Resolver is Apache License 2.0.</p>
+</footer>
+
+<script src="mvr.js"></script>
+<script>
+(function () {
+  'use strict';
+  var $ = function (id) { return document.getElementById(id); };
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  var EX = ['[1.0,2.0)', '[1.0,2.0.min)', '(,1.5]', '[1.0]', '1.0', '(,1.1),(1.1,)', '[1.5,)', '[1.*]'];
+  var POM_BAD = /[\\\/:"<>|?*]/;
+  function splitVersions(t) { return t.split(/[\s,]+/).filter(function (x) { return x.length; }); }
+  function boundText(b, low) {
+    if (!b) return low ? 'no lower limit' : 'no upper limit';
+    return (low ? 'from ' : 'up to ') + '<code>' + esc(b.v) + '</code> ' + (b.inc ? 'included' : 'excluded');
+  }
+  function describeRange(r) {
+    if (r.lo && r.hi && r.lo.v === r.hi.v && r.lo.inc && r.hi.inc) return 'exactly <code>' + esc(r.lo.v) + '</code> (or an equal version such as <code>' + esc(r.lo.v) + '.0</code>)';
+    if (r.lo && r.hi && /\.min$/i.test(r.lo.v) && /\.max$/i.test(r.hi.v)) return 'any version of the <code>' + esc(r.lo.v.slice(0, -4)) + '</code> line';
+    return boundText(r.lo, true) + ', ' + boundText(r.hi, false);
+  }
+  function render() {
+    var spec = $('spec').value, vs = splitVersions($('vs').value), h = '';
+    var raw = spec.trim();
+    if (!raw.length) { $('out').innerHTML = '<div class="msg warn">Type a version or a range.</div>'; return; }
+    if (/^(LATEST|RELEASE)$/.test(raw)) {
+      $('out').innerHTML = '<div class="msg warn"><code>' + esc(raw) + '</code> is a meta-version, not a range: Maven reads it from the repository metadata. Maven 3.9 prints a warning: “either LATEST or RELEASE (both of them are being deprecated)”. Prefer an explicit range.</div>';
+      return;
+    }
+    var C;
+    try { C = MVR.parseConstraint(spec); }
+    catch (e) { $('out').innerHTML = '<div class="msg err">Maven refuses this: ' + esc(e.message) + '.</div>'; return; }
+    if (POM_BAD.test(spec)) h += '<div class="msg err">Maven 3.9 refuses this in a <code>pom.xml</code>: a dependency version must not contain any of <code>\\ / : " &lt; &gt; | ? *</code>. ' +
+      (/\*/.test(spec) ? 'Write <code>[N,N+1.min)</code> instead of <code>[N.*]</code>, for example <code>[1,2.min)</code> for <code>[1.*]</code>. ' : '') + 'The results below show what Maven Resolver alone would do.</div>';
+    if (C.soft) {
+      h += '<div class="msg ok"><code>' + esc(raw) + '</code> is a <strong>soft requirement</strong>, not a range: Maven uses this exact version, unless a nearer declaration of the same dependency in the tree asks for another one (“nearest wins”). To force it, write <code>[' + esc(raw) + ']</code>.</div>';
+    } else {
+      h += '<div class="msg ok">Means: ' + C.ranges.map(describeRange).join(' <strong>or</strong> ') + '.</div>';
+      C.ranges.forEach(function (r) {
+        if (r.hi && !r.hi.inc && MVR.parse(r.hi.v).items.every(function (it) { return it.kind === 4 || it.kind === 5; })) {
+          var leak = vs.filter(function (v) { return MVR.compare(v, r.hi.v + '.min') >= 0 && MVR.compare(v, r.hi.v) < 0; });
+          h += '<div class="msg warn">Upper bound <code>' + esc(r.hi.v) + ')</code> still lets in its own pre-releases and snapshots (<code>' + esc(r.hi.v) + '-alpha-1</code>, <code>' + esc(r.hi.v) + '-SNAPSHOT</code>, <code>' + esc(r.hi.v) + '-rc1</code>…)' +
+            (leak.length ? ', here: <code>' + leak.map(esc).join('</code>, <code>') + '</code>' : '') + '. To stop before them, end the range with <code>' + esc(r.hi.v) + '.min)</code>.</div>';
+        }
+      });
+    }
+    if (vs.length) {
+      var ok = vs.filter(function (v) { return MVR.contains(C, v); });
+      var best = null; ok.forEach(function (v) { if (best === null || MVR.compare(v, best) > 0) best = v; });
+      if (C.soft) h += '<p class="pick">' + (ok.length ? 'Maven uses <code>' + esc(raw) + '</code>.' : 'None of these versions equals <code>' + esc(raw) + '</code>: Maven would fail to download it.') + '</p>';
+      else h += '<p class="pick">' + (best !== null ? 'Maven picks <code>' + esc(best) + '</code>, the highest matching version.' : 'No version matches: the build fails (“No versions available … within specified range”).') + '</p>';
+      var sorted = vs.map(function (v, i) { return [v, i]; }).sort(function (a, b) { return MVR.compare(b[0], a[0]) || a[1] - b[1]; });
+      h += '<div class="wrap"><table><tr><th>Version (highest first)</th><th>Matches?</th><th>Parts as Maven reads them</th></tr>';
+      sorted.forEach(function (p) {
+        var v = p[0], m = MVR.contains(C, v);
+        h += '<tr' + (v === best && !C.soft ? ' class="chosen"' : '') + '><td class="v">' + esc(v) + '</td><td class="c">' + (m ? '✅ yes' : '❌ no') + '</td><td class="v">' + esc(MVR.describe(v).join(' · ')) + '</td></tr>';
+      });
+      h += '</table></div>';
+    }
+    $('out').innerHTML = h;
+    var q = '?range=' + encodeURIComponent(spec) + '&v=' + encodeURIComponent(vs.join(','));
+    $('share').innerHTML = 'Share this check: <a href="' + esc(q) + '">link</a>';
+  }
+  EX.forEach(function (e) {
+    var b = document.createElement('button'); b.type = 'button'; b.textContent = e;
+    b.onclick = function () { $('spec').value = e; render(); }; $('examples').appendChild(b);
+  });
+  var params = new URLSearchParams(location.search);
+  if (params.get('range')) $('spec').value = params.get('range');
+  if (params.get('v')) $('vs').value = params.get('v').split(',').join('\n');
+  $('spec').addEventListener('input', render); $('vs').addEventListener('input', render);
+  render();
+  var CV = ['1.0', '1.1', '1.5', '2.0-rc1', '2.0', '2.1'];
+  [['[1.0]', 'exactly 1.0'], ['1.0', 'soft: 1.0 unless a nearer declaration wins'], ['[1.0,2.0)', '1.0 ≤ x &lt; 2.0 (includes 2.0 pre-releases)'], ['[1.0,2.0.min)', '1.0 ≤ x, before any 2.0 version'],
+   ['[1.0,2.0]', '1.0 ≤ x ≤ 2.0'], ['(1.0,2.0)', '1.0 &lt; x &lt; 2.0'], ['[1.5,)', 'x ≥ 1.5'], ['(,1.5]', 'x ≤ 1.5'], ['(,1.1),(1.1,)', 'anything but 1.1'],
+   ['(,1.0],[2.0,)', 'x ≤ 1.0 or x ≥ 2.0']].forEach(function (r) {
+    var m = CV.filter(function (v) { return MVR.contains(r[0], v); });
+    var tr = document.createElement('tr');
+    tr.innerHTML = '<td class="v">' + esc(r[0]) + '</td><td>' + r[1] + '</td><td class="v">' + (m.length ? m.map(esc).join(', ') : '(none)') + '</td>';
+    $('cheat').appendChild(tr);
+  });
+  var OV = ['1.0-SNAPSHOT', '1.0-alpha-1', '1.0-beta-2', '1.0-M1', '1.0-RC1', '1.0', '1.0.0', '1.0.Final', '1.0-sp1', '1.0-android', '1.0-jre', '1.0.1', '1.0-1', '1.10', '1.9'];
+  OV.forEach(function (v) { var tr = document.createElement('tr'); tr.innerHTML = '<td class="v">' + esc(v) + '</td><td class="v">' + esc(MVR.describe(v).join(' · ')) + '</td>'; $('order').appendChild(tr); });
+  var so = OV.slice().sort(MVR.compare), line = so[0];
+  for (var i = 1; i < so.length; i++) line += (MVR.compare(so[i - 1], so[i]) === 0 ? ' = ' : ' &lt; ') + esc(so[i]);
+  $('orderline').innerHTML = '<strong>Sorted:</strong> <code>' + line + '</code>';
+})();
+</script>
+<script data-goatcounter="https://10aday.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
