@@ -2,10 +2,10 @@
 id: EXP-004
 titre: Petits outils gratuits pour développeurs, avec pub payée en bitcoin
 en_clair: Des pages en anglais qui aident les développeurs à écrire correctement les numéros de version de leurs logiciels. Quand il y aura des visiteurs, on y mettra une pub qui paie en bitcoin.
-deja_fait: 11 pages en anglais en ligne, dont 4 outils. Le dernier, ajouté le 12/11 au soir, trie des numéros de version comme le font 5 logiciels différents. L'emplacement de pub est prêt mais éteint.
-resultat: 0 visiteur sur ces pages au 12/11 à 20 h 30.
-bloque_par: Personne ne connaît encore ces pages. Il faut les présenter sur Hacker News (forum de développeurs) et inscrire le site sur Google : deux de tes demandes. Pour encaisser, il faudra ton adresse bitcoin.
-prochaine_etape: Ajouter les 2 derniers outils au texte de présentation prêt pour Reddit et Hacker News.
+deja_fait: 11 pages en anglais en ligne, dont 4 outils. Le 12/11 à 21 h 20, on a signalé ces 11 pages à Bing nous-mêmes, sans attendre ton aide. L'emplacement de pub est prêt mais éteint.
+resultat: 0 visiteur sur ces pages au 12/11 à 21 h 20. Bing a accepté la demande, il passera dans les jours qui viennent.
+bloque_par: Google ne connaît pas encore le site : il faut l'y inscrire (ta demande de 10 min). La présentation sur Hacker News et Reddit attend aussi ton compte. Pour encaisser, il faudra ton adresse bitcoin.
+prochaine_etape: Ajouter une page utile de plus, puis vérifier vers le 15/11 si Bing envoie des visiteurs.
 on_arrete_si: 0 visiteur le 26/11, après au moins 7 jours en ligne.
 statut: active
 modele_revenu: trafic-pub
@@ -13,11 +13,11 @@ hypothese: Si on publie sur GitHub Pages 1 à 2 petits outils web en anglais, tr
 metrique: visites externes / semaine (puis impressions et satoshis A-ADS)
 seuil_succes: ≥ 20 visites externes sur la semaine du 2026-11-19 au 26, ou ≥ 1 satoshi gagné si l'adresse est branchée
 seuil_echec: outil en ligne depuis ≥ 7 jours avec mesure active et 0 visite externe au 2026-11-26
-valeur_actuelle: 0 visite sur les pages EXP-004 au 2026-11-12 20:30 UTC (GoatCounter TOTAL = 6, toutes hors /10aday/tools/*) ; 11 pages EXP-004 publiées (4 outils, 7 guides) ; bloc AADS réservé, inactif
+valeur_actuelle: 0 visite sur les pages EXP-004 au 2026-11-12 21:20 UTC (GoatCounter TOTAL = 6, toutes hors /10aday/tools/*) ; 11 pages publiées (4 outils, 7 guides) ; IndexNow accepté (HTTP 200) pour les 11 ; bloc AADS réservé, inactif
 revenu_total_eur: 0
 lancee_le: 2026-11-12
 decision_le: 2026-11-26
-prochain_role: growth
+prochain_role: builder
 lien_public: https://lawatch.github.io/10aday/tools/version-constraint-checker/
 verdict:
 ---
@@ -53,7 +53,7 @@ verdict:
       réalisable en 100 % client-side ; consigner 5 candidats évalués et le choix ici. Puis `prochain_role: growth`.
 - [x] 2. **Builder** : construire l'outil (logique + tests exhaustifs), page publiée dans `docs/tools/<slug>/` avec SEO on-page, bloc pub
       prêt mais **désactivé** tant que HQ-004 n'est pas fait (emplacement réservé, pas de faux bloc). Ligne dans `docs/index.html`.
-- [~] 3. **Growth** : sitemap, liens internes, soumission possible sans compte ; quand HQ-004 arrive : activer A-ADS. → fait le 2026-11-12 : 2 guides SEO, FAQPage, liens croisés, sitemap, kit de lancement + HQ-007 (Show HN). Reste : AADS (HQ-004).
+- [~] 3. **Growth** : sitemap, liens internes, soumission possible sans compte ; quand HQ-004 arrive : activer A-ADS. → fait le 2026-11-12 : 2 guides SEO, FAQPage, liens croisés, sitemap, kit de lancement + HQ-007 (Show HN). Reste : AADS (HQ-004). IndexNow fait le 12/11 21:19 (11 pages, HTTP 200).
 - [x] 3b. **Builder** (fait le 2026-11-12 14:40 : guides `npm-version-range-syntax` et `cargo-version-requirements`) : élargir la surface longue traîne du même cluster, sans dupliquer : ajouter 1 à 2 guides à `guides/gen_guides.js`
       (chaque intervalle est vérifié par `vcc.js`), par exemple « npm version range: x, *, hyphen, || », « Composer ^ vs ~ » ou « Cargo.toml version requirements ».
       Ou bien construire un outil n°2 voisin, sur une requête précise et mal servie, avec preuve de demande. Ne pas reprendre un candidat déjà écarté comme saturé.
@@ -130,6 +130,8 @@ WebFetch (ENOTFOUND) : vérification faite par `WebSearch` avec `allowed_domains
 | 2026-11-12 | Listes awesome | recherche : seule `JohnTitor/awesome-semver` (★2, inactive) → pas de PR | écarté |
 | 2026-11-12 17:30 | SEO on-page (outil n°2) | page Poetry → PEP 621 ciblée aussi « Poetry to uv » : titre/description, section « Moving from Poetry to uv » (testée : `uv lock` OK), FAQ + BreadcrumbList ; lien vers l'outil n°2 dans le bloc « Related » des 6 guides (via `gen_guides.js`) | fait (agent) |
 | 2026-11-12 17:30 | Reddit r/Python (Showcase) | texte prêt (`launch/README.md` §6) | en attente humain (HQ-008) |
+| 2026-11-12 21:19 | IndexNow (Bing, Yandex…) | 11 URL `/10aday/tools/` envoyées en un seul POST, réponse **HTTP 200** ; script réutilisable `launch/indexnow.sh` | fait (agent) |
+| 2026-11-12 21:20 | Show HN / r/Python | outils n°3 et n°4 ajoutés aux textes déjà prêts (`launch/README.md` §10-12), sans post supplémentaire | en attente humain (HQ-007, HQ-008) |
 | 2026-11-12 17:25 | Listes awesome (outil n°2) | `carlosperate/awesome-pyproject` (★1018) : catégories du modèle de PR non remplies par un outil web → pas de PR ; awesome-uv/uvx trop petites | écarté |
 
 ## Métriques (historique)
@@ -143,9 +145,11 @@ WebFetch (ENOTFOUND) : vérification faite par `WebSearch` avec `allowed_domains
 | 2026-11-12 17:20 | visites externes | 0 (TOTAL.json = 0 ; compteurs outil n°1 et n°2 : 404) | GoatCounter |
 | 2026-11-12 19:25 | visites externes | 0 sur EXP-004 (TOTAL = 6, inchangé ; compteurs `/10aday/tools/version-constraint-checker/` et `/poetry-to-pep621/` : 404) | GoatCounter |
 | 2026-11-12 20:30 | visites externes | 0 sur EXP-004 (TOTAL = 6, inchangé ; compteurs avec préfixe `/10aday/tools/` des outils n°1 à 3 et du guide tilde-vs-caret : 404) | GoatCounter |
+| 2026-11-12 21:20 | visites externes | 0 sur EXP-004 (TOTAL = 6 inchangé ; compteurs des outils n°1 à 4 et du guide tilde-vs-caret : 404) | GoatCounter |
 | 2026-11-12 18:45 | visites externes | 0 sur EXP-004 (TOTAL = 6 : 5 sur `/10aday/`, 0 sur les 9 pages `/10aday/tools/*`). ⚠ Les compteurs par page exigent le préfixe `/10aday/` (ex. `%2F10aday%2Ftools%2Fpoetry-to-pep621%2F`) ; sans lui, ils renvoient toujours 0 ou 404 | GoatCounter |
 
 ## Journal de bord
+- 2026-11-12 growth (21:20) : `api.indexnow.org` est maintenant autorisé : les 11 pages du sitemap sont envoyées à IndexNow (POST JSON, clé `61fc…ee.txt` vérifiée en ligne, 11 pages en 200 avant envoi) → **HTTP 200**. Script `launch/indexnow.sh` pour les prochaines pages (le builder doit le lancer après chaque publication). Kit de lancement : outils n°3 et n°4 ajoutés aux posts Show HN et r/Python déjà prévus, plus 2 réponses types ; faits cités revérifiés avec packaging, node-semver et RubyGems. Mesure : 0 visite EXP-004. Prochain : builder (page voisine), contrôle des visites Bing vers le 15/11.
 - 2026-11-12 builder (20:30) : **outil n°4 publié**, `tools/version-sorter/`. On colle des versions et on voit 5 colonnes triées (npm, Cargo, Composer, pip, RubyGems), les égalités, les versions refusées et la forme lue par chaque outil. Un encadré liste les paires où les gestionnaires se contredisent ; un mode « comparer A et B » ; un tableau de 12 pièges calculé au chargement (`1.0.0-1` plus ancien pour npm, plus récent pour pip ; `.post1` plus ancien pour RubyGems ; `dev-master` = 9999999-dev). Moteur : `canon()`/`compare()` ajoutés à `vcc.js` ; `semver.min.js` reconstruit avec `compare`. Oracles : node-semver 7.8.5, semver 1.0.28 (`cmp_precedence`), composer/semver 3.6.0 (`Semver::sort`), packaging 26.3, RubyGems 3.5.22, sur toutes les paires : 39 330 (liste fixe) + 268 149 (graines 1 à 8), 0 écart ; `claims.js` vérifie les 165 comparaisons citées. Anciens tests toujours verts. Playwright 1200/390 px : 0 erreur, 0 débordement, JSON-LD valides, 0 lien cassé. Maillage : outil n°1, index, sitemap, README. Mesure : 0 visite EXP-004. Prochain : growth (ajouter les outils n°3 et n°4 au kit de lancement).
 - 2026-11-12 builder (19:20) : **outil n°3 publié**, `tools/requires-python-checker/`. On saisit un `requires-python` et on obtient une grille 2.7 → 4.0 : chaque version mineure est en vert (tous les patchs), en jaune (une partie) ou en gris. Avertissements : `<=3.12` exclut 3.12.1+, `==3.10` = 3.10.0 seul, `>3.10` garde 3.10.1+, `~=3.10.2` = 3.10 seul, plafond (pip refuse les Python récents), absence de borne basse, syntaxe Poetry `^`/`~` traduite via `p2p.js`. Tableau de référence calculé par le moteur, FAQ (6 questions), BreadcrumbList, lien partageable. Demande : fil discuss.python.org « Requires-Python upper limits », pydevtools « What is requires-python? », retour Pants sur `<=3.10` ; aucun outil web trouvé. Moteur `rpc/rpc.js` (réutilise `vcc.js` et `p2p.js`) : oracle `packaging`, 256 291 vérifications par graine, 0 écart (graines 1 à 8). Playwright 1200/390 px : 0 erreur, 0 débordement, JSON-LD valide, 0 lien cassé. Maillage : outils n°1 et n°2, index, sitemap, README. Mesure : 0 visite EXP-004. Prochain : builder (ou growth pour ajouter l'outil n°3 au kit de lancement r/Python).
 - 2026-11-12 builder (18:45) : 7e page longue traîne, `tools/poetry-version-constraints/`. Elle cible « what does ^ mean in poetry » (questions SO récurrentes) et « poetry caret to pep 440 ». Contenu : table de 17 contraintes Poetry → texte PEP 440 exact, plus le tableau du piège `^` → `~=`. Juste pour `^1.2` et `^0.2.3`, faux pour `^1.2.3` et `^0.2`. `gen_guides.js` vérifie chaque ligne : le texte doit être la sortie de `p2p.js` et l'intervalle doit correspondre à `vcc.js` pip (7 194 affirmations OK). Recoupement direct avec poetry-core sur 106 versions, pré- et post-versions comprises : 0 écart hors des 2 lignes « mauvaise traduction » attendues. Maillage : outil n°1, outil n°2, index, sitemap, README. Playwright (1200 et 390 px, GoatCounter bloqué) : 0 erreur, 0 débordement, JSON-LD valide. Mesure : TOTAL 6, mais **0 sur EXP-004**. Prochain : builder (surface) tant que HQ-006 n'est pas fait.
