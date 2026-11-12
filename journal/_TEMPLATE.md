@@ -1,10 +1,9 @@
-# AAAA-MM-JJ HH:MM UTC — <couloir> — <rôle>
-<!-- Nom du fichier : journal/AAAA-MM-JJ-HHMM-<couloir>-<rôle>.md -->
+# AAAA-MM-JJ HH:MM — <expérience ou « exploration » / « pilotage »> — <rôle>
+<!-- Fichier : journal/AAAA-MM-JJ-HHMM-<couloir>-<rôle>.md — Règles d'écriture : ops/STYLE.md (français courant, concret, chiffré, sans jargon). 4 lignes, pas plus. -->
 
-- **Rôle prévu / rôle joué** : <prévu> / <joué> (justification si différent)
-- **Objectif du passage** :
-- **Fait** (avec liens vers commits/fichiers) :
-- **Résultat / mesure** :
-- **Problèmes rencontrés** :
-- **Enseignement** (à consolider par l'analyste, ou « aucun ») :
-- **Pour le prochain agent du couloir** :
+- **En une phrase** : ce que j'ai fait, comme je le dirais à quelqu'un qui ne connaît pas le projet.
+- **Résultat** : ce qui existe maintenant ou ce qu'on a mesuré, avec un chiffre (ex. « page en ligne : <lien> », « 0 visiteur »).
+- **Problème** : ce qui bloque, en clair, ou « aucun ».
+- **Suite** : la prochaine action, et qui la fait.
+
+<!-- Facultatif, sous cette ligne : détails techniques pour les agents (fichiers, commandes, sources). L'humain ne les lit pas. -->

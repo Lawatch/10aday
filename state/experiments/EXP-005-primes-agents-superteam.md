@@ -1,6 +1,12 @@
 ---
 id: EXP-005
-titre: Primes réservées aux agents IA (Superteam Earn, USDC Solana)
+titre: Concours de code réservés aux IA, payés en dollars numériques
+en_clair: Le site Superteam Earn organise des concours ouverts aux agents IA, payés en USDC (une crypto qui vaut 1 dollar). On veut en remporter un.
+deja_fait: Un petit programme qui liste les concours ouverts est prêt.
+resultat: 0 participation. Aucun concours ouvert aux IA trouvé pour l'instant.
+bloque_par: Nos agents n'ont pas encore accès au site des concours (superteam.fun).
+prochaine_etape: Trouver un concours ouvert et préparer une participation complète.
+on_arrete_si: Le 26/11, aucun concours faisable trouvé ou aucune participation prête.
 statut: active
 modele_revenu: prime
 hypothese: Si un agent 10aday ne soumet qu'aux annonces Superteam Earn AGENT_ONLY/AGENT_ALLOWED livrables en code ou rapport (sans clé privée), avec un livrable testé publié dans ce dépôt, alors au moins une soumission est classée ou primée d'ici le 2026-12-31.

@@ -1,6 +1,12 @@
 ---
 id: EXP-001
-titre: Calculateurs administratifs FR de longue traîne
+titre: Calculateurs gratuits pour la rupture conventionnelle
+en_clair: Des pages gratuites qui calculent les dates et l'indemnité d'une rupture conventionnelle. Si des gens les trouvent sur Google, on y mettra une petite pub.
+deja_fait: 5 calculateurs et 1 guide en ligne sur lawatch.github.io/10aday.
+resultat: 0 visiteur sur les calculateurs au 12/11. Normal : le site est en ligne depuis aujourd'hui et Google ne le connaît pas encore.
+bloque_par: Google ne connaît pas le site. Il faut l'y inscrire (une de tes demandes, 10 min).
+prochaine_etape: Ajouter des calculateurs sur des questions précises et attendre les premiers visiteurs.
+on_arrete_si: Toujours 0 visiteur le 26/11, une semaine après l'inscription sur Google.
 statut: active
 modele_revenu: trafic-pub
 hypothese: Des calculateurs très ciblés (questions précises mal servies) publiés sur GitHub Pages attirent des visiteurs externes via le SEO longue traîne, monétisables ensuite par un bloc publicitaire A-ADS payé en BTC (décision du stratège 2026-11-12 12:20).
@@ -12,7 +18,7 @@ revenu_total_eur: 0
 lancee_le: 2026-11-12
 decision_le: 2026-11-26
 prochain_role: builder
-lien_public: https://lawatch.github.io/10aday/rupture-conventionnelle/ ; https://lawatch.github.io/10aday/rupture-conventionnelle-impot-csg/ ; https://lawatch.github.io/10aday/rupture-conventionnelle-dates/ ; https://lawatch.github.io/10aday/rupture-conventionnelle-indemnite/ ; https://lawatch.github.io/10aday/chomage-rupture-conventionnelle/ ; https://lawatch.github.io/10aday/indemnite-conges-payes-depart/
+lien_public: https://lawatch.github.io/10aday/
 verdict:
 ---
 # EXP-001 — Calculateurs administratifs FR de longue traîne (GitHub Pages)

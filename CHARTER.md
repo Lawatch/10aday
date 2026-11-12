@@ -44,6 +44,10 @@ autonomes qui explorent, construisent, testent réellement et apprennent en cont
 6. **Vérité des chiffres** : on ne note dans `state/ledger.csv` que ce qui est réellement mesuré ou encaissé. Une estimation est marquée comme telle.
 7. **Mention IA** : tout contenu publié généré par IA est signalé comme tel quand la plateforme ou la loi l'exige.
 
+## Communication avec l'humain
+Tout ce que l'humain lit doit être **clair et concret**, en français courant, sans jargon ni remplissage : règles et exemples dans `ops/STYLE.md`.
+Un texte incompréhensible est un travail raté, même si le travail derrière est bon.
+
 ## Principes de travail
 - **Petits paris, vrais tests** : une expérience = une hypothèse + une métrique + une date de décision. Pas de projets qui traînent sans mesure.
 - **Livrer > planifier** : chaque passage d'agent doit laisser une trace concrète (commit, fichier, publication, mesure).

@@ -2,6 +2,8 @@
 
 **Mission** : faire venir de vrais utilisateurs vers ce qui a été construit, par des canaux **légitimes**.
 
+**Écriture** : tout ce que l'humain lit suit `ops/STYLE.md` (français courant, concret, chiffré, sans jargon).
+
 ## À chaque passage
 1. Tu travailles **uniquement** sur l'expérience de ton couloir (`exp-<ID>`) : fais venir du monde vers ses actifs publiés.
 2. Améliore sa trouvabilité **sans compte tiers** : SEO on-page (titres, meta, schema.org, sitemap, contenu utile),

@@ -1,6 +1,6 @@
 # File d'attente humaine
 
-Les agents écrivent ici ce dont ils ont besoin de l'humain (comptes, dépenses, validations, publications sur des plateformes à compte).
+Les agents écrivent ici ce dont ils ont besoin de l'humain, **en français courant (voir `ops/STYLE.md`)** : titre = action + durée, puis pourquoi en 1 phrase, puis étapes numérotées (comptes, dépenses, validations, publications sur des plateformes à compte).
 L'humain répond directement sous chaque demande (ligne `Réponse :`) puis passe le statut à `✅ fait` ou `❌ refusé`.
 Le stratège nettoie la file. **Max 3 demandes ouvertes.**
 
@@ -38,7 +38,7 @@ Format :
 - Reste à faire (1 min) : `https://10aday.goatcounter.com/` redirige vers la connexion (303) et `/counter/TOTAL.json` renvoie 403 → les agents ne peuvent pas lire les chiffres. Dans GoatCounter → Settings → cocher **« Allow anyone to view the dashboard »** (public view) **et** l'option qui autorise les compteurs publics (« Allow adding visitor counts on your website ») → Save.
 - Réponse (b) : 2026-11-12 — fait. Vérifié : tableau de bord public (200) et `https://10aday.goatcounter.com/counter/TOTAL.json` → `{"count_unique":"0", "count":"0"}`.
 
-### HQ-004 — Adresse de dépôt crypto (Kraken) pour recevoir les revenus  [🟡 ouvert — PRIORITÉ N°3 : débloque P2 ; sera absorbée par HQ-009 (EXP-005) si celle-ci arrive avant]
+### HQ-004 — Me donner ton adresse de dépôt Kraken, pour recevoir l'argent (5 min, quand tu peux)  [🟡 ouvert]
 - Demandé par / le : cadrage, 2026-11-12 (l'humain a annoncé qu'il connecterait son compte Kraken « quand il pourra »)
 - Pourquoi : c'est le seul canal d'encaissement prévu. Les agents construisent d'abord des actifs à flux ; dès qu'une adresse existe, ils branchent la monétisation (régie qui paie à une adresse, primes en crypto).
 - Action exacte (≈ 5 min, quand tu peux) : dans Kraken → Funding → Deposit → choisir l'actif et le **réseau** (ex. USDC sur un réseau supporté, ou BTC) → copier l'**adresse de dépôt** et l'écrire ici avec l'actif et le réseau. **Uniquement l'adresse publique : jamais de clé API, jamais d'identifiants.**
@@ -53,7 +53,7 @@ Format :
 - Action exacte : GitHub → `Lawatch/10aday` → Settings → Pages → Build and deployment → Branch `main`, dossier **`/docs`** (au lieu de `/ (root)`) → Save.
 - Réponse : 2026-11-12 — fait. Vérifié : `https://lawatch.github.io/10aday/rupture-conventionnelle-dates/` → 200.
 
-### HQ-006 — Faire indexer le site par Google et Bing (≈ 10 min)  [🟡 ouvert — PRIORITÉ N°1 : débloque P1]
+### HQ-006 — Inscrire le site sur Google et Bing, pour qu'ils envoient des visiteurs (10 min)  [🟡 ouvert]
 - Demandé par / le : growth (exp-EXP-001), 2026-11-12
 - Pourquoi : le site est en ligne et mesuré (0 visite), mais un sous-site `github.io` neuf, sans aucun lien entrant, peut attendre des semaines avant d'être exploré. Soumettre le plan du site est le levier le plus direct vers P1 (1er visiteur externe) ; ça sert aussi toutes les futures pages (EXP-004…). Aucun agent ne peut le faire : il faut un compte Google/Microsoft.
 - Action exacte :
@@ -66,7 +66,7 @@ Format :
 - Réponse :
 
 
-### HQ-007 — Poster un « Show HN » pour l'outil dev EXP-004 (≈ 5 min + réponses aux commentaires)  [🟡 ouvert — PRIORITÉ N°2 : canal hors moteurs, faisable dès maintenant]
+### HQ-007 — Présenter un de nos outils sur Hacker News, le grand forum des développeurs (5 min)  [🟡 ouvert]
 - Demandé par / le : growth (exp-EXP-004), 2026-11-12
 - Pourquoi : c'est le canal légitime le plus direct vers des développeurs anglophones pour un outil gratuit sans inscription (« Show HN » est fait pour ça). Le SEO seul mettra des semaines (site non indexé). Un post peut apporter les premières visites externes (P1) et des liens entrants qui accélèrent l'indexation. Aucun agent ne peut le faire : il faut un compte Hacker News.
 - Action exacte : sur https://news.ycombinator.com/submit, un jour de semaine vers 14-16 h UTC. Titre, URL et premier commentaire **prêts à coller** dans `products/EXP-004-outils-dev-pub-crypto/launch/README.md` §2. Un seul post. Rester 1 h pour répondre aux questions si possible. Facultatif : poser les 3 liens IndexNow du §1 du même fichier.

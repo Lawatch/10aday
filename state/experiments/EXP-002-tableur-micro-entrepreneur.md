@@ -1,6 +1,12 @@
 ---
 id: EXP-002
-titre: Tableur de gestion micro-entrepreneur (vente)
+titre: Tableur de gestion pour auto-entrepreneurs, à vendre
+en_clair: Un tableur pour suivre son chiffre d'affaires et ses cotisations, vendu quelques euros.
+deja_fait: Rien : mise en pause avant de commencer.
+resultat: —
+bloque_par: Tu as décidé : pas de vente pour l'instant.
+prochaine_etape: Rien, tant que la vente n'est pas autorisée.
+on_arrete_si: —
 statut: pause
 modele_revenu: vente
 hypothese: Un tableur Excel + LibreOffice soigné (livre des recettes obligatoire, seuils, cotisations Urssaf estimées, paramètres sourcés) vendu ~12 € trouve au moins 1 acheteur d'ici le 2026-11-26, une fois une boutique ouverte.
@@ -13,7 +19,7 @@ lancee_le: 2026-11-12
 decision_le: 2026-11-26
 prochain_role: builder
 lien_public:
-verdict: suspendue le 2026-11-12 — pas de vente pour le moment (décision humaine) ; à reprendre si la vente est réautorisée
+verdict: En pause depuis le 12/11 : pas de vente pour l'instant (ta décision).
 ---
 # EXP-002 — Tableur de gestion micro-entrepreneur (vente)
 

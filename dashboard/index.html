@@ -2,95 +2,63 @@
 <html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>10aday — tableau de bord</title>
 <style>
-:root{--bg:#fafaf9;--fg:#1c1917;--mut:#78716c;--card:#fff;--bd:#e7e5e4;--ok:#15803d;--ko:#b91c1c;--act:#1d4ed8;--pause:#a16207}
-@media (prefers-color-scheme:dark){:root{--bg:#1c1917;--fg:#f5f5f4;--mut:#a8a29e;--card:#292524;--bd:#44403c;--ok:#4ade80;--ko:#f87171;--act:#93c5fd;--pause:#facc15}}
-body{font-family:system-ui,sans-serif;background:var(--bg);color:var(--fg);margin:0;padding:1.2rem;line-height:1.45}
-main{max-width:1100px;margin:auto} h1{margin:.2rem 0} .mut{color:var(--mut);font-size:.85rem}
-.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:.6rem;margin:1rem 0}
-.tile{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:.7rem}
-.tile .k{color:var(--mut);font-size:.8rem} .tile .v{font-size:1.4rem;font-weight:600;font-variant-numeric:tabular-nums}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:.8rem}
-.exp{background:var(--card);border:1px solid var(--bd);border-left:5px solid var(--mut);border-radius:10px;padding:.8rem}
-.exp.active{border-left-color:var(--act)} .exp.reussie{border-left-color:var(--ok)} .exp.tuee{border-left-color:var(--ko)} .exp.pause{border-left-color:var(--pause)}
-.badge{font-size:.75rem;color:var(--mut)} .model{float:right;font-size:.75rem;border:1px solid var(--bd);border-radius:99px;padding:0 .5rem}
-.hyp{font-style:italic;color:var(--mut);font-size:.9rem}
-dl{display:grid;grid-template-columns:auto 1fr;gap:.2rem .6rem;font-size:.88rem;margin:0} dt{color:var(--mut)} dd{margin:0}
-a{color:var(--act)} section{margin-top:1.5rem}
+:root{--bg:#fafaf9;--fg:#1c1917;--mut:#6b6560;--card:#fff;--bd:#e7e5e4;--acc:#1d4ed8;--warn:#b45309}
+@media (prefers-color-scheme:dark){:root{--bg:#1c1917;--fg:#f5f5f4;--mut:#a8a29e;--card:#292524;--bd:#44403c;--acc:#93c5fd;--warn:#fbbf24}}
+body{font-family:system-ui,sans-serif;background:var(--bg);color:var(--fg);margin:0;padding:1.2rem;line-height:1.5;font-size:16px}
+main{max-width:760px;margin:auto} h1{font-size:1.4rem;margin:.2rem 0} h2{font-size:1.15rem;margin-top:2rem}
+.mut{color:var(--mut);font-size:.85rem}
+.big{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.6rem;margin:1rem 0}
+.big div{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:.8rem}
+.big b{display:block;font-size:1.5rem;font-variant-numeric:tabular-nums}
+.card{background:var(--card);border:1px solid var(--bd);border-left:4px solid var(--acc);border-radius:10px;padding:1rem;margin:.8rem 0}
+.card h3{margin:0 0 .3rem} .lead{margin:.2rem 0 .8rem}
+dl{display:grid;grid-template-columns:8.5rem 1fr;gap:.35rem .8rem;margin:0;font-size:.95rem} dt{color:var(--mut)} dd{margin:0}
+.warn{color:var(--warn)} a{color:var(--acc);word-break:break-all}
+li{margin:.4rem 0}
+@media (max-width:520px){dl{grid-template-columns:1fr} dt{margin-top:.4rem}}
 </style></head><body><main>
-<h1>📊 10aday — tableau de bord</h1>
-<div class="mut">Mis à jour le 2026-11-12 19:19 UTC · Palier : **P0 ✅ atteint le 2026-11-12** (site public : https://lawatch.github.io/10aday/ — 14 pages). Prochain : **P1** (1er visiteur externe mesuré) : GoatCounter actif partout, tableau de bord public ; **0 visite au 2026-11-12 18:25 UTC** (site non indexé, aucun lien entrant).</div>
-<div class="tiles"><div class="tile"><div class="k">Revenu net cumulé</div><div class="v">0.00 €</div></div><div class="tile"><div class="k">Revenu / jour (7 j)</div><div class="v">0.00 €</div></div><div class="tile"><div class="k">Objectif</div><div class="v">10 € / jour</div></div><div class="tile"><div class="k">Expériences actives</div><div class="v">3</div></div><div class="tile"><div class="k">Réussies</div><div class="v"></div></div><div class="tile"><div class="k">Tuées</div><div class="v">1</div></div><div class="tile"><div class="k">Idées en attente</div><div class="v">9</div></div><div class="tile"><div class="k">Passages (24 h)</div><div class="v">28</div></div></div>
-<section><h2>Expériences</h2><div class="grid"><article class="exp active">
-<header><span class="badge">🟢 active</span> <b>EXP-001</b> — Calculateurs administratifs FR de longue traîne
-<span class="model">Trafic → pub</span></header>
-<p class="hyp">Des calculateurs très ciblés (questions précises mal servies) publiés sur GitHub Pages attirent des visiteurs externes via le SEO longue traîne, monétisables ensuite par un bloc publicitaire A-ADS payé en BTC (décision du stratège 2026-11-12 12:20).</p>
+<h1>Où en est 10aday</h1>
+<div class="mut">Mis à jour le 12/11 à 19h34 (heure UTC)</div>
+<div class="big">
+<div>Argent gagné<b>0,00 €</b><span class="mut">objectif : 10 € / jour</span></div>
+<div>Par jour (moy. 7 j)<b>0,00 €</b></div>
+<div>Pistes en test<b>3</b><span class="mut">2 arrêtée(s) ou en pause</span></div>
+<div>À faire pour toi<b>3</b></div>
+</div>
+<h2>Les pistes en test</h2>
+<article class="card">
+<h3>Calculateurs gratuits pour la rupture conventionnelle</h3>
+<p class="lead">Des pages gratuites qui calculent les dates et l&#x27;indemnité d&#x27;une rupture conventionnelle. Si des gens les trouvent sur Google, on y mettra une petite pub.</p>
 <dl>
-<dt>Métrique</dt><dd>visites externes / semaine</dd>
-<dt>Valeur actuelle</dt><dd><b>0 visite sur les pages EXP-001 (GoatCounter 2026-11-12 18:25 UTC : TOTAL site = 6, dont 5 sur l&#x27;accueil /10aday/ ; 5 calculateurs + 1 page pilier en ligne, pas encore indexés)</b></dd>
-<dt>✅ Succès si</dt><dd>≥ 20 visites externes sur la semaine du 2026-11-19 au 26, ou ≥ 1 signal qualitatif</dd>
-<dt>❌ Échec si</dt><dd>0 visite au 2026-11-26 alors que Pages + mesure sont actifs depuis ≥ 7 jours</dd>
-<dt>Décision</dt><dd>2026-11-26 J-14</dd>
-<dt>Revenu</dt><dd>0 €</dd>
-<dt>Prochain rôle</dt><dd>growth</dd>
-<dt>En ligne</dt><dd><a href="https://lawatch.github.io/10aday/rupture-conventionnelle/ ; https://lawatch.github.io/10aday/rupture-conventionnelle-impot-csg/ ; https://lawatch.github.io/10aday/rupture-conventionnelle-dates/ ; https://lawatch.github.io/10aday/rupture-conventionnelle-indemnite/ ; https://lawatch.github.io/10aday/chomage-rupture-conventionnelle/ ; https://lawatch.github.io/10aday/indemnite-conges-payes-depart/">https://lawatch.github.io/10aday/rupture-conventionnelle/ ; https://lawatch.github.io/10aday/rupture-conventionnelle-impot-csg/ ; https://lawatch.github.io/10aday/rupture-conventionnelle-dates/ ; https://lawatch.github.io/10aday/rupture-conventionnelle-indemnite/ ; https://lawatch.github.io/10aday/chomage-rupture-conventionnelle/ ; https://lawatch.github.io/10aday/indemnite-conges-payes-depart/</a></dd>
-
-</dl></article><article class="exp active">
-<header><span class="badge">🟢 active</span> <b>EXP-004</b> — Outils web anglophones de longue traîne monétisés par pub payée en bitcoin (A-ADS)
-<span class="model">Trafic → pub</span></header>
-<p class="hyp">Si on publie sur GitHub Pages 1 à 2 petits outils web en anglais, très ciblés sur une question précise mal servie (public mondial développeurs / tech), avec un bloc publicitaire A-ADS (paie à une adresse BTC, sans compte, sans cookie), alors on obtient des visiteurs externes mesurés d&#x27;ici le 2026-11-26 et les premières impressions publicitaires dès que l&#x27;adresse crypto (HQ-004) est fournie.</p>
+<dt>Déjà fait</dt><dd>5 calculateurs et 1 guide en ligne sur lawatch.github.io/10aday.</dd>
+<dt>Résultat</dt><dd><b>0 visiteur sur les calculateurs au 12/11. Normal : le site est en ligne depuis aujourd&#x27;hui et Google ne le connaît pas encore.</b></dd>
+<dt class="warn">Bloqué par</dt><dd class="warn">Google ne connaît pas le site. Il faut l&#x27;y inscrire (une de tes demandes, 10 min).</dd>
+<dt>Prochaine étape</dt><dd>Ajouter des calculateurs sur des questions précises et attendre les premiers visiteurs.</dd>
+<dt>Décision</dt><dd>le 26/11 (dans 14 jours). On arrête si : Toujours 0 visiteur le 26/11, une semaine après l&#x27;inscription sur Google.</dd>
+<dt>Voir</dt><dd><a href="https://lawatch.github.io/10aday/">https://lawatch.github.io/10aday/</a></dd>
+</dl></article><article class="card">
+<h3>Petits outils gratuits pour développeurs, avec pub payée en bitcoin</h3>
+<p class="lead">Des pages en anglais qui aident les développeurs à écrire correctement les numéros de version de leurs logiciels. Quand il y aura des visiteurs, on y mettra une pub qui paie en bitcoin.</p>
 <dl>
-<dt>Métrique</dt><dd>visites externes / semaine (puis impressions et satoshis A-ADS)</dd>
-<dt>Valeur actuelle</dt><dd><b>0 visite sur les pages EXP-004 au 2026-11-12 18:45 UTC (GoatCounter TOTAL = 6, dont 5 sur l&#x27;accueil /10aday/ ; 0 sur les 9 pages /10aday/tools/* ; origine non identifiable, site non indexé ; bloc AADS réservé, inactif)</b></dd>
-<dt>✅ Succès si</dt><dd>≥ 20 visites externes sur la semaine du 2026-11-19 au 26, ou ≥ 1 satoshi gagné si l&#x27;adresse est branchée</dd>
-<dt>❌ Échec si</dt><dd>outil en ligne depuis ≥ 7 jours avec mesure active et 0 visite externe au 2026-11-26</dd>
-<dt>Décision</dt><dd>2026-11-26 J-14</dd>
-<dt>Revenu</dt><dd>0 €</dd>
-<dt>Prochain rôle</dt><dd>builder</dd>
-<dt>En ligne</dt><dd><a href="https://lawatch.github.io/10aday/tools/version-constraint-checker/">https://lawatch.github.io/10aday/tools/version-constraint-checker/</a></dd>
-
-</dl></article><article class="exp active">
-<header><span class="badge">🟢 active</span> <b>EXP-005</b> — Primes réservées aux agents IA (Superteam Earn, USDC Solana)
-<span class="model">Prime/bounty</span></header>
-<p class="hyp">Si un agent 10aday ne soumet qu&#x27;aux annonces Superteam Earn AGENT_ONLY/AGENT_ALLOWED livrables en code ou rapport (sans clé privée), avec un livrable testé publié dans ce dépôt, alors au moins une soumission est classée ou primée d&#x27;ici le 2026-12-31.</p>
+<dt>Déjà fait</dt><dd>10 pages-outils en ligne (lawatch.github.io/10aday/tools/). L&#x27;emplacement de pub est prêt mais éteint.</dd>
+<dt>Résultat</dt><dd><b>0 visiteur au 12/11.</b></dd>
+<dt class="warn">Bloqué par</dt><dd class="warn">Personne ne connaît encore ces pages. Il faut les présenter sur Hacker News (forum de développeurs) et inscrire le site sur Google : deux de tes demandes. Pour encaisser, il faudra ton adresse bitcoin.</dd>
+<dt>Prochaine étape</dt><dd>Améliorer les pages existantes et préparer leur présentation aux développeurs.</dd>
+<dt>Décision</dt><dd>le 26/11 (dans 14 jours). On arrête si : 0 visiteur le 26/11, après au moins 7 jours en ligne.</dd>
+<dt>Voir</dt><dd><a href="https://lawatch.github.io/10aday/tools/version-constraint-checker/">https://lawatch.github.io/10aday/tools/version-constraint-checker/</a></dd>
+</dl></article><article class="card">
+<h3>Concours de code réservés aux IA, payés en dollars numériques</h3>
+<p class="lead">Le site Superteam Earn organise des concours ouverts aux agents IA, payés en USDC (une crypto qui vaut 1 dollar). On veut en remporter un.</p>
 <dl>
-<dt>Métrique</dt><dd>soumissions prêtes / soumises / classées ; USDC gagnés (ledger gagne_non_encaisse jusqu&#x27;au dépôt Kraken)</dd>
-<dt>Valeur actuelle</dt><dd><b>0 (lancée 2026-11-12 18:30 UTC ; aucune annonce inventoriée)</b></dd>
-<dt>✅ Succès si</dt><dd>étape 1 au 2026-11-26 = ≥ 1 soumission complète et testée prête (annonce ouverte, échéance ≥ 5 j) ; final au 2026-12-31 = ≥ 1 gain ou classement</dd>
-<dt>❌ Échec si</dt><dd>au 2026-11-26 aucune annonce agents faisable sans clé privée trouvée, ou aucune soumission prête ; final = 0 classement après 4 soumissions jugées</dd>
-<dt>Décision</dt><dd>2026-11-26 J-14</dd>
-<dt>Revenu</dt><dd>0 €</dd>
-<dt>Prochain rôle</dt><dd>builder</dd>
-<dt>En ligne</dt><dd>pas encore publié</dd>
-
-</dl></article><article class="exp pause">
-<header><span class="badge">🟡 pause</span> <b>EXP-002</b> — Tableur de gestion micro-entrepreneur (vente)
-<span class="model">Vente</span></header>
-<p class="hyp">Un tableur Excel + LibreOffice soigné (livre des recettes obligatoire, seuils, cotisations Urssaf estimées, paramètres sourcés) vendu ~12 € trouve au moins 1 acheteur d&#x27;ici le 2026-11-26, une fois une boutique ouverte.</p>
-<dl>
-<dt>Métrique</dt><dd>ventes (et téléchargements de la version gratuite)</dd>
-<dt>Valeur actuelle</dt><dd><b>0 (produit non construit)</b></dd>
-<dt>✅ Succès si</dt><dd>≥ 1 vente au 2026-11-26, ou ≥ 10 téléchargements de la version gratuite si la boutique n&#x27;est pas encore ouverte</dd>
-<dt>❌ Échec si</dt><dd>0 vente après 10 jours en boutique avec la page de présentation publiée et liée depuis EXP-001</dd>
-<dt>Décision</dt><dd>2026-11-26 </dd>
-<dt>Revenu</dt><dd>0 €</dd>
-<dt>Prochain rôle</dt><dd>builder</dd>
-<dt>En ligne</dt><dd>pas encore publié</dd>
-<dt>Verdict</dt><dd><b>suspendue le 2026-11-12 — pas de vente pour le moment (décision humaine) ; à reprendre si la vente est réautorisée</b></dd>
-</dl></article><article class="exp tuee">
-<header><span class="badge">🔴 tuee</span> <b>EXP-003</b> — Primes open source (bounties Algora / IssueHunt)
-<span class="model">Prime/bounty</span></header>
-<p class="hyp">Il existe chaque semaine des bounties open source modestes (25-150 $) sur des issues bien délimitées que des agents IA peuvent résoudre proprement ; en ciblant celles sans concurrent actif, on en remporte au moins 1 d&#x27;ici le 2026-11-26.</p>
-<dl>
-<dt>Métrique</dt><dd>bounties qualifiées identifiées / PR soumises / primes encaissées (€)</dd>
-<dt>Valeur actuelle</dt><dd><b>0 (aucune bounty évaluée)</b></dd>
-<dt>✅ Succès si</dt><dd>≥ 1 PR primée et fusionnée au 2026-11-26, ou ≥ 3 bounties qualifiées avec solution prête si l&#x27;autorisation humaine n&#x27;est pas encore donnée</dd>
-<dt>❌ Échec si</dt><dd>&lt; 3 bounties qualifiées trouvées au 2026-11-19 (marché trop saturé pour nous) ou 0 PR acceptée sur 3 soumises</dd>
-<dt>Décision</dt><dd>2026-11-26 </dd>
-<dt>Revenu</dt><dd>0 €</dd>
-<dt>Prochain rôle</dt><dd>scout</dd>
-<dt>En ligne</dt><dd>pas encore publié</dd>
-<dt>Verdict</dt><dd><b>tuée le 2026-11-12 avant tout travail — Algora/IssueHunt paient via Stripe Connect (compte à créer, pas de paiement crypto confirmé par Algora) et chaque PR sur un dépôt tiers exige le compte GitHub de l&#x27;humain ; à retenir : un pari dont chaque étape aval passe par l&#x27;humain n&#x27;est pas autonome</b></dd>
-</dl></article></div></section>
-<section><h2>🙋 Ce qu'on attend de toi</h2><ul><li>HQ-004 — Adresse de dépôt crypto (Kraken) pour recevoir les revenus — PRIORITÉ N°3 : débloque P2 ; sera absorbée par HQ-009 (EXP-005) si celle-ci arrive avant</li><li>HQ-006 — Faire indexer le site par Google et Bing (≈ 10 min) — PRIORITÉ N°1 : débloque P1</li><li>HQ-007 — Poster un « Show HN » pour l&#x27;outil dev EXP-004 (≈ 5 min + réponses aux commentaires) — PRIORITÉ N°2 : canal hors moteurs, faisable dès maintenant</li></ul></section>
-<section><h2>🕒 Derniers passages d'agents</h2><ul><li><code>2026-11-12-1845-exp-EXP-004-builder</code> — </li><li><code>2026-11-12-1830-pilotage-strategist</code> — arbitrer le 3e slot (dossier ID-009 à 168), nettoyer la file humaine (4 ouvertes &gt; 3), rafraîchir STATUS.</li><li><code>2026-11-12-1825-exp-EXP-001-builder</code> — calculateur n°5 du cluster « rupture conventionnelle », sur une question mal servie.</li><li><code>2026-11-12-1730-exp-EXP-001-growth</code> — distribution du calculateur n°4 (indemnité compensatrice de congés payés au départ) et contrôle SEO des pages EXP-001.</li><li><code>2026-11-12-1720-exploration-scout</code> — une piste en profondeur, suivant la consigne du passage précédent : **rail à forte valeur unitaire payable on-chain** (primes/concours en USDC/BTC) pour le 3e slot.</li><li><code>2026-11-12-1720-exp-EXP-004-growth</code> — </li><li><code>2026-11-12-1655-exp-EXP-004-builder</code> — construire un outil n°2 voisin, appuyé sur une preuve de demande, plutôt qu&#x27;un 7e guide (le passage growth de 15:20 avait conclu à un rendement décroissant).</li><li><code>2026-11-12-1625-exp-EXP-001-builder</code> — calculateur n°4 « indemnité compensatrice de congés payés au départ », qui alimente le n°3 (différé congés payés).</li><li><code>2026-11-12-1530-exp-EXP-001-growth</code> — kit de lancement du calculateur n°3, HQ-006 étendue, et renforcer la trouvabilité du groupe « rupture conventionnelle ».</li><li><code>2026-11-12-1521-exp-EXP-004-growth</code> — élargir la surface SEO longue traîne du cluster « contraintes de version » et relever la mesure. Les canaux avec compte attendent l&#x27;humain (HQ-006, HQ-007), et la file humaine est déjà pleine.</li><li><code>2026-11-12-1520-exploration-scout</code> — une piste en profondeur. Choix : **valider l&#x27;économie d&#x27;AADS**, rail unique dont dépendent EXP-001, EXP-004 et tout 3e slot « trafic-pub » (jamais chiffré jusqu&#x27;ici).</li><li><code>2026-11-12-1519-pilotage-analyst</code> — mesurer, vérifier la santé du système, consolider les enseignements.</li></ul></section>
+<dt>Déjà fait</dt><dd>Un petit programme qui liste les concours ouverts est prêt.</dd>
+<dt>Résultat</dt><dd><b>0 participation. Aucun concours ouvert aux IA trouvé pour l&#x27;instant.</b></dd>
+<dt class="warn">Bloqué par</dt><dd class="warn">Nos agents n&#x27;ont pas encore accès au site des concours (superteam.fun).</dd>
+<dt>Prochaine étape</dt><dd>Trouver un concours ouvert et préparer une participation complète.</dd>
+<dt>Décision</dt><dd>le 26/11 (dans 14 jours). On arrête si : Le 26/11, aucun concours faisable trouvé ou aucune participation prête.</dd>
+<dt>Voir</dt><dd><a href="https://github.com/Lawatch/10aday/tree/main/products/EXP-005-primes-agents">https://github.com/Lawatch/10aday/tree/main/products/EXP-005-primes-agents</a></dd>
+</dl></article>
+<h2>Pistes en pause ou arrêtées</h2><ul><li><b>Tableur de gestion pour auto-entrepreneurs, à vendre</b> (En pause) : En pause depuis le 12/11 : pas de vente pour l&#x27;instant (ta décision).</li><li><b>Primes pour corriger des bugs de logiciels libres</b> (Arrêtée) : Arrêtée le 12/11 : ces sites paient par virement (compte à créer) et chaque correction aurait dû être envoyée depuis ton compte GitHub. Pas faisable seuls.</li></ul>
+<h2>Ce qu'on attend de toi</h2><ol><li>Me donner ton adresse de dépôt Kraken, pour recevoir l&#x27;argent (5 min, quand tu peux)</li><li>Inscrire le site sur Google et Bing, pour qu&#x27;ils envoient des visiteurs (10 min)</li><li>Présenter un de nos outils sur Hacker News, le grand forum des développeurs (5 min)</li></ol>
+<p class="mut">Étapes détaillées : fichier state/HUMAN_QUEUE.md du dépôt.</p>
+<h2>Ce que les agents ont fait récemment</h2><ul><li><span class='mut'>12/11 19h40 · Concours de code réservés aux IA, payés en dollars numériques · construction</span><br>plan §1 — inventaire des annonces Superteam Earn ouvertes aux agents et choix d&#x27;une cible.</li><li><span class='mut'>12/11 19h30 · Calculateurs gratuits pour la rupture conventionnelle · faire connaître</span><br>distribuer le calculateur n°5 (impôt, cotisations et CSG de l&#x27;indemnité de RC) publié à 18:25.</li><li><span class='mut'>12/11 19h20 · nouvelles idées · recherche d&#x27;idées</span><br>commande stratège 18:30, option (b) — canal de trafic/découverte sans moteur à soumission manuelle et sans compte humain.</li><li><span class='mut'>12/11 19h20 · Petits outils gratuits pour développeurs, avec pub payée en bitcoin · construction</span><br></li><li><span class='mut'>12/11 18h45 · Petits outils gratuits pour développeurs, avec pub payée en bitcoin · construction</span><br></li><li><span class='mut'>12/11 18h30 · pilotage · décisions</span><br>arbitrer le 3e slot (dossier ID-009 à 168), nettoyer la file humaine (4 ouvertes &gt; 3), rafraîchir STATUS.</li><li><span class='mut'>12/11 18h25 · Calculateurs gratuits pour la rupture conventionnelle · construction</span><br>calculateur n°5 du cluster « rupture conventionnelle », sur une question mal servie.</li><li><span class='mut'>12/11 17h30 · Calculateurs gratuits pour la rupture conventionnelle · faire connaître</span><br>distribution du calculateur n°4 (indemnité compensatrice de congés payés au départ) et contrôle SEO des pages EXP-001.</li><li><span class='mut'>12/11 17h20 · nouvelles idées · recherche d&#x27;idées</span><br>une piste en profondeur, suivant la consigne du passage précédent : rail à forte valeur unitaire payable on-chain (primes/concours en USDC/BTC) pour le 3e slot.</li><li><span class='mut'>12/11 17h20 · Petits outils gratuits pour développeurs, avec pub payée en bitcoin · faire connaître</span><br></li></ul>
 </main></body></html>

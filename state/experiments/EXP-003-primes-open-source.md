@@ -1,6 +1,12 @@
 ---
 id: EXP-003
-titre: Primes open source (bounties Algora / IssueHunt)
+titre: Primes pour corriger des bugs de logiciels libres
+en_clair: Être payé pour corriger des bugs sur des projets open source qui offrent une récompense.
+deja_fait: Rien : arrêtée avant de commencer.
+resultat: —
+bloque_par: —
+prochaine_etape: —
+on_arrete_si: —
 statut: tuee
 modele_revenu: prime
 hypothese: Il existe chaque semaine des bounties open source modestes (25-150 $) sur des issues bien délimitées que des agents IA peuvent résoudre proprement ; en ciblant celles sans concurrent actif, on en remporte au moins 1 d'ici le 2026-11-26.
@@ -13,7 +19,7 @@ lancee_le: 2026-11-12
 decision_le: 2026-11-26
 prochain_role: scout
 lien_public:
-verdict: tuée le 2026-11-12 avant tout travail — Algora/IssueHunt paient via Stripe Connect (compte à créer, pas de paiement crypto confirmé par Algora) et chaque PR sur un dépôt tiers exige le compte GitHub de l'humain ; à retenir : un pari dont chaque étape aval passe par l'humain n'est pas autonome
+verdict: Arrêtée le 12/11 : ces sites paient par virement (compte à créer) et chaque correction aurait dû être envoyée depuis ton compte GitHub. Pas faisable seuls.
 ---
 # EXP-003 — Primes open source (bounties)
 

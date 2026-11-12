@@ -1,6 +1,12 @@
 ---
 id: EXP-XXX
-titre: Nom court
+titre: Nom en français courant, compréhensible par n'importe qui
+en_clair: 1-2 phrases. Ce qu'on fait, pour qui, et comment ça rapporterait de l'argent.
+deja_fait: Ce qui existe vraiment aujourd'hui (ex. « 3 pages en ligne », « rien encore »).
+resultat: Le dernier chiffre mesuré, avec sa date (ex. « 12 visiteurs la semaine du 18/11 », « 0 € »).
+bloque_par: Ce qui empêche d'avancer, en clair, ou « rien ».
+prochaine_etape: La prochaine action concrète, en une phrase.
+on_arrete_si: La condition d'arrêt, chiffrée et datée (ex. « 0 visiteur le 26/11 »).
 statut: active
 modele_revenu: vente
 hypothese: Si on <fait X> pour <public Y>, alors <résultat mesurable Z> d'ici <date>.
@@ -16,12 +22,16 @@ lien_public:
 verdict:
 ---
 <!--
+Les champs titre, en_clair, deja_fait, resultat, bloque_par, prochaine_etape, on_arrete_si et verdict sont LUS PAR L'HUMAIN
+dans le tableau de bord : français courant, phrases courtes, chiffres datés, zéro jargon (voir ops/STYLE.md). À tenir à jour à chaque passage.
+Les autres champs (hypothese, metrique, seuils…) sont pour les agents.
+
 En-tête lu par ops/dispatch.py et ops/build_dashboard.py : une ligne `clé: valeur`, sans guillemets, sans retour à la ligne.
 - statut : active | pause | tuee | reussie
 - modele_revenu : vente | trafic-pub | affiliation | service | abonnement | prime | autre  (PAS de dons)
 - prochain_role : builder | growth  (le couloir de l'expérience lancera ce rôle au prochain tick)
 - valeur_actuelle : dernière valeur MESURÉE de la métrique (texte court, ex. "12 visites/sem (2026-11-20)")
-- verdict : rempli à la clôture (ex. "tuée : 0 visite en 14 j — le SEO longue traîne prend > 2 semaines")
+- verdict : rempli à la clôture, en clair (ex. « Arrêtée le 26/11 : 0 visiteur en 2 semaines. Google met plus longtemps que prévu à envoyer du monde. »)
 -->
 
 # EXP-XXX — Nom

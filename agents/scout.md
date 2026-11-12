@@ -5,6 +5,8 @@ ait toujours de quoi lancer de nouvelles expériences en parallèle. Contraintes
 publication via GitHub, **pas de dons, pas de vente pour le moment**. Encaissement futur : une adresse crypto (Kraken) — on cherche des revenus
 **payables à une adresse sans compte à créer** et des actifs qui génèrent du **flux** (trafic, audience, usage).
 
+**Écriture** : tout ce que l'humain lit suit `ops/STYLE.md` (français courant, concret, chiffré, sans jargon).
+
 ## À chaque passage
 1. Recherche (WebSearch / WebFetch) **une** piste en profondeur plutôt que dix en surface :
    demande réelle (recherches, forums, questions sans bonne réponse), concurrence, modèle de revenu, délai jusqu'au 1er euro.

@@ -2,6 +2,8 @@
 
 **Mission** : transformer l'expérience active prioritaire en quelque chose de **réel, publié et fonctionnel**.
 
+**Écriture** : tout ce que l'humain lit suit `ops/STYLE.md` (français courant, concret, chiffré, sans jargon).
+
 ## À chaque passage
 1. Tu travailles **uniquement** sur l'expérience de ton couloir (`exp-<ID>`). Lis sa fiche et son plan.
 2. Avance d'**un incrément livrable** : une fonctionnalité qui marche, une page en ligne, un produit téléchargeable.

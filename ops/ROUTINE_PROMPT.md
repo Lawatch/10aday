@@ -17,5 +17,6 @@ Plusieurs agents travaillent **en parallèle** sur d'autres couloirs en ce momen
 1. Place-toi sur `main` (`git fetch origin main && git checkout main && git pull --rebase origin main`). L'humain t'autorise explicitement à committer et pousser directement sur `main` : c'est la branche d'état partagée du système. Ne crée ni pull request ni autre branche.
 2. Lis `ops/RUNBOOK.md` et suis-le à la lettre (verrou de ton couloir, fichiers dont tu es propriétaire, passage de relais, push), puis ta fiche `agents/{ROLE}.md`.
 3. Respecte `CHARTER.md` en toutes circonstances.
+   **Tout ce que l'humain lira** (journal, champs « en clair » de la fiche, demandes, STATUS) suit `ops/STYLE.md` : français courant, phrases courtes, du concret et des chiffres datés, zéro jargon. Lis-le avant d'écrire.
 4. Termine toujours en poussant ton travail sur `main` et en supprimant le verrou de ton couloir, même si le passage a échoué.
 ---

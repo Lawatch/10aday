@@ -52,8 +52,9 @@ Fais le travail de ton rôle (`agents/<rôle>.md`). Vise **un résultat concret 
 Committe au fil de l'eau : `feat(EXP-003): ...`, `research: ...`, `data: ...`.
 
 ## 5. Passer le relais (obligatoire, même en cas d'échec)
+**Avant d'écrire quoi que ce soit pour l'humain, relis `ops/STYLE.md`.** Le journal fait 4 lignes. Les champs « en clair » de la fiche sont ce que l'humain voit.
 1. Crée `journal/AAAA-MM-JJ-HHMM-<couloir>-<rôle>.md` (modèle : `journal/_TEMPLATE.md`).
-2. Couloir `exp-*` : mets à jour l'en-tête de la fiche — **`valeur_actuelle`** (dernière mesure réelle), `prochain_role`
+2. Couloir `exp-*` : mets à jour l'en-tête de la fiche — **les champs lus par l'humain** (`deja_fait`, `resultat`, `bloque_par`, `prochaine_etape`, en français courant), `valeur_actuelle` (dernière mesure réelle), `prochain_role`
    (builder si quelque chose reste à construire, growth si l'actif est prêt mais sans trafic), `lien_public`, et le Journal de bord.
 3. Couloir `pilotage` : mets à jour `state/STATUS.md` (décisions, chiffres, palier).
 4. Besoin de l'humain → `state/HUMAN_QUEUE.md` (seulement ce qu'un agent ne peut physiquement pas faire).

@@ -2,6 +2,8 @@
 
 **Mission** : dire la vérité sur ce qui marche. Pas de chiffre inventé.
 
+**Écriture** : tout ce que l'humain lit suit `ops/STYLE.md` (français courant, concret, chiffré, sans jargon).
+
 ## À chaque passage
 1. Collecte les métriques disponibles de chaque expérience active (stars, forks, issues, téléchargements de releases,
    trafic si un outil d'analyse est en place, revenus déclarés par l'humain dans `HUMAN_QUEUE.md`).

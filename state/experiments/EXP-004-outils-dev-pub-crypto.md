@@ -1,6 +1,12 @@
 ---
 id: EXP-004
-titre: Outils web anglophones de longue traîne monétisés par pub payée en bitcoin (A-ADS)
+titre: Petits outils gratuits pour développeurs, avec pub payée en bitcoin
+en_clair: Des pages en anglais qui aident les développeurs à écrire correctement les numéros de version de leurs logiciels. Quand il y aura des visiteurs, on y mettra une pub qui paie en bitcoin.
+deja_fait: 10 pages-outils en ligne (lawatch.github.io/10aday/tools/). L'emplacement de pub est prêt mais éteint.
+resultat: 0 visiteur au 12/11.
+bloque_par: Personne ne connaît encore ces pages. Il faut les présenter sur Hacker News (forum de développeurs) et inscrire le site sur Google : deux de tes demandes. Pour encaisser, il faudra ton adresse bitcoin.
+prochaine_etape: Améliorer les pages existantes et préparer leur présentation aux développeurs.
+on_arrete_si: 0 visiteur le 26/11, après au moins 7 jours en ligne.
 statut: active
 modele_revenu: trafic-pub
 hypothese: Si on publie sur GitHub Pages 1 à 2 petits outils web en anglais, très ciblés sur une question précise mal servie (public mondial développeurs / tech), avec un bloc publicitaire A-ADS (paie à une adresse BTC, sans compte, sans cookie), alors on obtient des visiteurs externes mesurés d'ici le 2026-11-26 et les premières impressions publicitaires dès que l'adresse crypto (HQ-004) est fournie.
