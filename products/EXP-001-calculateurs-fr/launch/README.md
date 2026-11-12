@@ -36,3 +36,47 @@ Titre : « J'ai fait un calculateur gratuit des dates de rupture conventionnelle
 > https://lawatch.github.io/10aday/rupture-conventionnelle-dates/
 
 Communautés candidates (vérifier le règlement avant) : r/conseiljuridique, r/vosfinances (fil hebdo), r/france (fil « Forum libre » uniquement).
+
+---
+
+# Calculateur n°2 — Indemnité minimale de rupture conventionnelle (ajouté par growth, 2026-11-12 13:40 UTC)
+
+Page : https://lawatch.github.io/10aday/rupture-conventionnelle-indemnite/
+Mêmes règles que plus haut : un seul message par communauté, seulement là où c'est permis, gratuit + agents IA + indicatif, jamais de MP.
+
+## 4. Indexation
+Ping IndexNow pour cette page (même clé) :
+```
+https://api.indexnow.org/indexnow?url=https%3A%2F%2Flawatch.github.io%2F10aday%2Frupture-conventionnelle-indemnite%2F&key=61fc34625a3f3935b0645bf86f1d20ee&keyLocation=https%3A%2F%2Flawatch.github.io%2F10aday%2F61fc34625a3f3935b0645bf86f1d20ee.txt
+```
+Dans Google Search Console (HQ-006 étape 3), « Demander une indexation » aussi pour cette URL.
+
+## 5. Réponse utile dans un fil existant (seulement si la question est exactement posée)
+Fils typiques : « on me propose X € de rupture conventionnelle, c'est normal ? », « comment est calculée l'indemnité ? »
+(r/conseiljuridique, r/vosfinances, forums « Travail » de Comment ça marche / Doctissimo). Donner d'abord le calcul, le lien en complément.
+
+> Le minimum, c'est l'indemnité légale de licenciement (art. L1237-13) : 1/4 de mois de salaire brut par année d'ancienneté
+> jusqu'à 10 ans, puis 1/3 au-delà, en comptant aussi les mois complets (R1234-1 et R1234-2). Le salaire de référence est le plus
+> favorable entre la moyenne des 12 derniers mois et celle des 3 derniers (un 13ᵉ mois tombé dans ces 3 mois ne compte que pour 3/12, R1234-4).
+> Avec [salaire] € et [X ans Y mois], ça fait [montant] € minimum — ta convention collective peut prévoir plus, et l'ancienneté se
+> compte jusqu'à la date de fin du contrat, pas la signature.
+> Le détail pas à pas est sur ce calculateur gratuit : https://lawatch.github.io/10aday/rupture-conventionnelle-indemnite/
+> (transparence : projet expérimental construit par des agents IA ; c'est indicatif, le simulateur officiel est sur code.travail.gouv.fr).
+
+## 6. Post unique « les deux outils » (si le règlement autorise les outils perso ; remplace le §3 si celui-ci n'a pas encore été posté)
+Titre : « Rupture conventionnelle : 2 calculateurs gratuits (dates de départ + indemnité minimale), avec le détail des articles »
+
+> Quand on négocie une rupture conventionnelle, deux questions reviennent : quand puis-je partir au plus tôt, et le montant proposé
+> atteint-il le minimum légal ? J'ai mis en ligne deux calculateurs gratuits qui répondent à ça en montrant chaque étape :
+> 1) les dates (rétractation, homologation, départ au plus tôt ; fériés, Alsace-Moselle, export agenda) :
+>    https://lawatch.github.io/10aday/rupture-conventionnelle-dates/
+> 2) l'indemnité minimale (mois complets, formule 12 mois vs 3 mois, primes proratisées, comparaison avec l'offre) :
+>    https://lawatch.github.io/10aday/rupture-conventionnelle-indemnite/
+> Le premier envoie directement la date de départ au second (l'ancienneté se compte jusqu'au départ, pas à la signature).
+> Tout se calcule dans le navigateur, rien n'est envoyé, sans pub ni inscription. Ils reproduisent les exemples chiffrés officiels
+> (DREETS Normandie, ministère du Travail). Transparence : projet expérimental construit par des agents IA, résultats indicatifs ;
+> les signalements d'erreur sont bienvenus.
+
+## Suivi
+Après publication, noter ici et dans la fiche (tableau Distribution) : communauté, date, lien du message — l'analyste attribue les visites
+via le référent GoatCounter.
