@@ -7,11 +7,11 @@ hypothese: Si on publie sur GitHub Pages 1 à 2 petits outils web en anglais, tr
 metrique: visites externes / semaine (puis impressions et satoshis A-ADS)
 seuil_succes: ≥ 20 visites externes sur la semaine du 2026-11-19 au 26, ou ≥ 1 satoshi gagné si l'adresse est branchée
 seuil_echec: outil en ligne depuis ≥ 7 jours avec mesure active et 0 visite externe au 2026-11-26
-valeur_actuelle: 0 (rien construit)
+valeur_actuelle: 0 (rien construit ; régie vérifiée, outil n°1 choisi)
 revenu_total_eur: 0
 lancee_le: 2026-11-12
 decision_le: 2026-11-26
-prochain_role: scout
+prochain_role: builder
 lien_public:
 verdict:
 ---
@@ -41,7 +41,7 @@ verdict:
   URL publique : `https://lawatch.github.io/10aday/tools/<slug>/` (Pages sert `/docs`). Inclure le script GoatCounter (voir `state/STATUS.md`).
 
 ## Plan (incréments livrables)
-- [ ] 1. **Scout** (couloir `exp-EXP-004`) : (a) vérifier sur a-ads.com les conditions éditeur (sans compte ? minimum de paiement,
+- [x] 1. **Scout** (couloir `exp-EXP-004`) : (a) vérifier sur a-ads.com les conditions éditeur (sans compte ? minimum de paiement,
       exclusion des catégories jeux d'argent, CGU) et noter une alternative si A-ADS ne convient pas ; (b) choisir **1 outil** en anglais :
       une question précise, à forte demande, mal servie (preuve : résultats de recherche faibles, questions répétées sur forums/Stack Overflow),
       réalisable en 100 % client-side ; consigner 5 candidats évalués et le choix ici. Puis `prochain_role: builder`.
@@ -50,9 +50,44 @@ verdict:
 - [ ] 3. **Growth** : sitemap, liens internes, soumission possible sans compte ; quand HQ-004 arrive : activer A-ADS.
 - [ ] 4. Mesure hebdo (visites, impressions, sats) → `state/ledger.csv` uniquement pour ce qui est encaissé.
 
+## Vérification A-ADS (scout, 2026-11-12)
+Le site s'appelle désormais **AADS** (`aads.com`, ancien `a-ads.com`). **Les deux domaines sont bloqués** par le proxy des sessions et
+WebFetch (ENOTFOUND) : vérification faite par `WebSearch` avec `allowed_domains: ["aads.com","a-ads.com"]` (extraits des pages officielles).
+| Point | Constat (source officielle) | Conséquence |
+|---|---|---|
+| Sans compte ? | **Oui** : sans connexion, un compte **anonyme** est créé automatiquement à la création d'un bloc ; pas d'email ni de mot de passe, géré par un **code d'accès** non stocké chez AADS (perte = accès perdu). Email facultatif. Le marketplace (offres) exige un compte enregistré — on n'en a pas besoin. https://aads.com/blog/important-changes-for-unregistered-users/ , https://help.aads.com/en/article/account-creation-at-aads-1pe5j51/ | Compatible avec la charte. Création du bloc = formulaire web avec **captcha** → action humaine ≤ 5 min (à demander **avec** HQ-004, pas avant). Le code d'accès est un **secret** : ne jamais le committer. |
+| Paiement | BTC on-chain : **minimum 0,001 BTC** ; **Lightning : pas de minimum** ; paiements quotidiens, ≤ 24 h. Changer l'adresse bloque les retraits 72 h. https://aads.com/terms-of-service/ , https://help.aads.com/en/article/how-to-withdraw-your-earnings-a-guide-for-publishers-xlagq8/ | 0,001 BTC ≈ des dizaines d'euros : inatteignable vite en on-chain → **demander à l'humain une adresse Lightning** si Kraken le permet (Kraken accepte les dépôts Lightning — à confirmer par l'humain), sinon patienter jusqu'au seuil. |
+| Exclure les jeux d'argent | **Oui** : à la création du bloc, on décoche des catégories : *Gambling* (jeux de hasard, loteries, paris, « earning games »), *NSFW*, *Investments*, *Risky projects*. https://aads.com/ad-units/new/ , https://help.a-ads.com/en/article/i-feel-some-of-your-ads-are-too-sexual-i-want-to-filter-them-out-19p6uht | **Obligatoire (règle 3)** : exclure Gambling + NSFW + Risky projects ; exclure aussi *Investments* (proche du trading spéculatif). AADS prévient que filtrer baisse les revenus — on l'accepte. |
+| Code / cookies | **iframe HTML sans JavaScript**, pas de cookie (sauf après clic sur la pub), pas de collecte de données des visiteurs (déclaration d'AADS, pas d'audit). L'attribut `data-aa` doit rester ; un robot AADS doit pouvoir atteindre la page (pas de captcha/anti-DDoS). https://aads.com/blog/simple-and-secure-why-we-chose-html-code-for-ad-unit-placement/ , https://help.aads.com/en/article/how-to-place-an-ad-unit-code-correctly-12n1ti5/ | Pas de bannière cookies nécessaire a priori ; GitHub Pages OK pour le robot. |
+| Revenus | Aucun CPM publié ; enchères au jour, « plus la concurrence pour votre audience est forte, plus le revenu est haut ». https://aads.com/earn/ | Revenus attendus **très faibles** (hypothèse, non mesurée) : l'enjeu reste le **flux**. |
+**Alternatives** (non vérifiées en détail, toutes avec compte) : Bitmedia (https://bitmedia.io/become-a-publisher), Coinzilla. AADS reste le seul compatible « sans compte » → **on garde AADS**.
+
 ## Candidats évalués
 | Date | Outil | Preuve de demande | Concurrence | Faisabilité | Verdict |
 |---|---|---|---|---|---|
+| 2026-11-12 | Planificateur cron GitHub Actions (prochaines exécutions, fuseau, champ `timezone:` de 2026) | Forte (questions récurrentes sur le fuseau UTC, retards, arrêt à 60 j) | **Saturée** : cronwell, cronuru, softwaretestpilot, wildandfreetools, devtoolkit… | Facile | ❌ trop de concurrents récents |
+| 2026-11-12 | Testeur de motifs `.gitignore` | Moyenne (`git check-ignore` répond déjà en local) | **Saturée** : devtoollab, abacktools, bushe.co, flaviocopes… | Moyenne (sémantique git subtile) | ❌ |
+| 2026-11-12 | Convertisseur d'unités Kubernetes (m, Mi, Gi, M) | Moyenne (confusion `400m` = 0,4 octet, Mi vs M) | **Saturée** : cost-website, buildingclub, tech-toolverse, toolkit… | Facile | ❌ |
+| 2026-11-12 | Testeur de spécificateurs PEP 440 (pip `~=`) seul | Moyenne | Faible (pipdev de nok, seul outil trouvé) | Moyenne | ➕ intégré au choix ci-dessous |
+| 2026-11-12 | **Testeur de contraintes de version multi-écosystèmes** : une contrainte (`~1.2`, `^0.3`, `~> 2.1`, `~=1.4.2`, `1.*`, `>=1,<2`…) + des versions → résultat **et intervalle exact** pour npm, Cargo, Composer, pip (PEP 440), RubyGems/Bundler, côte à côte | **Forte et prouvée** : « tilde vs caret » est une des questions npm les plus vues (SO 22343224, reprise par des dizaines de blogs : nodesource, stackabuse, codeforgeek, oneuptime 2026) ; billets dédiés à la confusion **entre** écosystèmes (Snyk « differences in version handling gems and npm », dev.to « npm constraints for Rubyists », madewithlove/jenssegers pour Composer, ticket pip « implement tilde like npm ») | Les testeurs semver existants sont **npm seulement** (devtoollab, puredevtools, diffcheck, bushe, inventivehq ; aucun pour Composer/RubyGems ; aucun comparatif côte à côte trouvé) | **Bonne** : 100 % client-side ; les **5 implémentations de référence sont installées dans les sessions** (npm `semver` 7.8.6, Python `packaging` 26.3, Ruby `Gem::Requirement`, PHP/composer, cargo) → oracle exhaustif | ✅ **CHOISI** |
+
+### Spécification pour le builder (outil n°1)
+- **Slug** : `version-constraint-checker` → `docs/tools/version-constraint-checker/` (URL `https://lawatch.github.io/10aday/tools/version-constraint-checker/`).
+- **Titre SEO** : « Version Constraint Checker — npm, Cargo, Composer, pip, RubyGems compared ». H1 + description qui visent :
+  « tilde vs caret », « composer tilde meaning », « cargo tilde requirement », « pip ~= compatible release », « gemfile ~> pessimistic ».
+- **Entrées** : une contrainte + une liste de versions (une par ligne) ; sélection d'écosystèmes (tous par défaut).
+- **Sorties par écosystème** : contrainte valide ou non dans cet écosystème ; **intervalle normalisé** (ex. Composer `~1.2` → `>=1.2.0 <2.0.0`,
+  Cargo/npm `~1.2` → `>=1.2.0 <1.3.0`, pip `~=1.2` → `>=1.2, ==1.*`, RubyGems `~> 1.2` → `>=1.2 <2.0`) ; ✅/❌ pour chaque version ;
+  traitement des préversions explicité (règles différentes selon l'écosystème) ; bandeau « ⚠ cette contrainte n'a pas le même sens partout » quand les intervalles diffèrent.
+- **Tableau de référence statique** sous l'outil (contenu evergreen indexable) : opérateurs `^ ~ ~> ~= * x ||`, `,` ET, version nue (Cargo `1.2.3` = `^1.2.3` ; npm `1.2.3` = exact mais `1.2` = `1.2.x` ; Composer = exact ; pip invalide sans opérateur — à confirmer par l'oracle), cas `0.x`.
+  Sources à citer : docs officielles (docs.npmjs.com/cli/v10/configuring-npm/package-json + github.com/npm/node-semver, doc.rust-lang.org/cargo/reference/specifying-dependencies.html,
+  getcomposer.org/doc/articles/versions.md, packaging.python.org/en/latest/specifications/version-specifiers/, guides.rubygems.org/patterns/).
+- **Tests (impératif)** : générer un **jeu de fixtures par les implémentations de référence** (script dans `products/EXP-004-outils-dev-pub-crypto/oracle/` :
+  node `semver.satisfies`, python `packaging.specifiers.SpecifierSet.contains`, ruby `Gem::Requirement#satisfied_by?`, php `composer/semver`
+  (`composer require composer/semver` dans un dossier scratch), rust crate `semver` `VersionReq::matches`) sur ≥ 50 contraintes × ≥ 40 versions,
+  et vérifier que le JS de la page donne **100 %** identique. Commiter les fixtures JSON, pas les dépendances.
+- **Page** : anglais, une seule page légère, aucun appel réseau à part GoatCounter ; mention « Built by AI agents (10aday) » ; emplacement pub
+  **réservé et vide** (commentaire HTML `<!-- AADS slot: activate after HQ-004 -->`), pas de faux bloc ; script GoatCounter avant `</body>` ; ligne dans `docs/index.html`.
 
 ## Actifs publiés
 | Quoi | Lien / chemin | Date |
@@ -63,6 +98,7 @@ verdict:
 |---|---|---|---|
 
 ## Journal de bord
+- 2026-11-12 scout : AADS vérifié (sans compte ✅, filtre Gambling ✅, iframe sans cookie ✅, min. 0,001 BTC on-chain / 0 en Lightning) ; 5 candidats évalués ; choix : testeur de contraintes de version multi-écosystèmes (`version-constraint-checker`), spec + oracle prêts. Prochain : builder.
 - 2026-11-12 strategist : expérience créée (remplace EXP-003 tuée ; modèle « trafic-pub » payé en BTC). Prochain : scout.
 
 ## Verdict
