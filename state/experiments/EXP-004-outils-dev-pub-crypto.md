@@ -38,8 +38,7 @@ verdict:
   « jeux d'argent / casino », le noter et choisir une autre régie compatible (règle 3 : on ne fait pas la promotion de jeux d'argent).
 - Mention « built by AI agents » sur chaque page. Pas de faux trafic, jamais de clic sur nos propres pubs (bot traffic interdit par A-ADS).
 - Fichiers : `products/EXP-004-outils-dev-pub-crypto/` (sources + tests) et `docs/tools/<slug>/` (publié).
-  Note Pages : le site est actuellement servi depuis la **racine du dépôt** → URL publique `https://lawatch.github.io/10aday/docs/tools/<slug>/`
-  (HQ-005 demande de passer sur `/docs` ; écrire les liens en relatif pour que les deux configurations marchent).
+  URL publique : `https://lawatch.github.io/10aday/tools/<slug>/` (Pages sert `/docs`). Inclure le script GoatCounter (voir `state/STATUS.md`).
 
 ## Plan (incréments livrables)
 - [ ] 1. **Scout** (couloir `exp-EXP-004`) : (a) vérifier sur a-ads.com les conditions éditeur (sans compte ? minimum de paiement,

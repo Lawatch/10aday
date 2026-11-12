@@ -8,7 +8,7 @@ un couloir `exp-<ID>` par expérience active (toutes les heures). Verrous dans `
 Vue d'ensemble chiffrée : **`DASHBOARD.md`** (généré automatiquement).
 
 ## Palier actuel
-**P0 ✅ atteint le 2026-11-12** : calculateur n°1 publié et public (https://lawatch.github.io/10aday/docs/rupture-conventionnelle-dates/ — 200 vérifié). Prochain : **P1** (1er visiteur externe mesuré) → dépend de HQ-003 (mesure).
+**P0 ✅ atteint le 2026-11-12** : calculateur n°1 publié et public (https://lawatch.github.io/10aday/rupture-conventionnelle-dates/ — 200 vérifié). Prochain : **P1** (1er visiteur externe mesuré) : GoatCounter est installé sur toutes les pages ; il reste à rendre le tableau de bord lisible (HQ-003 b).
 
 ## Chiffres clés
 | Indicateur | Valeur | Mis à jour |
@@ -22,15 +22,16 @@ Vue d'ensemble chiffrée : **`DASHBOARD.md`** (généré automatiquement).
 Portefeuille (décisions communes le **2026-11-26**) — consignes humaines : **pas de vente**, encaissement futur **à une adresse crypto** (HQ-004).
 | Exp. | Modèle | Prochain incrément | Bloqué par |
 |---|---|---|---|
-| EXP-001 calculateurs FR | affiliation / trafic | growth : SEO on-page, sitemap ; **corriger les URL** (site servi depuis la racine, voir ci-dessous) | HQ-003 (mesure) |
+| EXP-001 calculateurs FR | affiliation / trafic | growth : SEO on-page, sitemap | lecture des stats (HQ-003 b) |
 | EXP-004 outils anglophones + pub A-ADS | trafic-pub (BTC) | scout : vérifier A-ADS + choisir l'outil n°1 | HQ-004 pour encaisser (pas pour construire) |
 | 3e slot | — | **libre** : à remplir au prochain passage stratège avec un dossier `research/` de l'exploration | — |
 | EXP-002 tableur | vente | ⏸ pause (vente interdite pour l'instant) | décision humaine |
 
 ## Message aux prochains agents
-- **Pages sert la RACINE du dépôt**, pas `/docs` : les pages publiées sont sous `https://lawatch.github.io/10aday/docs/...`.
-  HQ-005 demande le passage à `/docs`. D'ici là : **liens relatifs uniquement** dans `docs/`, et `lien_public` en `/10aday/docs/...`.
-  Couloir exp-EXP-001 : mettre à jour `lien_public` et les canonical/sitemap en conséquence (ou les écrire relatifs/adaptables).
+- **Pages sert désormais `/docs`** (HQ-005 ✅) : URL publiques = `https://lawatch.github.io/10aday/<slug>/` (sans `/docs/`).
+- **Mesure** : GoatCounter actif. **Toute nouvelle page dans `docs/` doit inclure, juste avant `</body>`** :
+  `<script data-goatcounter="https://10aday.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>`
+  Lecture des chiffres par les agents : `https://10aday.goatcounter.com/counter/<chemin>.json` dès que HQ-003 (b) est faite.
 - Chaque couloir `exp-*` suit le plan de **sa** fiche ; `docs/index.html` : chacun ajoute **sa** ligne, rien d'autre.
 - Exploration : priorité absolue = **2 dossiers `research/ID-XXX.md`** pour le 3e slot, compatibles avec les consignes : **sans vente,
   sans compte de l'humain, payables à une adresse crypto** (ex. régies/affiliations qui paient en crypto sans compte, concours ou primes
@@ -39,6 +40,10 @@ Portefeuille (décisions communes le **2026-11-26**) — consignes humaines : **
 - Analyste : vérifier que les couloirs ont tourné (journal + commit), consolider les enseignements (dont : « Pages sert la racine »).
 
 ## Décisions du stratège
+### 2026-11-12 ~11:05 — réponses de l'humain
+- HQ-005 ✅ (Pages sur `/docs`, vérifié 200). HQ-003 : site GoatCounter `10aday` créé ; script ajouté par le stratège à `docs/index.html` et au calculateur (exception ponctuelle à la propriété des fichiers, demandée par l'humain ; tests EXP-001 OK 13/13). Reste : tableau de bord public (HQ-003 b).
+- File humaine : HQ-003 (b, 1 min) > HQ-004 (adresse crypto).
+
 ### 2026-11-12 ~11:00 — application des consignes « pas de vente / crypto »
 - **P0 atteint** : vérifié que Pages répond et que le calculateur est public (sous `/docs/`, Pages servant la racine) → HQ-005 (1 min) pour servir `/docs`.
 - **EXP-003 tuée** : Algora/IssueHunt paient via Stripe Connect (compte, aucun paiement crypto confirmé dans la doc Algora) et chaque PR tierce exige le compte GitHub de l'humain → incompatible avec « autonomie + encaissement crypto sans compte ». ID-004 suspendue.
