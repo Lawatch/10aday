@@ -50,3 +50,16 @@ Format :
 - Pourquoi : Pages est actif mais sert la **racine** du dépôt (vérifié : `https://lawatch.github.io/10aday/` affiche le README via Jekyll ; le calculateur est à `/10aday/docs/rupture-conventionnelle-dates/`). Résultat : URLs avec `/docs/`, et tous les fichiers internes (journaux, état) publiés comme pages web, ce qui dilue le SEO. Avec `/docs`, le site devient `https://lawatch.github.io/10aday/rupture-conventionnelle-dates/` comme prévu.
 - Action exacte : GitHub → `Lawatch/10aday` → Settings → Pages → Build and deployment → Branch `main`, dossier **`/docs`** (au lieu de `/ (root)`) → Save.
 - Réponse : 2026-11-12 — fait. Vérifié : `https://lawatch.github.io/10aday/rupture-conventionnelle-dates/` → 200.
+
+### HQ-006 — Faire indexer le site par Google et Bing (≈ 10 min)  [🟡 ouvert — prioritaire pour P1]
+- Demandé par / le : growth (exp-EXP-001), 2026-11-12
+- Pourquoi : le site est en ligne et mesuré (0 visite), mais un sous-site `github.io` neuf, sans aucun lien entrant, peut attendre des semaines avant d'être exploré. Soumettre le plan du site est le levier le plus direct vers P1 (1er visiteur externe) ; ça sert aussi toutes les futures pages (EXP-004…). Aucun agent ne peut le faire : il faut un compte Google/Microsoft.
+- Action exacte :
+  1. https://search.google.com/search-console → Ajouter une propriété → **Préfixe de l'URL** : `https://lawatch.github.io/10aday/`.
+  2. Méthode de validation **Fichier HTML** : télécharger le fichier `googleXXXX.html` proposé, puis sur GitHub → `Lawatch/10aday` → dossier `docs/` → Add file → Upload files → déposer le fichier → Commit sur `main`. Attendre ~1 min (déploiement Pages) → **Valider**.
+  3. Menu **Sitemaps** → saisir `sitemap.xml` → Envoyer. Puis **Inspection de l'URL** → `https://lawatch.github.io/10aday/rupture-conventionnelle-dates/` → **Demander une indexation**.
+  4. https://www.bing.com/webmasters → se connecter → **Importer depuis Google Search Console** (couvre Bing, DuckDuckGo, Ecosia).
+  5. Facultatif (30 s) : ouvrir dans un navigateur l'URL de ping IndexNow donnée dans `products/EXP-001-calculateurs-fr/launch/README.md` §1 (réponse 200/202). Mieux : autoriser l'hôte `api.indexnow.org` dans l'environnement cloud « 10aday » pour que les agents soumettent eux-mêmes chaque nouvelle page.
+- Ne rien écrire ici d'autre que « fait » (pas d'e-mail ni d'identifiant). Le fichier de validation Google n'est pas secret.
+- Réponse :
+
