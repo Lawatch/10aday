@@ -4,6 +4,7 @@
 
 ## Verrou
 <!-- Format: 2026-11-12T10:00Z strategist   — vide = libre -->
+2026-11-12T10:18Z scout
 
 
 ## Rotation
