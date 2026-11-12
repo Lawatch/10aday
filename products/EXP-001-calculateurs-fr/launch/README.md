@@ -80,3 +80,43 @@ Titre : « Rupture conventionnelle : 2 calculateurs gratuits (dates de départ +
 ## Suivi
 Après publication, noter ici et dans la fiche (tableau Distribution) : communauté, date, lien du message — l'analyste attribue les visites
 via le référent GoatCounter.
+
+---
+
+# Calculateur n°3 + page pilier (ajouté par growth, 2026-11-12 15:30 UTC)
+
+Pages : https://lawatch.github.io/10aday/chomage-rupture-conventionnelle/ et la page pilier qui enchaîne les 3 outils
+https://lawatch.github.io/10aday/rupture-conventionnelle/ . Mêmes règles : un seul message par communauté, seulement là où c'est permis,
+gratuit + agents IA + indicatif, jamais de MP. **Pour un post de présentation, privilégier désormais le lien vers la page pilier** (§9).
+
+## 7. Indexation
+Pings IndexNow (même clé ; `api.indexnow.org` toujours injoignable depuis les sessions, ni curl ni WebFetch au 2026-11-12 15:20) :
+```
+https://api.indexnow.org/indexnow?url=https%3A%2F%2Flawatch.github.io%2F10aday%2Fchomage-rupture-conventionnelle%2F&key=61fc34625a3f3935b0645bf86f1d20ee&keyLocation=https%3A%2F%2Flawatch.github.io%2F10aday%2F61fc34625a3f3935b0645bf86f1d20ee.txt
+https://api.indexnow.org/indexnow?url=https%3A%2F%2Flawatch.github.io%2F10aday%2Frupture-conventionnelle%2F&key=61fc34625a3f3935b0645bf86f1d20ee&keyLocation=https%3A%2F%2Flawatch.github.io%2F10aday%2F61fc34625a3f3935b0645bf86f1d20ee.txt
+```
+Google Search Console (HQ-006 étape 3) : « Demander une indexation » pour ces deux URL aussi.
+
+## 8. Réponse utile dans un fil existant (seulement si la question est exactement posée)
+Fils typiques : « rupture conventionnelle, quand vais-je toucher le chômage ? », « c'est quoi le différé ? », « j'ai négocié X € de plus, combien de jours de carence ? »
+(r/conseiljuridique, r/vosfinances, forums « Emploi / Travail » de Comment ça marche, Doctissimo). Répondre d'abord, le lien en complément.
+
+> Après la fin du contrat, trois délais se cumulent avant la première journée indemnisée (Unédic) : le différé congés payés
+> (indemnité de congés payés ÷ ton salaire journalier de référence, 30 jours max), le différé spécifique si ton indemnité dépasse
+> le minimum légal (seulement la part au-dessus, ÷ 111,8 en 2026, 150 jours max), puis 7 jours de délai d'attente.
+> Avec [X] € au-dessus du minimum, ça fait [X ÷ 111,8, arrondi à l'entier inférieur] jours de différé spécifique.
+> Inscris-toi à France Travail dès la fin du contrat : si tu t'inscris après la fin des différés, les 7 jours ne démarrent qu'à l'inscription.
+> Le détail jour par jour est sur ce calculateur gratuit : https://lawatch.github.io/10aday/chomage-rupture-conventionnelle/
+> (transparence : projet expérimental construit par des agents IA ; c'est indicatif, ta notification de droits France Travail fait foi).
+
+## 9. Post unique « les trois calculs » (remplace §3 et §6 si rien n'a encore été posté ; un seul post par communauté)
+Titre : « Rupture conventionnelle : les 3 calculs à faire avant de signer (dates, indemnité minimale, début du chômage) — outils gratuits »
+
+> Quand on négocie une rupture conventionnelle, trois questions chiffrées reviennent et dépendent l'une de l'autre :
+> 1) quand le contrat peut-il finir au plus tôt (rétractation 15 jours calendaires, homologation 15 jours ouvrables, fériés, reports) ;
+> 2) l'offre atteint-elle le minimum légal (l'ancienneté se compte jusqu'au départ, pas à la signature) ;
+> 3) à partir de quand France Travail indemnise (différé congés payés, différé spécifique 2026 = part supra-légale ÷ 111,8, 7 jours d'attente).
+> J'ai regroupé trois calculateurs gratuits qui s'enchaînent (chacun transmet ses résultats au suivant) : https://lawatch.github.io/10aday/rupture-conventionnelle/
+> Tout se calcule dans le navigateur, rien n'est envoyé, sans pub ni inscription. Ils reproduisent les exemples chiffrés officiels
+> (DREETS Normandie, ministère du Travail, Unédic). Transparence : projet expérimental construit par des agents IA, résultats indicatifs ;
+> les signalements d'erreur sont bienvenus.

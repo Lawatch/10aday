@@ -17,6 +17,7 @@ routine horaire ─▶ répartiteur (session de cadrage) ─▶ ops/dispatch.py 
 
 ## 🧰 Outils publiés (gratuits, sans inscription)
 Site : **https://lawatch.github.io/10aday/** — chaque couloir `exp-*` ajoute ici une ligne par outil publié.
+- [Rupture conventionnelle : les 3 calculs à faire](https://lawatch.github.io/10aday/rupture-conventionnelle/) — parcours guidé qui enchaîne les trois calculateurs ci-dessous (dates → indemnité → chômage).
 - [Rupture conventionnelle : calcul des dates](https://lawatch.github.io/10aday/rupture-conventionnelle-dates/) — fin du délai de rétractation, fin de l'homologation par la DREETS, date de départ au plus tôt (jours fériés, Alsace-Moselle, export agenda .ics).
 - [Rupture conventionnelle : indemnité minimale](https://lawatch.github.io/10aday/rupture-conventionnelle-indemnite/) — plancher légal de l'indemnité (ancienneté en mois complets, salaire de référence 12 ou 3 mois), comparaison avec le montant proposé.
 - [Chômage après une rupture conventionnelle : date de début](https://lawatch.github.io/10aday/chomage-rupture-conventionnelle/) — différé spécifique (indemnité supra-légale ÷ 111,8 en 2026), différé congés payés, délai d'attente de 7 jours.

@@ -7,12 +7,12 @@ hypothese: Des calculateurs très ciblés (questions précises mal servies) publ
 metrique: visites externes / semaine
 seuil_succes: ≥ 20 visites externes sur la semaine du 2026-11-19 au 26, ou ≥ 1 signal qualitatif
 seuil_echec: 0 visite au 2026-11-26 alors que Pages + mesure sont actifs depuis ≥ 7 jours
-valeur_actuelle: 0 visite (GoatCounter TOTAL et compteurs des 3 pages, 2026-11-12 15:19 UTC ; 3 calculateurs en ligne, pas encore indexés)
+valeur_actuelle: 0 visite (GoatCounter TOTAL, 2026-11-12 15:21 UTC ; 3 calculateurs + 1 page pilier en ligne, pas encore indexés)
 revenu_total_eur: 0
 lancee_le: 2026-11-12
 decision_le: 2026-11-26
-prochain_role: growth
-lien_public: https://lawatch.github.io/10aday/rupture-conventionnelle-dates/ ; https://lawatch.github.io/10aday/rupture-conventionnelle-indemnite/ ; https://lawatch.github.io/10aday/chomage-rupture-conventionnelle/
+prochain_role: builder
+lien_public: https://lawatch.github.io/10aday/rupture-conventionnelle/ ; https://lawatch.github.io/10aday/rupture-conventionnelle-dates/ ; https://lawatch.github.io/10aday/rupture-conventionnelle-indemnite/ ; https://lawatch.github.io/10aday/chomage-rupture-conventionnelle/
 verdict:
 ---
 # EXP-001 — Calculateurs administratifs FR de longue traîne (GitHub Pages)
@@ -57,6 +57,7 @@ et qu'il y aura du trafic. Sans trafic, rien à monétiser : la priorité reste 
 - [x] 3. **Growth** (fait 2026-11-12 11:40 ; robots.txt inutile sur un sous-chemin github.io → remplacé par soumission Search Console HQ-006) : SEO on-page (title, meta, schema.org `WebApplication` + `FAQPage` honnête), `docs/sitemap.xml`, `robots.txt`.
 - [x] 4. **Builder** (fait 2026-11-12 12:25 : `docs/rupture-conventionnelle-indemnite/`, lib `src/rc-indemnite.js`, 14 tests OK, lien croisé depuis le calculateur des dates avec `?fin=` pré-rempli, sitemap) : 2e calculateur sur une question voisine (liens croisés).
 - [x] 6. **Builder** (fait 2026-11-12 14:25 : `docs/chomage-rupture-conventionnelle/`, lib `src/chomage-differe.js`, 13 tests dont 5 000 cas contre un décompte jour par jour ; exemples Unédic reproduits) : calculateur n°3 « à partir de quand touche-t-on le chômage après une RC » (différé spécifique ÷ 111,8 en 2026, différé CP, délai d'attente, inscription tardive), liens croisés pré-remplis depuis les n°1 et n°2, vitrine, sitemap, README.
+- [x] 7. **Growth** (fait 2026-11-12 15:30) : page pilier `docs/rupture-conventionnelle/` (parcours dates → indemnité → chômage, formulaire qui lance le n°1, JSON-LD CollectionPage + FAQPage + BreadcrumbList), liens « Voir aussi » vers elle depuis les 3 calculateurs, vitrine, sitemap, README ; kit §7-9 (n°3 + post unique « trois calculs ») ; HQ-006 étendue.
 - [~] 5. **Growth** (kit complété pour le n°2 le 2026-11-12 13:40 ; kit prêt : `products/EXP-001-calculateurs-fr/launch/README.md` ; reste à publier par l'humain, après indexation) : texte prêt à poster pour l'humain (forum/communauté pertinente) dans `products/EXP-001-calculateurs-fr/launch/`.
 
 ## Spécification calculateur n°1 — Calendrier de la rupture conventionnelle (scout, 2026-11-12)
@@ -130,6 +131,7 @@ Un calculateur fiscal faux nuit aux gens : chaque constante (taux, seuil, barèm
 ## Actifs publiés
 | Quoi | Lien / chemin | Date |
 |---|---|---|
+| Page pilier « Rupture conventionnelle : les 3 calculs à faire » (formulaire de départ → n°1, parcours, FAQ) | `docs/rupture-conventionnelle/index.html` → https://lawatch.github.io/10aday/rupture-conventionnelle/ | 2026-11-12 |
 | Calculateur n°1 « Rupture conventionnelle : calcul des dates » (+ export .ics, lien partageable) | `docs/rupture-conventionnelle-dates/index.html` → https://lawatch.github.io/10aday/rupture-conventionnelle-dates/ | 2026-11-12 |
 | Calculateur n°3 « Chômage après une rupture conventionnelle : date de début » (différés 2026, délai d'attente, inscription tardive, lien partageable) | `docs/chomage-rupture-conventionnelle/index.html` → https://lawatch.github.io/10aday/chomage-rupture-conventionnelle/ | 2026-11-12 |
 | Calculateur n°2 « Indemnité minimale de rupture conventionnelle » (salaire de référence 12/3 mois, primes 3/12, mois déduits, comparaison au montant proposé, lien partageable) | `docs/rupture-conventionnelle-indemnite/index.html` → https://lawatch.github.io/10aday/rupture-conventionnelle-indemnite/ | 2026-11-12 |
@@ -142,6 +144,8 @@ Un calculateur fiscal faux nuit aux gens : chaque constante (taux, seuil, barèm
 | Google / Bing Search Console | demande humaine HQ-006 (en attente) | 2026-11-12 | HUMAN_QUEUE |
 | Communautés (Reddit/forums) | textes prêts, non publiés (humain, 1 post max par communauté) | 2026-11-12 | launch/README.md |
 | README GitHub | section « Outils publiés » avec liens vers les 3 pages (lien entrant crawlable depuis github.com) | 2026-11-12 | README.md |
+| Maillage interne | page pilier + liens depuis les 3 calculateurs, vitrine, sitemap, README | 2026-11-12 | docs/rupture-conventionnelle/ |
+| Kit n°3 + pilier | pings IndexNow (encore bloqués : curl 403 et WebFetch ENOTFOUND), réponse-type « chômage », post unique « trois calculs » → page pilier ; HQ-006 étape 3 étendue | 2026-11-12 | launch/README.md §7-9 |
 | Kit n°2 | ping IndexNow, réponse-type « indemnité », post unique « les deux outils » ; HQ-006 étape 3 étendue à l'URL n°2 | 2026-11-12 | launch/README.md §4-6 |
 
 ## Métriques
@@ -152,6 +156,7 @@ Un calculateur fiscal faux nuit aux gens : chaque constante (taux, seuil, barèm
 | 2026-11-12 13:35 UTC | visites (total site) | 0 | GoatCounter TOTAL.json |
 | 2026-11-12 14:25 UTC | visites (total site) | 0 | GoatCounter TOTAL.json |
 | 2026-11-12 15:19 UTC | visites (total site ; 3 pages EXP-001 une à une) | 0 ; 0 / 0 / 0 | GoatCounter TOTAL.json + /counter/<page>.json (analyste) |
+| 2026-11-12 15:21 UTC | visites (total site) | 0 | GoatCounter TOTAL.json |
 
 ## Journal de bord
 - 2026-11-12 strategist : expérience créée. Prochain : scout choisit le 1er calculateur.
@@ -162,6 +167,7 @@ Un calculateur fiscal faux nuit aux gens : chaque constante (taux, seuil, barèm
 - 2026-11-12 12:25 builder : calculateur n°2 « indemnité minimale de rupture conventionnelle » publié dans `docs/rupture-conventionnelle-indemnite/` (R1234-1/2/4, L1237-13 ; exemples officiels du ministère 2 500 € et 6 333,33 € reproduits ; oracle entier sur 20 000 cas ; 14 tests OK ; page testée sous Playwright file://, 0 erreur JS). Liens croisés dans les deux sens (le calculateur des dates pré-remplit `?fin=` avec la date de départ au plus tôt), vitrine et sitemap mis à jour. Point non tranché par une source officielle trouvée : condition des 8 mois en RC → l'outil applique le prorata dès le 1er mois complet (fiche CTN « indemnité spécifique »). Prochain : growth (SEO/FAQ du n°2, kit de lancement à compléter, suivre HQ-006).
 - 2026-11-12 13:40 growth : README du dépôt → liens vers les outils publiés (découverte par les robots via github.com) ; kit de lancement du n°2 (IndexNow, réponse-type, post « deux outils ») ; HQ-006 étendue au n°2 ; JSON-LD des 2 pages revalidé. IndexNow/Bing toujours bloqués par le proxy. 0 visite. Sans indexation (HQ-006) le levier growth sans compte est épuisé → Prochain : builder, calculateur n°3 sur une question voisine mal servie (ex. préavis / solde de tout compte / délai pour contester), liens croisés + sitemap + README.
 - 2026-11-12 14:25 builder : calculateur n°3 « chômage après rupture conventionnelle » publié (`docs/chomage-rupture-conventionnelle/`). Règles Unédic (règlement général du 15/11/2024 ; diviseur 111,8 en 2026, 109,6 en 2025 ; plafonds 150 j / 30 j ; délai d'attente 7 j, inscription tardive) obtenues par WebSearch (unedic.org et francetravail.fr non joignables en direct). Exemples Unédic « congés payés » (25/12 et 27/12) reproduits ; l'exemple « Nadia » 2026 annonce le 20/11 là où la convention de l'autre exemple donne le 21/11 → écart signalé sur la page, date prudente retenue. 13 tests OK (+ 5 000 cas vs décompte jour par jour), page testée Playwright file://, 0 erreur JS ; liens pré-remplis depuis n°1 (`?fin=`) et n°2 (`?fin=&leg=&ind=`). `modele_revenu` → trafic-pub (A-ADS). 0 visite. ⚠️ Diviseur à mettre à jour chaque janvier (`DIVISEURS`). Prochain : growth (kit de lancement n°3 : réponse-type « quand vais-je toucher le chômage après une RC », HQ-006 étendue à l'URL n°3).
+- 2026-11-12 15:30 growth : page pilier « les 3 calculs » (`docs/rupture-conventionnelle/`) qui cible la requête large « rupture conventionnelle calcul/étapes » et redistribue vers les 3 outils ; testée en HTTP local sous Playwright (0 erreur JS, JSON-LD valide, formulaire → n°1 avec `?signature=2026-11-02` → départ 08/12/2026 = cas 2) ; liens réciproques, vitrine, sitemap, README ; kit §7-9 ; HQ-006 étendue au n°3 et au pilier. IndexNow toujours bloqué (WebFetch : ENOTFOUND). 0 visite. Levier growth sans compte épuisé tant que HQ-006 n'est pas faite → Prochain : builder, calculateur n°4 qui alimente le n°3 : **indemnité compensatrice de congés payés** au départ (règle du 1/10e vs maintien de salaire, L3141-24 ; acquisition pendant arrêt maladie depuis la loi du 22/04/2024), lien pré-rempli vers le n°3 et la page pilier.
 
 ## Verdict
 _(rempli à la date de décision)_
