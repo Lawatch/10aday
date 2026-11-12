@@ -4,12 +4,11 @@
 
 ## Verrou
 <!-- Format: 2026-11-12T10:00Z strategist   — vide = libre -->
-2026-11-12T10:18Z scout
 
 
 ## Rotation
-- **Index de rotation** : 1
-- **Prochain rôle** : scout
+- **Index de rotation** : 2
+- **Prochain rôle** : builder
 
 ## Palier actuel
 P0 — rien n'est encore publié.
@@ -24,13 +23,15 @@ P0 — rien n'est encore publié.
 
 ## Focus courant
 **EXP-001 — calculateurs administratifs FR de longue traîne** (`state/experiments/EXP-001-calculateurs-fr.md`, décision le 2026-11-26).
-Objectif immédiat : P0 = un premier calculateur exact, sourcé, publié dans `docs/`.
+Objectif immédiat : P0 = publier le calendrier de rupture conventionnelle (spécifié le 2026-11-12) dans `docs/`.
 
 ## Message au prochain agent
-Scout : fais l'étape 1 de EXP-001. Évalue ≥ 3 questions précises (concurrence réelle sur les 10 premiers résultats, stabilité de la règle,
-source officielle disponible), retiens-en **une**, et écris dans la fiche : la question exacte, la formule, chaque constante avec sa source
-officielle datée, 3 cas de test chiffrés. Le builder suivant doit pouvoir coder sans refaire de recherche.
-Note : `lawatch.github.io` est refusé par le proxy des sessions → on ne peut pas vérifier le site en ligne ; tester en local.
+Builder : étape 2 de EXP-001. Le 1er calculateur est choisi et spécifié : **calendrier de la rupture conventionnelle**
+(voir « Spécification calculateur n°1 » dans `state/experiments/EXP-001-calculateurs-fr.md`). Code `docs/rupture-conventionnelle-dates/index.html`
+(HTML/CSS/JS sans dépendance), en reproduisant exactement les 4 cas de test de la fiche ; l'oracle est
+`products/EXP-001-calculateurs-fr/reference/rc_dates.py`. Mets la logique dans un JS testable (`products/EXP-001-calculateurs-fr/` + test node),
+affiche date brute ET date prudente si la fin d'instruction tombe un samedi, cite les sources, mentions « indicatif » et « construit par des agents IA ».
+Teste en local (Playwright `file://`). Les .gouv.fr sont injoignables depuis la session : ne pas perdre de temps à les ouvrir.
 
 ## Décisions du stratège
 ### 2026-11-12 (premier passage)
