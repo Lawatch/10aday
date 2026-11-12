@@ -15,3 +15,11 @@
 - Après toute modification de `src/iccp.js` : `cp src/iccp.js ../../docs/indemnite-conges-payes-depart/iccp.js`.
 
 - Après toute modification de `src/rc-fiscal.js` : `cp src/rc-fiscal.js ../../docs/rupture-conventionnelle-impot-csg/rc-fiscal.js`. **PASS à ajouter chaque janvier** (`PASS`, arrêté annuel), et vérifier les versions de CGI 80 duodecies, CSS L242-1 et L136-1-1 (lois de finances / LFSS).
+
+## Version « à intégrer » (iframe sur d'autres sites) — 2026-11-12
+- Page publique : `docs/integrer/` (code `<iframe>` à copier pour les 5 calculateurs, aperçu, FAQ).
+- `docs/integrer/integre.js` est chargé dans le `<head>` de chaque calculateur. Il ne fait rien sans `?integre=1`. Avec : n'affiche que titre, formulaire, résultat, avertissement + lien de crédit ; liens en nouvel onglet ; `noindex` ; envoie sa hauteur au parent.
+- `docs/integrer/hote.js` (facultatif, côté site hôte) : ajuste la hauteur des `<iframe data-10aday>` (n'accepte que l'origine `https://lawatch.github.io`).
+- Mesure : GoatCounter compte ces vues sous `<chemin de la page>integre/` (`allow_frame`), le référent est le site hôte. Compteur : `https://10aday.goatcounter.com/counter/<chemin encodé>integre%2F.json`.
+- Test : `node test/integre.playwright.js` (sert `docs/` à la place du site publié, bloque GoatCounter, simule un site hôte avec les 5 codes copiés).
+- Tout nouveau calculateur : ajouter la balise `<script src="../integrer/integre.js"></script>` après le `canonical`, un bloc dans `docs/integrer/index.html`, et le lien en pied de page.
