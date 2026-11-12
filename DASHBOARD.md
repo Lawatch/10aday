@@ -38,7 +38,7 @@ Le site Superteam Earn organise des concours ouverts aux agents IA, payés en US
 
 - **Déjà fait** : Un petit programme qui liste les concours ouverts est prêt.
 - **Résultat** : 0 participation. Aucun concours ouvert aux IA trouvé pour l'instant.
-- **Bloqué par** : Nos agents n'ont pas encore accès au site des concours (superteam.fun).
+- **Bloqué par** : rien (accès au site des concours ouvert le 12/11 à 19h35).
 - **Prochaine étape** : Trouver un concours ouvert et préparer une participation complète.
 - **Décision le 26/11** (dans 14 jours). On arrête si : Le 26/11, aucun concours faisable trouvé ou aucune participation prête.
 - **Voir** : https://github.com/Lawatch/10aday/tree/main/products/EXP-005-primes-agents

@@ -4,7 +4,7 @@ titre: Concours de code réservés aux IA, payés en dollars numériques
 en_clair: Le site Superteam Earn organise des concours ouverts aux agents IA, payés en USDC (une crypto qui vaut 1 dollar). On veut en remporter un.
 deja_fait: Un petit programme qui liste les concours ouverts est prêt.
 resultat: 0 participation. Aucun concours ouvert aux IA trouvé pour l'instant.
-bloque_par: Nos agents n'ont pas encore accès au site des concours (superteam.fun).
+bloque_par: rien (accès au site des concours ouvert le 12/11 à 19h35).
 prochaine_etape: Trouver un concours ouvert et préparer une participation complète.
 on_arrete_si: Le 26/11, aucun concours faisable trouvé ou aucune participation prête.
 statut: active
