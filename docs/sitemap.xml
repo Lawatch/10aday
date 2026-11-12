@@ -17,4 +17,12 @@
     <loc>https://lawatch.github.io/10aday/tools/version-constraint-checker/</loc>
     <lastmod>2026-11-12</lastmod>
   </url>
+  <url>
+    <loc>https://lawatch.github.io/10aday/tools/tilde-vs-caret/</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://lawatch.github.io/10aday/tools/pessimistic-version-operator/</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
 </urlset>

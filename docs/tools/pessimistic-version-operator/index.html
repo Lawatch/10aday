@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>~> vs ~= vs ~: Pessimistic Version Constraints in RubyGems, pip, Composer, npm and Cargo</title>
+<meta name="description" content="Gemfile ~&gt; 2.1, pip ~=1.4.2, Composer ~1.2 and npm ~1.2 compared: exact ranges in each package manager, and why ~1.2 is &lt;1.3 in npm but &lt;2.0 elsewhere.">
+<link rel="canonical" href="https://lawatch.github.io/10aday/tools/pessimistic-version-operator/">
+<meta property="og:title" content="~&gt; vs ~= vs ~: Pessimistic Version Constraints in RubyGems, pip, Composer, npm and Cargo">
+<meta property="og:description" content="Gemfile ~&gt; 2.1, pip ~=1.4.2, Composer ~1.2 and npm ~1.2 compared: exact ranges in each package manager, and why ~1.2 is &lt;1.3 in npm but &lt;2.0 elsewhere.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://lawatch.github.io/10aday/tools/pessimistic-version-operator/">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does ~> mean in a Gemfile?","acceptedAnswer":{"@type":"Answer","text":"~&gt; 2.1 means ≥2.1 and &lt;3.0; ~&gt; 2.1.0 means ≥2.1.0 and &lt;2.2. RubyGems drops the last number you wrote and bumps the one before it. It is called the pessimistic version constraint."}},{"@type":"Question","name":"What does ~= mean in requirements.txt?","acceptedAnswer":{"@type":"Answer","text":"It is the PEP 440 compatible release operator. ~=1.4.2 means ≥1.4.2 and ==1.4.*; ~=1.4 means ≥1.4 and ==1.* (so &lt;2.0). ~=1 is invalid: it needs at least two numbers."}},{"@type":"Question","name":"Is pip ~= the same as npm ~?","acceptedAnswer":{"@type":"Answer","text":"Only with three numbers. ~=1.4.2 and npm ~1.4.2 both mean ≥1.4.2 &lt;1.5.0. With two numbers they differ: pip ~=1.4 allows up to &lt;2.0, npm ~1.4 stops before 1.5.0."}},{"@type":"Question","name":"Can I write ~> in package.json?","acceptedAnswer":{"@type":"Answer","text":"npm accepts ~&gt; and reads it as its own tilde, so ~&gt; 1.2 in package.json means ≥1.2.0 &lt;1.3.0, not the RubyGems meaning (&lt;2.0). Cargo and Composer reject ~&gt;."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"10aday","item":"https://lawatch.github.io/10aday/"},{"@type":"ListItem","position":2,"name":"Version Constraint Checker","item":"https://lawatch.github.io/10aday/tools/version-constraint-checker/"},{"@type":"ListItem","position":3,"name":"~> vs ~= vs ~","item":"https://lawatch.github.io/10aday/tools/pessimistic-version-operator/"}]}</script>
+<style>
+  body{font-family:system-ui,-apple-system,Segoe UI,sans-serif;max-width:900px;margin:2rem auto;padding:0 1rem;line-height:1.6;color:#1d1d1f}
+  h1{font-size:1.6rem;margin:.2rem 0 .6rem} h2{font-size:1.2rem;margin-top:2rem}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+  table{border-collapse:collapse;width:100%;margin:.6rem 0;font-size:.92rem}
+  th,td{border:1px solid #ddd;padding:.35rem .5rem;text-align:left;vertical-align:top}
+  th{background:#f6f6f6} td.hl{background:#fff4d6;font-weight:600} .na{color:#999}
+  .muted{color:#666} .cta{background:#eef4ff;border:1px solid #b8cdf5;padding:.7rem .9rem;border-radius:6px}
+  footer{margin-top:3rem;font-size:.85rem;color:#666;border-top:1px solid #ddd;padding-top:1rem}
+</style>
+</head>
+<body>
+<p class="muted"><a href="../../">10aday</a> › <a href="../version-constraint-checker/">Version Constraint Checker</a> › ~> vs ~= vs ~</p>
+<h1><code>~&gt;</code> vs <code>~=</code> vs <code>~</code>: the “pessimistic” operator in five package managers</h1>
+<p>RubyGems (<code>~&gt;</code>, the “pessimistic” or “twiddle-wakka” operator), pip (<code>~=</code>, “compatible release”) and Composer (<code>~</code>) share one rule:
+<strong>the last number you wrote may increase, the ones before it are fixed</strong>. npm and Cargo use <code>~</code> differently: they always keep the minor number when you give one.
+So the “same” constraint on <code>1.2</code> means <code>&lt;2.0</code> in three tools and <code>&lt;1.3</code> in the other two.</p>
+<p class="cta">Have a constraint and a list of versions? Paste them into the <a href="../version-constraint-checker/"><strong>Version Constraint Checker</strong></a>: it shows, side by side, what npm, Cargo, Composer, pip and RubyGems accept.</p>
+<h2>The same intent, five spellings</h2>
+<p>Each cell shows the operator that package manager uses, then the range it really allows. Highlighted: the two tools that read the two-number form differently.</p>
+<div style="overflow-x:auto"><table><tr><th>Constraint</th><th>RubyGems</th><th>pip</th><th>Composer</th><th>npm</th><th>Cargo</th><th></th></tr>
+<tr><td><code>on 1</code></td><td><code>~&gt; 1</code><br>≥1.0.0 &lt;2.0.0</td><td><code>~=1</code><br><span class="na">not valid</span></td><td><code>~1</code><br>≥1.0.0 &lt;2.0.0</td><td><code>~1</code><br>≥1.0.0 &lt;2.0.0</td><td><code>~1</code><br>≥1.0.0 &lt;2.0.0</td><td><a href="../version-constraint-checker/?c=~1&amp;v=1.1.9%2C1.2.0%2C1.2.9%2C1.3.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>on 1.2</code></td><td><code>~&gt; 1.2</code><br>≥1.2.0 &lt;2.0.0</td><td><code>~=1.2</code><br>≥1.2.0 &lt;2.0.0</td><td><code>~1.2</code><br>≥1.2.0 &lt;2.0.0</td><td class="hl"><code>~1.2</code><br>≥1.2.0 &lt;1.3.0</td><td class="hl"><code>~1.2</code><br>≥1.2.0 &lt;1.3.0</td><td><a href="../version-constraint-checker/?c=~1.2&amp;v=1.1.9%2C1.2.0%2C1.2.9%2C1.3.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>on 1.2.3</code></td><td><code>~&gt; 1.2.3</code><br>≥1.2.3 &lt;1.3.0</td><td><code>~=1.2.3</code><br>≥1.2.3 &lt;1.3.0</td><td><code>~1.2.3</code><br>≥1.2.3 &lt;1.3.0</td><td><code>~1.2.3</code><br>≥1.2.3 &lt;1.3.0</td><td><code>~1.2.3</code><br>≥1.2.3 &lt;1.3.0</td><td><a href="../version-constraint-checker/?c=~1.2.3&amp;v=1.1.9%2C1.2.0%2C1.2.9%2C1.3.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>on 0.2</code></td><td><code>~&gt; 0.2</code><br>≥0.2.0 &lt;1.0.0</td><td><code>~=0.2</code><br>≥0.2.0 &lt;1.0.0</td><td><code>~0.2</code><br>≥0.2.0 &lt;1.0.0</td><td class="hl"><code>~0.2</code><br>≥0.2.0 &lt;0.3.0</td><td class="hl"><code>~0.2</code><br>≥0.2.0 &lt;0.3.0</td><td><a href="../version-constraint-checker/?c=~0.2&amp;v=1.1.9%2C1.2.0%2C1.2.9%2C1.3.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+</table></div>
+<p class="muted">The “try it” links open the checker with the npm/Cargo/Composer spelling; type <code>~&gt; 1.2</code> or <code>~=1.2</code> there to see RubyGems and pip.</p>
+<h2>Cross-checks you can rely on</h2>
+<div style="overflow-x:auto"><table><tr><th>Constraint</th><th>npm</th><th>Cargo</th><th>Composer</th><th>pip</th><th>RubyGems</th><th></th></tr>
+<tr><td><code>~&gt; 1.2</code><br><small>npm reads it as ~1.2</small></td><td class="hl">≥1.2.0 &lt;1.3.0</td><td><span class="na">not valid</span></td><td><span class="na">not valid</span></td><td><span class="na">not valid</span></td><td>≥1.2.0 &lt;2.0.0</td><td><a href="../version-constraint-checker/?c=~%3E%201.2&amp;v=1.2.0%2C1.2.9%2C1.3.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>~=1.2</code><br><small>npm reads it as ~1.2</small></td><td class="hl">≥1.2.0 &lt;1.3.0</td><td><span class="na">not valid</span></td><td><span class="na">not valid</span></td><td>≥1.2.0 &lt;2.0.0</td><td><span class="na">not valid</span></td><td><a href="../version-constraint-checker/?c=~%3D1.2&amp;v=1.2.0%2C1.2.9%2C1.3.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+</table></div>
+<h2>Which one should I write?</h2>
+<ul>
+<li>To allow <strong>patch updates only</strong>, write three numbers everywhere: <code>~&gt; 1.2.3</code>, <code>~=1.2.3</code>, <code>~1.2.3</code>. All five tools agree: ≥1.2.3 &lt;1.3.0.</li>
+<li>To allow <strong>minor updates</strong>, prefer the caret in npm, Cargo and Composer (<code>^1.2</code>), and the two-number form in RubyGems and pip (<code>~&gt; 1.2</code>, <code>~=1.2</code>).
+See <a href="../tilde-vs-caret/">tilde vs caret</a>.</li>
+</ul>
+<!-- AADS slot: activate after HQ-004 -->
+<h2>Common questions</h2>
+<h3>What does ~> mean in a Gemfile?</h3>
+<p><code>~&gt; 2.1</code> means ≥2.1 and &lt;3.0; <code>~&gt; 2.1.0</code> means ≥2.1.0 and &lt;2.2. RubyGems drops the last number you wrote and bumps the one before it. It is called the pessimistic version constraint.</p>
+<h3>What does ~= mean in requirements.txt?</h3>
+<p>It is the PEP 440 compatible release operator. <code>~=1.4.2</code> means ≥1.4.2 and ==1.4.*; <code>~=1.4</code> means ≥1.4 and ==1.* (so &lt;2.0). <code>~=1</code> is invalid: it needs at least two numbers.</p>
+<h3>Is pip ~= the same as npm ~?</h3>
+<p>Only with three numbers. <code>~=1.4.2</code> and npm <code>~1.4.2</code> both mean ≥1.4.2 &lt;1.5.0. With two numbers they differ: pip <code>~=1.4</code> allows up to &lt;2.0, npm <code>~1.4</code> stops before 1.5.0.</p>
+<h3>Can I write ~> in package.json?</h3>
+<p>npm accepts <code>~&gt;</code> and reads it as its own tilde, so <code>~&gt; 1.2</code> in package.json means ≥1.2.0 &lt;1.3.0, not the RubyGems meaning (&lt;2.0). Cargo and Composer reject <code>~&gt;</code>.</p>
+<h2>Related</h2>
+<ul><li><a href="../version-constraint-checker/">Version Constraint Checker</a> — test any constraint against your versions in five package managers</li><li><a href="../tilde-vs-caret/">Tilde vs caret</a></li></ul>
+<h2>Sources</h2>
+<ul>
+<li>npm: <a href="https://github.com/npm/node-semver#advanced-range-syntax">node-semver, advanced range syntax</a></li>
+<li>Cargo: <a href="https://doc.rust-lang.org/cargo/reference/specifying-dependencies.html">Specifying dependencies</a></li>
+<li>Composer: <a href="https://getcomposer.org/doc/articles/versions.md">Versions and constraints</a></li>
+<li>pip: <a href="https://packaging.python.org/en/latest/specifications/version-specifiers/#compatible-release">Version specifiers, compatible release</a></li>
+<li>RubyGems: <a href="https://guides.rubygems.org/patterns/#pessimistic-version-constraint">Pessimistic version constraint</a></li>
+</ul>
+<footer>
+<p><strong>Built by AI agents</strong> as part of the <a href="../../">10aday</a> project. Every range on this page is generated by the engine of the
+<a href="../version-constraint-checker/">Version Constraint Checker</a> and checked on probe versions. That engine agrees 100% with node-semver 7.8.5, the Rust <code>semver</code> crate 1.0.28,
+composer/semver 3.6.0, Python <code>packaging</code> 26.3 and RubyGems 3.5.22 on about 330,000 test pairs. Found a mistake? <a href="https://github.com/Lawatch/10aday/issues">Open an issue</a>.</p>
+</footer>
+<script data-goatcounter="https://10aday.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

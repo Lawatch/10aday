@@ -13,6 +13,8 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","name":"Version Constraint Checker","url":"https://lawatch.github.io/10aday/tools/version-constraint-checker/","applicationCategory":"DeveloperApplication","operatingSystem":"Any (browser)","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Compare how npm, Cargo, Composer, pip and RubyGems interpret the same version constraint."}
 </script>
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the difference between tilde (~) and caret (^) in npm?", "acceptedAnswer": {"@type": "Answer", "text": "~1.2.3 allows patch updates only (>=1.2.3 <1.3.0). ^1.2.3 allows minor and patch updates (>=1.2.3 <2.0.0). Below 1.0.0 the caret is stricter: ^0.2.3 means >=0.2.3 <0.3.0, and ^0.0.3 means exactly the 0.0.3 line. Cargo reads both operators the same way."}}, {"@type": "Question", "name": "What does tilde mean in Composer?", "acceptedAnswer": {"@type": "Answer", "text": "Composer's tilde lets the last number you wrote move: ~1.2 means >=1.2 <2.0, while ~1.2.3 means >=1.2.3 <1.3.0."}}, {"@type": "Question", "name": "What does ~> (pessimistic operator) mean in a Gemfile?", "acceptedAnswer": {"@type": "Answer", "text": "~> 2.1 means >=2.1 and <3.0, and ~> 2.1.0 means >=2.1.0 and <2.2. RubyGems drops the last number you wrote and bumps the one before it."}}, {"@type": "Question", "name": "What does ~= (compatible release) mean in pip?", "acceptedAnswer": {"@type": "Answer", "text": "~=1.4.2 means >=1.4.2 and ==1.4.*. ~=1.4 means >=1.4 and ==1.* (any 1.x from 1.4). npm also accepts ~=, but reads it as its own tilde."}}]}</script>
 <style>
   :root{--ok:#0a7d32;--no:#b3261e;--muted:#666;--line:#ddd;--warn:#fff4d6}
   *{box-sizing:border-box}
@@ -121,6 +123,12 @@ Below 1.0.0 the caret is stricter: <code>^0.2.3</code> means ≥0.2.3 &lt;0.3.0,
 <p><code>~&gt; 2.1</code> means ≥2.1 and &lt;3.0, and <code>~&gt; 2.1.0</code> means ≥2.1.0 and &lt;2.2. RubyGems drops the last number you wrote and bumps the one before it.</p>
 <h3>What does <code>~=</code> (compatible release) mean in pip?</h3>
 <p><code>~=1.4.2</code> means ≥1.4.2 and ==1.4.*. <code>~=1.4</code> means ≥1.4 and ==1.* (any 1.x from 1.4). It works like Ruby's <code>~&gt;</code>. npm also accepts <code>~=</code>, but reads it as its own tilde.</p>
+
+<h2>Guides</h2>
+<ul>
+<li><a href="../tilde-vs-caret/">Tilde (~) vs caret (^) in npm, Cargo and Composer</a> — exact ranges, the 0.x rules, and the Composer <code>~1.2</code> trap</li>
+<li><a href="../pessimistic-version-operator/"><code>~&gt;</code> vs <code>~=</code> vs <code>~</code></a> — the “pessimistic” operator in RubyGems, pip, Composer, npm and Cargo</li>
+</ul>
 
 <h2>Sources</h2>
 <ul>
