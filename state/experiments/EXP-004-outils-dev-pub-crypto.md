@@ -13,7 +13,7 @@ hypothese: Si on publie sur GitHub Pages 1 à 2 petits outils web en anglais, tr
 metrique: visites externes / semaine (puis impressions et satoshis A-ADS)
 seuil_succes: ≥ 20 visites externes sur la semaine du 2026-11-19 au 26, ou ≥ 1 satoshi gagné si l'adresse est branchée
 seuil_echec: outil en ligne depuis ≥ 7 jours avec mesure active et 0 visite externe au 2026-11-26
-valeur_actuelle: 0 visite sur les pages EXP-004 au 2026-11-12 21:20 UTC (GoatCounter TOTAL = 6, toutes hors /10aday/tools/*) ; 11 pages publiées (4 outils, 7 guides) ; IndexNow accepté (HTTP 200) pour les 11 ; bloc AADS réservé, inactif
+valeur_actuelle: 2 vues sur l'outil n°1 (/10aday/tools/version-constraint-checker) au tableau GoatCounter 2026-11-12 21:20 UTC, origine inconnue (TOTAL.json en retard, aucun site d'origine affiché) ; 0 sur les autres pages EXP-004 ; 11 pages publiées (4 outils, 7 guides) ; IndexNow accepté (HTTP 200) pour les 11 (couloir) puis les 19 du site (analyste 21:25) ; bloc AADS réservé, inactif
 revenu_total_eur: 0
 lancee_le: 2026-11-12
 decision_le: 2026-11-26

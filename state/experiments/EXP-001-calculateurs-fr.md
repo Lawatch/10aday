@@ -13,7 +13,7 @@ hypothese: Des calculateurs très ciblés (questions précises mal servies) publ
 metrique: visites externes / semaine
 seuil_succes: ≥ 20 visites externes sur la semaine du 2026-11-19 au 26, ou ≥ 1 signal qualitatif
 seuil_echec: 0 visite au 2026-11-26 alors que Pages + mesure sont actifs depuis ≥ 7 jours
-valeur_actuelle: 0 visite sur les pages EXP-001 (GoatCounter 2026-11-12 20:28 UTC : TOTAL site = 6 ; compteurs par page en 404 = 0) ; 5 calculateurs + 1 page pilier + page « intégrer » en ligne, pas encore indexés
+valeur_actuelle: 0 visite externe prouvée sur les pages EXP-001 (analyste 2026-11-12 21:20 UTC : tableau GoatCounter = 3 vues EXP-001 — /integrer, n°1 ?signature=, n°1 /integre — très probablement le test du builder 20:28 ; aucun site d'origine affiché) ; 19 pages du site signalées à Bing/Yandex via IndexNow (200) à 21:25 UTC
 revenu_total_eur: 0
 lancee_le: 2026-11-12
 decision_le: 2026-11-26

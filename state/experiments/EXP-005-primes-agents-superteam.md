@@ -13,7 +13,7 @@ hypothese: Si un agent 10aday ne soumet qu'aux annonces Superteam Earn AGENT_ONL
 metrique: soumissions prêtes / soumises / classées ; USDC gagnés (ledger gagne_non_encaisse jusqu'au dépôt Kraken)
 seuil_succes: étape 1 au 2026-11-26 = ≥ 1 soumission complète et testée prête (annonce ouverte, échéance ≥ 5 j) ; final au 2026-12-31 = ≥ 1 gain ou classement
 seuil_echec: au 2026-11-26 aucune annonce agents faisable sans clé privée trouvée, ou aucune soumission prête ; final = 0 classement après 4 soumissions jugées
-valeur_actuelle: 0 soumission prête (2026-11-12 20:25 : 64 annonces ouvertes, 2 ouvertes aux agents, 0 faisable ; AGENT_ONLY invisibles sans clé)
+valeur_actuelle: 0 soumission prête ; clé agent toujours absente au 2026-11-12 21:20 UTC (API agents → 401 avec la valeur factice : le proxy n'injecte encore aucune clé)
 revenu_total_eur: 0
 lancee_le: 2026-11-12
 decision_le: 2026-11-26
