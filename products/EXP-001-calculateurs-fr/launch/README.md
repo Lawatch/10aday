@@ -190,3 +190,7 @@ Doctissimo). Répondre d'abord avec la règle, le lien en complément.
 Comme pour le n°4 : pas de post dédié. La page pilier (§9) mène désormais aux 5 outils ; s'il reste une communauté où le §9 n'a pas été
 posté, remplacer « les 3 calculs » par « les calculs » et ajouter en fin de message : « + l'impôt et la CSG sur l'indemnité :
 https://lawatch.github.io/10aday/rupture-conventionnelle-impot-csg/ ».
+
+## 16. Proposer les calculateurs à d'autres sites (2026-11-12 21:20)
+Liste de 15 sites et message type : `integration-cibles.md` (même dossier) → demande humaine HQ-010.
+IndexNow : **fait par un agent** le 2026-11-12 21:20 UTC (POST groupé des 7 pages EXP-001, dont `/integrer/` : HTTP 202). Les pings des §1, 4, 7, 10, 13 ne sont plus à faire.

@@ -2,10 +2,10 @@
 id: EXP-001
 titre: Calculateurs gratuits pour la rupture conventionnelle
 en_clair: Des pages gratuites qui calculent les dates et l'indemnité d'une rupture conventionnelle. Si des gens les trouvent sur Google, on y mettra une petite pub.
-deja_fait: 5 calculateurs et 1 guide en ligne, plus une page qui permet à d'autres sites d'intégrer nos calculateurs gratuitement.
-resultat: 6 visites sur tout le site au 12/11 à 20h28 (heure UTC), aucune sur les calculateurs. Google ne connaît pas encore le site.
-bloque_par: Google ne connaît pas le site. Il faut l'y inscrire (une de tes demandes, 10 min).
-prochaine_etape: Préparer une liste de sites et blogs RH à qui proposer nos calculateurs, avec un message prêt à envoyer.
+deja_fait: 5 calculateurs, 1 guide, une page pour que d'autres sites intègrent nos calculateurs, et une liste de 15 sites à qui les proposer.
+resultat: 6 visites sur tout le site au 12/11 à 21h20 (heure UTC). Aucune visite venue de l'extérieur sur les calculateurs : les 3 vues comptées sont sans doute notre propre test.
+bloque_par: Google ne connaît pas encore le site (ta demande « Inscrire le site sur Google », 10 min). Bing vient d'être prévenu par nos agents.
+prochaine_etape: Ajouter au calculateur du chômage la nouvelle durée maximale d'indemnisation après une rupture conventionnelle, en vigueur depuis le 1er septembre 2026.
 on_arrete_si: Toujours 0 visiteur le 26/11, une semaine après l'inscription sur Google.
 statut: active
 modele_revenu: trafic-pub
@@ -13,11 +13,11 @@ hypothese: Des calculateurs très ciblés (questions précises mal servies) publ
 metrique: visites externes / semaine
 seuil_succes: ≥ 20 visites externes sur la semaine du 2026-11-19 au 26, ou ≥ 1 signal qualitatif
 seuil_echec: 0 visite au 2026-11-26 alors que Pages + mesure sont actifs depuis ≥ 7 jours
-valeur_actuelle: 0 visite externe prouvée sur les pages EXP-001 (analyste 2026-11-12 21:20 UTC : tableau GoatCounter = 3 vues EXP-001 — /integrer, n°1 ?signature=, n°1 /integre — très probablement le test du builder 20:28 ; aucun site d'origine affiché) ; 19 pages du site signalées à Bing/Yandex via IndexNow (200) à 21:25 UTC
+valeur_actuelle: 0 visite externe prouvée sur les pages EXP-001 (analyste 21:20 UTC : 3 vues EXP-001 au tableau GoatCounter — /integrer, n°1 ?signature=, n°1 /integre — très probablement le test du builder 20:28) ; TOTAL site = 6 à 21:21 UTC ; IndexNow : 19 pages (analyste, 200) + 7 pages EXP-001 (growth, 202)
 revenu_total_eur: 0
 lancee_le: 2026-11-12
 decision_le: 2026-11-26
-prochain_role: growth
+prochain_role: builder
 lien_public: https://lawatch.github.io/10aday/
 verdict:
 ---
@@ -69,7 +69,8 @@ et qu'il y aura du trafic. Sans trafic, rien à monétiser : la priorité reste 
 - [x] 10. **Builder** (fait 2026-11-12 18:25 : `docs/rupture-conventionnelle-impot-csg/`, lib `src/rc-fiscal.js`, 13 tests dont 20 000 cas contre un oracle par branches) : calculateur n°5 « impôt, cotisations et CSG de l'indemnité de RC » (CGI 80 duodecies 6°, CSS L242-1 II 7° : 2 et 10 PASS, L136-1-1 III 5° ; PASS 2025/2026 ; cas « droit à la retraite »), lien pré-rempli depuis le n°2 (`?legal=&ind=&fin=`) et vers le n°3, pilier, vitrine, sitemap, README.
 - [x] 11. **Growth** (fait 2026-11-12 19:30) : kit n°5 (§13-15), HQ-006 étendue à l'URL n°5, liens « Voir aussi » n°1/n°3/n°4 → n°5 (les 6 pages se lient désormais toutes entre elles), titre de la page pilier élargi à l'impôt.
 - [x] 12. **Builder** (fait 2026-11-12 20:28, option ID-008) : version « à intégrer » des 5 calculateurs (`?integre=1` via `docs/integrer/integre.js`), page publique `docs/integrer/` (code iframe à copier, aperçu, FAQ), script facultatif `hote.js` (hauteur auto), mesure GoatCounter `…/integre/` ; test Playwright `test/integre.playwright.js`.
-- [ ] 13. **Growth** : liste de 10-20 sites/blogs RH, syndicats, associations qui pourraient intégrer un calculateur + message type ; demande à l'humain pour l'envoi (contact direct = humain). Kit de lancement : ajouter le lien `/integrer/`.
+- [x] 13. **Growth** (fait 2026-11-12 21:20) : 15 sites cibles + message type dans `launch/integration-cibles.md`, demande HQ-010 (mise en attente : file humaine pleine) ; IndexNow enfin joignable → 7 pages soumises (202) ; kit §16.
+- [ ] 14. **Builder** : calculateur n°3 (chômage) — ajouter la durée maximale d'indemnisation propre aux ruptures conventionnelles depuis le 1er septembre 2026 (avenant Unédic du 25/02/2026 ; 15 mois avant 55 ans selon des sources secondaires, **à vérifier sur unedic.org / legifrance** avant d'écrire quoi que ce soit). Nouvelle page dédiée possible : « combien de temps dure le chômage après une rupture conventionnelle en 2026 ».
 - [~] 5. **Growth** (kit complété pour le n°2 le 2026-11-12 13:40 ; kit prêt : `products/EXP-001-calculateurs-fr/launch/README.md` ; reste à publier par l'humain, après indexation) : texte prêt à poster pour l'humain (forum/communauté pertinente) dans `products/EXP-001-calculateurs-fr/launch/`.
 
 ## Spécification calculateur n°1 — Calendrier de la rupture conventionnelle (scout, 2026-11-12)
@@ -153,6 +154,8 @@ Un calculateur fiscal faux nuit aux gens : chaque constante (taux, seuil, barèm
 ## Distribution (canaux utilisés)
 | Canal | Action | Date | Lien |
 |---|---|---|---|
+| IndexNow (Bing, Yandex…) | **envoyé** : POST groupé des 7 pages EXP-001 (pilier, n°1-5, `/integrer/`), HTTP 202 ; hôte autorisé depuis le 12/11 | 2026-11-12 21:20 | launch/README.md §16 |
+| Intégration sur sites tiers | 15 cibles (syndicats, blogs RH, médias créateurs) + message type ; envoi par l'humain (HQ-010, en attente) | 2026-11-12 21:20 | launch/integration-cibles.md |
 | SEO on-page | canonical, Open Graph, JSON-LD (WebApplication + FAQPage + BreadcrumbList), `docs/sitemap.xml` | 2026-11-12 | page n°1 |
 | IndexNow | clé publiée `docs/61fc34625a3f3935b0645bf86f1d20ee.txt` ; ping **non envoyé** (hôte `api.indexnow.org` bloqué par le proxy) → HQ-006 §5 | 2026-11-12 | launch/README.md |
 | Google / Bing Search Console | demande humaine HQ-006 (en attente) | 2026-11-12 | HUMAN_QUEUE |
@@ -177,6 +180,7 @@ Un calculateur fiscal faux nuit aux gens : chaque constante (taux, seuil, barèm
 | 2026-11-12 17:20 UTC | visites (total site) | 0 | GoatCounter TOTAL.json |
 | 2026-11-12 18:25 UTC | visites (total site ; accueil ; 6 pages EXP-001) | 6 ; 5 (`/10aday/`) ; 0 chacune | GoatCounter TOTAL.json + /counter/%2F10aday%2F<slug>%2F.json |
 | 2026-11-12 19:20 UTC | visites (total site ; accueil ; 6 pages EXP-001) | 6 ; 5 (`/10aday/`) ; 0 chacune | GoatCounter TOTAL.json + /counter/%2F10aday%2F<slug>%2F.json |
+| 2026-11-12 21:21 UTC | visites (total site ; `/integrer/` ; n°1, n°2, n°3) | 6 ; 1 ; 0 / 0 / 0 | GoatCounter TOTAL.json + /counter/… |
 
 ## Journal de bord
 - 2026-11-12 strategist : expérience créée. Prochain : scout choisit le 1er calculateur.
@@ -193,6 +197,7 @@ Un calculateur fiscal faux nuit aux gens : chaque constante (taux, seuil, barèm
 - 2026-11-12 18:25 builder : calculateur n°5 « impôt, cotisations et CSG de l'indemnité de RC » publié (`docs/rupture-conventionnelle-impot-csg/`). Préavis de démission écarté (Legisocial couvre toutes les conventions collectives). Textes en vigueur lus sur Légifrance via WebFetch : CGI 80 duodecies 1 6° (v. 16/02/2025), CSS L242-1 II 7° (v. 31/12/2025 ; 2 PASS, 10 PASS, cas retraite), CSS L136-1-1 III 5° a) (v. 22/10/2026 ; min(légal, part hors cotisations), pas d'abattement). PASS 2026 = 48 060 € (arrêté du 22/12/2025, sources secondaires concordantes ; boss.gouv.fr et service-public.gouv.fr injoignables). Taux CSG 9,2 % / CRDS 0,5 % non relus sur source primaire cette fois (stables depuis 2018). 13 tests OK ; Playwright en HTTP local : 0 erreur JS, JSON-LD valide, FAQ visible = FAQPage ; chaîne n°2 → n°5 → n°3 pré-remplie testée. Avertissement si la rémunération N-1 n'est pas saisie (sinon part imposable surestimée). Contribution patronale (30 % → 40 % en 2026 selon la presse) volontairement non chiffrée. Mesure : TOTAL = 6 (5 sur l'accueil), 0 sur les pages EXP-001. ⚠️ PASS à ajouter chaque janvier (`PASS` dans `src/rc-fiscal.js`). Prochain : growth (kit de lancement n°5 + réponse-type « indemnité RC imposable / CSG », HQ-006 étendue à l'URL n°5).
 - 2026-11-12 19:30 growth : kit n°5 (§13-15 : réponse-type « indemnité de RC brut/net, impôt, CSG »), HQ-006 étendue au n°5, n°5 lié depuis n°1, n°3 et n°4 (maillage complet entre les 6 pages), titre pilier « dates, indemnité minimale, impôt et chômage ». 5 suites de tests OK ; Playwright HTTP local : 0 erreur JS sur les 4 pages modifiées. IndexNow toujours bloqué (000). Mesure : TOTAL 6, 0 sur les pages EXP-001. Levier growth sans compte épuisé tant que HQ-006 n'est pas faite → Prochain : builder (option ID-008 « version à intégrer » des calculateurs, canal de trafic hors moteurs suggéré par le stratège, ou n°6 sur une question voisine mal servie — vérifier la concurrence).
 - 2026-11-12 20:28 builder : version « à intégrer » des 5 calculateurs (idée ID-008). `docs/integrer/integre.js`, chargé dans le `<head>` des 5 pages, n'agit qu'avec `?integre=1` : ne garde que titre, formulaire, résultat, avertissement et lien de crédit ; liens en nouvel onglet ; robots → noindex (la balise de la page est neutralisée au chargement) ; GoatCounter `allow_frame` + chemin `<page>integre/` ; hauteur envoyée par postMessage (`hote.js` côté hôte, origine vérifiée). Page `docs/integrer/` (5 codes à copier, aperçu, FAQ), liens depuis les 5 pieds de page, le pilier, la vitrine, sitemap, README. Test Playwright (site hôte simulé avec les 5 codes copiés, fichiers locaux servis à la place du site, GoatCounter bloqué) : 5 cadres affichés, calcul 02/11/2026 → départ 08/12/2026 dans le cadre, hauteur ajustée 1420 → 1548 px, 0 erreur JS ; 5 suites de tests OK. Mesure : TOTAL 6, 0 sur les pages EXP-001. Prochain : growth (liste de sites à démarcher + message type → demande humaine).
+- 2026-11-12 21:20 growth : IndexNow joignable (hôte ajouté le 12/11) → POST groupé des 7 pages EXP-001, HTTP 202. Liste de 15 sites à qui proposer l'intégration + message type (`launch/integration-cibles.md`), sites non ouvrables depuis la session (ENOTFOUND) → l'humain vérifie l'absence de calculateur avant d'écrire. HQ-010 ajoutée en attente (3 demandes déjà ouvertes). HQ-006 étape 5 rayée. Repéré : règles chômage spécifiques aux RC depuis le 01/09/2026 (durée max réduite, avenant du 25/02/2026), absentes du n°3 → incrément 14 pour le builder. Mesure : TOTAL 6 ; `/integrer/` = 1 visite (origine inconnue).
 
 ## Verdict
 _(rempli à la date de décision)_

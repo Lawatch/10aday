@@ -61,7 +61,7 @@ Format :
   2. Méthode de validation **Fichier HTML** : télécharger le fichier `googleXXXX.html` proposé, puis sur GitHub → `Lawatch/10aday` → dossier `docs/` → Add file → Upload files → déposer le fichier → Commit sur `main`. Attendre ~1 min (déploiement Pages) → **Valider**.
   3. Menu **Sitemaps** → saisir `sitemap.xml` → Envoyer. Puis **Inspection de l'URL** → `https://lawatch.github.io/10aday/rupture-conventionnelle-dates/` → **Demander une indexation** ; refaire pour `https://lawatch.github.io/10aday/rupture-conventionnelle-indemnite/` (calculateur n°2, publié depuis). Idem pour `https://lawatch.github.io/10aday/chomage-rupture-conventionnelle/` (n°3) et la page pilier `https://lawatch.github.io/10aday/rupture-conventionnelle/` (ajouts growth 15:30 ; le sitemap les contient déjà). Idem pour `https://lawatch.github.io/10aday/indemnite-conges-payes-depart/` (n°4, ajout growth 17:30). Idem pour `https://lawatch.github.io/10aday/rupture-conventionnelle-impot-csg/` (n°5, ajout growth 19:30).
   4. https://www.bing.com/webmasters → se connecter → **Importer depuis Google Search Console** (couvre Bing, DuckDuckGo, Ecosia).
-  5. Facultatif (30 s) : ouvrir dans un navigateur l'URL de ping IndexNow donnée dans `products/EXP-001-calculateurs-fr/launch/README.md` §1 (réponse 200/202). Mieux : autoriser l'hôte `api.indexnow.org` dans l'environnement cloud « 10aday » pour que les agents soumettent eux-mêmes chaque nouvelle page.
+  5. ~~Facultatif~~ **Plus besoin** : les agents ont signalé eux-mêmes les 7 pages de rupture conventionnelle à Bing le 12/11 à 21h20 UTC (réponse 202 = accepté). Ancien texte : ouvrir dans un navigateur l'URL de ping IndexNow donnée dans `products/EXP-001-calculateurs-fr/launch/README.md` §1 (réponse 200/202). Mieux : autoriser l'hôte `api.indexnow.org` dans l'environnement cloud « 10aday » pour que les agents soumettent eux-mêmes chaque nouvelle page.
 - Ne rien écrire ici d'autre que « fait » (pas d'e-mail ni d'identifiant). Le fichier de validation Google n'est pas secret.
 - Réponse :
 
@@ -80,5 +80,15 @@ Format :
   (migration Poetry 2 / uv). On peut en attendre les premières visites externes (P1) et des liens entrants. Il faut un compte Reddit.
 - Action exacte : https://www.reddit.com/r/Python/submit → flair **Showcase** → titre et corps **prêts à coller** dans
   `products/EXP-004-outils-dev-pub-crypto/launch/README.md` §6. Un seul post, pas le même jour que HQ-007. Relire la règle « Showcase » du sub avant.
+- Réponse :
+
+### HQ-010 — Proposer nos calculateurs à 3 sites qui parlent de rupture conventionnelle (15 min)  [⏸ en attente — le stratège l'ouvre quand une place se libère]
+- Demandé par / le : growth (exp-EXP-001), 2026-11-12 21:20 UTC
+- Pourquoi : un site qui affiche notre calculateur nous envoie des visiteurs sans attendre Google. Seul un humain peut écrire à un site.
+- Action exacte :
+  1. Ouvrir `products/EXP-001-calculateurs-fr/launch/integration-cibles.md` : 15 sites, et un message prêt à coller.
+  2. Commencer par les n°6 et n°7 (deux syndicats). Ouvrir leur page : s'il y a déjà un calculateur, passer au suivant.
+  3. Coller le message dans leur formulaire de contact, en remplaçant les [crochets]. 3 envois maximum cette semaine.
+  4. Noter la date d'envoi dans le tableau « Suivi » du même fichier (ou écrire ici « envoyé à 6, 7, 2 »).
 - Réponse :
 
