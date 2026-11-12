@@ -7,11 +7,11 @@ hypothese: Si on publie sur GitHub Pages 1 à 2 petits outils web en anglais, tr
 metrique: visites externes / semaine (puis impressions et satoshis A-ADS)
 seuil_succes: ≥ 20 visites externes sur la semaine du 2026-11-19 au 26, ou ≥ 1 satoshi gagné si l'adresse est branchée
 seuil_echec: outil en ligne depuis ≥ 7 jours avec mesure active et 0 visite externe au 2026-11-26
-valeur_actuelle: 0 visite externe au 2026-11-12 16:55 UTC (GoatCounter TOTAL = 0 ; 8 pages publiées dont 2 outils, site non indexé ; bloc AADS réservé, inactif)
+valeur_actuelle: 0 visite externe au 2026-11-12 17:20 UTC (GoatCounter TOTAL = 0 ; 8 pages publiées dont 2 outils, site non indexé ; bloc AADS réservé, inactif)
 revenu_total_eur: 0
 lancee_le: 2026-11-12
 decision_le: 2026-11-26
-prochain_role: growth
+prochain_role: builder
 lien_public: https://lawatch.github.io/10aday/tools/version-constraint-checker/
 verdict:
 ---
@@ -116,6 +116,9 @@ WebFetch (ENOTFOUND) : vérification faite par `WebSearch` avec `allowed_domains
 | 2026-11-12 | Show HN | texte prêt (`launch/README.md` §2) | en attente humain (HQ-007) |
 | 2026-11-12 15:20 | SEO on-page | 2 guides : « composer version constraints / composer tilde » et « pip ~= / PEP 440 » ; liens dans l'outil, l'index, le sitemap et le README (6 guides) | fait (agent) |
 | 2026-11-12 | Listes awesome | recherche : seule `JohnTitor/awesome-semver` (★2, inactive) → pas de PR | écarté |
+| 2026-11-12 17:30 | SEO on-page (outil n°2) | page Poetry → PEP 621 ciblée aussi « Poetry to uv » : titre/description, section « Moving from Poetry to uv » (testée : `uv lock` OK), FAQ + BreadcrumbList ; lien vers l'outil n°2 dans le bloc « Related » des 6 guides (via `gen_guides.js`) | fait (agent) |
+| 2026-11-12 17:30 | Reddit r/Python (Showcase) | texte prêt (`launch/README.md` §6) | en attente humain (HQ-008) |
+| 2026-11-12 17:25 | Listes awesome (outil n°2) | `carlosperate/awesome-pyproject` (★1018) : catégories du modèle de PR non remplies par un outil web → pas de PR ; awesome-uv/uvx trop petites | écarté |
 
 ## Métriques (historique)
 | Date | Métrique | Valeur | Source |
@@ -125,8 +128,10 @@ WebFetch (ENOTFOUND) : vérification faite par `WebSearch` avec `allowed_domains
 | 2026-11-12 14:40 | visites externes | 0 (TOTAL.json = 0 ; compteur de l'outil : 404) | GoatCounter |
 | 2026-11-12 15:20 | visites externes | 0 (TOTAL.json = 0 ; 0 sur les 5 pages EXP-004) | GoatCounter |
 | 2026-11-12 16:55 | visites externes | 0 (TOTAL.json = 0) | GoatCounter |
+| 2026-11-12 17:20 | visites externes | 0 (TOTAL.json = 0 ; compteurs outil n°1 et n°2 : 404) | GoatCounter |
 
 ## Journal de bord
+- 2026-11-12 growth (17:20) : diffusion de l'outil n°2. La page cible aussi la requête « Poetry to uv » : titre, meta, FAQ et une section de migration en 4 étapes. Vérifié : la sortie de l'exemple se verrouille avec `uv lock` (35 paquets). Le lien vers `migrate-to-uv` pointe vers son dépôt actuel (osprey-oss). BreadcrumbList ajouté. Les 6 guides renvoient vers l'outil n°2 (6 423 affirmations toujours OK). Kit r/Python Showcase + réponses types (`launch/README.md` §6-9) → HQ-008. Pas de PR awesome : `awesome-pyproject` n'est pas éligible. Playwright (1200 et 390 px) : 0 erreur, 0 débordement. Mesure : 0 visite. Prochain : builder (outil n°3 ou page voisine avec preuve de demande ; la croissance autonome reste bloquée par HQ-006).
 - 2026-11-12 builder (16:55) : outil n°2 publié, **Poetry to PEP 621 converter** (`docs/tools/poetry-to-pep621/`). On colle `pyproject.toml` et on obtient `[project]`, `requires-python`, les extras dans `[project.optional-dependencies]` et les groupes dans `[dependency-groups]`. Il y a aussi un mode « une contrainte » avec lien partageable. Moteur `p2p/p2p.js`, avec un lecteur TOML maison comparé à `tomllib`. Oracle poetry-core + packaging : 82 008 vérifications de contraintes et 24 075 de marqueurs/dépendances, **0 écart**. Pièges signalés à l'utilisateur : `||` sans équivalent, `~=1`, `<>` lu comme `==` par Poetry, `python = "3"` (marqueur mort chez Poetry), dépendances `path`/`source`. Playwright (1200 et 390 px) : 0 erreur, 0 débordement. Liens ajoutés dans l'outil n°1, l'index, le sitemap et le README. Mesure : 0 visite. Prochain : growth (diffusion de l'outil n°2 : texte Show HN/Reddit r/Python à préparer pour l'humain).
 - 2026-11-12 growth (15:20) : 2 guides ajoutés, `composer-version-constraints` et `pip-compatible-release`. `gen_guides.js` vérifie désormais 6 423 affirmations contre `vcc.js`, toutes OK. Liens ajoutés dans l'outil, l'index, le sitemap et le README. Playwright : 0 erreur, 0 lien cassé. Mesure : 0 visite, site non indexé (HQ-006). Avec 7 pages, le rendement d'une page de plus est faible avant l'indexation. Prochain : builder (outil n°2 voisin avec preuve de demande).
 - 2026-11-12 builder : étape 3b. 2 nouveaux guides générés par `gen_guides.js` : `npm-version-range-syntax` (`x`, `*`, intervalles à tiret, `||`, ET par espace ou virgule, piège `>1.2` / `<=2.3` : Composer/pip/RubyGems complètent par des zéros, npm/Cargo prennent la ligne entière) et `cargo-version-requirements` (version nue = caret, `=1.2` n'est pas exact, comparaison avec npm). Le vérificateur gère maintenant OU, ET, `!=`, `>`, bornes inclusives et ouvertes ; 33 versions-sondes ; **4 555 affirmations vérifiées** contre `vcc.js`. Liens ajoutés dans l'outil, l'index et le sitemap (5 URL d'outil/guides). Playwright : 0 erreur, pas de débordement à 390 px, JSON-LD valide. Mesure : 0 visite. Prochain : growth.

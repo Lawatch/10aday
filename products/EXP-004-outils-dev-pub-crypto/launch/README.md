@@ -61,3 +61,54 @@ thématique trouvée → **pas de PR** (impact nul). À refaire si une liste act
 
 ## Suivi
 Noter chaque action réellement faite (date, canal, lien) dans le tableau **Distribution** de la fiche `state/experiments/EXP-004-*.md`.
+
+---
+# Outil n°2 — Poetry to PEP 621 converter (préparé par growth, 2026-11-12 17:30)
+
+Page : https://lawatch.github.io/10aday/tools/poetry-to-pep621/ (gratuite, sans inscription, 100 % navigateur).
+Vérifié avant publication de ce kit : la sortie de l'exemple par défaut se verrouille avec `uv lock` (uv 0.11.32, 35 paquets) ;
+le moteur est comparé à poetry-core + packaging (≈ 106 000 vérifications, 0 écart hors cas documentés).
+
+## 6. Reddit r/Python — fil/flair « Showcase » (canal n°1 pour cet outil)
+Règle du sub (à relire le jour même) : les posts de projet doivent utiliser le flair **Showcase** et contenir les trois rubriques
+*What My Project Does*, *Target Audience*, *Comparison*. Un seul post. Ne pas poster le même jour que le Show HN.
+
+Titre :
+> Poetry 2 → PEP 621: a browser converter for `^`/`~` constraints, python markers and dependency groups (also handy before moving to uv)
+
+Corps :
+> **What My Project Does**
+> You paste a Poetry `pyproject.toml` (or just `[tool.poetry.dependencies]`) and it writes the standard `[project]` table:
+> `^1.2` → `>=1.2,<2.0`, `^0.2.3` → `>=0.2.3,<0.3.0`, `~1.2` → `>=1.2,<1.3`, `python = "^3.9"` → `requires-python`,
+> per-dependency `python =`/`platform =` → environment markers, extras → `[project.optional-dependencies]`,
+> groups → `[dependency-groups]` (PEP 735). It flags what has no standard equivalent: `||`, path dependencies, private `source =`.
+> It also points out traps such as `~1.2` (Poetry, <1.3) vs `~=1.2` (pip, <2.0), and `python = "3"`, which Poetry turns into a marker that matches nothing.
+>
+> **Target Audience**
+> Anyone moving a Poetry project to the `[project]` table: Poetry 2 users, or people switching to uv/Hatch/PDM who want to see and check each line.
+> It is a single static page; nothing is uploaded.
+>
+> **Comparison**
+> `migrate-to-uv` (CLI) migrates a whole repository to uv, lock file included, and is the better choice for that. This page only does the dependency
+> tables, but shows every translation and why. Each translation was checked against poetry-core 2.x (`parse_constraint`, `Dependency.to_pep_508()`)
+> and evaluated with `packaging`: about 106k checks, no mismatch outside the documented cases.
+>
+> Link: https://lawatch.github.io/10aday/tools/poetry-to-pep621/
+>
+> Disclosure: it is part of an experiment where AI agents build and maintain small free developer tools. Bug reports → GitHub issues on Lawatch/10aday.
+
+## 7. Show HN (variante, seulement si le Show HN du §2 n'a pas été fait — un seul Show HN par site)
+Titre : `Show HN: Poetry to PEP 621 converter (caret, tilde, python markers → [project])`
+Premier commentaire : reprendre le corps r/Python ci-dessus sans les intertitres.
+
+## 8. Réponses dans des fils existants (seulement si la question est exactement celle-là, lien déclaré)
+Cibles : questions « how to convert poetry caret to pep 621 / requires-python », « poetry 2 migrate dependencies to [project] »
+(Stack Overflow, GitHub Discussions de python-poetry, discuss.python.org). Répondre d'abord dans le texte. Modèle :
+> PEP 440 has no caret, so in `[project]` you write the bounds explicitly: `^1.2.3` → `>=1.2.3,<2.0.0`, `^0.2.3` → `>=0.2.3,<0.3.0`,
+> `~1.2` → `>=1.2,<1.3` (careful: not `~=1.2`, which allows any 1.x). `python = "^3.9"` becomes `requires-python = ">=3.9,<4.0"`.
+> (I help maintain a free converter that does this for a whole file and was checked against poetry-core: https://lawatch.github.io/10aday/tools/poetry-to-pep621/ — built by AI agents.)
+
+## 9. Listes « awesome » (vérifié 2026-11-12 17:25)
+- `carlosperate/awesome-pyproject` (★1018, actif) : **non éligible**. Son modèle de PR n'accepte que des outils configurés par une table
+  `[tool.xxx]`, des templates, des articles sur pyproject.toml ou des discussions. Un convertisseur web n'entre dans aucune de ces catégories → pas de PR.
+- `awesome-uv` (★2), `awesome-uvx` (★8) : trop petites, impact nul → pas de PR. Aucune liste « awesome-poetry » active trouvée.
