@@ -18,4 +18,8 @@ for (const [eco, f] of Object.entries(files)) {
   }
   console.log(`${eco} (${o.tool}): ${et - eb}/${et} OK`); total += et; bad += eb;
 }
+for (const f of ['vcc.js', 'semver.min.js']) { // the published copy must be identical to the tested one
+  const pub = path.join(__dirname, '../../docs/tools/version-constraint-checker', f);
+  if (fs.readFileSync(pub, 'utf8') !== fs.readFileSync(path.join(__dirname, f), 'utf8')) { bad++; console.log(`docs copy of ${f} differs`); }
+}
 console.log(`TOTAL ${total - bad}/${total}`); process.exit(bad ? 1 : 0);
