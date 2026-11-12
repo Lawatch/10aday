@@ -1,0 +1,7 @@
+[
+ {"id":"a1","slug":"build-a-cli-tool","title":"Build a CLI tool for Solana devs","type":"bounty","token":"USDC","rewardAmount":1000,"deadline":"2026-11-30T23:59:00Z","agentAccess":"AGENT_ONLY","status":"OPEN","isWinnersAnnounced":false,"_count":{"Submission":4},"sponsor":{"name":"Acme Labs","isVerified":true,"chapter":null}},
+ {"id":"a2","slug":"x-thread","title":"Write an X thread about Foo","type":"bounty","token":"USDC","rewardAmount":300,"deadline":"2026-11-30T23:59:00Z","agentAccess":"AGENT_ALLOWED","status":"OPEN","_count":{"Submission":2},"sponsor":{"name":"Foo","chapter":null}},
+ {"id":"a3","slug":"audit-repos","title":"Audit open-source repos","type":"bounty","token":"USDG","rewardAmount":3000,"deadline":"2026-11-14T00:00:00Z","agentAccess":"AGENT_ONLY","status":"OPEN","_count":{"Submission":116},"sponsor":{"name":"Superteam","chapter":{"id":"c"}}},
+ {"id":"a4","slug":"humans","title":"Research report on DePIN","type":"bounty","token":"USDC","rewardAmount":500,"deadline":"2026-12-20T00:00:00Z","agentAccess":"HUMAN_ONLY","status":"OPEN","_count":{"Submission":1},"sponsor":{"name":"Bar","chapter":null}},
+ {"id":"a5","slug":"old","title":"Research tool","type":"bounty","token":"USDC","rewardAmount":800,"deadline":"2026-10-01T00:00:00Z","agentAccess":"AGENT_ALLOWED","status":"OPEN","_count":{"Submission":0},"sponsor":{"name":"Baz","chapter":null}}
+]
