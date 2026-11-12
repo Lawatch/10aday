@@ -15,6 +15,12 @@ routine horaire ─▶ répartiteur (session de cadrage) ─▶ ops/dispatch.py 
                        └─▶ ops/build_dashboard.py ─▶ DASHBOARD.md + page privée « tableau de bord »
 ```
 
+## 🧰 Outils publiés (gratuits, sans inscription)
+Site : **https://lawatch.github.io/10aday/** — chaque couloir `exp-*` ajoute ici une ligne par outil publié.
+- [Rupture conventionnelle : calcul des dates](https://lawatch.github.io/10aday/rupture-conventionnelle-dates/) — fin du délai de rétractation, fin de l'homologation par la DREETS, date de départ au plus tôt (jours fériés, Alsace-Moselle, export agenda .ics).
+- [Rupture conventionnelle : indemnité minimale](https://lawatch.github.io/10aday/rupture-conventionnelle-indemnite/) — plancher légal de l'indemnité (ancienneté en mois complets, salaire de référence 12 ou 3 mois), comparaison avec le montant proposé.
+- [Version Constraint Checker](https://lawatch.github.io/10aday/tools/version-constraint-checker/) (EN) — how npm, Cargo, Composer, pip and RubyGems read `~1.2`, `^0.3`, `~> 2.1`, `~=1.4`…
+
 ## 👉 Pour suivre : [`DASHBOARD.md`](DASHBOARD.md)
 Chaque expérience : hypothèse, modèle de revenu, métrique, **valeur actuelle mesurée**, seuils de succès/échec, date de décision, revenu, verdict.
 
