@@ -111,7 +111,7 @@ ${g.body(table)}
 <h2>Common questions</h2>
 ${g.faq.map(([q, a]) => `<h3>${q}</h3>\n<p>${a}</p>`).join('\n')}
 <h2>Related</h2>
-<ul><li><a href="../version-constraint-checker/">Version Constraint Checker</a> — test any constraint against your versions in five package managers</li>${related}</ul>
+<ul><li><a href="../version-constraint-checker/">Version Constraint Checker</a> — test any constraint against your versions in five package managers</li><li><a href="../poetry-to-pep621/">Poetry to PEP 621 converter</a> — turn Poetry <code>^</code> and <code>~</code> into <code>[project]</code> dependencies (Poetry 2, uv)</li>${related}</ul>
 <h2>Sources</h2>
 <ul>
 <li>npm: <a href="https://github.com/npm/node-semver#advanced-range-syntax">node-semver, advanced range syntax</a></li>

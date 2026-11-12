@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Poetry to PEP 621 Converter: caret (^) and tilde (~) to [project] dependencies</title>
-<meta name="description" content="Paste your [tool.poetry.dependencies] and get a [project] table with valid PEP 508 strings. ^1.2 becomes >=1.2,<2.0, python = becomes a marker, groups become [dependency-groups]. Checked against poetry-core. Runs in your browser.">
+<title>Poetry to PEP 621 Converter (Poetry 2, uv): caret (^) and tilde (~) to [project] dependencies</title>
+<meta name="description" content="Paste your [tool.poetry.dependencies] and get a [project] table with valid PEP 508 strings. ^1.2 becomes >=1.2,<2.0, python = becomes a marker, groups become [dependency-groups]. Works for Poetry 2 and for moving to uv. Checked against poetry-core. Runs in your browser.">
 <link rel="canonical" href="https://lawatch.github.io/10aday/tools/poetry-to-pep621/">
 <meta property="og:title" content="Poetry to PEP 621 Converter: ^ and ~ to [project] dependencies">
 <meta property="og:description" content="PEP 621 has no caret or tilde. Paste a Poetry pyproject.toml and get the equivalent [project] dependencies, checked against poetry-core.">
@@ -18,8 +18,10 @@
 {"@type":"Question","name":"What is the PEP 621 equivalent of a Poetry caret requirement like ^1.2.3?","acceptedAnswer":{"@type":"Answer","text":"^1.2.3 becomes >=1.2.3,<2.0.0. Below 1.0 the caret is stricter: ^0.2.3 becomes >=0.2.3,<0.3.0 and ^0.0.3 becomes >=0.0.3,<0.0.4. PEP 440 has no caret, so [project] dependencies must use explicit bounds."}},
 {"@type":"Question","name":"Is Poetry's tilde (~) the same as pip's ~= ?","acceptedAnswer":{"@type":"Answer","text":"Not always. Poetry ~1.2 means >=1.2,<1.3, while pip ~=1.2 means >=1.2,<2.0. They only agree when you write three numbers: ~1.2.3 and ~=1.2.3 both mean >=1.2.3,<1.3.0."}},
 {"@type":"Question","name":"How do I convert python = \"^3.9\" in Poetry 2?","acceptedAnswer":{"@type":"Answer","text":"The project-level python constraint becomes requires-python = \">=3.9,<4.0\". A python = ... key on a single dependency becomes an environment marker, for example numpy>=1.26,<2.0 ; python_version >= \"3.9\"."}},
+{"@type":"Question","name":"Can I use the converted dependencies with uv?","acceptedAnswer":{"@type":"Answer","text":"Yes. uv reads [project].dependencies, [project.optional-dependencies] and [dependency-groups] (the dev group is installed by default by uv sync). Path dependencies go to [tool.uv.sources] instead, and you also need a [build-system] that understands [project], such as poetry-core 2 or uv_build. Then run uv lock."}},
 {"@type":"Question","name":"Can a [project] dependency use || (or)?","acceptedAnswer":{"@type":"Answer","text":"No. PEP 440 specifiers have no 'or'. A Poetry constraint like ^1.2 || ^3.0 has to be rewritten by hand, for example as one wider range with != exclusions, or split with environment markers."}}
 ]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"10aday","item":"https://lawatch.github.io/10aday/"},{"@type":"ListItem","position":2,"name":"Poetry to PEP 621 converter","item":"https://lawatch.github.io/10aday/tools/poetry-to-pep621/"}]}</script>
 <style>
   :root{--muted:#666;--line:#ddd;--warn:#fff4d6}
   *{box-sizing:border-box}
@@ -136,8 +138,19 @@ Moving to <code>[project]</code> makes the file readable by other tools (uv, pip
 <p><strong>Should <code>requires-python</code> keep the <code>&lt;4.0</code> upper bound?</strong> The converter keeps exactly what <code>^3.9</code> meant in Poetry. Many projects drop the cap (<code>&gt;=3.9</code>), because an upper bound in <code>requires-python</code> can make resolvers pick old versions of your package. Edit it if you prefer.</p>
 <p><strong>Are the markers the same as Poetry's?</strong> Yes, apart from the <code>python = "3"</code> case above: for <code>python = …</code>, the converter writes the markers Poetry itself writes (<code>python_version</code> for X.Y bounds, <code>python_full_version</code> when a patch number matters).</p>
 
+<h2>Moving from Poetry to uv</h2>
+<p>uv reads the same standard tables, so the dependency part of a Poetry-to-uv migration is this conversion. The rest, step by step:</p>
+<ol>
+<li>Paste your file above and copy the result into <code>pyproject.toml</code>, replacing <code>[tool.poetry.dependencies]</code>, <code>[tool.poetry.extras]</code> and the <code>[tool.poetry.group.*]</code> tables.</li>
+<li>Keep a build backend that understands <code>[project]</code>: <code>poetry-core&gt;=2.0</code> works, or switch to <code>uv_build</code> or <code>hatchling</code>. Applications that are never built as a package can skip <code>[build-system]</code>.</li>
+<li>Move path dependencies to <code>[tool.uv.sources]</code> (for example <code>mylib = { path = "../mylib", editable = true }</code>) and list the bare name in <code>dependencies</code>; private indexes go to <code>[[tool.uv.index]]</code>.</li>
+<li>Run <code>uv lock</code>, then <code>uv sync</code>. uv installs the <code>dev</code> group by default; other groups need <code>--group name</code>.</li>
+</ol>
+<p class="muted">We checked that the default example above, once converted, locks with uv 0.11 (35 packages resolved). For a whole-repository migration (lock file, scripts, authors), the open-source CLI <a href="https://github.com/osprey-oss/migrate-to-uv">migrate-to-uv</a> does more; this page is for when you want to see and check each line.</p>
+
 <h2>Sources</h2>
 <ul>
+<li>uv: <a href="https://docs.astral.sh/uv/concepts/projects/dependencies/">Managing dependencies</a> (sources, optional dependencies, dependency groups)</li>
 <li>Poetry: <a href="https://python-poetry.org/docs/dependency-specification/">Dependency specification</a>, <a href="https://python-poetry.org/docs/pyproject/">The pyproject.toml file</a></li>
 <li><a href="https://packaging.python.org/en/latest/specifications/version-specifiers/">Version specifiers (PEP 440)</a>, <a href="https://packaging.python.org/en/latest/specifications/dependency-specifiers/">Dependency specifiers (PEP 508)</a>, <a href="https://packaging.python.org/en/latest/specifications/pyproject-toml/">pyproject.toml (PEP 621)</a>, <a href="https://packaging.python.org/en/latest/specifications/dependency-groups/">Dependency groups (PEP 735)</a></li>
 </ul>
