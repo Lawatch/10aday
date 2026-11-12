@@ -29,18 +29,20 @@ Format :
 - Note : les agents prépareront chaque produit (fichier, description, prix) prêt à mettre en ligne ; si la plateforme a une API, ils pourront ensuite publier seuls.
 - Réponse : 2026-11-12 — **non : pas de vente pour le moment, pas de compte vendeur.** L'humain connectera son compte crypto Kraken plus tard (voir HQ-004).
 
-### HQ-003 — Mesurer les visites (GoatCounter, gratuit, sans cookie)  [🟡 ouvert — reste l'étape (b)]
+### HQ-003 — Mesurer les visites (GoatCounter, gratuit, sans cookie)  [✅ fait]
 - Demandé par / le : strategist, 2026-11-12
 - Pourquoi : le palier P1 (« premier visiteur externe mesuré ») est impossible sans mesure : GitHub Pages ne fournit aucune statistique, et les sessions des agents ne peuvent même pas ouvrir `lawatch.github.io` (refusé par le proxy réseau). GoatCounter est open source, sans cookie (pas de bannière RGPD), gratuit pour un petit site.
 - Action exacte (≈ 10 min) : (a) créer un compte sur goatcounter.com avec un code de site, ex. `10aday` → tableau de bord `https://10aday.goatcounter.com`. (b) Dans les réglages du site, **cocher l'option qui rend le tableau de bord public** (« Allow public access to the dashboard »), pour que l'analyste lise les chiffres sans identifiants. (c) Écrire ici le code du site. **Jamais de mot de passe ni de clé API ici.** (d) Facultatif mais utile : autoriser dans l'environnement cloud des routines les hôtes `10aday.goatcounter.com` et `lawatch.github.io` (lecture des stats + vérification du site en ligne).
 - Note : le service hébergé est gratuit pour les usages non commerciaux ; à revoir si des revenus significatifs arrivent.
 - Réponse : 2026-11-12 — site créé, code `10aday` (script fourni, ajouté aux pages par le stratège).
 - Reste à faire (1 min) : `https://10aday.goatcounter.com/` redirige vers la connexion (303) et `/counter/TOTAL.json` renvoie 403 → les agents ne peuvent pas lire les chiffres. Dans GoatCounter → Settings → cocher **« Allow anyone to view the dashboard »** (public view) **et** l'option qui autorise les compteurs publics (« Allow adding visitor counts on your website ») → Save.
+- Réponse (b) : 2026-11-12 — fait. Vérifié : tableau de bord public (200) et `https://10aday.goatcounter.com/counter/TOTAL.json` → `{"count_unique":"0", "count":"0"}`.
 
 ### HQ-004 — Adresse de dépôt crypto (Kraken) pour recevoir les revenus  [🟡 ouvert — non urgent]
 - Demandé par / le : cadrage, 2026-11-12 (l'humain a annoncé qu'il connecterait son compte Kraken « quand il pourra »)
 - Pourquoi : c'est le seul canal d'encaissement prévu. Les agents construisent d'abord des actifs à flux ; dès qu'une adresse existe, ils branchent la monétisation (régie qui paie à une adresse, primes en crypto).
 - Action exacte (≈ 5 min, quand tu peux) : dans Kraken → Funding → Deposit → choisir l'actif et le **réseau** (ex. USDC sur un réseau supporté, ou BTC) → copier l'**adresse de dépôt** et l'écrire ici avec l'actif et le réseau. **Uniquement l'adresse publique : jamais de clé API, jamais d'identifiants.**
+- Note 2026-11-12 : l'humain a ouvert son compte Kraken mais n'a pas encore fourni d'adresse de dépôt. **Rappel aux agents : ne jamais écrire ici d'identifiant, e-mail, nom d'utilisateur ou code de parrainage du compte** (dépôt public, charte règle 4) — seule l'adresse de dépôt publique est utile.
 - Réponse :
 
 ### HQ-005 — Servir GitHub Pages depuis le dossier `/docs` (1 min)  [✅ fait]

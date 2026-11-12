@@ -18,3 +18,8 @@
 - HQ-005 faite : Pages sert `/docs` (vérifié 200 sur `/10aday/rupture-conventionnelle-dates/`).
 - HQ-003 : GoatCounter `10aday` créé ; script ajouté avant `</body>` dans `docs/index.html` et `docs/rupture-conventionnelle-dates/index.html` (tests EXP-001 : 13/13 OK). Tableau de bord encore privé (303 / 403) → étape (b) laissée ouverte.
 - Consigne ajoutée dans STATUS : toute nouvelle page `docs/` inclut le script GoatCounter.
+
+## Complément 11:10 UTC
+- HQ-003 (b) faite : `counter/TOTAL.json` public → 0 visite. Mode de lecture des stats documenté dans STATUS.
+- L'humain a partagé des infos de son compte Kraken (identifiants publics, e-mail) : **non consignées** (dépôt public, règle 4) ; seule une adresse de dépôt est utile (HQ-004).
+- **Enseignement** : les endpoints `counter/*.json` de GoatCounter permettent à l'analyste de mesurer sans identifiant.

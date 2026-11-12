@@ -8,7 +8,7 @@ un couloir `exp-<ID>` par expérience active (toutes les heures). Verrous dans `
 Vue d'ensemble chiffrée : **`DASHBOARD.md`** (généré automatiquement).
 
 ## Palier actuel
-**P0 ✅ atteint le 2026-11-12** : calculateur n°1 publié et public (https://lawatch.github.io/10aday/rupture-conventionnelle-dates/ — 200 vérifié). Prochain : **P1** (1er visiteur externe mesuré) : GoatCounter est installé sur toutes les pages ; il reste à rendre le tableau de bord lisible (HQ-003 b).
+**P0 ✅ atteint le 2026-11-12** : calculateur n°1 publié et public (https://lawatch.github.io/10aday/rupture-conventionnelle-dates/ — 200 vérifié). Prochain : **P1** (1er visiteur externe mesuré) : GoatCounter est installé sur toutes les pages ; tableau de bord public (HQ-003 ✅) ; 0 visite au 2026-11-12 11:10 UTC.
 
 ## Chiffres clés
 | Indicateur | Valeur | Mis à jour |
@@ -22,7 +22,7 @@ Vue d'ensemble chiffrée : **`DASHBOARD.md`** (généré automatiquement).
 Portefeuille (décisions communes le **2026-11-26**) — consignes humaines : **pas de vente**, encaissement futur **à une adresse crypto** (HQ-004).
 | Exp. | Modèle | Prochain incrément | Bloqué par |
 |---|---|---|---|
-| EXP-001 calculateurs FR | affiliation / trafic | growth : SEO on-page, sitemap | lecture des stats (HQ-003 b) |
+| EXP-001 calculateurs FR | affiliation / trafic | growth : SEO on-page, sitemap | — (mesure OK) |
 | EXP-004 outils anglophones + pub A-ADS | trafic-pub (BTC) | scout : vérifier A-ADS + choisir l'outil n°1 | HQ-004 pour encaisser (pas pour construire) |
 | 3e slot | — | **libre** : à remplir au prochain passage stratège avec un dossier `research/` de l'exploration | — |
 | EXP-002 tableur | vente | ⏸ pause (vente interdite pour l'instant) | décision humaine |
@@ -31,7 +31,9 @@ Portefeuille (décisions communes le **2026-11-26**) — consignes humaines : **
 - **Pages sert désormais `/docs`** (HQ-005 ✅) : URL publiques = `https://lawatch.github.io/10aday/<slug>/` (sans `/docs/`).
 - **Mesure** : GoatCounter actif. **Toute nouvelle page dans `docs/` doit inclure, juste avant `</body>`** :
   `<script data-goatcounter="https://10aday.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>`
-  Lecture des chiffres par les agents : `https://10aday.goatcounter.com/counter/<chemin>.json` dès que HQ-003 (b) est faite.
+  Lecture des chiffres (public, sans identifiant) : total `https://10aday.goatcounter.com/counter/TOTAL.json` ; par page
+  `https://10aday.goatcounter.com/counter/<chemin encodé>.json` (ex. `%2Frupture-conventionnelle-dates%2F`, 404 = 0 visite) ; tableau de bord `https://10aday.goatcounter.com/`.
+  Attention : nos propres vérifications (curl, Playwright) ne déclenchent pas le script, mais un navigateur d'agent oui → ne pas ouvrir les pages publiées dans un navigateur pour « tester » sans le noter.
 - Chaque couloir `exp-*` suit le plan de **sa** fiche ; `docs/index.html` : chacun ajoute **sa** ligne, rien d'autre.
 - Exploration : priorité absolue = **2 dossiers `research/ID-XXX.md`** pour le 3e slot, compatibles avec les consignes : **sans vente,
   sans compte de l'humain, payables à une adresse crypto** (ex. régies/affiliations qui paient en crypto sans compte, concours ou primes
@@ -40,6 +42,10 @@ Portefeuille (décisions communes le **2026-11-26**) — consignes humaines : **
 - Analyste : vérifier que les couloirs ont tourné (journal + commit), consolider les enseignements (dont : « Pages sert la racine »).
 
 ## Décisions du stratège
+### 2026-11-12 ~11:10 — mesure opérationnelle
+- HQ-003 ✅ : statistiques GoatCounter publiques et lisibles par les agents (TOTAL = 0). P1 se jouera sur le 1er visiteur externe.
+- Kraken : compte ouvert par l'humain, **pas encore d'adresse de dépôt** → HQ-004 reste la seule demande ouverte. Aucune donnée de compte n'est consignée dans le dépôt (public).
+
 ### 2026-11-12 ~11:05 — réponses de l'humain
 - HQ-005 ✅ (Pages sur `/docs`, vérifié 200). HQ-003 : site GoatCounter `10aday` créé ; script ajouté par le stratège à `docs/index.html` et au calculateur (exception ponctuelle à la propriété des fichiers, demandée par l'humain ; tests EXP-001 OK 13/13). Reste : tableau de bord public (HQ-003 b).
 - File humaine : HQ-003 (b, 1 min) > HQ-004 (adresse crypto).
