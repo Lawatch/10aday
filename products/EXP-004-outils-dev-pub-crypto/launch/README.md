@@ -4,6 +4,7 @@ Pages (anglais) :
 - Outil : https://lawatch.github.io/10aday/tools/version-constraint-checker/
 - Guide : https://lawatch.github.io/10aday/tools/tilde-vs-caret/
 - Guide : https://lawatch.github.io/10aday/tools/pessimistic-version-operator/
+- Outils n°2 à 4 et 5 autres guides : voir `docs/sitemap.xml` et les §6 à §12 ci-dessous.
 
 Règles : **un seul post par communauté**, seulement là où l'autopromotion est permise (lire le règlement avant de poster),
 toujours dire que c'est gratuit, sans inscription, et **construit par des agents IA**. Jamais de faux compte, de vote arrangé,
@@ -11,12 +12,10 @@ ni de message privé non sollicité. Tout ce qui suit demande un compte → acti
 
 ## 1. Indexation (prioritaire, couvert par HQ-006)
 HQ-006 (Search Console + Bing) couvre tout le site, sitemap compris : les 3 pages sont dans `docs/sitemap.xml`.
-Pings IndexNow (ouvrir dans un navigateur ; réponse 200/202 attendue). `api.indexnow.org` est bloqué depuis les sessions (testé le 2026-11-12) :
-```
-https://api.indexnow.org/indexnow?url=https%3A%2F%2Flawatch.github.io%2F10aday%2Ftools%2Fversion-constraint-checker%2F&key=61fc34625a3f3935b0645bf86f1d20ee&keyLocation=https%3A%2F%2Flawatch.github.io%2F10aday%2F61fc34625a3f3935b0645bf86f1d20ee.txt
-https://api.indexnow.org/indexnow?url=https%3A%2F%2Flawatch.github.io%2F10aday%2Ftools%2Ftilde-vs-caret%2F&key=61fc34625a3f3935b0645bf86f1d20ee&keyLocation=https%3A%2F%2Flawatch.github.io%2F10aday%2F61fc34625a3f3935b0645bf86f1d20ee.txt
-https://api.indexnow.org/indexnow?url=https%3A%2F%2Flawatch.github.io%2F10aday%2Ftools%2Fpessimistic-version-operator%2F&key=61fc34625a3f3935b0645bf86f1d20ee&keyLocation=https%3A%2F%2Flawatch.github.io%2F10aday%2F61fc34625a3f3935b0645bf86f1d20ee.txt
-```
+IndexNow (Bing, Yandex, Seznam…) : **fait par les agents** depuis que `api.indexnow.org` est autorisé.
+Le 2026-11-12 à 21:19 UTC, les 11 pages `/10aday/tools/` du sitemap ont été signalées en un seul envoi : réponse HTTP 200 (accepté).
+Pour chaque nouvelle page : `bash products/EXP-004-outils-dev-pub-crypto/launch/indexnow.sh <URL>` (sans argument = tout le sitemap EXP-004 ;
+ne pas renvoyer les mêmes URL plus d'une fois par jour). Ça ne remplace pas Google : HQ-006 (Search Console) reste utile.
 Note : `robots.txt` ne peut pas être servi (il faudrait la racine du domaine `lawatch.github.io`, que ce dépôt ne contrôle pas) : sans
 conséquence, le sitemap se soumet directement dans Search Console / Bing.
 
@@ -112,3 +111,37 @@ Cibles : questions « how to convert poetry caret to pep 621 / requires-python �
 - `carlosperate/awesome-pyproject` (★1018, actif) : **non éligible**. Son modèle de PR n'accepte que des outils configurés par une table
   `[tool.xxx]`, des templates, des articles sur pyproject.toml ou des discussions. Un convertisseur web n'entre dans aucune de ces catégories → pas de PR.
 - `awesome-uv` (★2), `awesome-uvx` (★8) : trop petites, impact nul → pas de PR. Aucune liste « awesome-poetry » active trouvée.
+
+---
+# Outils n°3 et n°4 (préparé par growth, 2026-11-12 21:20)
+
+Pages : https://lawatch.github.io/10aday/tools/requires-python-checker/ et https://lawatch.github.io/10aday/tools/version-sorter/
+Faits cités ci-dessous revérifiés le 2026-11-12 avec les vraies bibliothèques : `packaging` 26.3 (`<=3.12` refuse 3.12.1, `==3.10` refuse 3.10.4,
+`>3.10` accepte 3.10.1, `1.0.0-1` est lu `1.0.0.post1` et passe **après** 1.0.0), node-semver (`1.0.0-1` passe **avant** 1.0.0),
+RubyGems (`1.0.0.post1` passe **avant** 1.0.0).
+
+Règle : on ne crée **pas** de post de plus dans une communauté déjà prévue (un seul post par communauté). On ajoute donc ces outils
+aux posts existants, et on garde des réponses types pour des fils précis.
+
+## 10. Ajout au Show HN (§2) — une ligne à la fin du premier commentaire
+> Same engine, two sibling pages: a version sorter that shows where the five managers order versions differently
+> (`1.0.0-1` is older than `1.0.0` for npm but newer for pip), and a requires-python checker. Both run in the browser:
+> https://lawatch.github.io/10aday/tools/version-sorter/
+
+## 11. Ajout au post r/Python Showcase (§6) — un paragraphe avant « Link: »
+> A sibling page checks `requires-python` itself: paste a specifier and see which Python versions pip accepts, with the usual traps
+> (`<=3.12` rejects 3.12.1, `==3.10` means 3.10.0 only, upper caps make pip pick an old release on new Pythons):
+> https://lawatch.github.io/10aday/tools/requires-python-checker/
+
+## 12. Réponses dans des fils existants (seulement si la question est exactement celle-là, lien déclaré, réponse d'abord dans le texte)
+Cibles requires-python : « pip says requires a different Python » sur une version de patch, « requires-python <=3.12 excludes 3.12.1 »,
+« should I cap requires-python ». Modèle :
+> `<=3.12` means `<=3.12.0`, so 3.12.1 and later are rejected; write `<3.13` instead. Likewise `==3.10` is only 3.10.0 (use `==3.10.*` or `>=3.10,<3.11`).
+> (I help maintain a free checker that lists the Python versions a specifier accepts, checked against `packaging`:
+> https://lawatch.github.io/10aday/tools/requires-python-checker/ — built by AI agents.)
+
+Cibles version sorter : « why does pip sort 1.0.0-1 after 1.0.0 », « semver sort different from pip/gem ». Modèle :
+> pip normalizes `1.0.0-1` to `1.0.0.post1`, a post-release, so it sorts after `1.0.0`; npm reads `-1` as a pre-release, so it sorts before.
+> RubyGems treats any letter segment as a pre-release, so `1.0.0.post1` sorts before `1.0.0` there.
+> (I help maintain a free page that sorts the same list the way npm, Cargo, Composer, pip and RubyGems do, side by side:
+> https://lawatch.github.io/10aday/tools/version-sorter/ — built by AI agents.)
