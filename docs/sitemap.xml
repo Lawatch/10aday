@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Plan du site 10aday. Chaque couloir exp-* ajoute ici l'URL de ses pages publiées (une entrée <url> par page). -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://lawatch.github.io/10aday/</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://lawatch.github.io/10aday/rupture-conventionnelle-dates/</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+</urlset>
