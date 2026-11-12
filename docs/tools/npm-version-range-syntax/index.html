@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>npm Version Range Syntax: x, *, Hyphen Ranges and || Compared with Cargo, Composer, pip and RubyGems</title>
+<meta name="description" content="Exact meaning of 1.x, 1.2.*, 1.2 - 2.3, ^1.2 || ^3.0, &quot;&gt;=1.2 &lt;2&quot; and &quot;&gt;1.2&quot; in npm, Cargo, Composer, pip and RubyGems. Why &quot;1.2 || 3&quot; and &quot;&gt;1.2&quot; do not mean the same in npm and Composer.">
+<link rel="canonical" href="https://lawatch.github.io/10aday/tools/npm-version-range-syntax/">
+<meta property="og:title" content="npm Version Range Syntax: x, *, Hyphen Ranges and || Compared with Cargo, Composer, pip and RubyGems">
+<meta property="og:description" content="Exact meaning of 1.x, 1.2.*, 1.2 - 2.3, ^1.2 || ^3.0, &quot;&gt;=1.2 &lt;2&quot; and &quot;&gt;1.2&quot; in npm, Cargo, Composer, pip and RubyGems. Why &quot;1.2 || 3&quot; and &quot;&gt;1.2&quot; do not mean the same in npm and Composer.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://lawatch.github.io/10aday/tools/npm-version-range-syntax/">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does 1.x mean in package.json?","acceptedAnswer":{"@type":"Answer","text":"1.x, 1.* and a bare 1 all mean ≥1.0.0 &lt;2.0.0 in npm. 1.2.x means ≥1.2.0 &lt;1.3.0. A lone * or x means any release version."}},{"@type":"Question","name":"Are npm hyphen ranges inclusive?","acceptedAnswer":{"@type":"Answer","text":"Yes. 1.2.3 - 2.3.4 means ≥1.2.3 ≤2.3.4. If the upper bound is partial, every version it names is included: 1.2 - 2.3 means ≥1.2.0 &lt;2.4.0, so 2.3.9 matches."}},{"@type":"Question","name":"How do I write \"and\" and \"or\" in a version range?","acceptedAnswer":{"@type":"Answer","text":"npm: a space is “and” (&gt;=1.2 &lt;2), || is “or”. Composer: space or comma for “and”, || for “or”. Cargo, pip and RubyGems: comma for “and”, no “or” at all."}},{"@type":"Question","name":"Does >1.2 accept 1.2.5?","acceptedAnswer":{"@type":"Answer","text":"Not in npm or Cargo: a partial version stands for the whole 1.2.x line, so &gt;1.2 starts at 1.3.0. In Composer, &gt;1.2 means &gt;1.2.0, so 1.2.5 matches. Write three numbers to avoid the ambiguity."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"10aday","item":"https://lawatch.github.io/10aday/"},{"@type":"ListItem","position":2,"name":"Version Constraint Checker","item":"https://lawatch.github.io/10aday/tools/version-constraint-checker/"},{"@type":"ListItem","position":3,"name":"x, *, hyphen and || ranges","item":"https://lawatch.github.io/10aday/tools/npm-version-range-syntax/"}]}</script>
+<style>
+  body{font-family:system-ui,-apple-system,Segoe UI,sans-serif;max-width:900px;margin:2rem auto;padding:0 1rem;line-height:1.6;color:#1d1d1f}
+  h1{font-size:1.6rem;margin:.2rem 0 .6rem} h2{font-size:1.2rem;margin-top:2rem}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+  table{border-collapse:collapse;width:100%;margin:.6rem 0;font-size:.92rem}
+  th,td{border:1px solid #ddd;padding:.35rem .5rem;text-align:left;vertical-align:top}
+  th{background:#f6f6f6} td.hl{background:#fff4d6;font-weight:600} .na{color:#999}
+  .muted{color:#666} .cta{background:#eef4ff;border:1px solid #b8cdf5;padding:.7rem .9rem;border-radius:6px}
+  footer{margin-top:3rem;font-size:.85rem;color:#666;border-top:1px solid #ddd;padding-top:1rem}
+</style>
+</head>
+<body>
+<p class="muted"><a href="../../">10aday</a> › <a href="../version-constraint-checker/">Version Constraint Checker</a> › x, *, hyphen and || ranges</p>
+<h1>Wildcards (<code>x</code>, <code>*</code>), hyphen ranges and <code>||</code>: npm range syntax next to Cargo, Composer, pip and RubyGems</h1>
+<p><strong>Short answer:</strong> in npm, <code>1.x</code> = <code>1.*</code> = <code>1</code> = ≥1.0.0 &lt;2.0.0; <code>1.2.3 - 2.3.4</code> includes both ends;
+a hyphen range with a partial upper bound (<code>1.2 - 2.3</code>) includes the whole 2.3.x line; <code>||</code> means “or”; a space means “and”.
+Cargo has no hyphen ranges and no <code>||</code> and uses a <strong>comma</strong> for “and”. Composer copies most of npm's syntax but reads
+partial versions as <strong>exact</strong> ones: <code>1.2 || 3</code> means “1.2.0 or 3.0.0”, and <code>&gt;1.2</code> already accepts 1.2.1.</p>
+<p class="cta">Have a constraint and a list of versions? Paste them into the <a href="../version-constraint-checker/"><strong>Version Constraint Checker</strong></a>: it shows, side by side, what npm, Cargo, Composer, pip and RubyGems accept.</p>
+<h2>Wildcards: x and *</h2>
+<p>pip spells wildcards <code>==1.*</code>; RubyGems has no wildcard (use <code>~&gt; 1.0</code>).</p>
+<div style="overflow-x:auto"><table><tr><th>Constraint</th><th>npm</th><th>Cargo</th><th>Composer</th><th>pip</th><th>RubyGems</th><th></th></tr>
+<tr><td><code>*</code><br><small>pip and RubyGems: leave the constraint empty</small></td><td>any version</td><td>any version</td><td>any version</td><td><span class="na">not valid</span></td><td><span class="na">not valid</span></td><td><a href="../version-constraint-checker/?c=*&amp;v=0.9.9%2C1.0.0%2C1.2.0%2C1.2.9%2C1.3.0%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>1.x</code><br><small>RubyGems reads “1.x” as a pre-release version number</small></td><td>≥1.0.0 &lt;2.0.0</td><td>≥1.0.0 &lt;2.0.0</td><td>≥1.0.0 &lt;2.0.0</td><td><span class="na">not valid</span></td><td class="hl">no release</td><td><a href="../version-constraint-checker/?c=1.x&amp;v=0.9.9%2C1.0.0%2C1.2.0%2C1.2.9%2C1.3.0%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>1.*</code></td><td><code>1.*</code><br>≥1.0.0 &lt;2.0.0</td><td><code>1.*</code><br>≥1.0.0 &lt;2.0.0</td><td><code>1.*</code><br>≥1.0.0 &lt;2.0.0</td><td><code>==1.*</code><br>≥1.0.0 &lt;2.0.0</td><td><code>1.*</code><br><span class="na">not valid</span></td><td><a href="../version-constraint-checker/?c=1.*&amp;v=0.9.9%2C1.0.0%2C1.2.0%2C1.2.9%2C1.3.0%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>1.2.x</code></td><td>≥1.2.0 &lt;1.3.0</td><td>≥1.2.0 &lt;1.3.0</td><td>≥1.2.0 &lt;1.3.0</td><td><span class="na">not valid</span></td><td class="hl">no release</td><td><a href="../version-constraint-checker/?c=1.2.x&amp;v=0.9.9%2C1.0.0%2C1.2.0%2C1.2.9%2C1.3.0%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>1.2.*</code></td><td><code>1.2.*</code><br>≥1.2.0 &lt;1.3.0</td><td><code>1.2.*</code><br>≥1.2.0 &lt;1.3.0</td><td><code>1.2.*</code><br>≥1.2.0 &lt;1.3.0</td><td><code>==1.2.*</code><br>≥1.2.0 &lt;1.3.0</td><td><code>1.2.*</code><br><span class="na">not valid</span></td><td><a href="../version-constraint-checker/?c=1.2.*&amp;v=0.9.9%2C1.0.0%2C1.2.0%2C1.2.9%2C1.3.0%2C2.0.0">try&nbsp;it</a></td></tr>
+</table></div>
+<h2>Hyphen ranges</h2>
+<p>Only npm and Composer have them; Cargo, pip and RubyGems reject <code>1.2.3 - 2.3.4</code>.</p>
+<div style="overflow-x:auto"><table><tr><th>Constraint</th><th>npm</th><th>Composer</th><th>Cargo</th><th></th></tr>
+<tr><td><code>1.2.3 - 2.3.4</code><br><small>both ends included</small></td><td>≥1.2.3 ≤2.3.4</td><td>≥1.2.3 ≤2.3.4</td><td><span class="na">not valid</span></td><td><a href="../version-constraint-checker/?c=1.2.3%20-%202.3.4&amp;v=1.2.2%2C1.2.3%2C2.3.4%2C2.3.5%2C2.4.0%2C3.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>1.2 - 2.3</code><br><small>partial upper bound: all of 2.3.x</small></td><td>≥1.2.0 &lt;2.4.0</td><td>≥1.2.0 &lt;2.4.0</td><td><span class="na">not valid</span></td><td><a href="../version-constraint-checker/?c=1.2%20-%202.3&amp;v=1.2.2%2C1.2.3%2C2.3.4%2C2.3.5%2C2.4.0%2C3.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>1 - 2</code></td><td>≥1.0.0 &lt;3.0.0</td><td>≥1.0.0 &lt;3.0.0</td><td><span class="na">not valid</span></td><td><a href="../version-constraint-checker/?c=1%20-%202&amp;v=1.2.2%2C1.2.3%2C2.3.4%2C2.3.5%2C2.4.0%2C3.0.0">try&nbsp;it</a></td></tr>
+</table></div>
+<h2>“Or” with ||</h2>
+<p>Highlighted: Composer reads a partial version as an exact one, and keeps its own tilde rule, so the same string allows different versions.</p>
+<div style="overflow-x:auto"><table><tr><th>Constraint</th><th>npm</th><th>Composer</th><th>Cargo</th><th></th></tr>
+<tr><td><code>^1.2 || ^3.0</code></td><td>≥1.2.0 &lt;2.0.0 <b>or</b> ≥3.0.0 &lt;4.0.0</td><td>≥1.2.0 &lt;2.0.0 <b>or</b> ≥3.0.0 &lt;4.0.0</td><td><span class="na">not valid</span></td><td><a href="../version-constraint-checker/?c=%5E1.2%20%7C%7C%20%5E3.0&amp;v=1.2.0%2C1.2.9%2C1.9.9%2C2.3.5%2C2.9.9%2C3.0.0%2C3.1.0">try&nbsp;it</a></td></tr>
+<tr><td><code>1.2 || 3</code></td><td>≥1.2.0 &lt;1.3.0 <b>or</b> ≥3.0.0 &lt;4.0.0</td><td class="hl">exactly 1.2.0 <b>or</b> exactly 3.0.0</td><td><span class="na">not valid</span></td><td><a href="../version-constraint-checker/?c=1.2%20%7C%7C%203&amp;v=1.2.0%2C1.2.9%2C1.9.9%2C2.3.5%2C2.9.9%2C3.0.0%2C3.1.0">try&nbsp;it</a></td></tr>
+<tr><td><code>~1.2 || ~2.3</code></td><td>≥1.2.0 &lt;1.3.0 <b>or</b> ≥2.3.0 &lt;2.4.0</td><td class="hl">≥1.2.0 &lt;2.0.0 <b>or</b> ≥2.3.0 &lt;3.0.0</td><td><span class="na">not valid</span></td><td><a href="../version-constraint-checker/?c=~1.2%20%7C%7C%20~2.3&amp;v=1.2.0%2C1.2.9%2C1.9.9%2C2.3.5%2C2.9.9%2C3.0.0%2C3.1.0">try&nbsp;it</a></td></tr>
+</table></div>
+<h2>“And”: space or comma</h2>
+<div style="overflow-x:auto"><table><tr><th>Constraint</th><th>npm</th><th>Cargo</th><th>Composer</th><th>pip</th><th>RubyGems</th><th></th></tr>
+<tr><td><code>&gt;=1.2 &lt;2</code><br><small>space = and (npm, Composer)</small></td><td>≥1.2.0 &lt;2.0.0</td><td><span class="na">not valid</span></td><td>≥1.2.0 &lt;2.0.0</td><td><span class="na">not valid</span></td><td><span class="na">not valid</span></td><td><a href="../version-constraint-checker/?c=%3E%3D1.2%20%3C2&amp;v=1.1.9%2C1.2.0%2C1.2.3%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>&gt;=1.2, &lt;2</code><br><small>comma = and (all but npm)</small></td><td class="hl"><span class="na">not valid</span></td><td>≥1.2.0 &lt;2.0.0</td><td>≥1.2.0 &lt;2.0.0</td><td>≥1.2.0 &lt;2.0.0</td><td>≥1.2.0 &lt;2.0.0</td><td><a href="../version-constraint-checker/?c=%3E%3D1.2%2C%20%3C2&amp;v=1.1.9%2C1.2.0%2C1.2.3%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>&gt;=1.2, !=1.2.3</code><br><small>npm and Cargo have no !=</small></td><td><span class="na">not valid</span></td><td><span class="na">not valid</span></td><td>≥1.2.0, not 1.2.3</td><td>≥1.2.0, not 1.2.3</td><td>≥1.2.0, not 1.2.3</td><td><a href="../version-constraint-checker/?c=%3E%3D1.2%2C%20!%3D1.2.3&amp;v=1.1.9%2C1.2.0%2C1.2.3%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+</table></div>
+<h2>The partial-version trap in comparisons</h2>
+<p>npm and Cargo expand a partial version to the whole line it names; Composer and RubyGems pad it with zeros.</p>
+<div style="overflow-x:auto"><table><tr><th>Constraint</th><th>npm</th><th>Cargo</th><th>Composer</th><th>pip</th><th>RubyGems</th><th></th></tr>
+<tr><td><code>&gt;1.2</code></td><td>≥1.3.0</td><td>≥1.3.0</td><td class="hl">&gt;1.2.0</td><td class="hl">&gt;1.2.0</td><td class="hl">&gt;1.2.0</td><td><a href="../version-constraint-checker/?c=%3E1.2&amp;v=1.2.0%2C1.2.3%2C1.3.0%2C2.3.0%2C2.3.4%2C2.4.0">try&nbsp;it</a></td></tr>
+<tr><td><code>&lt;=2.3</code></td><td>&lt;2.4.0</td><td>&lt;2.4.0</td><td class="hl">≤2.3.0</td><td class="hl">≤2.3.0</td><td class="hl">≤2.3.0</td><td><a href="../version-constraint-checker/?c=%3C%3D2.3&amp;v=1.2.0%2C1.2.3%2C1.3.0%2C2.3.0%2C2.3.4%2C2.4.0">try&nbsp;it</a></td></tr>
+</table></div>
+<p class="muted">Ranges shown for release versions. Pre-releases follow extra rules in each tool; the <a href="../version-constraint-checker/">checker</a> shows them.</p>
+<!-- AADS slot: activate after HQ-004 -->
+<h2>Common questions</h2>
+<h3>What does 1.x mean in package.json?</h3>
+<p><code>1.x</code>, <code>1.*</code> and a bare <code>1</code> all mean ≥1.0.0 &lt;2.0.0 in npm. <code>1.2.x</code> means ≥1.2.0 &lt;1.3.0. A lone <code>*</code> or <code>x</code> means any release version.</p>
+<h3>Are npm hyphen ranges inclusive?</h3>
+<p>Yes. <code>1.2.3 - 2.3.4</code> means ≥1.2.3 ≤2.3.4. If the upper bound is partial, every version it names is included: <code>1.2 - 2.3</code> means ≥1.2.0 &lt;2.4.0, so 2.3.9 matches.</p>
+<h3>How do I write "and" and "or" in a version range?</h3>
+<p>npm: a space is “and” (<code>&gt;=1.2 &lt;2</code>), <code>||</code> is “or”. Composer: space or comma for “and”, <code>||</code> for “or”. Cargo, pip and RubyGems: comma for “and”, no “or” at all.</p>
+<h3>Does >1.2 accept 1.2.5?</h3>
+<p>Not in npm or Cargo: a partial version stands for the whole 1.2.x line, so <code>&gt;1.2</code> starts at 1.3.0. In Composer, <code>&gt;1.2</code> means &gt;1.2.0, so 1.2.5 matches. Write three numbers to avoid the ambiguity.</p>
+<h2>Related</h2>
+<ul><li><a href="../version-constraint-checker/">Version Constraint Checker</a> — test any constraint against your versions in five package managers</li><li><a href="../tilde-vs-caret/">Tilde vs caret</a></li><li><a href="../pessimistic-version-operator/">~> vs ~= vs ~</a></li><li><a href="../cargo-version-requirements/">Cargo.toml version requirements</a></li></ul>
+<h2>Sources</h2>
+<ul>
+<li>npm: <a href="https://github.com/npm/node-semver#advanced-range-syntax">node-semver, advanced range syntax</a></li>
+<li>Cargo: <a href="https://doc.rust-lang.org/cargo/reference/specifying-dependencies.html">Specifying dependencies</a></li>
+<li>Composer: <a href="https://getcomposer.org/doc/articles/versions.md">Versions and constraints</a></li>
+<li>pip: <a href="https://packaging.python.org/en/latest/specifications/version-specifiers/#compatible-release">Version specifiers, compatible release</a></li>
+<li>RubyGems: <a href="https://guides.rubygems.org/patterns/#pessimistic-version-constraint">Pessimistic version constraint</a></li>
+</ul>
+<footer>
+<p><strong>Built by AI agents</strong> as part of the <a href="../../">10aday</a> project. Every range on this page is generated by the engine of the
+<a href="../version-constraint-checker/">Version Constraint Checker</a> and checked on probe versions. That engine agrees 100% with node-semver 7.8.5, the Rust <code>semver</code> crate 1.0.28,
+composer/semver 3.6.0, Python <code>packaging</code> 26.3 and RubyGems 3.5.22 on about 330,000 test pairs. Found a mistake? <a href="https://github.com/Lawatch/10aday/issues">Open an issue</a>.</p>
+</footer>
+<script data-goatcounter="https://10aday.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

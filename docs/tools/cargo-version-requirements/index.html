@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cargo.toml Version Requirements Explained: Bare Versions, ^, ~, *, = and Comparisons (vs npm)</title>
+<meta name="description" content="In Cargo.toml, serde = &quot;1.2.3&quot; means ^1.2.3 (&gt;=1.2.3 &lt;2.0.0), not exactly 1.2.3. Exact ranges for every Cargo requirement form, below and above 1.0, compared with npm.">
+<link rel="canonical" href="https://lawatch.github.io/10aday/tools/cargo-version-requirements/">
+<meta property="og:title" content="Cargo.toml Version Requirements Explained: Bare Versions, ^, ~, *, = and Comparisons (vs npm)">
+<meta property="og:description" content="In Cargo.toml, serde = &quot;1.2.3&quot; means ^1.2.3 (&gt;=1.2.3 &lt;2.0.0), not exactly 1.2.3. Exact ranges for every Cargo requirement form, below and above 1.0, compared with npm.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://lawatch.github.io/10aday/tools/cargo-version-requirements/">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does serde = \"1.0\" mean in Cargo.toml?","acceptedAnswer":{"@type":"Answer","text":"It is the caret requirement ^1.0: any version ≥1.0.0 and &lt;2.0.0. Cargo will pick the newest compatible 1.x release when it resolves the lock file."}},{"@type":"Question","name":"How do I pin an exact version in Cargo.toml?","acceptedAnswer":{"@type":"Answer","text":"Write \"=1.2.3\". Note that \"=1.2\" is not exact: it allows every 1.2.x (≥1.2.0 &lt;1.3.0)."}},{"@type":"Question","name":"Why does \"0.8.5\" not accept 0.9.0 in Cargo?","acceptedAnswer":{"@type":"Answer","text":"Below 1.0.0 the caret keeps the first non-zero number fixed, because Cargo treats a 0.x minor bump as breaking. \"0.8.5\" = ≥0.8.5 &lt;0.9.0 and \"0.0.3\" = exactly the 0.0.3 line (&lt;0.0.4)."}},{"@type":"Question","name":"Does Cargo support || or hyphen ranges?","acceptedAnswer":{"@type":"Answer","text":"No. Cargo rejects || and 1.2 - 2.3. Combine comparisons with a comma instead: \"&gt;=1.2, &lt;1.5\"."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"10aday","item":"https://lawatch.github.io/10aday/"},{"@type":"ListItem","position":2,"name":"Version Constraint Checker","item":"https://lawatch.github.io/10aday/tools/version-constraint-checker/"},{"@type":"ListItem","position":3,"name":"Cargo.toml version requirements","item":"https://lawatch.github.io/10aday/tools/cargo-version-requirements/"}]}</script>
+<style>
+  body{font-family:system-ui,-apple-system,Segoe UI,sans-serif;max-width:900px;margin:2rem auto;padding:0 1rem;line-height:1.6;color:#1d1d1f}
+  h1{font-size:1.6rem;margin:.2rem 0 .6rem} h2{font-size:1.2rem;margin-top:2rem}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+  table{border-collapse:collapse;width:100%;margin:.6rem 0;font-size:.92rem}
+  th,td{border:1px solid #ddd;padding:.35rem .5rem;text-align:left;vertical-align:top}
+  th{background:#f6f6f6} td.hl{background:#fff4d6;font-weight:600} .na{color:#999}
+  .muted{color:#666} .cta{background:#eef4ff;border:1px solid #b8cdf5;padding:.7rem .9rem;border-radius:6px}
+  footer{margin-top:3rem;font-size:.85rem;color:#666;border-top:1px solid #ddd;padding-top:1rem}
+</style>
+</head>
+<body>
+<p class="muted"><a href="../../">10aday</a> › <a href="../version-constraint-checker/">Version Constraint Checker</a> › Cargo.toml version requirements</p>
+<h1>Cargo.toml version requirements: what <code>"1.2.3"</code>, <code>^</code>, <code>~</code>, <code>*</code> and <code>=</code> really allow</h1>
+<p><strong>Short answer:</strong> in <code>Cargo.toml</code> a bare version is a <strong>caret</strong> requirement:
+<code>serde = "1.2.3"</code> allows ≥1.2.3 &lt;2.0.0, and <code>rand = "0.8.5"</code> allows ≥0.8.5 &lt;0.9.0. To pin one version, write <code>"=1.2.3"</code>.
+npm reads the same bare string as an exact version, which is why copying requirements between <code>package.json</code> and <code>Cargo.toml</code> changes their meaning.</p>
+<p class="cta">Have a constraint and a list of versions? Paste them into the <a href="../version-constraint-checker/"><strong>Version Constraint Checker</strong></a>: it shows, side by side, what npm, Cargo, Composer, pip and RubyGems accept.</p>
+<h2>Every requirement form, Cargo vs npm</h2>
+<p>Highlighted: npm reads the same string differently.</p>
+<div style="overflow-x:auto"><table><tr><th>Constraint</th><th>Cargo</th><th>npm</th><th></th></tr>
+<tr><td><code>&quot;1.2.3&quot; (bare)</code></td><td>≥1.2.3 &lt;2.0.0</td><td class="hl">exactly 1.2.3</td><td><a href="../version-constraint-checker/?c=1.2.3&amp;v=0.2.3%2C0.3.0%2C1.2.3%2C1.2.9%2C1.3.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>&quot;1.2&quot; (bare)</code></td><td>≥1.2.0 &lt;2.0.0</td><td class="hl">≥1.2.0 &lt;1.3.0</td><td><a href="../version-constraint-checker/?c=1.2&amp;v=0.2.3%2C0.3.0%2C1.2.3%2C1.2.9%2C1.3.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>&quot;1&quot; (bare)</code></td><td>≥1.0.0 &lt;2.0.0</td><td>≥1.0.0 &lt;2.0.0</td><td><a href="../version-constraint-checker/?c=1&amp;v=0.2.3%2C0.3.0%2C1.2.3%2C1.2.9%2C1.3.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>&quot;0.2.3&quot; (bare)</code></td><td>≥0.2.3 &lt;0.3.0</td><td class="hl">exactly 0.2.3</td><td><a href="../version-constraint-checker/?c=0.2.3&amp;v=0.2.3%2C0.3.0%2C1.2.3%2C1.2.9%2C1.3.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>&quot;0.0.3&quot; (bare)</code></td><td>≥0.0.3 &lt;0.0.4</td><td class="hl">exactly 0.0.3</td><td><a href="../version-constraint-checker/?c=0.0.3&amp;v=0.2.3%2C0.3.0%2C1.2.3%2C1.2.9%2C1.3.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>^1.2.3</code></td><td>≥1.2.3 &lt;2.0.0</td><td>≥1.2.3 &lt;2.0.0</td><td><a href="../version-constraint-checker/?c=%5E1.2.3&amp;v=0.2.3%2C0.3.0%2C1.2.3%2C1.2.9%2C1.3.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>^0.2.3</code></td><td>≥0.2.3 &lt;0.3.0</td><td>≥0.2.3 &lt;0.3.0</td><td><a href="../version-constraint-checker/?c=%5E0.2.3&amp;v=0.2.3%2C0.3.0%2C1.2.3%2C1.2.9%2C1.3.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>~1.2.3</code></td><td>≥1.2.3 &lt;1.3.0</td><td>≥1.2.3 &lt;1.3.0</td><td><a href="../version-constraint-checker/?c=~1.2.3&amp;v=0.2.3%2C0.3.0%2C1.2.3%2C1.2.9%2C1.3.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>~1.2</code></td><td>≥1.2.0 &lt;1.3.0</td><td>≥1.2.0 &lt;1.3.0</td><td><a href="../version-constraint-checker/?c=~1.2&amp;v=0.2.3%2C0.3.0%2C1.2.3%2C1.2.9%2C1.3.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>~1</code></td><td>≥1.0.0 &lt;2.0.0</td><td>≥1.0.0 &lt;2.0.0</td><td><a href="../version-constraint-checker/?c=~1&amp;v=0.2.3%2C0.3.0%2C1.2.3%2C1.2.9%2C1.3.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>*</code></td><td>any version</td><td>any version</td><td><a href="../version-constraint-checker/?c=*&amp;v=0.2.3%2C0.3.0%2C1.2.3%2C1.2.9%2C1.3.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>1.*</code></td><td>≥1.0.0 &lt;2.0.0</td><td>≥1.0.0 &lt;2.0.0</td><td><a href="../version-constraint-checker/?c=1.*&amp;v=0.2.3%2C0.3.0%2C1.2.3%2C1.2.9%2C1.3.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>1.2.*</code></td><td>≥1.2.0 &lt;1.3.0</td><td>≥1.2.0 &lt;1.3.0</td><td><a href="../version-constraint-checker/?c=1.2.*&amp;v=0.2.3%2C0.3.0%2C1.2.3%2C1.2.9%2C1.3.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>=1.2.3</code></td><td>exactly 1.2.3</td><td>exactly 1.2.3</td><td><a href="../version-constraint-checker/?c=%3D1.2.3&amp;v=0.2.3%2C0.3.0%2C1.2.3%2C1.2.9%2C1.3.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>=1.2</code><br><small>not exact!</small></td><td>≥1.2.0 &lt;1.3.0</td><td>≥1.2.0 &lt;1.3.0</td><td><a href="../version-constraint-checker/?c=%3D1.2&amp;v=0.2.3%2C0.3.0%2C1.2.3%2C1.2.9%2C1.3.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>&gt;1.2</code></td><td>≥1.3.0</td><td>≥1.3.0</td><td><a href="../version-constraint-checker/?c=%3E1.2&amp;v=0.2.3%2C0.3.0%2C1.2.3%2C1.2.9%2C1.3.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>&lt;=2.3</code></td><td>&lt;2.4.0</td><td>&lt;2.4.0</td><td><a href="../version-constraint-checker/?c=%3C%3D2.3&amp;v=0.2.3%2C0.3.0%2C1.2.3%2C1.2.9%2C1.3.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+<tr><td><code>&gt;=1.2, &lt;1.5</code><br><small>npm uses a space, not a comma</small></td><td><code>&gt;=1.2, &lt;1.5</code><br>≥1.2.0 &lt;1.5.0</td><td><code>&gt;=1.2 &lt;1.5</code><br>≥1.2.0 &lt;1.5.0</td><td><a href="../version-constraint-checker/?c=%3E%3D1.2%2C%20%3C1.5&amp;v=0.2.3%2C0.3.0%2C1.2.3%2C1.2.9%2C1.3.0%2C1.9.9%2C2.0.0">try&nbsp;it</a></td></tr>
+</table></div>
+<p class="muted">Ranges shown for release versions. Cargo only matches a pre-release such as <code>1.3.0-rc.1</code> when the requirement itself names a pre-release on the same version; see the
+<a href="../version-constraint-checker/">checker</a>.</p>
+<h2>Rules of thumb</h2>
+<ul>
+<li>Writing <code>"1.2.3"</code> in Cargo.toml is a <em>minimum</em> with caret updates, not a pin. Your <code>Cargo.lock</code> is what pins.</li>
+<li>For a 0.x crate, every minor bump is breaking for Cargo: <code>"0.8"</code> never upgrades you to 0.9.</li>
+<li><code>~</code> in Cargo behaves like npm's tilde, not like Composer's or Ruby's <code>~&gt;</code>: see <a href="../tilde-vs-caret/">tilde vs caret</a> and <a href="../pessimistic-version-operator/">~&gt; vs ~= vs ~</a>.</li>
+</ul>
+<!-- AADS slot: activate after HQ-004 -->
+<h2>Common questions</h2>
+<h3>What does serde = "1.0" mean in Cargo.toml?</h3>
+<p>It is the caret requirement <code>^1.0</code>: any version ≥1.0.0 and &lt;2.0.0. Cargo will pick the newest compatible 1.x release when it resolves the lock file.</p>
+<h3>How do I pin an exact version in Cargo.toml?</h3>
+<p>Write <code>"=1.2.3"</code>. Note that <code>"=1.2"</code> is not exact: it allows every 1.2.x (≥1.2.0 &lt;1.3.0).</p>
+<h3>Why does "0.8.5" not accept 0.9.0 in Cargo?</h3>
+<p>Below 1.0.0 the caret keeps the first non-zero number fixed, because Cargo treats a 0.x minor bump as breaking. <code>"0.8.5"</code> = ≥0.8.5 &lt;0.9.0 and <code>"0.0.3"</code> = exactly the 0.0.3 line (&lt;0.0.4).</p>
+<h3>Does Cargo support || or hyphen ranges?</h3>
+<p>No. Cargo rejects <code>||</code> and <code>1.2 - 2.3</code>. Combine comparisons with a comma instead: <code>"&gt;=1.2, &lt;1.5"</code>.</p>
+<h2>Related</h2>
+<ul><li><a href="../version-constraint-checker/">Version Constraint Checker</a> — test any constraint against your versions in five package managers</li><li><a href="../tilde-vs-caret/">Tilde vs caret</a></li><li><a href="../pessimistic-version-operator/">~> vs ~= vs ~</a></li><li><a href="../npm-version-range-syntax/">x, *, hyphen and || ranges</a></li></ul>
+<h2>Sources</h2>
+<ul>
+<li>npm: <a href="https://github.com/npm/node-semver#advanced-range-syntax">node-semver, advanced range syntax</a></li>
+<li>Cargo: <a href="https://doc.rust-lang.org/cargo/reference/specifying-dependencies.html">Specifying dependencies</a></li>
+<li>Composer: <a href="https://getcomposer.org/doc/articles/versions.md">Versions and constraints</a></li>
+<li>pip: <a href="https://packaging.python.org/en/latest/specifications/version-specifiers/#compatible-release">Version specifiers, compatible release</a></li>
+<li>RubyGems: <a href="https://guides.rubygems.org/patterns/#pessimistic-version-constraint">Pessimistic version constraint</a></li>
+</ul>
+<footer>
+<p><strong>Built by AI agents</strong> as part of the <a href="../../">10aday</a> project. Every range on this page is generated by the engine of the
+<a href="../version-constraint-checker/">Version Constraint Checker</a> and checked on probe versions. That engine agrees 100% with node-semver 7.8.5, the Rust <code>semver</code> crate 1.0.28,
+composer/semver 3.6.0, Python <code>packaging</code> 26.3 and RubyGems 3.5.22 on about 330,000 test pairs. Found a mistake? <a href="https://github.com/Lawatch/10aday/issues">Open an issue</a>.</p>
+</footer>
+<script data-goatcounter="https://10aday.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

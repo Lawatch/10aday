@@ -9,17 +9,28 @@ const VCC = require(path.join(ROOT, 'vcc.js'));
 const cmp = (a, b) => { const x = a.split('.').map(Number), y = b.split('.').map(Number); for (let i = 0; i < 3; i++) if (x[i] !== y[i]) return x[i] - y[i]; return 0; };
 const BASE = 'https://lawatch.github.io/10aday/tools/';
 const CHECKER = BASE + 'version-constraint-checker/';
-const PROBES = ['0.0.0','0.0.3','0.0.4','0.0.9','0.1.0','0.1.5','0.2.0','0.2.3','0.2.9','0.3.0','0.9.9','1.0.0','1.1.9','1.2.0','1.2.2','1.2.3','1.2.9','1.3.0','1.9.9','2.0.0','2.5.0'];
+const PROBES = ['0.0.0','0.0.3','0.0.4','0.0.9','0.1.0','0.1.5','0.2.0','0.2.3','0.2.9','0.3.0','0.9.9','1.0.0','1.1.9','1.2.0','1.2.2','1.2.3','1.2.9','1.3.0','1.4.9','1.5.0','1.9.9','2.0.0','2.3.0','2.3.4','2.3.5','2.4.0','2.5.0','2.9.9','3.0.0','3.1.0'];
 const NAMES = { npm: 'npm', cargo: 'Cargo', composer: 'Composer', pip: 'pip', rubygems: 'RubyGems' };
 let checks = 0;
 
-// spec: 'invalid' | ['=', v] | [lo, hi]  (lo inclusive, hi exclusive)
+// spec: 'invalid' | ['=', v] | ['!=', v] | [lo, hi] (lo inclusive, hi exclusive; null = unbounded)
+//     | ['>', v] | ['<=', lo|null, hi] (both inclusive) | { or: [spec...] } | { and: [spec...] } | 'none' (valid, matches no release)
+function contains(spec, v) {
+  if (spec === 'none') return false;
+  if (spec.or) return spec.or.some(s => contains(s, v));
+  if (spec.and) return spec.and.every(s => contains(s, v));
+  if (spec[0] === '=') return cmp(v, spec[1]) === 0;
+  if (spec[0] === '!=') return cmp(v, spec[1]) !== 0;
+  if (spec[0] === '>') return cmp(v, spec[1]) > 0;
+  if (spec[0] === '<=') return (spec[1] === null || cmp(v, spec[1]) >= 0) && cmp(v, spec[2]) <= 0;
+  return (spec[0] === null || cmp(v, spec[0]) >= 0) && (spec[1] === null || cmp(v, spec[1]) < 0);
+}
 function verify(eco, c, spec) {
   const p = VCC[eco].parse(c);
   if (spec === 'invalid') { if (p.valid) throw new Error(`${eco} ${c}: expected invalid`); checks++; return; }
   if (!p.valid) throw new Error(`${eco} ${c}: rejected but page says ${JSON.stringify(spec)}`);
   for (const v of PROBES) {
-    const want = spec[0] === '=' ? cmp(v, spec[1]) === 0 : (cmp(v, spec[0]) >= 0 && cmp(v, spec[1]) < 0);
+    const want = contains(spec, v);
     const got = p.test(v);
     if (got !== want) throw new Error(`${eco} ${JSON.stringify(c)} on ${v}: engine says ${got}, page says ${want} (${JSON.stringify(spec)})`);
     checks++;
@@ -28,7 +39,16 @@ function verify(eco, c, spec) {
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 function show(spec) {
   if (spec === 'invalid') return '<span class="na">not valid</span>';
+  if (spec === 'none') return 'no release';
+  if (spec.or) return spec.or.map(show).join(' <b>or</b> ');
+  if (spec.and) return spec.and.map(show).join(', ');
   if (spec[0] === '=') return 'exactly ' + spec[1];
+  if (spec[0] === '!=') return 'not ' + spec[1];
+  if (spec[0] === '>') return '&gt;' + spec[1];
+  if (spec[0] === '<=') return spec[1] === null ? `≤${spec[2]}` : `≥${spec[1]} ≤${spec[2]}`;
+  if (spec[0] === null && spec[1] === null) return 'any version';
+  if (spec[1] === null) return `≥${spec[0]}`;
+  if (spec[0] === null) return `&lt;${spec[1]}`;
   return `≥${spec[0]} &lt;${spec[1]}`;
 }
 function tryLink(c, versions) {
@@ -193,6 +213,105 @@ ${t(['npm', 'cargo', 'composer', 'pip', 'rubygems'], [
 <li>To allow <strong>patch updates only</strong>, write three numbers everywhere: <code>~&gt; 1.2.3</code>, <code>~=1.2.3</code>, <code>~1.2.3</code>. All five tools agree: ≥1.2.3 &lt;1.3.0.</li>
 <li>To allow <strong>minor updates</strong>, prefer the caret in npm, Cargo and Composer (<code>^1.2</code>), and the two-number form in RubyGems and pip (<code>~&gt; 1.2</code>, <code>~=1.2</code>).
 See <a href="../tilde-vs-caret/">tilde vs caret</a>.</li>
+</ul>`
+},
+{
+  slug: 'npm-version-range-syntax',
+  short: 'x, *, hyphen and || ranges',
+  title: 'npm Version Range Syntax: x, *, Hyphen Ranges and || Compared with Cargo, Composer, pip and RubyGems',
+  h1: 'Wildcards (<code>x</code>, <code>*</code>), hyphen ranges and <code>||</code>: npm range syntax next to Cargo, Composer, pip and RubyGems',
+  description: 'Exact meaning of 1.x, 1.2.*, 1.2 - 2.3, ^1.2 || ^3.0, ">=1.2 <2" and ">1.2" in npm, Cargo, Composer, pip and RubyGems. Why "1.2 || 3" and ">1.2" do not mean the same in npm and Composer.',
+  intro: `<p><strong>Short answer:</strong> in npm, <code>1.x</code> = <code>1.*</code> = <code>1</code> = ≥1.0.0 &lt;2.0.0; <code>1.2.3 - 2.3.4</code> includes both ends;
+a hyphen range with a partial upper bound (<code>1.2 - 2.3</code>) includes the whole 2.3.x line; <code>||</code> means “or”; a space means “and”.
+Cargo has no hyphen ranges and no <code>||</code> and uses a <strong>comma</strong> for “and”. Composer copies most of npm's syntax but reads
+partial versions as <strong>exact</strong> ones: <code>1.2 || 3</code> means “1.2.0 or 3.0.0”, and <code>&gt;1.2</code> already accepts 1.2.1.</p>`,
+  faq: [
+    ['What does 1.x mean in package.json?', '<code>1.x</code>, <code>1.*</code> and a bare <code>1</code> all mean ≥1.0.0 &lt;2.0.0 in npm. <code>1.2.x</code> means ≥1.2.0 &lt;1.3.0. A lone <code>*</code> or <code>x</code> means any release version.'],
+    ['Are npm hyphen ranges inclusive?', 'Yes. <code>1.2.3 - 2.3.4</code> means ≥1.2.3 ≤2.3.4. If the upper bound is partial, every version it names is included: <code>1.2 - 2.3</code> means ≥1.2.0 &lt;2.4.0, so 2.3.9 matches.'],
+    ['How do I write "and" and "or" in a version range?', 'npm: a space is “and” (<code>&gt;=1.2 &lt;2</code>), <code>||</code> is “or”. Composer: space or comma for “and”, <code>||</code> for “or”. Cargo, pip and RubyGems: comma for “and”, no “or” at all.'],
+    ['Does >1.2 accept 1.2.5?', 'Not in npm or Cargo: a partial version stands for the whole 1.2.x line, so <code>&gt;1.2</code> starts at 1.3.0. In Composer, <code>&gt;1.2</code> means &gt;1.2.0, so 1.2.5 matches. Write three numbers to avoid the ambiguity.'],
+  ],
+  body: t => `<h2>Wildcards: x and *</h2>
+<p>pip spells wildcards <code>==1.*</code>; RubyGems has no wildcard (use <code>~&gt; 1.0</code>).</p>
+${t(['npm', 'cargo', 'composer', 'pip', 'rubygems'], [
+  { c: '*', npm: [null, null], cargo: [null, null], composer: [null, null], pip: 'invalid', rubygems: 'invalid', note: 'pip and RubyGems: leave the constraint empty' },
+  { c: '1.x', npm: ['1.0.0', '2.0.0'], cargo: ['1.0.0', '2.0.0'], composer: ['1.0.0', '2.0.0'], pip: 'invalid', rubygems: 'none', hl: ['rubygems'], note: 'RubyGems reads “1.x” as a pre-release version number' },
+  { c: '1.*', per: { pip: '==1.*' }, npm: ['1.0.0', '2.0.0'], cargo: ['1.0.0', '2.0.0'], composer: ['1.0.0', '2.0.0'], pip: ['1.0.0', '2.0.0'], rubygems: 'invalid' },
+  { c: '1.2.x', npm: ['1.2.0', '1.3.0'], cargo: ['1.2.0', '1.3.0'], composer: ['1.2.0', '1.3.0'], pip: 'invalid', rubygems: 'none', hl: ['rubygems'] },
+  { c: '1.2.*', per: { pip: '==1.2.*' }, npm: ['1.2.0', '1.3.0'], cargo: ['1.2.0', '1.3.0'], composer: ['1.2.0', '1.3.0'], pip: ['1.2.0', '1.3.0'], rubygems: 'invalid' },
+], ['0.9.9', '1.0.0', '1.2.0', '1.2.9', '1.3.0', '2.0.0'])}
+<h2>Hyphen ranges</h2>
+<p>Only npm and Composer have them; Cargo, pip and RubyGems reject <code>1.2.3 - 2.3.4</code>.</p>
+${t(['npm', 'composer', 'cargo'], [
+  { c: '1.2.3 - 2.3.4', npm: ['<=', '1.2.3', '2.3.4'], composer: ['<=', '1.2.3', '2.3.4'], cargo: 'invalid', note: 'both ends included' },
+  { c: '1.2 - 2.3', npm: ['1.2.0', '2.4.0'], composer: ['1.2.0', '2.4.0'], cargo: 'invalid', note: 'partial upper bound: all of 2.3.x' },
+  { c: '1 - 2', npm: ['1.0.0', '3.0.0'], composer: ['1.0.0', '3.0.0'], cargo: 'invalid' },
+], ['1.2.2', '1.2.3', '2.3.4', '2.3.5', '2.4.0', '3.0.0'])}
+<h2>“Or” with ||</h2>
+<p>Highlighted: Composer reads a partial version as an exact one, and keeps its own tilde rule, so the same string allows different versions.</p>
+${t(['npm', 'composer', 'cargo'], [
+  { c: '^1.2 || ^3.0', npm: { or: [['1.2.0', '2.0.0'], ['3.0.0', '4.0.0']] }, composer: { or: [['1.2.0', '2.0.0'], ['3.0.0', '4.0.0']] }, cargo: 'invalid' },
+  { c: '1.2 || 3', npm: { or: [['1.2.0', '1.3.0'], ['3.0.0', '4.0.0']] }, composer: { or: [['=', '1.2.0'], ['=', '3.0.0']] }, cargo: 'invalid', hl: ['composer'] },
+  { c: '~1.2 || ~2.3', npm: { or: [['1.2.0', '1.3.0'], ['2.3.0', '2.4.0']] }, composer: { or: [['1.2.0', '2.0.0'], ['2.3.0', '3.0.0']] }, cargo: 'invalid', hl: ['composer'] },
+], ['1.2.0', '1.2.9', '1.9.9', '2.3.5', '2.9.9', '3.0.0', '3.1.0'])}
+<h2>“And”: space or comma</h2>
+${t(['npm', 'cargo', 'composer', 'pip', 'rubygems'], [
+  { c: '>=1.2 <2', npm: ['1.2.0', '2.0.0'], cargo: 'invalid', composer: ['1.2.0', '2.0.0'], pip: 'invalid', rubygems: 'invalid', note: 'space = and (npm, Composer)' },
+  { c: '>=1.2, <2', npm: 'invalid', cargo: ['1.2.0', '2.0.0'], composer: ['1.2.0', '2.0.0'], pip: ['1.2.0', '2.0.0'], rubygems: ['1.2.0', '2.0.0'], hl: ['npm'], note: 'comma = and (all but npm)' },
+  { c: '>=1.2, !=1.2.3', npm: 'invalid', cargo: 'invalid', composer: { and: [['1.2.0', null], ['!=', '1.2.3']] }, pip: { and: [['1.2.0', null], ['!=', '1.2.3']] }, rubygems: { and: [['1.2.0', null], ['!=', '1.2.3']] }, note: 'npm and Cargo have no !=' },
+], ['1.1.9', '1.2.0', '1.2.3', '1.9.9', '2.0.0'])}
+<h2>The partial-version trap in comparisons</h2>
+<p>npm and Cargo expand a partial version to the whole line it names; Composer and RubyGems pad it with zeros.</p>
+${t(['npm', 'cargo', 'composer', 'pip', 'rubygems'], [
+  { c: '>1.2', npm: ['1.3.0', null], cargo: ['1.3.0', null], composer: ['>', '1.2.0'], pip: ['>', '1.2.0'], rubygems: ['>', '1.2.0'], hl: ['composer', 'pip', 'rubygems'] },
+  { c: '<=2.3', npm: [null, '2.4.0'], cargo: [null, '2.4.0'], composer: ['<=', null, '2.3.0'], pip: ['<=', null, '2.3.0'], rubygems: ['<=', null, '2.3.0'], hl: ['composer', 'pip', 'rubygems'] },
+], ['1.2.0', '1.2.3', '1.3.0', '2.3.0', '2.3.4', '2.4.0'])}
+<p class="muted">Ranges shown for release versions. Pre-releases follow extra rules in each tool; the <a href="../version-constraint-checker/">checker</a> shows them.</p>`
+},
+{
+  slug: 'cargo-version-requirements',
+  short: 'Cargo.toml version requirements',
+  title: 'Cargo.toml Version Requirements Explained: Bare Versions, ^, ~, *, = and Comparisons (vs npm)',
+  h1: 'Cargo.toml version requirements: what <code>"1.2.3"</code>, <code>^</code>, <code>~</code>, <code>*</code> and <code>=</code> really allow',
+  description: 'In Cargo.toml, serde = "1.2.3" means ^1.2.3 (>=1.2.3 <2.0.0), not exactly 1.2.3. Exact ranges for every Cargo requirement form, below and above 1.0, compared with npm.',
+  intro: `<p><strong>Short answer:</strong> in <code>Cargo.toml</code> a bare version is a <strong>caret</strong> requirement:
+<code>serde = "1.2.3"</code> allows ≥1.2.3 &lt;2.0.0, and <code>rand = "0.8.5"</code> allows ≥0.8.5 &lt;0.9.0. To pin one version, write <code>"=1.2.3"</code>.
+npm reads the same bare string as an exact version, which is why copying requirements between <code>package.json</code> and <code>Cargo.toml</code> changes their meaning.</p>`,
+  faq: [
+    ['What does serde = "1.0" mean in Cargo.toml?', 'It is the caret requirement <code>^1.0</code>: any version ≥1.0.0 and &lt;2.0.0. Cargo will pick the newest compatible 1.x release when it resolves the lock file.'],
+    ['How do I pin an exact version in Cargo.toml?', 'Write <code>"=1.2.3"</code>. Note that <code>"=1.2"</code> is not exact: it allows every 1.2.x (≥1.2.0 &lt;1.3.0).'],
+    ['Why does "0.8.5" not accept 0.9.0 in Cargo?', 'Below 1.0.0 the caret keeps the first non-zero number fixed, because Cargo treats a 0.x minor bump as breaking. <code>"0.8.5"</code> = ≥0.8.5 &lt;0.9.0 and <code>"0.0.3"</code> = exactly the 0.0.3 line (&lt;0.0.4).'],
+    ['Does Cargo support || or hyphen ranges?', 'No. Cargo rejects <code>||</code> and <code>1.2 - 2.3</code>. Combine comparisons with a comma instead: <code>"&gt;=1.2, &lt;1.5"</code>.'],
+  ],
+  body: t => `<h2>Every requirement form, Cargo vs npm</h2>
+<p>Highlighted: npm reads the same string differently.</p>
+${t(['cargo', 'npm'], [
+  { c: '1.2.3', label: '"1.2.3" (bare)', cargo: ['1.2.3', '2.0.0'], npm: ['=', '1.2.3'], hl: ['npm'] },
+  { c: '1.2', label: '"1.2" (bare)', cargo: ['1.2.0', '2.0.0'], npm: ['1.2.0', '1.3.0'], hl: ['npm'] },
+  { c: '1', label: '"1" (bare)', cargo: ['1.0.0', '2.0.0'], npm: ['1.0.0', '2.0.0'] },
+  { c: '0.2.3', label: '"0.2.3" (bare)', cargo: ['0.2.3', '0.3.0'], npm: ['=', '0.2.3'], hl: ['npm'] },
+  { c: '0.0.3', label: '"0.0.3" (bare)', cargo: ['0.0.3', '0.0.4'], npm: ['=', '0.0.3'], hl: ['npm'] },
+  { c: '^1.2.3', cargo: ['1.2.3', '2.0.0'], npm: ['1.2.3', '2.0.0'] },
+  { c: '^0.2.3', cargo: ['0.2.3', '0.3.0'], npm: ['0.2.3', '0.3.0'] },
+  { c: '~1.2.3', cargo: ['1.2.3', '1.3.0'], npm: ['1.2.3', '1.3.0'] },
+  { c: '~1.2', cargo: ['1.2.0', '1.3.0'], npm: ['1.2.0', '1.3.0'] },
+  { c: '~1', cargo: ['1.0.0', '2.0.0'], npm: ['1.0.0', '2.0.0'] },
+  { c: '*', cargo: [null, null], npm: [null, null] },
+  { c: '1.*', cargo: ['1.0.0', '2.0.0'], npm: ['1.0.0', '2.0.0'] },
+  { c: '1.2.*', cargo: ['1.2.0', '1.3.0'], npm: ['1.2.0', '1.3.0'] },
+  { c: '=1.2.3', cargo: ['=', '1.2.3'], npm: ['=', '1.2.3'] },
+  { c: '=1.2', cargo: ['1.2.0', '1.3.0'], npm: ['1.2.0', '1.3.0'], note: 'not exact!' },
+  { c: '>1.2', cargo: ['1.3.0', null], npm: ['1.3.0', null] },
+  { c: '<=2.3', cargo: [null, '2.4.0'], npm: [null, '2.4.0'] },
+  { c: '>=1.2, <1.5', per: { npm: '>=1.2 <1.5' }, cargo: ['1.2.0', '1.5.0'], npm: ['1.2.0', '1.5.0'], note: 'npm uses a space, not a comma' },
+], ['0.2.3', '0.3.0', '1.2.3', '1.2.9', '1.3.0', '1.9.9', '2.0.0'])}
+<p class="muted">Ranges shown for release versions. Cargo only matches a pre-release such as <code>1.3.0-rc.1</code> when the requirement itself names a pre-release on the same version; see the
+<a href="../version-constraint-checker/">checker</a>.</p>
+<h2>Rules of thumb</h2>
+<ul>
+<li>Writing <code>"1.2.3"</code> in Cargo.toml is a <em>minimum</em> with caret updates, not a pin. Your <code>Cargo.lock</code> is what pins.</li>
+<li>For a 0.x crate, every minor bump is breaking for Cargo: <code>"0.8"</code> never upgrades you to 0.9.</li>
+<li><code>~</code> in Cargo behaves like npm's tilde, not like Composer's or Ruby's <code>~&gt;</code>: see <a href="../tilde-vs-caret/">tilde vs caret</a> and <a href="../pessimistic-version-operator/">~&gt; vs ~= vs ~</a>.</li>
 </ul>`
 },
 ];
