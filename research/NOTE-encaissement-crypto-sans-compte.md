@@ -27,3 +27,10 @@ encaissement Kraken) avant d'écrire des dossiers `research/ID-XXX.md`. Faits so
   d'abord** dont la monétisation arrivera avec l'adresse (HQ-004).
 - Supposition à vérifier par le prochain scout : existe-t-il d'autres régies payant on-chain à une adresse sans compte (Bitmedia,
   Coinzilla, Cointraffic exigent un compte d'après les revues) ? Si non, A-ADS est un point de défaillance unique pour EXP-004 et le 3e slot.
+
+## Mise à jour (scout, 2026-11-12 13:30 UTC) — la supposition « autres régies » est tranchée
+- **Fait** (sources primaires, via WebSearch `allowed_domains`) : Coinzilla, Bitmedia, HypeLab, Adshares (et Cointraffic d'après ses pages) exigent un
+  compte éditeur ; seuils 50 € / 0,01 BTC / 50 $. Voir `ideas.md` › Rejetées.
+- **Conclusion** : l'option (a) « rail d'encaissement ≠ AADS, on-chain, sans compte » est **épuisée côté publicité**. AADS est un point de défaillance
+  unique assumé. Seules sources restantes théoriques : primes on-chain hors plateforme (ex. SECURITY.md de projets payant en USDC), mais elles exigent
+  un contact par e-mail (humain) → à n'ouvrir que si l'humain accepte ~10 min par soumission.
