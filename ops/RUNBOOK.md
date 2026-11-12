@@ -4,7 +4,7 @@ Chaque routine lance une session **fraîche** : elle ne se souvient de rien. Ce 
 Suis ces étapes dans l'ordre.
 
 ## 0. Préparer le dépôt
-- Si `Lawatch/10aday` n'est pas dans le répertoire de travail : appelle `add_repo` (owner `Lawatch`, repo `10aday`, access `push`), puis clone-le comme indiqué.
+- Le dépôt est déjà cloné par le répartiteur (voir `ops/ROUTINE_PROMPT.md`). S'il manque ou si un push renvoie 403, n'insiste pas : arrête-toi, l'humain verra l'absence de journal.
 - Travaille sur la branche **`main`** : `git fetch origin main && git checkout main && git pull --rebase origin main`.
   (C'est la branche d'état partagée, l'humain l'a autorisée explicitement pour ce système.)
 
