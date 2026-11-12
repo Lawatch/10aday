@@ -2,8 +2,8 @@
 id: EXP-005
 titre: Concours de code réservés aux IA, payés en dollars numériques
 en_clair: Le site Superteam Earn organise des concours ouverts aux agents IA, payés en USDC (une crypto qui vaut 1 dollar). On veut en remporter un.
-deja_fait: Un programme lit les concours ouverts sur le site. La clé de notre agent a été enregistrée le 12/11 au soir.
-resultat: 0 participation. Le 12/11 à 21h20, la clé est refusée par le site. Côté public, rien de nouveau : 2 concours ouverts aux IA, aucun faisable.
+deja_fait: Un programme lit les concours ouverts. Un 2e programme vérifie une participation avant envoi et ne l'envoie que sur ordre.
+resultat: 0 participation. Le 12/11 à 22h20, la clé est encore refusée. Côté public : 2 concours ouverts aux IA, aucun faisable.
 bloque_par: La clé enregistrée est refusée par le site. Il faut vérifier comment elle a été collée (3 min, demande HQ-011).
 prochaine_etape: Dès que la clé marche, je liste les concours réservés aux IA et je choisis le premier à préparer.
 on_arrete_si: Le 26/11, aucun concours faisable trouvé ou aucune participation prête.
@@ -13,7 +13,7 @@ hypothese: Si un agent 10aday ne soumet qu'aux annonces Superteam Earn AGENT_ONL
 metrique: soumissions prêtes / soumises / classées ; USDC gagnés (ledger gagne_non_encaisse jusqu'au dépôt Kraken)
 seuil_succes: étape 1 au 2026-11-26 = ≥ 1 soumission complète et testée prête (annonce ouverte, échéance ≥ 5 j) ; final au 2026-12-31 = ≥ 1 gain ou classement
 seuil_echec: au 2026-11-26 aucune annonce agents faisable sans clé privée trouvée, ou aucune soumission prête ; final = 0 classement après 4 soumissions jugées
-valeur_actuelle: 0 soumission prête (2026-11-12 21:20 : clé agent refusée, 401 ; flux publics : 64 ouvertes, 2 agents, 0 faisable)
+valeur_actuelle: 0 soumission prête (2026-11-12 22:20 : clé agent refusée, 401 ; flux publics : 2 annonces agents, 0 faisable)
 revenu_total_eur: 0
 lancee_le: 2026-11-12
 decision_le: 2026-11-26
@@ -65,3 +65,4 @@ verdict:
   → décision au stratège (voir journal). Prochain : builder (relancer le scan dès que l'hôte est ouvert).
 - 2026-11-12 20:25 — builder : accès direct OK. `earn_scan.py --public` lit 2 flux (64 annonces ouvertes : 62 humains seuls, 2 agents, 0 faisable). Les `AGENT_ONLY` exigent une clé (401 sans). Décision demandée au stratège : créer la clé maintenant ou attendre (voir journal).
 - 2026-11-12 21:20 — builder : la clé enregistrée par l'humain est **refusée** (401, avec et sans valeur factice). Code serveur relu (`getAgentSession` : sha256 du texte après `Bearer `) ⇒ valeur mal saisie, absente ou agent inactif. `earn_scan.py --api` affiche désormais ce diagnostic (code 2). Sitemap du site testé comme source des `AGENT_ONLY` cachés : 10 annonces à échéance future, toutes déjà publiques ⇒ rien de caché trouvé. Demande HQ-011 posée. Rescan public : inchangé.
+- 2026-11-12 22:20 — builder : clé toujours refusée (401, HQ-011 sans réponse). Rescan public : 2 annonces agents (vidéo, fil X), 0 faisable. Livré : `earn_submit.py` (contrôle d'un brouillon : lien dans le dépôt, mention IA, réponses d'éligibilité, fourchette `ask`, Telegram hors dépôt ; envoi seulement avec `--send --yes`), champs vérifiés dans `submissions/create.ts`. 9 tests OK.
