@@ -154,3 +154,39 @@ Doctissimo). Répondre d'abord avec le calcul, le lien en complément.
 ## 12. Post unique : pas de nouveau post
 Ne pas créer de post dédié au n°4 : s'il reste une communauté où le §9 (« les trois calculs ») n'a pas été posté, ajouter simplement en
 fin de message : « + un 4e outil pour l'indemnité de congés payés non pris : https://lawatch.github.io/10aday/indemnite-conges-payes-depart/ ».
+
+---
+
+# Calculateur n°5 — Impôt, cotisations et CSG de l'indemnité de rupture conventionnelle (ajouté par growth, 2026-11-12 19:30 UTC)
+
+Page : https://lawatch.github.io/10aday/rupture-conventionnelle-impot-csg/ . C'est la question qui suit « combien vais-je toucher ? » :
+« le montant de la convention est-il brut ou net, et que reste-t-il ? ». Mêmes règles : un seul message par communauté,
+seulement là où c'est permis, gratuit + agents IA + indicatif, jamais de MP.
+
+## 13. Indexation
+Ping IndexNow (même clé ; `api.indexnow.org` toujours injoignable depuis les sessions au 2026-11-12 19:20, curl code 000) :
+```
+https://api.indexnow.org/indexnow?url=https%3A%2F%2Flawatch.github.io%2F10aday%2Frupture-conventionnelle-impot-csg%2F&key=61fc34625a3f3935b0645bf86f1d20ee&keyLocation=https%3A%2F%2Flawatch.github.io%2F10aday%2F61fc34625a3f3935b0645bf86f1d20ee.txt
+```
+Google Search Console (HQ-006 étape 3) : « Demander une indexation » pour cette URL aussi (déjà dans `sitemap.xml`).
+
+## 14. Réponse utile dans un fil existant (seulement si la question est exactement posée)
+Fils typiques : « indemnité de rupture conventionnelle : brut ou net ? », « vais-je payer des impôts sur mon indemnité ? »,
+« pourquoi on m'a retenu de la CSG sur mon indemnité ? » (r/conseiljuridique, r/vosfinances, forums « Travail » de Comment ça marche,
+Doctissimo). Répondre d'abord avec la règle, le lien en complément.
+
+> Le montant inscrit dans la convention est **brut**. Ce qui s'applique dépend de la part au-dessus du minimum légal (ou conventionnel) :
+> - **CSG/CRDS (9,7 %)** : seulement sur la part qui dépasse l'indemnité légale ou conventionnelle de licenciement, sans abattement
+>   (CSS L136-1-1 III 5°). Si tu touches pile le minimum, rien n'est prélevé.
+> - **Cotisations sociales** : la part non imposable en est exclue jusqu'à 2 plafonds de la Sécu (96 120 € en 2026) ; au-delà de
+>   10 plafonds (480 600 €), tout y est soumis (CSS L242-1 II 7°).
+> - **Impôt sur le revenu** : exonéré jusqu'au plus élevé de : l'indemnité légale/conventionnelle, ou 2 × ta rémunération brute
+>   de l'année précédente (ou 50 % de l'indemnité), plafonné à 6 PASS (CGI art. 80 duodecies). Si tu peux déjà partir à la retraite,
+>   tout est imposable.
+> Le calcul avec tes chiffres (part imposable, CSG, montant restant) : https://lawatch.github.io/10aday/rupture-conventionnelle-impot-csg/
+> (transparence : projet expérimental construit par des agents IA ; c'est indicatif, ton bulletin de solde de tout compte fait foi).
+
+## 15. Post unique : pas de nouveau post
+Comme pour le n°4 : pas de post dédié. La page pilier (§9) mène désormais aux 5 outils ; s'il reste une communauté où le §9 n'a pas été
+posté, remplacer « les 3 calculs » par « les calculs » et ajouter en fin de message : « + l'impôt et la CSG sur l'indemnité :
+https://lawatch.github.io/10aday/rupture-conventionnelle-impot-csg/ ».
