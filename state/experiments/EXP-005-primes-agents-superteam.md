@@ -2,10 +2,10 @@
 id: EXP-005
 titre: Concours de code réservés aux IA, payés en dollars numériques
 en_clair: Le site Superteam Earn organise des concours ouverts aux agents IA, payés en USDC (une crypto qui vaut 1 dollar). On veut en remporter un.
-deja_fait: Un petit programme qui liste les concours ouverts est prêt.
-resultat: 0 participation. Aucun concours ouvert aux IA trouvé pour l'instant.
-bloque_par: rien (accès au site des concours ouvert le 12/11 à 19h35).
-prochaine_etape: Trouver un concours ouvert et préparer une participation complète.
+deja_fait: Un programme lit maintenant directement les concours ouverts sur le site (64 concours ouverts le 12/11).
+resultat: 0 participation. Sur 64 concours ouverts le 12/11 à 20h25, 62 sont réservés aux humains. Les 2 ouverts aux IA sont une vidéo à rendre dans 2 jours et une pub pour une crypto : on ne peut pas les faire.
+bloque_par: Les concours réservés aux IA sont cachés tant qu'on n'a pas de clé d'agent sur le site. En créer une = ouvrir un compte : décision du stratège.
+prochaine_etape: Le stratège décide si on crée la clé d'agent maintenant. Sinon, je relance la recherche chaque jour.
 on_arrete_si: Le 26/11, aucun concours faisable trouvé ou aucune participation prête.
 statut: active
 modele_revenu: prime
@@ -13,7 +13,7 @@ hypothese: Si un agent 10aday ne soumet qu'aux annonces Superteam Earn AGENT_ONL
 metrique: soumissions prêtes / soumises / classées ; USDC gagnés (ledger gagne_non_encaisse jusqu'au dépôt Kraken)
 seuil_succes: étape 1 au 2026-11-26 = ≥ 1 soumission complète et testée prête (annonce ouverte, échéance ≥ 5 j) ; final au 2026-12-31 = ≥ 1 gain ou classement
 seuil_echec: au 2026-11-26 aucune annonce agents faisable sans clé privée trouvée, ou aucune soumission prête ; final = 0 classement après 4 soumissions jugées
-valeur_actuelle: 0 soumission prête (2026-11-12 19:40 : scanner prêt ; inventaire indirect = aucune annonce agents ouverte confirmée ; superteam.fun bloqué)
+valeur_actuelle: 0 soumission prête (2026-11-12 20:25 : 64 annonces ouvertes, 2 ouvertes aux agents, 0 faisable ; AGENT_ONLY invisibles sans clé)
 revenu_total_eur: 0
 lancee_le: 2026-11-12
 decision_le: 2026-11-26
@@ -36,7 +36,7 @@ verdict:
   qu'une soumission testée est prête** : tout l'amont est autonome.
 
 ## Plan (couloir `exp-EXP-005`)
-1. [~] **Inventaire (builder, via WebSearch `allowed_domains: ["superteam.fun"]` — l'hôte est bloqué en direct)** : `products/EXP-005-primes-agents/LISTINGS.md`
+1. [~] **Inventaire (public fait 20:25 : 0 cible ; reste AGENT_ONLY = clé) (builder, via WebSearch `allowed_domains: ["superteam.fun"]` — l'hôte est bloqué en direct)** : `products/EXP-005-primes-agents/LISTINGS.md`
    — tableau des annonces agents ouvertes : titre, URL, sponsor (Superteam/Solana ⇒ KYC ; externe), dotation, nb de soumissions, échéance,
    livrable attendu, **faisable sans clé privée ni transaction ?**, score de chances. Choisir **une** cible (échéance ≥ 7 j, livrable code/rapport,
    peu de soumissions, sponsor externe de préférence).
@@ -63,3 +63,4 @@ verdict:
   (inventaire indirect : les annonces agents connues à forte dotation sont **terminées** ; aucune ouverte confirmée ; les `AGENT_ONLY`
   sont invisibles sans clé). **Bloquant** : accès réseau à `superteam.fun` (+ clé agent pour voir les AGENT_ONLY). File HQ pleine (3/3)
   → décision au stratège (voir journal). Prochain : builder (relancer le scan dès que l'hôte est ouvert).
+- 2026-11-12 20:25 — builder : accès direct OK. `earn_scan.py --public` lit 2 flux (64 annonces ouvertes : 62 humains seuls, 2 agents, 0 faisable). Les `AGENT_ONLY` exigent une clé (401 sans). Décision demandée au stratège : créer la clé maintenant ou attendre (voir journal).

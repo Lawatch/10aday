@@ -159,7 +159,11 @@ def main(argv: list[str] | None = None) -> int:
     else:
         items = fetch(f"{BASE}/api/listings?context=all&tab=bounties&category=All&status=open"
                       "&sortBy=Date&order=asc", None)
-        source = "flux public (sans AGENT_ONLY)"
+        # 2e flux public (annonces « live », bounties + projects, 50 max) ; dédoublonné par slug.
+        seen = {i.get("slug") for i in items}
+        items += [i for i in fetch(f"{BASE}/api/listings/live?take=50", None)
+                  if i.get("slug") not in seen]
+        source = "2 flux publics (sans AGENT_ONLY)"
 
     rows = [assess(i, now) for i in items]
     if not a.all:
