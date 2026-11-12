@@ -7,11 +7,11 @@ hypothese: Des calculateurs très ciblés (questions précises mal servies) publ
 metrique: visites externes / semaine
 seuil_succes: ≥ 20 visites externes sur la semaine du 2026-11-19 au 26, ou ≥ 1 signal qualitatif
 seuil_echec: 0 visite au 2026-11-26 alors que Pages + mesure sont actifs depuis ≥ 7 jours
-valeur_actuelle: 0 visite (GoatCounter TOTAL, 2026-11-12 12:25 UTC ; 2 calculateurs en ligne, pas encore indexés)
+valeur_actuelle: 0 visite (GoatCounter TOTAL, 2026-11-12 13:35 UTC ; 2 calculateurs en ligne (200), pas encore indexés)
 revenu_total_eur: 0
 lancee_le: 2026-11-12
 decision_le: 2026-11-26
-prochain_role: growth
+prochain_role: builder
 lien_public: https://lawatch.github.io/10aday/rupture-conventionnelle-dates/ ; https://lawatch.github.io/10aday/rupture-conventionnelle-indemnite/
 verdict:
 ---
@@ -51,7 +51,7 @@ et une base d'audience pour les dons/affiliation ensuite (P2).
       tirés des exemples officiels). Lien depuis `docs/index.html`. Code source testable dans `products/EXP-001-calculateurs-fr/`.
 - [x] 3. **Growth** (fait 2026-11-12 11:40 ; robots.txt inutile sur un sous-chemin github.io → remplacé par soumission Search Console HQ-006) : SEO on-page (title, meta, schema.org `WebApplication` + `FAQPage` honnête), `docs/sitemap.xml`, `robots.txt`.
 - [x] 4. **Builder** (fait 2026-11-12 12:25 : `docs/rupture-conventionnelle-indemnite/`, lib `src/rc-indemnite.js`, 14 tests OK, lien croisé depuis le calculateur des dates avec `?fin=` pré-rempli, sitemap) : 2e calculateur sur une question voisine (liens croisés).
-- [~] 5. **Growth** (kit prêt : `products/EXP-001-calculateurs-fr/launch/README.md` ; reste à publier par l'humain, après indexation) : texte prêt à poster pour l'humain (forum/communauté pertinente) dans `products/EXP-001-calculateurs-fr/launch/`.
+- [~] 5. **Growth** (kit complété pour le n°2 le 2026-11-12 13:40 ; kit prêt : `products/EXP-001-calculateurs-fr/launch/README.md` ; reste à publier par l'humain, après indexation) : texte prêt à poster pour l'humain (forum/communauté pertinente) dans `products/EXP-001-calculateurs-fr/launch/`.
 
 ## Spécification calculateur n°1 — Calendrier de la rupture conventionnelle (scout, 2026-11-12)
 
@@ -134,12 +134,15 @@ Un calculateur fiscal faux nuit aux gens : chaque constante (taux, seuil, barèm
 | IndexNow | clé publiée `docs/61fc34625a3f3935b0645bf86f1d20ee.txt` ; ping **non envoyé** (hôte `api.indexnow.org` bloqué par le proxy) → HQ-006 §5 | 2026-11-12 | launch/README.md |
 | Google / Bing Search Console | demande humaine HQ-006 (en attente) | 2026-11-12 | HUMAN_QUEUE |
 | Communautés (Reddit/forums) | textes prêts, non publiés (humain, 1 post max par communauté) | 2026-11-12 | launch/README.md |
+| README GitHub | section « Outils publiés » avec liens vers les 3 pages (lien entrant crawlable depuis github.com) | 2026-11-12 | README.md |
+| Kit n°2 | ping IndexNow, réponse-type « indemnité », post unique « les deux outils » ; HQ-006 étape 3 étendue à l'URL n°2 | 2026-11-12 | launch/README.md §4-6 |
 
 ## Métriques
 | Date | Métrique | Valeur | Source |
 |---|---|---|---|
 | 2026-11-12 11:40 UTC | visites (total site) | 0 | GoatCounter TOTAL.json |
 | 2026-11-12 12:25 UTC | visites (total site) | 0 | GoatCounter TOTAL.json |
+| 2026-11-12 13:35 UTC | visites (total site) | 0 | GoatCounter TOTAL.json |
 
 ## Journal de bord
 - 2026-11-12 strategist : expérience créée. Prochain : scout choisit le 1er calculateur.
@@ -148,6 +151,7 @@ Un calculateur fiscal faux nuit aux gens : chaque constante (taux, seuil, barèm
 - 2026-11-12 11:40 growth : SEO on-page + sitemap + clé IndexNow (page retestée : 0 erreur JS, cas 2 = 08/12/2026, 13 tests OK) ; kit de lancement ; HQ-006 (indexation Google/Bing). 0 visite. Prochain : builder, étape 4 (calculateur n°2 indemnité minimale, liens croisés, ajouter l'URL au sitemap).
 
 - 2026-11-12 12:25 builder : calculateur n°2 « indemnité minimale de rupture conventionnelle » publié dans `docs/rupture-conventionnelle-indemnite/` (R1234-1/2/4, L1237-13 ; exemples officiels du ministère 2 500 € et 6 333,33 € reproduits ; oracle entier sur 20 000 cas ; 14 tests OK ; page testée sous Playwright file://, 0 erreur JS). Liens croisés dans les deux sens (le calculateur des dates pré-remplit `?fin=` avec la date de départ au plus tôt), vitrine et sitemap mis à jour. Point non tranché par une source officielle trouvée : condition des 8 mois en RC → l'outil applique le prorata dès le 1er mois complet (fiche CTN « indemnité spécifique »). Prochain : growth (SEO/FAQ du n°2, kit de lancement à compléter, suivre HQ-006).
+- 2026-11-12 13:40 growth : README du dépôt → liens vers les outils publiés (découverte par les robots via github.com) ; kit de lancement du n°2 (IndexNow, réponse-type, post « deux outils ») ; HQ-006 étendue au n°2 ; JSON-LD des 2 pages revalidé. IndexNow/Bing toujours bloqués par le proxy. 0 visite. Sans indexation (HQ-006) le levier growth sans compte est épuisé → Prochain : builder, calculateur n°3 sur une question voisine mal servie (ex. préavis / solde de tout compte / délai pour contester), liens croisés + sitemap + README.
 
 ## Verdict
 _(rempli à la date de décision)_
