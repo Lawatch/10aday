@@ -15,17 +15,20 @@ Vue d'ensemble chiffrée : **`DASHBOARD.md`** (généré automatiquement).
 |---|---|---|
 | Revenu cumulé | 0,00 € | 2026-11-12 |
 | Revenu moyen / jour (7 j) | 0,00 € | 2026-11-12 |
-| Expériences actives | 2 / 3 (EXP-001 affiliation, EXP-004 trafic-pub BTC) ; EXP-002 en pause ; EXP-003 tuée | 2026-11-12 |
+| Visites mesurées (GoatCounter TOTAL) | 0 | 2026-11-12 12:20 UTC |
+| Expériences actives | 2 / 3 (EXP-001 calculateurs FR, EXP-004 outils EN + AADS) ; EXP-002 en pause ; EXP-003 tuée | 2026-11-12 |
 | Actifs publiés | 1 (calendrier rupture conventionnelle) | 2026-11-12 |
 
 ## Focus courant
 Portefeuille (décisions communes le **2026-11-26**) — consignes humaines : **pas de vente**, encaissement futur **à une adresse crypto** (HQ-004).
 | Exp. | Modèle | Prochain incrément | Bloqué par |
 |---|---|---|---|
-| EXP-001 calculateurs FR | affiliation / trafic | growth : SEO on-page, sitemap | — (mesure OK) |
-| EXP-004 outils anglophones + pub A-ADS | trafic-pub (BTC) | scout : vérifier A-ADS + choisir l'outil n°1 | HQ-004 pour encaisser (pas pour construire) |
-| 3e slot | — | **libre** : à remplir au prochain passage stratège avec un dossier `research/` de l'exploration | — |
+| EXP-001 calculateurs FR | trafic → pub AADS (affiliation FR abandonnée : comptes + fiat) | builder : calculateur n°2 (indemnité minimale RC, liens croisés) | HQ-006 (indexation) pour le trafic |
+| EXP-004 outils anglophones + pub AADS | trafic-pub (BTC on-chain) | builder : `version-constraint-checker` (spec + oracles prêts) | HQ-004 pour encaisser (pas pour construire) |
+| 3e slot | — | **libre** : lancé seulement sur dossier `research/ID-XXX.md` ≥ 150 (voir consigne exploration) | idées |
 | EXP-002 tableur | vente | ⏸ pause (vente interdite pour l'instant) | décision humaine |
+
+**Goulot actuel : le trafic** (0 visite ; site non indexé). Levier n°1 = HQ-006 (humain, 10 min). Ensuite : nombre de pages utiles publiées.
 
 ## Message aux prochains agents
 - **Pages sert désormais `/docs`** (HQ-005 ✅) : URL publiques = `https://lawatch.github.io/10aday/<slug>/` (sans `/docs/`).
@@ -35,13 +38,32 @@ Portefeuille (décisions communes le **2026-11-26**) — consignes humaines : **
   `https://10aday.goatcounter.com/counter/<chemin encodé>.json` (ex. `%2Frupture-conventionnelle-dates%2F`, 404 = 0 visite) ; tableau de bord `https://10aday.goatcounter.com/`.
   Attention : nos propres vérifications (curl, Playwright) ne déclenchent pas le script, mais un navigateur d'agent oui → ne pas ouvrir les pages publiées dans un navigateur pour « tester » sans le noter.
 - Chaque couloir `exp-*` suit le plan de **sa** fiche ; `docs/index.html` : chacun ajoute **sa** ligne, rien d'autre.
-- Exploration : priorité absolue = **2 dossiers `research/ID-XXX.md`** pour le 3e slot, compatibles avec les consignes : **sans vente,
-  sans compte de l'humain, payables à une adresse crypto** (ex. régies/affiliations qui paient en crypto sans compte, concours ou primes
-  payés en crypto soumissibles sans compte, actif d'audience d'un autre type que des outils web : newsletter RSS, dataset, extension…).
-  Modèle de revenu ≠ affiliation FR et ≠ pub A-ADS si possible.
+- **Encaissement : tout converge sur AADS** (seule régie vérifiée payant à une adresse sans compte). Conséquences :
+  (1) **EXP-001** : l'affiliation FR exige des comptes au nom de l'humain et paie en fiat → incompatible avec les consignes ; sa monétisation
+  devient le même bloc AADS (couloir exp-EXP-001 : passer `modele_revenu: trafic-pub` dans l'en-tête et l'expliquer dans la fiche).
+  (2) **Seuil AADS = 0,001 BTC on-chain** (≈ plusieurs dizaines d'€) ; Lightning inutilisable (Kraken ne donne pas d'adresse Lightning statique,
+  seulement des factures à montant). Les gains AADS non retirés se notent au ledger comme `gagne_non_encaisse` (règle 6), pas comme encaissés.
+- **Exploration — commande pour le 3e slot** (remplace la précédente) : un dossier `research/ID-XXX.md` avec score ≥ **150** qui apporte
+  **au moins une** diversification réelle : (a) un **rail d'encaissement ≠ AADS** payable on-chain à une adresse statique sans compte
+  (régie, programme, concours, prime) — vérifié sur source primaire ; **ou** (b) un **canal de trafic ≠ moteurs de recherche**
+  (ex. intégration/listing dans un annuaire ou une liste curée qui accepte des soumissions par fichier, outil appelé par d'autres sites,
+  flux RSS/JSON réutilisé…) faisable depuis ce dépôt sans compte humain. Pas de « encore un outil web + AADS » : c'est déjà EXP-004.
 - Analyste : vérifier que les couloirs ont tourné (journal + commit), consolider les enseignements (dont : « Pages sert la racine »).
 
 ## Décisions du stratège
+### 2026-11-12 ~12:20 — bilan midi : concentrer sur le trafic, 3e slot toujours sous condition
+- **Bilan** : P0 ✅ ; P1 non atteint (0 visite, site non indexé). Ledger vide. EXP-001 : 1 calculateur publié + SEO + sitemap ; EXP-004 : régie
+  vérifiée, outil n°1 spécifié (builder au prochain tick).
+- **Portefeuille** : EXP-001 **continue** (→ calculateur n°2, cluster de liens) ; EXP-004 **continue** (→ build). Aucun signal attendu avant
+  l'indexation : pas de doublement de mise ni de mise à mort avant le 2026-11-26.
+- **3e slot : pas de lancement** (2e passage de suite, assumé). L'exploration n'a trouvé aucune idée ≥ 200 ; lancer « un autre outil + AADS »
+  doublerait EXP-004 sans diversifier. Critère de lancement explicite : dossier ≥ 150 apportant un **rail d'encaissement** ou un **canal de trafic** nouveau.
+- **Monétisation unifiée** : EXP-001 bascule de l'affiliation FR (incompatible : comptes humains + fiat) vers AADS, comme EXP-004.
+- **Correction d'une contradiction** (journal EXP-004 11:20 vs note exploration) : pas d'adresse Lightning Kraken statique → HQ-004 = **adresse BTC on-chain**.
+- **Humain** : 2 demandes ouvertes, priorité **HQ-006 (indexation, débloque P1)** > HQ-004 (adresse BTC). Aucune nouvelle demande.
+- **Cadence** : inchangée (4 couloirs max par tick ≤ `MAX_PARALLEL` 5).
+- **Méta** : `agents/scout.md` — ajout d'une grille « compatibilité encaissement » (adresse on-chain statique, pas de compte humain) pour éviter les pistes Lightning/compte.
+
 ### 2026-11-12 ~11:10 — mesure opérationnelle
 - HQ-003 ✅ : statistiques GoatCounter publiques et lisibles par les agents (TOTAL = 0). P1 se jouera sur le 1er visiteur externe.
 - Kraken : compte ouvert par l'humain, **pas encore d'adresse de dépôt** → HQ-004 reste la seule demande ouverte. Aucune donnée de compte n'est consignée dans le dépôt (public).

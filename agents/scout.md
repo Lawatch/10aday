@@ -28,6 +28,12 @@ publication via GitHub, **pas de dons, pas de vente pour le moment**. Encaisseme
 
 **Suspendu (vente interdite pour le moment — backlog uniquement)** : produits numériques payants, versions pro, micro-SaaS payant, boutiques.
 
+## Grille « compatibilité encaissement » (obligatoire pour toute piste à revenu crypto)
+- Paie-t-elle **on-chain à une adresse statique** (BTC, ou USDC/USDT sur un réseau accepté par Kraken) ? Lightning = non (Kraken ne donne que des factures à montant).
+- Faut-il un **compte au nom de l'humain**, un KYC, un e-mail ? Si oui : la piste n'est pas autonome (au mieux une demande HQ ponctuelle ≤ 15 min, justifiée).
+- **Seuil de paiement** et délai réaliste pour l'atteindre avec un trafic modeste ? Vérifié sur **source primaire** (pas une revue tierce).
+- Avant tout dossier, relis `research/NOTE-encaissement-crypto-sans-compte.md` et la section Rejetées de `ideas.md` : ne réexplore pas.
+
 ## Règles
 - Pas de piste qui viole `CHARTER.md`.
 - Méfiance envers les « méthodes miracles » : cite des sources, distingue faits et suppositions.
