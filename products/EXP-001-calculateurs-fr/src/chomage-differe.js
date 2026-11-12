@@ -20,6 +20,18 @@
  *    inscription tardive le 20/12 → indemnisation à partir du 27/12.
  *    (L'exemple « Nadia » de la fiche Unédic 2026 annonce le 20/11 pour une fin le 01/11 + 12 + 7 jours, soit un jour
  *    plus tôt que cette convention : la page signale l'écart et retient la date la plus prudente.)
+ *
+ * Durée maximale d'indemnisation après une rupture conventionnelle (fonction dureeMax) :
+ *  - Source officielle : Code du travail numérique (ministère du Travail), actualité du 10/07/2026
+ *    « Rupture conventionnelle et chômage : les nouvelles durées d'indemnisation à partir du 1er septembre 2026 »,
+ *    lue directement le 2026-11-12 (HTTP 200). Base : loi n° 2026-470 du 11 juin 2026 (transposition de l'avenant n° 3
+ *    du 25/02/2026) ; arrêté du 19/06/2026 agréant l'avenant n° 2 du 10/04/2026 à la convention du 15/11/2024.
+ *  - S'applique aux contrats rompus à compter du 01/09/2026. Avant : anciennes durées (« auparavant » dans la même page).
+ *  - Métropole : < 55 ans 15 mois (18 avant) ; 55-56 ans 20,5 mois (22,5 avant) ; 57 ans et + 20,5 mois (27 avant).
+ *  - Outre-mer hors Mayotte : < 55 ans 20 mois (24 avant) ; 55-56 ans 30 mois (inchangé) ; 57 ans et + 30 mois (36 avant).
+ *  - Seuils d'âge 55/57 ans en vigueur depuis le 01/04/2025 (convention du 15/11/2024) : avant cette date, non calculé.
+ *  - Ce sont des MAXIMUMS : la durée réelle dépend des jours travaillés sur la période de référence.
+ *    Les équivalents en jours (456 / 624 j) ne sont donnés que par des sources secondaires : non affichés.
  * Aucune dépendance. Navigateur (window.ChomageDiffere) et Node (module.exports).
  */
 (function (root) {
@@ -125,7 +137,48 @@
     };
   }
 
-  var api = { calc: calc, parseISO: parseISO, diviseur: diviseur, DIVISEURS: DIVISEURS,
+  // Durées maximales en mois. Source : Code du travail numérique, actualité du 10/07/2026 (voir en-tête), lue le 2026-11-12.
+  var REFORME_RC = '2026-09-01';
+  var DEBUT_SEUILS_55_57 = '2025-04-01';
+  var DUREES_MAX = {
+    metropole: { nouveau: [15, 20.5, 20.5], ancien: [18, 22.5, 27] },
+    outremer:  { nouveau: [20, 30, 30],     ancien: [24, 30, 36] }
+  };
+  var TRANCHES = ['moins de 55 ans', '55 ou 56 ans', '57 ans et plus'];
+
+  /*
+   * o.fin  : date de fin du contrat (AAAA-MM-JJ), obligatoire
+   * o.age  : âge à la date de fin du contrat (entier), obligatoire
+   * o.lieu : 'metropole' (défaut) | 'outremer' (DOM hors Mayotte) | 'mayotte' (non calculé)
+   * Retourne { calculable, raison?, mois, mois_ancien, regime: 'reforme-2026'|'avant-reforme', tranche, ... }
+   */
+  function dureeMax(o) {
+    var fin = parseISO(o.fin);
+    if (!fin) throw new Error('Indiquez la date de fin du contrat.');
+    var age = Number(o.age);
+    if (o.age === undefined || o.age === null || String(o.age).trim() === '' || !isFinite(age) || age < 16 || age > 80 || Math.floor(age) !== age)
+      throw new Error('Âge invalide (nombre entier, en années).');
+    var lieu = o.lieu || 'metropole';
+    if (lieu === 'mayotte') return { calculable: false, raison: 'mayotte' };
+    if (!DUREES_MAX[lieu]) throw new Error('Lieu inconnu.');
+    var f = iso(fin);
+    if (f < DEBUT_SEUILS_55_57) return { calculable: false, raison: 'avant-2025-04' };
+    var t = age < 55 ? 0 : (age < 57 ? 1 : 2);
+    var reforme = f >= REFORME_RC;
+    var d = DUREES_MAX[lieu];
+    return {
+      calculable: true,
+      regime: reforme ? 'reforme-2026' : 'avant-reforme',
+      lieu: lieu,
+      tranche: TRANCHES[t],
+      mois: reforme ? d.nouveau[t] : d.ancien[t],
+      mois_ancien: d.ancien[t],
+      mois_nouveau: d.nouveau[t],
+      reduction_mois: Math.round((d.ancien[t] - d.nouveau[t]) * 10) / 10
+    };
+  }
+
+  var api = { calc: calc, dureeMax: dureeMax, DUREES_MAX: DUREES_MAX, REFORME_RC: REFORME_RC, parseISO: parseISO, diviseur: diviseur, DIVISEURS: DIVISEURS,
     PLAFOND_SPECIFIQUE: PLAFOND_SPECIFIQUE, PLAFOND_CP: PLAFOND_CP, ATTENTE: ATTENTE };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else root.ChomageDiffere = api;

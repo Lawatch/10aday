@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Chômage après une rupture conventionnelle : à partir de quand êtes-vous indemnisé ? (différé 2026)</title>
-<meta name="description" content="Calculez la date de votre première journée indemnisée par France Travail après une rupture conventionnelle : différé spécifique (indemnité supra-légale ÷ 111,8 en 2026, 150 jours max), différé congés payés (30 jours max) et délai d'attente de 7 jours. Détail et sources Unédic.">
+<title>Chômage après une rupture conventionnelle : quand et combien de temps ? (règles 2026)</title>
+<meta name="description" content="Calculez la date de votre première journée indemnisée par France Travail après une rupture conventionnelle, et votre durée maximale de chômage (15 mois avant 55 ans depuis le 1er septembre 2026) : différé spécifique (indemnité supra-légale ÷ 111,8 en 2026, 150 jours max), différé congés payés (30 jours max) et délai d'attente de 7 jours. Détail et sources Unédic.">
 <link rel="canonical" href="https://lawatch.github.io/10aday/chomage-rupture-conventionnelle/">
 <script src="../integrer/integre.js"></script>
 <meta name="robots" content="index,follow">
@@ -29,7 +29,7 @@
       "isAccessibleForFree": true,
       "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"},
       "description": "Calcule le différé spécifique (indemnités supra-légales ÷ 111,8 en 2026, 150 jours maximum), le différé congés payés (ICCP ÷ salaire journalier de référence, 30 jours maximum) et le délai d'attente de 7 jours, puis la date de la première journée indemnisée par France Travail. Calcul indicatif fait dans le navigateur.",
-      "featureList": ["Différé spécifique 2026", "Différé congés payés", "Délai d'attente de 7 jours", "Inscription tardive", "Détail du calcul"]
+      "featureList": ["Durée maximale d'indemnisation après le 1er septembre 2026", "Différé spécifique 2026", "Différé congés payés", "Délai d'attente de 7 jours", "Inscription tardive", "Détail du calcul"]
     },
     {
       "@type": "BreadcrumbList",
@@ -45,6 +45,8 @@
           "acceptedAnswer": {"@type": "Answer", "text": "Au minimum 7 jours de délai d'attente après la fin du contrat. S'y ajoutent, avant ce délai, un différé congés payés (indemnité compensatrice de congés payés ÷ salaire journalier de référence, 30 jours maximum) et, si l'indemnité de rupture dépasse le minimum légal, un différé spécifique (part supra-légale ÷ 111,8 en 2026, 150 jours maximum). Ces délais se cumulent (Unédic, règlement d'assurance chômage)."}},
         {"@type": "Question", "name": "Comment se calcule le différé spécifique en 2026 ?",
           "acceptedAnswer": {"@type": "Answer", "text": "On divise la part de l'indemnité de rupture qui dépasse le minimum légal par 111,8 (diviseur 2026, il était de 109,6 en 2025) et on retient le nombre entier de jours. Exemple Unédic : 1 372 € ÷ 111,8 = 12 jours. Le différé est limité à 150 jours calendaires."}},
+        {"@type": "Question", "name": "Combien de temps dure le chômage après une rupture conventionnelle en 2026 ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Pour un contrat rompu à partir du 1er septembre 2026, la durée maximale d'indemnisation après une rupture conventionnelle est de 15 mois avant 55 ans (18 mois auparavant) et de 20,5 mois à partir de 55 ans, en métropole. Outre-mer hors Mayotte : 20 mois avant 55 ans, 30 mois à partir de 55 ans. C'est un maximum : la durée réelle dépend des jours travaillés avant la rupture (loi n° 2026-470 du 11 juin 2026, Code du travail numérique)."}},
         {"@type": "Question", "name": "Faut-il s'inscrire à France Travail tout de suite ?",
           "acceptedAnswer": {"@type": "Answer", "text": "Oui, de préférence avant la fin des différés : le délai d'attente de 7 jours démarre alors dès la fin des différés. Si vous vous inscrivez plus tard, il ne démarre qu'à la date d'inscription et vous perdez les jours écoulés."}},
         {"@type": "Question", "name": "Une indemnité de rupture au minimum légal entraîne-t-elle un différé ?",
@@ -102,10 +104,12 @@
 <body>
 <nav class="crumb"><a href="../">10aday</a> › Chômage après une rupture conventionnelle</nav>
 
-<h1>Rupture conventionnelle : à partir de quand toucherez-vous le chômage ?</h1>
+<h1>Rupture conventionnelle : à partir de quand et pendant combien de temps toucherez-vous le chômage ?</h1>
 <p>Après une rupture conventionnelle, France Travail ne paie pas dès le lendemain du départ : il applique un <strong>différé congés payés</strong>,
 un <strong>différé spécifique</strong> si votre indemnité dépasse le minimum légal, puis un <strong>délai d'attente de 7 jours</strong>.
 L'outil calcule la date de votre première journée indemnisée avec les règles 2026, et montre chaque étape.</p>
+<p class="info"><strong>Nouveau depuis le 1er septembre 2026 :</strong> après une rupture conventionnelle, le chômage dure au plus <strong>15 mois avant 55 ans</strong>
+(18 mois auparavant) et <strong>20,5 mois à partir de 55 ans</strong>, en métropole. Indiquez votre âge : l'outil affiche aussi votre durée maximale.</p>
 
 <form id="f" novalidate>
   <div class="grid">
@@ -118,6 +122,21 @@ L'outil calcule la date de votre première journée indemnisée avec les règles
       <label for="insc">Date d'inscription à France Travail <span class="muted">(facultatif)</span></label>
       <input type="date" id="insc">
       <p class="hint">Vide = inscription dès le lendemain de la fin du contrat.</p>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="field">
+      <label for="age">Votre âge à la fin du contrat <span class="muted">(facultatif)</span></label>
+      <input type="number" id="age" min="16" max="80" step="1" inputmode="numeric" placeholder="ex. 42">
+      <p class="hint">Sert à afficher la durée maximale de chômage.</p>
+    </div>
+    <div class="field">
+      <label for="lieu">Vous habitez</label>
+      <select id="lieu" style="font:inherit;padding:.4rem .5rem;border:1px solid #b8c0cc;border-radius:6px">
+        <option value="metropole">en métropole</option>
+        <option value="outremer">en outre-mer (hors Mayotte)</option>
+        <option value="mayotte">à Mayotte</option>
+      </select>
     </div>
   </div>
   <div class="grid">
@@ -166,6 +185,7 @@ L'outil calcule la date de votre première journée indemnisée avec les règles
   <p id="resume"></p>
   <ol class="timeline" id="timeline"></ol>
   <table id="detail"></table>
+  <div id="duree"></div>
   <div id="notes"></div>
   <div class="actions"><button type="button" class="secondary" id="share">Copier le lien de ce calcul</button></div>
   <p class="small muted" id="shared" hidden>Lien copié (il contient les montants saisis : partagez-le avec discernement).</p>
@@ -174,6 +194,21 @@ L'outil calcule la date de votre première journée indemnisée avec les règles
 <p class="note"><strong>Résultat indicatif.</strong> France Travail fixe seul la date dans votre notification de droits ; elle dépend aussi de conditions
 non traitées ici (droits ouverts, autres fins de contrat dans les 182 jours, rupture pour motif économique, Mayotte…). Il ne remplace pas votre conseiller.
 La date affichée est le <strong>premier jour indemnisé</strong> ; le versement intervient ensuite, en général au début du mois suivant.</p>
+
+<h2 id="duree-max">Combien de temps dure le chômage après une rupture conventionnelle ?</h2>
+<p>La loi du 11 juin 2026 a réduit la durée maximale d'indemnisation <strong>pour les ruptures conventionnelles seulement</strong>.
+Elle vaut pour les contrats qui se terminent <strong>à partir du 1er septembre 2026</strong>, quelle que soit la date de signature.
+Un contrat terminé avant garde les anciennes durées. Le montant de l'allocation, lui, ne change pas.</p>
+<table>
+  <tr><th>Âge à la fin du contrat</th><th>Métropole</th><th>Outre-mer (hors Mayotte)</th></tr>
+  <tr><td>Moins de 55 ans</td><td><strong>15 mois</strong> (18 avant)</td><td><strong>20 mois</strong> (24 avant)</td></tr>
+  <tr><td>55 ou 56 ans</td><td><strong>20,5 mois</strong> (22,5 avant)</td><td><strong>30 mois</strong> (inchangé)</td></tr>
+  <tr><td>57 ans et plus</td><td><strong>20,5 mois</strong> (27 avant)</td><td><strong>30 mois</strong> (36 avant)</td></tr>
+</table>
+<p class="small muted">Ce sont des <strong>maximums</strong>. Votre durée réelle dépend des jours travaillés avant la rupture : quelqu'un qui a travaillé 10 mois sur les 2 dernières années
+ne sera pas indemnisé 15 mois. Seule votre notification de droits France Travail fait foi.
+Source : Code du travail numérique, actualité du 10 juillet 2026 ; loi n° 2026-470 du 11 juin 2026.</p>
+<p class="small">Licenciement, fin de CDD ou démission légitime : ces nouvelles durées <strong>ne s'appliquent pas</strong>. Elles visent uniquement la rupture conventionnelle individuelle.</p>
 
 <h2>Le calcul, étape par étape</h2>
 <table>
@@ -219,13 +254,14 @@ La date affichée est le <strong>premier jour indemnisé</strong> ; le versement
 
 <h2>Sources</h2>
 <ul class="small">
+  <li>Code du travail numérique (ministère du Travail), <a href="https://code.travail.gouv.fr/actualite/rupture-conventionnelle-et-chomage-les-nouvelles-durees-dindemnisation-a-partir-du-1er-septembre-2026" rel="noopener">« Rupture conventionnelle et chômage : les nouvelles durées d'indemnisation à partir du 1er septembre 2026 »</a>, 10 juillet 2026 (loi n° 2026-470 du 11 juin 2026 ; durées par âge, métropole et outre-mer).</li>
   <li>Unédic, fiche <a href="https://www.unedic.org/la-reglementation/fiches-thematiques/differe-dindemnisation-specifique-en-cas-dindemnites-supra-legales" rel="noopener">« Différé d'indemnisation spécifique en cas d'indemnités supra-légales »</a> (diviseur 111,8 au 01/01/2026, plafond 150 jours, exemple 1 372 €).</li>
   <li>Unédic, fiche <a href="https://www.unedic.org/la-reglementation/fiches-thematiques/differe-conges-payes" rel="noopener">« Différé congés payés »</a> (plafond 30 jours, exemple du 30 novembre).</li>
   <li>Unédic, <a href="https://www.unedic.org/l-assurance-chomage-et-vous/demandeur-d-emploi-ou-salarie/mon-indemnisation/dans-quel-delai-vais-je-etre-indemnise-e" rel="noopener">« Dans quel délai vais-je être indemnisé(e) ? »</a> (cumul des délais, délai d'attente et inscription).</li>
   <li>Unédic, <a href="https://www.unedic.org/la-reglementation/conventions-d-assurance-chomage/texte-consolide-du-reglement-general-annexe-a-la-convention-du-15-novembre-2024-4" rel="noopener">texte consolidé du règlement général annexé à la convention du 15 novembre 2024</a>.</li>
   <li>France Travail, <a href="https://www.francetravail.fr/candidat/mes-droits-aux-aides-et-allocati/lessentiel-a-savoir-sur-lallocat/pendant-combien-de-temps-vais-je/quand-vais-je-commencer-a-recevo.html" rel="noopener">« Quand vais-je commencer à recevoir l'allocation chômage ? »</a>.</li>
 </ul>
-<p class="small muted">Règles vérifiées le 12 novembre 2026 (diviseur 2026). Le calcul est entièrement fait dans votre navigateur : aucun montant n'est envoyé.</p>
+<p class="small muted">Règles vérifiées le 12 novembre 2026 (diviseur 2026, durées maximales du 1er septembre 2026). Le calcul est entièrement fait dans votre navigateur : aucun montant n'est envoyé.</p>
 
 <footer>
   <p>Outil gratuit construit et maintenu par des <strong>agents d'intelligence artificielle</strong> (projet <a href="../">10aday</a>), testé contre les exemples de l'Unédic et un décompte jour par jour indépendant.
@@ -240,7 +276,7 @@ La date affichée est le <strong>premier jour indemnisé</strong> ; le versement
   'use strict';
   var C = window.ChomageDiffere;
   var $ = function (id) { return document.getElementById(id); };
-  var F = ['fin', 'insc', 'ind', 'leg', 'iccp', 'brut', 'sjr'];
+  var F = ['fin', 'insc', 'age', 'lieu', 'ind', 'leg', 'iccp', 'brut', 'sjr'];
   var JOURS = ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'];
   var MOIS = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
   function longDate(s) { var d = C.parseISO(s); return JOURS[d.getUTCDay()] + ' ' + d.getUTCDate() + (d.getUTCDate() === 1 ? 'er' : '') + ' ' + MOIS[d.getUTCMonth()] + ' ' + d.getUTCFullYear(); }
@@ -272,6 +308,23 @@ La date affichée est le <strong>premier jour indemnisé</strong> ; le versement
     h += '<tr><td>Différé spécifique</td><td>' + (r.supra_legale ? eur(r.supra_legale) + ' supra-légaux ÷ ' + fr(r.diviseur) + ' (diviseur ' + r.diviseur_annee + ')' + (r.differe_specifique_plafonne ? ' = ' + r.differe_specifique_brut + ', plafonné à 150' : '') : 'indemnité au minimum légal : pas de différé') + '</td><td class="num">' + r.differe_specifique + '</td></tr>';
     h += '<tr><td>Délai d’attente</td><td>' + (r.attente ? '7 jours' : 'déjà appliqué dans les 12 derniers mois') + '</td><td class="num">' + r.attente + '</td></tr>';
     $('detail').innerHTML = h;
+    var dh = '';
+    if (v.age) {
+      var dm;
+      try { dm = C.dureeMax({ fin: v.fin, age: v.age, lieu: v.lieu }); } catch (x) { return err(x.message); }
+      if (!dm.calculable) {
+        dh = '<p class="note">Durée maximale non calculée : ' + (dm.raison === 'mayotte' ? 'les règles de Mayotte sont différentes.' : 'contrat terminé avant le 1er avril 2025 (autres seuils d’âge).') + '</p>';
+      } else if (dm.regime === 'reforme-2026') {
+        dh = '<p class="info"><strong>Durée maximale de chômage : ' + fr(dm.mois) + ' mois</strong> (' + dm.tranche + ', ' + (dm.lieu === 'outremer' ? 'outre-mer' : 'métropole') + ').' +
+          (dm.reduction_mois ? ' C’est ' + fr(dm.reduction_mois) + ' mois de moins qu’avant le 1er septembre 2026 (' + fr(dm.mois_ancien) + ' mois), car votre contrat se termine après cette date.' : ' Inchangée par la réforme du 1er septembre 2026.') +
+          ' C’est un maximum : la durée réelle dépend de vos jours travaillés avant la rupture. <a href="#duree-max">Le détail</a>.</p>';
+      } else {
+        dh = '<p class="info"><strong>Durée maximale de chômage : ' + fr(dm.mois) + ' mois</strong> (' + dm.tranche + ', ' + (dm.lieu === 'outremer' ? 'outre-mer' : 'métropole') + ').' +
+          ' Votre contrat se termine avant le 1er septembre 2026 : les anciennes durées s’appliquent.' + (dm.reduction_mois ? ' Un départ à partir du 1er septembre 2026 donnerait ' + fr(dm.mois_nouveau) + ' mois au plus.' : '') +
+          ' C’est un maximum : la durée réelle dépend de vos jours travaillés avant la rupture.</p>';
+      }
+    }
+    $('duree').innerHTML = dh;
     var notes = '';
     if (!r.diviseur_exact) notes += '<p class="note">Le diviseur de l’année ' + r.fin.slice(0, 4) + ' n’est pas encore intégré : calcul fait avec celui de ' + r.diviseur_annee + ' (' + fr(r.diviseur) + '). Vérifiez la valeur publiée par l’Unédic.</p>';
     if (r.inscription_tardive) notes += '<p class="note">Inscrit(e) après la fin des différés : le délai d’attente ne démarre qu’à l’inscription. Une inscription dès le lendemain de la fin du contrat aurait avancé la date.</p>';

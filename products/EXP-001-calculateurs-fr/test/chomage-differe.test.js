@@ -79,6 +79,36 @@ t('oracle jour par jour', () => {
     assert.strictEqual(r.debut_indemnisation, d.toISOString().slice(0, 10), 'cas ' + i + ' ' + finS);
   }
 });
+// 14. Durée maximale, réforme du 01/09/2026 (Code du travail numérique, actualité du 10/07/2026).
+t('durée max métropole après réforme', () => {
+  assert.strictEqual(C.dureeMax({ fin: '2026-09-01', age: 40 }).mois, 15);
+  assert.strictEqual(C.dureeMax({ fin: '2026-12-31', age: 54 }).mois, 15);
+  assert.strictEqual(C.dureeMax({ fin: '2026-12-31', age: 55 }).mois, 20.5);
+  assert.strictEqual(C.dureeMax({ fin: '2026-12-31', age: 56 }).mois, 20.5);
+  const r = C.dureeMax({ fin: '2026-12-31', age: 57 });
+  assert.strictEqual(r.mois, 20.5); assert.strictEqual(r.mois_ancien, 27); assert.strictEqual(r.reduction_mois, 6.5);
+  assert.strictEqual(r.regime, 'reforme-2026');
+});
+t('durée max avant réforme (fin au 31/08/2026)', () => {
+  const r = C.dureeMax({ fin: '2026-08-31', age: 40 });
+  assert.strictEqual(r.regime, 'avant-reforme'); assert.strictEqual(r.mois, 18);
+  assert.strictEqual(C.dureeMax({ fin: '2025-04-01', age: 56 }).mois, 22.5);
+  assert.strictEqual(C.dureeMax({ fin: '2026-08-31', age: 60 }).mois, 27);
+});
+t('durée max outre-mer', () => {
+  assert.strictEqual(C.dureeMax({ fin: '2026-10-01', age: 30, lieu: 'outremer' }).mois, 20);
+  assert.strictEqual(C.dureeMax({ fin: '2026-10-01', age: 55, lieu: 'outremer' }).mois, 30);
+  assert.strictEqual(C.dureeMax({ fin: '2026-10-01', age: 55, lieu: 'outremer' }).reduction_mois, 0);
+  assert.strictEqual(C.dureeMax({ fin: '2026-10-01', age: 58, lieu: 'outremer' }).mois, 30);
+  assert.strictEqual(C.dureeMax({ fin: '2026-08-01', age: 58, lieu: 'outremer' }).mois, 36);
+});
+t('durée max non calculée / erreurs', () => {
+  assert.strictEqual(C.dureeMax({ fin: '2026-10-01', age: 30, lieu: 'mayotte' }).calculable, false);
+  assert.strictEqual(C.dureeMax({ fin: '2025-03-31', age: 30 }).raison, 'avant-2025-04');
+  assert.throws(() => C.dureeMax({ fin: '2026-10-01' }), /Âge/);
+  assert.throws(() => C.dureeMax({ fin: '2026-10-01', age: 40.5 }), /Âge/);
+  assert.throws(() => C.dureeMax({ age: 40 }), /fin du contrat/);
+});
 // 13. Copie publiée identique.
 t('copie publiée', () => assert.strictEqual(fs.readFileSync(PUB, 'utf8'), fs.readFileSync(SRC, 'utf8')));
 
