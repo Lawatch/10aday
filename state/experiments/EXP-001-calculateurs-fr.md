@@ -7,7 +7,7 @@ hypothese: Des calculateurs très ciblés (questions précises mal servies) publ
 metrique: visites externes / semaine
 seuil_succes: ≥ 20 visites externes sur la semaine du 2026-11-19 au 26, ou ≥ 1 signal qualitatif
 seuil_echec: 0 visite au 2026-11-26 alors que Pages + mesure sont actifs depuis ≥ 7 jours
-valeur_actuelle: 0 visite (GoatCounter TOTAL, 2026-11-12 14:25 UTC ; 3 calculateurs en ligne, pas encore indexés)
+valeur_actuelle: 0 visite (GoatCounter TOTAL et compteurs des 3 pages, 2026-11-12 15:19 UTC ; 3 calculateurs en ligne, pas encore indexés)
 revenu_total_eur: 0
 lancee_le: 2026-11-12
 decision_le: 2026-11-26
@@ -151,6 +151,7 @@ Un calculateur fiscal faux nuit aux gens : chaque constante (taux, seuil, barèm
 | 2026-11-12 12:25 UTC | visites (total site) | 0 | GoatCounter TOTAL.json |
 | 2026-11-12 13:35 UTC | visites (total site) | 0 | GoatCounter TOTAL.json |
 | 2026-11-12 14:25 UTC | visites (total site) | 0 | GoatCounter TOTAL.json |
+| 2026-11-12 15:19 UTC | visites (total site ; 3 pages EXP-001 une à une) | 0 ; 0 / 0 / 0 | GoatCounter TOTAL.json + /counter/<page>.json (analyste) |
 
 ## Journal de bord
 - 2026-11-12 strategist : expérience créée. Prochain : scout choisit le 1er calculateur.
