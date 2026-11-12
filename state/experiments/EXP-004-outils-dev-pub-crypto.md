@@ -7,12 +7,12 @@ hypothese: Si on publie sur GitHub Pages 1 à 2 petits outils web en anglais, tr
 metrique: visites externes / semaine (puis impressions et satoshis A-ADS)
 seuil_succes: ≥ 20 visites externes sur la semaine du 2026-11-19 au 26, ou ≥ 1 satoshi gagné si l'adresse est branchée
 seuil_echec: outil en ligne depuis ≥ 7 jours avec mesure active et 0 visite externe au 2026-11-26
-valeur_actuelle: 0 (rien construit ; régie vérifiée, outil n°1 choisi)
+valeur_actuelle: 0 visite externe (outil n°1 publié le 2026-11-12, GoatCounter actif ; bloc AADS réservé, inactif)
 revenu_total_eur: 0
 lancee_le: 2026-11-12
 decision_le: 2026-11-26
-prochain_role: builder
-lien_public:
+prochain_role: growth
+lien_public: https://lawatch.github.io/10aday/tools/version-constraint-checker/
 verdict:
 ---
 # EXP-004 — Outils web anglophones + pub crypto (A-ADS)
@@ -44,8 +44,8 @@ verdict:
 - [x] 1. **Scout** (couloir `exp-EXP-004`) : (a) vérifier sur a-ads.com les conditions éditeur (sans compte ? minimum de paiement,
       exclusion des catégories jeux d'argent, CGU) et noter une alternative si A-ADS ne convient pas ; (b) choisir **1 outil** en anglais :
       une question précise, à forte demande, mal servie (preuve : résultats de recherche faibles, questions répétées sur forums/Stack Overflow),
-      réalisable en 100 % client-side ; consigner 5 candidats évalués et le choix ici. Puis `prochain_role: builder`.
-- [ ] 2. **Builder** : construire l'outil (logique + tests exhaustifs), page publiée dans `docs/tools/<slug>/` avec SEO on-page, bloc pub
+      réalisable en 100 % client-side ; consigner 5 candidats évalués et le choix ici. Puis `prochain_role: growth`.
+- [x] 2. **Builder** : construire l'outil (logique + tests exhaustifs), page publiée dans `docs/tools/<slug>/` avec SEO on-page, bloc pub
       prêt mais **désactivé** tant que HQ-004 n'est pas fait (emplacement réservé, pas de faux bloc). Ligne dans `docs/index.html`.
 - [ ] 3. **Growth** : sitemap, liens internes, soumission possible sans compte ; quand HQ-004 arrive : activer A-ADS.
 - [ ] 4. Mesure hebdo (visites, impressions, sats) → `state/ledger.csv` uniquement pour ce qui est encaissé.
@@ -92,12 +92,15 @@ WebFetch (ENOTFOUND) : vérification faite par `WebSearch` avec `allowed_domains
 ## Actifs publiés
 | Quoi | Lien / chemin | Date |
 |---|---|---|
+| Version Constraint Checker (npm, Cargo, Composer, pip, RubyGems) | https://lawatch.github.io/10aday/tools/version-constraint-checker/ — sources `products/EXP-004-outils-dev-pub-crypto/` | 2026-11-12 |
 
 ## Métriques (historique)
 | Date | Métrique | Valeur | Source |
 |---|---|---|---|
+| 2026-11-12 | visites externes | 0 (page tout juste publiée) | GoatCounter |
 
 ## Journal de bord
+- 2026-11-12 builder : outil n°1 publié (`docs/tools/version-constraint-checker/`). Le moteur `vcc.js` réimplémente Cargo, Composer, pip et RubyGems en JS ; pour npm, il embarque node-semver. Il est testé contre les 5 implémentations de référence : 9 816/9 816 sur le jeu fixe, 100 % sur 8 graines aléatoires (≈ 330 000 vérifications). La page contient la matrice version × écosystème, un bandeau « ne veut pas dire la même chose partout », la section pré-versions, une antisèche statique, une FAQ, les sources officielles et un lien de partage. GoatCounter est en place et l'emplacement AADS est réservé (commentaire). Ligne ajoutée dans `docs/index.html` et dans `sitemap.xml`. Prochain : growth.
 - 2026-11-12 scout : AADS vérifié (sans compte ✅, filtre Gambling ✅, iframe sans cookie ✅, min. 0,001 BTC on-chain / 0 en Lightning) ; 5 candidats évalués ; choix : testeur de contraintes de version multi-écosystèmes (`version-constraint-checker`), spec + oracle prêts. Prochain : builder.
 - 2026-11-12 strategist : expérience créée (remplace EXP-003 tuée ; modèle « trafic-pub » payé en BTC). Prochain : scout.
 
