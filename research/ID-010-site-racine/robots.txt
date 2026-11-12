@@ -1,0 +1,5 @@
+# Site racine de lawatch.github.io — sert uniquement à déclarer le plan du site du projet 10aday.
+User-agent: *
+Allow: /
+
+Sitemap: https://lawatch.github.io/10aday/sitemap.xml
