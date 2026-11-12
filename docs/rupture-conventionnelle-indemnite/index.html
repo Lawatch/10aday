@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Indemnité de rupture conventionnelle : calcul du montant minimum légal</title>
+<meta name="description" content="Calculez le montant minimum de votre indemnité de rupture conventionnelle : ancienneté en mois complets, salaire de référence (12 ou 3 derniers mois, primes proratisées), 1/4 puis 1/3 de mois par année. Détail du calcul et sources officielles.">
+<link rel="canonical" href="https://lawatch.github.io/10aday/rupture-conventionnelle-indemnite/">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="10aday">
+<meta property="og:title" content="Rupture conventionnelle : quel montant minimum pour l'indemnité ?">
+<meta property="og:description" content="Le montant proposé par votre employeur atteint-il le minimum légal ? Calcul détaillé, gratuit, sans inscription, avec les articles du Code du travail.">
+<meta property="og:url" content="https://lawatch.github.io/10aday/rupture-conventionnelle-indemnite/">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Calculateur de l'indemnité minimale de rupture conventionnelle",
+      "url": "https://lawatch.github.io/10aday/rupture-conventionnelle-indemnite/",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Tout navigateur web",
+      "inLanguage": "fr-FR",
+      "isAccessibleForFree": true,
+      "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"},
+      "description": "Calcule le plancher légal de l'indemnité spécifique de rupture conventionnelle (CDI de droit privé) : ancienneté en mois complets, salaire de référence le plus favorable (12 ou 3 derniers mois), 1/4 de mois par année jusqu'à 10 ans puis 1/3. Compare au montant proposé. Calcul indicatif fait dans le navigateur.",
+      "featureList": ["Ancienneté en années et mois complets", "Salaire de référence 12 mois ou 3 mois", "Proratisation des primes annuelles", "Comparaison avec le montant proposé", "Détail du calcul"]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "10aday", "item": "https://lawatch.github.io/10aday/"},
+        {"@type": "ListItem", "position": 2, "name": "Rupture conventionnelle : indemnité minimale", "item": "https://lawatch.github.io/10aday/rupture-conventionnelle-indemnite/"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "Quel est le montant minimum de l'indemnité de rupture conventionnelle ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Au moins l'indemnité légale de licenciement : 1/4 de mois de salaire par année d'ancienneté jusqu'à 10 ans, puis 1/3 de mois par année au-delà, les années incomplètes étant comptées au prorata des mois complets (C. trav., art. L1237-13, R1234-1 et R1234-2). Si la convention collective prévoit une indemnité de licenciement plus élevée, ce montant conventionnel peut s'appliquer."}},
+        {"@type": "Question", "name": "Quel salaire retenir pour le calcul ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Le plus favorable de deux montants bruts : la moyenne mensuelle des 12 derniers mois (ou de tous les mois si l'ancienneté est inférieure à 12 mois), ou le tiers des 3 derniers mois, dans lequel une prime annuelle ou exceptionnelle n'est comptée qu'à due proportion (C. trav., art. R1234-4)."}},
+        {"@type": "Question", "name": "A-t-on droit à une indemnité avec moins d'un an d'ancienneté ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Oui : en rupture conventionnelle, l'indemnité est calculée au prorata du nombre de mois de présence (fiche du Code du travail numérique sur l'indemnité spécifique de rupture conventionnelle)."}},
+        {"@type": "Question", "name": "Peut-on négocier plus que le minimum ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Oui. Le minimum légal (ou conventionnel) est un plancher : le montant est librement négocié au-delà et doit figurer dans la convention de rupture."}}
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root{--fg:#1d2330;--muted:#5b6475;--line:#d9dee7;--accent:#1f5fbf;--accent-bg:#eef4fd;--warn:#8a5a00;--warn-bg:#fff6e0;--ok:#1b7a43}
+  *{box-sizing:border-box}
+  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;max-width:760px;margin:0 auto;padding:1.5rem 1rem 4rem;line-height:1.6;color:var(--fg)}
+  h1{font-size:1.6rem;line-height:1.25;margin:.5rem 0}
+  h2{font-size:1.25rem;margin-top:2.2rem;border-bottom:1px solid var(--line);padding-bottom:.3rem}
+  a{color:var(--accent)}
+  .muted{color:var(--muted)}
+  .small{font-size:.9rem}
+  nav.crumb{font-size:.9rem}
+  form{background:#f7f9fc;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem;margin:1.2rem 0}
+  .field{margin:.7rem 0}
+  label{font-weight:600;display:block}
+  input[type=date]{font:inherit;padding:.4rem .5rem;border:1px solid #b8c0cc;border-radius:6px;min-width:12rem}
+  .check label{display:inline;font-weight:normal}
+  .hint{font-size:.85rem;color:var(--muted);margin:.15rem 0 0}
+  .err{color:#b00020;font-weight:600}
+  ol.timeline{list-style:none;padding:0;margin:1rem 0;border-left:3px solid var(--accent);}
+  ol.timeline li{position:relative;padding:.2rem 0 1rem 1.2rem}
+  ol.timeline li::before{content:"";position:absolute;left:-9px;top:.55rem;width:15px;height:15px;border-radius:50%;background:#fff;border:3px solid var(--accent)}
+  ol.timeline li.final::before{background:var(--ok);border-color:var(--ok)}
+  .step{font-size:.85rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+  .date{font-size:1.2rem;font-weight:700}
+  li.final .date{color:var(--ok)}
+  .why{font-size:.92rem;color:var(--muted)}
+  .note{background:var(--warn-bg);color:var(--warn);border-radius:8px;padding:.6rem .8rem;font-size:.92rem;margin:.4rem 0}
+  .info{background:var(--accent-bg);border-radius:8px;padding:.6rem .8rem;font-size:.92rem}
+  button{font:inherit;padding:.45rem .9rem;border-radius:6px;border:1px solid var(--accent);background:var(--accent);color:#fff;cursor:pointer}
+  button.secondary{background:#fff;color:var(--accent)}
+  .actions{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.5rem}
+  details{border:1px solid var(--line);border-radius:8px;padding:.5rem .8rem;margin:.5rem 0}
+  summary{cursor:pointer;font-weight:600}
+  table{border-collapse:collapse;width:100%;font-size:.92rem}
+  th,td{border:1px solid var(--line);padding:.35rem .5rem;text-align:left;vertical-align:top}
+  footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1rem;font-size:.85rem;color:var(--muted)}
+</style>
+<style>
+  input[type=number]{font:inherit;padding:.4rem .5rem;border:1px solid #b8c0cc;border-radius:6px;width:12rem}
+  .big{font-size:1.9rem;font-weight:800;color:var(--ok);margin:.3rem 0}
+  .ko{color:#b00020}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:0 1.2rem}
+  @media (max-width:560px){.grid{grid-template-columns:1fr}}
+  td.num{text-align:right;white-space:nowrap}
+</style>
+</head>
+<body>
+<nav class="crumb"><a href="../">10aday</a> › Rupture conventionnelle : indemnité minimale</nav>
+
+<h1>Indemnité de rupture conventionnelle : calculez le montant minimum légal</h1>
+<p>Votre employeur vous propose un montant ? Vérifiez qu'il atteint au moins le <strong>plancher légal</strong> : l'outil compte votre ancienneté
+en mois complets, choisit le salaire de référence le plus favorable et applique le barème du Code du travail, avec le détail de chaque étape.</p>
+
+<form id="f" novalidate>
+  <div class="grid">
+    <div class="field">
+      <label for="entree">Date d'entrée dans l'entreprise</label>
+      <input type="date" id="entree" required>
+    </div>
+    <div class="field">
+      <label for="fin">Date de fin du contrat (date de rupture)</label>
+      <input type="date" id="fin" required>
+      <p class="hint">Pas encore fixée ? <a href="../rupture-conventionnelle-dates/">Calculez la date de départ au plus tôt</a>.</p>
+    </div>
+  </div>
+  <div class="field">
+    <label for="m12">Salaire brut mensuel moyen des 12 derniers mois (€)</label>
+    <input type="number" id="m12" min="0" step="0.01" inputmode="decimal" placeholder="ex. 2400" required>
+    <p class="hint">Total brut des 12 derniers mois (primes comprises) ÷ 12. Moins d'un an d'ancienneté : moyenne de tous les mois travaillés.</p>
+  </div>
+  <details>
+    <summary>Comparer avec les 3 derniers mois (souvent plus favorable après une augmentation)</summary>
+    <div class="grid">
+      <div class="field">
+        <label for="t3">Total brut des 3 derniers mois (€)</label>
+        <input type="number" id="t3" min="0" step="0.01" inputmode="decimal">
+      </div>
+      <div class="field">
+        <label for="p3">dont primes annuelles ou exceptionnelles (€)</label>
+        <input type="number" id="p3" min="0" step="0.01" inputmode="decimal">
+        <p class="hint">Ex. 13ᵉ mois versé en décembre : il n'est retenu que pour 3/12.</p>
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary>Options : absences non comptées, montant proposé</summary>
+    <div class="grid">
+      <div class="field">
+        <label for="ded">Mois d'absence non pris en compte</label>
+        <input type="number" id="ded" min="0" step="1" value="0">
+        <p class="hint">Ex. arrêt maladie non professionnelle, congé sans solde (voir plus bas). Les congés payés, la maternité, l'accident du travail comptent.</p>
+      </div>
+      <div class="field">
+        <label for="prop">Montant proposé par l'employeur (€)</label>
+        <input type="number" id="prop" min="0" step="0.01" inputmode="decimal">
+      </div>
+    </div>
+  </details>
+  <div class="actions"><button type="submit">Calculer l'indemnité minimale</button></div>
+  <p id="error" class="err" role="alert" hidden></p>
+</form>
+
+<section id="result" aria-live="polite" hidden>
+  <h2>Votre indemnité minimale</h2>
+  <p class="big" id="total"></p>
+  <div id="verdict"></div>
+  <table id="detail"></table>
+  <div id="notes"></div>
+  <div class="actions"><button type="button" class="secondary" id="share">Copier le lien de ce calcul</button></div>
+  <p class="small muted" id="shared" hidden>Lien copié (il contient les montants saisis : partagez-le avec discernement).</p>
+</section>
+
+<p class="note"><strong>Résultat indicatif, montant brut.</strong> C'est un plancher légal : votre <strong>convention collective</strong> peut prévoir plus,
+et le montant reste négociable. Il ne remplace pas l'avis d'un avocat, d'un conseiller du salarié ou de la DREETS. Le simulateur officiel est sur
+<a href="https://code.travail.gouv.fr/outils/indemnite-rupture-conventionnelle" rel="noopener">le Code du travail numérique</a>.</p>
+
+<h2>Le calcul, étape par étape</h2>
+<table>
+  <tr><th>Étape</th><th>Règle</th><th>Texte</th></tr>
+  <tr><td>Plancher</td><td>L'indemnité spécifique de rupture conventionnelle ne peut pas être inférieure à l'indemnité légale de licenciement.</td><td>C. trav., art. L1237-13</td></tr>
+  <tr><td>Ancienneté</td><td>De la date d'entrée à la date de fin du contrat. Les années incomplètes comptent au prorata des <strong>mois complets</strong>.</td><td>C. trav., art. R1234-1</td></tr>
+  <tr><td>Salaire de référence</td><td>Le plus favorable entre la moyenne des 12 derniers mois et le tiers des 3 derniers mois (primes annuelles ou exceptionnelles des 3 mois retenues à due proportion). Montants bruts.</td><td>C. trav., art. R1234-4</td></tr>
+  <tr><td>Barème</td><td>1/4 de mois de salaire par année jusqu'à 10 ans, puis 1/3 de mois par année au-delà de 10 ans.</td><td>C. trav., art. R1234-2</td></tr>
+  <tr><td>Moins d'un an</td><td>Indemnité au prorata des mois de présence.</td><td>Code du travail numérique</td></tr>
+</table>
+
+<h2>Exemples</h2>
+<ul>
+  <li>Salaire de référence 2 000 €, 5 ans : 2 000 ÷ 4 × 5 = <strong>2 500 €</strong> (exemple du ministère du Travail).</li>
+  <li>Salaire de référence 2 000 €, 12 ans : 2 000 ÷ 4 × 10 + 2 000 ÷ 3 × 2 = <strong>6 333,33 €</strong> (le ministère affiche 6 333,32 € en arrondissant 666,66 avant de multiplier).</li>
+  <li>Salaire de référence 2 000 €, 12 ans et 7 mois : 5 000 + 2 000 ÷ 3 × (2 + 7/12) = <strong>6 722,22 €</strong>.</li>
+  <li>Salaire de référence 2 400 €, 9 mois : 2 400 ÷ 4 × 9/12 = <strong>450 €</strong>.</li>
+</ul>
+
+<h2>Les erreurs fréquentes</h2>
+<ul>
+  <li><strong>Prendre le salaire net</strong> : le calcul se fait sur le brut.</li>
+  <li><strong>Oublier la formule des 3 derniers mois</strong> après une augmentation récente : elle peut donner un salaire de référence plus élevé.</li>
+  <li><strong>Compter un 13ᵉ mois en entier</strong> dans les 3 derniers mois : seule la part de 3/12 est retenue.</li>
+  <li><strong>Arrondir l'ancienneté à l'année</strong> : les mois complets au-delà des années pleines comptent aussi.</li>
+  <li><strong>Calculer l'ancienneté à la date de signature</strong> : elle s'apprécie à la date de fin du contrat, souvent plusieurs semaines plus tard.</li>
+</ul>
+
+<h2>Questions fréquentes</h2>
+<details><summary>Ma convention collective prévoit plus : lequel s'applique ?</summary>
+  <p>Si votre employeur entre dans le champ de l'accord national interprofessionnel de 2008 (cas de la plupart des entreprises adhérentes à une organisation
+  patronale signataire), l'indemnité de rupture conventionnelle ne peut pas être inférieure à l'indemnité <strong>conventionnelle</strong> de licenciement
+  lorsqu'elle est plus élevée. Vérifiez votre convention collective (son nom figure sur la fiche de paie) sur le Code du travail numérique.</p></details>
+<details><summary>Quelles absences ne comptent pas dans l'ancienneté ?</summary>
+  <p>En principe, les périodes de suspension du contrat ne comptent pas (arrêt maladie non professionnelle, congé sans solde, congé sabbatique…),
+  sauf disposition plus favorable. Comptent notamment : congés payés, congé maternité/paternité, arrêt pour accident du travail ou maladie professionnelle.
+  Le congé parental d'éducation compte pour moitié. Indiquez le nombre de mois à retirer dans les options.</p></details>
+<details><summary>L'indemnité est-elle imposable ou soumise à cotisations ?</summary>
+  <p>Le régime social et fiscal dépend du montant, de votre âge et de vos droits à la retraite, et ses seuils changent chaque année : l'outil ne le calcule pas.
+  Consultez la fiche « indemnité spécifique de rupture conventionnelle » sur service-public.fr.</p></details>
+<details><summary>Et si le montant proposé est inférieur au minimum ?</summary>
+  <p>La DREETS peut refuser d'homologuer une convention dont l'indemnité est inférieure au minimum. Vous pouvez aussi la négocier avant de signer,
+  ou vous rétracter dans les 15 jours calendaires qui suivent la signature (<a href="../rupture-conventionnelle-dates/">calculez la date limite</a>).</p></details>
+<details><summary>Ce calcul vaut-il pour un fonctionnaire ?</summary>
+  <p>Non. La rupture conventionnelle dans la fonction publique suit un barème propre (décret n° 2019-1596). Cet outil ne couvre que le CDI de droit privé.</p></details>
+
+<h2>Sources</h2>
+<ul class="small">
+  <li>Code du travail, art. <a href="https://code.travail.gouv.fr/code-du-travail/l1237-13" rel="noopener">L1237-13</a>,
+    <a href="https://code.travail.gouv.fr/code-du-travail/r1234-1" rel="noopener">R1234-1</a>,
+    <a href="https://code.travail.gouv.fr/code-du-travail/r1234-2" rel="noopener">R1234-2</a>,
+    <a href="https://code.travail.gouv.fr/code-du-travail/r1234-4" rel="noopener">R1234-4</a> (barème issu du <a href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000035638382" rel="noopener">décret n° 2017-1398 du 25 septembre 2017</a>).</li>
+  <li>Code du travail numérique, <a href="https://code.travail.gouv.fr/fiche-service-public/comment-calculer-lindemnite-specifique-de-rupture-conventionnelle" rel="noopener">« Comment calculer l'indemnité spécifique de rupture conventionnelle ? »</a>.</li>
+  <li>Ministère du Travail, <a href="https://travail-emploi.gouv.fr/lindemnite-legale-de-licenciement" rel="noopener">« L'indemnité légale de licenciement »</a> (exemples chiffrés reproduits ci-dessus).</li>
+  <li>Cour de cassation, chambre sociale, <a href="https://www.legifrance.gouv.fr/juri/id/JURITEXT000030686941/" rel="noopener">3 juin 2015, n° 13-26.799</a>.</li>
+</ul>
+<p class="small muted">Règles vérifiées le 12 novembre 2026. Le calcul est entièrement fait dans votre navigateur : aucun montant n'est envoyé.</p>
+
+<footer>
+  <p>Outil gratuit construit et maintenu par des <strong>agents d'intelligence artificielle</strong> (projet <a href="../">10aday</a>), testé contre les exemples officiels et un calcul de contrôle indépendant.
+  Voir aussi : <a href="../rupture-conventionnelle-dates/">calcul des dates de la rupture conventionnelle</a>.
+  Une erreur ? <a href="https://github.com/Lawatch/10aday/issues/new?title=Indemnit%C3%A9%20rupture%20conventionnelle%20%3A%20" rel="noopener">Signalez-la</a>.</p>
+</footer>
+
+<script src="rc-indemnite.js"></script>
+<script>
+(function () {
+  'use strict';
+  var I = window.RCIndemnite, eur = I.eur;
+  var $ = function (id) { return document.getElementById(id); };
+  var F = ['entree', 'fin', 'm12', 't3', 'p3', 'ded', 'prop'];
+  function plural(n, s) { return n + ' ' + s + (n > 1 ? 's' : ''); }
+  function fr(n) { return String(n).replace('.', ','); }
+  function err(msg) { $('error').textContent = msg; $('error').hidden = false; $('result').hidden = true; }
+
+  function compute(e) {
+    if (e) e.preventDefault();
+    $('error').hidden = true;
+    var v = {}; F.forEach(function (k) { v[k] = $(k).value; });
+    if (!v.entree || !v.fin) return err("Indiquez la date d'entrée et la date de fin du contrat.");
+    var r;
+    try {
+      r = I.calc({ entree: v.entree, fin: v.fin, moyenne12: v.m12, total3: v.t3, primes3: v.p3, moisDeduits: v.ded, propose: v.prop });
+    } catch (x) { return err(x.message); }
+    $('total').textContent = eur(r.minimum) + ' brut';
+    var verdict = '';
+    if (r.propose !== undefined) {
+      verdict = r.propose_suffisant
+        ? '<p class="info">Le montant proposé (' + eur(r.propose) + ') atteint le minimum légal (+' + eur(r.ecart) + '). Vérifiez aussi votre convention collective, qui peut prévoir plus.</p>'
+        : '<p class="note ko"><strong>Le montant proposé (' + eur(r.propose) + ') est inférieur de ' + eur(-r.ecart) + ' au minimum légal.</strong> La DREETS peut refuser l\u2019homologation ; vous pouvez le faire corriger avant de signer.</p>';
+    }
+    $('verdict').innerHTML = verdict;
+    var anc = plural(r.annees, 'an') + ' et ' + r.mois_restants + ' mois complets';
+    var h = '<tr><th>Élément</th><th>Calcul</th><th>Montant</th></tr>';
+    h += '<tr><td>Ancienneté retenue</td><td>' + r.mois_brut + ' mois complets' + (r.mois_deduits ? ' − ' + r.mois_deduits + ' mois d\u2019absence' : '') + ' = ' + anc + '</td><td class="num">' + fr((r.mois / 12).toFixed(4).replace(/0+$/, '').replace(/\.$/, '')) + ' an(s)</td></tr>';
+    h += '<tr><td>Moyenne des 12 derniers mois</td><td>montant saisi</td><td class="num">' + eur(r.moyenne12) + '</td></tr>';
+    if (r.moyenne3 !== null) h += '<tr><td>Tiers des 3 derniers mois</td><td>(total − primes + primes × 3/12) ÷ 3</td><td class="num">' + eur(r.moyenne3) + '</td></tr>';
+    h += '<tr><td><strong>Salaire de référence</strong></td><td>le plus favorable (formule ' + r.formule + ')</td><td class="num"><strong>' + eur(r.salaire_reference) + '</strong></td></tr>';
+    h += '<tr><td>Années 1 à 10</td><td>' + eur(r.salaire_reference) + ' × 1/4 × ' + (r.mois <= 120 ? fr(+(r.mois / 12).toFixed(4)) : '10') + '</td><td class="num">' + eur(r.part_jusqu_10_ans) + '</td></tr>';
+    if (r.mois > 120) h += '<tr><td>Au-delà de 10 ans</td><td>' + eur(r.salaire_reference) + ' × 1/3 × ' + fr(+((r.mois - 120) / 12).toFixed(4)) + '</td><td class="num">' + eur(r.part_au_dela_10_ans) + '</td></tr>';
+    h += '<tr><td><strong>Indemnité minimale</strong></td><td></td><td class="num"><strong>' + eur(r.minimum) + '</strong></td></tr>';
+    $('detail').innerHTML = h;
+    var notes = '';
+    if (r.mois === 0) notes += '<p class="note">Moins d\u2019un mois complet d\u2019ancienneté : le minimum légal est nul.</p>';
+    else if (r.moins_1_an) notes += '<p class="info">Moins d\u2019un an d\u2019ancienneté : indemnité calculée au prorata des mois de présence.</p>';
+    $('notes').innerHTML = notes;
+    $('result').hidden = false;
+    var q = new URLSearchParams();
+    F.forEach(function (k) { if (v[k] && v[k] !== '0') q.set(k, v[k]); });
+    history.replaceState(null, '', '?' + q.toString());
+  }
+
+  $('f').addEventListener('submit', compute);
+  F.forEach(function (id) { $(id).addEventListener('change', function () { if ($('entree').value && $('fin').value && $('m12').value) compute(); }); });
+  $('share').addEventListener('click', function () {
+    var done = function () { $('shared').hidden = false; };
+    if (navigator.clipboard) navigator.clipboard.writeText(location.href).then(done, done); else done();
+  });
+
+  var p = new URLSearchParams(location.search);
+  F.forEach(function (k) { if (p.get(k)) $(k).value = p.get(k); });
+  if (p.get('t3') || p.get('p3')) document.querySelectorAll('details')[0].open = true;
+  if (p.get('ded') || p.get('prop')) document.querySelectorAll('details')[1].open = true;
+  if ($('entree').value && $('fin').value && $('m12').value) compute();
+})();
+</script>
+<!-- Mesure d'audience : GoatCounter (sans cookie) -->
+<script data-goatcounter="https://10aday.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
