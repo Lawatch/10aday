@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Indemnité compensatrice de congés payés au départ : calcul (1/10e ou maintien de salaire)</title>
+<meta name="description" content="Calculez l'indemnité de congés payés non pris versée à la fin du contrat (démission, rupture conventionnelle, licenciement) : jours acquis (2,5 par mois, 2 par mois d'arrêt maladie depuis 2024), règle du 1/10e comparée au maintien de salaire, détail et sources officielles.">
+<link rel="canonical" href="https://lawatch.github.io/10aday/indemnite-conges-payes-depart/">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="10aday">
+<meta property="og:title" content="Congés payés non pris au départ : combien doit-on vous payer ?">
+<meta property="og:description" content="Jours acquis, arrêt maladie (loi de 2024), 1/10e ou maintien de salaire : le montant de votre indemnité compensatrice de congés payés, calcul détaillé. Gratuit, sans inscription.">
+<meta property="og:url" content="https://lawatch.github.io/10aday/indemnite-conges-payes-depart/">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Calculateur de l'indemnité compensatrice de congés payés au départ",
+      "url": "https://lawatch.github.io/10aday/indemnite-conges-payes-depart/",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Tout navigateur web",
+      "inLanguage": "fr-FR",
+      "isAccessibleForFree": true,
+      "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"},
+      "description": "Calcule les jours de congés acquis (2,5 jours ouvrables par mois de travail, 2 par mois d'arrêt maladie non professionnel dans la limite de 24), puis l'indemnité compensatrice de congés payés selon la règle la plus favorable entre le 1/10e de la rémunération brute de la période de référence et le maintien de salaire (C. trav. art. L3141-24 et L3141-28). Calcul indicatif fait dans le navigateur.",
+      "featureList": ["Règle du 1/10e", "Maintien de salaire", "Jours ouvrables ou ouvrés", "Acquisition pendant un arrêt maladie (loi du 22 avril 2024)", "Reliquat de l'année précédente", "Lien vers le différé chômage"]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "10aday", "item": "https://lawatch.github.io/10aday/"},
+        {"@type": "ListItem", "position": 2, "name": "Indemnité compensatrice de congés payés", "item": "https://lawatch.github.io/10aday/indemnite-conges-payes-depart/"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "Comment est calculée l'indemnité compensatrice de congés payés ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "On calcule deux montants pour les jours acquis non pris : le 1/10e de la rémunération brute de la période de référence, au prorata des jours restants, et le salaire qu'aurait perçu le salarié s'il avait travaillé ces jours (maintien de salaire). L'employeur verse le plus élevé (C. trav. art. L3141-24 et L3141-28)."}},
+        {"@type": "Question", "name": "Acquiert-on des congés payés pendant un arrêt maladie ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Oui depuis la loi du 22 avril 2024 : 2 jours ouvrables par mois d'arrêt pour maladie ou accident non professionnel, dans la limite de 24 jours par période de référence (art. L3141-5-1). Ces périodes comptent pour 80 % de la rémunération correspondante dans le calcul du 1/10e. Un arrêt pour accident du travail ou maladie professionnelle compte comme du travail effectif (2,5 jours par mois)."}},
+        {"@type": "Question", "name": "L'indemnité de congés payés est-elle due en cas de démission ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Oui : elle est due quel que soit le motif de la rupture (démission, rupture conventionnelle, licenciement, y compris pour faute grave), pour la fraction de congé non prise (art. L3141-28)."}},
+        {"@type": "Question", "name": "L'indemnité compensatrice de congés payés retarde-t-elle le chômage ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Oui : France Travail applique un différé congés payés égal à l'indemnité divisée par le salaire journalier de référence, 30 jours au plus, avant le délai d'attente de 7 jours."}}
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root{--fg:#1d2330;--muted:#5b6475;--line:#d9dee7;--accent:#1f5fbf;--accent-bg:#eef4fd;--warn:#8a5a00;--warn-bg:#fff6e0;--ok:#1b7a43}
+  *{box-sizing:border-box}
+  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;max-width:760px;margin:0 auto;padding:1.5rem 1rem 4rem;line-height:1.6;color:var(--fg)}
+  h1{font-size:1.6rem;line-height:1.25;margin:.5rem 0}
+  h2{font-size:1.25rem;margin-top:2.2rem;border-bottom:1px solid var(--line);padding-bottom:.3rem}
+  a{color:var(--accent)}
+  .muted{color:var(--muted)}
+  .small{font-size:.9rem}
+  nav.crumb{font-size:.9rem}
+  form{background:#f7f9fc;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem;margin:1.2rem 0}
+  .field{margin:.7rem 0}
+  label{font-weight:600;display:block}
+  input[type=date]{font:inherit;padding:.4rem .5rem;border:1px solid #b8c0cc;border-radius:6px;min-width:12rem}
+  .check label{display:inline;font-weight:normal}
+  .hint{font-size:.85rem;color:var(--muted);margin:.15rem 0 0}
+  .err{color:#b00020;font-weight:600}
+  ol.timeline{list-style:none;padding:0;margin:1rem 0;border-left:3px solid var(--accent);}
+  ol.timeline li{position:relative;padding:.2rem 0 1rem 1.2rem}
+  ol.timeline li::before{content:"";position:absolute;left:-9px;top:.55rem;width:15px;height:15px;border-radius:50%;background:#fff;border:3px solid var(--accent)}
+  ol.timeline li.final::before{background:var(--ok);border-color:var(--ok)}
+  .step{font-size:.85rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+  .date{font-size:1.2rem;font-weight:700}
+  li.final .date{color:var(--ok)}
+  .why{font-size:.92rem;color:var(--muted)}
+  .note{background:var(--warn-bg);color:var(--warn);border-radius:8px;padding:.6rem .8rem;font-size:.92rem;margin:.4rem 0}
+  .info{background:var(--accent-bg);border-radius:8px;padding:.6rem .8rem;font-size:.92rem}
+  button{font:inherit;padding:.45rem .9rem;border-radius:6px;border:1px solid var(--accent);background:var(--accent);color:#fff;cursor:pointer}
+  button.secondary{background:#fff;color:var(--accent)}
+  .actions{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.5rem}
+  details{border:1px solid var(--line);border-radius:8px;padding:.5rem .8rem;margin:.5rem 0}
+  summary{cursor:pointer;font-weight:600}
+  table{border-collapse:collapse;width:100%;font-size:.92rem}
+  th,td{border:1px solid var(--line);padding:.35rem .5rem;text-align:left;vertical-align:top}
+  footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1rem;font-size:.85rem;color:var(--muted)}
+</style>
+<style>
+  input[type=number]{font:inherit;padding:.4rem .5rem;border:1px solid #b8c0cc;border-radius:6px;width:12rem}
+  .big{font-size:1.9rem;font-weight:800;color:var(--ok);margin:.3rem 0}
+  .ko{color:#b00020}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:0 1.2rem}
+  @media (max-width:560px){.grid{grid-template-columns:1fr}}
+  td.num{text-align:right;white-space:nowrap}
+</style>
+<style>
+  select{font:inherit;padding:.4rem .5rem;border:1px solid #b8c0cc;border-radius:6px}
+  fieldset{border:1px solid var(--line);border-radius:8px;margin:.8rem 0;padding:.3rem .9rem .6rem}
+  legend{font-weight:700;padding:0 .3rem}
+  .acq{font-size:.9rem;margin:.2rem 0 0}
+</style>
+</head>
+<body>
+<nav class="crumb"><a href="../">10aday</a> › Indemnité compensatrice de congés payés</nav>
+
+<h1>Congés payés non pris au départ : calculez votre indemnité compensatrice</h1>
+<p>Quand le contrat se termine (démission, rupture conventionnelle, licenciement, fin de CDI), les congés acquis et non pris sont payés sur le solde de tout compte.
+L'employeur doit comparer <strong>deux méthodes</strong> — le <strong>1/10e</strong> de la rémunération de la période et le <strong>maintien de salaire</strong> — et verser la plus favorable.
+L'outil compte aussi les jours acquis pendant un <strong>arrêt maladie</strong> (règle en vigueur depuis avril 2024).</p>
+
+<form id="f" novalidate>
+  <div class="grid">
+    <div class="field">
+      <label for="sal">Salaire brut mensuel actuel (€)</label>
+      <input type="number" id="sal" min="0" step="0.01" inputmode="decimal" placeholder="ex. 2400" required>
+      <p class="hint">Salaire du mois précédant le départ, primes mensuelles comprises.</p>
+    </div>
+    <div class="field">
+      <label for="unite">Vos congés sont comptés en</label>
+      <select id="unite"><option value="ouvrables">jours ouvrables (30 par an)</option><option value="ouvres">jours ouvrés (25 par an)</option></select>
+      <p class="hint">Voir votre fiche de paie. À défaut : jours ouvrables (règle légale).</p>
+    </div>
+  </div>
+
+  <fieldset>
+    <legend>Période en cours (depuis le 1er juin)</legend>
+    <div class="grid">
+      <div class="field">
+        <label for="c_mt">Mois travaillés</label>
+        <input type="number" id="c_mt" min="0" max="12" step="0.5" inputmode="decimal" placeholder="ex. 5">
+        <p class="hint">Comptez comme travaillés les congés pris, arrêts pour accident du travail ou maladie professionnelle, congé maternité/paternité.</p>
+      </div>
+      <div class="field">
+        <label for="c_mm">Mois d'arrêt maladie non professionnel <span class="muted">(facultatif)</span></label>
+        <input type="number" id="c_mm" min="0" max="12" step="0.5" inputmode="decimal" placeholder="0">
+        <p class="hint">2 jours par mois, 24 jours au plus.</p>
+      </div>
+      <div class="field">
+        <label for="c_brut">Rémunération brute perçue sur ces mois travaillés (€)</label>
+        <input type="number" id="c_brut" min="0" step="0.01" inputmode="decimal" placeholder="ex. 12000">
+        <p class="hint">Salaires, primes, heures supplémentaires, congés payés pris (cumul brut de vos fiches de paie depuis juin). Hors mois d'arrêt maladie : l'outil les ajoute à 80 %.</p>
+      </div>
+      <div class="field">
+        <label for="c_pris">Jours de cette période déjà pris <span class="muted">(facultatif)</span></label>
+        <input type="number" id="c_pris" min="0" step="0.5" inputmode="decimal" placeholder="0">
+      </div>
+    </div>
+    <p class="acq" id="c_info"></p>
+    <details id="c_det">
+      <summary>Votre fiche de paie indique un autre nombre de jours acquis ?</summary>
+      <div class="field">
+        <label for="c_acq">Jours acquis sur la période en cours</label>
+        <input type="number" id="c_acq" min="0" step="0.01" inputmode="decimal">
+        <p class="hint">Remplace le calcul automatique (accord d'entreprise, congés d'ancienneté…).</p>
+      </div>
+    </details>
+  </fieldset>
+
+  <details id="p_box">
+    <summary>Il me reste aussi des congés de l'année précédente</summary>
+    <div class="grid">
+      <div class="field">
+        <label for="p_rest">Jours restants de l'année précédente</label>
+        <input type="number" id="p_rest" min="0" step="0.5" inputmode="decimal" placeholder="ex. 6">
+        <p class="hint">« Solde N-1 » sur la fiche de paie.</p>
+      </div>
+      <div class="field">
+        <label for="p_acq">Jours acquis cette année-là</label>
+        <input type="number" id="p_acq" min="0" step="0.5" inputmode="decimal" placeholder="30 (ou 25 en ouvrés)">
+      </div>
+      <div class="field">
+        <label for="p_brut">Rémunération brute de cette période (€)</label>
+        <input type="number" id="p_brut" min="0" step="0.01" inputmode="decimal" placeholder="ex. 28000">
+        <p class="hint">Du 1er juin au 31 mai précédents (y compris les congés payés pris).</p>
+      </div>
+    </div>
+  </details>
+
+  <details id="o_box">
+    <summary>Option : nombre de jours du mois pour le maintien de salaire</summary>
+    <div class="field">
+      <label for="jm">Jours ouvrables (ou ouvrés) du mois</label>
+      <input type="number" id="jm" min="1" max="31" step="0.01" inputmode="decimal">
+      <p class="hint">Vide = nombre moyen (26 jours ouvrables ou 21,67 jours ouvrés). L'employeur peut aussi retenir le nombre réel de jours du mois ou l'horaire réel.</p>
+    </div>
+  </details>
+  <div class="actions"><button type="submit">Calculer l'indemnité</button></div>
+  <p id="error" class="err" role="alert" hidden></p>
+</form>
+
+<section id="result" aria-live="polite" hidden>
+  <h2>Votre indemnité compensatrice de congés payés</h2>
+  <p class="big" id="total"></p>
+  <p id="resume"></p>
+  <table id="detail"></table>
+  <div id="notes"></div>
+  <p class="info" id="next"></p>
+  <div class="actions"><button type="button" class="secondary" id="share">Copier le lien de ce calcul</button></div>
+  <p class="small muted" id="shared" hidden>Lien copié (il contient les montants saisis : partagez-le avec discernement).</p>
+</section>
+
+<p class="note"><strong>Résultat indicatif, en brut</strong> (l'indemnité est soumise aux cotisations comme un salaire). Votre convention collective ou un accord d'entreprise peut prévoir
+plus de jours ou une autre période de référence ; les salariés des BTP, spectacle, dockers… (caisses de congés payés) ont des règles propres. Vérifiez sur votre solde de tout compte.</p>
+
+<h2>Le calcul, étape par étape</h2>
+<table>
+  <tr><th>Étape</th><th>Règle</th></tr>
+  <tr><td>1. Jours acquis</td><td>2,5 jours ouvrables par mois de travail effectif (30 par an au plus) ; 2 jours par mois d'arrêt maladie non professionnel, 24 jours au plus ; arrondi au jour supérieur. En jours ouvrés : 25 par an.</td></tr>
+  <tr><td>2. Règle du 1/10e</td><td>Rémunération brute de la période de référence ÷ 10 × (jours restants ÷ jours acquis). Les mois d'arrêt maladie comptent pour 80 % du salaire.</td></tr>
+  <tr><td>3. Maintien de salaire</td><td>Salaire mensuel × jours restants ÷ jours ouvrables (ou ouvrés) du mois.</td></tr>
+  <tr><td>4. Montant dû</td><td>Le plus élevé des deux, pour chaque période (année en cours et reliquat de l'année précédente).</td></tr>
+</table>
+
+<h2>Exemples</h2>
+<ul>
+  <li><strong>Exemple officiel</strong> (fiche service-public reprise par le Code du travail numérique) : 24 000 € bruts sur la période, soit 2 000 € par mois, 10 jours ouvrés à payer, mois de 21 jours ouvrés.
+    Maintien : 2 000 × 10 ÷ 21 = 952,38 €. 1/10e : 2 400 × 10/25 = <strong>960,00 €</strong>, montant retenu.</li>
+  <li><strong>Augmentation récente</strong> : 24 000 € sur la période mais 2 600 € par mois aujourd'hui, 13 jours ouvrables à payer sur 30.
+    1/10e : 2 400 × 13/30 = 1 040 €. Maintien : 2 600 × 13 ÷ 26 = <strong>1 300 €</strong>, montant retenu.</li>
+  <li><strong>Arrêt maladie</strong> : 6 mois travaillés (12 000 €) puis 6 mois d'arrêt, salaire 2 000 €. Jours acquis : 15 + 12 = 27.
+    Base du 1/10e : 12 000 + 80 % × 2 000 × 6 = 21 600 € → <strong>2 160 €</strong> pour 27 jours (maintien : 2 076,92 €).</li>
+</ul>
+
+<h2>Les erreurs fréquentes</h2>
+<ul>
+  <li><strong>Ne calculer qu'une méthode</strong> : l'employeur doit comparer le 1/10e et le maintien de salaire et verser le plus favorable.</li>
+  <li><strong>Oublier les congés acquis pendant un arrêt maladie</strong> : depuis la loi du 22 avril 2024, 2 jours par mois d'arrêt non professionnel sont acquis.</li>
+  <li><strong>Oublier les primes</strong> dans la base du 1/10e : heures supplémentaires, primes liées au travail et congés payés pris en font partie.</li>
+  <li><strong>Penser que la démission ou la faute grave fait perdre les congés</strong> : l'indemnité est due quel que soit le motif de rupture.</li>
+  <li><strong>Oublier l'effet sur le chômage</strong> : cette indemnité crée un différé d'indemnisation (jusqu'à 30 jours).</li>
+</ul>
+
+<h2>Questions fréquentes</h2>
+<details><summary>Où trouver mes jours restants ?</summary>
+  <p>Sur la fiche de paie (compteurs « congés N-1 » et « congés N » : acquis, pris, solde). Le solde N-1 correspond à la période de référence précédente, le solde N à celle en cours.</p></details>
+<details><summary>Quels éléments de salaire entrent dans le 1/10e ?</summary>
+  <p>Salaire de base, heures supplémentaires, primes liées au travail (ancienneté, assiduité, rendement…), indemnité de congés payés de l'année précédente.
+  En sont exclus en principe les primes annuelles qui rémunèrent à la fois les périodes de travail et de congés (13e mois…) et les remboursements de frais.</p></details>
+<details><summary>Et en CDD ou en intérim ?</summary>
+  <p>Les règles diffèrent (indemnité au moins égale à 10 % de la rémunération totale brute, versée en fin de contrat) : cet outil vise le CDI.</p></details>
+<details><summary>Quand toucherai-je le chômage ?</summary>
+  <p>L'indemnité de congés payés crée un différé congés payés, qui s'ajoute au différé spécifique et au délai d'attente :
+  <a href="../chomage-rupture-conventionnelle/">calculez la date de votre première journée indemnisée</a>.</p></details>
+
+<h2>Sources</h2>
+<ul class="small">
+  <li>Code du travail, art. <a href="https://code.travail.gouv.fr/code-du-travail/l3141-24" rel="noopener">L3141-24</a> (1/10e, maintien, maladie à 80 %, version du 24/04/2024),
+    <a href="https://code.travail.gouv.fr/code-du-travail/l3141-28" rel="noopener">L3141-28</a> (indemnité compensatrice à la rupture),
+    <a href="https://code.travail.gouv.fr/code-du-travail/l3141-3" rel="noopener">L3141-3</a> (2,5 jours par mois, 30 au plus),
+    <a href="https://code.travail.gouv.fr/code-du-travail/l3141-5" rel="noopener">L3141-5</a> et <a href="https://code.travail.gouv.fr/code-du-travail/l3141-5-1" rel="noopener">L3141-5-1</a> (périodes assimilées, arrêt maladie : 2 jours par mois, 24 au plus),
+    <a href="https://code.travail.gouv.fr/code-du-travail/l3141-7" rel="noopener">L3141-7</a> (arrondi), <a href="https://code.travail.gouv.fr/code-du-travail/r3141-4" rel="noopener">R3141-4</a> (période du 1er juin).</li>
+  <li>Code du travail numérique, fiche <a href="https://code.travail.gouv.fr/fiche-service-public/comment-est-calculee-lindemnite-de-conges-payes-du-salarie" rel="noopener">« Comment est calculée l'indemnité de congés payés du salarié ? »</a> (service-public, mise à jour du 06/02/2026 : méthodes de calcul du maintien, exemple 952,38 € / 960,00 €).</li>
+  <li>Code du travail numérique, fiche <a href="https://code.travail.gouv.fr/fiche-service-public/indemnite-compensatrice-de-conges-payes" rel="noopener">« Indemnité compensatrice de congés payés »</a> (mise à jour du 23/01/2026).</li>
+</ul>
+<p class="small muted">Règles vérifiées le 12 novembre 2026. Le calcul est entièrement fait dans votre navigateur : aucun montant n'est envoyé.</p>
+
+<footer>
+  <p>Outil gratuit construit et maintenu par des <strong>agents d'intelligence artificielle</strong> (projet <a href="../">10aday</a>), testé contre l'exemple officiel et 5 000 cas aléatoires.
+  Voir aussi : <a href="../rupture-conventionnelle/">rupture conventionnelle : les calculs dans l'ordre</a> · <a href="../rupture-conventionnelle-indemnite/">indemnité minimale de rupture conventionnelle</a> · <a href="../chomage-rupture-conventionnelle/">date de début du chômage</a>.
+  Une erreur ? <a href="https://github.com/Lawatch/10aday/issues/new?title=Indemnit%C3%A9%20cong%C3%A9s%20pay%C3%A9s%20%3A%20" rel="noopener">Signalez-la</a>.</p>
+</footer>
+
+<script src="iccp.js"></script>
+<script>
+(function () {
+  'use strict';
+  var I = window.ICCP;
+  var $ = function (id) { return document.getElementById(id); };
+  var F = ['sal', 'unite', 'c_mt', 'c_mm', 'c_brut', 'c_pris', 'c_acq', 'p_rest', 'p_acq', 'p_brut', 'jm'];
+  function eur(x) { return x.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €'; }
+  function fr(x) { return (Math.round(x * 100) / 100).toLocaleString('fr-FR'); }
+  function n(s) { return Number(String(s).replace(/\s/g, '').replace(',', '.')); }
+  function jours(x) { return fr(x) + ' jour' + (x > 1 ? 's' : ''); }
+  function err(msg) { $('error').textContent = msg; $('error').hidden = false; $('result').hidden = true; }
+  var passthrough = {};
+
+  function acquisCourant(u) {
+    if ($('c_acq').value) return { jours: n($('c_acq').value), manuel: true };
+    var a = I.acquis({ unite: u, moisTravail: $('c_mt').value, moisMaladie: $('c_mm').value });
+    a.manuel = false; return a;
+  }
+  function infoAcquis() {
+    try {
+      var u = $('unite').value, a = acquisCourant(u);
+      if (a.manuel || (!$('c_mt').value && !$('c_mm').value)) { $('c_info').textContent = ''; return; }
+      $('c_info').innerHTML = 'Jours acquis sur la période en cours : <strong>' + jours(a.jours) + '</strong> ' + (u === 'ouvres' ? 'ouvrés' : 'ouvrables') +
+        ' (' + fr(a.travail) + ' au titre du travail' + (a.maladie ? ' + ' + fr(a.maladie) + ' au titre de l’arrêt maladie' : '') + (u === 'ouvres' ? ', converti en jours ouvrés' : '') + ', arrondi au jour supérieur).';
+    } catch (x) { $('c_info').textContent = ''; }
+  }
+
+  function compute(e) {
+    if (e) e.preventDefault();
+    $('error').hidden = true;
+    var v = {}; F.forEach(function (k) { v[k] = $(k).value; });
+    var u = v.unite, r, periodes = [], labels = [];
+    try {
+      if (v.c_mt || v.c_mm || v.c_acq) {
+        var a = acquisCourant(u);
+        var pris = v.c_pris ? n(v.c_pris) : 0;
+        if (pris > a.jours) throw new Error('Jours déjà pris (' + fr(pris) + ') supérieurs aux jours acquis (' + fr(a.jours) + ').');
+        periodes.push({ restants: a.jours - pris, acquis: a.jours, brut: v.c_brut, moisMaladie: v.c_mm });
+        labels.push('Période en cours');
+      }
+      if (v.p_rest) {
+        periodes.push({ restants: v.p_rest, acquis: v.p_acq || I.UNITES[u].an, brut: v.p_brut });
+        labels.push('Année précédente');
+      }
+      if (!periodes.length) throw new Error('Indiquez les mois travaillés depuis le 1er juin, ou des jours restants de l’année précédente.');
+      if (periodes.some(function (p) { return n(p.restants) > 0 && !String(p.brut || '').trim(); })) throw new Error('Indiquez la rémunération brute de chaque période (base du 1/10e).');
+      r = I.calc({ unite: u, salaire: v.sal, joursMois: v.jm, periodes: periodes });
+    } catch (x) { return err(x.message); }
+    var uj = u === 'ouvres' ? 'ouvrés' : 'ouvrables';
+    $('total').textContent = eur(r.total) + ' brut';
+    $('resume').innerHTML = 'Pour <strong>' + jours(r.restants) + ' ' + uj + '</strong> de congés non pris, soit l’équivalent de ' +
+      fr(r.restants / (u === 'ouvres' ? 5 : 6)) + ' semaine(s) de salaire.';
+    var h = '<tr><th>Période</th><th>Règle du 1/10e</th><th>Maintien de salaire</th><th>Retenu</th></tr>';
+    r.periodes.forEach(function (p, i) {
+      if (!p.restants) return;
+      var d = eur(p.base) + ' ÷ 10 × ' + fr(p.restants) + '/' + fr(p.acquis) + (p.maladie80 ? '<br><span class="muted small">base : ' + eur(p.brut) + ' + ' + eur(p.maladie80) + ' (arrêt maladie à 80 %)</span>' : '');
+      var m = eur(r.salaire) + ' × ' + fr(p.restants) + ' ÷ ' + fr(r.joursMois);
+      h += '<tr><td>' + labels[i] + '<br><span class="muted small">' + jours(p.restants) + ' restants sur ' + fr(p.acquis) + '</span></td><td>' + d + '<br><strong>= ' + eur(p.dixieme) + '</strong></td><td>' + m + '<br><strong>= ' + eur(p.maintien) + '</strong></td><td class="num"><strong>' + eur(p.montant) + '</strong><br><span class="small muted">' +
+        (p.methode === 'dixieme' ? '1/10e' : p.methode === 'maintien' ? 'maintien' : 'égalité') + '</span></td></tr>';
+    });
+    $('detail').innerHTML = h;
+    var notes = '';
+    if (r.joursMoisDefaut) notes += '<p class="small muted">Maintien calculé sur le nombre moyen de jours du mois (' + fr(r.joursMois) + '). Avec le nombre réel ou l’horaire réel, le montant peut varier légèrement.</p>';
+    if (r.periodes.some(function (p) { return p.methode === 'maintien'; })) notes += '<p class="info">Le maintien de salaire l’emporte : votre salaire actuel est supérieur à la moyenne de la période (augmentation, temps plein après un temps partiel…). Vérifiez que l’employeur ne s’est pas limité au 1/10e.</p>';
+    $('notes').innerHTML = notes;
+    var q3 = new URLSearchParams(passthrough);
+    q3.set('iccp', r.total.toFixed(2)); q3.set('brut', n(v.sal));
+    $('next').innerHTML = 'Cette indemnité décale le début du chômage (différé congés payés, 30 jours au plus) : <a href="../chomage-rupture-conventionnelle/?' + q3.toString() + '">calculez la date de votre première journée indemnisée</a> (montant pré-rempli).';
+    $('result').hidden = false;
+    var q = new URLSearchParams(passthrough);
+    F.forEach(function (k) { if (v[k] && !(k === 'unite' && v[k] === 'ouvrables')) q.set(k, v[k]); });
+    history.replaceState(null, '', '?' + q.toString());
+  }
+
+  $('f').addEventListener('submit', compute);
+  F.forEach(function (id) { $(id).addEventListener('change', function () { infoAcquis(); if ($('sal').value && $('result').hidden === false) compute(); }); });
+  $('share').addEventListener('click', function () {
+    var done = function () { $('shared').hidden = false; };
+    if (navigator.clipboard) navigator.clipboard.writeText(location.href).then(done, done); else done();
+  });
+
+  var p = new URLSearchParams(location.search);
+  ['fin', 'insc', 'ind', 'leg'].forEach(function (k) { if (p.get(k)) passthrough[k] = p.get(k); });
+  F.forEach(function (k) { if (p.get(k)) $(k).value = p.get(k); });
+  if (p.get('c_acq')) $('c_det').open = true;
+  if (p.get('p_rest')) $('p_box').open = true;
+  if (p.get('jm')) $('o_box').open = true;
+  infoAcquis();
+  if ($('sal').value && ($('c_mt').value || $('c_mm').value || $('c_acq').value || $('p_rest').value)) compute();
+})();
+</script>
+<!-- Mesure d'audience : GoatCounter (sans cookie) -->
+<script data-goatcounter="https://10aday.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
