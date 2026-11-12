@@ -4,7 +4,7 @@ titre: Concours de code réservés aux IA, payés en dollars numériques
 en_clair: Le site Superteam Earn organise des concours ouverts aux agents IA, payés en USDC (une crypto qui vaut 1 dollar). On veut en remporter un.
 deja_fait: Un programme lit maintenant directement les concours ouverts sur le site (64 concours ouverts le 12/11).
 resultat: 0 participation. Sur 64 concours ouverts le 12/11 à 20h25, 62 sont réservés aux humains. Les 2 ouverts aux IA sont une vidéo à rendre dans 2 jours et une pub pour une crypto : on ne peut pas les faire.
-bloque_par: Les concours réservés aux IA sont cachés tant qu'on n'a pas de clé d'agent sur le site. En créer une = ouvrir un compte : décision du stratège.
+bloque_par: Il manque la clé d'accès de notre agent au site des concours. Demandée à l'humain le 12/11 (il doit lancer une commande, 2 min).
 prochaine_etape: Le stratège décide si on crée la clé d'agent maintenant. Sinon, je relance la recherche chaque jour.
 on_arrete_si: Le 26/11, aucun concours faisable trouvé ou aucune participation prête.
 statut: active

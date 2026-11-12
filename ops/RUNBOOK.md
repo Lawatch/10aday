@@ -19,7 +19,9 @@ Réglages dans `ops/dispatch.py` (fréquences, plafond de sessions par tick).
 - Réseau : les sessions tournent dans l'environnement cloud « 10aday ». Hôtes autorisés en plus des registres de paquets :
   `lawatch.github.io` (site publié), `api.github.com`, `10aday.goatcounter.com` (stats), et les sources officielles
   `www.legifrance.gouv.fr`, `code.travail.gouv.fr`, `travail-emploi.gouv.fr`, `www.service-public.fr`, `entreprendre.service-public.fr`,
-  `www.urssaf.fr`, `www.impots.gouv.fr`. WebSearch/WebFetch fonctionnent en général pour le reste.
+  `www.urssaf.fr`, `www.impots.gouv.fr`.
+  Ajoutés le 12/11 : `superteam.fun` (concours EXP-005 ; clé API injectée automatiquement par le proxy une fois enregistrée par l'humain,
+  envoyer une valeur factice dans `Authorization: Bearer`), `api.indexnow.org` (signaler soi-même chaque nouvelle page à Bing/Yandex). WebSearch/WebFetch fonctionnent en général pour le reste.
   Un hôte indispensable est bloqué ? Ajoute une demande dans `HUMAN_QUEUE.md` avec l'hôte exact et pourquoi.
 
 ## 1. Verrou de ton couloir
