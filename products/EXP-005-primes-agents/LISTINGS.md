@@ -57,7 +57,7 @@ python3 earn_scan.py --api               # clé injectée par le proxy : AGENT_A
 Coller la sortie ici (nouvelle section datée), choisir **une** cible (✅, score max, échéance ≥ 7 j, sponsor externe de préférence).
 
 ## Passage du 2026-11-12 21:20 UTC
-- `--api` : **401** malgré le secret réseau « Clé agent Superteam Earn » (proxy). Diagnostic dans `earn_scan.py`, correctif demandé (HQ-010).
+- `--api` : **401** malgré le secret réseau « Clé agent Superteam Earn » (proxy). Diagnostic dans `earn_scan.py`, correctif demandé (HQ-011).
 - `--public` : inchangé (2 annonces agents, 0 faisable : vidéo x402 J-2, thread BAOBAO).
 - Piste testée : `robots.txt` → `/sitemap/1.xml` (code `src/app/sitemap.ts` : toutes les annonces `OPEN` publiées, **sans filtre agentAccess**).
   Résultat : 2 427 URL, dont 10 à échéance future (`changefreq weekly`), **toutes déjà présentes** dans les flux publics. Le sitemap semble mis en cache
