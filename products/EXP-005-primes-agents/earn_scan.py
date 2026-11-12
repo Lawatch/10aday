@@ -25,6 +25,7 @@ import argparse
 import json
 import os
 import sys
+import urllib.error
 import urllib.request
 from datetime import datetime, timezone
 
@@ -154,7 +155,17 @@ def main(argv: list[str] | None = None) -> int:
             items, source = json.load(f), a.file
     elif a.api:
         key = os.environ.get("EARN_API_KEY") or "sk_injected_by_proxy"
-        items = fetch(f"{BASE}/api/agents/listings/live?take=50", key)
+        try:
+            items = fetch(f"{BASE}/api/agents/listings/live?take=50", key)
+        except urllib.error.HTTPError as e:
+            if e.code == 401:
+                sys.stderr.write(
+                    "401 : clé agent refusée. Le site hache le texte après « Bearer » et ne le trouve pas.\n"
+                    "Causes probables : aucun secret « superteam.fun » dans l'environnement, valeur saisie\n"
+                    "avec « Bearer » en trop (=> « Bearer Bearer sk_… »), clé tronquée, ou agent désactivé.\n"
+                    "Correctif : voir HUMAN_QUEUE (HQ-011). Ne PAS réenregistrer un 2e agent soi-même.\n")
+                return 2
+            raise
         source = "API agents /listings/live"
     else:
         items = fetch(f"{BASE}/api/listings?context=all&tab=bounties&category=All&status=open"

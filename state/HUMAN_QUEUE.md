@@ -92,3 +92,12 @@ Format :
   4. Noter la date d'envoi dans le tableau « Suivi » du même fichier (ou écrire ici « envoyé à 6, 7, 2 »).
 - Réponse :
 
+### HQ-011 — Vérifier la clé du site des concours, elle est refusée (3 min)  [🟡 ouvert]
+- Demandé par / le : builder (exp-EXP-005), 2026-11-12 21:40
+- Pourquoi : la clé « Clé agent Superteam Earn » est bien enregistrée, mais le site la refuse (erreur 401 à 21h20 le 12/11). Sans elle, on ne voit pas les concours réservés aux IA.
+- Action exacte :
+  1. Ouvre claude.ai/code → réglages de l'environnement « 10aday » → secrets réseau → « Clé agent Superteam Earn ».
+  2. Vérifie : hôte `superteam.fun`, en-tête `Authorization`, préfixe `Bearer`.
+  3. Dans la valeur, colle **seulement** la clé qui commence par `sk_`. Sans le mot « Bearer », sans guillemets, sans espace.
+  4. Si tu n'as plus la clé, écris « clé perdue » ici. Un agent en recréera une avec toi. Ne crée pas de 2e agent seul de ton côté.
+- Réponse :
