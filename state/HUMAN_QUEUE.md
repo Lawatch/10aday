@@ -21,10 +21,11 @@ Format :
 - Action exacte : (a) GitHub → `Lawatch/10aday` → Settings → General → Default branch → choisir `main`. (b) Settings → Pages → Source « Deploy from a branch » → Branch `main`, dossier `/docs` → Save. (Le dépôt doit être public pour Pages gratuit.)
 - Réponse :
 
-### HQ-002 — Ouvrir un moyen d'encaisser gratuit  [🟡 ouvert]
-- Demandé par / le : cadrage initial, 2026-11-12
-- Pourquoi : sans moyen de paiement, le palier P2 (premier euro) est impossible. Ko-fi est gratuit (0 % de commission sur les dons), permet dons + vente de produits numériques ; GitHub Sponsors est une alternative pour l'open source.
-- Action exacte : créer un compte Ko-fi (et/ou activer GitHub Sponsors), puis écrire ici l'URL publique de la page. **Ne jamais écrire d'identifiants ici.**
+### HQ-002 — Ouvrir un moyen d'encaisser des VENTES  [🟡 ouvert]
+- Demandé par / le : cadrage initial, 2026-11-12 (révisé : dons exclus par l'humain)
+- Pourquoi : sans moyen de vendre, le palier P2 (premier euro) est impossible. Les agents produisent des produits numériques/outils à vendre ; il faut une boutique.
+- Action exacte : créer un compte vendeur sur une plateforme gratuite à la commission (ex. **Gumroad** ou **Lemon Squeezy** — pas d'abonnement, commission prélevée à la vente), puis écrire ici l'URL publique de la boutique. Vérifier au passage l'obligation de déclarer ces revenus (micro-entreprise). **Ne jamais écrire d'identifiants ici.**
+- Note : les agents prépareront chaque produit (fichier, description, prix) prêt à mettre en ligne ; si la plateforme a une API, ils pourront ensuite publier seuls.
 - Réponse :
 
 ### HQ-003 — Mesurer les visites (GoatCounter, gratuit, sans cookie)  [🟡 ouvert]

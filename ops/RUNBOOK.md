@@ -1,39 +1,62 @@
 # Runbook — protocole de chaque passage d'agent
 
-Chaque routine lance une session **fraîche** : elle ne se souvient de rien. Ce dépôt est la seule mémoire.
-Suis ces étapes dans l'ordre.
+Chaque passage est une session **fraîche** : elle ne se souvient de rien. Ce dépôt est la seule mémoire.
+Plusieurs agents tournent **en parallèle**, un par **couloir**. Ton couloir et ton rôle sont donnés dans ton prompt.
+
+## Les couloirs
+| Couloir | Fréquence | Rôles | Rôle du couloir |
+|---|---|---|---|
+| `pilotage` | toutes les 3 h | strategist (heures multiples de 6) / analyst | Arbitre le portefeuille, mesure, tue/lance des expériences |
+| `exploration` | toutes les 2 h | scout | Trouve et valide de nouvelles idées, prépare les fiches |
+| `exp-<ID>` | toutes les heures | builder / growth (champ `prochain_role` de la fiche) | Fait avancer **une** expérience |
+
+Le nombre de couloirs `exp-*` = nombre d'expériences `statut: active` (le stratège vise **3 en parallèle**, plafond 4).
+Réglages dans `ops/dispatch.py` (fréquences, plafond de sessions par tick).
 
 ## 0. Préparer le dépôt
-- Le dépôt est déjà cloné par le répartiteur (voir `ops/ROUTINE_PROMPT.md`). S'il manque ou si un push renvoie 403, n'insiste pas : arrête-toi, l'humain verra l'absence de journal.
-- Travaille sur la branche **`main`** : `git fetch origin main && git checkout main && git pull --rebase origin main`.
-  (C'est la branche d'état partagée, l'humain l'a autorisée explicitement pour ce système.)
+- Le dépôt est déjà cloné. Travaille sur **`main`** : `git fetch origin main && git checkout main && git pull --rebase origin main`.
+- Si un push renvoie 403 : n'insiste pas, arrête-toi (l'absence de journal sera repérée par l'analyste).
 
-## 1. Verrou (éviter deux agents en même temps)
-- Lis `state/STATUS.md`. Si `Verrou` contient un horodatage de moins de **50 minutes**, un autre agent travaille : écris une ligne dans `journal/` (« passage annulé, verrou actif ») seulement si utile, puis arrête-toi.
-- Sinon, écris ton horodatage UTC + ton rôle dans `Verrou`, commit (`chore: lock <rôle>`) et push immédiatement. Si le push échoue sur conflit : `git pull --rebase`, relis le verrou, recommence.
+## 1. Verrou de ton couloir
+- Fichier : `state/locks/<couloir>.lock`, contenu : `AAAA-MM-JJTHH:MMZ <rôle>`.
+- S'il existe et a **moins de 50 min** : un agent de ton couloir travaille encore → arrête-toi sans rien committer.
+- Sinon : crée-le, commit `chore(<couloir>): lock`, push immédiatement. En cas de conflit : `git pull --rebase`, relis, recommence.
 
-## 2. Choisir son rôle
-- Le rôle par défaut est `Prochain rôle` dans `state/STATUS.md` (fixé par la rotation de `ops/schedule.md`).
-- Tu peux en changer **si c'est clairement plus utile** (ex : une expérience arrive à sa date de décision → analyste). Justifie-le dans le journal.
-- Lis la fiche de ton rôle dans `agents/<rôle>.md`.
+## 2. Propriété des fichiers (pour éviter les conflits entre couloirs)
+| Fichier | Qui l'écrit |
+|---|---|
+| `state/experiments/EXP-<ID>-*.md` | le couloir `exp-<ID>` ; le `pilotage` peut changer `statut`, `verdict`, `decision_le` |
+| `products/EXP-<ID>-*/`, `docs/<slug-de-l-expérience>/` | le couloir `exp-<ID>` |
+| `state/STATUS.md`, `ops/*`, `agents/*`, `CHARTER.md` (durcissement seulement) | `pilotage` (strategist) |
+| `state/ledger.csv`, `state/LEARNINGS.md` | `pilotage` (analyst ou strategist) |
+| `state/ideas.md`, `research/` | `exploration` (et le strategist pour reclasser) |
+| `state/HUMAN_QUEUE.md` | tout le monde peut **ajouter** une demande ; le strategist fait le ménage |
+| `docs/index.html` | tout couloir `exp-*` peut y ajouter **sa** ligne dans la liste des projets |
+| `journal/AAAA-MM-JJ-HHMM-<couloir>-<rôle>.md` | chacun crée le sien (noms uniques) |
+| `DASHBOARD.md`, `dashboard/` | **personne** : générés par le répartiteur (`ops/build_dashboard.py`) |
+
+Un enseignement à partager ? Écris-le dans ton journal (section « Enseignement ») : l'analyste le consolide dans `LEARNINGS.md`.
+Si un `git pull --rebase` produit un conflit : résous-le en gardant le travail des deux côtés, jamais en écrasant celui d'un autre.
 
 ## 3. S'imprégner (≤ 5 min)
-Lis, dans cet ordre : `CHARTER.md`, `state/STATUS.md`, `state/LEARNINGS.md`, `state/HUMAN_QUEUE.md` (réponses de l'humain ?), les expériences actives dans `state/experiments/`, les 3 derniers fichiers de `journal/`.
+`CHARTER.md` → `state/STATUS.md` (décisions du stratège) → la fiche de ton expérience (si couloir `exp-*`) → `state/LEARNINGS.md`
+→ `state/HUMAN_QUEUE.md` (réponses de l'humain ?) → les 2 derniers journaux de ton couloir.
 
 ## 4. Travailler
-Fais le travail de ton rôle. Vise **un résultat concret et terminé** plutôt que trois choses à moitié faites.
-Committe au fil de l'eau avec des messages clairs (`feat(EXP-003): ...`, `research: ...`, `data: ...`).
+Fais le travail de ton rôle (`agents/<rôle>.md`). Vise **un résultat concret et terminé**. Teste réellement.
+Committe au fil de l'eau : `feat(EXP-003): ...`, `research: ...`, `data: ...`.
 
-## 5. Passer le relais (obligatoire, même si le passage a échoué)
-1. Crée `journal/AAAA-MM-JJ-HHMM-<rôle>.md` (modèle : `journal/_TEMPLATE.md`).
-2. Mets à jour `state/STATUS.md` : focus courant, chiffres clés, **message au prochain agent**, `Prochain rôle` (rotation suivante), incrémente `Index de rotation`, **vide le `Verrou`**.
-3. Si tu as appris quelque chose de réutilisable → `state/LEARNINGS.md`.
-4. Si tu as besoin de l'humain → `state/HUMAN_QUEUE.md`.
-5. `git pull --rebase origin main && git push origin main` (réessaie jusqu'à 4 fois avec attente 2s, 4s, 8s, 16s en cas d'erreur réseau).
+## 5. Passer le relais (obligatoire, même en cas d'échec)
+1. Crée `journal/AAAA-MM-JJ-HHMM-<couloir>-<rôle>.md` (modèle : `journal/_TEMPLATE.md`).
+2. Couloir `exp-*` : mets à jour l'en-tête de la fiche — **`valeur_actuelle`** (dernière mesure réelle), `prochain_role`
+   (builder si quelque chose reste à construire, growth si l'actif est prêt mais sans trafic), `lien_public`, et le Journal de bord.
+3. Couloir `pilotage` : mets à jour `state/STATUS.md` (décisions, chiffres, palier).
+4. Besoin de l'humain → `state/HUMAN_QUEUE.md` (seulement ce qu'un agent ne peut physiquement pas faire).
+5. **Supprime** `state/locks/<couloir>.lock`.
+6. `git pull --rebase origin main && git push origin main` (jusqu'à 4 essais, attente 2 s, 4 s, 8 s, 16 s).
 
 ## Garde-fous
-- Respecte `CHARTER.md`. En cas de doute sur une action externe : ne la fais pas, mets-la dans `HUMAN_QUEUE.md`.
-- Ne réécris jamais l'historique (`push --force` interdit sur `main`).
-- Ne supprime pas le travail d'un autre agent sans le justifier dans le journal.
-- Ne modifie `CHARTER.md` que pour ajouter une règle plus stricte ; tout assouplissement passe par l'humain.
-- Budget temps : vise 30-40 minutes de travail par passage.
+- Respecte `CHARTER.md`. En cas de doute sur une action externe : ne la fais pas, ajoute une demande dans `HUMAN_QUEUE.md`.
+- Jamais de `push --force`, jamais de réécriture d'historique.
+- Ne touche pas aux fichiers d'un autre couloir (sauf droits listés ci-dessus).
+- Budget temps : 30-40 minutes de travail par passage.

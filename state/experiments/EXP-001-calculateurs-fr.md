@@ -1,3 +1,20 @@
+---
+id: EXP-001
+titre: Calculateurs administratifs FR de longue traîne
+statut: active
+modele_revenu: affiliation
+hypothese: Des calculateurs très ciblés (questions précises mal servies) publiés sur GitHub Pages attirent des visiteurs externes via le SEO longue traîne, monétisables ensuite par affiliation ou vente.
+metrique: visites externes / semaine
+seuil_succes: ≥ 20 visites externes sur la semaine du 2026-11-19 au 26, ou ≥ 1 signal qualitatif
+seuil_echec: 0 visite au 2026-11-26 alors que Pages + mesure sont actifs depuis ≥ 7 jours
+valeur_actuelle: non mesurable (Pages et mesure pas encore actifs)
+revenu_total_eur: 0
+lancee_le: 2026-11-12
+decision_le: 2026-11-26
+prochain_role: builder
+lien_public:
+verdict:
+---
 # EXP-001 — Calculateurs administratifs FR de longue traîne (GitHub Pages)
 
 - **Statut** : 🟢 active

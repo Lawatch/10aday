@@ -18,10 +18,17 @@ autonomes qui explorent, construisent, testent réellement et apprennent en cont
 ## Contraintes fixées par l'humain (cadrage du 2026-11-12)
 - **Infra** : routines Claude Code (sessions cloud fraîches, déclenchées par cron). Toute la mémoire est dans ce dépôt git.
 - **Budget** : **0 €**. Seulement des ressources gratuites (GitHub, GitHub Pages, tiers gratuits, outils open source).
-- **Encaissement** : aucun compte pour l'instant. Toute ouverture de compte (Ko-fi, Gumroad, Stripe, affiliation, GitHub Sponsors, statut micro-entreprise…) est **demandée à l'humain** via `state/HUMAN_QUEUE.md`.
-- **Autonomie** :
-  - ✅ Publier librement : code, sites (GitHub Pages), contenus, outils open source, dans ce dépôt.
-  - ⛔ Sans validation humaine : aucune dépense, aucune création de compte, aucun engagement contractuel, aucun contact direct avec des personnes (emails, DM).
+- **Modèles de revenus** (précision du 2026-11-12) : **pas de dons ni de mécénat** (Ko-fi « tip », Sponsors, Patreon…).
+  On gagne de l'argent en **vendant** (produits numériques, outils, services, abonnements), en **monétisant un flux**
+  (trafic → publicité, affiliation, leads), en **remportant des primes** (bounties, concours), ou par toute autre idée légale.
+- **Encaissement** : aucun compte pour l'instant. Les comptes qui exigent l'identité ou les coordonnées bancaires de l'humain
+  (plateforme de vente, régie pub, programme d'affiliation, statut micro-entreprise…) sont **demandés à l'humain** via `state/HUMAN_QUEUE.md`.
+- **Autonomie maximale** : les agents font **tout seuls** tout ce qui est techniquement possible depuis leur session
+  (rechercher, construire, tester, publier dans ce dépôt, mesurer, décider, lancer et tuer des expériences, réécrire leurs propres règles de travail).
+  L'humain n'est sollicité que pour ce qu'un agent ne peut **physiquement** pas faire : ouvrir un compte à son nom, dépenser, s'engager
+  contractuellement, contacter directement des personnes (emails, DM), poster sur une plateforme qui exige un compte.
+  Chaque demande doit être prête à exécuter en ≤ 15 min (texte à copier-coller fourni).
+- **Exploration parallèle** : jusqu'à 3-4 expériences actives en même temps, avec des **modèles de revenus variés**, chacune dans son couloir.
 
 ## Règles absolues (non négociables, même si ça rapporterait)
 1. **Légal et honnête** : pas d'arnaque, pas de faux avis, pas de fausse urgence, pas d'usurpation d'identité, pas de contenu trompeur, pas de contrefaçon ni de reprise d'œuvres protégées.

@@ -6,29 +6,34 @@ joue un rôle, livre quelque chose de concret, puis passe le relais.
 
 ## Comment ça marche
 ```
-           ┌──────────── routine cron (toutes les heures) ────────────┐
-           ▼                                                          │
-  session fraîche → clone main → verrou → rôle (rotation) → travail → relais → push
-                                              │
-     strategist 🧭  scout 🔭  builder 🔨  growth 📣  analyst 📊
+routine horaire ─▶ répartiteur (session de cadrage) ─▶ ops/dispatch.py ─▶ N sessions fraîches EN PARALLÈLE
+                                                                           ├─ pilotage    (3 h)  🧭 strategist / 📊 analyst
+                                                                           ├─ exploration (2 h)  🔭 scout
+                                                                           ├─ exp-EXP-001 (1 h)  🔨 builder / 📣 growth
+                                                                           ├─ exp-EXP-002 (1 h)  …
+                                                                           └─ exp-EXP-00N (1 h)  …
+                       └─▶ ops/build_dashboard.py ─▶ DASHBOARD.md + page privée « tableau de bord »
 ```
+
+## 👉 Pour suivre : [`DASHBOARD.md`](DASHBOARD.md)
+Chaque expérience : hypothèse, modèle de revenu, métrique, **valeur actuelle mesurée**, seuils de succès/échec, date de décision, revenu, verdict.
 
 | Fichier | Rôle |
 |---|---|
+| `DASHBOARD.md`, `dashboard/` | Tableau de bord **généré** (ne pas éditer) |
 | `CHARTER.md` | Mission, paliers, contraintes, règles absolues |
-| `ops/RUNBOOK.md` | Protocole suivi par chaque agent |
-| `ops/schedule.md` | Rotation des rôles (ajustée par le stratège) |
-| `ops/ROUTINE_PROMPT.md` | Prompt envoyé à chaque déclenchement |
+| `ops/RUNBOOK.md` | Protocole de chaque agent : couloirs, verrous, propriété des fichiers |
+| `ops/dispatch.py` | Décide quels couloirs lancer à chaque heure |
+| `ops/ROUTINE_PROMPT.md` | Prompt des agents (éditable par le stratège) |
 | `agents/*.md` | Fiches de rôle (améliorées par le stratège) |
-| `state/STATUS.md` | Tableau de relais : verrou, focus, message au suivant |
-| `state/ideas.md` | Backlog d'idées scorées (ICE) |
-| `state/experiments/` | Une fiche par expérience (hypothèse, métrique, verdict) |
+| `state/STATUS.md` | Décisions du stratège, focus |
+| `state/experiments/` | Une fiche par expérience (en-tête chiffré) |
+| `state/ideas.md`, `research/` | Pipeline d'idées scorées et dossiers prêts à lancer |
 | `state/ledger.csv` | Revenus/dépenses **réels** |
 | `state/LEARNINGS.md` | Enseignements cumulés |
 | `state/HUMAN_QUEUE.md` | **Ce que les agents attendent de toi** |
-| `journal/` | Un compte rendu par passage |
-| `products/` | Ce qui est construit |
-| `docs/` | Site public (GitHub Pages) |
+| `journal/` | Un compte rendu par passage d'agent |
+| `products/`, `docs/` | Ce qui est construit / publié (GitHub Pages) |
 
 ## Ton rôle d'humain
 1. Regarde régulièrement `state/HUMAN_QUEUE.md` et réponds-y (ouvrir un compte, valider une dépense, poster un lien…).
@@ -36,4 +41,4 @@ joue un rôle, livre quelque chose de concret, puis passe le relais.
 3. Lis `state/STATUS.md` pour suivre l'avancement.
 
 ## Cadrage (2026-11-12)
-Routines Claude Code · budget 0 € · aucun compte de paiement au départ · publication libre, dépenses et comptes validés par l'humain.
+Routines Claude Code · budget 0 € · pas de dons · autonomie maximale (l'humain seulement pour comptes, dépenses, contacts) · plusieurs expériences en parallèle.

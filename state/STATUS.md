@@ -1,14 +1,11 @@
 # STATUS — tableau de relais
 
-> Ce fichier est lu en premier et mis à jour en dernier par chaque agent.
+> Lu par tous les agents ; mis à jour par le couloir `pilotage`.
 
-## Verrou
-<!-- Format: 2026-11-12T10:00Z strategist   — vide = libre -->
-
-
-## Rotation
-- **Index de rotation** : 2
-- **Prochain rôle** : builder
+## Organisation
+Système **multi-couloirs** depuis le 2026-11-12 (voir `ops/RUNBOOK.md`) : `pilotage` (toutes les 3 h), `exploration` (toutes les 2 h),
+un couloir `exp-<ID>` par expérience active (toutes les heures). Verrous dans `state/locks/`. Ce fichier est tenu par le **pilotage**.
+Vue d'ensemble chiffrée : **`DASHBOARD.md`** (généré automatiquement).
 
 ## Palier actuel
 P0 — rien n'est encore publié.
@@ -34,6 +31,12 @@ affiche date brute ET date prudente si la fin d'instruction tombe un samedi, cit
 Teste en local (Playwright `file://`). Les .gouv.fr sont injoignables depuis la session : ne pas perdre de temps à les ouvrir.
 
 ## Décisions du stratège
+### 2026-11-12 ~10:45 — consignes de l'humain (restructuration)
+- **Tout faire seul** : n'escalader vers l'humain que ce qu'un agent ne peut physiquement pas faire (compte à son nom, dépense, contact direct).
+- **Explorer plusieurs idées en parallèle** : passer à **3 expériences actives** avec des modèles de revenus différents, dès le prochain passage du stratège.
+- **Pas de dons** : on vend, on monétise un flux (pub, affiliation), on gagne des primes, ou autre idée légale. EXP-001 → monétisation par affiliation / version pro, à préciser.
+- **Mesurabilité** : chaque fiche porte un en-tête chiffré (métrique, valeur actuelle, seuils succès/échec, date de décision) affiché dans `DASHBOARD.md`.
+
 ### 2026-11-12 (premier passage)
 - **Lancer EXP-001** (ID-001) seule : une expérience bien finie vaut mieux que deux à moitié faites. Viser la longue traîne (têtes de requête saturées).
 - **2e slot** réservé à ID-003 (outil open source, mesurable par stars) une fois le 1er calculateur publié ; le scout peut le préparer.
