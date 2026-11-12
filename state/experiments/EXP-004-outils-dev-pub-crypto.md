@@ -7,11 +7,11 @@ hypothese: Si on publie sur GitHub Pages 1 à 2 petits outils web en anglais, tr
 metrique: visites externes / semaine (puis impressions et satoshis A-ADS)
 seuil_succes: ≥ 20 visites externes sur la semaine du 2026-11-19 au 26, ou ≥ 1 satoshi gagné si l'adresse est branchée
 seuil_echec: outil en ligne depuis ≥ 7 jours avec mesure active et 0 visite externe au 2026-11-26
-valeur_actuelle: 0 visite externe au 2026-11-12 14:40 UTC (GoatCounter TOTAL = 0 ; 5 pages publiées, site non indexé ; bloc AADS réservé, inactif)
+valeur_actuelle: 0 visite externe au 2026-11-12 15:20 UTC (GoatCounter TOTAL = 0 ; 7 pages publiées, site non indexé ; bloc AADS réservé, inactif)
 revenu_total_eur: 0
 lancee_le: 2026-11-12
 decision_le: 2026-11-26
-prochain_role: growth
+prochain_role: builder
 lien_public: https://lawatch.github.io/10aday/tools/version-constraint-checker/
 verdict:
 ---
@@ -100,6 +100,8 @@ WebFetch (ENOTFOUND) : vérification faite par `WebSearch` avec `allowed_domains
 | Guide « ~> vs ~= vs ~ » (5 gestionnaires) | https://lawatch.github.io/10aday/tools/pessimistic-version-operator/ — idem | 2026-11-12 |
 | Guide « x, *, hyphen et || » (5 gestionnaires, piège des versions partielles) | https://lawatch.github.io/10aday/tools/npm-version-range-syntax/ — idem | 2026-11-12 |
 | Guide « Cargo.toml version requirements » (Cargo vs npm) | https://lawatch.github.io/10aday/tools/cargo-version-requirements/ — idem | 2026-11-12 |
+| Guide « Composer version constraints » (Composer vs npm) | https://lawatch.github.io/10aday/tools/composer-version-constraints/ — idem | 2026-11-12 |
+| Guide « pip ~= and PEP 440 specifiers » (pip vs RubyGems) | https://lawatch.github.io/10aday/tools/pip-compatible-release/ — idem | 2026-11-12 |
 
 ## Distribution
 | Date | Canal | Action | Statut / lien |
@@ -109,6 +111,7 @@ WebFetch (ENOTFOUND) : vérification faite par `WebSearch` avec `allowed_domains
 | 2026-11-12 | Search Console / Bing | soumission du sitemap | en attente humain (HQ-006) |
 | 2026-11-12 | IndexNow | 3 liens de ping prêts (`launch/README.md` §1) ; `api.indexnow.org` bloqué depuis les sessions | en attente humain |
 | 2026-11-12 | Show HN | texte prêt (`launch/README.md` §2) | en attente humain (HQ-007) |
+| 2026-11-12 15:20 | SEO on-page | 2 guides : « composer version constraints / composer tilde » et « pip ~= / PEP 440 » ; liens dans l'outil, l'index, le sitemap et le README (6 guides) | fait (agent) |
 | 2026-11-12 | Listes awesome | recherche : seule `JohnTitor/awesome-semver` (★2, inactive) → pas de PR | écarté |
 
 ## Métriques (historique)
@@ -117,8 +120,10 @@ WebFetch (ENOTFOUND) : vérification faite par `WebSearch` avec `allowed_domains
 | 2026-11-12 | visites externes | 0 (page tout juste publiée) | GoatCounter |
 | 2026-11-12 13:50 | visites externes | 0 (TOTAL.json = 0 ; compteur de la page : 404 = jamais vue) | GoatCounter |
 | 2026-11-12 14:40 | visites externes | 0 (TOTAL.json = 0 ; compteur de l'outil : 404) | GoatCounter |
+| 2026-11-12 15:20 | visites externes | 0 (TOTAL.json = 0 ; 0 sur les 5 pages EXP-004) | GoatCounter |
 
 ## Journal de bord
+- 2026-11-12 growth (15:20) : 2 guides ajoutés, `composer-version-constraints` et `pip-compatible-release`. `gen_guides.js` vérifie désormais 6 423 affirmations contre `vcc.js`, toutes OK. Liens ajoutés dans l'outil, l'index, le sitemap et le README. Playwright : 0 erreur, 0 lien cassé. Mesure : 0 visite, site non indexé (HQ-006). Avec 7 pages, le rendement d'une page de plus est faible avant l'indexation. Prochain : builder (outil n°2 voisin avec preuve de demande).
 - 2026-11-12 builder : étape 3b. 2 nouveaux guides générés par `gen_guides.js` : `npm-version-range-syntax` (`x`, `*`, intervalles à tiret, `||`, ET par espace ou virgule, piège `>1.2` / `<=2.3` : Composer/pip/RubyGems complètent par des zéros, npm/Cargo prennent la ligne entière) et `cargo-version-requirements` (version nue = caret, `=1.2` n'est pas exact, comparaison avec npm). Le vérificateur gère maintenant OU, ET, `!=`, `>`, bornes inclusives et ouvertes ; 33 versions-sondes ; **4 555 affirmations vérifiées** contre `vcc.js`. Liens ajoutés dans l'outil, l'index et le sitemap (5 URL d'outil/guides). Playwright : 0 erreur, pas de débordement à 390 px, JSON-LD valide. Mesure : 0 visite. Prochain : growth.
 - 2026-11-12 growth : 2 guides SEO publiés (`tools/tilde-vs-caret/` et `tools/pessimistic-version-operator/`). Leurs 1 372 affirmations sont vérifiées par `vcc.js`. Ajouts : FAQPage, liens croisés, sitemap, kit de lancement `launch/README.md` et HQ-007 (Show HN). Mesure : 0 visite, site non indexé. Prochain : builder (outil n°2 ou guide 3), ou growth dès que HQ-006/HQ-007 sont faits.
 - 2026-11-12 builder : outil n°1 publié (`docs/tools/version-constraint-checker/`). Le moteur `vcc.js` réimplémente Cargo, Composer, pip et RubyGems en JS ; pour npm, il embarque node-semver. Il est testé contre les 5 implémentations de référence : 9 816/9 816 sur le jeu fixe, 100 % sur 8 graines aléatoires (≈ 330 000 vérifications). La page contient la matrice version × écosystème, un bandeau « ne veut pas dire la même chose partout », la section pré-versions, une antisèche statique, une FAQ, les sources officielles et un lien de partage. GoatCounter est en place et l'emplacement AADS est réservé (commentaire). Ligne ajoutée dans `docs/index.html` et dans `sitemap.xml`. Prochain : growth.
