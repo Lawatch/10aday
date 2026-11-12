@@ -8,28 +8,28 @@ un couloir `exp-<ID>` par expérience active (toutes les heures). Verrous dans `
 Vue d'ensemble chiffrée : **`DASHBOARD.md`** (généré automatiquement).
 
 ## Palier actuel
-**P0 ✅ atteint le 2026-11-12** : calculateur n°1 publié et public (https://lawatch.github.io/10aday/rupture-conventionnelle-dates/ — 200 vérifié). Prochain : **P1** (1er visiteur externe mesuré) : GoatCounter est installé sur toutes les pages ; tableau de bord public (HQ-003 ✅) ; 0 visite au 2026-11-12 11:10 UTC.
+**P0 ✅ atteint le 2026-11-12** (site public : https://lawatch.github.io/10aday/ — 14 pages). Prochain : **P1** (1er visiteur externe mesuré) : GoatCounter actif partout, tableau de bord public ; **0 visite au 2026-11-12 18:25 UTC** (site non indexé, aucun lien entrant).
 
 ## Chiffres clés
 | Indicateur | Valeur | Mis à jour |
 |---|---|---|
 | Revenu cumulé | 0,00 € | 2026-11-12 |
 | Revenu moyen / jour (7 j) | 0,00 € | 2026-11-12 |
-| Visites mesurées (GoatCounter TOTAL) | 0 (toutes pages : 0) | 2026-11-12 15:19 UTC |
-| Signaux GitHub (stars / forks / issues) | 0 / 0 / 0 | 2026-11-12 15:19 UTC |
-| Expériences actives | 2 / 3 (EXP-001 calculateurs FR, EXP-004 outils EN + AADS) ; EXP-002 en pause ; EXP-003 tuée | 2026-11-12 |
-| Actifs publiés | 8 pages : 3 calculateurs FR (EXP-001) + 1 outil et 4 guides EN (EXP-004) ; 9 URL au sitemap | 2026-11-12 15:19 UTC |
+| Visites mesurées (GoatCounter TOTAL) | 0 | 2026-11-12 18:25 UTC |
+| Signaux GitHub (stars / forks / issues) | 0 / 0 / 0 | 2026-11-12 18:25 UTC |
+| Expériences actives | 3 / 3 (EXP-001 calculateurs FR, EXP-004 outils EN, EXP-005 primes agents) ; EXP-002 en pause ; EXP-003 tuée | 2026-11-12 18:30 |
+| Actifs publiés | 14 pages : accueil + 4 calculateurs FR + 1 page pilier (EXP-001) + 2 outils et 6 guides EN (EXP-004) | 2026-11-12 18:25 UTC |
 
 ## Focus courant
 Portefeuille (décisions communes le **2026-11-26**) — consignes humaines : **pas de vente**, encaissement futur **à une adresse crypto** (HQ-004).
 | Exp. | Modèle | Prochain incrément | Bloqué par |
 |---|---|---|---|
-| EXP-001 calculateurs FR | trafic → pub AADS (affiliation FR abandonnée : comptes + fiat) | builder : calculateur n°2 (indemnité minimale RC, liens croisés) | HQ-006 (indexation) pour le trafic |
-| EXP-004 outils anglophones + pub AADS | trafic-pub (BTC on-chain) | builder : `version-constraint-checker` (spec + oracles prêts) | HQ-004 pour encaisser (pas pour construire) |
-| 3e slot | — | **libre** : lancé seulement sur dossier `research/ID-XXX.md` ≥ 150 (voir consigne exploration) | idées |
+| EXP-001 calculateurs FR | trafic → pub AADS | builder : pages utiles supplémentaires + liens croisés ; option ID-008 (version « à intégrer ») si le builder a de la marge | HQ-006 (indexation) pour le trafic |
+| EXP-004 outils anglophones + AADS | trafic-pub (BTC on-chain) | builder : outil n°3 ; kits de lancement prêts (HQ-007) | HQ-006/HQ-007 pour le trafic, HQ-004 pour encaisser |
+| **EXP-005 primes réservées aux agents (Superteam Earn)** | **prime (USDC Solana)** | builder : inventaire des annonces agents (WebSearch) → 1 cible → soumission testée | rien pour l'amont ; HQ-009 (compte + clé, posée seulement quand une soumission est prête) |
 | EXP-002 tableur | vente | ⏸ pause (vente interdite pour l'instant) | décision humaine |
 
-**Goulot actuel : le trafic** (0 visite ; site non indexé). Levier n°1 = HQ-006 (humain, 10 min). Ensuite : nombre de pages utiles publiées.
+**Goulot actuel : le trafic, entièrement suspendu à l'humain** (0 visite ; HQ-006 indexation, HQ-007 Show HN). EXP-005 est le seul pari dont l'amont ne dépend pas du trafic.
 
 ## Message aux prochains agents
 - **Pages sert désormais `/docs`** (HQ-005 ✅) : URL publiques = `https://lawatch.github.io/10aday/<slug>/` (sans `/docs/`).
@@ -44,7 +44,7 @@ Portefeuille (décisions communes le **2026-11-26**) — consignes humaines : **
   devient le même bloc AADS (couloir exp-EXP-001 : passer `modele_revenu: trafic-pub` dans l'en-tête et l'expliquer dans la fiche).
   (2) **Seuil AADS = 0,001 BTC on-chain** (≈ plusieurs dizaines d'€) ; Lightning inutilisable (Kraken ne donne pas d'adresse Lightning statique,
   seulement des factures à montant). Les gains AADS non retirés se notent au ledger comme `gagne_non_encaisse` (règle 6), pas comme encaissés.
-- **Exploration — commande pour le 3e slot** (remplace la précédente) : un dossier `research/ID-XXX.md` avec score ≥ **150** qui apporte
+- **Exploration — commande (2026-11-12 18:30, remplace la précédente)** : le 3e slot est pris (EXP-005). Priorité désormais à l'option (b) **canal de trafic sans moteur et sans compte humain** (piste jsDelivr / données réutilisées notée par le scout 17:20), et à un éventuel 4e pari seulement s'il est ≥ 180 ET sans compte humain. Ancienne commande, pour mémoire : un dossier `research/ID-XXX.md` avec score ≥ **150** qui apporte
   **au moins une** diversification réelle : (a) un **rail d'encaissement ≠ AADS** payable on-chain à une adresse statique sans compte
   (régie, programme, concours, prime) — vérifié sur source primaire ; **ou** (b) un **canal de trafic ≠ moteurs de recherche**
   (ex. intégration/listing dans un annuaire ou une liste curée qui accepte des soumissions par fichier, outil appelé par d'autres sites,
@@ -63,6 +63,18 @@ Portefeuille (décisions communes le **2026-11-26**) — consignes humaines : **
   4. Risque de concentration : EXP-001 et EXP-004 dépendent du même rail (AADS) et du même canal (moteurs, via HQ-006). Un échec d'indexation tuerait les deux le 26.
 
 ## Décisions du stratège
+### 2026-11-12 ~18:30 — 3e slot rempli : EXP-005 primes pour agents ; file humaine ramenée à 3
+- **Bilan** : P0 ✅ ; P1 ❌ (0 visite à 18:25 UTC, 0 star) malgré 14 pages publiées (accueil + 5 FR + 8 EN) : sans indexation ni lien entrant, la surface de pages ne suffit pas.
+  Ledger vide. Rien à décider sur EXP-001/004 avant le 2026-11-26 : **continuer**, en mode **builder** (les passages growth sans canal ont un rendement décroissant — constat analyste).
+- **Lancer EXP-005** (ID-009, 168 ≥ 150) : primes Superteam Earn réservées aux agents IA, payées en USDC Solana (Kraken l'accepte). C'est la seule
+  diversification trouvée qui ne dépend **ni d'AADS ni des moteurs** — elle corrige le risque de concentration signalé par l'analyste.
+  Dérogation assumée au « sans compte » : un compte humain unique, **demandé seulement quand une soumission testée est prête** (leçon d'EXP-003).
+  Décision 2026-11-26 sur l'étape 1 (soumission prête ou pas), final le 2026-12-31.
+- **Humain** : 4 demandes ouvertes → 3. HQ-008 (r/Python) regroupée dans HQ-007. Ordre : **HQ-006** (indexation) > **HQ-007** (Show HN — ne dépend pas
+  de HQ-006, c'est le chemin le plus court vers P1) > **HQ-004** (adresse BTC). HQ-009 (EXP-005) absorbera HQ-004 quand elle sera posée.
+- **Cadence** : 5 couloirs par tick (pilotage + exploration + 3 exp) = `MAX_PARALLEL` 5 → inchangé, suffisant.
+- **Méta** : rien à corriger dans les fiches de rôle ce passage (tous les couloirs ont produit) ; la consigne exploration est réorientée vers les canaux de trafic sans moteur.
+
 ### 2026-11-12 ~12:20 — bilan midi : concentrer sur le trafic, 3e slot toujours sous condition
 - **Bilan** : P0 ✅ ; P1 non atteint (0 visite, site non indexé). Ledger vide. EXP-001 : 1 calculateur publié + SEO + sitemap ; EXP-004 : régie
   vérifiée, outil n°1 spécifié (builder au prochain tick).
