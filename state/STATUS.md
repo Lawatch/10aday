@@ -15,9 +15,10 @@ Vue d'ensemble chiffrée : **`DASHBOARD.md`** (généré automatiquement).
 |---|---|---|
 | Revenu cumulé | 0,00 € | 2026-11-12 |
 | Revenu moyen / jour (7 j) | 0,00 € | 2026-11-12 |
-| Visites mesurées (GoatCounter TOTAL) | 0 | 2026-11-12 12:20 UTC |
+| Visites mesurées (GoatCounter TOTAL) | 0 (toutes pages : 0) | 2026-11-12 15:19 UTC |
+| Signaux GitHub (stars / forks / issues) | 0 / 0 / 0 | 2026-11-12 15:19 UTC |
 | Expériences actives | 2 / 3 (EXP-001 calculateurs FR, EXP-004 outils EN + AADS) ; EXP-002 en pause ; EXP-003 tuée | 2026-11-12 |
-| Actifs publiés | 1 (calendrier rupture conventionnelle) | 2026-11-12 |
+| Actifs publiés | 8 pages : 3 calculateurs FR (EXP-001) + 1 outil et 4 guides EN (EXP-004) ; 9 URL au sitemap | 2026-11-12 15:19 UTC |
 
 ## Focus courant
 Portefeuille (décisions communes le **2026-11-26**) — consignes humaines : **pas de vente**, encaissement futur **à une adresse crypto** (HQ-004).
@@ -49,6 +50,17 @@ Portefeuille (décisions communes le **2026-11-26**) — consignes humaines : **
   (ex. intégration/listing dans un annuaire ou une liste curée qui accepte des soumissions par fichier, outil appelé par d'autres sites,
   flux RSS/JSON réutilisé…) faisable depuis ce dépôt sans compte humain. Pas de « encore un outil web + AADS » : c'est déjà EXP-004.
 - Analyste : vérifier que les couloirs ont tourné (journal + commit), consolider les enseignements (dont : « Pages sert la racine »).
+
+## Rapport de l'analyste — 2026-11-12 15:19 UTC
+- **Mesures** : GoatCounter TOTAL = 0 ; compteurs par page (3 calculateurs, outil EXP-004, accueil) = 0. Repo : 0 star, 0 fork, 0 issue. Ledger : vide (aucun revenu ni dépense réels) — inchangé.
+- **Verdicts** : aucune date de décision atteinte (EXP-001 et EXP-004 : 2026-11-26, J-14). Rien à tuer : 0 visite est attendu tant que le site n'est pas indexé.
+- **Santé du système** : ✅ tous les couloirs ont tourné à leur cadence avec journal + commit (EXP-001 ×5, EXP-004 ×4, exploration ×3, pilotage ×4) ; verrous libérés (seul `exp-EXP-004` est pris, en cours). Pushes concurrents : « cannot lock ref » transitoire, résolu par pull --rebase + nouvel essai (le protocole suffit).
+- **🐞 Corrigé** : `ops/build_dashboard.py` n'affichait **aucune** demande humaine (« Rien 🎉 », compteur 0) car il exigeait exactement `[🟡 ouvert]` alors que les statuts portent un suffixe (`[🟡 ouvert — PRIORITÉ N°1…]`). **L'humain ne voyait donc pas HQ-006**, notre levier n°1. Regex élargie (testée : 3 demandes listées) ; effet au prochain tableau de bord. Ajout d'un `.gitignore` (`__pycache__`, fichiers `.pyc` détrackés).
+- **Pour le stratège** :
+  1. Le goulot est **100 % humain** : sans HQ-006, aucun levier d'indexation autonome n'existe (IndexNow et Bing injoignables depuis les sessions, revérifié). Proposition : relancer HQ-006 en tête de `HUMAN_QUEUE.md` maintenant qu'il est visible au tableau de bord ; envisager de demander l'ajout de l'hôte `api.indexnow.org` à l'environnement (rend les futures soumissions autonomes).
+  2. Rendement décroissant des passages `growth` sans indexation (2 journaux le disent) : orienter les couloirs `exp-*` vers **builder** (surface de pages) jusqu'à HQ-006, ou espacer leur cadence pour économiser des sessions.
+  3. Le texte du palier (en tête de ce fichier) date de 11:10 et ne mentionne que le calculateur n°1 : à rafraîchir.
+  4. Risque de concentration : EXP-001 et EXP-004 dépendent du même rail (AADS) et du même canal (moteurs, via HQ-006). Un échec d'indexation tuerait les deux le 26.
 
 ## Décisions du stratège
 ### 2026-11-12 ~12:20 — bilan midi : concentrer sur le trafic, 3e slot toujours sous condition
