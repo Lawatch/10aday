@@ -697,6 +697,56 @@
     }
   };
 
+  // =================================================================
+  // Version ordering (used by the Version Sorter). Each ecosystem gets:
+  //   canon(v)      → the version as the tool reads it, or null if invalid
+  //   compare(a, b) → -1 / 0 / 1, or null if a or b is invalid there
+  // npm: semver.compare (build ignored) · Cargo: Version::cmp_precedence (build ignored)
+  // Composer: Semver::sort comparator (normalize + Comparator::lessThan; two branch names: 0)
+  // pip: packaging.version.Version ordering · RubyGems: Gem::Version#<=>
+  // =================================================================
+  function sgn(x) { return x < 0 ? -1 : x > 0 ? 1 : 0; }
+  npm.canon = function (v) { var S = root.nodeSemver; var p = S.valid(v); return p || null; };
+  npm.compare = function (a, b) {
+    var S = root.nodeSemver;
+    if (!S.valid(a) || !S.valid(b)) return null;
+    return sgn(S.compare(a, b));
+  };
+  function cargoStr(v) { return v.major + '.' + v.minor + '.' + v.patch + (v.pre.length ? '-' + v.pre.join('.') : ''); }
+  cargo.canon = function (s) { var v = cargoVersion(s); return v ? cargoStr(v) + (/\+/.test(s) ? s.slice(s.indexOf('+')) : '') : null; };
+  cargo.compare = function (a, b) {
+    var x = cargoVersion(a), y = cargoVersion(b);
+    if (!x || !y) return null;
+    var d = ncmp(x.major, y.major) || ncmp(x.minor, y.minor) || ncmp(x.patch, y.patch);
+    return sgn(d || cmpPre(x.pre, y.pre));
+  };
+  function composerSortNorm(v) {
+    var n; try { n = composerNormalize(v); } catch (e) { return null; }
+    return (n === 'dev-master' || n === 'dev-default' || n === 'dev-trunk') ? '9999999-dev' : n;
+  }
+  function composerLess(a, b) {
+    if (a.indexOf('dev-') === 0 && b.indexOf('dev-') === 0) return false;
+    return phpVC(a, b, '<');
+  }
+  composer.canon = composerSortNorm;
+  composer.compare = function (a, b) {
+    var x = composerSortNorm(a), y = composerSortNorm(b);
+    if (x === null || y === null) return null;
+    if (x === y) return 0;
+    return composerLess(x, y) ? -1 : composerLess(y, x) ? 1 : 0;
+  };
+  pip.canon = pip.normalizeVersion;
+  pip.compare = function (a, b) {
+    var x = pepParse(a), y = pepParse(b);
+    if (!x || !y) return null;
+    return sgn(pepCmp(x, y));
+  };
+  rubygems.canon = rubygems.normalizeVersion;
+  rubygems.compare = function (a, b) {
+    if (!GEM_ANCHORED.test(a) || !GEM_ANCHORED.test(b)) return null;
+    return sgn(gemCmp(gemVersion(a), gemVersion(b)));
+  };
+
   var VCC = { npm: npm, cargo: cargo, composer: composer, pip: pip, rubygems: rubygems, ecosystems: ['npm', 'cargo', 'composer', 'pip', 'rubygems'] };
   if (typeof module !== 'undefined' && module.exports) module.exports = VCC; else root.VCC = VCC;
 })(typeof globalThis !== 'undefined' ? globalThis : this);

@@ -28,3 +28,9 @@ Page publiée : `docs/tools/poetry-to-pep621/` → https://lawatch.github.io/10a
 Page publiée : `docs/tools/requires-python-checker/` → https://lawatch.github.io/10aday/tools/requires-python-checker/
 - `rpc/rpc.js` : pour un spécificateur `requires-python`, liste les versions de Python acceptées (2.7 à 4.0, patchs .0 à .40) et signale les pièges (`<=3.12`, `==3.10`, `>3.10`, `~=3.10.2`, plafonds, syntaxe Poetry `^`/`~` traduite par `p2p.js`). Le moteur réutilise `vcc.js` (pip) et `p2p.js` ; la page charge les copies publiées des outils n°1 et n°2.
 - Oracle : `node rpc/dump.js SEED > f.json && python3 rpc/oracle.py f.json` (≈ 330 spécificateurs × 779 versions = 256 291 vérifications contre `packaging`, 0 écart sur les graines 1 à 8). `node rpc/test.js` : copie publiée identique + cas clés.
+
+## Outil n°4 : Version sorter (`vsort/`)
+Page publiée : `docs/tools/version-sorter/` → https://lawatch.github.io/10aday/tools/version-sorter/ (générée par `python3 vsort/gen_page.py` depuis `vsort/page.tpl.html`).
+- Moteur : fonctions `canon()` et `compare()` ajoutées à chaque gestionnaire dans `vcc.js` (npm : `semver.compare` ; Cargo : `Version::cmp_precedence` ; Composer : comparateur de `Semver::sort` ; pip : ordre de `packaging.version.Version` ; RubyGems : `Gem::Version#<=>`). `semver.min.js` reconstruit (node-semver 7.8.5 + `compare`, esbuild).
+- Oracle : `vsort/oracle/run.sh DIR SEED` (0 = liste fixe de pièges ; besoin de `SEMVER`, `COMPOSER_AUTOLOAD`, `CARGO_SORT_ORACLE`, voir chaque fichier), puis `node vsort/test.js DIR...`. Comparaison de **toutes les paires** de versions.
+- Résultat au 2026-11-12 : liste fixe (126 versions) 39 330/39 330 ; graines 1 à 8 : 268 149/268 149. `node vsort/claims.js` vérifie chaque comparaison citée sur la page (165 vérifications).

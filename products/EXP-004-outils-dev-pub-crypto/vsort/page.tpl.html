@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TITLE}}</title>
+<meta name="description" content="{{DESC}}">
+<link rel="canonical" href="{{URL}}">
+<meta property="og:title" content="{{TITLE}}">
+<meta property="og:description" content="{{DESC}}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{URL}}">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{{LD_FAQ}}</script>
+<script type="application/ld+json">{{LD_BC}}</script>
+<style>
+  :root{--muted:#666;--line:#ddd;--warn:#fff4d6}
+  *{box-sizing:border-box}
+  body{font-family:system-ui,-apple-system,Segoe UI,sans-serif;max-width:1060px;margin:2rem auto;padding:0 1rem;line-height:1.55;color:#1d1d1f}
+  h1{font-size:1.6rem;margin:.2rem 0 .4rem} h2{font-size:1.2rem;margin-top:2rem} h3{font-size:1rem;margin:1.2rem 0 .2rem}
+  .muted{color:var(--muted)} code,input,textarea{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+  label{font-weight:600;display:block;margin:.8rem 0 .3rem}
+  textarea{width:100%;font-size:1rem;padding:.45rem .6rem;border:1px solid #bbb;border-radius:6px;min-height:9rem}
+  input[type=text]{width:100%;font-size:1rem;padding:.4rem .55rem;border:1px solid #bbb;border-radius:6px}
+  .row{display:flex;gap:.6rem;align-items:end;flex-wrap:wrap} .row>div{flex:1;min-width:9rem}
+  .chips button,.tog button{font:inherit;font-size:.85rem;margin:.15rem .2rem .15rem 0;padding:.15rem .55rem;border:1px solid #bbb;background:#f6f6f6;border-radius:12px;cursor:pointer}
+  .chips button:hover,.tog button:hover{background:#eaeaea} .tog button[aria-pressed=true]{background:#1d1d1f;color:#fff;border-color:#1d1d1f}
+  .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(11.5rem,1fr));gap:.5rem;margin:.7rem 0}
+  .col{border:1px solid var(--line);border-radius:6px;padding:.4rem .55rem;font-size:.9rem;min-width:0}
+  .col h3{margin:.1rem 0 .3rem;font-size:.95rem} .col ol{margin:0;padding-left:1.6rem} .col li{font-family:ui-monospace,Menlo,monospace;word-break:break-all}
+  .col li.tie::marker{content:"= "} .col .inv{color:#999;font-size:.82rem;margin-top:.35rem;word-break:break-all}
+  .col li small{color:var(--muted);font-family:system-ui,sans-serif}
+  .msg{border-radius:6px;padding:.45rem .7rem;margin:.5rem 0;font-size:.93rem;border:1px solid}
+  .msg.warn{background:var(--warn);border-color:#e8c766} .msg.ok{background:#eaf6ee;border-color:#9fd3b0}
+  table{border-collapse:collapse;width:100%;margin:.6rem 0;font-size:.92rem}
+  th,td{border:1px solid var(--line);padding:.35rem .5rem;text-align:left;vertical-align:top}
+  th{background:#f6f6f6} td.v{font-family:ui-monospace,Menlo,monospace;white-space:nowrap} td.c{text-align:center;white-space:nowrap}
+  td.c.na{color:#aaa}
+  footer{margin-top:3rem;font-size:.85rem;color:var(--muted);border-top:1px solid var(--line);padding-top:1rem}
+</style>
+</head>
+<body>
+<p class="muted"><a href="../../">10aday</a> › tools</p>
+<h1>Version sorter: sort version numbers the npm, Cargo, Composer, pip and RubyGems way</h1>
+<p>Sorting versions as text puts <code>1.10</code> before <code>1.9</code>. Sorting them “by numbers” is not enough either: each package manager has its own rules
+for pre-releases, post-releases, build metadata and missing parts. Paste a list of versions to see the order used by
+<strong>npm</strong> (node-semver), <strong>Cargo</strong> (crate semver), <strong>Composer</strong>, <strong>pip</strong> (PEP 440) and <strong>RubyGems</strong>, side by side, and where they disagree.</p>
+
+<label for="vs">Versions (one per line, or separated by spaces or commas)</label>
+<textarea id="vs" spellcheck="false" autocomplete="off">1.0.0
+1.0.0-rc.1
+1.0.0-alpha.10
+1.0.0-alpha.2
+1.0.0-1
+1.0.0+build.5
+1.10.0
+1.9.0
+2.0.0-beta</textarea>
+<div class="row">
+  <div class="chips" id="examples" aria-label="Examples"></div>
+  <div class="tog" id="order" style="flex:0 0 auto"><button type="button" data-o="1" aria-pressed="true">Oldest first</button><button type="button" data-o="-1" aria-pressed="false">Newest first</button></div>
+</div>
+<div id="res" role="status" aria-live="polite"></div>
+<p class="muted" style="font-size:.85rem">“=” marks a version that this package manager considers equal to the one above it. Greyed versions are not valid there. Runs in your browser; nothing is sent anywhere.</p>
+
+<!-- AADS slot: activate after HQ-004 -->
+
+<h2>Compare two versions</h2>
+<div class="row">
+  <div><label for="a">Version A</label><input type="text" id="a" value="1.0.0-1" autocomplete="off" spellcheck="false"></div>
+  <div><label for="b">Version B</label><input type="text" id="b" value="1.0.0" autocomplete="off" spellcheck="false"></div>
+</div>
+<div id="cmp" role="status" aria-live="polite"></div>
+
+<h2>Where package managers disagree</h2>
+<p>Each row compares A with B. “&lt;” means A is older, “&gt;” means A is newer, “—” means at least one of them is not a valid version there.</p>
+<div style="overflow-x:auto"><table>
+<thead><tr><th>A</th><th>B</th><th>npm</th><th>Cargo</th><th>Composer</th><th>pip</th><th>RubyGems</th><th>Why</th></tr></thead>
+<tbody id="ref"></tbody>
+</table></div>
+<p class="muted" style="font-size:.85rem">The comparison columns are computed by the same engine as the sorter when the page loads.</p>
+
+<h2>The rules in one paragraph each</h2>
+<p><strong>npm and Cargo (SemVer 2.0).</strong> Exactly three numbers, no leading zeros. A hyphen starts a pre-release, which comes before the release.
+Pre-release parts are split on dots: digit-only parts are compared as numbers, others as text (ASCII, so <code>RC</code> &lt; <code>alpha</code>). A <code>+build</code> suffix is ignored.
+npm accepts a leading <code>v</code>; Cargo does not.</p>
+<p><strong>pip (PEP 440).</strong> Any number of release numbers, padded with zeros. Order: <code>.devN</code> &lt; <code>aN</code> &lt; <code>bN</code> &lt; <code>rcN</code> &lt; release &lt; <code>.postN</code>.
+Many spellings are normalized (<code>1.0.0-rc.1</code> = <code>1.0.0rc1</code>, <code>1.0.0-1</code> = <code>1.0.0.post1</code>). A <code>+local</code> label sorts after the same public version.</p>
+<p><strong>Composer.</strong> Versions are normalized to four numbers (<code>1.2</code> → <code>1.2.0.0</code>) plus a stability: <code>dev</code> &lt; <code>alpha</code> &lt; <code>beta</code> &lt; <code>RC</code> &lt; stable &lt; <code>patch</code>.
+Then PHP's <code>version_compare</code> orders them. Branch names (<code>dev-main</code>) are not versions; <code>dev-master</code> is read as <code>9999999-dev</code>.</p>
+<p><strong>RubyGems.</strong> Any dot-separated parts. A part containing a letter makes the whole version a pre-release (<code>1.0.0.post1</code> is older than <code>1.0.0</code>!).
+A hyphen is read as <code>.pre.</code>. Trailing zeros do not count (<code>1.0</code> = <code>1</code>).</p>
+<p>Related: to check which versions a <em>constraint</em> such as <code>^1.2</code> or <code>~&gt; 2.1</code> accepts, use the <a href="../version-constraint-checker/">Version Constraint Checker</a>.
+For Python, see the <a href="../requires-python-checker/">requires-python checker</a> and the <a href="../pip-compatible-release/">pip ~= guide</a>; for npm ranges, the <a href="../tilde-vs-caret/">tilde vs caret guide</a>.</p>
+
+<h2>FAQ</h2>
+{{FAQ}}
+
+<h2>Sources</h2>
+<ul>
+<li><a href="https://semver.org/#spec-item-11">Semantic Versioning 2.0.0, rule 11 (precedence)</a>, used by npm and Cargo</li>
+<li><a href="https://github.com/npm/node-semver">node-semver</a> and <a href="https://docs.rs/semver/latest/semver/struct.Version.html">Rust crate semver</a> (<code>cmp_precedence</code>)</li>
+<li><a href="https://packaging.python.org/en/latest/specifications/version-specifiers/">Version specifiers (PEP 440)</a>: normalization and ordering</li>
+<li><a href="https://getcomposer.org/doc/articles/versions.md">Composer: versions and constraints</a> and <a href="https://github.com/composer/semver">composer/semver</a> (<code>Semver::sort</code>)</li>
+<li><a href="https://guides.rubygems.org/patterns/#prerelease-gems">RubyGems patterns: prerelease gems</a> and <a href="https://docs.ruby-lang.org/en/master/Gem/Version.html">Gem::Version</a></li>
+</ul>
+
+<footer>
+<p><strong>Built by AI agents</strong> as part of the <a href="../../">10aday</a> project. How it is tested: about 1,400 version strings (known traps and random ones) are compared pairwise by the real tools:
+node-semver 7.8.5, Rust semver 1.0.28, composer/semver 3.6, Python packaging 26.3 and RubyGems 3.5. This page gives the same answer in 307,000 checks out of 307,000.
+Found a mismatch? <a href="https://github.com/Lawatch/10aday/issues">Open an issue</a>.</p>
+</footer>
+
+<script src="../version-constraint-checker/semver.min.js"></script>
+<script src="../version-constraint-checker/vcc.js"></script>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var esc = function (s) { return String(s).replace(/[&<>"]/g, function (ch) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[ch]; }); };
+  var ECO = VCC.ecosystems, NAME = { npm: 'npm', cargo: 'Cargo', composer: 'Composer', pip: 'pip', rubygems: 'RubyGems' };
+  var dir = 1;
+  var EX = {
+    'Pre-releases': '1.0.0\n1.0.0-rc.1\n1.0.0-rc.2\n1.0.0-beta.11\n1.0.0-beta.2\n1.0.0-alpha\n1.0.0-alpha.1\n1.0.0-alpha.beta\n1.0.0-beta',
+    'Python': '1.0.0\n1.0.0.post1\n1.0.0.dev1\n1.0.0a1\n1.0.0rc1\n1.0.0+local.7\n1!0.5\n1.0\n0.9.10',
+    'Composer': '1.0.0\ndev-master\n1.0.x-dev\n1.0.0-RC1\n1.0.0-beta2\n1.0.0-patch1\nv2.0\n1.0.0-alpha',
+    'Gems': '1.0.0\n1.0.0.pre\n1.0.0.rc1\n1.0.0.beta.2\n1.0\n1\n1.0.0.1\n1.0.0-1',
+    'Text-sort trap': '1.9.0\n1.10.0\n1.2.0\n1.11.0\n10.0.0\n2.0.0\n1.0.0'
+  };
+  Object.keys(EX).forEach(function (k) {
+    var b = document.createElement('button'); b.type = 'button'; b.textContent = k;
+    b.onclick = function () { $('vs').value = EX[k]; run(); }; $('examples').appendChild(b);
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('#order button'), function (b) {
+    b.onclick = function () {
+      dir = Number(b.getAttribute('data-o'));
+      Array.prototype.forEach.call(document.querySelectorAll('#order button'), function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+      run();
+    };
+  });
+  function list() {
+    var seen = {}, out = [];
+    $('vs').value.split(/[\s,]+/).forEach(function (v) { if (v && !seen[v]) { seen[v] = 1; out.push(v); } });
+    return out.slice(0, 300);
+  }
+  function sym(c) { return c === null ? '—' : c < 0 ? '&lt;' : c > 0 ? '&gt;' : '='; }
+  function column(eco, vs) {
+    var E = VCC[eco], ok = [], bad = [];
+    vs.forEach(function (v, i) { (E.canon(v) === null ? bad : ok).push({ v: v, i: i }); });
+    ok.sort(function (x, y) { return dir * E.compare(x.v, y.v) || x.i - y.i; });
+    var h = '<div class="col"><h3>' + NAME[eco] + '</h3>';
+    if (ok.length) h += '<ol>' + ok.map(function (x, k) {
+      var tie = k > 0 && E.compare(ok[k - 1].v, x.v) === 0, c = E.canon(x.v);
+      return '<li' + (tie ? ' class="tie"' : '') + '>' + esc(x.v) + (c !== x.v ? ' <small>(' + esc(c) + ')</small>' : '') + '</li>';
+    }).join('') + '</ol>';
+    else h += '<p class="muted">No valid version.</p>';
+    if (bad.length) h += '<div class="inv">Not valid here: ' + bad.map(function (x) { return esc(x.v); }).join(', ') + '</div>';
+    return h + '</div>';
+  }
+  function disagreements(vs) {
+    var out = [];
+    for (var i = 0; i < vs.length && out.length < 12; i++) for (var j = i + 1; j < vs.length && out.length < 12; j++) {
+      var s = {};
+      ECO.forEach(function (e) { var c = VCC[e].compare(vs[i], vs[j]); if (c !== null) s[c] = 1; });
+      if (Object.keys(s).length > 1) out.push([vs[i], vs[j]]);
+    }
+    return out;
+  }
+  function rowCells(a, b) { return ECO.map(function (e) { var c = VCC[e].compare(a, b); return '<td class="c' + (c === null ? ' na' : '') + '">' + sym(c) + '</td>'; }).join(''); }
+  function run() {
+    var vs = list(), h = '<div class="cols">' + ECO.map(function (e) { return column(e, vs); }).join('') + '</div>';
+    var d = disagreements(vs);
+    if (d.length) h += '<div class="msg warn"><strong>The package managers do not agree on ' + d.length + (d.length === 12 ? '+' : '') + ' pair' + (d.length > 1 ? 's' : '') + '.</strong> A compared with B:</div>' +
+      '<div style="overflow-x:auto"><table><thead><tr><th>A</th><th>B</th>' + ECO.map(function (e) { return '<th>' + NAME[e] + '</th>'; }).join('') + '</tr></thead><tbody>' +
+      d.map(function (p) { return '<tr><td class="v">' + esc(p[0]) + '</td><td class="v">' + esc(p[1]) + '</td>' + rowCells(p[0], p[1]) + '</tr>'; }).join('') + '</tbody></table></div>';
+    else if (vs.length > 1) h += '<div class="msg ok">Wherever a pair is valid in several package managers, they agree on its order.</div>';
+    $('res').innerHTML = h;
+    try { history.replaceState(null, '', '#v=' + encodeURIComponent(vs.join(' '))); } catch (e) {}
+  }
+  function runCmp() {
+    var a = $('a').value.trim(), b = $('b').value.trim();
+    $('cmp').innerHTML = '<div style="overflow-x:auto"><table><thead><tr>' + ECO.map(function (e) { return '<th>' + NAME[e] + '</th>'; }).join('') + '</tr></thead><tbody><tr>' +
+      ECO.map(function (e) {
+        var c = VCC[e].compare(a, b), t;
+        if (c === null) { var bad = [a, b].filter(function (v) { return VCC[e].canon(v) === null; }); t = 'not valid: ' + esc(bad.join(', ')); }
+        else t = '<code>' + esc(a) + '</code> ' + (c < 0 ? 'is older than' : c > 0 ? 'is newer than' : 'equals') + ' <code>' + esc(b) + '</code>';
+        return '<td>' + t + '</td>';
+      }).join('') + '</tr></tbody></table></div>';
+  }
+  var REF = [
+    ['1.0.0-1', '1.0.0', 'pip reads -1 as a post-release (.post1); SemVer and RubyGems read it as a pre-release.'],
+    ['1.0.0+build.1', '1.0.0', 'Build metadata is ignored by SemVer and Composer; pip treats +build.1 as a local version, sorted after.'],
+    ['1.0.0.post1', '1.0.0', 'RubyGems: any letter makes a pre-release, so .post1 is older.'],
+    ['1.0.0.dev1', '1.0.0a1', 'pip: dev releases come before alphas. RubyGems compares the letters as text: "dev" > "a".'],
+    ['1.0.0-dev', '1.0.0-alpha', 'Composer and pip: dev is the lowest stability. SemVer compares as text: "dev" > "alpha".'],
+    ['1.0.0-patch1', '1.0.0', 'Composer: a patch release comes after the release. Elsewhere it is a pre-release.'],
+    ['1.0.0-alpha.10', '1.0.0-alpha.2', 'Digit-only parts are compared as numbers everywhere.'],
+    ['1.0.0-alpha10', '1.0.0-alpha2', 'Without the dot, SemVer compares alpha10 and alpha2 as text.'],
+    ['1.0', '1.0.0', 'Missing parts count as zeros, except in SemVer, where 1.0 is invalid.'],
+    ['v1.2.3', '1.2.3', 'npm, Composer and pip accept a leading v; Cargo and RubyGems do not.'],
+    ['1.0.0-SNAPSHOT', '1.0.0', 'A pre-release for SemVer and RubyGems; Composer and pip reject it.'],
+    ['dev-master', '2.0.0', 'Composer only: dev-master is read as 9999999-dev.']
+  ];
+  $('ref').innerHTML = REF.map(function (r) { return '<tr><td class="v">' + esc(r[0]) + '</td><td class="v">' + esc(r[1]) + '</td>' + rowCells(r[0], r[1]) + '<td>' + esc(r[2]) + '</td></tr>'; }).join('');
+  var m = /#v=([^&]*)/.exec(location.hash);
+  if (m) { try { $('vs').value = decodeURIComponent(m[1]).split(' ').join('\n'); } catch (e) {} }
+  $('vs').addEventListener('input', run); $('a').addEventListener('input', runCmp); $('b').addEventListener('input', runCmp);
+  run(); runCmp();
+})();
+</script>
+<script data-goatcounter="https://10aday.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
