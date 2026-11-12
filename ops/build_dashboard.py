@@ -50,7 +50,7 @@ def collect():
     cand = section(ideas_txt, "Candidates")
     n_ideas = len(re.findall(r"^\| ID-", cand, re.M))
     n_rejected = len(re.findall(r"^\| (?!Idée|---)", section(ideas_txt, "Rejetées"), re.M))
-    hq = re.findall(r"^### (HQ-\d+ — .*?)\s+\[🟡 ouvert\]", read("state/HUMAN_QUEUE.md"), re.M)
+    hq = [f"{t} — {x.strip()}" if x.strip() else t for t, x in re.findall(r"^### (HQ-\d+ — .*?)\s+\[🟡 ouvert(?:\s*—\s*)?([^\]]*)\]", read("state/HUMAN_QUEUE.md"), re.M)]
     journals = sorted(p for p in (ROOT / "journal").glob("20*.md"))
     since = (now_utc() - dt.timedelta(hours=24)).strftime("%Y-%m-%d-%H%M")
     runs24 = [p for p in journals if p.stem[:15] >= since]
