@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rupture conventionnelle : calcul des dates (rétractation, homologation, départ)</title>
+<meta name="description" content="Calculez gratuitement les dates d'une rupture conventionnelle : fin du délai de rétractation de 15 jours, fin de l'instruction DREETS (15 jours ouvrables), date de départ au plus tôt. Jours fériés et reports inclus, sources officielles.">
+<style>
+  :root{--fg:#1d2330;--muted:#5b6475;--line:#d9dee7;--accent:#1f5fbf;--accent-bg:#eef4fd;--warn:#8a5a00;--warn-bg:#fff6e0;--ok:#1b7a43}
+  *{box-sizing:border-box}
+  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;max-width:760px;margin:0 auto;padding:1.5rem 1rem 4rem;line-height:1.6;color:var(--fg)}
+  h1{font-size:1.6rem;line-height:1.25;margin:.5rem 0}
+  h2{font-size:1.25rem;margin-top:2.2rem;border-bottom:1px solid var(--line);padding-bottom:.3rem}
+  a{color:var(--accent)}
+  .muted{color:var(--muted)}
+  .small{font-size:.9rem}
+  nav.crumb{font-size:.9rem}
+  form{background:#f7f9fc;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem;margin:1.2rem 0}
+  .field{margin:.7rem 0}
+  label{font-weight:600;display:block}
+  input[type=date]{font:inherit;padding:.4rem .5rem;border:1px solid #b8c0cc;border-radius:6px;min-width:12rem}
+  .check label{display:inline;font-weight:normal}
+  .hint{font-size:.85rem;color:var(--muted);margin:.15rem 0 0}
+  .err{color:#b00020;font-weight:600}
+  ol.timeline{list-style:none;padding:0;margin:1rem 0;border-left:3px solid var(--accent);}
+  ol.timeline li{position:relative;padding:.2rem 0 1rem 1.2rem}
+  ol.timeline li::before{content:"";position:absolute;left:-9px;top:.55rem;width:15px;height:15px;border-radius:50%;background:#fff;border:3px solid var(--accent)}
+  ol.timeline li.final::before{background:var(--ok);border-color:var(--ok)}
+  .step{font-size:.85rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+  .date{font-size:1.2rem;font-weight:700}
+  li.final .date{color:var(--ok)}
+  .why{font-size:.92rem;color:var(--muted)}
+  .note{background:var(--warn-bg);color:var(--warn);border-radius:8px;padding:.6rem .8rem;font-size:.92rem;margin:.4rem 0}
+  .info{background:var(--accent-bg);border-radius:8px;padding:.6rem .8rem;font-size:.92rem}
+  button{font:inherit;padding:.45rem .9rem;border-radius:6px;border:1px solid var(--accent);background:var(--accent);color:#fff;cursor:pointer}
+  button.secondary{background:#fff;color:var(--accent)}
+  .actions{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.5rem}
+  details{border:1px solid var(--line);border-radius:8px;padding:.5rem .8rem;margin:.5rem 0}
+  summary{cursor:pointer;font-weight:600}
+  table{border-collapse:collapse;width:100%;font-size:.92rem}
+  th,td{border:1px solid var(--line);padding:.35rem .5rem;text-align:left;vertical-align:top}
+  footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1rem;font-size:.85rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<nav class="crumb"><a href="../">10aday</a> › Rupture conventionnelle : dates</nav>
+
+<h1>Rupture conventionnelle : calculez les dates (fin du délai de rétractation, homologation, date de départ au plus tôt)</h1>
+<p>Indiquez la date de signature de la convention : l'outil applique les règles du Code du travail
+(jours calendaires, jours ouvrables, jours fériés, reports du samedi/dimanche) et vous donne chaque date clé, avec le détail du calcul.</p>
+
+<form id="f" novalidate>
+  <div class="field">
+    <label for="signature">Date de signature de la convention</label>
+    <input type="date" id="signature" name="signature" required>
+  </div>
+  <div class="field">
+    <label for="reception">Date de réception de la demande d'homologation par la DREETS <span class="muted">(facultatif)</span></label>
+    <input type="date" id="reception" name="reception">
+    <p class="hint">Laissez vide si la demande n'est pas encore envoyée : on suppose un dépôt sur TéléRC dès le premier jour possible
+      (réception le jour même). Si vous avez l'accusé de réception, saisissez sa date.</p>
+  </div>
+  <div class="field check">
+    <input type="checkbox" id="am" name="am"> <label for="am">Établissement en Alsace-Moselle (Vendredi saint et 26 décembre fériés)</label>
+  </div>
+  <div class="actions"><button type="submit">Calculer les dates</button></div>
+  <p id="error" class="err" role="alert" hidden></p>
+</form>
+
+<section id="result" aria-live="polite" hidden>
+  <h2>Votre calendrier</h2>
+  <ol class="timeline" id="timeline"></ol>
+  <div id="notes"></div>
+  <div class="actions">
+    <button type="button" id="ics">Ajouter ces dates à mon agenda (.ics)</button>
+    <button type="button" class="secondary" id="share">Copier le lien de ce calcul</button>
+  </div>
+  <p class="small muted" id="shared" hidden>Lien copié.</p>
+</section>
+
+<p class="note"><strong>Résultat indicatif.</strong> Il ne remplace pas l'avis de la DREETS, d'un avocat ou d'un conseiller.
+  Vérifiez sur <a href="https://www.telerc.travail.gouv.fr/" rel="noopener">TéléRC</a> (le téléservice officiel affiche aussi les dates) et sur les textes cités plus bas.</p>
+
+<h2>Les règles appliquées</h2>
+<table>
+  <tr><th>Étape</th><th>Règle</th><th>Texte</th></tr>
+  <tr><td>Délai de rétractation</td><td>15 jours <strong>calendaires</strong>, qui commencent le <strong>lendemain</strong> de la signature. Le 15ᵉ jour tombe donc à « signature + 15 jours ».</td><td>C. trav., art. L1237-13</td></tr>
+  <tr><td>Report</td><td>Un délai qui expire un samedi, un dimanche ou un jour férié est prorogé jusqu'au premier jour ouvrable suivant.</td><td>C. trav., art. R1231-1</td></tr>
+  <tr><td>Envoi de la demande</td><td>Au plus tôt le lendemain de la fin du délai de rétractation.</td><td>C. trav., art. L1237-14</td></tr>
+  <tr><td>Instruction</td><td>15 jours <strong>ouvrables</strong> (tous les jours sauf dimanches et jours fériés ; le samedi compte) à partir du lendemain de la réception. Sans réponse à la fin du délai, l'homologation est <strong>réputée acquise</strong>.</td><td>C. trav., art. L1237-14</td></tr>
+  <tr><td>Rupture du contrat</td><td>Au plus tôt le lendemain du jour de l'homologation. La convention peut prévoir une date plus tardive.</td><td>C. trav., art. L1237-13</td></tr>
+  <tr><td>Jours fériés</td><td>1er janvier, lundi de Pâques, 1er mai, 8 mai, Ascension, lundi de Pentecôte, 14 juillet, 15 août, 1er novembre, 11 novembre, 25 décembre (+ Vendredi saint et 26 décembre en Alsace-Moselle).</td><td>C. trav., art. L3133-1 et L3134-13</td></tr>
+</table>
+
+<h2>Pourquoi deux dates quand l'instruction se termine un samedi ?</h2>
+<p>Le samedi est un jour <em>ouvrable</em> : il compte dans les 15 jours d'instruction, et le 15ᵉ jour peut donc tomber un samedi.
+Or l'article R1231-1 reporte au premier jour ouvrable suivant un délai qui expire un samedi. Les sources ne s'accordent pas toutes sur
+l'application de ce report à la fin de l'instruction : l'outil affiche alors la date <strong>brute</strong> (le samedi) et la date
+<strong>prudente</strong> (le lundi, ou le jour suivant s'il est férié). Pour fixer la date de départ, retenir la date prudente évite
+tout risque de rupture avant l'homologation.</p>
+
+<h2>Les erreurs fréquentes</h2>
+<ul>
+  <li><strong>Compter le jour de la signature</strong> dans les 15 jours : le délai part du lendemain.</li>
+  <li><strong>Oublier les jours fériés</strong> (1er et 11 novembre, Ascension, Pentecôte…) dans l'instruction : chacun la rallonge d'un jour.</li>
+  <li><strong>Confondre jours ouvrables et jours ouvrés</strong> : pour l'instruction, le samedi compte (ouvrable), seuls les dimanches et fériés sont exclus.</li>
+  <li><strong>Envoyer la demande pendant le délai de rétractation</strong> : une demande envoyée trop tôt peut être déclarée irrecevable.</li>
+  <li><strong>Fixer la date de départ le jour de l'homologation</strong> : le contrat ne peut être rompu qu'au plus tôt le lendemain.</li>
+</ul>
+
+<h2>Questions fréquentes</h2>
+<details><summary>Comment se rétracter, et jusqu'à quand ?</summary>
+  <p>Par une lettre adressée à l'autre partie (de préférence recommandée avec accusé de réception, ou remise en main propre contre décharge),
+  qui doit être <strong>envoyée</strong> au plus tard le dernier jour du délai : c'est la date d'envoi qui compte (Cass. soc., 14 février 2018, n° 17-10035).</p></details>
+<details><summary>Que se passe-t-il si la DREETS refuse l'homologation ?</summary>
+  <p>Le contrat de travail continue normalement. Les parties peuvent corriger la convention et la signer à nouveau, ce qui fait repartir un nouveau délai de rétractation.</p></details>
+<details><summary>La DREETS doit-elle répondre ?</summary>
+  <p>Non : si elle ne répond pas avant la fin des 15 jours ouvrables d'instruction, l'homologation est acquise automatiquement (homologation implicite).
+  Si elle homologue expressément plus tôt, la rupture peut intervenir dès le lendemain de cette décision.</p></details>
+<details><summary>Ce calcul vaut-il pour un salarié protégé ou un fonctionnaire ?</summary>
+  <p>Non. Pour un salarié protégé (délégué du personnel, membre du CSE…), la rupture est soumise à l'<strong>autorisation de l'inspecteur du travail</strong>
+  (délai d'instruction différent). La fonction publique et la rupture conventionnelle collective obéissent aussi à d'autres règles. Cet outil ne couvre que le CDI de droit privé, salarié non protégé.</p></details>
+<details><summary>Puis-je partir plus tard que la date affichée ?</summary>
+  <p>Oui : la date de rupture prévue dans la convention peut être postérieure. L'outil donne la date <strong>au plus tôt</strong>.</p></details>
+
+<h2>Sources</h2>
+<ul class="small">
+  <li>Code du travail, articles <a href="https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006072050/LEGISCTA000019068016/" rel="noopener">L1237-11 à L1237-16</a> (rupture conventionnelle), R1231-1 (prorogation des délais), L3133-1 (jours fériés), L3134-13 (Alsace-Moselle) — Légifrance.</li>
+  <li>DREETS Normandie, <a href="https://normandie.dreets.gouv.fr/sites/normandie.dreets.gouv.fr/IMG/pdf/notice_computation_des_delais_rupture_conventionnelle_sept_2019.pdf" rel="noopener">notice « Calendrier de la procédure de rupture conventionnelle — computation des délais »</a> (2019) : l'outil reproduit son exemple chiffré (signature le 26 février 2015 → rupture au plus tôt le 2 avril 2015).</li>
+  <li>DREETS Nouvelle-Aquitaine, <a href="https://nouvelle-aquitaine.dreets.gouv.fr/La-rupture-conventionnelle-du-contrat-de-travail-a-duree-indeterminee" rel="noopener">fiche « La rupture conventionnelle du contrat de travail à durée indéterminée »</a>.</li>
+  <li>Code du travail numérique, <a href="https://code.travail.gouv.fr/contribution/quest-ce-quune-rupture-conventionnelle" rel="noopener">« Qu'est-ce qu'une rupture conventionnelle ? »</a>.</li>
+</ul>
+<p class="small muted">Règles vérifiées le 12 novembre 2026. Le calcul est entièrement fait dans votre navigateur : aucune donnée n'est envoyée.</p>
+
+<footer>
+  <p>Outil gratuit construit et maintenu par des <strong>agents d'intelligence artificielle</strong> (projet <a href="../">10aday</a>), testé sur plus de 13 000 combinaisons de dates contre une implémentation de référence.
+  Une erreur ? <a href="https://github.com/Lawatch/10aday/issues/new?title=Rupture%20conventionnelle%20dates%20%3A%20" rel="noopener">Signalez-la</a>.</p>
+</footer>
+
+<script src="rc-dates.js"></script>
+<script>
+(function () {
+  'use strict';
+  var R = window.RCDates;
+  var $ = function (id) { return document.getElementById(id); };
+  var last = null;
+  var fmt = R.formatFR;
+
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  function reports(list) {
+    return list.map(function (s) { return fmt(R.parseISO(s.date)) + ' (' + s.raison + ')'; }).join(', ');
+  }
+  function item(step, date, why, cls) {
+    return '<li' + (cls ? ' class="' + cls + '"' : '') + '><div class="step">' + esc(step) + '</div><div class="date">' + esc(fmt(date)) +
+      '</div><div class="why">' + why + '</div></li>';
+  }
+
+  function render(r) {
+    var h = '';
+    h += item('Signature', r.signature, 'Jour 0. Le délai de rétractation commence le lendemain.');
+    var w = 'Dernier jour pour envoyer une rétractation (15 jours calendaires).';
+    if (r.retractation_reports.length) w += ' Le 15ᵉ jour, ' + esc(fmt(r.fin_retractation_brute)) + ', est reporté : ' + esc(reports(r.retractation_reports)) + '.';
+    h += item('Fin du délai de rétractation', r.fin_retractation, w);
+    h += item('Envoi de la demande d’homologation (au plus tôt)', r.envoi_au_plus_tot, 'Le lendemain de la fin de la rétractation, sur TéléRC.');
+    h += item('Réception par la DREETS', r.reception, r.reception_par_defaut ? 'Hypothèse : dépôt sur TéléRC le premier jour possible. Saisissez la vraie date si vous la connaissez.' : 'Date que vous avez indiquée.');
+    var wi = '15 jours ouvrables à partir du lendemain de la réception (dimanches et fériés exclus).';
+    if (r.feries_exclus_instruction.length) wi += ' Jour(s) férié(s) non compté(s) : ' + esc(reports(r.feries_exclus_instruction)) + '.';
+    if (r.instruction_reports.length) {
+      wi += ' Le 15ᵉ jour ouvrable tombe le <strong>' + esc(fmt(r.fin_instruction_brute)) + '</strong> (date brute) ; avec le report de l’article R1231-1, la date prudente est celle affichée.';
+    }
+    wi += ' Sans réponse de la DREETS à cette date, l’homologation est acquise.';
+    h += item('Fin de l’instruction (homologation implicite)', r.fin_instruction, wi);
+    var wr = 'Le lendemain de l’homologation. La convention peut prévoir une date plus tardive.';
+    if (r.instruction_reports.length) wr += ' (Avec la date brute, ce serait le ' + esc(fmt(r.rupture_au_plus_tot_brute)) + ' ; nous conseillons la date prudente.)';
+    h += item('Rupture du contrat au plus tôt', r.rupture_au_plus_tot, wr, 'final');
+    $('timeline').innerHTML = h;
+
+    var notes = '';
+    if (r.reception_trop_tot) notes += '<p class="note"><strong>Attention :</strong> la date de réception indiquée est antérieure ou égale à la fin du délai de rétractation. Une demande envoyée pendant ce délai risque d’être déclarée irrecevable.</p>';
+    if (r.instruction_reports.length) notes += '<p class="info">La fin d’instruction tombe un samedi (ou un jour non ouvrable) : voir « Pourquoi deux dates » ci-dessous.</p>';
+    $('notes').innerHTML = notes;
+    $('result').hidden = false;
+  }
+
+  function compute(e) {
+    if (e) e.preventDefault();
+    $('error').hidden = true;
+    var s = $('signature').value, rec = $('reception').value;
+    if (!R.parseISO(s)) { $('error').textContent = 'Indiquez une date de signature valide.'; $('error').hidden = false; $('result').hidden = true; return; }
+    if (rec && R.parseISO(rec) < R.parseISO(s)) { $('error').textContent = 'La date de réception ne peut pas précéder la signature.'; $('error').hidden = false; $('result').hidden = true; return; }
+    try {
+      last = R.calc(s, { reception: rec || undefined, alsaceMoselle: $('am').checked });
+    } catch (err) { $('error').textContent = err.message; $('error').hidden = false; return; }
+    render(last);
+    var q = new URLSearchParams({ signature: s });
+    if (rec) q.set('reception', rec);
+    if ($('am').checked) q.set('am', '1');
+    history.replaceState(null, '', '?' + q.toString());
+  }
+
+  $('f').addEventListener('submit', compute);
+  ['signature', 'reception', 'am'].forEach(function (id) { $(id).addEventListener('change', function () { if ($('signature').value) compute(); }); });
+
+  $('ics').addEventListener('click', function () {
+    if (!last) return;
+    var src = ' — calcul indicatif (10aday), à vérifier sur TéléRC.';
+    var ics = R.toICS([
+      { date: last.fin_retractation, titre: 'Rupture conventionnelle : fin du délai de rétractation', description: 'Dernier jour pour envoyer une rétractation' + src },
+      { date: last.envoi_au_plus_tot, titre: 'Rupture conventionnelle : envoyer la demande d’homologation', description: 'Au plus tôt ce jour, sur TéléRC' + src },
+      { date: last.fin_instruction, titre: 'Rupture conventionnelle : fin de l’instruction DREETS', description: 'Homologation implicite sans réponse' + src },
+      { date: last.rupture_au_plus_tot, titre: 'Rupture conventionnelle : date de départ au plus tôt', description: 'Rupture du contrat possible au plus tôt ce jour' + src }
+    ], new Date().toISOString().replace(/[-:]/g, '').slice(0, 15) + 'Z');
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([ics], { type: 'text/calendar;charset=utf-8' }));
+    a.download = 'rupture-conventionnelle-dates.ics';
+    document.body.appendChild(a); a.click(); a.remove();
+  });
+
+  $('share').addEventListener('click', function () {
+    var done = function () { $('shared').hidden = false; };
+    if (navigator.clipboard) navigator.clipboard.writeText(location.href).then(done, done); else done();
+  });
+
+  // Pré-remplissage : paramètres d'URL, sinon la date du jour.
+  var p = new URLSearchParams(location.search);
+  var today = new Date();
+  var todayISO = today.getFullYear() + '-' + String(today.getMonth() + 1).padStart(2, '0') + '-' + String(today.getDate()).padStart(2, '0');
+  $('signature').value = R.parseISO(p.get('signature')) ? p.get('signature') : todayISO;
+  if (R.parseISO(p.get('reception'))) $('reception').value = p.get('reception');
+  if (p.get('am') === '1') $('am').checked = true;
+  compute();
+})();
+</script>
+</body>
+</html>

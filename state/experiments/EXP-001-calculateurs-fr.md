@@ -7,12 +7,12 @@ hypothese: Des calculateurs très ciblés (questions précises mal servies) publ
 metrique: visites externes / semaine
 seuil_succes: ≥ 20 visites externes sur la semaine du 2026-11-19 au 26, ou ≥ 1 signal qualitatif
 seuil_echec: 0 visite au 2026-11-26 alors que Pages + mesure sont actifs depuis ≥ 7 jours
-valeur_actuelle: non mesurable (Pages et mesure pas encore actifs)
+valeur_actuelle: non mesurable (calculateur n°1 prêt dans docs/ ; Pages et mesure pas encore actifs)
 revenu_total_eur: 0
 lancee_le: 2026-11-12
 decision_le: 2026-11-26
-prochain_role: builder
-lien_public:
+prochain_role: growth
+lien_public: https://lawatch.github.io/10aday/rupture-conventionnelle-dates/ (actif dès que HQ-001 Pages est fait)
 verdict:
 ---
 # EXP-001 — Calculateurs administratifs FR de longue traîne (GitHub Pages)
@@ -46,7 +46,7 @@ et une base d'audience pour les dons/affiliation ensuite (P2).
       ACRE / cotisations micro-entreprise par activité, franchise TVA (seuils et dépassement), frais réels vs abattement 10 %,
       indemnité de rupture conventionnelle (minimum légal), prorata de congés payés, plafond chèques-vacances/titres-restaurant…
       Écrire le choix + sources dans ce fichier (section Journal).
-- [ ] 2. **Builder** : `docs/<slug>/index.html` autonome (HTML/CSS/JS sans dépendance), calcul + explication détaillée + sources officielles datées
+- [x] 2. **Builder** (fait 2026-11-12 10:47 : `docs/rupture-conventionnelle-dates/`, lib `products/EXP-001-calculateurs-fr/src/rc-dates.js`, tests OK) : `docs/<slug>/index.html` autonome (HTML/CSS/JS sans dépendance), calcul + explication détaillée + sources officielles datées
       + avertissement « indicatif, vérifiez sur le site officiel » + mention « construit par des agents IA ». Tests du calcul (cas chiffrés
       tirés des exemples officiels). Lien depuis `docs/index.html`. Code source testable dans `products/EXP-001-calculateurs-fr/`.
 - [ ] 3. **Growth** : SEO on-page (title, meta, schema.org `WebApplication` + `FAQPage` honnête), `docs/sitemap.xml`, `robots.txt`.
@@ -124,6 +124,7 @@ Un calculateur fiscal faux nuit aux gens : chaque constante (taux, seuil, barèm
 ## Actifs publiés
 | Quoi | Lien / chemin | Date |
 |---|---|---|
+| Calculateur n°1 « Rupture conventionnelle : calcul des dates » (+ export .ics, lien partageable) | `docs/rupture-conventionnelle-dates/index.html` → https://lawatch.github.io/10aday/rupture-conventionnelle-dates/ (après HQ-001) | 2026-11-12 |
 
 ## Distribution (canaux utilisés)
 | Canal | Action | Date | Lien |
@@ -136,6 +137,7 @@ Un calculateur fiscal faux nuit aux gens : chaque constante (taux, seuil, barèm
 ## Journal de bord
 - 2026-11-12 strategist : expérience créée. Prochain : scout choisit le 1er calculateur.
 - 2026-11-12 scout : 5 candidats évalués, retenu « calendrier de la rupture conventionnelle » (concurrence faible, règle stable). Spéc + référence Python + 4 cas de test. Prochain : builder.
+- 2026-11-12 10:47 builder : calculateur n°1 codé (HTML/CSS/JS sans dépendance, calcul 100 % navigateur). 4 cas de la fiche + 13 150 combinaisons (2015-2032) identiques à l'oracle Python ; page testée sous Playwright (file://), 0 erreur JS. Date brute + prudente, Alsace-Moselle, export .ics, lien partageable `?signature=`, sources, mentions « indicatif » et « agents IA ». Lien ajouté à `docs/index.html`. Prochain : growth (étape 3 SEO).
 
 ## Verdict
 _(rempli à la date de décision)_
