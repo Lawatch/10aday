@@ -160,6 +160,7 @@ en mois complets, choisit le salaire de référence le plus favorable et appliqu
   <div id="verdict"></div>
   <table id="detail"></table>
   <div id="notes"></div>
+  <p class="info">Combien vous restera-t-il ? <a id="toFiscR" href="../rupture-conventionnelle-impot-csg/">Calculez la CSG et la part imposable de cette indemnité</a>.</p>
   <p class="info">Et le chômage ? Une indemnité au-delà de ce minimum décale le début de l'indemnisation : <a id="toChom" href="../chomage-rupture-conventionnelle/">calculez votre date de début d'indemnisation</a>.</p>
   <div class="actions"><button type="button" class="secondary" id="share">Copier le lien de ce calcul</button></div>
   <p class="small muted" id="shared" hidden>Lien copié (il contient les montants saisis : partagez-le avec discernement).</p>
@@ -206,8 +207,9 @@ et le montant reste négociable. Il ne remplace pas l'avis d'un avocat, d'un con
   sauf disposition plus favorable. Comptent notamment : congés payés, congé maternité/paternité, arrêt pour accident du travail ou maladie professionnelle.
   Le congé parental d'éducation compte pour moitié. Indiquez le nombre de mois à retirer dans les options.</p></details>
 <details><summary>L'indemnité est-elle imposable ou soumise à cotisations ?</summary>
-  <p>Le régime social et fiscal dépend du montant, de votre âge et de vos droits à la retraite, et ses seuils changent chaque année : l'outil ne le calcule pas.
-  Consultez la fiche « indemnité spécifique de rupture conventionnelle » sur service-public.fr.</p></details>
+  <p>Le régime social et fiscal dépend du montant, du minimum légal, de votre salaire de l'année précédente et de vos droits à la retraite :
+  la part au-delà du minimum légal ou conventionnel subit la CSG/CRDS, et des cotisations s'ajoutent au-delà de 2 plafonds de la sécurité sociale.
+  <a id="toFisc" href="../rupture-conventionnelle-impot-csg/">Calculez la part imposable et la CSG de votre indemnité</a>.</p></details>
 <details><summary>Et si le montant proposé est inférieur au minimum ?</summary>
   <p>La DREETS peut refuser d'homologuer une convention dont l'indemnité est inférieure au minimum. Vous pouvez aussi la négocier avant de signer,
   ou vous rétracter dans les 15 jours calendaires qui suivent la signature (<a href="../rupture-conventionnelle-dates/">calculez la date limite</a>).</p></details>
@@ -228,7 +230,7 @@ et le montant reste négociable. Il ne remplace pas l'avis d'un avocat, d'un con
 
 <footer>
   <p>Outil gratuit construit et maintenu par des <strong>agents d'intelligence artificielle</strong> (projet <a href="../">10aday</a>), testé contre les exemples officiels et un calcul de contrôle indépendant.
-  Voir aussi : <a href="../rupture-conventionnelle/">rupture conventionnelle : les 3 calculs dans l'ordre</a> · <a href="../rupture-conventionnelle-dates/">calcul des dates de la rupture conventionnelle</a> · <a href="../chomage-rupture-conventionnelle/">date de début du chômage</a> · <a href="../indemnite-conges-payes-depart/">indemnité de congés payés au départ</a>.
+  Voir aussi : <a href="../rupture-conventionnelle/">rupture conventionnelle : les 3 calculs dans l'ordre</a> · <a href="../rupture-conventionnelle-dates/">calcul des dates de la rupture conventionnelle</a> · <a href="../rupture-conventionnelle-impot-csg/">impôt et CSG de l'indemnité</a> · <a href="../chomage-rupture-conventionnelle/">date de début du chômage</a> · <a href="../indemnite-conges-payes-depart/">indemnité de congés payés au départ</a>.
   Une erreur ? <a href="https://github.com/Lawatch/10aday/issues/new?title=Indemnit%C3%A9%20rupture%20conventionnelle%20%3A%20" rel="noopener">Signalez-la</a>.</p>
 </footer>
 
@@ -278,6 +280,8 @@ et le montant reste négociable. Il ne remplace pas l'avis d'un avocat, d'un con
     var cq = new URLSearchParams({ fin: v.fin, leg: String(r.minimum) });
     if (r.propose !== undefined) cq.set('ind', String(r.propose));
     $('toChom').href = '../chomage-rupture-conventionnelle/?' + cq.toString();
+    var fq = new URLSearchParams({ legal: String(r.minimum), ind: String(r.propose !== undefined ? r.propose : r.minimum), fin: v.fin });
+    $('toFiscR').href = '../rupture-conventionnelle-impot-csg/?' + fq.toString();
     var q = new URLSearchParams();
     F.forEach(function (k) { if (v[k] && v[k] !== '0') q.set(k, v[k]); });
     history.replaceState(null, '', '?' + q.toString());

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Indemnité de rupture conventionnelle : imposable ? CSG, cotisations, net (2026)</title>
+<meta name="description" content="Calculez la part imposable de votre indemnité de rupture conventionnelle, la part soumise à cotisations et la CSG/CRDS retenue (9,7 % au-delà du minimum légal ou conventionnel). PASS 2026, 2 et 10 PASS, salarié en droit à la retraite. Détail et articles de loi.">
+<link rel="canonical" href="https://lawatch.github.io/10aday/rupture-conventionnelle-impot-csg/">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="10aday">
+<meta property="og:title" content="Rupture conventionnelle : combien vous restera-t-il après CSG et impôt ?">
+<meta property="og:description" content="Part imposable, part soumise à cotisations, CSG/CRDS : le calcul détaillé de votre indemnité de rupture conventionnelle, gratuit et sans inscription.">
+<meta property="og:url" content="https://lawatch.github.io/10aday/rupture-conventionnelle-impot-csg/">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Calculateur impôt, cotisations et CSG de l'indemnité de rupture conventionnelle",
+      "url": "https://lawatch.github.io/10aday/rupture-conventionnelle-impot-csg/",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Tout navigateur web",
+      "inLanguage": "fr-FR",
+      "isAccessibleForFree": true,
+      "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"},
+      "description": "Calcule, pour une indemnité spécifique de rupture conventionnelle (CDI de droit privé), la part exonérée d'impôt sur le revenu (CGI art. 80 duodecies), la part exclue des cotisations (CSS L242-1, 2 PASS, 10 PASS), la base et le montant de CSG/CRDS (CSS L136-1-1) et le montant restant avant impôt. Calcul indicatif fait dans le navigateur.",
+      "featureList": ["Part imposable à l'impôt sur le revenu", "Part soumise à cotisations (2 PASS, 10 PASS)", "CSG et CRDS retenues, part déductible", "Salarié en droit de bénéficier d'une pension de retraite", "PASS 2025 et 2026"]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "10aday", "item": "https://lawatch.github.io/10aday/"},
+        {"@type": "ListItem", "position": 2, "name": "Rupture conventionnelle", "item": "https://lawatch.github.io/10aday/rupture-conventionnelle/"},
+        {"@type": "ListItem", "position": 3, "name": "Impôt, cotisations et CSG de l'indemnité", "item": "https://lawatch.github.io/10aday/rupture-conventionnelle-impot-csg/"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "L'indemnité de rupture conventionnelle est-elle imposable ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Si vous n'êtes pas en droit de bénéficier d'une pension de retraite, elle est exonérée d'impôt sur le revenu jusqu'au plus élevé de deux montants : l'indemnité légale ou conventionnelle de licenciement, ou 2 fois votre rémunération annuelle brute de l'année précédente (ou 50 % de l'indemnité si c'est plus), ce second montant étant limité à 6 fois le plafond annuel de la sécurité sociale (CGI, art. 80 duodecies, 1, 6°). Si vous pouvez prendre votre retraite, elle est entièrement imposable."}},
+        {"@type": "Question", "name": "Paie-t-on la CSG sur l'indemnité de rupture conventionnelle ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Oui, sur la part qui dépasse le montant légal ou conventionnel de l'indemnité de licenciement (ou qui dépasse la part exclue des cotisations, si elle est plus faible) : CSG 9,2 % et CRDS 0,5 %, sans abattement (CSS, art. L136-1-1, III, 5°). Au-delà de 10 plafonds annuels de la sécurité sociale, toute l'indemnité y est soumise."}},
+        {"@type": "Question", "name": "Y a-t-il des cotisations sociales sur l'indemnité ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "La part non imposable est exclue des cotisations dans la limite de 2 plafonds annuels de la sécurité sociale (96 120 € en 2026). Le surplus est soumis à cotisations ; si l'indemnité dépasse 10 plafonds (480 600 € en 2026), elle est soumise en totalité (CSS, art. L242-1, II, 7°)."}},
+        {"@type": "Question", "name": "Le montant de mon indemnité sur la convention de rupture est-il brut ou net ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Le montant inscrit dans la convention est un montant brut. Si l'indemnité ne dépasse pas le minimum légal ou conventionnel, vous la percevez en principe sans retenue ; au-delà, la CSG et la CRDS sont prélevées sur l'excédent, et des cotisations s'ajoutent au-delà de 2 plafonds."}}
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root{--fg:#1d2330;--muted:#5b6475;--line:#d9dee7;--accent:#1f5fbf;--accent-bg:#eef4fd;--warn:#8a5a00;--warn-bg:#fff6e0;--ok:#1b7a43}
+  *{box-sizing:border-box}
+  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;max-width:760px;margin:0 auto;padding:1.5rem 1rem 4rem;line-height:1.6;color:var(--fg)}
+  h1{font-size:1.6rem;line-height:1.25;margin:.5rem 0}
+  h2{font-size:1.25rem;margin-top:2.2rem;border-bottom:1px solid var(--line);padding-bottom:.3rem}
+  a{color:var(--accent)}
+  .muted{color:var(--muted)}
+  .small{font-size:.9rem}
+  nav.crumb{font-size:.9rem}
+  form{background:#f7f9fc;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem;margin:1.2rem 0}
+  .field{margin:.7rem 0}
+  label{font-weight:600;display:block}
+  input[type=date]{font:inherit;padding:.4rem .5rem;border:1px solid #b8c0cc;border-radius:6px;min-width:12rem}
+  .check label{display:inline;font-weight:normal}
+  .hint{font-size:.85rem;color:var(--muted);margin:.15rem 0 0}
+  .err{color:#b00020;font-weight:600}
+  ol.timeline{list-style:none;padding:0;margin:1rem 0;border-left:3px solid var(--accent);}
+  ol.timeline li{position:relative;padding:.2rem 0 1rem 1.2rem}
+  ol.timeline li::before{content:"";position:absolute;left:-9px;top:.55rem;width:15px;height:15px;border-radius:50%;background:#fff;border:3px solid var(--accent)}
+  ol.timeline li.final::before{background:var(--ok);border-color:var(--ok)}
+  .step{font-size:.85rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+  .date{font-size:1.2rem;font-weight:700}
+  li.final .date{color:var(--ok)}
+  .why{font-size:.92rem;color:var(--muted)}
+  .note{background:var(--warn-bg);color:var(--warn);border-radius:8px;padding:.6rem .8rem;font-size:.92rem;margin:.4rem 0}
+  .info{background:var(--accent-bg);border-radius:8px;padding:.6rem .8rem;font-size:.92rem}
+  button{font:inherit;padding:.45rem .9rem;border-radius:6px;border:1px solid var(--accent);background:var(--accent);color:#fff;cursor:pointer}
+  button.secondary{background:#fff;color:var(--accent)}
+  .actions{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.5rem}
+  details{border:1px solid var(--line);border-radius:8px;padding:.5rem .8rem;margin:.5rem 0}
+  summary{cursor:pointer;font-weight:600}
+  table{border-collapse:collapse;width:100%;font-size:.92rem}
+  th,td{border:1px solid var(--line);padding:.35rem .5rem;text-align:left;vertical-align:top}
+  footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1rem;font-size:.85rem;color:var(--muted)}
+</style>
+<style>
+  input[type=number]{font:inherit;padding:.4rem .5rem;border:1px solid #b8c0cc;border-radius:6px;width:12rem}
+  .big{font-size:1.9rem;font-weight:800;color:var(--ok);margin:.3rem 0}
+  .ko{color:#b00020}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:0 1.2rem}
+  @media (max-width:560px){.grid{grid-template-columns:1fr}}
+  td.num{text-align:right;white-space:nowrap}
+</style>
+</head>
+<body>
+<nav class="crumb"><a href="../">10aday</a> › <a href="../rupture-conventionnelle/">Rupture conventionnelle</a> › Impôt, cotisations et CSG</nav>
+
+<h1>Indemnité de rupture conventionnelle : part imposable, CSG et cotisations</h1>
+<p>Le montant écrit dans la convention est <strong>brut</strong>. Combien vous restera-t-il ? L'outil applique les trois régimes (impôt sur le revenu,
+cotisations sociales, CSG/CRDS) avec les seuils 2026, et montre le détail de chaque étape.</p>
+
+<form id="f" novalidate>
+  <div class="grid">
+    <div class="field">
+      <label for="ind">Indemnité de rupture conventionnelle brute (€)</label>
+      <input type="number" id="ind" min="0" step="0.01" inputmode="decimal" placeholder="ex. 20000" required>
+      <p class="hint">Le montant inscrit dans la convention de rupture.</p>
+    </div>
+    <div class="field">
+      <label for="legal">Indemnité légale ou conventionnelle de licenciement (€)</label>
+      <input type="number" id="legal" min="0" step="0.01" inputmode="decimal" placeholder="ex. 8000" required>
+      <p class="hint">Le minimum auquel vous avez droit (le plus élevé du légal et du conventionnel). <a href="../rupture-conventionnelle-indemnite/">Calculez le minimum légal</a>.</p>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="field">
+      <label for="rem">Rémunération annuelle brute de l'année précédant la rupture (€)</label>
+      <input type="number" id="rem" min="0" step="0.01" inputmode="decimal" placeholder="ex. 40000">
+      <p class="hint">Année civile précédente (rupture en 2026 → salaire brut 2025). Ne compte que pour l'impôt.</p>
+    </div>
+    <div class="field">
+      <label for="an">Année du versement</label>
+      <select id="an" style="font:inherit;padding:.4rem .5rem;border:1px solid #b8c0cc;border-radius:6px"><option value="2026" selected>2026 (PASS 48 060 €)</option><option value="2025">2025 (PASS 47 100 €)</option></select>
+    </div>
+  </div>
+  <div class="field check"><input type="checkbox" id="ret"> <label for="ret">Je suis en droit de bénéficier d'une pension de retraite d'un régime obligatoire (âge et trimestres atteints)</label></div>
+  <div class="actions"><button type="submit">Calculer</button></div>
+  <p id="error" class="err" role="alert" hidden></p>
+</form>
+
+<section id="result" aria-live="polite" hidden>
+  <h2>Résultat</h2>
+  <p class="muted small">Montant estimé après CSG/CRDS, avant impôt sur le revenu :</p>
+  <p class="big" id="total"></p>
+  <div id="verdict"></div>
+  <table id="detail"></table>
+  <div id="notes"></div>
+  <p class="info">Une indemnité supérieure au minimum légal décale aussi le début du chômage : <a id="toChom" href="../chomage-rupture-conventionnelle/">calculez votre date de début d'indemnisation</a>.</p>
+  <div class="actions"><button type="button" class="secondary" id="share">Copier le lien de ce calcul</button></div>
+  <p class="small muted" id="shared" hidden>Lien copié (il contient les montants saisis : partagez-le avec discernement).</p>
+</section>
+
+<p class="note"><strong>Résultat indicatif.</strong> Il suppose un CDI de droit privé rompu par rupture conventionnelle individuelle homologuée.
+Les cotisations salariales sur la part au-delà de 2 plafonds ne sont pas chiffrées (elles dépendent de vos autres salaires de l'année) ;
+l'impôt dépend de votre foyer fiscal. Vérifiez votre bulletin de paie de sortie et, en cas de doute, demandez à votre employeur ou au service des impôts.</p>
+
+<h2>Les règles appliquées</h2>
+<table>
+  <tr><th>Prélèvement</th><th>Part exonérée</th><th>Texte</th></tr>
+  <tr><td>Impôt sur le revenu</td><td>Le plus élevé de : <strong>(b)</strong> l'indemnité légale ou conventionnelle de licenciement ; <strong>(a)</strong> 2 × la rémunération annuelle brute de l'année précédente, ou 50 % de l'indemnité si c'est plus, <strong>limité à 6 PASS</strong> (288 360 € en 2026).
+    Aucune exonération si vous êtes en droit de bénéficier d'une pension de retraite.</td><td>CGI, art. 80 duodecies, 1, 6°</td></tr>
+  <tr><td>Cotisations sociales</td><td>La part non imposable, dans la limite de <strong>2 PASS</strong> (96 120 € en 2026). Indemnité supérieure à <strong>10 PASS</strong> (480 600 €) : tout est soumis.
+    Droit à la retraite : même limite de 2 PASS, appliquée au plus élevé de (a) et (b).</td><td>CSS, art. L242-1, II, 7°</td></tr>
+  <tr><td>CSG (9,2 %) et CRDS (0,5 %)</td><td>Le plus petit de : l'indemnité légale ou conventionnelle, et la part exclue des cotisations. Pas d'abattement de 1,75 %. Au-delà de 10 PASS : tout est soumis.</td><td>CSS, art. L136-1-1, III, 5° ; L136-8</td></tr>
+</table>
+
+<h2>Exemples</h2>
+<ul>
+  <li>Indemnité 20 000 €, minimum légal 8 000 €, salaire 2025 de 40 000 € : <strong>non imposable</strong> (sous 2 × 40 000 €), <strong>pas de cotisations</strong> (sous 2 PASS),
+    CSG/CRDS sur 12 000 € = 1 104 € + 60 € = <strong>1 164 €</strong> → 18 836 € avant impôt.</li>
+  <li>Indemnité 150 000 €, minimum 30 000 €, salaire 60 000 € : 120 000 € non imposables, <strong>30 000 € imposables</strong> ; cotisations sur 53 880 € (au-delà de 96 120 €) ;
+    CSG/CRDS sur 120 000 € = 11 640 €.</li>
+  <li>Même indemnité de 20 000 € pour un salarié qui peut prendre sa retraite : <strong>20 000 € imposables</strong>, pas de cotisations, CSG/CRDS sur 12 000 €.</li>
+</ul>
+
+<h2>Les erreurs fréquentes</h2>
+<ul>
+  <li><strong>Croire que tout est net</strong> : seule la part égale au minimum légal ou conventionnel échappe à la CSG/CRDS. Au-delà, 9,7 % sont prélevés.</li>
+  <li><strong>Confondre exonération d'impôt et de CSG</strong> : une indemnité peut être totalement non imposable et pourtant subir la CSG.</li>
+  <li><strong>Oublier le cas « droit à la retraite »</strong> : si vous avez l'âge et les trimestres, l'indemnité est imposable en totalité, même si vous ne liquidez pas votre pension.</li>
+  <li><strong>Prendre le salaire de l'année en cours</strong> pour le critère des 2 × salaire : c'est l'année civile qui précède la rupture.</li>
+</ul>
+
+<h2>Questions fréquentes</h2>
+<details><summary>L'indemnité de rupture conventionnelle est-elle imposable ?</summary>
+  <p>Si vous n'êtes pas en droit de bénéficier d'une pension de retraite, elle est exonérée d'impôt sur le revenu jusqu'au plus élevé de deux montants :
+  l'indemnité légale ou conventionnelle de licenciement, ou 2 fois votre rémunération annuelle brute de l'année précédente (ou 50 % de l'indemnité si c'est plus),
+  ce second montant étant limité à 6 fois le plafond annuel de la sécurité sociale (CGI, art. 80 duodecies, 1, 6°). Si vous pouvez prendre votre retraite, elle est entièrement imposable.</p></details>
+<details><summary>Paie-t-on la CSG sur l'indemnité de rupture conventionnelle ?</summary>
+  <p>Oui, sur la part qui dépasse le montant légal ou conventionnel de l'indemnité de licenciement (ou qui dépasse la part exclue des cotisations, si elle est plus faible) :
+  CSG 9,2 % et CRDS 0,5 %, sans abattement (CSS, art. L136-1-1, III, 5°). Au-delà de 10 plafonds annuels de la sécurité sociale, toute l'indemnité y est soumise.
+  La CSG est déductible à hauteur de 6,8 % de la base ; le reste (CSG 2,4 % et CRDS) s'ajoute au revenu imposable de la part imposable.</p></details>
+<details><summary>Y a-t-il des cotisations sociales sur l'indemnité ?</summary>
+  <p>La part non imposable est exclue des cotisations dans la limite de 2 plafonds annuels de la sécurité sociale (96 120 € en 2026). Le surplus est soumis à cotisations ;
+  si l'indemnité dépasse 10 plafonds (480 600 € en 2026), elle est soumise en totalité (CSS, art. L242-1, II, 7°).</p></details>
+<details><summary>Le montant de mon indemnité sur la convention de rupture est-il brut ou net ?</summary>
+  <p>Le montant inscrit dans la convention est un montant brut. Si l'indemnité ne dépasse pas le minimum légal ou conventionnel, vous la percevez en principe sans retenue ;
+  au-delà, la CSG et la CRDS sont prélevées sur l'excédent, et des cotisations s'ajoutent au-delà de 2 plafonds.</p></details>
+<details><summary>Et la contribution patronale ?</summary>
+  <p>L'employeur paie une contribution spécifique sur la part de l'indemnité exclue des cotisations (CSS, art. L137-12). Elle est à sa charge et ne réduit pas votre indemnité :
+  l'outil ne la calcule pas.</p></details>
+
+<h2>Sources</h2>
+<ul class="small">
+  <li>Code général des impôts, <a href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000041464202/" rel="noopener">art. 80 duodecies</a> (version en vigueur depuis le 16 février 2025).</li>
+  <li>Code de la sécurité sociale, <a href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033712583/" rel="noopener">art. L242-1</a> (version en vigueur depuis le 31 décembre 2025),
+    <a href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000053282440/" rel="noopener">art. L136-1-1</a> (version en vigueur depuis le 22 octobre 2026), art. L136-8 (taux de CSG).</li>
+  <li>Plafond annuel de la sécurité sociale 2026 : 48 060 € (arrêté du 22 décembre 2025, JO du 23 décembre 2025).</li>
+  <li>Code du travail, <a href="https://code.travail.gouv.fr/code-du-travail/l1237-13" rel="noopener">art. L1237-13</a> (minimum de l'indemnité).</li>
+</ul>
+<p class="small muted">Textes consultés le 12 novembre 2026. Le calcul est entièrement fait dans votre navigateur : aucun montant n'est envoyé.</p>
+
+<footer>
+  <p>Outil gratuit construit et maintenu par des <strong>agents d'intelligence artificielle</strong> (projet <a href="../">10aday</a>), testé contre des cas chiffrés et un calcul de contrôle indépendant.
+  Voir aussi : <a href="../rupture-conventionnelle/">rupture conventionnelle : les calculs dans l'ordre</a> · <a href="../rupture-conventionnelle-indemnite/">indemnité minimale</a> · <a href="../rupture-conventionnelle-dates/">calcul des dates</a> · <a href="../chomage-rupture-conventionnelle/">date de début du chômage</a> · <a href="../indemnite-conges-payes-depart/">indemnité de congés payés au départ</a>.
+  Une erreur ? <a href="https://github.com/Lawatch/10aday/issues/new?title=Imp%C3%B4t%20CSG%20rupture%20conventionnelle%20%3A%20" rel="noopener">Signalez-la</a>.</p>
+</footer>
+
+<script src="rc-fiscal.js"></script>
+<script>
+(function () {
+  'use strict';
+  var R = window.RCFiscal, eur = R.eur;
+  var $ = function (id) { return document.getElementById(id); };
+  var F = ['ind', 'legal', 'rem', 'an'];
+  function err(msg) { $('error').textContent = msg; $('error').hidden = false; $('result').hidden = true; }
+  function row(a, b, c, strong) { return '<tr><td>' + (strong ? '<strong>' + a + '</strong>' : a) + '</td><td>' + b + '</td><td class="num">' + (strong ? '<strong>' + c + '</strong>' : c) + '</td></tr>'; }
+
+  function compute(e) {
+    if (e) e.preventDefault();
+    $('error').hidden = true;
+    var v = {}; F.forEach(function (k) { v[k] = $(k).value; });
+    if (!v.ind || !v.legal) return err("Indiquez l'indemnité versée et le minimum légal ou conventionnel.");
+    var r;
+    try { r = R.calc({ indemnite: v.ind, legal: v.legal, remuneration: v.rem, annee: v.an, retraite: $('ret').checked }); }
+    catch (x) { return err(x.message); }
+    $('total').textContent = eur(r.net_avant_impot);
+    var p = r.pass, h = '<tr><th>Élément</th><th>Calcul</th><th>Montant</th></tr>';
+    if (r.retraite) h += row('Part exonérée d\u2019impôt', 'droit à une pension de retraite : aucune exonération', eur(0));
+    else {
+      h += row('Critère (a)', 'max(2 × ' + eur(r.remuneration) + ' ; 50 % × ' + eur(r.indemnite) + ')' + (r.critere_a_plafonne ? ', plafonné à 6 PASS' : ''), eur(r.critere_a));
+      h += row('Critère (b)', 'minimum légal ou conventionnel', eur(r.legal));
+      h += row('Part exonérée d\u2019impôt', 'le plus élevé, dans la limite de l\u2019indemnité', eur(r.exonere_ir));
+    }
+    h += row('Part imposable', 'à déclarer avec vos salaires', eur(r.imposable_ir), true);
+    h += row('Part exclue des cotisations', r.plus_10_pass ? 'indemnité &gt; 10 PASS (' + eur(10 * p) + ') : aucune' : 'part non imposable' + (r.retraite ? ' (a/b)' : '') + ', limite 2 PASS = ' + eur(2 * p), eur(r.exonere_cotisations));
+    h += row('Part soumise à cotisations', '', eur(r.base_cotisations), true);
+    h += row('Part exclue de la CSG/CRDS', r.plus_10_pass ? 'indemnité &gt; 10 PASS : aucune' : 'le plus petit du minimum légal et de la part exclue des cotisations', eur(r.exonere_csg));
+    h += row('Base CSG/CRDS', 'sans abattement', eur(r.base_csg));
+    h += row('CSG 9,2 %', 'dont déductible 6,8 % : ' + eur(r.csg_deductible), eur(r.csg));
+    h += row('CRDS 0,5 %', '', eur(r.crds));
+    h += row('Reste avant impôt', eur(r.indemnite) + ' − CSG − CRDS' + (r.base_cotisations > 0 ? ' (hors cotisations salariales)' : ''), eur(r.net_avant_impot), true);
+    $('detail').innerHTML = h;
+    var verdict = r.base_csg === 0
+      ? '<p class="info">Votre indemnité ne dépasse pas la part exonérée : <strong>aucune CSG/CRDS ni cotisation</strong>' + (r.imposable_ir ? '.' : ' et <strong>rien d\u2019imposable</strong>.') + '</p>'
+      : '<p class="info">CSG/CRDS prélevées : <strong>' + eur(r.csg_crds) + '</strong>' + (r.imposable_ir ? ' ; part imposable : <strong>' + eur(r.imposable_ir) + '</strong>.' : ' ; rien d\u2019imposable.') + '</p>';
+    $('verdict').innerHTML = verdict;
+    var notes = '';
+    if (!r.retraite && !r.remuneration_fournie && r.imposable_ir > 0) notes += '<p class="note ko"><strong>Rémunération de l\u2019année précédente non saisie</strong> : le critère « 2 × salaire annuel » n\u2019a pas pu être appliqué, la part imposable est sans doute surestimée. Renseignez-la ci-dessus.</p>';
+    if (r.base_cotisations > 0) notes += '<p class="note">' + eur(r.base_cotisations) + ' sont soumis aux cotisations salariales en plus : le montant final sera inférieur au chiffre affiché.</p>';
+    if (r.sous_le_minimum) notes += '<p class="note ko">L\u2019indemnité saisie est inférieure au minimum légal ou conventionnel : la DREETS peut refuser l\u2019homologation.</p>';
+    if (r.imposable_ir > 0) notes += '<p class="small muted">Part imposable : vous pouvez demander le système du quotient (art. 163-0 A du CGI) pour lisser l\u2019impôt sur un revenu exceptionnel.</p>';
+    $('notes').innerHTML = notes;
+    $('result').hidden = false;
+    var cq = new URLSearchParams({ leg: String(r.legal), ind: String(r.indemnite) });
+    var fin = new URLSearchParams(location.search).get('fin'); if (fin) cq.set('fin', fin);
+    $('toChom').href = '../chomage-rupture-conventionnelle/?' + cq.toString();
+    var q = new URLSearchParams();
+    F.forEach(function (k) { if (v[k]) q.set(k, v[k]); });
+    if ($('ret').checked) q.set('ret', '1');
+    if (fin) q.set('fin', fin);
+    history.replaceState(null, '', '?' + q.toString());
+  }
+
+  $('f').addEventListener('submit', compute);
+  F.concat(['ret']).forEach(function (id) { $(id).addEventListener('change', function () { if ($('ind').value && $('legal').value) compute(); }); });
+  $('share').addEventListener('click', function () {
+    var done = function () { $('shared').hidden = false; };
+    if (navigator.clipboard) navigator.clipboard.writeText(location.href).then(done, done); else done();
+  });
+
+  var p = new URLSearchParams(location.search);
+  F.forEach(function (k) { if (p.get(k)) $(k).value = p.get(k); });
+  if (p.get('ret') === '1') $('ret').checked = true;
+  if ($('ind').value && $('legal').value) compute();
+})();
+</script>
+<!-- Mesure d'audience : GoatCounter (sans cookie) -->
+<script data-goatcounter="https://10aday.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
