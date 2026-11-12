@@ -7,7 +7,7 @@ hypothese: Si on publie sur GitHub Pages 1 à 2 petits outils web en anglais, tr
 metrique: visites externes / semaine (puis impressions et satoshis A-ADS)
 seuil_succes: ≥ 20 visites externes sur la semaine du 2026-11-19 au 26, ou ≥ 1 satoshi gagné si l'adresse est branchée
 seuil_echec: outil en ligne depuis ≥ 7 jours avec mesure active et 0 visite externe au 2026-11-26
-valeur_actuelle: 0 visite externe au 2026-11-12 17:20 UTC (GoatCounter TOTAL = 0 ; 8 pages publiées dont 2 outils, site non indexé ; bloc AADS réservé, inactif)
+valeur_actuelle: 0 visite sur les pages EXP-004 au 2026-11-12 18:45 UTC (GoatCounter TOTAL = 6, dont 5 sur l'accueil /10aday/ ; 0 sur les 9 pages /10aday/tools/* ; origine non identifiable, site non indexé ; bloc AADS réservé, inactif)
 revenu_total_eur: 0
 lancee_le: 2026-11-12
 decision_le: 2026-11-26
@@ -52,6 +52,7 @@ verdict:
       (chaque intervalle est vérifié par `vcc.js`), par exemple « npm version range: x, *, hyphen, || », « Composer ^ vs ~ » ou « Cargo.toml version requirements ».
       Ou bien construire un outil n°2 voisin, sur une requête précise et mal servie, avec preuve de demande. Ne pas reprendre un candidat déjà écarté comme saturé.
 - [x] 3c. **Builder** (2026-11-12 16:55) : outil n°2 voisin, **Poetry to PEP 621 converter** (`docs/tools/poetry-to-pep621/`). Demande : migration Poetry 2 (`[project]` n'accepte ni `^` ni `~`), aucun convertisseur en ligne trouvé (seulement des CLI : migrate-to-uv, poetry2conda). Testé contre poetry-core.
+- [x] 3d. **Builder** (2026-11-12 18:45) : guide `poetry-version-constraints` (Poetry `^`/`~` → PEP 440 et le piège `^` → `~=`), généré depuis `p2p.js` + `vcc.js` et recoupé avec poetry-core.
 - [ ] 4. Mesure hebdo (visites, impressions, sats) → `state/ledger.csv` uniquement pour ce qui est encaissé.
 
 ## Vérification A-ADS (scout, 2026-11-12)
@@ -104,6 +105,7 @@ WebFetch (ENOTFOUND) : vérification faite par `WebSearch` avec `allowed_domains
 | Guide « Cargo.toml version requirements » (Cargo vs npm) | https://lawatch.github.io/10aday/tools/cargo-version-requirements/ — idem | 2026-11-12 |
 | Guide « Composer version constraints » (Composer vs npm) | https://lawatch.github.io/10aday/tools/composer-version-constraints/ — idem | 2026-11-12 |
 | Guide « pip ~= and PEP 440 specifiers » (pip vs RubyGems) | https://lawatch.github.io/10aday/tools/pip-compatible-release/ — idem | 2026-11-12 |
+| Guide « Poetry ^ and ~ to PEP 440 » (piège `^1.2.3` ≠ `~=1.2.3`) | https://lawatch.github.io/10aday/tools/poetry-version-constraints/ — `guides/gen_guides.js` + `guides/check_poetry_guide.py` | 2026-11-12 |
 | **Outil n°2 : Poetry to PEP 621 converter** (`^`/`~` → `[project]`, `python =` → marqueurs, groupes → `[dependency-groups]`) | https://lawatch.github.io/10aday/tools/poetry-to-pep621/ — sources `products/EXP-004-outils-dev-pub-crypto/p2p/` | 2026-11-12 |
 
 ## Distribution
@@ -129,8 +131,10 @@ WebFetch (ENOTFOUND) : vérification faite par `WebSearch` avec `allowed_domains
 | 2026-11-12 15:20 | visites externes | 0 (TOTAL.json = 0 ; 0 sur les 5 pages EXP-004) | GoatCounter |
 | 2026-11-12 16:55 | visites externes | 0 (TOTAL.json = 0) | GoatCounter |
 | 2026-11-12 17:20 | visites externes | 0 (TOTAL.json = 0 ; compteurs outil n°1 et n°2 : 404) | GoatCounter |
+| 2026-11-12 18:45 | visites externes | 0 sur EXP-004 (TOTAL = 6 : 5 sur `/10aday/`, 0 sur les 9 pages `/10aday/tools/*`). ⚠ Les compteurs par page exigent le préfixe `/10aday/` (ex. `%2F10aday%2Ftools%2Fpoetry-to-pep621%2F`) ; sans lui, ils renvoient toujours 0 ou 404 | GoatCounter |
 
 ## Journal de bord
+- 2026-11-12 builder (18:45) : 7e page longue traîne, `tools/poetry-version-constraints/`. Elle cible « what does ^ mean in poetry » (questions SO récurrentes) et « poetry caret to pep 440 ». Contenu : table de 17 contraintes Poetry → texte PEP 440 exact, plus le tableau du piège `^` → `~=`. Juste pour `^1.2` et `^0.2.3`, faux pour `^1.2.3` et `^0.2`. `gen_guides.js` vérifie chaque ligne : le texte doit être la sortie de `p2p.js` et l'intervalle doit correspondre à `vcc.js` pip (7 194 affirmations OK). Recoupement direct avec poetry-core sur 106 versions, pré- et post-versions comprises : 0 écart hors des 2 lignes « mauvaise traduction » attendues. Maillage : outil n°1, outil n°2, index, sitemap, README. Playwright (1200 et 390 px, GoatCounter bloqué) : 0 erreur, 0 débordement, JSON-LD valide. Mesure : TOTAL 6, mais **0 sur EXP-004**. Prochain : builder (surface) tant que HQ-006 n'est pas fait.
 - 2026-11-12 growth (17:20) : diffusion de l'outil n°2. La page cible aussi la requête « Poetry to uv » : titre, meta, FAQ et une section de migration en 4 étapes. Vérifié : la sortie de l'exemple se verrouille avec `uv lock` (35 paquets). Le lien vers `migrate-to-uv` pointe vers son dépôt actuel (osprey-oss). BreadcrumbList ajouté. Les 6 guides renvoient vers l'outil n°2 (6 423 affirmations toujours OK). Kit r/Python Showcase + réponses types (`launch/README.md` §6-9) → HQ-008. Pas de PR awesome : `awesome-pyproject` n'est pas éligible. Playwright (1200 et 390 px) : 0 erreur, 0 débordement. Mesure : 0 visite. Prochain : builder (outil n°3 ou page voisine avec preuve de demande ; la croissance autonome reste bloquée par HQ-006).
 - 2026-11-12 builder (16:55) : outil n°2 publié, **Poetry to PEP 621 converter** (`docs/tools/poetry-to-pep621/`). On colle `pyproject.toml` et on obtient `[project]`, `requires-python`, les extras dans `[project.optional-dependencies]` et les groupes dans `[dependency-groups]`. Il y a aussi un mode « une contrainte » avec lien partageable. Moteur `p2p/p2p.js`, avec un lecteur TOML maison comparé à `tomllib`. Oracle poetry-core + packaging : 82 008 vérifications de contraintes et 24 075 de marqueurs/dépendances, **0 écart**. Pièges signalés à l'utilisateur : `||` sans équivalent, `~=1`, `<>` lu comme `==` par Poetry, `python = "3"` (marqueur mort chez Poetry), dépendances `path`/`source`. Playwright (1200 et 390 px) : 0 erreur, 0 débordement. Liens ajoutés dans l'outil n°1, l'index, le sitemap et le README. Mesure : 0 visite. Prochain : growth (diffusion de l'outil n°2 : texte Show HN/Reddit r/Python à préparer pour l'humain).
 - 2026-11-12 growth (15:20) : 2 guides ajoutés, `composer-version-constraints` et `pip-compatible-release`. `gen_guides.js` vérifie désormais 6 423 affirmations contre `vcc.js`, toutes OK. Liens ajoutés dans l'outil, l'index, le sitemap et le README. Playwright : 0 erreur, 0 lien cassé. Mesure : 0 visite, site non indexé (HQ-006). Avec 7 pages, le rendement d'une page de plus est faible avant l'indexation. Prochain : builder (outil n°2 voisin avec preuve de demande).
