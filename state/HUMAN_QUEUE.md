@@ -18,7 +18,7 @@ Format :
 ### HQ-001 — Activer GitHub Pages sur le dépôt  [🟡 ouvert]
 - Demandé par / le : cadrage initial, 2026-11-12
 - Pourquoi : c'est notre hébergement web gratuit ; sans lui, aucun site/outil n'est accessible publiquement (palier P0).
-- Action exacte : GitHub → `Lawatch/10aday` → Settings → Pages → Source « Deploy from a branch » → Branch `main`, dossier `/docs` → Save. (Le dépôt doit être public pour Pages gratuit.)
+- Action exacte : (a) GitHub → `Lawatch/10aday` → Settings → General → Default branch → choisir `main`. (b) Settings → Pages → Source « Deploy from a branch » → Branch `main`, dossier `/docs` → Save. (Le dépôt doit être public pour Pages gratuit.)
 - Réponse :
 
 ### HQ-002 — Ouvrir un moyen d'encaisser gratuit  [🟡 ouvert]
