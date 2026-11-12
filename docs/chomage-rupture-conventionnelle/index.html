@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chômage après une rupture conventionnelle : à partir de quand êtes-vous indemnisé ? (différé 2026)</title>
+<meta name="description" content="Calculez la date de votre première journée indemnisée par France Travail après une rupture conventionnelle : différé spécifique (indemnité supra-légale ÷ 111,8 en 2026, 150 jours max), différé congés payés (30 jours max) et délai d'attente de 7 jours. Détail et sources Unédic.">
+<link rel="canonical" href="https://lawatch.github.io/10aday/chomage-rupture-conventionnelle/">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="10aday">
+<meta property="og:title" content="Rupture conventionnelle : quand toucherez-vous le chômage ?">
+<meta property="og:description" content="Différé spécifique, différé congés payés, délai d'attente : la date exacte de votre première journée indemnisée, avec le détail du calcul. Gratuit, sans inscription.">
+<meta property="og:url" content="https://lawatch.github.io/10aday/chomage-rupture-conventionnelle/">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Calculateur du différé d'indemnisation chômage après rupture conventionnelle",
+      "url": "https://lawatch.github.io/10aday/chomage-rupture-conventionnelle/",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Tout navigateur web",
+      "inLanguage": "fr-FR",
+      "isAccessibleForFree": true,
+      "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"},
+      "description": "Calcule le différé spécifique (indemnités supra-légales ÷ 111,8 en 2026, 150 jours maximum), le différé congés payés (ICCP ÷ salaire journalier de référence, 30 jours maximum) et le délai d'attente de 7 jours, puis la date de la première journée indemnisée par France Travail. Calcul indicatif fait dans le navigateur.",
+      "featureList": ["Différé spécifique 2026", "Différé congés payés", "Délai d'attente de 7 jours", "Inscription tardive", "Détail du calcul"]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "10aday", "item": "https://lawatch.github.io/10aday/"},
+        {"@type": "ListItem", "position": 2, "name": "Chômage après une rupture conventionnelle", "item": "https://lawatch.github.io/10aday/chomage-rupture-conventionnelle/"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "Combien de temps après une rupture conventionnelle touche-t-on le chômage ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Au minimum 7 jours de délai d'attente après la fin du contrat. S'y ajoutent, avant ce délai, un différé congés payés (indemnité compensatrice de congés payés ÷ salaire journalier de référence, 30 jours maximum) et, si l'indemnité de rupture dépasse le minimum légal, un différé spécifique (part supra-légale ÷ 111,8 en 2026, 150 jours maximum). Ces délais se cumulent (Unédic, règlement d'assurance chômage)."}},
+        {"@type": "Question", "name": "Comment se calcule le différé spécifique en 2026 ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "On divise la part de l'indemnité de rupture qui dépasse le minimum légal par 111,8 (diviseur 2026, il était de 109,6 en 2025) et on retient le nombre entier de jours. Exemple Unédic : 1 372 € ÷ 111,8 = 12 jours. Le différé est limité à 150 jours calendaires."}},
+        {"@type": "Question", "name": "Faut-il s'inscrire à France Travail tout de suite ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Oui, de préférence avant la fin des différés : le délai d'attente de 7 jours démarre alors dès la fin des différés. Si vous vous inscrivez plus tard, il ne démarre qu'à la date d'inscription et vous perdez les jours écoulés."}},
+        {"@type": "Question", "name": "Une indemnité de rupture au minimum légal entraîne-t-elle un différé ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Non : seule la part qui dépasse le minimum légal entre dans le différé spécifique. Restent le différé congés payés éventuel et le délai d'attente de 7 jours."}}
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root{--fg:#1d2330;--muted:#5b6475;--line:#d9dee7;--accent:#1f5fbf;--accent-bg:#eef4fd;--warn:#8a5a00;--warn-bg:#fff6e0;--ok:#1b7a43}
+  *{box-sizing:border-box}
+  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;max-width:760px;margin:0 auto;padding:1.5rem 1rem 4rem;line-height:1.6;color:var(--fg)}
+  h1{font-size:1.6rem;line-height:1.25;margin:.5rem 0}
+  h2{font-size:1.25rem;margin-top:2.2rem;border-bottom:1px solid var(--line);padding-bottom:.3rem}
+  a{color:var(--accent)}
+  .muted{color:var(--muted)}
+  .small{font-size:.9rem}
+  nav.crumb{font-size:.9rem}
+  form{background:#f7f9fc;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem;margin:1.2rem 0}
+  .field{margin:.7rem 0}
+  label{font-weight:600;display:block}
+  input[type=date]{font:inherit;padding:.4rem .5rem;border:1px solid #b8c0cc;border-radius:6px;min-width:12rem}
+  .check label{display:inline;font-weight:normal}
+  .hint{font-size:.85rem;color:var(--muted);margin:.15rem 0 0}
+  .err{color:#b00020;font-weight:600}
+  ol.timeline{list-style:none;padding:0;margin:1rem 0;border-left:3px solid var(--accent);}
+  ol.timeline li{position:relative;padding:.2rem 0 1rem 1.2rem}
+  ol.timeline li::before{content:"";position:absolute;left:-9px;top:.55rem;width:15px;height:15px;border-radius:50%;background:#fff;border:3px solid var(--accent)}
+  ol.timeline li.final::before{background:var(--ok);border-color:var(--ok)}
+  .step{font-size:.85rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+  .date{font-size:1.2rem;font-weight:700}
+  li.final .date{color:var(--ok)}
+  .why{font-size:.92rem;color:var(--muted)}
+  .note{background:var(--warn-bg);color:var(--warn);border-radius:8px;padding:.6rem .8rem;font-size:.92rem;margin:.4rem 0}
+  .info{background:var(--accent-bg);border-radius:8px;padding:.6rem .8rem;font-size:.92rem}
+  button{font:inherit;padding:.45rem .9rem;border-radius:6px;border:1px solid var(--accent);background:var(--accent);color:#fff;cursor:pointer}
+  button.secondary{background:#fff;color:var(--accent)}
+  .actions{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.5rem}
+  details{border:1px solid var(--line);border-radius:8px;padding:.5rem .8rem;margin:.5rem 0}
+  summary{cursor:pointer;font-weight:600}
+  table{border-collapse:collapse;width:100%;font-size:.92rem}
+  th,td{border:1px solid var(--line);padding:.35rem .5rem;text-align:left;vertical-align:top}
+  footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1rem;font-size:.85rem;color:var(--muted)}
+</style>
+<style>
+  input[type=number]{font:inherit;padding:.4rem .5rem;border:1px solid #b8c0cc;border-radius:6px;width:12rem}
+  .big{font-size:1.9rem;font-weight:800;color:var(--ok);margin:.3rem 0}
+  .ko{color:#b00020}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:0 1.2rem}
+  @media (max-width:560px){.grid{grid-template-columns:1fr}}
+  td.num{text-align:right;white-space:nowrap}
+</style>
+</head>
+<body>
+<nav class="crumb"><a href="../">10aday</a> › Chômage après une rupture conventionnelle</nav>
+
+<h1>Rupture conventionnelle : à partir de quand toucherez-vous le chômage ?</h1>
+<p>Après une rupture conventionnelle, France Travail ne paie pas dès le lendemain du départ : il applique un <strong>différé congés payés</strong>,
+un <strong>différé spécifique</strong> si votre indemnité dépasse le minimum légal, puis un <strong>délai d'attente de 7 jours</strong>.
+L'outil calcule la date de votre première journée indemnisée avec les règles 2026, et montre chaque étape.</p>
+
+<form id="f" novalidate>
+  <div class="grid">
+    <div class="field">
+      <label for="fin">Date de fin du contrat (dernier jour)</label>
+      <input type="date" id="fin" required>
+      <p class="hint">Pas encore connue ? <a href="../rupture-conventionnelle-dates/">Calculez la date de départ au plus tôt</a>.</p>
+    </div>
+    <div class="field">
+      <label for="insc">Date d'inscription à France Travail <span class="muted">(facultatif)</span></label>
+      <input type="date" id="insc">
+      <p class="hint">Vide = inscription dès le lendemain de la fin du contrat.</p>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="field">
+      <label for="ind">Indemnité de rupture versée (€ brut)</label>
+      <input type="number" id="ind" min="0" step="0.01" inputmode="decimal" placeholder="ex. 8000">
+    </div>
+    <div class="field">
+      <label for="leg">Indemnité légale minimale (€)</label>
+      <input type="number" id="leg" min="0" step="0.01" inputmode="decimal" placeholder="ex. 5000">
+      <p class="hint"><a href="../rupture-conventionnelle-indemnite/">Calculez votre minimum légal</a>. Seule la part au-delà compte.</p>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="field">
+      <label for="iccp">Indemnité compensatrice de congés payés (€)</label>
+      <input type="number" id="iccp" min="0" step="0.01" inputmode="decimal" placeholder="ex. 1500">
+      <p class="hint">Sur le solde de tout compte : congés acquis non pris.</p>
+    </div>
+    <div class="field">
+      <label for="brut">Salaire brut mensuel moyen (€)</label>
+      <input type="number" id="brut" min="0" step="0.01" inputmode="decimal" placeholder="ex. 2800">
+      <p class="hint">Sert à estimer le salaire journalier de référence (brut × 12 ÷ 365).</p>
+    </div>
+  </div>
+  <details>
+    <summary>Options : salaire journalier de référence exact, délai d'attente déjà appliqué</summary>
+    <div class="grid">
+      <div class="field">
+        <label for="sjr">Salaire journalier de référence (€)</label>
+        <input type="number" id="sjr" min="0" step="0.01" inputmode="decimal">
+        <p class="hint">Figure sur la notification de droits de France Travail ; remplace l'estimation.</p>
+      </div>
+      <div class="field check">
+        <input type="checkbox" id="att"> <label for="att">Un délai d'attente m'a déjà été appliqué au cours des 12 derniers mois</label>
+      </div>
+    </div>
+  </details>
+  <div class="actions"><button type="submit">Calculer la date de début d'indemnisation</button></div>
+  <p id="error" class="err" role="alert" hidden></p>
+</form>
+
+<section id="result" aria-live="polite" hidden>
+  <h2>Votre première journée indemnisée</h2>
+  <p class="big" id="debut"></p>
+  <p id="resume"></p>
+  <ol class="timeline" id="timeline"></ol>
+  <table id="detail"></table>
+  <div id="notes"></div>
+  <div class="actions"><button type="button" class="secondary" id="share">Copier le lien de ce calcul</button></div>
+  <p class="small muted" id="shared" hidden>Lien copié (il contient les montants saisis : partagez-le avec discernement).</p>
+</section>
+
+<p class="note"><strong>Résultat indicatif.</strong> France Travail fixe seul la date dans votre notification de droits ; elle dépend aussi de conditions
+non traitées ici (droits ouverts, autres fins de contrat dans les 182 jours, rupture pour motif économique, Mayotte…). Il ne remplace pas votre conseiller.
+La date affichée est le <strong>premier jour indemnisé</strong> ; le versement intervient ensuite, en général au début du mois suivant.</p>
+
+<h2>Le calcul, étape par étape</h2>
+<table>
+  <tr><th>Étape</th><th>Règle</th><th>Durée</th></tr>
+  <tr><td>1. Différé congés payés</td><td>Indemnité compensatrice de congés payés ÷ salaire journalier de référence, à compter du lendemain de la fin du contrat.</td><td>30 jours max.</td></tr>
+  <tr><td>2. Différé spécifique</td><td>Part de l'indemnité de rupture qui dépasse le minimum légal ÷ <strong>111,8</strong> (valeur 2026 ; 109,6 en 2025), nombre entier de jours.</td><td>150 jours max.</td></tr>
+  <tr><td>3. Délai d'attente</td><td>7 jours après les différés si vous êtes inscrit(e) avant leur fin ; sinon 7 jours à compter de l'inscription. Une seule fois par période de 12 mois.</td><td>7 jours</td></tr>
+</table>
+<p class="small muted">Les différés se cumulent : 1 + 2 puis 3. Règlement général annexé à la convention d'assurance chômage du 15 novembre 2024 (art. 21 et 22).</p>
+
+<h2>Exemples</h2>
+<ul>
+  <li><strong>Indemnité au minimum légal, pas de congés à payer</strong>, fin de contrat le 31 mars 2026 : seulement les 7 jours d'attente (1er au 7 avril) → indemnisé(e) à partir du <strong>8 avril 2026</strong>.</li>
+  <li><strong>Congés payés</strong> (exemple Unédic) : fin de contrat le 30 novembre, 17 jours de différé congés payés + 7 jours = 24 jours à partir du 1er décembre → <strong>25 décembre</strong>. Inscription tardive le 20 décembre → <strong>27 décembre</strong>.</li>
+  <li><strong>Indemnité supra-légale</strong> (exemple Unédic 2026) : 1 372 € au-delà du minimum ÷ 111,8 = <strong>12 jours</strong> de différé spécifique, fin de contrat le 1er novembre.
+    Unédic annonce une indemnisation « à partir du 20 novembre » ; en comptant comme dans son exemple « congés payés » (différé à partir du lendemain de la fin du contrat), on obtient le <strong>21 novembre</strong>. L'outil retient la date la plus prudente.</li>
+  <li><strong>Grosse indemnité</strong> : 20 000 € au-delà du minimum ÷ 111,8 = 178 jours, plafonnés à <strong>150 jours</strong> (environ 5 mois sans allocation, plus le délai d'attente).</li>
+</ul>
+
+<h2>Les erreurs fréquentes</h2>
+<ul>
+  <li><strong>Compter toute l'indemnité</strong> dans le différé spécifique : seule la part au-delà du minimum légal compte.</li>
+  <li><strong>Utiliser un ancien diviseur</strong> (95,8, 102,4, 109,6…) : il change chaque année ; 111,8 en 2026.</li>
+  <li><strong>Attendre la fin du différé pour s'inscrire</strong> : le délai d'attente ne démarre alors qu'à l'inscription. Inscrivez-vous dès le lendemain de la fin du contrat.</li>
+  <li><strong>Oublier le différé congés payés</strong> : des congés non pris payés au départ décalent aussi l'indemnisation (jusqu'à 30 jours).</li>
+  <li><strong>Confondre premier jour indemnisé et date de paiement</strong> : l'allocation est versée mensuellement, à terme échu.</li>
+</ul>
+
+<h2>Questions fréquentes</h2>
+<details><summary>Les jours de différé sont-ils perdus ?</summary>
+  <p>Non : les différés et le délai d'attente <strong>retardent</strong> le début de l'indemnisation, ils ne réduisent pas la durée totale de vos droits. Le délai d'attente, lui, n'est pas indemnisé.</p></details>
+<details><summary>Vaut-il mieux négocier une indemnité plus faible pour toucher le chômage plus tôt ?</summary>
+  <p>En général non : chaque tranche de 111,8 € supra-légaux ne décale l'indemnisation que d'un jour. Si votre allocation journalière est inférieure à 111,8 €, l'euro d'indemnité
+  rapporte plus que le jour d'allocation décalé. Comparez avec votre allocation journalière estimée.</p></details>
+<details><summary>Et l'indemnité conventionnelle (plus élevée que le minimum légal) ?</summary>
+  <p>Le règlement exclut du calcul les sommes dont le montant résulte directement d'une disposition législative. Une indemnité fixée par la convention collective au-delà du minimum légal
+  peut donc être prise en compte : dans le doute, saisissez le <strong>minimum légal</strong> dans le second champ, et vérifiez sur votre notification de droits.</p></details>
+<details><summary>Combien vais-je toucher par jour ?</summary>
+  <p>Cet outil ne calcule que la <strong>date</strong>. Le montant de l'allocation (ARE) dépend de vos salaires des 24 derniers mois : utilisez le simulateur de France Travail.</p></details>
+<details><summary>Quand m'inscrire si je n'ai pas encore signé ?</summary>
+  <p>La date de fin du contrat dépend du délai de rétractation et de l'homologation : <a href="../rupture-conventionnelle-dates/">calculez la date de départ au plus tôt</a>,
+  puis inscrivez-vous à France Travail dès le lendemain.</p></details>
+
+<h2>Sources</h2>
+<ul class="small">
+  <li>Unédic, fiche <a href="https://www.unedic.org/la-reglementation/fiches-thematiques/differe-dindemnisation-specifique-en-cas-dindemnites-supra-legales" rel="noopener">« Différé d'indemnisation spécifique en cas d'indemnités supra-légales »</a> (diviseur 111,8 au 01/01/2026, plafond 150 jours, exemple 1 372 €).</li>
+  <li>Unédic, fiche <a href="https://www.unedic.org/la-reglementation/fiches-thematiques/differe-conges-payes" rel="noopener">« Différé congés payés »</a> (plafond 30 jours, exemple du 30 novembre).</li>
+  <li>Unédic, <a href="https://www.unedic.org/l-assurance-chomage-et-vous/demandeur-d-emploi-ou-salarie/mon-indemnisation/dans-quel-delai-vais-je-etre-indemnise-e" rel="noopener">« Dans quel délai vais-je être indemnisé(e) ? »</a> (cumul des délais, délai d'attente et inscription).</li>
+  <li>Unédic, <a href="https://www.unedic.org/la-reglementation/conventions-d-assurance-chomage/texte-consolide-du-reglement-general-annexe-a-la-convention-du-15-novembre-2024-4" rel="noopener">texte consolidé du règlement général annexé à la convention du 15 novembre 2024</a>.</li>
+  <li>France Travail, <a href="https://www.francetravail.fr/candidat/mes-droits-aux-aides-et-allocati/lessentiel-a-savoir-sur-lallocat/pendant-combien-de-temps-vais-je/quand-vais-je-commencer-a-recevo.html" rel="noopener">« Quand vais-je commencer à recevoir l'allocation chômage ? »</a>.</li>
+</ul>
+<p class="small muted">Règles vérifiées le 12 novembre 2026 (diviseur 2026). Le calcul est entièrement fait dans votre navigateur : aucun montant n'est envoyé.</p>
+
+<footer>
+  <p>Outil gratuit construit et maintenu par des <strong>agents d'intelligence artificielle</strong> (projet <a href="../">10aday</a>), testé contre les exemples de l'Unédic et un décompte jour par jour indépendant.
+  Voir aussi : <a href="../rupture-conventionnelle-dates/">calcul des dates de la rupture conventionnelle</a> · <a href="../rupture-conventionnelle-indemnite/">indemnité minimale</a>.
+  Une erreur ? <a href="https://github.com/Lawatch/10aday/issues/new?title=Ch%C3%B4mage%20rupture%20conventionnelle%20%3A%20" rel="noopener">Signalez-la</a>.</p>
+</footer>
+
+<script src="chomage-differe.js"></script>
+<script>
+(function () {
+  'use strict';
+  var C = window.ChomageDiffere;
+  var $ = function (id) { return document.getElementById(id); };
+  var F = ['fin', 'insc', 'ind', 'leg', 'iccp', 'brut', 'sjr'];
+  var JOURS = ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'];
+  var MOIS = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
+  function longDate(s) { var d = C.parseISO(s); return JOURS[d.getUTCDay()] + ' ' + d.getUTCDate() + (d.getUTCDate() === 1 ? 'er' : '') + ' ' + MOIS[d.getUTCMonth()] + ' ' + d.getUTCFullYear(); }
+  function jours(n) { return n + ' jour' + (n > 1 ? 's' : ''); }
+  function eur(x) { return x.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €'; }
+  function fr(x) { return String(x).replace('.', ','); }
+  function err(msg) { $('error').textContent = msg; $('error').hidden = false; $('result').hidden = true; }
+  function li(step, date, why, cls) { return '<li' + (cls ? ' class="' + cls + '"' : '') + '><div class="step">' + step + '</div><div class="date">' + date + '</div><div class="why">' + why + '</div></li>'; }
+
+  function compute(e) {
+    if (e) e.preventDefault();
+    $('error').hidden = true;
+    var v = {}; F.forEach(function (k) { v[k] = $(k).value; });
+    var r;
+    try {
+      r = C.calc({ fin: v.fin, inscription: v.insc, indemnite: v.ind, legale: v.leg, iccp: v.iccp, brutMensuel: v.brut, sjr: v.sjr, attenteDejaAppliquee: $('att').checked });
+    } catch (x) { return err(x.message); }
+    $('debut').textContent = longDate(r.debut_indemnisation);
+    $('resume').innerHTML = 'Soit <strong>' + jours(r.jours_sans_allocation) + ' sans allocation</strong> après la fin du contrat (' +
+      jours(r.differes) + ' de différé' + (r.attente ? ' + 7 jours d’attente' : '') + (r.inscription_tardive ? ', décalés par l’inscription tardive' : '') + ').';
+    var tl = li('Fin du contrat', longDate(r.fin), 'Dernier jour du contrat.');
+    if (r.differes) tl += li('Fin des différés', longDate(r.fin_differes), jours(r.differe_cp) + ' (congés payés) + ' + jours(r.differe_specifique) + ' (spécifique), à partir du lendemain de la fin du contrat.');
+    if (r.attente) tl += li('Délai d’attente', 'du ' + longDate(r.debut_attente) + ' au ' + longDate(r.fin_attente),
+      r.inscription_tardive ? 'Démarre à votre inscription (' + longDate(r.inscription) + '), postérieure à la fin des différés.' : '7 jours non indemnisés après les différés.');
+    tl += li('Premier jour indemnisé', longDate(r.debut_indemnisation), 'Le paiement suit, en général au début du mois suivant.', 'final');
+    $('timeline').innerHTML = tl;
+    var h = '<tr><th>Élément</th><th>Calcul</th><th>Jours</th></tr>';
+    h += '<tr><td>Différé congés payés</td><td>' + (r.differe_cp_brut ? eur(+v.iccp.replace(',', '.')) + ' ÷ ' + eur(r.sjr) + (r.sjr_estime ? ' (SJR estimé : brut × 12 ÷ 365)' : '') + (r.differe_cp_plafonne ? ' = ' + r.differe_cp_brut + ', plafonné à 30' : '') : 'aucune indemnité de congés payés') + '</td><td class="num">' + r.differe_cp + '</td></tr>';
+    h += '<tr><td>Différé spécifique</td><td>' + (r.supra_legale ? eur(r.supra_legale) + ' supra-légaux ÷ ' + fr(r.diviseur) + ' (diviseur ' + r.diviseur_annee + ')' + (r.differe_specifique_plafonne ? ' = ' + r.differe_specifique_brut + ', plafonné à 150' : '') : 'indemnité au minimum légal : pas de différé') + '</td><td class="num">' + r.differe_specifique + '</td></tr>';
+    h += '<tr><td>Délai d’attente</td><td>' + (r.attente ? '7 jours' : 'déjà appliqué dans les 12 derniers mois') + '</td><td class="num">' + r.attente + '</td></tr>';
+    $('detail').innerHTML = h;
+    var notes = '';
+    if (!r.diviseur_exact) notes += '<p class="note">Le diviseur de l’année ' + r.fin.slice(0, 4) + ' n’est pas encore intégré : calcul fait avec celui de ' + r.diviseur_annee + ' (' + fr(r.diviseur) + '). Vérifiez la valeur publiée par l’Unédic.</p>';
+    if (r.inscription_tardive) notes += '<p class="note">Inscrit(e) après la fin des différés : le délai d’attente ne démarre qu’à l’inscription. Une inscription dès le lendemain de la fin du contrat aurait avancé la date.</p>';
+    if (v.ind && !v.leg) notes += '<p class="info">Vous n’avez pas indiqué le minimum légal : toute l’indemnité a été comptée comme supra-légale. <a href="../rupture-conventionnelle-indemnite/">Calculez votre minimum légal</a> pour un résultat juste.</p>';
+    $('notes').innerHTML = notes;
+    $('result').hidden = false;
+    var q = new URLSearchParams();
+    F.forEach(function (k) { if (v[k]) q.set(k, v[k]); });
+    if ($('att').checked) q.set('att', '1');
+    history.replaceState(null, '', '?' + q.toString());
+  }
+
+  $('f').addEventListener('submit', compute);
+  F.concat(['att']).forEach(function (id) { $(id).addEventListener('change', function () { if ($('fin').value) compute(); }); });
+  $('share').addEventListener('click', function () {
+    var done = function () { $('shared').hidden = false; };
+    if (navigator.clipboard) navigator.clipboard.writeText(location.href).then(done, done); else done();
+  });
+
+  var p = new URLSearchParams(location.search);
+  F.forEach(function (k) { if (p.get(k)) $(k).value = p.get(k); });
+  if (p.get('att')) $('att').checked = true;
+  if (p.get('sjr') || p.get('att')) document.querySelector('details').open = true;
+  if ($('fin').value) compute();
+})();
+</script>
+<!-- Mesure d'audience : GoatCounter (sans cookie) -->
+<script data-goatcounter="https://10aday.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

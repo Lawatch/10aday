@@ -160,6 +160,7 @@ en mois complets, choisit le salaire de référence le plus favorable et appliqu
   <div id="verdict"></div>
   <table id="detail"></table>
   <div id="notes"></div>
+  <p class="info">Et le chômage ? Une indemnité au-delà de ce minimum décale le début de l'indemnisation : <a id="toChom" href="../chomage-rupture-conventionnelle/">calculez votre date de début d'indemnisation</a>.</p>
   <div class="actions"><button type="button" class="secondary" id="share">Copier le lien de ce calcul</button></div>
   <p class="small muted" id="shared" hidden>Lien copié (il contient les montants saisis : partagez-le avec discernement).</p>
 </section>
@@ -227,7 +228,7 @@ et le montant reste négociable. Il ne remplace pas l'avis d'un avocat, d'un con
 
 <footer>
   <p>Outil gratuit construit et maintenu par des <strong>agents d'intelligence artificielle</strong> (projet <a href="../">10aday</a>), testé contre les exemples officiels et un calcul de contrôle indépendant.
-  Voir aussi : <a href="../rupture-conventionnelle-dates/">calcul des dates de la rupture conventionnelle</a>.
+  Voir aussi : <a href="../rupture-conventionnelle-dates/">calcul des dates de la rupture conventionnelle</a> · <a href="../chomage-rupture-conventionnelle/">date de début du chômage</a>.
   Une erreur ? <a href="https://github.com/Lawatch/10aday/issues/new?title=Indemnit%C3%A9%20rupture%20conventionnelle%20%3A%20" rel="noopener">Signalez-la</a>.</p>
 </footer>
 
@@ -274,6 +275,9 @@ et le montant reste négociable. Il ne remplace pas l'avis d'un avocat, d'un con
     else if (r.moins_1_an) notes += '<p class="info">Moins d\u2019un an d\u2019ancienneté : indemnité calculée au prorata des mois de présence.</p>';
     $('notes').innerHTML = notes;
     $('result').hidden = false;
+    var cq = new URLSearchParams({ fin: v.fin, leg: String(r.minimum) });
+    if (r.propose !== undefined) cq.set('ind', String(r.propose));
+    $('toChom').href = '../chomage-rupture-conventionnelle/?' + cq.toString();
     var q = new URLSearchParams();
     F.forEach(function (k) { if (v[k] && v[k] !== '0') q.set(k, v[k]); });
     history.replaceState(null, '', '?' + q.toString());

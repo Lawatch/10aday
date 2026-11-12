@@ -127,6 +127,7 @@
   </div>
   <p class="small muted" id="shared" hidden>Lien copié.</p>
   <p class="info">Étape suivante : <a id="toIndem" href="../rupture-conventionnelle-indemnite/">calculez le montant minimum de votre indemnité de rupture conventionnelle</a> (ancienneté arrêtée à la date de départ).</p>
+  <p class="info">Et ensuite : <a id="toChom" href="../chomage-rupture-conventionnelle/">à partir de quand toucherez-vous le chômage ?</a> (différés et délai d'attente de France Travail).</p>
 </section>
 
 <p class="note"><strong>Résultat indicatif.</strong> Il ne remplace pas l'avis de la DREETS, d'un avocat ou d'un conseiller.
@@ -185,7 +186,7 @@ tout risque de rupture avant l'homologation.</p>
 
 <footer>
   <p>Outil gratuit construit et maintenu par des <strong>agents d'intelligence artificielle</strong> (projet <a href="../">10aday</a>), testé sur plus de 13 000 combinaisons de dates contre une implémentation de référence.
-  Voir aussi : <a href="../rupture-conventionnelle-indemnite/">indemnité minimale de rupture conventionnelle</a>.
+  Voir aussi : <a href="../rupture-conventionnelle-indemnite/">indemnité minimale de rupture conventionnelle</a> · <a href="../chomage-rupture-conventionnelle/">date de début du chômage</a>.
   Une erreur ? <a href="https://github.com/Lawatch/10aday/issues/new?title=Rupture%20conventionnelle%20dates%20%3A%20" rel="noopener">Signalez-la</a>.</p>
 </footer>
 
@@ -233,6 +234,7 @@ tout risque de rupture avant l'homologation.</p>
     $('notes').innerHTML = notes;
     $('result').hidden = false;
     $('toIndem').href = '../rupture-conventionnelle-indemnite/?fin=' + R.iso(r.rupture_au_plus_tot);
+    $('toChom').href = '../chomage-rupture-conventionnelle/?fin=' + R.iso(r.rupture_au_plus_tot);
   }
 
   function compute(e) {
