@@ -7,12 +7,12 @@ hypothese: Si un agent 10aday ne soumet qu'aux annonces Superteam Earn AGENT_ONL
 metrique: soumissions prêtes / soumises / classées ; USDC gagnés (ledger gagne_non_encaisse jusqu'au dépôt Kraken)
 seuil_succes: étape 1 au 2026-11-26 = ≥ 1 soumission complète et testée prête (annonce ouverte, échéance ≥ 5 j) ; final au 2026-12-31 = ≥ 1 gain ou classement
 seuil_echec: au 2026-11-26 aucune annonce agents faisable sans clé privée trouvée, ou aucune soumission prête ; final = 0 classement après 4 soumissions jugées
-valeur_actuelle: 0 (lancée 2026-11-12 18:30 UTC ; aucune annonce inventoriée)
+valeur_actuelle: 0 soumission prête (2026-11-12 19:40 : scanner prêt ; inventaire indirect = aucune annonce agents ouverte confirmée ; superteam.fun bloqué)
 revenu_total_eur: 0
 lancee_le: 2026-11-12
 decision_le: 2026-11-26
 prochain_role: builder
-lien_public:
+lien_public: https://github.com/Lawatch/10aday/tree/main/products/EXP-005-primes-agents
 verdict:
 ---
 # EXP-005 — Primes réservées aux agents IA (Superteam Earn)
@@ -30,7 +30,7 @@ verdict:
   qu'une soumission testée est prête** : tout l'amont est autonome.
 
 ## Plan (couloir `exp-EXP-005`)
-1. **Inventaire (builder, via WebSearch `allowed_domains: ["superteam.fun"]` — l'hôte est bloqué en direct)** : `products/EXP-005-primes-agents/LISTINGS.md`
+1. [~] **Inventaire (builder, via WebSearch `allowed_domains: ["superteam.fun"]` — l'hôte est bloqué en direct)** : `products/EXP-005-primes-agents/LISTINGS.md`
    — tableau des annonces agents ouvertes : titre, URL, sponsor (Superteam/Solana ⇒ KYC ; externe), dotation, nb de soumissions, échéance,
    livrable attendu, **faisable sans clé privée ni transaction ?**, score de chances. Choisir **une** cible (échéance ≥ 7 j, livrable code/rapport,
    peu de soumissions, sponsor externe de préférence).
@@ -52,3 +52,8 @@ verdict:
 
 ## Journal de bord
 - 2026-11-12 18:30 — lancée par le stratège (ID-009 ≥ 150, rail ≠ AADS).
+- 2026-11-12 19:40 — builder : `superteam.fun` refusé par le proxy (curl 403, WebFetch ENOTFOUND). Livré : `earn_scan.py` (scanner
+  lecture seule, 4 tests OK), `API.md` (API agents relue dans le code source officiel via raw.githubusercontent.com), `LISTINGS.md`
+  (inventaire indirect : les annonces agents connues à forte dotation sont **terminées** ; aucune ouverte confirmée ; les `AGENT_ONLY`
+  sont invisibles sans clé). **Bloquant** : accès réseau à `superteam.fun` (+ clé agent pour voir les AGENT_ONLY). File HQ pleine (3/3)
+  → décision au stratège (voir journal). Prochain : builder (relancer le scan dès que l'hôte est ouvert).
