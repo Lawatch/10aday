@@ -2,8 +2,8 @@
 id: EXP-004
 titre: Petits outils gratuits pour développeurs, avec pub payée en bitcoin
 en_clair: Des pages en anglais qui aident les développeurs à écrire correctement les numéros de version de leurs logiciels (JavaScript, Python, PHP, Rust, Ruby, Java, C#, Android/Gradle). Quand il y aura des visiteurs, on y mettra une pub qui paie en bitcoin.
-deja_fait: 16 pages en anglais en ligne, dont 8 outils. Le 13/11 à 3 h 40, j'ai écrit les messages prêts à poster pour les outils Java, .NET, Android et Go, un par forum.
-resultat: 0 visiteur venu d'un moteur de recherche au 13/11 à 4 h 20. Le compteur montre toujours 2 visites sur l'outil n°1, d'origine inconnue, et rien sur les 15 autres pages. Une recherche web ne trouve encore aucune de nos pages.
+deja_fait: 16 pages en anglais en ligne, dont 8 outils. Le 13/11 à 5 h 30, la page d'accueil de notre dépôt GitHub liste enfin les 8 outils (elle n'en montrait qu'un).
+resultat: 0 visiteur venu d'un moteur de recherche au 13/11 à 5 h 30. Toujours 12 visites sur tout le site, dont 2 sur l'outil n°1, d'origine inconnue.
 bloque_par: Google ne connaît pas encore le site : il faut l'y inscrire (ta demande de 10 min). La présentation sur Hacker News et Reddit attend aussi ton compte. Pour encaisser, il faudra ton adresse bitcoin.
 prochaine_etape: Vers le 15/11, regarder si Bing envoie des visiteurs. Pas de nouvelle page avant ce chiffre : 8 outils suffisent pour tester l'idée.
 on_arrete_si: 0 visiteur le 26/11, après au moins 7 jours en ligne.
@@ -13,7 +13,7 @@ hypothese: Si on publie sur GitHub Pages 1 à 2 petits outils web en anglais, tr
 metrique: visites externes / semaine (puis impressions et satoshis A-ADS)
 seuil_succes: ≥ 20 visites externes sur la semaine du 2026-11-19 au 26, ou ≥ 1 satoshi gagné si l'adresse est branchée
 seuil_echec: outil en ligne depuis ≥ 7 jours avec mesure active et 0 visite externe au 2026-11-26
-valeur_actuelle: GoatCounter au 2026-11-13 04:20 UTC : TOTAL = 12 (inchangé depuis 02:30) ; accueil 7 ; outil n°1 = 2 ; outils n°2 à 8 = 0 ; 16 pages publiées (8 outils, 8 guides), toutes au sitemap avec compteur ; bloc AADS réservé, inactif
+valeur_actuelle: GoatCounter au 2026-11-13 05:25 UTC : TOTAL = 12 (inchangé depuis le 12/11 21:20) ; outil n°1 = 2 ; outils n°2 à 8 = 0 ; 16 pages publiées, toutes au sitemap avec compteur ; bloc AADS réservé, inactif
 revenu_total_eur: 0
 lancee_le: 2026-11-12
 decision_le: 2026-11-26
@@ -148,6 +148,7 @@ WebFetch (ENOTFOUND) : vérification faite par `WebSearch` avec `allowed_domains
 | 2026-11-13 03:40 | Listes awesome (outils n°5 à 8) | `ksoichiro/awesome-gradle` (plugins, inactive depuis 10/2023), `Awesome-Nuget-Packages` (paquets seulement), `awesome-go` (dépôts Go seulement) → pas de PR | écarté |
 | 2026-11-13 04:20 | Indexation | WebSearch `site` lawatch.github.io : 0 résultat ; contrôle : 16 pages EXP-004 au sitemap, compteur sur chacune | fait (agent) |
 | 2026-11-12 17:25 | Listes awesome (outil n°2) | `carlosperate/awesome-pyproject` (★1018) : catégories du modèle de PR non remplies par un outil web → pas de PR ; awesome-uv/uvx trop petites | écarté |
+| 2026-11-13 05:25 | README GitHub (dépôt public, exploré par Google) | 7 outils manquants ajoutés à la liste « Outils publiés » (n°2 à 8), URL vérifiées en 200 | fait (agent) |
 
 ## Métriques (historique)
 | Date | Métrique | Valeur | Source |
@@ -167,10 +168,12 @@ WebFetch (ENOTFOUND) : vérification faite par `WebSearch` avec `allowed_domains
 | 2026-11-13 01:25 | visites externes | 0 sur EXP-004 (TOTAL = 6 ; outils n°1, 5, 6, 7 et tilde-vs-caret : 404 = 0) | GoatCounter |
 | 2026-11-13 02:30 | visites externes | TOTAL = 12 ; outil n°1 = 2 (origine inconnue) ; outils n°7, n°8 = 0 | GoatCounter |
 | 2026-11-13 03:30 | visites externes | TOTAL = 12 ; accueil 7 ; outil n°1 = 2 ; outils n°5 à 8 = 0 | GoatCounter |
+| 2026-11-13 05:25 | visites externes | TOTAL = 12 (inchangé) | GoatCounter |
 | 2026-11-13 04:20 | visites externes | TOTAL = 12 ; accueil 7 ; outil n°1 = 2 ; outils n°2 à 8 = 0 | GoatCounter |
 | 2026-11-12 18:45 | visites externes | 0 sur EXP-004 (TOTAL = 6 : 5 sur `/10aday/`, 0 sur les 9 pages `/10aday/tools/*`). ⚠ Les compteurs par page exigent le préfixe `/10aday/` (ex. `%2F10aday%2Ftools%2Fpoetry-to-pep621%2F`) ; sans lui, ils renvoient toujours 0 ou 404 | GoatCounter |
 
 ## Journal de bord
+- 2026-11-13 05:25 growth : README du dépôt GitHub public complété (outils n°2 à 8 manquaient) : Google explore github.com, ces liens peuvent l'amener sur nos pages sans Search Console. Mesure : TOTAL 12, inchangé. Prochain : growth, mesure Bing le 15/11.
 - 2026-11-13 04:20 growth : mesure (TOTAL 12, inchangé ; 0 sur les outils n°2 à 8) ; aucune page trouvée par une recherche web ; sitemap et compteurs vérifiés. Rien d'autre d'utile sans l'humain : pas de nouvelle page avant le 15/11. Prochain : growth (mesure Bing le 15/11).
 - 2026-11-13 growth (03:40) : kit de lancement complété pour les outils n°5 à 8 (`launch/README.md` §13 à §18) : 4 posts Reddit (un par communauté : r/golang, r/dotnet, r/java, r/androiddev), 3 modèles de réponse (Go, NuGet, Maven). Faits repris des tableaux des pages ; astuce `[1.0,2.min)` vérifiée avec le moteur Maven. Listes awesome : aucune adaptée. Mesure : TOTAL = 12, outil n°1 = 2, outils n°5 à 8 = 0. Prochain : growth, mesure Bing le 15/11.
 - 2026-11-13 builder (02:30) : **outil n°8 publié**, `tools/go-pseudo-version/`. Nouveau public : Go. Partie 1 : module + commit/branche/tag → la page interroge `proxy.golang.org` (comme `go get`) et donne la pseudo-version, l'heure, le hash complet et les lignes `go get`/`require`/`replace` ; accepte un lien GitHub de commit. Partie 2 : décodeur hors ligne (base, heure UTC, hash, ordre, `+incompatible`, erreurs de forme) et bouton « vérifier » qui renvoie le vrai message de Go puis la bonne version. Tableau des 3 formes calculé par le moteur, tableau de 7 vrais messages de `go` 1.26.0 avec correctifs, FAQ (6). Moteur `gpv/gpv.js` : 3 281 224 vérifications contre golang.org/x/mod, 0 écart. Playwright 1200/390 px : 0 erreur. IndexNow 200. Mesure : outil n°1 = 2 visites, le reste 0. Prochain : growth (ajouter les outils n°5 à 8 au kit de lancement, puis mesure Bing le 15/11).
