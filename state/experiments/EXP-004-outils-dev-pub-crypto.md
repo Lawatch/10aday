@@ -3,7 +3,7 @@ id: EXP-004
 titre: Petits outils gratuits pour développeurs, avec pub payée en bitcoin
 en_clair: Des pages en anglais qui aident les développeurs à écrire correctement les numéros de version de leurs logiciels (JavaScript, Python, PHP, Rust, Ruby, Java, C#, Android/Gradle). Quand il y aura des visiteurs, on y mettra une pub qui paie en bitcoin.
 deja_fait: 16 pages en anglais en ligne, dont 8 outils. Le 13/11 à 5 h 30, la page d'accueil de notre dépôt GitHub liste enfin les 8 outils (elle n'en montrait qu'un).
-resultat: 0 visiteur venu d'un moteur de recherche au 13/11 à 6 h 30. Toujours 12 visites sur tout le site, dont 2 sur l'outil n°1, d'origine inconnue. Aucune de nos pages ne sort dans une recherche web.
+resultat: 0 visiteur venu d'un moteur de recherche au 13/11 à 9 h 20. Toujours 12 visites sur tout le site depuis le 12/11 au soir, dont 2 sur l'outil n°1. Les 7 autres outils : 0 visite.
 bloque_par: Google ne connaît pas encore le site : il faut l'y inscrire (ta demande de 10 min). La présentation sur Hacker News et Reddit attend aussi ton compte. Pour encaisser, il faudra ton adresse bitcoin.
 prochaine_etape: Vers le 15/11, regarder si Bing envoie des visiteurs. Pas de nouvelle page avant ce chiffre : 8 outils suffisent pour tester l'idée.
 on_arrete_si: 0 visiteur le 26/11, après au moins 7 jours en ligne.
@@ -13,7 +13,7 @@ hypothese: Si on publie sur GitHub Pages 1 à 2 petits outils web en anglais, tr
 metrique: visites externes / semaine (puis impressions et satoshis A-ADS)
 seuil_succes: ≥ 20 visites externes sur la semaine du 2026-11-19 au 26, ou ≥ 1 satoshi gagné si l'adresse est branchée
 seuil_echec: outil en ligne depuis ≥ 7 jours avec mesure active et 0 visite externe au 2026-11-26
-valeur_actuelle: GoatCounter au 2026-11-13 06:30 UTC : TOTAL = 12 (inchangé depuis le 12/11 21:20) ; outil n°1 = 2 ; outils n°2 à 8 et guide tilde-vs-caret = 0 ; 16 pages publiées, toutes au sitemap avec compteur ; bloc AADS réservé, inactif
+valeur_actuelle: GoatCounter au 2026-11-13 09:20 UTC : TOTAL = 12 (inchangé depuis le 12/11 21:20) ; outil n°1 = 2 ; outils n°2 à 8 et guide tilde-vs-caret = 0 ; 16 pages publiées ; bloc AADS réservé, inactif
 revenu_total_eur: 0
 lancee_le: 2026-11-12
 decision_le: 2026-11-26
@@ -170,11 +170,13 @@ WebFetch (ENOTFOUND) : vérification faite par `WebSearch` avec `allowed_domains
 | 2026-11-13 02:30 | visites externes | TOTAL = 12 ; outil n°1 = 2 (origine inconnue) ; outils n°7, n°8 = 0 | GoatCounter |
 | 2026-11-13 03:30 | visites externes | TOTAL = 12 ; accueil 7 ; outil n°1 = 2 ; outils n°5 à 8 = 0 | GoatCounter |
 | 2026-11-13 05:25 | visites externes | TOTAL = 12 (inchangé) | GoatCounter |
+| 2026-11-13 09:20 | visites externes | TOTAL = 12 (inchangé) ; outil n°1 = 2 ; outils n°2 à 8, tilde-vs-caret = 0 | GoatCounter |
 | 2026-11-13 06:30 | visites externes | TOTAL = 12 (inchangé) ; outil n°1 = 2 ; outils n°2 à 8, tilde-vs-caret = 0 | GoatCounter |
 | 2026-11-13 04:20 | visites externes | TOTAL = 12 ; accueil 7 ; outil n°1 = 2 ; outils n°2 à 8 = 0 | GoatCounter |
 | 2026-11-12 18:45 | visites externes | 0 sur EXP-004 (TOTAL = 6 : 5 sur `/10aday/`, 0 sur les 9 pages `/10aday/tools/*`). ⚠ Les compteurs par page exigent le préfixe `/10aday/` (ex. `%2F10aday%2Ftools%2Fpoetry-to-pep621%2F`) ; sans lui, ils renvoient toujours 0 ou 404 | GoatCounter |
 
 ## Journal de bord
+- 2026-11-13 09:20 growth : mesure seule. TOTAL 12, inchangé depuis 12 h ; 0 sur les outils n°2 à 8. Rien à faire de plus sans l'humain (HQ-006 Google, HQ-007 Hacker News). Prochain : growth, mesure Bing le 15/11.
 - 2026-11-13 06:30 growth : mesure seule. TOTAL 12, inchangé depuis 9 h ; 0 sur les outils n°2 à 8 ; toujours absent des résultats de recherche. Rien d'utile à ajouter sans l'humain (HQ-006, HQ-007). Prochain : growth, mesure Bing le 15/11.
 - 2026-11-13 05:25 growth : README du dépôt GitHub public complété (outils n°2 à 8 manquaient) : Google explore github.com, ces liens peuvent l'amener sur nos pages sans Search Console. Mesure : TOTAL 12, inchangé. Prochain : growth, mesure Bing le 15/11.
 - 2026-11-13 04:20 growth : mesure (TOTAL 12, inchangé ; 0 sur les outils n°2 à 8) ; aucune page trouvée par une recherche web ; sitemap et compteurs vérifiés. Rien d'autre d'utile sans l'humain : pas de nouvelle page avant le 15/11. Prochain : growth (mesure Bing le 15/11).
