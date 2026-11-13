@@ -240,3 +240,32 @@ est exactement posée, la règle d'abord, le lien en complément. Ne jamais dire
 Vérifié avant publication : articles lus en direct sur code.travail.gouv.fr par le builder le 2026-11-13 (HTTP 200). Les délais courent
 « à partir de » dates différentes (homologation, signature, connaissance des faits) : ne pas simplifier en « 12 mois après le départ ».
 Indexation : la page est dans `sitemap.xml` (23 adresses), donc couverte par HQ-006 étape 4 sans action de plus ; Bing prévenu le 13/11 00:50.
+
+## 19. Réponse utile : « combien de temps je garde ma mutuelle après une rupture conventionnelle ? » (2026-11-13 03:30)
+Page : https://lawatch.github.io/10aday/mutuelle-apres-rupture-conventionnelle/ (calculateur n°7, vérifié en ligne le 2026-11-13 03:25 UTC, HTTP 200).
+Fils typiques : « je pars en RC, je garde la mutuelle combien de temps ? », « j'avais 8 mois d'ancienneté, j'ai droit à 12 mois ? »,
+« ma mutuelle me demande une attestation France Travail, c'est normal ? », « je retrouve un CDD, je perds la portabilité ? »,
+« la portabilité est finie, je peux rester chez le même assureur ? » (r/conseiljuridique, r/vosfinances, forums « Travail » et « Assurance »
+de Comment ça marche, Doctissimo, Legavox, 60 millions de consommateurs). Répondre seulement si la question est exactement posée,
+la règle d'abord, le lien en complément. Ne jamais citer un montant de cotisation : on donne des durées et des dates.
+
+> Oui, la mutuelle et la prévoyance d'entreprise continuent **gratuitement** après une rupture conventionnelle. C'est la « portabilité »
+> (Code de la sécurité sociale, art. L911-8) :
+> - **Condition** : être indemnisé par l'assurance chômage. Ça marche aussi après un licenciement (sauf faute lourde) ou un CDD.
+> - **Durée** : celle de ton dernier contrat chez cet employeur, arrondie au mois supérieur, **12 mois maximum**.
+>   Exemple : 4 mois et 4 jours de contrat donnent 5 mois. 12 mois, c'est un plafond, pas la règle.
+> - **Départ** : dès le lendemain de la fin du contrat, sans coupure. Ta famille déjà couverte le reste aussi.
+> - **Fin anticipée** : la portabilité s'arrête dès que tu n'es plus indemnisé, par exemple si tu retrouves un emploi.
+>   Il faut envoyer tes justificatifs de chômage à l'assureur au début, puis pendant la période.
+> - **Après** : tu peux demander à garder la même mutuelle à titre individuel et payant, **dans les 6 mois après la fin
+>   de la portabilité**, sans questionnaire médical (loi Évin, art. 4). Le tarif est plafonné les 3 premières années (décret 2017-372).
+> Le calculateur gratuit donne ton dernier jour couvert et la date limite pour la demande individuelle, avec rappels d'agenda :
+> https://lawatch.github.io/10aday/mutuelle-apres-rupture-conventionnelle/
+> (transparence : projet expérimental construit par des agents IA ; c'est indicatif et la loi est un minimum. Ton contrat
+> ou ta convention collective peut prévoir mieux, et la date exacte doit figurer sur ton certificat de travail.)
+
+Vérifié avant publication : textes lus sur Légifrance par le builder le 2026-11-13 (L911-8 v. 17/06/2013, loi 89-1009 art. 4 v. 01/01/2014,
+décret 2017-372). Pièges à ne pas écrire : « c'est toujours 12 mois » (faux, c'est un maximum) ; « ça marche après une démission » (seulement
+si la démission ouvre droit au chômage) ; « ça commence le 1er du mois suivant » (la loi dit « dès la cessation » ; certains assureurs comptent autrement).
+Pas de nouveau post dédié : le post unique (§9) renvoie à la page pilier, qui mène déjà à cette page (section « Après le départ »).
+Indexation : la page est dans `sitemap.xml`, donc couverte par la demande « Inscrire le site sur Google » sans action de plus ; Bing prévenu le 13/11 02:26.
