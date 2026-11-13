@@ -8,12 +8,14 @@
 | Impôt, cotisations et CSG de l'indemnité de RC | `docs/rupture-conventionnelle-impot-csg/` | `src/rc-fiscal.js` (copié tel quel) | `node test/rc-fiscal.test.js` |
 | Date de début du chômage après RC (différés + délai d'attente) | `docs/chomage-rupture-conventionnelle/` | `src/chomage-differe.js` (copié tel quel) | `node test/chomage-differe.test.js` |
 | Délais pour contester (RC 12 mois, solde de tout compte 6 mois, salaires 3 ans, exécution 2 ans, discrimination/harcèlement 5 ans) | `docs/delais-contestation-rupture/` | `src/delais-contestation.js` (copié tel quel) | `node test/delais-contestation.test.js` |
+| Mutuelle après le départ (portabilité CSS L911-8 : durée du contrat arrondie au mois supérieur, 12 mois max, arrêt à la fin du chômage ; loi Évin 6 mois) | `docs/mutuelle-apres-rupture-conventionnelle/` | `src/portabilite-mutuelle.js` (copié tel quel) | `node test/portabilite-mutuelle.test.js` |
 
 - `reference/rc_dates.py` : oracle Python ; le test JS le compare sur 13 150 combinaisons de dates (nécessite `python3`).
 - Après toute modification de `src/rc-dates.js` : `cp src/rc-dates.js ../../docs/rupture-conventionnelle-dates/rc-dates.js` (le test vérifie l'identité).
 - Après toute modification de `src/rc-indemnite.js` : `cp src/rc-indemnite.js ../../docs/rupture-conventionnelle-indemnite/rc-indemnite.js`.
 - Après toute modification de `src/chomage-differe.js` : `cp src/chomage-differe.js ../../docs/chomage-rupture-conventionnelle/chomage-differe.js`. **Diviseur du différé spécifique à mettre à jour chaque janvier** (`DIVISEURS`, circulaire Unédic).
 - Après toute modification de `src/delais-contestation.js` : `cp src/delais-contestation.js ../../docs/delais-contestation-rupture/delais-contestation.js`. Pas de constante annuelle ; revérifier les articles L1237-14, L1234-20, L3245-1, L1471-1, L1134-5 en cas de réforme.
+- Après toute modification de `src/portabilite-mutuelle.js` : `cp src/portabilite-mutuelle.js ../../docs/mutuelle-apres-rupture-conventionnelle/portabilite-mutuelle.js`. Pas de constante annuelle ; revérifier CSS L911-8, loi 89-1009 art. 4 et décret 2017-372 en cas de réforme.
 - Après toute modification de `src/iccp.js` : `cp src/iccp.js ../../docs/indemnite-conges-payes-depart/iccp.js`.
 
 - Après toute modification de `src/rc-fiscal.js` : `cp src/rc-fiscal.js ../../docs/rupture-conventionnelle-impot-csg/rc-fiscal.js`. **PASS à ajouter chaque janvier** (`PASS`, arrêté annuel), et vérifier les versions de CGI 80 duodecies, CSS L242-1 et L136-1-1 (lois de finances / LFSS).
