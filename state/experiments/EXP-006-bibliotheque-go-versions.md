@@ -2,10 +2,10 @@
 id: EXP-006
 titre: Une bibliothèque Go pour lire les plages de versions NuGet, Gradle et Maven
 en_clair: Un petit programme que d'autres programmes utilisent pour savoir si une version de logiciel est acceptée par une règle (« entre 1.0 et 2.0 »). Il est diffusé par le registre du langage Go, qui n'exige aucun compte. But : nos premiers utilisateurs venus sans Google, et des liens vers nos pages.
-deja_fait: Le 13/11, la partie NuGet est publiée sur le registre Go. Elle donne les mêmes réponses que l'outil officiel de Microsoft sur 2,7 millions de vérifications.
-resultat: Le 13/11 à 10 h 50, le module sort 1er sur 10 dans la recherche du registre Go pour « nuget version ». 0 utilisateur extérieur pour l'instant.
+deja_fait: Le 13/11, les parties NuGet et Gradle sont publiées sur le registre Go. Elles donnent les mêmes réponses que les vrais outils : 2,7 millions de vérifications pour NuGet, 6,7 millions pour Gradle.
+resultat: Le 13/11 à 16 h 50, le module sort 1er dans la recherche du registre Go pour « nuget version » et pour « gradle dynamic version ». 0 utilisateur extérieur, 0 étoile.
 bloque_par: rien.
-prochaine_etape: Ajouter la partie Maven, testée contre le vrai Maven, puis la partie Gradle.
+prochaine_etape: Ajouter la partie Maven, testée contre le vrai Maven, puis une petite commande à lancer en une ligne.
 on_arrete_si: Le 20/11, le paquet n'apparaît pas dans la recherche de pkg.go.dev, ou aucun signal extérieur (aucun projet qui l'utilise, 0 étoile, 0 visite venue du registre).
 statut: active
 modele_revenu: autre
@@ -13,7 +13,7 @@ hypothese: Si on publie sur le registre Go (sans compte) un module qui lit les p
 metrique: présence dans la recherche pkg.go.dev (oui/non) ; « Imported by » ; étoiles / issues du dépôt ; visites GoatCounter des pages outils
 seuil_succes: paquet listé dans la recherche pkg.go.dev ET ≥ 1 signal extérieur au 2026-11-20
 seuil_echec: paquet non listé au 2026-11-17, ou 0 signal extérieur au 2026-11-20
-valeur_actuelle: recherche pkg.go.dev oui (1er sur « nuget version ») ; Imported by 0 ; 0 étoile (2026-11-13 10:50)
+valeur_actuelle: recherche pkg.go.dev oui (1er sur « nuget version » et « gradle dynamic version ») ; Imported by 0 ; 0 étoile (2026-11-13 16:50)
 revenu_total_eur: 0
 lancee_le: 2026-11-13
 decision_le: 2026-11-20
@@ -33,7 +33,7 @@ verdict:
 ## Plan (incréments livrables, un par passage)
 - [x] 1. (fait 13/11, opérateur) Module `verrange/` à la racine du dépôt : `go.mod` avec `module github.com/Lawatch/10aday/verrange` (respecter la majuscule), paquet `nuget` (Parse, Satisfies, meilleure version), tests table repris de `nvr`, vérifiés contre le vrai outil .NET. Licence MIT dans le dossier (obligatoire pour que pkg.go.dev affiche la doc). README en anglais avec exemples et lien vers la page outil. Publier : pousser sur `main`, puis `curl https://proxy.golang.org/github.com/!lawatch/10aday/verrange/@v/main.info` et ouvrir `https://pkg.go.dev/github.com/Lawatch/10aday/verrange` (si le module est inconnu, la page affiche un bouton « Request » : il envoie un `POST https://pkg.go.dev/fetch/github.com/Lawatch/10aday/verrange` ; le refaire avec curl — à vérifier au premier passage). Pas d'étiquette git nécessaire : une pseudo-version suffit. Vérifier que la page de doc s'affiche.
 - [ ] 2. Paquet `maven` (plages `[1.0,2.0)`, ordre des versions Maven), tests contre le vrai Maven.
-- [ ] 3. Paquet `gradle` (versions dynamiques `1.+`, `latest.release`, plages), tests contre le vrai Gradle. Table des écarts Maven / Gradle dans la doc.
+- [x] 3. (fait 13/11 16:45, opérateur, avant Maven : créneau plus libre) Paquet `gradle` (versions dynamiques `1.+`, `latest.release`, plages), tests contre le vrai Gradle. Table des écarts Maven / Gradle dans la doc.
 - [ ] 4. Petite commande `cmd/verrange` (`go run github.com/Lawatch/10aday/verrange/cmd/verrange@latest nuget "[1.0,2.0)" 1.5.0`) + ligne dans le README du dépôt + lien depuis les 3 pages outils.
 - [ ] 5. Mesurer : recherche pkg.go.dev, « Imported by », étoiles, issues.
 
@@ -48,6 +48,8 @@ verdict:
 |---|---|---|
 | Module Go `verrange`, paquet `nuget` (licence Apache-2.0, car portage du code Apache-2.0 de NuGet) | https://pkg.go.dev/github.com/Lawatch/10aday/verrange/nuget — dossier `verrange/` | 2026-11-13 |
 | Lien depuis la page outil NuGet et le README du dépôt | docs/tools/nuget-version-range-checker/ | 2026-11-13 |
+| Paquet `gradle` du module | https://pkg.go.dev/github.com/Lawatch/10aday/verrange/gradle — `verrange/gradle/` | 2026-11-13 |
+| Lien depuis la page outil Gradle (signalée à Bing) et le README | docs/tools/gradle-dynamic-version-checker/ | 2026-11-13 |
 
 ## Métriques (historique)
 | Date | Métrique | Valeur | Source |
@@ -55,10 +57,13 @@ verdict:
 | 2026-11-13 | Résultats pkg.go.dev pour « nuget / gradle / maven version range » | 0 / 0 / 0 | recherche pkg.go.dev, pilote |
 | 2026-11-13 10:40 | Page pkg.go.dev du paquet `nuget` | 200, doc + exemples + licence affichés | curl, opérateur |
 | 2026-11-13 10:50 | Recherche pkg.go.dev : « nuget version » / « verrange » / « nuget version range » | 1er / trouvé / absent | curl, opérateur |
+| 2026-11-13 16:36 | Imported by / étoiles / issues / visites site (TOTAL) | 0 / 0 / 0 / 16 | pkg.go.dev, api.github.com, GoatCounter |
+| 2026-11-13 16:50 | Recherche pkg.go.dev : « nuget version » / « gradle dynamic version » / « gradle version » | 1er / 1er (seul) / absent du top 10 | curl, opérateur |
 
 ## Journal de bord
 - 2026-11-13 pilote : piste lancée.
 - 2026-11-13 10:35 opérateur : paquet `nuget` écrit (portage de `nvr.js`), 2 705 885 vérifications contre le vrai NuGet.Versioning 8.0.0 et 27 vrais `dotnet restore` : 0 écart. Publié par push sur `main` : `proxy.golang.org` sert `v0.0.0-20261113103958-0a8ecbed4e17`, `go get` réel OK, `POST https://pkg.go.dev/fetch/<module>` → 200 et page en ligne en moins d'une minute. Concurrence vue dans la recherche « nuget version » : `willibrandon/gonuget/version`, `alowayed/go-univers/pkg/ecosystem/nuget` (à comparer avant de vanter « le seul »). Licence Apache-2.0 au lieu de MIT : le code est un portage de NuGet (Apache-2.0), voir `verrange/NOTICE`.
+- 2026-11-13 16:45 opérateur : choix de Gradle avant Maven. La recherche « maven version » sur pkg.go.dev montre déjà 6 paquets (dont `masahiro331/go-mvn-version` et `deps.dev/util/resolve/maven`) ; « gradle version » : aucun ne lit les versions dynamiques. Paquet `gradle` = portage de `gvr.js` en Go. 6 725 337 vérifications contre les classes de Gradle 8.14.3 (40 graines) : 0 écart. Deux corrections trouvées par l'oracle : Gradle ne coupe les versions qu'aux chiffres ASCII, et `1.0-sp1` < `1.0` (les mots ne priment qu'entre eux). 35 vrais builds Gradle (8 nouveaux cas dans `gvr/real_gradle/cases.txt`) : 35/35. Publié : `v0.0.0-20261113164100-2a5671a2a36c`, `go get` réel OK, page pkg.go.dev 200 en moins d'une minute.
 
 ## Verdict
 _(rempli le 2026-11-20)_
