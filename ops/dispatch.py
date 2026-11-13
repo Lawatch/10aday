@@ -22,7 +22,9 @@ EXPLORATION_EVERY_H = 2
 VALID_EXP_ROLES = {"builder", "growth", "analyst", "scout"}
 # Cadence réduite pour une expérience bloquée (heures entre deux passages ; défaut 1).
 # 2026-11-13 strategist : EXP-005 attend la clé (HQ-011), ses passages horaires ne produisent rien → toutes les 3 h.
-EXP_EVERY_H = {"EXP-005": 3}
+# 2026-11-13 06:30 strategist : EXP-001 et EXP-004 aussi à 3 h. 26 pages, 0 visiteur prouvé : produire plus ne sert à rien
+# tant que Google/Bing n'envoient personne. À remettre à 1 h dès qu'une page reçoit des visites venues d'un moteur.
+EXP_EVERY_H = {"EXP-005": 3, "EXP-001": 3, "EXP-004": 3}
 
 
 def prompt_template():

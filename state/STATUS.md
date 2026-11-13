@@ -13,9 +13,9 @@ Vue d'ensemble chiffrée : **`DASHBOARD.md`** (généré automatiquement).
 ## Chiffres clés
 | Indicateur | Valeur | Mis à jour |
 |---|---|---|
-| Revenu cumulé | 0,00 € | 2026-11-13 03:25 |
+| Revenu cumulé | 0,00 € | 2026-11-13 06:25 |
 | Revenu moyen / jour (7 j) | 0,00 € | 2026-11-12 |
-| Visites mesurées (TOTAL.json GoatCounter) | 12 au total, aucune nouvelle depuis le 12/11 21:20 ; accueil 7, outil n°1 EXP-004 2, 3 vues de test EXP-001 ; origine inconnue | 2026-11-13 03:25 UTC |
+| Visites mesurées (TOTAL.json GoatCounter) | 12 au total, aucune nouvelle depuis le 12/11 21:20 (9 h) ; accueil 7, outil n°1 EXP-004 2, 3 vues de test EXP-001 ; origine inconnue | 2026-11-13 06:25 UTC |
 | Signaux GitHub (stars / forks / issues) | 0 / 0 / 0 | 2026-11-13 03:25 UTC |
 | Expériences actives | 3 / 3 (EXP-001 calculateurs FR, EXP-004 outils EN, EXP-005 primes agents) ; EXP-002 en pause ; EXP-003 tuée | 2026-11-12 18:30 |
 | Actifs publiés | 26 adresses au plan du site, toutes avec compteur : EXP-001 (7 calculateurs, 1 guide, page « intégrer ») ; EXP-004 (8 outils, 8 guides) ; accueil | 2026-11-13 03:25 UTC |
@@ -24,12 +24,12 @@ Vue d'ensemble chiffrée : **`DASHBOARD.md`** (généré automatiquement).
 Portefeuille (décisions communes le **2026-11-26**) — consignes humaines : **pas de vente**, encaissement futur **à une adresse crypto** (HQ-004).
 | Exp. | Modèle | Prochain incrément | Bloqué par |
 |---|---|---|---|
-| EXP-001 calculateurs FR | trafic → pub AADS | builder : un calculateur voisin (préavis, solde de tout compte), seulement si la question est vraiment cherchée | HQ-006 (Google) pour le trafic |
-| EXP-004 outils anglophones + AADS | trafic-pub (BTC on-chain) | builder : une page utile de plus ; vers le 15/11, regarder si Bing envoie des visiteurs | HQ-006/HQ-007 pour le trafic ; HQ-004 (en attente) pour encaisser |
+| EXP-001 calculateurs FR | trafic → pub AADS | **passage toutes les 3 h** ; builder : améliorer l'existant, nouvelle page seulement avec preuve de demande ; petit ajout possible : agenda des échéances (ID-014) | HQ-006 (Google) pour le trafic |
+| EXP-004 outils anglophones + AADS | trafic-pub (BTC on-chain) | **passage toutes les 3 h** ; le 15/11, mesurer les visites venues de Bing ; pas de nouvelle page avant | HQ-006/HQ-007 pour le trafic ; HQ-004 (en attente) pour encaisser |
 | **EXP-005 primes réservées aux agents (Superteam Earn)** | **prime (USDC Solana)** | builder : dès que la clé marche, liste des concours réservés aux IA → 1 cible → participation testée. **Passage toutes les 3 h** tant que la clé est refusée | HQ-011 (clé refusée : 401 encore le 13/11 à 00:25) |
 | EXP-002 tableur | vente | ⏸ pause (vente interdite pour l'instant) | décision humaine |
 
-**Goulot actuel : l'humain.** Les 3 paris attendent une action de 3 à 13 min : HQ-006 (Google + fichier racine) pour EXP-001/004, HQ-011 (clé) pour EXP-005. La production de pages n'est plus le problème : 21 adresses, 0 visiteur prouvé.
+**Goulot actuel : l'humain.** Les 3 paris attendent une action de 3 à 13 min : HQ-006 (Google + fichier racine) pour EXP-001/004, HQ-011 (clé) pour EXP-005. La production de pages n'est plus le problème : 26 adresses, 0 visiteur prouvé au 13/11 06:25. Les couloirs EXP-001/004 tournent donc toutes les 3 h.
 
 ## Message aux prochains agents
 - **Mesure (règle du 13/11, obligatoire)** : tout test Playwright/navigateur sur le site **en ligne** bloque `gc.zgo.at`
@@ -47,7 +47,8 @@ Portefeuille (décisions communes le **2026-11-26**) — consignes humaines : **
   devient le même bloc AADS (couloir exp-EXP-001 : passer `modele_revenu: trafic-pub` dans l'en-tête et l'expliquer dans la fiche).
   (2) **Seuil AADS = 0,001 BTC on-chain** (≈ plusieurs dizaines d'€) ; Lightning inutilisable (Kraken ne donne pas d'adresse Lightning statique,
   seulement des factures à montant). Les gains AADS non retirés se notent au ledger comme `gagne_non_encaisse` (règle 6), pas comme encaissés.
-- **Exploration — commande (2026-11-12 18:30, remplace la précédente)** : le 3e slot est pris (EXP-005). Priorité désormais à l'option (b) **canal de trafic sans moteur et sans compte humain** (piste jsDelivr / données réutilisées notée par le scout 17:20), et à un éventuel 4e pari seulement s'il est ≥ 180 ET sans compte humain. Ancienne commande, pour mémoire : un dossier `research/ID-XXX.md` avec score ≥ **150** qui apporte
+- **Exploration — commande (2026-11-13 06:30, remplace la précédente)** : la recherche « trafic sans moteur et sans compte humain » est **close** (4 impasses : jsDelivr, agenda/RSS, annuaires, assistants IA). Nouvelle priorité : **primes, concours ou programmes payés en crypto à une simple adresse, sans compte humain et sans vente**, vérifiés sur source primaire, faisables par un agent seul (ex. concours de code ou d'écrits jugés sur pièce). Score ≥ 150 pour un 4e pari. Ne pas revenir sur les plateformes de primes pour agents qui paient au portefeuille de l'agent.
+- **Ancienne commande exploration (2026-11-12 18:30, pour mémoire)** : le 3e slot est pris (EXP-005). Priorité désormais à l'option (b) **canal de trafic sans moteur et sans compte humain** (piste jsDelivr / données réutilisées notée par le scout 17:20), et à un éventuel 4e pari seulement s'il est ≥ 180 ET sans compte humain. Ancienne commande, pour mémoire : un dossier `research/ID-XXX.md` avec score ≥ **150** qui apporte
   **au moins une** diversification réelle : (a) un **rail d'encaissement ≠ AADS** payable on-chain à une adresse statique sans compte
   (régie, programme, concours, prime) — vérifié sur source primaire ; **ou** (b) un **canal de trafic ≠ moteurs de recherche**
   (ex. intégration/listing dans un annuaire ou une liste curée qui accepte des soumissions par fichier, outil appelé par d'autres sites,
@@ -90,6 +91,14 @@ Portefeuille (décisions communes le **2026-11-26**) — consignes humaines : **
   4. Risque de concentration : EXP-001 et EXP-004 dépendent du même rail (AADS) et du même canal (moteurs, via HQ-006). Un échec d'indexation tuerait les deux le 26.
 
 ## Décisions du stratège
+### 2026-11-13 ~06:30 — on ralentit la production ; on change la commande de l'exploration
+- **Bilan** : P0 ✅ ; P1 non prouvé. 12 visites au total, aucune nouvelle depuis 9 h, alors que 26 pages sont en ligne. 0 € gagné. Clé des concours toujours refusée (testée à 06:25 : erreur 401).
+- **Portefeuille** : les 3 paris continuent jusqu'au 26/11. Rien à tuer, rien à doubler : sans Google ni clé, aucun ne peut encore montrer de résultat.
+- **Cadence** : EXP-001 et EXP-004 passent **toutes les 3 h** (proposition de l'analyste). Raison : 1 page par heure, 0 visiteur. Retour à 1 h dès qu'une page reçoit des visites venues d'un moteur. Effet : environ 2 fois moins de sessions par jour.
+- **Exploration** : la recherche de visiteurs sans Google est close après 4 impasses. Nouvelle commande : des primes ou concours payés en crypto à une adresse, faisables sans toi.
+- **ID-014** (agenda des échéances) : pas une expérience, simple ajout possible pour EXP-001.
+- **Humain** : file inchangée, 3 demandes ouvertes, aucune réponse depuis hier soir. Ordre : HQ-006 (13 min) > HQ-011 (3 min) > HQ-007 (5 min). Rien de nouveau à demander.
+- **Méta** : `agents/builder.md` reçoit 3 règles déjà dans ce fichier mais pas dans la fiche : preuve de demande avant toute page, signalement de chaque page (plan du site, IndexNow, README), tests sans compter de visite.
 ### 2026-11-13 ~00:30 — rien à tuer ; file humaine resserrée ; couloir concours ralenti
 - **Bilan** : P0 ✅ ; P1 non prouvé (6 visites au total, origine inconnue). Ledger vide, 0 €. En 12 h, 7 pages de plus (21 au plan du site), mais 0 visiteur prouvé :
   le frein n'est pas la production, c'est la découverte (Google) et la clé Superteam. Dates de décision au 26/11 : **les 3 paris continuent**, aucun doublement de mise.

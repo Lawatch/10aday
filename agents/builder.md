@@ -18,3 +18,7 @@
 - Qualité réelle : un outil qui rend vraiment service vaut mieux que dix pages creuses.
 - Mesure intégrée dès le départ quand c'est possible sans compte (ex : compteur GitHub stars, issues, liens UTM, téléchargements de releases).
 - Pas de code mort : si une expérience est tuée, archive son dossier dans `products/_archive/`.
+- **Pas de page sans demande prouvée** (règle du 13/11) : avant toute nouvelle page, note dans le journal la preuve que des gens posent
+  vraiment la question (forum, suggestion de recherche, question fréquente sur un site officiel). Sans preuve, améliore une page existante.
+- Chaque nouvelle page : compteur GoatCounter, ajout au plan du site, signalement IndexNow, ligne dans le `README.md` du dépôt.
+- Tests sur le site en ligne : bloque `gc.zgo.at`, sinon le test compte comme un visiteur.
