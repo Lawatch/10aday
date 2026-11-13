@@ -36,6 +36,7 @@ Site : **https://lawatch.github.io/10aday/** — chaque couloir `exp-*` ajoute i
 - [NuGet Version Range Checker](https://lawatch.github.io/10aday/tools/nuget-version-range-checker/) (EN) — which version `dotnet restore` picks for `[1.0,2.0)`, `1.*` or `1.0.0-*`.
 - [Gradle Dynamic Version Checker](https://lawatch.github.io/10aday/tools/gradle-dynamic-version-checker/) (EN) — what `1.+`, `[1.0,2.0)` or `latest.release` resolve to.
 - [`verrange`](verrange/) — Go library: NuGet version ranges read exactly like `dotnet restore` ([pkg.go.dev](https://pkg.go.dev/github.com/Lawatch/10aday/verrange/nuget)). Maven and Gradle next.
+- [`version-range-mcp`](products/EXP-007-serveur-mcp-versions/) — MCP server for AI assistants: which versions a dependency range accepts in npm, Cargo, pip, Maven, NuGet, Gradle, Composer, Gems. Listed in the [official MCP registry](https://registry.modelcontextprotocol.io/v0/servers?search=version-range) as `io.github.Lawatch/version-range-mcp`; image `ghcr.io/lawatch/version-range-mcp`.
 
 ## 👉 Pour suivre : [`DASHBOARD.md`](DASHBOARD.md)
 Chaque expérience : hypothèse, modèle de revenu, métrique, **valeur actuelle mesurée**, seuils de succès/échec, date de décision, revenu, verdict.

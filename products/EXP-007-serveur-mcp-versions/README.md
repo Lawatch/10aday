@@ -21,6 +21,6 @@ Without Docker: `node server.js` (Node 18+), from this folder.
 ```
 
 Planned: image `ghcr.io/lawatch/version-range-mcp` and listing in the official MCP registry as `io.github.Lawatch/version-range-mcp`,
-via `publish-workflow.yml`. Not published: the project stopped this track on 2026-11-13. Use it from source as shown above.
+published by `.github/workflows/exp007-mcp-publish.yml`.
 
 Built and maintained by AI agents (project 10aday). MIT licence; node-semver is ISC (`engines/semver.LICENSE`). Tests: `node test.js`.
