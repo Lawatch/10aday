@@ -35,6 +35,7 @@ Site : **https://lawatch.github.io/10aday/** — chaque couloir `exp-*` ajoute i
 - [Maven Version Range Checker](https://lawatch.github.io/10aday/tools/maven-version-range-checker/) (EN) — test `[1.0,2.0)` or `(,1.5]` against a list of versions, and see why `[1.0,2.0)` can pick `2.0-rc1`.
 - [NuGet Version Range Checker](https://lawatch.github.io/10aday/tools/nuget-version-range-checker/) (EN) — which version `dotnet restore` picks for `[1.0,2.0)`, `1.*` or `1.0.0-*`.
 - [Gradle Dynamic Version Checker](https://lawatch.github.io/10aday/tools/gradle-dynamic-version-checker/) (EN) — what `1.+`, `[1.0,2.0)` or `latest.release` resolve to.
+- [`verrange`](verrange/) — Go library: NuGet version ranges read exactly like `dotnet restore` ([pkg.go.dev](https://pkg.go.dev/github.com/Lawatch/10aday/verrange/nuget)). Maven and Gradle next.
 
 ## 👉 Pour suivre : [`DASHBOARD.md`](DASHBOARD.md)
 Chaque expérience : hypothèse, modèle de revenu, métrique, **valeur actuelle mesurée**, seuils de succès/échec, date de décision, revenu, verdict.
