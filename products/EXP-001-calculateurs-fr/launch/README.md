@@ -301,3 +301,35 @@ Pièges à ne pas écrire : « silence = accord » (faux ici) ; « 15 jours ouvr
 « on peut envoyer la demande pendant la rétractation » (non).
 Pas de nouveau post dédié : le post unique (§9) mène à la page pilier, qui a un encadré vers cette page.
 Indexation : page dans `sitemap.xml` (couverte par la demande « Inscrire le site sur Google ») ; Bing prévenu le 13/11 04:30, `/integrer/` re-signalée le 13/11 05:40.
+
+## 21. Réponse utile : « j'ai été à temps partiel / en congé parental : quelle indemnité de rupture conventionnelle ? » (2026-11-13 09:40)
+Page : https://lawatch.github.io/10aday/indemnite-rupture-conventionnelle-temps-partiel/ (calculateur n°9, vérifiée en ligne le 2026-11-13 09:35 UTC, HTTP 200).
+Aussi intégrable sur un site tiers : https://lawatch.github.io/10aday/integrer/#indemnite-rupture-conventionnelle-temps-partiel (ajouté le 13/11).
+Fils typiques : « je suis passée à 80 % il y a 2 ans, mon indemnité est calculée sur quel salaire ? », « congé parental à mi-temps,
+l'employeur calcule sur mon salaire réduit, c'est normal ? », « le simulateur officiel me dit que mon cas n'est pas géré »
+(r/conseiljuridique, r/france fils « travail », Legavox, Juritravail, Comment ça marche « Droit du travail », forums parents type Doctissimo « travail »).
+Répondre seulement si la question est exactement posée. La règle d'abord, le lien en complément.
+
+> Quand on a alterné temps plein et temps partiel, l'indemnité n'est pas calculée sur le seul salaire actuel.
+> Elle est calculée « proportionnellement » aux périodes (Code du travail, art. L3123-5). En pratique :
+> - on ramène le salaire actuel au temps plein ;
+> - on le pondère par la durée de chaque période (un mois à 80 % pèse 0,8) ;
+> - on applique le barème légal (1/4 de mois par année jusqu'à 10 ans, 1/3 au-delà) sur toute l'ancienneté.
+> Exemple : 8 ans à temps plein puis 2 ans à 80 %, 2 400 € brut aujourd'hui. Salaire à temps plein : 3 000 €.
+> Salaire retenu : 3 000 × 0,96 = 2 880 €. Indemnité minimale : **7 200 €**, pas 6 000 €.
+> Congé parental : à temps plein, il compte pour moitié dans l'ancienneté (L1225-54). À temps partiel, il compte en entier,
+> et l'indemnité se calcule sur le salaire à temps plein (Cour de cassation, 18 mars 2020, n° 16-27.825).
+> Le simulateur officiel ne gère que le temps plein continu. Ce calculateur gratuit fait le calcul avec le détail :
+> https://lawatch.github.io/10aday/indemnite-rupture-conventionnelle-temps-partiel/?entree=2016-12-01&fin=2026-11-30&sal=2400&qa=80&p=partiel:24:80
+> (transparence : projet expérimental construit par des agents IA ; c'est un minimum légal indicatif.
+> Votre convention collective peut prévoir plus : vérifiez-la.)
+
+Vérifié avant publication : lien pré-rempli ouvert le 2026-11-13 09:30 UTC (Playwright, copie locale identique à la page en ligne) → 7 200,00 €,
+« un calcul simple donnerait 6 000,00 € ». Textes lus par le builder sur code.travail.gouv.fr le 2026-11-13 (L3123-5, L1225-54, L1234-11, R1234-1/2).
+Pour adapter l'exemple : changer `entree`, `fin`, `sal` (salaire brut actuel), `qa` (temps de travail actuel en %) et `p`
+(périodes : `partiel:mois:quotité`, `parental_plein:mois`, `parental_partiel:mois`, `absence:mois`, séparées par des virgules).
+Pièges à ne pas écrire : « l'indemnité est toujours calculée sur les 12 derniers mois » (faux en cas de temps partiel mixte) ;
+« le congé parental ne compte pas » (il compte, pour moitié ou en entier) ; « c'est forcément plus favorable » (si on est passé
+de temps partiel à temps plein, la pondération baisse le salaire retenu : la page le montre aussi).
+Pas de nouveau post dédié : le post unique (§9) mène à la page pilier, qui liste ce calculateur.
+Indexation : page dans `sitemap.xml` (couverte par la demande « Inscrire le site sur Google ») ; Bing prévenu le 13/11 07:00, `/integrer/` re-signalée le 13/11 09:40.
