@@ -20,6 +20,9 @@ MAX_PARALLEL = 5          # plafond de sessions lancées par tick (protège le q
 PILOTAGE_EVERY_H = 3
 EXPLORATION_EVERY_H = 2
 VALID_EXP_ROLES = {"builder", "growth", "analyst", "scout"}
+# Cadence réduite pour une expérience bloquée (heures entre deux passages ; défaut 1).
+# 2026-11-13 strategist : EXP-005 attend la clé (HQ-011), ses passages horaires ne produisent rien → toutes les 3 h.
+EXP_EVERY_H = {"EXP-005": 3}
 
 
 def prompt_template():
@@ -35,7 +38,7 @@ def plan(hour):
     if hour % PILOTAGE_EVERY_H == 0:
         jobs.append(("pilotage", "strategist" if hour % 6 == 0 else "analyst", None))
     for e in experiments():
-        if e.get("statut") == "active":
+        if e.get("statut") == "active" and hour % EXP_EVERY_H.get(e["id"], 1) == 0:
             role = e.get("prochain_role", "builder")
             jobs.append((f"exp-{e['id']}", role if role in VALID_EXP_ROLES else "builder", e))
     if hour % EXPLORATION_EVERY_H == 1:

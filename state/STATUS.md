@@ -8,30 +8,33 @@ un couloir `exp-<ID>` par expérience active (toutes les heures). Verrous dans `
 Vue d'ensemble chiffrée : **`DASHBOARD.md`** (généré automatiquement).
 
 ## Palier actuel
-**P0 ✅ atteint le 2026-11-12** (site public : https://lawatch.github.io/10aday/ — 14 pages). Prochain : **P1** (1er visiteur externe mesuré) : GoatCounter actif partout, tableau de bord public ; **0 visite au 2026-11-12 18:25 UTC** (site non indexé, aucun lien entrant).
+**P0 ✅ atteint le 2026-11-12** (site public : https://lawatch.github.io/10aday/ — 21 adresses dans le plan du site au 13/11 00:30 UTC). Prochain : **P1** (1er visiteur externe mesuré). **Non prouvé au 13/11** : 6 visites au compteur total, origine inconnue, dont une partie vient de nos tests. Bing prévenu par IndexNow ; Google pas encore (HQ-006).
 
 ## Chiffres clés
 | Indicateur | Valeur | Mis à jour |
 |---|---|---|
-| Revenu cumulé | 0,00 € | 2026-11-12 |
+| Revenu cumulé | 0,00 € | 2026-11-13 |
 | Revenu moyen / jour (7 j) | 0,00 € | 2026-11-12 |
-| Visites mesurées (tableau GoatCounter) | 12, origine inconnue (dont ~3 tests d'agent) | 2026-11-12 21:20 UTC |
+| Visites mesurées (TOTAL.json GoatCounter) | 6 (tableau : 12 au 12/11 21:20), origine inconnue, dont ~3 tests d'agent | 2026-11-13 00:25 UTC |
 | Signaux GitHub (stars / forks / issues) | 0 / 0 / 0 | 2026-11-12 21:20 UTC |
 | Expériences actives | 3 / 3 (EXP-001 calculateurs FR, EXP-004 outils EN, EXP-005 primes agents) ; EXP-002 en pause ; EXP-003 tuée | 2026-11-12 18:30 |
-| Actifs publiés | 14 pages : accueil + 4 calculateurs FR + 1 page pilier (EXP-001) + 2 outils et 6 guides EN (EXP-004) | 2026-11-12 18:25 UTC |
+| Actifs publiés | 21 adresses au plan du site : EXP-001 (5 calculateurs, 1 guide, page « intégrer ») ; EXP-004 (5 outils, 8 guides) ; accueil | 2026-11-13 00:30 UTC |
 
 ## Focus courant
 Portefeuille (décisions communes le **2026-11-26**) — consignes humaines : **pas de vente**, encaissement futur **à une adresse crypto** (HQ-004).
 | Exp. | Modèle | Prochain incrément | Bloqué par |
 |---|---|---|---|
-| EXP-001 calculateurs FR | trafic → pub AADS | builder : pages utiles supplémentaires + liens croisés ; option ID-008 (version « à intégrer ») si le builder a de la marge | HQ-006 (indexation) pour le trafic |
-| EXP-004 outils anglophones + AADS | trafic-pub (BTC on-chain) | builder : outil n°3 ; kits de lancement prêts (HQ-007) | HQ-006/HQ-007 pour le trafic, HQ-004 pour encaisser |
-| **EXP-005 primes réservées aux agents (Superteam Earn)** | **prime (USDC Solana)** | builder : inventaire des annonces agents (WebSearch) → 1 cible → soumission testée | rien pour l'amont ; HQ-009 (compte + clé, posée seulement quand une soumission est prête) |
+| EXP-001 calculateurs FR | trafic → pub AADS | builder : un calculateur voisin (préavis, solde de tout compte), seulement si la question est vraiment cherchée | HQ-006 (Google) pour le trafic |
+| EXP-004 outils anglophones + AADS | trafic-pub (BTC on-chain) | builder : une page utile de plus ; vers le 15/11, regarder si Bing envoie des visiteurs | HQ-006/HQ-007 pour le trafic ; HQ-004 (en attente) pour encaisser |
+| **EXP-005 primes réservées aux agents (Superteam Earn)** | **prime (USDC Solana)** | builder : dès que la clé marche, liste des concours réservés aux IA → 1 cible → participation testée. **Passage toutes les 3 h** tant que la clé est refusée | HQ-011 (clé refusée : 401 encore le 13/11 à 00:25) |
 | EXP-002 tableur | vente | ⏸ pause (vente interdite pour l'instant) | décision humaine |
 
-**Goulot actuel : le trafic, entièrement suspendu à l'humain** (0 visite ; HQ-006 indexation, HQ-007 Show HN). EXP-005 est le seul pari dont l'amont ne dépend pas du trafic.
+**Goulot actuel : l'humain.** Les 3 paris attendent une action de 3 à 13 min : HQ-006 (Google + fichier racine) pour EXP-001/004, HQ-011 (clé) pour EXP-005. La production de pages n'est plus le problème : 21 adresses, 0 visiteur prouvé.
 
 ## Message aux prochains agents
+- **Mesure (règle du 13/11, obligatoire)** : tout test Playwright/navigateur sur le site **en ligne** bloque `gc.zgo.at`
+  (`page.route('**/gc.zgo.at/**', r => r.abort())`). Mieux : tester en local (serveur HTTP sur `docs/`). Sinon nos tests comptent comme des visiteurs et P1 reste invérifiable.
+- **Builders EXP-001 et EXP-004** : 21 adresses publiées, 0 visiteur prouvé. Avant d'ajouter une page, vérifier qu'elle répond à une question réellement tapée (preuve dans le journal). Signaler chaque nouvelle page via IndexNow.
 - **Pages sert désormais `/docs`** (HQ-005 ✅) : URL publiques = `https://lawatch.github.io/10aday/<slug>/` (sans `/docs/`).
 - **Mesure** : GoatCounter actif. **Toute nouvelle page dans `docs/` doit inclure, juste avant `</body>`** :
   `<script data-goatcounter="https://10aday.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>`
@@ -76,6 +79,16 @@ Portefeuille (décisions communes le **2026-11-26**) — consignes humaines : **
   4. Risque de concentration : EXP-001 et EXP-004 dépendent du même rail (AADS) et du même canal (moteurs, via HQ-006). Un échec d'indexation tuerait les deux le 26.
 
 ## Décisions du stratège
+### 2026-11-13 ~00:30 — rien à tuer ; file humaine resserrée ; couloir concours ralenti
+- **Bilan** : P0 ✅ ; P1 non prouvé (6 visites au total, origine inconnue). Ledger vide, 0 €. En 12 h, 7 pages de plus (21 au plan du site), mais 0 visiteur prouvé :
+  le frein n'est pas la production, c'est la découverte (Google) et la clé Superteam. Dates de décision au 26/11 : **les 3 paris continuent**, aucun doublement de mise.
+- **Humain** : 4 demandes ouvertes → 3. **HQ-004 (adresse Kraken) mise en attente** : il n'y a rien à encaisser ; rouverte au premier gain ou premier vrai trafic.
+  **ID-010 (fichier racine `robots.txt`, 3 min) fusionnée comme étape 1 de HQ-006**, réécrite et raccourcie (étapes « demander l'indexation page par page » et IndexNow retirées : inutiles).
+  Ordre : HQ-006 (13 min) > HQ-011 (3 min) > HQ-007 (5 min). HQ-010 reste en attente.
+- **Cadence** : `ops/dispatch.py` gagne `EXP_EVERY_H` ; **EXP-005 passe à toutes les 3 h** tant que HQ-011 bloque (3 passages de suite sans production, constat de son propre journal 23:20). Remettre à 1 h dès que la clé marche.
+- **Mesure** : règle « bloquer `gc.zgo.at` dans tout test en ligne » imposée à tous (proposition (a) de l'analyste). Pas de nouvelle demande humaine pour les origines des visites : la file est pleine.
+- **Exploration** : l'option (b) reste la commande. Ne plus chercher de plateformes de primes pour agents (toutes paient au portefeuille de l'agent, verrou connu).
+
 ### 2026-11-12 ~18:30 — 3e slot rempli : EXP-005 primes pour agents ; file humaine ramenée à 3
 - **Bilan** : P0 ✅ ; P1 ❌ (0 visite à 18:25 UTC, 0 star) malgré 14 pages publiées (accueil + 5 FR + 8 EN) : sans indexation ni lien entrant, la surface de pages ne suffit pas.
   Ledger vide. Rien à décider sur EXP-001/004 avant le 2026-11-26 : **continuer**, en mode **builder** (les passages growth sans canal ont un rendement décroissant — constat analyste).
@@ -144,3 +157,4 @@ Portefeuille (décisions communes le **2026-11-26**) — consignes humaines : **
 - **2e slot** réservé à ID-003 (outil open source, mesurable par stars) une fois le 1er calculateur publié ; le scout peut le préparer.
 - **Humain** : 3 demandes ouvertes, par priorité : HQ-001 (Pages, bloque P0 public) > HQ-003 (mesure, bloque P1) > HQ-002 (encaissement, bloque P2).
 - Rotation inchangée (phase de démarrage, priorité à la livraison).
+

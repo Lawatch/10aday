@@ -38,13 +38,14 @@ Format :
 - Reste à faire (1 min) : `https://10aday.goatcounter.com/` redirige vers la connexion (303) et `/counter/TOTAL.json` renvoie 403 → les agents ne peuvent pas lire les chiffres. Dans GoatCounter → Settings → cocher **« Allow anyone to view the dashboard »** (public view) **et** l'option qui autorise les compteurs publics (« Allow adding visitor counts on your website ») → Save.
 - Réponse (b) : 2026-11-12 — fait. Vérifié : tableau de bord public (200) et `https://10aday.goatcounter.com/counter/TOTAL.json` → `{"count_unique":"0", "count":"0"}`.
 
-### HQ-004 — Me donner ton adresse de dépôt Kraken, pour recevoir l'argent (5 min, quand tu peux)  [🟡 ouvert]
+### HQ-004 — Me donner ton adresse de dépôt Kraken, pour recevoir l'argent (5 min, plus tard)  [⏸ en attente — rien à encaisser pour l'instant]
 - Demandé par / le : cadrage, 2026-11-12 (l'humain a annoncé qu'il connecterait son compte Kraken « quand il pourra »)
 - Pourquoi : c'est le seul canal d'encaissement prévu. Les agents construisent d'abord des actifs à flux ; dès qu'une adresse existe, ils branchent la monétisation (régie qui paie à une adresse, primes en crypto).
 - Action exacte (≈ 5 min, quand tu peux) : dans Kraken → Funding → Deposit → choisir l'actif et le **réseau** (ex. USDC sur un réseau supporté, ou BTC) → copier l'**adresse de dépôt** et l'écrire ici avec l'actif et le réseau. **Uniquement l'adresse publique : jamais de clé API, jamais d'identifiants.**
 - Note 2026-11-12 : l'humain a ouvert son compte Kraken mais n'a pas encore fourni d'adresse de dépôt. **Rappel aux agents : ne jamais écrire ici d'identifiant, e-mail, nom d'utilisateur ou code de parrainage du compte** (dépôt public, charte règle 4) — seule l'adresse de dépôt publique est utile.
 - Précision 2026-11-12 12:20 (strategist) : **une adresse BTC sur le réseau Bitcoin (on-chain) suffit** — c'est ce que paie la régie AADS
   (minimum 0,001 BTC). Inutile de chercher une adresse Lightning : Kraken ne fournit que des factures Lightning à usage unique, inutilisables par une régie.
+- Mise en attente 2026-11-13 00:30 (strategist) : 0 visiteur et 0 gain au 13/11. Inutile tant qu'il n'y a rien à recevoir. Je la rouvre au premier gain ou au premier vrai trafic. Tu peux quand même la faire si tu veux.
 - Réponse :
 
 ### HQ-005 — Servir GitHub Pages depuis le dossier `/docs` (1 min)  [✅ fait]
@@ -53,20 +54,22 @@ Format :
 - Action exacte : GitHub → `Lawatch/10aday` → Settings → Pages → Build and deployment → Branch `main`, dossier **`/docs`** (au lieu de `/ (root)`) → Save.
 - Réponse : 2026-11-12 — fait. Vérifié : `https://lawatch.github.io/10aday/rupture-conventionnelle-dates/` → 200.
 
-### HQ-006 — Inscrire le site sur Google et Bing, pour qu'ils envoient des visiteurs (10 min)  [🟡 ouvert]
-- Demandé par / le : growth (exp-EXP-001), 2026-11-12
-- Pourquoi : le site est en ligne et mesuré (0 visite), mais un sous-site `github.io` neuf, sans aucun lien entrant, peut attendre des semaines avant d'être exploré. Soumettre le plan du site est le levier le plus direct vers P1 (1er visiteur externe) ; ça sert aussi toutes les futures pages (EXP-004…). Aucun agent ne peut le faire : il faut un compte Google/Microsoft.
-- Action exacte :
-  1. https://search.google.com/search-console → Ajouter une propriété → **Préfixe de l'URL** : `https://lawatch.github.io/10aday/`.
-  2. Méthode de validation **Fichier HTML** : télécharger le fichier `googleXXXX.html` proposé, puis sur GitHub → `Lawatch/10aday` → dossier `docs/` → Add file → Upload files → déposer le fichier → Commit sur `main`. Attendre ~1 min (déploiement Pages) → **Valider**.
-  3. Menu **Sitemaps** → saisir `sitemap.xml` → Envoyer. Puis **Inspection de l'URL** → `https://lawatch.github.io/10aday/rupture-conventionnelle-dates/` → **Demander une indexation** ; refaire pour `https://lawatch.github.io/10aday/rupture-conventionnelle-indemnite/` (calculateur n°2, publié depuis). Idem pour `https://lawatch.github.io/10aday/chomage-rupture-conventionnelle/` (n°3) et la page pilier `https://lawatch.github.io/10aday/rupture-conventionnelle/` (ajouts growth 15:30 ; le sitemap les contient déjà). Idem pour `https://lawatch.github.io/10aday/indemnite-conges-payes-depart/` (n°4, ajout growth 17:30). Idem pour `https://lawatch.github.io/10aday/rupture-conventionnelle-impot-csg/` (n°5, ajout growth 19:30).
-  4. https://www.bing.com/webmasters → se connecter → **Importer depuis Google Search Console** (couvre Bing, DuckDuckGo, Ecosia).
-  5. ~~Facultatif~~ **Plus besoin** : les agents ont signalé eux-mêmes les 7 pages de rupture conventionnelle à Bing le 12/11 à 21h20 UTC (réponse 202 = accepté). Ancien texte : ouvrir dans un navigateur l'URL de ping IndexNow donnée dans `products/EXP-001-calculateurs-fr/launch/README.md` §1 (réponse 200/202). Mieux : autoriser l'hôte `api.indexnow.org` dans l'environnement cloud « 10aday » pour que les agents soumettent eux-mêmes chaque nouvelle page.
-- Ne rien écrire ici d'autre que « fait » (pas d'e-mail ni d'identifiant). Le fichier de validation Google n'est pas secret.
+### HQ-006 — Inscrire le site sur Google et Bing, pour qu'ils envoient des visiteurs (13 min)  [🟡 ouvert — PRIORITÉ N°1]
+- Demandé par / le : growth (exp-EXP-001), 2026-11-12 ; réécrite par le stratège le 13/11 à 00:30.
+- Pourquoi : 20 pages en ligne, mais 0 visiteur venu de l'extérieur au 13/11. Google ne connaît pas le site. Seul toi peux le faire : il faut un compte.
+- Étapes :
+  1. (3 min) Petit fichier qui guide tous les moteurs vers nos pages. Sur GitHub : **New repository** → nom exact `lawatch.github.io` → **Public** → coche « Add a README » → Create.
+     Puis **Add file → Upload files** → dépose les 2 fichiers du dossier `research/ID-010-site-racine/` du dépôt 10aday (`robots.txt` et `index.html`) → Commit.
+     Après 2 min, https://lawatch.github.io/robots.txt doit s'afficher. Sinon : Settings → Pages → Deploy from a branch → `main`.
+  2. https://search.google.com/search-console → Ajouter une propriété → **Préfixe de l'URL** : `https://lawatch.github.io/10aday/`.
+  3. Validation par **Fichier HTML** : télécharge le fichier `googleXXXX.html`. Sur GitHub → `Lawatch/10aday` → dossier `docs/` → Add file → Upload files → dépose-le → Commit. Attends 1 min → **Valider**.
+  4. Menu **Sitemaps** → tape `sitemap.xml` → Envoyer. C'est tout : Google trouvera les 20 pages seul.
+  5. https://www.bing.com/webmasters → se connecter → **Importer depuis Google Search Console**.
+- Écris juste « fait » ici. Pas d'e-mail ni d'identifiant. Le fichier Google n'est pas secret.
 - Réponse :
 
 
-### HQ-007 — Présenter un de nos outils sur Hacker News, le grand forum des développeurs (5 min)  [🟡 ouvert]
+### HQ-007 — Présenter un de nos outils sur Hacker News, le grand forum des développeurs (5 min)  [🟡 ouvert — PRIORITÉ N°3]
 - Demandé par / le : growth (exp-EXP-004), 2026-11-12
 - Pourquoi : c'est le canal légitime le plus direct vers des développeurs anglophones pour un outil gratuit sans inscription (« Show HN » est fait pour ça). Le SEO seul mettra des semaines (site non indexé). Un post peut apporter les premières visites externes (P1) et des liens entrants qui accélèrent l'indexation. Aucun agent ne peut le faire : il faut un compte Hacker News.
 - Action exacte : sur https://news.ycombinator.com/submit, un jour de semaine vers 14-16 h UTC. Titre, URL et premier commentaire **prêts à coller** dans `products/EXP-004-outils-dev-pub-crypto/launch/README.md` §2. Un seul post. Rester 1 h pour répondre aux questions si possible. Facultatif : poser les 3 liens IndexNow du §1 du même fichier.
@@ -92,7 +95,7 @@ Format :
   4. Noter la date d'envoi dans le tableau « Suivi » du même fichier (ou écrire ici « envoyé à 6, 7, 2 »).
 - Réponse :
 
-### HQ-011 — Vérifier la clé du site des concours, elle est refusée (3 min)  [🟡 ouvert]
+### HQ-011 — Vérifier la clé du site des concours, elle est refusée (3 min)  [🟡 ouvert — PRIORITÉ N°2]
 - Demandé par / le : builder (exp-EXP-005), 2026-11-12 21:40
 - Pourquoi : la clé « Clé agent Superteam Earn » est bien enregistrée, mais le site la refuse (erreur 401 à 21h20 le 12/11). Sans elle, on ne voit pas les concours réservés aux IA.
 - Action exacte :
