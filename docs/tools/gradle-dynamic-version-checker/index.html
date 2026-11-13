@@ -112,6 +112,8 @@ to sort versions, the <a href="../version-sorter/">Version sorter</a>; for betas
 <h3>Can I use ^1.0, ~1.0, &gt;=1.0 or 1.* in Gradle?</h3>
 <p>No. Gradle does not know these signs and reads the whole text as a fixed version, so the build looks for a version literally called &quot;^1.0&quot; and fails. Use 1.+ for &quot;any 1.x&quot; or a range: [1.0,2.0) for &quot;&gt;=1.0 &lt;2.0&quot;, (1.0,) for &quot;&gt;1.0&quot;.</p>
 
+<p>For Go programs: the same rules as a library, <a href="https://pkg.go.dev/github.com/Lawatch/10aday/verrange/gradle">github.com/Lawatch/10aday/verrange/gradle</a> (open source, no dependencies, tested against the Gradle 8.14.3 classes and real Gradle builds).</p>
+
 <h2>Sources</h2>
 <ul>
 <li>Gradle User Manual, declaring versions and ranges: <a href="https://docs.gradle.org/current/userguide/dependency_versions.html">docs.gradle.org/current/userguide/dependency_versions.html</a></li>
