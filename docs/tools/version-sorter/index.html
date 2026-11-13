@@ -90,7 +90,7 @@ Many spellings are normalized (<code>1.0.0-rc.1</code> = <code>1.0.0rc1</code>, 
 Then PHP's <code>version_compare</code> orders them. Branch names (<code>dev-main</code>) are not versions; <code>dev-master</code> is read as <code>9999999-dev</code>.</p>
 <p><strong>RubyGems.</strong> Any dot-separated parts. A part containing a letter makes the whole version a pre-release (<code>1.0.0.post1</code> is older than <code>1.0.0</code>!).
 A hyphen is read as <code>.pre.</code>. Trailing zeros do not count (<code>1.0</code> = <code>1</code>).</p>
-<p>Related: to check which versions a <em>constraint</em> such as <code>^1.2</code> or <code>~&gt; 2.1</code> accepts, use the <a href="../version-constraint-checker/">Version Constraint Checker</a>. For Java, see how Maven orders versions in the <a href="../maven-version-range-checker/">Maven version range checker</a>.
+<p>Related: to check which versions a <em>constraint</em> such as <code>^1.2</code> or <code>~&gt; 2.1</code> accepts, use the <a href="../version-constraint-checker/">Version Constraint Checker</a>. For Java, see how Maven orders versions in the <a href="../maven-version-range-checker/">Maven version range checker</a>. For Go, see what a pseudo-version such as <code>v1.6.1-0.20241114170450-2d3c2a9cc518</code> means in the <a href="../go-pseudo-version/">Go pseudo-version decoder</a>.
 For Python, see the <a href="../requires-python-checker/">requires-python checker</a> and the <a href="../pip-compatible-release/">pip ~= guide</a>; for npm ranges, the <a href="../tilde-vs-caret/">tilde vs caret guide</a>.</p>
 
 <h2>FAQ</h2>

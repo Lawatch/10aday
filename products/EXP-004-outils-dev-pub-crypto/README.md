@@ -56,3 +56,10 @@ Page publiée : `docs/tools/gradle-dynamic-version-checker/` → https://lawatch
 - Oracle Java : `gvr/oracle/Oracle.java`, compilé contre le Gradle installé : `javac -cp "/opt/gradle/lib/*:/opt/gradle/lib/plugins/*" -d <cls> gvr/oracle/Oracle.java`, puis `GRADLE_CP="/opt/gradle/lib/*:/opt/gradle/lib/plugins/*:<cls>" node gvr/test_gvr.js 1 2 3 4 5 6 7 8` : 1 332 043 vérifications (ordre, type de sélecteur, correspondances), 0 écart.
 - Vrai Gradle : `bash gvr/real_gradle/run.sh` (dépôt Maven local de faux paquets, `gradle --offline`, 27 cas de `cases.txt`) → `RESULTS.txt` ; `node gvr/check_real.js` : 27/27 prédits.
 - Constats : `1.+` = préfixe de texte, bêtas et RC compris (`1.0, 1.1-rc1` → 1.1-rc1) ; `1+` prend 10.0 et 11.2 ; `[1.0,2.0)` exclut tout ce qui commence par `2.0` (2.0-rc1 ignoré, contrairement à Maven) ; `latest.release` prend 2.0-rc1 dans un dépôt Maven ; ordre sensible à la casse (`1.0-M1 < 1.0-alpha1`), `1.0-sp1 < 1.0 < 1.0.0`.
+
+## Outil n°8 : Go pseudo-version generator and decoder (`gpv/`)
+Page publiée : `docs/tools/go-pseudo-version/` → https://lawatch.github.io/10aday/tools/go-pseudo-version/ (écrite à la main ; `gpv.js` copié de `gpv/gpv.js`).
+- `gpv/gpv.js` : portage ligne à ligne de `golang.org/x/mod` v0.43.0 (`semver/semver.go`, `module/pseudo.go`) : validité, forme canonique, base, heure, hash, ordre, construction.
+- Oracle Go : `gpv/oracle/main.go` (`cd gpv/oracle && go build -o /tmp/gpv-oracle .`), puis `node gpv/test_gpv.js /tmp/gpv-oracle <graine>` : 410 153 vérifications par graine, graines 1 à 8 = 3 281 224, 0 écart.
+- Recherche d'un commit : la page interroge `proxy.golang.org/<module>/@v/<rev>.info` (CORS ouvert, vérifié le 13/11) ; même réponse que `go list -m -json` sur 6 modules. Messages d'erreur réels de `go` 1.26.0 cités : `gpv/real_go.sh`.
+- Demande (WebSearch 13/11) : fils « How to get a specific GO_MODULE tag » (freebsd-ports, 08/2023), golang-nuts « Pseudo version showing different », articles JFrog/Hackernoon ; aucun générateur en ligne trouvé (« I found no specific site name »).

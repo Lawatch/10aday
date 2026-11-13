@@ -130,6 +130,7 @@ Below 1.0.0 the caret is stricter: <code>^0.2.3</code> means ≥0.2.3 &lt;0.3.0,
 <li><a href="../requires-python-checker/">requires-python checker</a>: which Python versions a <code>requires-python</code> specifier allows (<code>&lt;=3.12</code> excludes 3.12.1)</li>
 <li><a href="../version-sorter/">Version sorter</a>: sort a list of versions the npm, Cargo, Composer, pip and RubyGems way, and see where the orders differ (<code>1.0.0-1</code> is older for npm, newer for pip)</li>
 <li><a href="../gradle-dynamic-version-checker/">Gradle dynamic version checker</a>: Gradle versions such as <code>1.+</code>, <code>[1.0,2.0)</code> and <code>latest.release</code>, and which version Gradle resolves.</li>
+<li><a href="../go-pseudo-version/">Go pseudo-version generator and decoder</a>: the exact <code>go.mod</code> version for a commit with no tag, and what “invalid pseudo-version” errors mean.</li>
 <li><a href="../nuget-version-range-checker/">NuGet version range checker</a>: .NET ranges such as <code>[1.0,2.0)</code> and <code>1.*</code>, and which version <code>dotnet restore</code> picks.</li>
 <li><a href="../maven-version-range-checker/">Maven version range checker</a>: Java/Maven ranges such as <code>[1.0,2.0)</code> and <code>(,1.5]</code>, and which version Maven picks.</li>
 <li><a href="../poetry-to-pep621/">Poetry to PEP 621 converter</a>: turn <code>^</code> and <code>~</code> from <code>[tool.poetry.dependencies]</code> into <code>[project]</code> dependencies</li>
