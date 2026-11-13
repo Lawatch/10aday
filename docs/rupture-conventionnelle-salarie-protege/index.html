@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rupture conventionnelle d'un salarié protégé : calcul des délais (rétractation, inspecteur du travail, date de départ)</title>
+<meta name="description" content="Délégué syndical, élu du CSE : calculez les dates de votre rupture conventionnelle. Fin de la rétractation, envoi à l'inspecteur du travail, date limite de sa réponse (2 mois, silence = refus), départ au plus tôt, délai de recours. Le simulateur officiel TéléRC ne couvre pas ce cas. Gratuit, textes cités.">
+<link rel="canonical" href="https://lawatch.github.io/10aday/rupture-conventionnelle-salarie-protege/">
+<script src="../integrer/integre.js"></script>
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="10aday">
+<meta property="og:title" content="Rupture conventionnelle d'un salarié protégé : calcul des délais">
+<meta property="og:description" content="Rétractation, demande à l'inspecteur du travail, 2 mois de délai, date de départ : toutes les dates, calculées à partir de la date de signature.">
+<meta property="og:url" content="https://lawatch.github.io/10aday/rupture-conventionnelle-salarie-protege/">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Calendrier de la rupture conventionnelle d'un salarié protégé",
+      "url": "https://lawatch.github.io/10aday/rupture-conventionnelle-salarie-protege/",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Tout navigateur web",
+      "inLanguage": "fr-FR",
+      "isAccessibleForFree": true,
+      "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"},
+      "description": "Calcule les dates de la rupture conventionnelle d'un salarié protégé (délégué syndical, membre du CSE…) : fin du délai de rétractation de 15 jours (C. trav. L1237-13, R1231-1), envoi de la demande d'autorisation à l'inspecteur du travail (L1237-15), date limite de sa décision (2 mois, silence = rejet, R2421-4 et R2421-11), date de départ au plus tôt (lendemain de l'autorisation) et délai de recours hiérarchique (2 mois, R2422-1). Calcul fait dans le navigateur, rappels dans l'agenda.",
+      "featureList": ["Fin du délai de rétractation avec jours fériés", "Date limite de réponse de l'inspecteur du travail", "Date de départ au plus tôt", "Contrôle de la date de rupture prévue", "Délai de recours en cas de refus", "Rappels dans votre agenda (.ics)"]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "10aday", "item": "https://lawatch.github.io/10aday/"},
+        {"@type": "ListItem", "position": 2, "name": "Rupture conventionnelle", "item": "https://lawatch.github.io/10aday/rupture-conventionnelle/"},
+        {"@type": "ListItem", "position": 3, "name": "Salarié protégé", "item": "https://lawatch.github.io/10aday/rupture-conventionnelle-salarie-protege/"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "Un salarié protégé peut-il signer une rupture conventionnelle ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Oui. Les salariés protégés (délégués syndicaux, élus du CSE, etc.) peuvent conclure une rupture conventionnelle. Mais elle n'est pas homologuée par la DREETS : elle doit être autorisée par l'inspecteur du travail (Code du travail, art. L1237-15)."}},
+        {"@type": "Question", "name": "Combien de temps a l'inspecteur du travail pour répondre ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Deux mois à compter de la réception de la demande. S'il ne répond pas dans ce délai, la demande est rejetée : le silence vaut refus (art. R2421-4 et R2421-11). C'est l'inverse de la rupture conventionnelle classique, où le silence vaut accord."}},
+        {"@type": "Question", "name": "Quand le contrat d'un salarié protégé prend-il fin après une rupture conventionnelle ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Au plus tôt le lendemain du jour de l'autorisation de l'inspecteur du travail (art. L1237-15). Si la convention prévoit une date plus tardive, c'est cette date qui compte. La date prévue doit donc laisser le temps à l'inspecteur de répondre."}},
+        {"@type": "Question", "name": "Quand peut-on envoyer la demande d'autorisation à l'inspecteur du travail ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Seulement après la fin du délai de rétractation de 15 jours calendaires qui suit la signature. La demande se fait avec le formulaire Cerfa 14599, par courrier ou sur le site Mes démarches travail. Le simulateur TéléRC ne peut pas être utilisé pour un salarié protégé."}},
+        {"@type": "Question", "name": "Que faire si l'inspecteur du travail refuse la rupture conventionnelle ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Le salarié ou l'employeur peut faire un recours auprès du ministre du Travail dans les 2 mois qui suivent la notification du refus (art. R2422-1). Sans réponse du ministre pendant 4 mois, le recours est rejeté. Un recours devant le tribunal administratif est aussi possible."}}
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root{--fg:#1d2330;--muted:#5b6475;--line:#d9dee7;--accent:#1f5fbf;--accent-bg:#eef4fd;--warn:#8a5a00;--warn-bg:#fff6e0;--ok:#1b7a43}
+  *{box-sizing:border-box}
+  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;max-width:760px;margin:0 auto;padding:1.5rem 1rem 4rem;line-height:1.6;color:var(--fg)}
+  h1{font-size:1.6rem;line-height:1.25;margin:.5rem 0}
+  h2{font-size:1.25rem;margin-top:2.2rem;border-bottom:1px solid var(--line);padding-bottom:.3rem}
+  a{color:var(--accent)}
+  .muted{color:var(--muted)}
+  .small{font-size:.9rem}
+  nav.crumb{font-size:.9rem}
+  form{background:#f7f9fc;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem;margin:1.2rem 0}
+  .field{margin:.7rem 0}
+  label{font-weight:600;display:block}
+  input[type=date]{font:inherit;padding:.4rem .5rem;border:1px solid #b8c0cc;border-radius:6px;min-width:12rem}
+  .hint{font-size:.85rem;color:var(--muted);margin:.15rem 0 0}
+  .err{color:#b00020;font-weight:600}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:0 1.2rem}
+  @media (max-width:560px){.grid{grid-template-columns:1fr}}
+  .note{background:var(--warn-bg);color:var(--warn);border-radius:8px;padding:.6rem .8rem;font-size:.92rem;margin:.4rem 0}
+  .info{background:var(--accent-bg);border-radius:8px;padding:.6rem .8rem;font-size:.92rem}
+  button{font:inherit;padding:.45rem .9rem;border-radius:6px;border:1px solid var(--accent);background:var(--accent);color:#fff;cursor:pointer}
+  button.secondary{background:#fff;color:var(--accent)}
+  .actions{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.5rem}
+  details{border:1px solid var(--line);border-radius:8px;padding:.5rem .8rem;margin:.5rem 0}
+  summary{cursor:pointer;font-weight:600}
+  table{border-collapse:collapse;width:100%;font-size:.92rem}
+  th,td{border:1px solid var(--line);padding:.35rem .5rem;text-align:left;vertical-align:top}
+  @media (max-width:560px){table{font-size:.82rem}th,td{padding:.3rem .35rem;overflow-wrap:anywhere}}
+  .card{border:1px solid var(--line);border-left:5px solid var(--ok);border-radius:8px;padding:.6rem .9rem;margin:.7rem 0}
+  .card.urgent{border-left-color:#c77700}
+  .card.past{border-left-color:#999;opacity:.75}
+  .card h3{margin:0;font-size:1.02rem}
+  .card .date{font-size:1.2rem;font-weight:700;color:var(--ok)}
+  .card.urgent .date{color:#a35f00}
+  .card.past .date{color:#b00020;text-decoration:line-through}
+  .why{font-size:.9rem;color:var(--muted);margin:.2rem 0 0}
+  footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1rem;font-size:.85rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<nav class="crumb"><a href="../">10aday</a> › <a href="../rupture-conventionnelle/">Rupture conventionnelle</a> › Salarié protégé</nav>
+
+<h1>Rupture conventionnelle d'un salarié protégé : calcul des délais</h1>
+<p>Délégué syndical, élu du CSE, représentant de proximité : votre rupture conventionnelle n'est pas homologuée par la DREETS.
+Elle doit être <strong>autorisée par l'inspecteur du travail</strong>, qui a 2 mois pour répondre. Et son silence vaut refus.
+Le simulateur officiel TéléRC ne gère pas ce cas. Entrez la date de signature : l'outil donne toutes les dates.</p>
+
+<form id="f" novalidate>
+  <div class="grid">
+    <div class="field">
+      <label for="signature">Date de signature de la convention</label>
+      <input type="date" id="signature" required>
+      <p class="hint">Le délai de rétractation de 15 jours part du lendemain.</p>
+    </div>
+    <div class="field">
+      <label for="reception">Réception de la demande par l'inspection (facultatif)</label>
+      <input type="date" id="reception">
+      <p class="hint">Vide : on suppose un envoi en ligne le premier jour possible. Par courrier, mettez la date de l'avis de réception.</p>
+    </div>
+    <div class="field">
+      <label for="convenue">Date de rupture prévue dans la convention (facultatif)</label>
+      <input type="date" id="convenue">
+      <p class="hint">L'outil vérifie qu'elle laisse le temps à l'inspecteur de répondre.</p>
+    </div>
+    <div class="field">
+      <label for="autorisation">Date de l'autorisation, si vous l'avez (facultatif)</label>
+      <input type="date" id="autorisation">
+      <p class="hint">Donne la date réelle de fin du contrat.</p>
+    </div>
+    <div class="field">
+      <label for="refus">Date de notification d'un refus (facultatif)</label>
+      <input type="date" id="refus">
+      <p class="hint">Donne la date limite pour faire un recours.</p>
+    </div>
+    <div class="field">
+      <label><input type="checkbox" id="am"> Alsace-Moselle</label>
+      <p class="hint">Ajoute le Vendredi saint et le 26 décembre aux jours fériés.</p>
+    </div>
+  </div>
+  <div class="actions"><button type="submit">Calculer mes dates</button></div>
+  <p id="error" class="err" role="alert" hidden></p>
+</form>
+
+<section id="result" aria-live="polite" hidden>
+  <h2>Vos dates</h2>
+  <div id="cards"></div>
+  <div id="notes"></div>
+  <div class="actions">
+    <button type="button" id="ics">Ajouter ces dates à mon agenda (.ics)</button>
+    <button type="button" class="secondary" id="share">Copier le lien de ce calcul</button>
+  </div>
+  <p class="small muted" id="shared" hidden>Lien copié (il contient les dates saisies).</p>
+</section>
+
+<p class="note"><strong>Résultat indicatif.</strong> L'inspecteur peut répondre bien avant 2 mois : la date limite est un maximum, pas une date de réponse.
+Le délai de 2 mois est compté de date à date, sans report du week-end : c'est la lecture la plus prudente. En cas de doute, appelez l'inspection du travail de votre établissement.</p>
+
+<h2>Les étapes, dans l'ordre</h2>
+<table>
+  <tr><th>Étape</th><th>Délai</th><th>Texte</th></tr>
+  <tr><td>Un ou plusieurs entretiens, puis signature de la convention (formulaire Cerfa 14599)</td><td>Pas de délai minimum entre les deux</td><td>C. trav. L1237-12</td></tr>
+  <tr><td>Délai de rétractation</td><td>15 jours calendaires après la signature. Si le dernier jour tombe un samedi, un dimanche ou un jour férié : reporté au jour ouvrable suivant.</td><td>L1237-13, R1231-1</td></tr>
+  <tr><td>Envoi de la demande d'autorisation à l'inspecteur du travail</td><td>À partir du lendemain de la fin de la rétractation. Par courrier ou sur <a href="https://mesdemarches.travail.gouv.fr" rel="noopener">Mes démarches travail</a>.</td><td>L1237-15, fiche du ministère</td></tr>
+  <tr><td>Enquête de l'inspecteur, puis décision</td><td><strong>2 mois maximum</strong> après la réception. Silence = <strong>refus</strong>.</td><td>R2421-4, R2421-11</td></tr>
+  <tr><td>Fin du contrat</td><td>Au plus tôt le <strong>lendemain de l'autorisation</strong>.</td><td>L1237-15</td></tr>
+  <tr><td>Recours en cas de refus</td><td>2 mois après la notification, auprès du ministre du Travail. Sans réponse en 4 mois : rejet.</td><td>R2422-1</td></tr>
+</table>
+<p class="small">Élus du CSE, représentants syndicaux au CSE, représentants de proximité : le CSE doit donner son avis, et le procès-verbal de la réunion accompagne la demande (art. L2421-3 et R2421-10).
+Le texte, écrit pour le licenciement, ne fixe pas clairement à quel moment placer cette consultation dans une rupture conventionnelle. Demandez à l'inspection du travail avant de signer.</p>
+
+<h2>Exemple</h2>
+<p>Signature le lundi 2 novembre 2026. La rétractation se termine le mardi 17 novembre. La demande part en ligne le mercredi 18 novembre.
+L'inspecteur a jusqu'au <strong>lundi 18 janvier 2027</strong> pour répondre. S'il autorise ce jour-là, le contrat peut prendre fin le <strong>mardi 19 janvier 2027</strong> au plus tôt.
+Sans réponse le 18 janvier au soir, la demande est refusée.</p>
+<p>Pour un salarié non protégé, la même signature permettait un départ dès le 8 décembre 2026 (<a href="../rupture-conventionnelle-dates/?signature=2026-11-02">voir le calcul</a>). Comptez donc <strong>environ 6 semaines de plus</strong> au maximum.</p>
+
+<h2>Les erreurs fréquentes</h2>
+<ul>
+  <li><strong>Passer par TéléRC</strong> : ce site sert à l'homologation classique. Il ne peut pas être utilisé pour un salarié protégé.</li>
+  <li><strong>Croire que le silence vaut accord</strong> : c'est vrai pour la DREETS, pas pour l'inspecteur. Sans réponse en 2 mois, c'est un refus.</li>
+  <li><strong>Fixer une date de départ trop proche</strong> : le contrat ne peut pas s'arrêter avant le lendemain de l'autorisation. Une date convenue trop tôt sera dépassée.</li>
+  <li><strong>Envoyer la demande pendant la rétractation</strong> : elle ne peut partir qu'après la fin du délai de 15 jours.</li>
+</ul>
+
+<h2>Questions fréquentes</h2>
+<details><summary>Un salarié protégé peut-il signer une rupture conventionnelle ?</summary>
+  <p>Oui. Les salariés protégés (délégués syndicaux, élus du CSE, etc.) peuvent conclure une rupture conventionnelle. Mais elle n'est pas homologuée par la DREETS : elle doit être autorisée par l'inspecteur du travail (Code du travail, art. L1237-15).</p></details>
+<details><summary>Combien de temps a l'inspecteur du travail pour répondre ?</summary>
+  <p>Deux mois à compter de la réception de la demande. S'il ne répond pas dans ce délai, la demande est rejetée : le silence vaut refus (art. R2421-4 et R2421-11). C'est l'inverse de la rupture conventionnelle classique, où le silence vaut accord.</p></details>
+<details><summary>Quand le contrat d'un salarié protégé prend-il fin après une rupture conventionnelle ?</summary>
+  <p>Au plus tôt le lendemain du jour de l'autorisation de l'inspecteur du travail (art. L1237-15). Si la convention prévoit une date plus tardive, c'est cette date qui compte. La date prévue doit donc laisser le temps à l'inspecteur de répondre.</p></details>
+<details><summary>Quand peut-on envoyer la demande d'autorisation à l'inspecteur du travail ?</summary>
+  <p>Seulement après la fin du délai de rétractation de 15 jours calendaires qui suit la signature. La demande se fait avec le formulaire Cerfa 14599, par courrier ou sur le site Mes démarches travail. Le simulateur TéléRC ne peut pas être utilisé pour un salarié protégé.</p></details>
+<details><summary>Que faire si l'inspecteur du travail refuse la rupture conventionnelle ?</summary>
+  <p>Le salarié ou l'employeur peut faire un recours auprès du ministre du Travail dans les 2 mois qui suivent la notification du refus (art. R2422-1). Sans réponse du ministre pendant 4 mois, le recours est rejeté. Un recours devant le tribunal administratif est aussi possible.</p></details>
+
+<h2>Sources</h2>
+<ul class="small">
+  <li>Code du travail, <a href="https://code.travail.gouv.fr/code-du-travail/l1237-15" rel="noopener">art. L1237-15</a> (autorisation de l'inspecteur, départ le lendemain), <a href="https://code.travail.gouv.fr/code-du-travail/l1237-13" rel="noopener">L1237-13</a> et <a href="https://code.travail.gouv.fr/code-du-travail/r1231-1" rel="noopener">R1231-1</a> (rétractation).</li>
+  <li>Code du travail, <a href="https://code.travail.gouv.fr/code-du-travail/r2421-4" rel="noopener">art. R2421-4</a> et <a href="https://code.travail.gouv.fr/code-du-travail/r2421-11" rel="noopener">R2421-11</a> (2 mois, silence = rejet), <a href="https://code.travail.gouv.fr/code-du-travail/r2421-10" rel="noopener">R2421-10</a> et <a href="https://code.travail.gouv.fr/code-du-travail/l2421-3" rel="noopener">L2421-3</a> (avis du CSE), <a href="https://code.travail.gouv.fr/code-du-travail/r2422-1" rel="noopener">R2422-1</a> (recours).</li>
+  <li>Ministère du Travail, fiche <a href="https://code.travail.gouv.fr/fiche-ministere-travail/la-rupture-conventionnelle-du-contrat-de-travail-a-duree-indeterminee" rel="noopener">« La rupture conventionnelle du contrat de travail à durée indéterminée »</a>, rubrique salariés protégés (demande après la rétractation, TéléRC non utilisable).</li>
+</ul>
+<p class="small muted">Textes consultés sur le Code du travail numérique le 13 novembre 2026. Le calcul est entièrement fait dans votre navigateur : aucune date n'est envoyée.</p>
+
+<footer>
+  <p>Outil gratuit construit et maintenu par des <strong>agents d'intelligence artificielle</strong> (projet <a href="../">10aday</a>), testé contre des cas chiffrés et un calcul de contrôle indépendant. Ce n'est pas un conseil juridique.
+  Voir aussi : <a href="../rupture-conventionnelle/">rupture conventionnelle : les calculs dans l'ordre</a> · <a href="../rupture-conventionnelle-dates/">calcul des dates (salarié non protégé)</a> · <a href="../rupture-conventionnelle-indemnite/">indemnité minimale</a> · <a href="../rupture-conventionnelle-impot-csg/">impôt et CSG de l'indemnité</a> · <a href="../indemnite-conges-payes-depart/">indemnité de congés payés au départ</a> · <a href="../chomage-rupture-conventionnelle/">date de début du chômage</a> · <a href="../delais-contestation-rupture/">délais pour contester</a> · <a href="../mutuelle-apres-rupture-conventionnelle/">mutuelle après le départ</a>.
+  Une erreur ? <a href="https://github.com/Lawatch/10aday/issues/new?title=Salari%C3%A9%20prot%C3%A9g%C3%A9%20%3A%20" rel="noopener">Signalez-la</a>.</p>
+</footer>
+
+<script src="../rupture-conventionnelle-dates/rc-dates.js"></script>
+<script src="rc-protege.js"></script>
+<script>
+(function () {
+  'use strict';
+  var P = window.RCProtege;
+  var $ = function (id) { return document.getElementById(id); };
+  var F = ['signature', 'reception', 'convenue', 'autorisation', 'refus'];
+  var last = null;
+  function err(msg) { $('error').textContent = msg; $('error').hidden = false; $('result').hidden = true; }
+  function card(cls, titre, date, detail) {
+    return '<div class="' + cls + '"><h3>' + titre + '</h3><div class="date">' + P.formatFR(date) + '</div><p class="why">' + detail + '</p></div>';
+  }
+  function compute(e) {
+    if (e) e.preventDefault();
+    $('error').hidden = true;
+    var v = {}; F.forEach(function (k) { v[k] = $(k).value; });
+    if (!v.signature) return err('Indiquez la date de signature.');
+    var r;
+    try { r = P.calc(v.signature, { reception: v.reception, convenue: v.convenue, autorisation: v.autorisation, refus: v.refus, alsaceMoselle: $('am').checked }); }
+    catch (x) { return err(x.message); }
+    last = r;
+    var rep = r.retractation_reports.length ? ' Reporté à cause de : ' + r.retractation_reports.map(function (s) { return s.raison; }).join(', ') + '.' : '';
+    var h = card('card', 'Fin du délai de rétractation', r.fin_retractation, 'Dernier jour pour changer d’avis, par écrit (15 jours calendaires après la signature).' + rep);
+    h += card('card', 'Envoi de la demande à l’inspecteur du travail', r.envoi_au_plus_tot, 'Au plus tôt ce jour-là, avec le formulaire Cerfa 14599 et la convention signée.');
+    h += card('card urgent', 'Dernier jour pour la réponse de l’inspecteur', r.limite_decision,
+      '2 mois après la réception de la demande' + (r.reception_par_defaut ? ' (supposée reçue le ' + P.formatFR(r.reception) + ')' : ' (reçue le ' + P.formatFR(r.reception) + ')') +
+      '. <strong>Sans réponse à cette date, c’est un refus.</strong>');
+    if (r.rupture) h += card('card', 'Fin du contrat', r.rupture, 'Lendemain de l’autorisation' + (r.convenue && r.rupture.getTime() === r.convenue.getTime() ? ', ou date prévue dans la convention si elle est plus tardive' : '') + '.');
+    else h += card('card', 'Départ si l’autorisation arrive le dernier jour', r.depart_si_autorise_le_dernier_jour,
+      'Le contrat s’arrête le lendemain de l’autorisation. Si l’inspecteur répond plus tôt, le départ est plus tôt. Soit au maximum ' + r.duree_max_jours + ' jours après la signature.');
+    if (r.recours_limite) h += card('card urgent', 'Dernier jour pour un recours auprès du ministre du Travail', r.recours_limite, '2 mois après la notification du refus (R2422-1). Sans réponse du ministre en 4 mois, le recours est rejeté.');
+    $('cards').innerHTML = h;
+    $('notes').innerHTML = r.alertes.map(function (a) { return '<p class="note">' + a + '</p>'; }).join('');
+    $('result').hidden = false;
+    var q = new URLSearchParams(); F.forEach(function (k) { if (v[k]) q.set(k, v[k]); }); if ($('am').checked) q.set('am', '1');
+    history.replaceState(null, '', '?' + q.toString());
+  }
+  $('f').addEventListener('submit', compute);
+  F.concat(['am']).forEach(function (id) { $(id).addEventListener('change', function () { if ($('signature').value) compute(); }); });
+  $('ics').addEventListener('click', function () {
+    if (!last) return;
+    var blob = new Blob([P.toICS(last)], { type: 'text/calendar;charset=utf-8' });
+    var a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'rupture-conventionnelle-salarie-protege.ics';
+    document.body.appendChild(a); a.click(); a.remove();
+  });
+  $('share').addEventListener('click', function () {
+    var done = function () { $('shared').hidden = false; };
+    if (navigator.clipboard) navigator.clipboard.writeText(location.href).then(done, done); else done();
+  });
+  var p = new URLSearchParams(location.search);
+  F.forEach(function (k) { if (p.get(k)) $(k).value = p.get(k); });
+  if (p.get('am') === '1') $('am').checked = true;
+  if ($('signature').value) compute();
+})();
+</script>
+<!-- Mesure d'audience : GoatCounter (sans cookie) -->
+<script data-goatcounter="https://10aday.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

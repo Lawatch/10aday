@@ -9,6 +9,7 @@
 | Date de début du chômage après RC (différés + délai d'attente) | `docs/chomage-rupture-conventionnelle/` | `src/chomage-differe.js` (copié tel quel) | `node test/chomage-differe.test.js` |
 | Délais pour contester (RC 12 mois, solde de tout compte 6 mois, salaires 3 ans, exécution 2 ans, discrimination/harcèlement 5 ans) | `docs/delais-contestation-rupture/` | `src/delais-contestation.js` (copié tel quel) | `node test/delais-contestation.test.js` |
 | Mutuelle après le départ (portabilité CSS L911-8 : durée du contrat arrondie au mois supérieur, 12 mois max, arrêt à la fin du chômage ; loi Évin 6 mois) | `docs/mutuelle-apres-rupture-conventionnelle/` | `src/portabilite-mutuelle.js` (copié tel quel) | `node test/portabilite-mutuelle.test.js` |
+| Calendrier de la RC d'un salarié protégé (rétractation, inspecteur du travail 2 mois, silence = rejet, départ lendemain de l'autorisation, recours 2 mois) | `docs/rupture-conventionnelle-salarie-protege/` | `src/rc-protege.js` (copié tel quel ; utilise `rc-dates.js` du n°1) | `node test/rc-protege.test.js` |
 
 - `reference/rc_dates.py` : oracle Python ; le test JS le compare sur 13 150 combinaisons de dates (nécessite `python3`).
 - Après toute modification de `src/rc-dates.js` : `cp src/rc-dates.js ../../docs/rupture-conventionnelle-dates/rc-dates.js` (le test vérifie l'identité).
