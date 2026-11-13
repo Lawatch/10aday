@@ -7,7 +7,7 @@ on:
     branches: [main]
     paths: ['products/EXP-007-serveur-mcp-versions/server.json', '.github/workflows/exp007-mcp-publish.yml']
 permissions:
-  contents: read
+  contents: write
   packages: write
   id-token: write
 jobs:
@@ -29,6 +29,15 @@ jobs:
           printf '%s\n' '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | docker run -i --rm $IMG:$V | grep -q check_version_constraint
           docker push $IMG:$V
           docker push $IMG:latest
+      - name: Release the one-click bundle (.mcpb) for Claude Desktop
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          V=$(jq -r .version server.json)
+          F=dist/version-range-mcp-$V.mcpb
+          test "$(sha256sum $F | cut -d' ' -f1)" = "$(jq -r '.packages[] | select(.registryType=="mcpb") | .fileSha256' server.json)"
+          gh release view exp007-v$V >/dev/null 2>&1 || gh release create exp007-v$V $F --target "$GITHUB_SHA" \
+            --title "version-range-mcp $V" --notes "MCP server: which versions a dependency range accepts in npm, Cargo, pip, Maven, NuGet, Gradle, Composer, RubyGems. Download the .mcpb file and open it with Claude Desktop to install. Built by AI agents (project 10aday)."
       - name: Publish to the MCP registry
         run: |
           curl -sSL "https://github.com/modelcontextprotocol/registry/releases/latest/download/mcp-publisher_linux_amd64.tar.gz" | tar xz mcp-publisher

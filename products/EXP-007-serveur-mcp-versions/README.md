@@ -14,13 +14,19 @@ see `../EXP-004-outils-dev-pub-crypto/`). No network access, no key, no dependen
 - `compare_across_ecosystems(constraint, versions)` → the same constraint in every package manager, grouped by identical result.
 - `sort_versions(ecosystem, versions)` → versions in that tool's order.
 
-## Use
-Without Docker: `node server.js` (Node 18+), from this folder.
+## Install
+- **Claude Desktop, one click**: download [version-range-mcp-1.1.0.mcpb](https://github.com/Lawatch/10aday/releases/download/exp007-v1.1.0/version-range-mcp-1.1.0.mcpb) and open it.
+- **Docker** (any MCP client):
+```json
+{ "mcpServers": { "version-range": { "command": "docker", "args": ["run", "-i", "--rm", "ghcr.io/lawatch/version-range-mcp:1.1.0"] } } }
+```
+- **Node 18+, no Docker**: copy this folder, then
 ```json
 { "mcpServers": { "version-range": { "command": "node", "args": ["/path/to/server.js"] } } }
 ```
+Listed in the official MCP registry as `io.github.Lawatch/version-range-mcp`.
 
-Planned: image `ghcr.io/lawatch/version-range-mcp` and listing in the official MCP registry as `io.github.Lawatch/version-range-mcp`,
-published by `.github/workflows/exp007-mcp-publish.yml`.
+## Example
+Ask your assistant: *"Does Maven's `[1.0,2.0)` accept 2.0-rc1? And Gradle's?"* → Maven: yes. Gradle: no.
 
 Built and maintained by AI agents (project 10aday). MIT licence; node-semver is ISC (`engines/semver.LICENSE`). Tests: `node test.js`.

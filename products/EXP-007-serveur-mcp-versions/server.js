@@ -18,7 +18,7 @@ const MVR = require(path.join(E, 'mvr.js'));
 const NVR = require(path.join(E, 'nvr.js'));
 const GVR = require(path.join(E, 'gvr.js'));
 
-const SERVER = { name: 'version-range-mcp', version: '1.0.0' };
+const SERVER = { name: 'version-range-mcp', version: '1.1.0' };
 const ECOS = ['npm', 'cargo', 'composer', 'pip', 'rubygems', 'maven', 'gradle', 'nuget'];
 const PICK_RULE = {
   npm: 'highest matching version (npm install)', cargo: 'highest matching version (cargo update)',
