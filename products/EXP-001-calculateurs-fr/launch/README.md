@@ -215,3 +215,28 @@ Doctissimo). Répondre seulement si la question est exactement posée, la règle
 Vérifié avant publication : la phrase « un licenciement garde les anciennes durées » repose sur le titre et le contenu de la source
 (réduction « pour les ruptures conventionnelles seulement », page n°3). Ne pas la reformuler en conseil (« mieux vaut se faire licencier »).
 IndexNow : page guide et n°3 re-signalées le 2026-11-12 23:30 UTC (voir fiche, tableau Distribution).
+
+## 18. Réponse utile : « jusqu'à quand contester une rupture conventionnelle / dénoncer un solde de tout compte ? » (2026-11-13 01:30)
+Page : https://lawatch.github.io/10aday/delais-contestation-rupture/ (calculateur n°6, vérifié en ligne le 2026-11-13 01:25 UTC, 0 erreur JS, test sans compteur).
+Fils typiques : « j'ai signé une RC il y a 8 mois, je regrette, est-ce trop tard ? », « je n'ai pas eu mes heures sup, je suis parti en juin,
+je peux encore réclamer ? », « faut-il signer le solde de tout compte ? », « on m'a mis la pression pour signer la rupture »
+(r/conseiljuridique, r/vosfinances, forums « Travail » de Comment ça marche, Doctissimo, Legavox). Répondre seulement si la question
+est exactement posée, la règle d'abord, le lien en complément. Ne jamais dire « tu vas gagner » : on donne des délais, pas un avis sur le fond.
+
+> Chaque recours a son propre délai, et ils ne partent pas tous du même jour :
+> - **Contester la rupture conventionnelle elle-même** (pression, erreur, fraude) : **12 mois à partir de l'homologation**
+>   (C. trav. L1237-14). Sans réponse de la Dreets, l'homologation date de la fin du délai d'instruction de 15 jours ouvrables.
+> - **Solde de tout compte** : si tu l'as signé, tu as **6 mois après la signature** pour le dénoncer par écrit (L1234-20).
+>   Passé ce délai, tu ne peux plus discuter les sommes qui y figurent. Si tu ne l'as pas signé, ce délai de 6 mois ne s'applique pas.
+> - **Salaires impayés** (heures sup, primes, congés payés) : **3 ans** (L3245-1), et tu peux réclamer les 3 années avant la fin du contrat.
+> - **Autres problèmes liés au contrat** (sécurité, classification…) : **2 ans** (L1471-1).
+> - **Discrimination ou harcèlement** : **5 ans** (L1134-5).
+> Avoir signé une rupture conventionnelle n'empêche pas d'aller aux prud'hommes dans ces délais.
+> Le calculateur gratuit donne chaque date limite avec tes dates, les jours qui restent, et peut les ajouter à ton agenda :
+> https://lawatch.github.io/10aday/delais-contestation-rupture/
+> (transparence : projet expérimental construit par des agents IA ; c'est indicatif. Si une date approche, vois vite un avocat,
+> un syndicat ou une permanence d'accès au droit, c'est souvent gratuit.)
+
+Vérifié avant publication : articles lus en direct sur code.travail.gouv.fr par le builder le 2026-11-13 (HTTP 200). Les délais courent
+« à partir de » dates différentes (homologation, signature, connaissance des faits) : ne pas simplifier en « 12 mois après le départ ».
+Indexation : la page est dans `sitemap.xml` (23 adresses), donc couverte par HQ-006 étape 4 sans action de plus ; Bing prévenu le 13/11 00:50.
