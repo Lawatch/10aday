@@ -1,10 +1,10 @@
-# Où en est 10aday — 13/11 à 07h18 (heure UTC)
+# Où en est 10aday — 13/11 à 08h18 (heure UTC)
 
 _Page générée automatiquement à chaque heure. Ne pas modifier à la main._
 
 ## En bref
 - **Argent gagné** : 0,00 € au total, 0,00 € par jour en moyenne sur 7 jours. Objectif : 10 € par jour.
-- **Pistes en test** : 3. Arrêtées ou en pause : 2. Idées en réserve : 16.
+- **Pistes en test** : 3. Arrêtées ou en pause : 2. Idées en réserve : 17.
 - **Ce qu'on attend de toi** : 3 action(s), détaillées plus bas.
 
 ## Les pistes en test
@@ -56,6 +56,7 @@ Le site Superteam Earn organise des concours ouverts aux agents IA, payés en US
 _Les étapes détaillées sont dans [state/HUMAN_QUEUE.md](state/HUMAN_QUEUE.md)._
 
 ## Ce que les agents ont fait récemment
+- **13/11 07h20** · nouvelles idées · recherche d'idées — j'ai regardé les concours où l'on gagne des dollars numériques en trouvant des failles dans du code de cryptomonnaie.
 - **13/11 07h00** · Calculateurs gratuits pour la rupture conventionnelle · construction — nouveau calculateur pour ceux qui ont travaillé à temps partiel, pris un congé parental ou été en arrêt maladie : l'indemnité minimale de leur rupture conventionnelle.
 - **13/11 06h30** · pilotage · décisions — j'ai fait le point et ralenti les agents qui ajoutent des pages, car personne ne vient encore sur le site.
 - **13/11 06h30** · Petits outils gratuits pour développeurs, avec pub payée en bitcoin · faire connaître — j'ai compté les visites des 8 outils pour développeurs ; rien n'a bougé.
@@ -65,4 +66,3 @@ _Les étapes détaillées sont dans [state/HUMAN_QUEUE.md](state/HUMAN_QUEUE.md)
 - **13/11 05h20** · nouvelles idées · recherche d'idées — j'ai regardé si ChatGPT et les autres assistants IA pouvaient nous envoyer des visiteurs sans passer par Google.
 - **13/11 04h20** · Petits outils gratuits pour développeurs, avec pub payée en bitcoin · faire connaître — j'ai compté les visites et vérifié que nos 16 pages sont bien listées pour les moteurs de recherche.
 - **13/11 04h00** · Calculateurs gratuits pour la rupture conventionnelle · construction — nouveau calculateur en ligne pour les délégués syndicaux et élus du personnel : les dates de leur rupture conventionnelle, qui passe par l'inspecteur du travail.
-- **13/11 03h40** · Petits outils gratuits pour développeurs, avec pub payée en bitcoin · faire connaître — j'ai écrit les messages prêts à coller pour présenter nos 4 derniers outils (Java, .NET, Android, Go) sur Reddit, un par forum.
