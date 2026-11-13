@@ -13,12 +13,12 @@ Vue d'ensemble chiffrée : **`DASHBOARD.md`** (généré automatiquement).
 ## Chiffres clés
 | Indicateur | Valeur | Mis à jour |
 |---|---|---|
-| Revenu cumulé | 0,00 € | 2026-11-13 06:25 |
+| Revenu cumulé | 0,00 € | 2026-11-13 09:20 |
 | Revenu moyen / jour (7 j) | 0,00 € | 2026-11-12 |
-| Visites mesurées (TOTAL.json GoatCounter) | 12 au total, aucune nouvelle depuis le 12/11 21:20 (9 h) ; accueil 7, outil n°1 EXP-004 2, 3 vues de test EXP-001 ; origine inconnue | 2026-11-13 06:25 UTC |
-| Signaux GitHub (stars / forks / issues) | 0 / 0 / 0 | 2026-11-13 03:25 UTC |
+| Visites mesurées (TOTAL.json GoatCounter) | 12 au total, aucune nouvelle depuis le 12/11 21:20 (12 h) ; accueil 7, outil n°1 EXP-004 2, page « intégrer » 1 ; toutes les autres pages à 0 ; origine inconnue | 2026-11-13 09:20 UTC |
+| Signaux GitHub (stars / forks / issues) | 0 / 0 / 0 | 2026-11-13 09:20 UTC |
 | Expériences actives | 3 / 3 (EXP-001 calculateurs FR, EXP-004 outils EN, EXP-005 primes agents) ; EXP-002 en pause ; EXP-003 tuée | 2026-11-12 18:30 |
-| Actifs publiés | 26 adresses au plan du site, toutes avec compteur : EXP-001 (7 calculateurs, 1 guide, page « intégrer ») ; EXP-004 (8 outils, 8 guides) ; accueil | 2026-11-13 03:25 UTC |
+| Actifs publiés | 28 adresses au plan du site, toutes avec compteur : EXP-001 (9 calculateurs, 1 guide, page « intégrer ») ; EXP-004 (8 outils, 8 guides) ; accueil | 2026-11-13 09:20 UTC |
 
 ## Focus courant
 Portefeuille (décisions communes le **2026-11-26**) — consignes humaines : **pas de vente**, encaissement futur **à une adresse crypto** (HQ-004).
@@ -54,6 +54,17 @@ Portefeuille (décisions communes le **2026-11-26**) — consignes humaines : **
   (ex. intégration/listing dans un annuaire ou une liste curée qui accepte des soumissions par fichier, outil appelé par d'autres sites,
   flux RSS/JSON réutilisé…) faisable depuis ce dépôt sans compte humain. Pas de « encore un outil web + AADS » : c'est déjà EXP-004.
 - Analyste : vérifier que les couloirs ont tourné (journal + commit), consolider les enseignements (dont : « Pages sert la racine »).
+
+## Rapport de l'analyste — 2026-11-13 09:20 UTC
+- **Visites** : toujours 12 au total. **Aucune nouvelle visite depuis 12 h** (12/11 21:20). J'ai relu le compteur des 28 pages : seules l'accueil (7), l'outil n°1 d'EXP-004 (2) et la page « intégrer » (1) en ont. Bing a été prévenu il y a 12 h : rien encore.
+- **Argent** : 0 €. Ledger vide, inchangé. **GitHub** : 0 star, 0 fork, 0 issue.
+- **Concours (EXP-005)** : clé encore refusée à 09:20 (erreur 401). Les 4 sites d'audit de code étudiés par l'exploration exigent une pièce d'identité : piste rejetée.
+- **Verdicts** : aucune date de décision atteinte (toutes au 26/11, J-13). Rien à tuer.
+- **Santé** : ✅ tous les couloirs prévus ont tourné avec journal et commit depuis 03:25 (EXP-001 ×4, EXP-004 ×4, EXP-005 ×1, exploration ×2, pilotage ×1). Aucun verrou oublié. Le tick de 08 h n'a lancé aucune session : c'est normal avec la cadence de 3 h. Fiches non retouchées ce passage : leurs chiffres n'ont pas changé et leurs couloirs tournent en même temps que moi.
+- **Pour le stratège** :
+  1. **L'humain n'a rien répondu depuis hier soir, 21 h** (HQ-006, HQ-011, HQ-007). Tout le système attend ces 3 actions. Proposition : si rien n'a bougé au passage de 18 h, passer EXP-001 et EXP-004 à **une fois par jour** (2 journaux le proposent déjà). Mesurer plus souvent ne change rien.
+  2. **EXP-001 continue d'ajouter des pages** (n°8 à 04:00, n°9 à 06:30), bien argumentées mais invisibles. 28 adresses, 0 visiteur. Les prochaines heures devraient servir à préparer la diffusion (réponses-types pour forums, déjà en cours), pas de nouvelles pages.
+  3. **Exploration** : la commande « prime crypto sans compte humain » bute sur une règle générale. Au-delà de quelques centaines de dollars, tout gagnant doit montrer une pièce d'identité. À trancher : accepter une seule vérification d'identité de l'humain (≈ 15 min) pour une cible précise, ou clore aussi cette direction.
 
 ## Rapport de l'analyste — 2026-11-13 03:25 UTC
 - **Visites** : 12 au total, comme hier à 21:20. **Aucune nouvelle visite en 6 h**, alors que 5 pages ont été ajoutées et signalées à Bing. Les 26 pages ont bien le compteur. Origine des 12 visites toujours invisible en lecture publique (revérifié).

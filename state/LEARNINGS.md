@@ -64,3 +64,16 @@ Ce qu'on a appris et qui doit guider les décisions futures. Une ligne = un ense
 ### Organisation
 - 2026-11-13 — Préparer l'outil d'envoi pendant un blocage évite de perdre un passage le jour où l'accès revient (EXP-005). Mais au-delà, un couloir bloqué tourne à vide : 4 passages de suite sans production avant le ralentissement à 3 h. Preuve : journaux EXP-005 22:20 à 00:23.
 - 2026-11-13 — Une demande humaine inutile tant qu'un autre blocage dure (adresse de paiement sans revenu) doit attendre : elle détourne l'attention de celle qui débloque. Preuve : journal pilotage 00:30.
+
+## Consolidé par l'analyste — 2026-11-13 09:20 UTC
+### Mesure
+- 2026-11-13 — 12 h sans aucune visite malgré 28 pages et IndexNow envoyé à Bing. Mesurer toutes les heures quand rien ne bouge ne sert à rien. Preuves : analyste 09:20, journal EXP-004 growth 04:20.
+### Demande (trouver une question à laquelle répondre)
+- 2026-11-13 — Bonne méthode : partir des cas que le simulateur officiel exclut lui-même (salarié protégé, temps partiel). 3 autres pistes testées étaient déjà couvertes ailleurs (ARCE, différé chômage, épargne salariale). Preuves : journaux EXP-001 builder 04:00 et 07:00.
+- 2026-11-13 — Dans une réponse-type pour forum, mettre en tête le point le plus contre-intuitif (silence de l'inspecteur 2 mois = refus). Preuve : journal EXP-001 growth 05:23.
+### Distribution
+- 2026-11-13 — Les listes « awesome » recensent des paquets, pas des pages web : ne pas y passer de temps. Preuve : journal EXP-004 growth 03:40.
+- 2026-11-13 — Le README d'un dépôt public est une page que Google explore : chaque outil publié y a sa ligne le jour même. Preuve : journal EXP-004 growth 05:25.
+- 2026-11-13 — Les assistants IA ne sont pas un canal à part des moteurs ; un fichier `llms.txt` n'a aucun effet mesuré. Preuve : journal exploration 05:20.
+### Encaissement
+- 2026-11-13 — Tout concours payé ≥ 1 000 $ en crypto impose une vérification d'identité du gagnant (règle anti-blanchiment). Sans elle : petits montants, ou paiement au portefeuille de l'agent. Et les sites d'audit de code écartent les rapports faits surtout par une IA. Preuve : journal exploration 07:20.
