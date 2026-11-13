@@ -86,7 +86,7 @@ Any other word (<code>jre</code>, <code>android</code>, <code>foo</code>) ranks 
 <p id="orderline" class="v"></p>
 
 <p>Related: for npm, Cargo, Composer, pip and RubyGems constraints such as <code>^1.2</code> or <code>~&gt; 2.1</code>, use the <a href="../version-constraint-checker/">Version Constraint Checker</a>.
-To sort a list of versions the way those five sort them, use the <a href="../version-sorter/">Version sorter</a>. For .NET, the same bracket syntax behaves differently: see the <a href="../nuget-version-range-checker/">NuGet version range checker</a> (NuGet takes the lowest match). For pre-releases in other ecosystems, see <a href="../prerelease-versions/">what each package manager installs when a beta is out</a>.</p>
+To sort a list of versions the way those five sort them, use the <a href="../version-sorter/">Version sorter</a>. For .NET, the same bracket syntax behaves differently: see the <a href="../nuget-version-range-checker/">NuGet version range checker</a> (NuGet takes the lowest match). Gradle reads the same brackets but skips <code>2.0-rc1</code> in <code>[1.0,2.0)</code>: see the <a href="../gradle-dynamic-version-checker/">Gradle dynamic version checker</a>. For pre-releases in other ecosystems, see <a href="../prerelease-versions/">what each package manager installs when a beta is out</a>.</p>
 
 <h2>FAQ</h2>
 <h3>What does [1.0,2.0) mean in Maven?</h3>

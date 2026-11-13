@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TITLE}}</title>
+<meta name="description" content="{{DESC}}">
+<link rel="canonical" href="{{URL}}">
+<meta property="og:title" content="{{TITLE}}">
+<meta property="og:description" content="{{DESC}}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{URL}}">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{{LD1}}</script>
+<script type="application/ld+json">{{LD2}}</script>
+<style>
+  :root{--muted:#666;--line:#ddd;--warn:#fff4d6}
+  *{box-sizing:border-box}
+  body{font-family:system-ui,-apple-system,Segoe UI,sans-serif;max-width:1060px;margin:2rem auto;padding:0 1rem;line-height:1.55;color:#1d1d1f}
+  h1{font-size:1.6rem;margin:.2rem 0 .4rem} h2{font-size:1.2rem;margin-top:2rem} h3{font-size:1rem;margin:1.2rem 0 .2rem}
+  .muted{color:var(--muted)} code,input,textarea{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+  label{font-weight:600;display:block;margin:.8rem 0 .3rem}
+  textarea{width:100%;font-size:1rem;padding:.45rem .6rem;border:1px solid #bbb;border-radius:6px;min-height:8rem}
+  input[type=text]{width:100%;font-size:1.05rem;padding:.4rem .55rem;border:1px solid #bbb;border-radius:6px}
+  .chips button{font:inherit;font-size:.85rem;margin:.15rem .2rem .15rem 0;padding:.15rem .55rem;border:1px solid #bbb;background:#f6f6f6;border-radius:12px;cursor:pointer;font-family:ui-monospace,Menlo,monospace}
+  .chips button:hover{background:#eaeaea}
+  .msg{border-radius:6px;padding:.45rem .7rem;margin:.5rem 0;font-size:.93rem;border:1px solid}
+  .msg.warn{background:var(--warn);border-color:#e8c766} .msg.ok{background:#eaf6ee;border-color:#9fd3b0} .msg.err{background:#fdecec;border-color:#e3a1a1}
+  .pick{font-size:1.05rem} .pick code{font-size:1.1rem;font-weight:700}
+  table{border-collapse:collapse;width:100%;margin:.6rem 0;font-size:.92rem}
+  th,td{border:1px solid var(--line);padding:.35rem .5rem;text-align:left;vertical-align:top}
+  th{background:#f6f6f6} td.v{font-family:ui-monospace,Menlo,monospace;word-break:break-word} td.c{white-space:nowrap}
+  tr.chosen td{background:#eaf6ee;font-weight:600}
+  .wrap{overflow-x:auto} li a{overflow-wrap:anywhere}
+  footer{margin-top:3rem;font-size:.85rem;color:var(--muted);border-top:1px solid var(--line);padding-top:1rem}
+</style>
+</head>
+<body>
+<p class="muted"><a href="../../">10aday</a> › tools</p>
+<h1>Gradle dynamic version checker</h1>
+<p>Type a Gradle version such as <code>1.+</code>, <code>[1.0,2.0)</code>, <code>latest.release</code> or <code>1.2.3</code>, and the versions published for that library.
+You see which versions match, in plain words, and <strong>which one Gradle will resolve</strong>. The page runs a JavaScript copy of Gradle's own version code,
+checked against the real Gradle classes and against real <code>gradle</code> runs.</p>
+
+<label for="spec">Version from build.gradle, build.gradle.kts or libs.versions.toml</label>
+<input type="text" id="spec" value="1.+" spellcheck="false" autocomplete="off">
+<div class="chips" id="examples" aria-label="Examples"></div>
+<label for="vs">Published versions (one per line, or separated by spaces or commas)</label>
+<textarea id="vs" spellcheck="false" autocomplete="off">1.0
+1.9
+1.10
+1.11-rc1
+2.0-beta1
+2.0</textarea>
+<div id="out" aria-live="polite"></div>
+<p class="muted" id="share"></p>
+
+<!-- AADS slot: activate after HQ-004 -->
+
+<h2>The surprises: <code>+</code> is a text prefix, and betas count</h2>
+<p><code>1.+</code> does not mean “the newest stable 1.x”. Gradle keeps every version whose text <em>starts with</em> <code>1.</code>, then takes the highest one.
+Betas and release candidates are included: if <code>1.11-rc1</code> is the highest, you get it. Without the dot, <code>1+</code> also takes <code>10.0</code> and <code>11.2</code>.
+Ranges have their own rule: in <code>[1.0,2.0)</code>, anything that starts with <code>2.0</code> is left out, so <code>2.0-rc1</code> is skipped (Maven would take it).
+We ran Gradle {{GRADLE}} against a local repository for each line below:</p>
+<div class="wrap"><table>
+<tr><th>Declared version</th><th>Published</th><th>Gradle resolved</th><th>Why</th></tr>
+{{REAL_ROWS}}
+</table></div>
+
+<h2>Syntax cheat sheet</h2>
+<div class="wrap"><table id="cheat">
+<tr><th>Write</th><th>Means</th><th>Gradle picks (from 1.0, 1.2, 1.10, 1.10.1-rc1, 2.0-rc1, 2.0, 10.0)</th></tr>
+</table></div>
+<p class="muted">The last column is computed in your browser by the same engine as the checker above.</p>
+
+<h2>How Gradle orders versions</h2>
+<p>Gradle cuts a version into parts at <code>.</code>, <code>-</code>, <code>_</code> and <code>+</code>, and also where digits meet letters (<code>1.0a1</code> = <code>1</code>, <code>0</code>, <code>a</code>, <code>1</code>).
+Parts are compared one by one. Numbers are compared as numbers (<code>1.10 &gt; 1.9</code>). A number beats a word (<code>1.0.1 &gt; 1.0-beta</code>).
+A few words have a fixed rank: <code>dev</code> &lt; any other word &lt; <code>rc</code> &lt; <code>snapshot</code> &lt; <code>final</code> &lt; <code>ga</code> &lt; <code>release</code> &lt; <code>sp</code>.
+Other words are compared letter by letter and <strong>case matters</strong>: capitals come first, so <code>1.0-M1 &lt; 1.0-alpha1</code> and <code>1.0-Beta1 &lt; 1.0-alpha1</code>.
+A version with an extra word part is lower than without it (<code>1.0-final &lt; 1.0</code>, even <code>1.0-sp1 &lt; 1.0</code>); an extra number part makes it higher (<code>1.0 &lt; 1.0.0</code>). The separators do not count: <code>1.0-1</code> and <code>1.0.1</code> rank the same.</p>
+<p id="orderline" class="v"></p>
+
+<p>Related: <a href="../maven-version-range-checker/">Maven version range checker</a> (same brackets, different rules on betas) and
+<a href="../nuget-version-range-checker/">NuGet version range checker</a>. For npm, Cargo, Composer, pip and RubyGems, use the <a href="../version-constraint-checker/">Version Constraint Checker</a>;
+to sort versions, the <a href="../version-sorter/">Version sorter</a>; for betas, <a href="../prerelease-versions/">what each package manager installs when a beta is out</a>.</p>
+
+<h2>FAQ</h2>
+{{FAQ}}
+
+<h2>Sources</h2>
+<ul>
+<li>Gradle User Manual, declaring versions and ranges: <a href="https://docs.gradle.org/current/userguide/dependency_versions.html">docs.gradle.org/current/userguide/dependency_versions.html</a></li>
+<li>Gradle User Manual, dynamic versions: <a href="https://docs.gradle.org/current/userguide/dynamic_versions.html">docs.gradle.org/current/userguide/dynamic_versions.html</a></li>
+<li>Gradle source code (VersionParser, StaticVersionComparator, VersionRangeSelector): <a href="https://github.com/gradle/gradle/tree/v8.14.3/platforms/software/dependency-management/src/main/java/org/gradle/api/internal/artifacts/ivyservice/ivyresolve/strategy">github.com/gradle/gradle</a></li>
+</ul>
+
+<footer>
+<p><strong>Built by AI agents</strong> as part of the <a href="../../">10aday</a> project. How it is tested: <code>gvr.js</code> is a line-by-line port of Gradle {{GRADLE}}'s version classes
+(<code>VersionParser</code>, <code>StaticVersionComparator</code>, <code>DefaultVersionSelectorScheme</code> and its selectors). It was compared with the real Gradle classes on {{CHECKS}} checks
+(version order, selector type, matches; known traps plus random strings): 0 difference. The table above comes from real <code>gradle</code> runs; the engine predicts all {{REAL}} of them.
+Not covered: conflict resolution between several declarations, rich versions (<code>strictly</code>, <code>prefer</code>, <code>reject</code>) and Ivy statuses.
+Nothing you type leaves your browser. Gradle is Apache License 2.0.</p>
+</footer>
+
+<script src="gvr.js"></script>
+<script>
+(function () {
+  'use strict';
+  var $ = function (id) { return document.getElementById(id); };
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  var EX = ['1.+', '1.10.+', '1+', '+', '[1.0,2.0)', '[1.0,2.0]', '(1.0,)', '(,2.0]', ']1.0,2.0[', '[1.0]', '1.0', 'latest.release', 'latest.integration'];
+  function splitVersions(t) { return t.split(/[\s,]+/).filter(function (x) { return x.length; }); }
+  function c(s) { return '<code>' + esc(s) + '</code>'; }
+  function isPre(v) { return /(^|[.\-_+\d])(alpha|beta|rc|cr|m|milestone|pre|preview|dev|snapshot|ea|eap)(?=$|[.\-_+\d])/i.test(v) || /[.\-_+\d](a|b)\d/i.test(v); }
+  function describe(s) {
+    switch (s.kind) {
+      case 'prefix':
+        if (!s.prefix) return 'Any version: Gradle takes the highest one published, betas and release candidates included.';
+        var d = 'Any version whose text starts with ' + c(s.prefix) + '. Gradle takes the highest one, betas and release candidates included.';
+        if (!/[.\-_]$/.test(s.prefix)) d += '</div><div class="msg warn">No dot before ' + c('+') + ': ' + c(s.selector) + ' also matches ' + c(s.prefix + '0') + ', ' + c(s.prefix + '5.1') + ' and so on. You probably want ' + c(s.prefix + '.+') + '.';
+        return d;
+      case 'latest':
+        if (s.status === 'release') return 'The highest version with status “release”. In a Maven repository every version except <code>-SNAPSHOT</code> counts as a release, <strong>betas and RCs included</strong>.';
+        if (s.status === 'integration') return 'The highest version of all, <code>-SNAPSHOT</code> versions included.';
+        if (s.status === 'milestone') return 'In a Maven repository, the same as ' + c('latest.release') + ' (no version has status “milestone”).';
+        return 'Unknown status ' + c(s.status) + ': Gradle knows integration, milestone and release. Nothing will match.';
+      case 'exact':
+        return (s.fromRange ? 'A single-version range: ' : 'A fixed version: ') + 'Gradle uses ' + c(s.version) + ' and fails if it is not published. If another library asks for a higher version, Gradle takes the higher one.';
+      case 'range':
+        var lo = s.lower === null ? 'with no lower limit' : (s.lowerInc ? 'from ' + c(s.lower) + ' included' : 'above ' + c(s.lower));
+        var hi = s.upper === null ? 'no upper limit' : (s.upperInc ? 'up to ' + c(s.upper) + ' included' : 'below ' + c(s.upper) + ', and nothing that starts with ' + c(s.upper));
+        return 'A range: any version ' + lo + ', ' + hi + '. Gradle takes the highest one.';
+    }
+  }
+  function hint(raw) {
+    var m;
+    if ((m = raw.match(/^\^\s*(\d+)/))) return 'Gradle has no ' + c('^') + ': it is read as a fixed version string. Closest: ' + c('[' + raw.slice(1).trim() + ',' + (+m[1] + 1) + ')') + ' or ' + c(m[1] + '.+') + '.';
+    if ((m = raw.match(/^~>?\s*(\d+)\.(\d+)/))) return 'Gradle has no ' + c('~') + ': it is read as a fixed version string. Closest: ' + c(m[1] + '.' + m[2] + '.+') + '.';
+    if (/^[<>=]/.test(raw)) return 'Gradle has no comparison operators: this is read as a fixed version string. Use brackets: ' + c('(1.0,)') + ' means &gt; 1.0, ' + c('(,2.0)') + ' means &lt; 2.0.';
+    if (/\*/.test(raw)) return 'Gradle has no ' + c('*') + ': it is read as a fixed version string. Write ' + c(raw.replace(/\*.*$/, '+')) + ' instead.';
+    if (/^[\[\]\(]/.test(raw) || /[\]\[\)]$/.test(raw)) return 'This looks like a range but is not valid (Gradle allows one range, one comma, no empty bound except ' + c('(,') + ' and ' + c(',)') + '): it is read as a fixed version string.';
+    return null;
+  }
+  function render() {
+    var spec = $('spec').value, raws = splitVersions($('vs').value), h = '';
+    if (!spec.trim().length) { $('out').innerHTML = '<div class="msg warn">Type a version, a range or a dynamic version.</div>'; return; }
+    var s = GVR.parseSelector(spec);
+    if (s.kind === 'exact' && !s.fromRange) {
+      var hn = hint(spec.trim());
+      if (hn) h += '<div class="msg err">' + c(spec) + ' is not a range or dynamic version for Gradle. ' + hn + '</div>';
+      else if (spec !== spec.trim()) h += '<div class="msg warn">Spaces around the version are kept: Gradle looks for the version ' + c(spec) + ' literally.</div>';
+    }
+    h += '<div class="msg ok">' + describe(s) + '</div>';
+    var r = GVR.select(s, raws);
+    if (raws.length) {
+      if (s.kind === 'exact') {
+        var found = raws.indexOf(s.version) >= 0;
+        h += found ? '<p class="pick">Gradle resolves ' + c(s.version) + '.</p>' : '<p class="pick">' + c(s.version) + ' is not in the list: resolution fails (“Could not find”).</p>';
+      } else if (r.chosen === null) {
+        h += '<p class="pick">Nothing matches: resolution fails (“Could not find any matches”).</p>';
+      } else {
+        h += '<p class="pick">Gradle resolves ' + c(r.chosen) + '.</p>';
+        if (isPre(r.chosen)) h += '<div class="msg warn">' + c(r.chosen) + ' looks like a beta, milestone or release candidate. Gradle does not skip those. To stay on finals, use a range with an upper bound below it, or list exact versions.</div>';
+        if (s.kind === 'range' && s.upper !== null && !s.upperInc) {
+          var cut = raws.filter(function (v) { return v.indexOf(s.upper) === 0 && GVR.compare(v, s.upper) < 0 && (s.lower === null || GVR.compare(v, s.lower) >= (s.lowerInc ? 0 : 1)); });
+          if (cut.length) h += '<div class="msg warn">Left out because they start with ' + c(s.upper) + ', although they sort below it: ' + cut.map(c).join(', ') + '. Maven would accept them.</div>';
+        }
+      }
+      var sorted = raws.map(function (v, i) { return { v: v, i: i }; }).sort(function (a, b) { return GVR.compare(b.v, a.v) || a.i - b.i; });
+      h += '<div class="wrap"><table><tr><th>Version (highest first)</th><th>Status</th></tr>';
+      sorted.forEach(function (x) {
+        var ok = r.accepted.indexOf(x.v) >= 0, picked = x.v === r.chosen && (s.kind !== 'exact' || ok);
+        var st = picked ? '✅ resolved' : ok ? '✔️ matches' : '❌ does not match';
+        h += '<tr' + (picked ? ' class="chosen"' : '') + '><td class="v">' + esc(x.v) + '</td><td class="c">' + st + '</td></tr>';
+      });
+      h += '</table></div>';
+    }
+    $('out').innerHTML = h;
+    var q = '?version=' + encodeURIComponent(spec) + '&v=' + encodeURIComponent(raws.join(','));
+    $('share').innerHTML = 'Share this check: <a href="' + esc(q) + '">link</a>';
+  }
+  EX.forEach(function (e) {
+    var b = document.createElement('button'); b.type = 'button'; b.textContent = e;
+    b.onclick = function () { $('spec').value = e; render(); }; $('examples').appendChild(b);
+  });
+  var params = new URLSearchParams(location.search);
+  if (params.get('version')) $('spec').value = params.get('version');
+  if (params.get('v')) $('vs').value = params.get('v').split(',').join('\n');
+  $('spec').addEventListener('input', render); $('vs').addEventListener('input', render);
+  render();
+  var CV = ['1.0', '1.2', '1.10', '1.10.1-rc1', '2.0-rc1', '2.0', '10.0'];
+  [['1.2', 'exactly 1.2 (can be raised by another library)'], ['[1.2]', 'exactly 1.2'], ['1.+', 'highest version starting with “1.”'], ['1.10.+', 'highest version starting with “1.10.”'],
+   ['1+', 'highest version starting with “1” (10.0 too!)'], ['+', 'highest version'], ['[1.0,2.0)', '1.0 ≤ x &lt; 2.0, nothing starting with 2.0'], ['[1.0,2.0]', '1.0 ≤ x ≤ 2.0'],
+   [']1.0,2.0[', 'same as (1.0,2.0): Ivy style brackets'], ['(,2.0)', 'x &lt; 2.0, nothing starting with 2.0'], ['[1.0,)', 'x ≥ 1.0'], ['latest.release', 'highest non-SNAPSHOT version']].forEach(function (x) {
+    var r = GVR.select(x[0], CV), b = r.selector.kind === 'exact' ? (CV.indexOf(r.chosen) >= 0 ? r.chosen : null) : r.chosen;
+    var tr = document.createElement('tr');
+    tr.innerHTML = '<td class="v">' + esc(x[0]) + '</td><td>' + x[1] + '</td><td class="v">' + (b ? esc(b) : '(fails)') + '</td>';
+    $('cheat').appendChild(tr);
+  });
+  var OV = ['1.0-dev', '1.0-M1', '1.0-Beta1', '1.0-alpha1', '1.0-beta1', '1.0-rc1', '1.0-SNAPSHOT', '1.0-final', '1.0', '1.0.0', '1.0-sp1', '1.0.1', '1.9', '1.10'];
+  var so = OV.slice().sort(GVR.compare), line = esc(so[0]);
+  for (var i = 1; i < so.length; i++) line += (GVR.compare(so[i - 1], so[i]) === 0 ? ' = ' : ' &lt; ') + esc(so[i]);
+  $('orderline').innerHTML = '<strong>Sorted by Gradle:</strong> <code>' + line + '</code>';
+})();
+</script>
+<script data-goatcounter="https://10aday.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

@@ -93,4 +93,8 @@
     <loc>https://lawatch.github.io/10aday/tools/nuget-version-range-checker/</loc>
     <lastmod>2026-11-13</lastmod>
   </url>
+  <url>
+    <loc>https://lawatch.github.io/10aday/tools/gradle-dynamic-version-checker/</loc>
+    <lastmod>2026-11-13</lastmod>
+  </url>
 </urlset>
