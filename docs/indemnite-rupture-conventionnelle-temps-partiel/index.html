@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Indemnité de rupture conventionnelle après du temps partiel ou un congé parental : calcul</title>
+<meta name="description" content="Vous avez alterné temps plein et temps partiel, pris un congé parental ou été absent ? Calculez l'indemnité minimale de rupture conventionnelle : ancienneté retenue, salaire de référence pondéré (art. L3123-5), détail et sources.">
+<link rel="canonical" href="https://lawatch.github.io/10aday/indemnite-rupture-conventionnelle-temps-partiel/">
+<script src="../integrer/integre.js"></script>
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="10aday">
+<meta property="og:title" content="Rupture conventionnelle après un temps partiel ou un congé parental : quelle indemnité ?">
+<meta property="og:description" content="Le simulateur officiel ne gère pas les carrières mêlant temps plein et temps partiel. Ce calculateur gratuit, oui, avec le détail et les articles du Code du travail.">
+<meta property="og:url" content="https://lawatch.github.io/10aday/indemnite-rupture-conventionnelle-temps-partiel/">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Calculateur d'indemnité de rupture conventionnelle avec temps partiel, congé parental et absences",
+      "url": "https://lawatch.github.io/10aday/indemnite-rupture-conventionnelle-temps-partiel/",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Tout navigateur web",
+      "inLanguage": "fr-FR",
+      "isAccessibleForFree": true,
+      "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"},
+      "description": "Calcule le plancher légal de l'indemnité de rupture conventionnelle quand le salarié a alterné temps plein et temps partiel (C. trav. L3123-5), pris un congé parental à temps plein (compté pour moitié, L1225-54) ou à temps partiel (salaire à temps plein, Cass. soc. 18 mars 2020), ou eu des absences non comptées. Calcul indicatif fait dans le navigateur.",
+      "featureList": ["Périodes à temps partiel avec leur pourcentage", "Congé parental à temps plein compté pour moitié", "Congé parental à temps partiel compté à temps plein", "Absences non comptées", "Comparaison avec un calcul simple et avec le montant proposé"]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "10aday", "item": "https://lawatch.github.io/10aday/"},
+        {"@type": "ListItem", "position": 2, "name": "Rupture conventionnelle", "item": "https://lawatch.github.io/10aday/rupture-conventionnelle/"},
+        {"@type": "ListItem", "position": 3, "name": "Indemnité après temps partiel ou congé parental", "item": "https://lawatch.github.io/10aday/indemnite-rupture-conventionnelle-temps-partiel/"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "Comment calculer l'indemnité de rupture conventionnelle quand on a alterné temps plein et temps partiel ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "L'indemnité est calculée proportionnellement aux périodes à temps plein et à temps partiel (C. trav., art. L3123-5). En pratique, on ramène le salaire au temps plein, on le pondère par la durée de chaque période, puis on applique le barème légal (1/4 de mois par année jusqu'à 10 ans, 1/3 au-delà) sur toute l'ancienneté. Exemple de la DREETS : 4 ans à 3 000 € puis 2 ans à mi-temps donnent un salaire de référence de 2 500 €."}},
+        {"@type": "Question", "name": "Le congé parental compte-t-il dans l'ancienneté pour l'indemnité ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Le congé parental d'éducation à temps plein compte pour moitié de sa durée. Le congé parental à temps partiel compte en totalité, comme du travail effectif (C. trav., art. L1225-54)."}},
+        {"@type": "Question", "name": "En congé parental à temps partiel, sur quel salaire est calculée l'indemnité ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Sur le salaire à temps plein. La Cour de justice de l'Union européenne (8 mai 2019, Praxair, C-486/18) puis la Cour de cassation (18 mars 2020, n° 16-27.825) ont jugé que réduire l'indemnité dans ce cas était une discrimination indirecte."}},
+        {"@type": "Question", "name": "Quelles absences sont retirées de l'ancienneté ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Sauf convention plus favorable : arrêt maladie non professionnelle, accident de trajet, activité partielle, congé sans solde, congé sabbatique, congé pour création d'entreprise, grève, mise à pied. Les congés payés, la maternité, la paternité, l'accident du travail et la maladie professionnelle comptent en totalité."}}
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root{--fg:#1d2330;--muted:#5b6475;--line:#d9dee7;--accent:#1f5fbf;--accent-bg:#eef4fd;--warn:#8a5a00;--warn-bg:#fff6e0;--ok:#1b7a43}
+  *{box-sizing:border-box}
+  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;max-width:760px;margin:0 auto;padding:1.5rem 1rem 4rem;line-height:1.6;color:var(--fg)}
+  h1{font-size:1.6rem;line-height:1.25;margin:.5rem 0}
+  h2{font-size:1.25rem;margin-top:2.2rem;border-bottom:1px solid var(--line);padding-bottom:.3rem}
+  a{color:var(--accent)}
+  .muted{color:var(--muted)}
+  .small{font-size:.9rem}
+  nav.crumb{font-size:.9rem}
+  form{background:#f7f9fc;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem;margin:1.2rem 0}
+  .field{margin:.7rem 0}
+  label{font-weight:600;display:block}
+  input[type=date]{font:inherit;padding:.4rem .5rem;border:1px solid #b8c0cc;border-radius:6px;min-width:12rem}
+  .check label{display:inline;font-weight:normal}
+  .hint{font-size:.85rem;color:var(--muted);margin:.15rem 0 0}
+  .err{color:#b00020;font-weight:600}
+  ol.timeline{list-style:none;padding:0;margin:1rem 0;border-left:3px solid var(--accent);}
+  ol.timeline li{position:relative;padding:.2rem 0 1rem 1.2rem}
+  ol.timeline li::before{content:"";position:absolute;left:-9px;top:.55rem;width:15px;height:15px;border-radius:50%;background:#fff;border:3px solid var(--accent)}
+  ol.timeline li.final::before{background:var(--ok);border-color:var(--ok)}
+  .step{font-size:.85rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+  .date{font-size:1.2rem;font-weight:700}
+  li.final .date{color:var(--ok)}
+  .why{font-size:.92rem;color:var(--muted)}
+  .note{background:var(--warn-bg);color:var(--warn);border-radius:8px;padding:.6rem .8rem;font-size:.92rem;margin:.4rem 0}
+  .info{background:var(--accent-bg);border-radius:8px;padding:.6rem .8rem;font-size:.92rem}
+  button{font:inherit;padding:.45rem .9rem;border-radius:6px;border:1px solid var(--accent);background:var(--accent);color:#fff;cursor:pointer}
+  button.secondary{background:#fff;color:var(--accent)}
+  .actions{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.5rem}
+  details{border:1px solid var(--line);border-radius:8px;padding:.5rem .8rem;margin:.5rem 0}
+  summary{cursor:pointer;font-weight:600}
+  table{border-collapse:collapse;width:100%;font-size:.92rem}
+  th,td{border:1px solid var(--line);padding:.35rem .5rem;text-align:left;vertical-align:top}
+  footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1rem;font-size:.85rem;color:var(--muted)}
+</style>
+<style>
+  input[type=number]{font:inherit;padding:.4rem .5rem;border:1px solid #b8c0cc;border-radius:6px;width:12rem}
+  .big{font-size:1.9rem;font-weight:800;color:var(--ok);margin:.3rem 0}
+  .ko{color:#b00020}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:0 1.2rem}
+  @media (max-width:560px){.grid{grid-template-columns:1fr}}
+  td.num{text-align:right;white-space:nowrap}
+</style>
+<style>
+  select,input.m{font:inherit;padding:.35rem .4rem;border:1px solid #b8c0cc;border-radius:6px}
+  input.m{width:6rem}
+  .row{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:.4rem 0;padding:.4rem;border:1px dashed var(--line);border-radius:8px}
+  .row .q[hidden]{display:none}
+  button.x{background:#fff;color:#b00020;border-color:#b00020;padding:.25rem .6rem}
+</style>
+</head>
+<body>
+<nav class="crumb"><a href="../">10aday</a> › <a href="../rupture-conventionnelle/">Rupture conventionnelle</a> › Indemnité après temps partiel ou congé parental</nav>
+
+<h1>Indemnité de rupture conventionnelle après du temps partiel ou un congé parental</h1>
+<p>Vous avez travaillé à temps plein puis à 80 %, pris un congé parental, ou été en arrêt maladie ? Le <strong>simulateur officiel</strong>
+ne gère pas ces carrières. Un calcul fait avec votre seul salaire actuel peut alors <strong>sous-estimer</strong> votre indemnité de plusieurs centaines d'euros.
+Cet outil applique les règles du Code du travail période par période, avec le détail.</p>
+
+<form id="f" novalidate>
+  <div class="grid">
+    <div class="field">
+      <label for="entree">Date d'entrée dans l'entreprise</label>
+      <input type="date" id="entree" required>
+    </div>
+    <div class="field">
+      <label for="fin">Date de fin du contrat (date de rupture)</label>
+      <input type="date" id="fin" required>
+      <p class="hint">Pas encore fixée ? <a href="../rupture-conventionnelle-dates/">Calculez la date de départ au plus tôt</a>.</p>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="field">
+      <label for="sal">Salaire brut mensuel de référence (€)</label>
+      <input type="number" id="sal" min="0" step="0.01" inputmode="decimal" placeholder="ex. 2400" required>
+      <p class="hint">Moyenne brute des 12 derniers mois, ou des 3 derniers si c'est plus favorable. <a href="../rupture-conventionnelle-indemnite/">Détail de ce calcul</a>.</p>
+    </div>
+    <div class="field">
+      <label for="qa">Votre temps de travail pendant ces mois (%)</label>
+      <input type="number" id="qa" min="1" max="100" step="1" value="100">
+      <p class="hint">100 si vous êtes à temps plein. Ex. 80 si vous êtes à 80 %.</p>
+    </div>
+  </div>
+  <fieldset style="border:0;padding:0;margin:.8rem 0">
+    <legend><strong>Périodes qui ne sont pas du temps plein</strong></legend>
+    <p class="hint">Ajoutez chaque période : temps partiel, congé parental, absence. Le reste de votre ancienneté est compté comme du temps plein. Durées en mois entiers.</p>
+    <div id="rows"></div>
+    <div class="actions"><button type="button" class="secondary" id="add">+ Ajouter une période</button></div>
+  </fieldset>
+  <div class="field">
+    <label for="prop">Montant proposé par l'employeur (€, facultatif)</label>
+    <input type="number" id="prop" min="0" step="0.01" inputmode="decimal">
+  </div>
+  <div class="actions"><button type="submit">Calculer l'indemnité minimale</button></div>
+  <p id="error" class="err" role="alert" hidden></p>
+</form>
+
+<section id="result" aria-live="polite" hidden>
+  <h2>Votre indemnité minimale</h2>
+  <p class="big" id="total"></p>
+  <div id="compare"></div>
+  <div id="verdict"></div>
+  <table id="detail"></table>
+  <p class="info">Combien vous restera-t-il ? <a id="toFiscR" href="../rupture-conventionnelle-impot-csg/">Calculez la CSG et la part imposable de cette indemnité</a>.</p>
+  <div class="actions"><button type="button" class="secondary" id="share">Copier le lien de ce calcul</button></div>
+  <p class="small muted" id="shared" hidden>Lien copié (il contient les montants saisis : partagez-le avec discernement).</p>
+</section>
+
+<p class="note"><strong>Résultat indicatif, montant brut.</strong> C'est un plancher légal : votre <strong>convention collective</strong> peut prévoir plus
+ou compter autrement certaines absences. La loi dit « proportionnellement aux périodes » sans fixer la méthode : nous suivons celle de la DREETS (voir plus bas).
+Il ne remplace pas l'avis d'un avocat, d'un conseiller du salarié ou de la DREETS.</p>
+
+<h2>Comment le calcul est fait</h2>
+<table>
+  <tr><th>Étape</th><th>Règle</th><th>Texte</th></tr>
+  <tr><td>1. Ancienneté</td><td>Mois complets entre l'entrée et la fin du contrat. On retire les absences non comptées et la <strong>moitié</strong> du congé parental à temps plein. Le temps partiel et le congé parental à temps partiel comptent en totalité.</td><td>R1234-1, L3123-5, L1225-54, L1234-11</td></tr>
+  <tr><td>2. Salaire à temps plein</td><td>Salaire de référence ramené à 100 % : 2 400 € à 80 % = 3 000 € à temps plein.</td><td>R1234-4</td></tr>
+  <tr><td>3. Pondération</td><td>Chaque mois compté pèse selon son temps de travail (80 % → 0,8). Le congé parental à temps partiel pèse comme un temps plein. Salaire retenu = salaire à temps plein × moyenne de ces poids.</td><td>L3123-5 ; Cass. soc. 18 mars 2020</td></tr>
+  <tr><td>4. Barème</td><td>1/4 de mois de salaire par année jusqu'à 10 ans, puis 1/3 au-delà, sur l'ancienneté de l'étape 1.</td><td>R1234-2, L1237-13</td></tr>
+</table>
+
+<h2>Exemples</h2>
+<ul>
+  <li><strong>Exemple de la DREETS</strong> : 4 ans à temps plein à 3 000 €, puis 2 ans à mi-temps (1 500 €). Salaire retenu : 3 000 × (48 + 24 × 0,5) ÷ 72 = 2 500 €.
+    Indemnité : 2 500 ÷ 4 × 6 = <strong>3 750 €</strong>. Un calcul avec le seul salaire actuel donnerait 2 250 €.</li>
+  <li><strong>Retour à 80 %</strong> : 8 ans à temps plein puis 2 ans à 80 %, 2 400 € brut aujourd'hui. Salaire à temps plein 3 000 €, poids moyen 0,96, salaire retenu 2 880 €.
+    Indemnité : <strong>7 200 €</strong> au lieu de 6 000 €.</li>
+  <li><strong>Congé parental à temps partiel</strong> : 7 ans dont 30 mois de congé parental à 60 % en cours, 1 200 € brut. Salaire retenu : 2 000 € (temps plein).
+    Indemnité : 2 000 ÷ 4 × 7 = <strong>3 500 €</strong>.</li>
+  <li><strong>Congé parental à temps plein d'un an et 2 mois de maladie</strong> sur 8 ans, 2 000 € : ancienneté 96 − 6 − 2 = 88 mois. Indemnité : 2 000 ÷ 4 × 88/12 = <strong>3 666,67 €</strong>.</li>
+</ul>
+
+<h2>Questions fréquentes</h2>
+<details><summary>Comment calculer l'indemnité de rupture conventionnelle quand on a alterné temps plein et temps partiel ?</summary>
+  <p>L'indemnité est calculée proportionnellement aux périodes à temps plein et à temps partiel (C. trav., art. L3123-5). En pratique, on ramène le salaire au temps plein,
+  on le pondère par la durée de chaque période, puis on applique le barème légal (1/4 de mois par année jusqu'à 10 ans, 1/3 au-delà) sur toute l'ancienneté.
+  Exemple de la DREETS : 4 ans à 3 000 € puis 2 ans à mi-temps donnent un salaire de référence de 2 500 €.</p></details>
+<details><summary>Le congé parental compte-t-il dans l'ancienneté pour l'indemnité ?</summary>
+  <p>Le congé parental d'éducation à temps plein compte pour moitié de sa durée. Le congé parental à temps partiel compte en totalité, comme du travail effectif (C. trav., art. L1225-54).</p></details>
+<details><summary>En congé parental à temps partiel, sur quel salaire est calculée l'indemnité ?</summary>
+  <p>Sur le salaire à temps plein. La Cour de justice de l'Union européenne (8 mai 2019, Praxair, C-486/18) puis la Cour de cassation (18 mars 2020, n° 16-27.825)
+  ont jugé que réduire l'indemnité dans ce cas était une discrimination indirecte.</p></details>
+<details><summary>Quelles absences sont retirées de l'ancienneté ?</summary>
+  <p>Sauf convention plus favorable : arrêt maladie non professionnelle, accident de trajet, activité partielle, congé sans solde, congé sabbatique,
+  congé pour création d'entreprise, grève, mise à pied. Les congés payés, la maternité, la paternité, l'accident du travail et la maladie professionnelle comptent en totalité.</p></details>
+<details><summary>Certains calculent période par période : est-ce différent ?</summary>
+  <p>Jusqu'à 10 ans d'ancienneté, le calcul période par période et le salaire pondéré donnent exactement le même montant.
+  Au-delà, l'écart dépend de l'ordre des périodes (le taux passe de 1/4 à 1/3 après 10 ans) ; il reste en général faible. Les sources officielles ne tranchent pas.</p></details>
+
+<h2>Sources</h2>
+<ul class="small">
+  <li>Code du travail, art. <a href="https://code.travail.gouv.fr/code-du-travail/l3123-5" rel="noopener">L3123-5</a> (dernier alinéa),
+    <a href="https://code.travail.gouv.fr/code-du-travail/l1225-54" rel="noopener">L1225-54</a> (version du 11/03/2023),
+    <a href="https://code.travail.gouv.fr/code-du-travail/l1234-11" rel="noopener">L1234-11</a>,
+    <a href="https://code.travail.gouv.fr/code-du-travail/l1237-13" rel="noopener">L1237-13</a>,
+    <a href="https://code.travail.gouv.fr/code-du-travail/r1234-1" rel="noopener">R1234-1</a>,
+    <a href="https://code.travail.gouv.fr/code-du-travail/r1234-2" rel="noopener">R1234-2</a>,
+    <a href="https://code.travail.gouv.fr/code-du-travail/r1234-4" rel="noopener">R1234-4</a>.</li>
+  <li>Code du travail numérique, <a href="https://code.travail.gouv.fr/fiche-service-public/comment-calculer-lanciennete-pour-le-montant-de-lindemnite-de-licenciement" rel="noopener">« Comment calculer l'ancienneté du salarié pour le montant de l'indemnité de licenciement ? »</a>.</li>
+  <li>DREETS Auvergne-Rhône-Alpes, <a href="https://auvergne-rhone-alpes.dreets.gouv.fr/sites/auvergne-rhone-alpes.dreets.gouv.fr/IMG/pdf/microsoft_word_-_notice_calcul_indemnite_de_rupture_conventionnelle.doc.pdf" rel="noopener">notice de calcul de l'indemnité de rupture conventionnelle</a> (exemple reproduit ci-dessus).</li>
+  <li>CJUE, 8 mai 2019, Praxair MRC, C-486/18 ; Cour de cassation, chambre sociale, 18 mars 2020, n° 16-27.825.</li>
+</ul>
+<p class="small muted">Règles vérifiées le 13 novembre 2026. Le calcul est entièrement fait dans votre navigateur : aucun montant n'est envoyé.</p>
+
+<footer>
+  <p>Outil gratuit construit et maintenu par des <strong>agents d'intelligence artificielle</strong> (projet <a href="../">10aday</a>), testé contre l'exemple de la DREETS et un calcul de contrôle indépendant (20 000 cas).
+  Voir aussi : <a href="../rupture-conventionnelle/">rupture conventionnelle : les calculs dans l'ordre</a> · <a href="../rupture-conventionnelle-indemnite/">indemnité minimale (cas simple)</a> · <a href="../rupture-conventionnelle-dates/">calcul des dates</a> · <a href="../rupture-conventionnelle-impot-csg/">impôt et CSG de l'indemnité</a> · <a href="../chomage-rupture-conventionnelle/">date de début du chômage</a> · <a href="../indemnite-conges-payes-depart/">indemnité de congés payés au départ</a>.
+  Une erreur ? <a href="https://github.com/Lawatch/10aday/issues/new?title=Indemnit%C3%A9%20RC%20temps%20partiel%20%3A%20" rel="noopener">Signalez-la</a>.</p>
+</footer>
+
+<script src="../rupture-conventionnelle-indemnite/rc-indemnite.js"></script>
+<script src="rc-temps-partiel.js"></script>
+<script>
+(function () {
+  'use strict';
+  var T = window.RCTempsPartiel, eur = window.RCIndemnite.eur;
+  var $ = function (id) { return document.getElementById(id); };
+  var F = ['entree', 'fin', 'sal', 'qa', 'prop'];
+  function fr(n) { return String(+(+n).toFixed(4)).replace('.', ','); }
+  function plural(n, s) { return n + ' ' + s + (n > 1 ? 's' : ''); }
+  function err(msg) { $('error').textContent = msg; $('error').hidden = false; $('result').hidden = true; }
+
+  function addRow(type, mois, q) {
+    var d = document.createElement('div'); d.className = 'row';
+    var opts = Object.keys(T.TYPES).map(function (k) { return '<option value="' + k + '"' + (k === type ? ' selected' : '') + '>' + T.TYPES[k] + '</option>'; }).join('');
+    d.innerHTML = '<select class="t" aria-label="Type de période">' + opts + '</select>' +
+      '<label class="small" style="font-weight:normal">durée <input class="m" type="number" min="0" step="1" value="' + (mois || '') + '" aria-label="Durée en mois"> mois</label>' +
+      '<label class="small q" style="font-weight:normal">à <input class="m p" type="number" min="1" max="100" step="1" value="' + (q || 80) + '" aria-label="Pourcentage du temps partiel"> %</label>' +
+      '<button type="button" class="x" aria-label="Retirer cette période">Retirer</button>';
+    var sync = function () { d.querySelector('.q').hidden = d.querySelector('.t').value !== 'partiel'; };
+    d.querySelector('.t').addEventListener('change', sync); sync();
+    d.querySelector('.x').addEventListener('click', function () { d.remove(); });
+    $('rows').appendChild(d);
+  }
+  function periodes() {
+    return Array.prototype.map.call(document.querySelectorAll('#rows .row'), function (d) {
+      return { type: d.querySelector('.t').value, mois: d.querySelector('.m').value || 0, quotite: d.querySelector('.p').value };
+    });
+  }
+
+  function compute(e) {
+    if (e) e.preventDefault();
+    $('error').hidden = true;
+    var v = {}; F.forEach(function (k) { v[k] = $(k).value; });
+    if (!v.entree || !v.fin) return err("Indiquez la date d'entrée et la date de fin du contrat.");
+    var per = periodes(), r;
+    try { r = T.calc({ entree: v.entree, fin: v.fin, salaire: v.sal, quotite: v.qa, periodes: per, propose: v.prop }); }
+    catch (x) { return err(x.message); }
+    $('total').textContent = eur(r.minimum) + ' brut';
+    var c = '';
+    if (r.ecart_calcul_simple > 0) c = '<p class="info">Un calcul simple, avec votre salaire actuel et votre ancienneté brute, donnerait ' + eur(r.calcul_simple) + ' : <strong>' + eur(r.ecart_calcul_simple) + ' de moins</strong>.</p>';
+    else if (r.ecart_calcul_simple < 0) c = '<p class="info">Un calcul simple, avec votre salaire actuel et votre ancienneté brute, donnerait ' + eur(r.calcul_simple) + '. Vos périodes à temps partiel ou d’absence réduisent le minimum de ' + eur(-r.ecart_calcul_simple) + '.</p>';
+    $('compare').innerHTML = c;
+    var verdict = '';
+    if (r.propose !== undefined) {
+      verdict = r.propose_suffisant
+        ? '<p class="info">Le montant proposé (' + eur(r.propose) + ') atteint le minimum légal (+' + eur(r.ecart) + ').</p>'
+        : '<p class="note ko"><strong>Le montant proposé (' + eur(r.propose) + ') est inférieur de ' + eur(-r.ecart) + ' au minimum légal.</strong> La DREETS peut refuser l’homologation ; vous pouvez le faire corriger avant de signer.</p>';
+    }
+    $('verdict').innerHTML = verdict;
+    var h = '<tr><th>Période</th><th>Mois</th><th>Mois comptés</th><th>Poids</th></tr>';
+    if (r.mois_temps_plein) h += '<tr><td>Temps plein</td><td class="num">' + r.mois_temps_plein + '</td><td class="num">' + r.mois_temps_plein + '</td><td class="num">1</td></tr>';
+    r.periodes.forEach(function (p) {
+      h += '<tr><td>' + p.libelle + (p.type === 'partiel' ? ' à ' + p.quotite + ' %' : '') + '</td><td class="num">' + p.mois + '</td><td class="num">' + fr(p.compte) + '</td><td class="num">' + (p.compte ? fr(p.pondere / p.compte) : '—') + '</td></tr>';
+    });
+    h += '<tr><td><strong>Ancienneté retenue</strong></td><td class="num">' + r.mois_brut + '</td><td class="num"><strong>' + fr(r.anciennete_mois) + '</strong></td><td class="num">' + fr(r.ratio) + '</td></tr>';
+    h += '<tr><td colspan="3">Salaire saisi ' + eur(r.salaire_saisi) + (r.quotite_actuelle !== 100 ? ' à ' + r.quotite_actuelle + ' % → temps plein' : ' (temps plein)') + '</td><td class="num">' + eur(r.salaire_temps_plein) + '</td></tr>';
+    h += '<tr><td colspan="3"><strong>Salaire de référence</strong> = ' + eur(r.salaire_temps_plein) + ' × ' + fr(r.ratio) + '</td><td class="num"><strong>' + eur(r.salaire_reference) + '</strong></td></tr>';
+    var ans = r.anciennete_mois / 12;
+    h += '<tr><td colspan="3">Barème : ' + (ans <= 10 ? eur(r.salaire_reference) + ' ÷ 4 × ' + fr(ans) + ' an(s)' : eur(r.salaire_reference) + ' ÷ 4 × 10 + ' + eur(r.salaire_reference) + ' ÷ 3 × ' + fr(ans - 10)) + '</td><td class="num"><strong>' + eur(r.minimum) + '</strong></td></tr>';
+    $('detail').innerHTML = h;
+    $('result').hidden = false;
+    var fq = new URLSearchParams({ legal: String(r.minimum), ind: String(r.propose !== undefined ? r.propose : r.minimum), fin: v.fin });
+    $('toFiscR').href = '../rupture-conventionnelle-impot-csg/?' + fq.toString();
+    var q = new URLSearchParams();
+    F.forEach(function (k) { if (v[k] && !(k === 'qa' && v[k] === '100')) q.set(k, v[k]); });
+    var ps = per.filter(function (p) { return +p.mois > 0; }).map(function (p) { return p.type + ':' + p.mois + (p.type === 'partiel' ? ':' + p.quotite : ''); }).join(',');
+    if (ps) q.set('p', ps);
+    history.replaceState(null, '', '?' + q.toString());
+  }
+
+  $('f').addEventListener('submit', compute);
+  $('add').addEventListener('click', function () { addRow('partiel'); });
+  $('share').addEventListener('click', function () {
+    var done = function () { $('shared').hidden = false; };
+    if (navigator.clipboard) navigator.clipboard.writeText(location.href).then(done, done); else done();
+  });
+
+  var p = new URLSearchParams(location.search);
+  F.forEach(function (k) { if (p.get(k)) $(k).value = p.get(k); });
+  if (p.get('ind') && !p.get('prop')) $('prop').value = p.get('ind');
+  (p.get('p') || '').split(',').forEach(function (s) {
+    var a = s.split(':'); if (a[0] && T.TYPES[a[0]]) addRow(a[0], a[1], a[2]);
+  });
+  if (!document.querySelector('#rows .row')) addRow('partiel');
+  if ($('entree').value && $('fin').value && $('sal').value) compute();
+})();
+</script>
+<!-- Mesure d'audience : GoatCounter (sans cookie) -->
+<script data-goatcounter="https://10aday.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
