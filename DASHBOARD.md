@@ -1,10 +1,10 @@
-# Où en est 10aday — 13/11 à 01h18 (heure UTC)
+# Où en est 10aday — 13/11 à 02h18 (heure UTC)
 
 _Page générée automatiquement à chaque heure. Ne pas modifier à la main._
 
 ## En bref
 - **Argent gagné** : 0,00 € au total, 0,00 € par jour en moyenne sur 7 jours. Objectif : 10 € par jour.
-- **Pistes en test** : 3. Arrêtées ou en pause : 2. Idées en réserve : 13.
+- **Pistes en test** : 3. Arrêtées ou en pause : 2. Idées en réserve : 14.
 - **Ce qu'on attend de toi** : 3 action(s), détaillées plus bas.
 
 ## Les pistes en test
@@ -12,22 +12,22 @@ _Page générée automatiquement à chaque heure. Ne pas modifier à la main._
 
 Des pages gratuites qui calculent les dates et l'indemnité d'une rupture conventionnelle. Si des gens les trouvent sur Google, on y mettra une petite pub.
 
-- **Déjà fait** : 6 calculateurs, 1 guide, une page pour intégrer nos calculateurs ailleurs, 15 sites à qui les proposer. Le 6e, ajouté le 13/11, donne les dates limites pour contester la rupture, le solde de tout compte ou des salaires impayés.
-- **Résultat** : 6 visites sur tout le site au 13/11 à 00h50 (heure UTC). Toujours aucune visite sur le guide ni sur les calculateurs.
-- **Bloqué par** : Google ne connaît pas encore le site (ta demande « Inscrire le site sur Google », 10 min). Bing vient d'être prévenu par nos agents.
-- **Prochaine étape** : Écrire une réponse prête à poster sur les forums pour la question « jusqu'à quand contester une rupture conventionnelle », et ajouter la nouvelle page à ta demande d'inscription Google.
+- **Déjà fait** : 6 calculateurs, 1 guide, une page pour intégrer nos calculateurs ailleurs, 15 sites à qui les proposer. Une réponse prête à poster existe pour chaque calculateur, y compris celui des dates limites pour contester (13/11).
+- **Résultat** : 6 visites sur tout le site au 13/11 à 01h25 (heure UTC). Toujours aucune visite sur le guide ni sur les calculateurs.
+- **Bloqué par** : Google ne connaît pas encore le site (ta demande « Inscrire le site sur Google », 13 min). Les 6 calculateurs sont déjà dans la liste qu'on lui donnera.
+- **Prochaine étape** : Ajouter un calculateur voisin, seulement si on prouve que des gens tapent la question sur Google.
 - **Décision le 26/11** (dans 13 jours). On arrête si : Toujours 0 visiteur le 26/11, une semaine après l'inscription sur Google.
 - **Voir** : https://lawatch.github.io/10aday/
 - _Fiche détaillée : [EXP-001](state/experiments/EXP-001-calculateurs-fr.md)_
 
 ### Petits outils gratuits pour développeurs, avec pub payée en bitcoin
 
-Des pages en anglais qui aident les développeurs à écrire correctement les numéros de version de leurs logiciels (JavaScript, Python, PHP, Rust, Ruby, Java, C#). Quand il y aura des visiteurs, on y mettra une pub qui paie en bitcoin.
+Des pages en anglais qui aident les développeurs à écrire correctement les numéros de version de leurs logiciels (JavaScript, Python, PHP, Rust, Ruby, Java, C#, Android/Gradle). Quand il y aura des visiteurs, on y mettra une pub qui paie en bitcoin.
 
-- **Déjà fait** : 14 pages en anglais en ligne, dont 6 outils. Le dernier, ajouté le 13/11 à 0 h 35, dit quelle version le logiciel NuGet (C#, .NET) va installer. Bing est prévenu de chaque page.
-- **Résultat** : 0 visiteur sur ces pages au 13/11 à 0 h 30. Bing a accepté nos demandes, il passera dans les jours qui viennent.
+- **Déjà fait** : 15 pages en anglais en ligne, dont 7 outils. Le dernier, ajouté le 13/11 à 1 h 25, dit quelle version Gradle (Java, Android) va installer pour `1.+` ou `[1.0,2.0)`. Bing est prévenu de chaque page.
+- **Résultat** : 0 visiteur sur ces pages au 13/11 à 1 h 25. Bing a accepté nos demandes, il passera dans les jours qui viennent.
 - **Bloqué par** : Google ne connaît pas encore le site : il faut l'y inscrire (ta demande de 10 min). La présentation sur Hacker News et Reddit attend aussi ton compte. Pour encaisser, il faudra ton adresse bitcoin.
-- **Prochaine étape** : Ajouter une page utile de plus, puis vérifier vers le 15/11 si Bing envoie des visiteurs.
+- **Prochaine étape** : Vers le 15/11, regarder si Bing envoie des visiteurs. D'ici là, une page de plus seulement si la question est vraiment cherchée.
 - **Décision le 26/11** (dans 13 jours). On arrête si : 0 visiteur le 26/11, après au moins 7 jours en ligne.
 - **Voir** : https://lawatch.github.io/10aday/tools/version-constraint-checker/
 - _Fiche détaillée : [EXP-004](state/experiments/EXP-004-outils-dev-pub-crypto.md)_
@@ -56,6 +56,9 @@ Le site Superteam Earn organise des concours ouverts aux agents IA, payés en US
 _Les étapes détaillées sont dans [state/HUMAN_QUEUE.md](state/HUMAN_QUEUE.md)._
 
 ## Ce que les agents ont fait récemment
+- **13/11 01h30** · Calculateurs gratuits pour la rupture conventionnelle · faire connaître — une réponse prête à poster sur les forums explique les dates limites pour contester une rupture conventionnelle ou un solde de tout compte, avec le lien vers le calculateur.
+- **13/11 01h25** · Petits outils gratuits pour développeurs, avec pub payée en bitcoin · construction — j'ai mis en ligne un 7e outil en anglais, pour les développeurs Java et Android qui utilisent Gradle. Il dit quelle version Gradle va installer pour une écriture comme `1.+` ou `[1.0,2.0)`.
+- **13/11 01h20** · nouvelles idées · recherche d'idées — j'ai regardé si un agenda auquel on s'abonne (les dates d'impôts et d'Urssaf dans son téléphone) pouvait nous amener des visiteurs.
 - **13/11 00h35** · Petits outils gratuits pour développeurs, avec pub payée en bitcoin · construction — j'ai mis en ligne un 6e outil en anglais, pour les développeurs C# (.NET). Il dit quelle version NuGet va installer pour une écriture comme `[1.0,2.0)` ou `1.*`.
 - **13/11 00h30** · pilotage · décisions — j'ai trié tes demandes en attente et ralenti l'agent des concours, qui tourne à vide.
 - **13/11 00h23** · Concours de code réservés aux IA, payés en dollars numériques · construction — j'ai revérifié la clé du site des concours et la liste publique.
@@ -63,6 +66,3 @@ _Les étapes détaillées sont dans [state/HUMAN_QUEUE.md](state/HUMAN_QUEUE.md)
 - **12/11 23h30** · Petits outils gratuits pour développeurs, avec pub payée en bitcoin · construction — j'ai mis en ligne un 5e outil en anglais, pour les développeurs Java. Il dit quelle version Maven va installer pour une écriture comme `[1.0,2.0)`.
 - **12/11 23h30** · Calculateurs gratuits pour la rupture conventionnelle · faire connaître — le guide sur la rupture conventionnelle annonce maintenant en tête la nouvelle durée du chômage, et une réponse prête à poster sur les forums est écrite.
 - **12/11 23h20** · nouvelles idées · recherche d'idées — j'ai regardé quels moteurs autres que Google peuvent trouver nos pages, et un moyen de se faire payer en crypto par des IA.
-- **12/11 23h20** · Concours de code réservés aux IA, payés en dollars numériques · construction — j'ai revérifié la clé du site des concours et la liste publique.
-- **12/11 22h40** · Calculateurs gratuits pour la rupture conventionnelle · construction — le calculateur du chômage indique maintenant combien de temps on peut être indemnisé après une rupture conventionnelle, avec la nouvelle règle du 1er septembre 2026.
-- **12/11 22h20** · Concours de code réservés aux IA, payés en dollars numériques · construction — j'ai préparé le programme qui vérifie puis envoie une participation à un concours.
