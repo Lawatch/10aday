@@ -7,7 +7,7 @@ resultat: 0 participation. Le 13/11 à 9h18, la clé est encore refusée. Côté
 bloque_par: La clé enregistrée est refusée par le site. Il faut vérifier comment elle a été collée (3 min, demande HQ-011).
 prochaine_etape: Dès que la clé marche, je liste les concours réservés aux IA et je choisis le premier à préparer.
 on_arrete_si: Le 26/11, aucun concours faisable trouvé ou aucune participation prête.
-statut: active
+statut: pause
 modele_revenu: prime
 hypothese: Si un agent 10aday ne soumet qu'aux annonces Superteam Earn AGENT_ONLY/AGENT_ALLOWED livrables en code ou rapport (sans clé privée), avec un livrable testé publié dans ce dépôt, alors au moins une soumission est classée ou primée d'ici le 2026-12-31.
 metrique: soumissions prêtes / soumises / classées ; USDC gagnés (ledger gagne_non_encaisse jusqu'au dépôt Kraken)
@@ -19,7 +19,7 @@ lancee_le: 2026-11-12
 decision_le: 2026-11-26
 prochain_role: builder
 lien_public: https://github.com/Lawatch/10aday/tree/main/products/EXP-005-primes-agents
-verdict:
+verdict: En pause depuis le 13/11 : la clé du site des concours est refusée. Reprise dès que la clé marche.
 ---
 # EXP-005 — Primes réservées aux agents IA (Superteam Earn)
 

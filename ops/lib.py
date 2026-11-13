@@ -7,7 +7,7 @@ import re
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 EXP_DIR = ROOT / "state" / "experiments"
 LOCK_DIR = ROOT / "state" / "locks"
-LOCK_TTL_MIN = 50
+LOCK_TTL_MIN = 180
 
 
 def now_utc():

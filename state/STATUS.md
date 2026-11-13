@@ -1,6 +1,19 @@
-# STATUS — tableau de relais
+# STATUS
 
-> Lu par tous les agents ; mis à jour par le couloir `pilotage`.
+## Décision du propriétaire — 13/11 à 09h30 (à appliquer par le pilote dès son prochain passage)
+Constat : 77 passages d'agents en 24 h, 28 pages en ligne, 12 visites (dont nos propres tests), 0 €. Les 3 pistes attendaient toutes l'humain.
+Nouvelles règles (détail dans `CHARTER.md`, « Mode propriétaire », et `ops/RUNBOOK.md`) :
+1. **Rien ne dépend de l'humain.** Il peut donner une clé ou créer un compte une fois, rien de plus. Il n'inscrira pas le site sur Google et ne postera rien.
+2. **6 passages par jour**, un agent à la fois : 1 pilote (08 h UTC), 5 opérateurs. Chaque passage = un cycle complet.
+3. **2 pistes actives, 3 au maximum.** Chaque piste doit passer le test d'autonomie (voir `agents/pilote.md`).
+
+**Travail du premier pilote** :
+- Passer EXP-001, EXP-004 et EXP-005 au test d'autonomie et trancher. Indications : EXP-001 et EXP-004 n'ont plus que Bing (prévenu par IndexNow) comme source de visiteurs ; sans signal venu de Bing à la date de décision, on arrête. Garder au plus **une** des deux en veille légère (`poids: 1`, aucune nouvelle page) ou les fusionner en une seule piste. EXP-005 dépend d'une clé donnée une fois (HQ-011) : acceptable, mais elle ne doit pas consommer de passages tant que la clé est refusée (mets-la en `pause`, le pilote la réactive quand la clé marche).
+- Lancer **au moins une piste nouvelle** qui passe le test d'autonomie et qui ne repose pas sur des visiteurs venus de Google.
+- Réécrire ce fichier en 40 lignes maximum et supprimer tout ce qui suit.
+
+---
+_Ancien contenu (avant la refonte du 13/11), à supprimer par le pilote :_
 
 ## Organisation
 Système **multi-couloirs** depuis le 2026-11-12 (voir `ops/RUNBOOK.md`) : `pilotage` (toutes les 3 h), `exploration` (toutes les 2 h),

@@ -1,17 +1,16 @@
-# File d'attente humaine
+# Clés et comptes : les coups de pouce possibles
 
-Les agents écrivent ici ce dont ils ont besoin de l'humain, **en français courant (voir `ops/STYLE.md`)** : titre = action + durée, puis pourquoi en 1 phrase, puis étapes numérotées (comptes, dépenses, validations, publications sur des plateformes à compte).
-L'humain répond directement sous chaque demande (ligne `Réponse :`) puis passe le statut à `✅ fait` ou `❌ refusé`.
-Le stratège nettoie la file. **Max 3 demandes ouvertes.**
+**Règle depuis le 13/11 : rien ne dépend de toi.** Les agents avancent seuls. Cette page liste seulement ce que tu peux donner **une fois**
+(un compte à créer, une clé) pour ouvrir une possibilité de plus. Deux demandes ouvertes au maximum. Si tu ne fais rien, le système continue.
 
-Format :
+Format (agents : français courant, voir `ops/STYLE.md`) :
 ```
-### HQ-XXX — titre court  [🟡 ouvert | ✅ fait | ❌ refusé]
-- Demandé par / le :
-- Pourquoi (impact attendu) :
-- Action exacte pour l'humain (≤ 15 min) :
+### HQ-XXX — verbe d'action + durée  [🟡 ouvert | ✅ fait | ❌ abandonnée]
+- Pourquoi (1 phrase) :
+- Étapes numérotées :
 - Réponse :
 ```
+Jamais d'identifiant ni de mot de passe ici. Une clé se donne par le formulaire sécurisé de la session de pilotage.
 
 ---
 
@@ -54,7 +53,7 @@ Format :
 - Action exacte : GitHub → `Lawatch/10aday` → Settings → Pages → Build and deployment → Branch `main`, dossier **`/docs`** (au lieu de `/ (root)`) → Save.
 - Réponse : 2026-11-12 — fait. Vérifié : `https://lawatch.github.io/10aday/rupture-conventionnelle-dates/` → 200.
 
-### HQ-006 — Inscrire le site sur Google et Bing, pour qu'ils envoient des visiteurs (13 min)  [🟡 ouvert — PRIORITÉ N°1]
+### HQ-006 — Inscrire le site sur Google et Bing, pour qu'ils envoient des visiteurs (13 min)  [❌ abandonnée le 13/11 : action à ta charge, on ne dépend plus de toi. Bing est prévenu automatiquement ; Google trouvera le site par lui-même ou pas]
 - Demandé par / le : growth (exp-EXP-001), 2026-11-12 ; réécrite par le stratège le 13/11 à 00:30.
 - Pourquoi : 20 pages en ligne, mais 0 visiteur venu de l'extérieur au 13/11. Google ne connaît pas le site. Seul toi peux le faire : il faut un compte.
 - Étapes :
@@ -69,7 +68,7 @@ Format :
 - Réponse :
 
 
-### HQ-007 — Présenter un de nos outils sur Hacker News, le grand forum des développeurs (5 min)  [🟡 ouvert — PRIORITÉ N°3]
+### HQ-007 — Présenter un de nos outils sur Hacker News, le grand forum des développeurs (5 min)  [❌ abandonnée le 13/11 : demande de poster à ta place, contraire à la nouvelle règle]
 - Demandé par / le : growth (exp-EXP-004), 2026-11-12
 - Pourquoi : c'est le canal légitime le plus direct vers des développeurs anglophones pour un outil gratuit sans inscription (« Show HN » est fait pour ça). Le SEO seul mettra des semaines (site non indexé). Un post peut apporter les premières visites externes (P1) et des liens entrants qui accélèrent l'indexation. Aucun agent ne peut le faire : il faut un compte Hacker News.
 - Action exacte : sur https://news.ycombinator.com/submit, un jour de semaine vers 14-16 h UTC. Titre, URL et premier commentaire **prêts à coller** dans `products/EXP-004-outils-dev-pub-crypto/launch/README.md` §2. Un seul post. Rester 1 h pour répondre aux questions si possible. Facultatif : poser les 3 liens IndexNow du §1 du même fichier.
@@ -77,7 +76,7 @@ Format :
   HQ-008 (r/Python) est **regroupée ici** : un autre jour que le Show HN, poster aussi le texte du §6 du même fichier sur r/Python (flair Showcase). Les deux restent facultatifs.
 - Réponse :
 
-### HQ-008 — Poster l'outil Poetry → PEP 621 sur Reddit r/Python (≈ 5 min)  [⏸ regroupée dans HQ-007]
+### HQ-008 — Poster l'outil Poetry → PEP 621 sur Reddit r/Python (≈ 5 min)  [❌ abandonnée le 13/11 : même raison]
 - Demandé par / le : growth (exp-EXP-004), 2026-11-12 17:30
 - Pourquoi : r/Python (plus d'un million de membres) accepte les projets avec le flair **Showcase**. C'est le public exact du 2e outil
   (migration Poetry 2 / uv). On peut en attendre les premières visites externes (P1) et des liens entrants. Il faut un compte Reddit.
@@ -85,7 +84,7 @@ Format :
   `products/EXP-004-outils-dev-pub-crypto/launch/README.md` §6. Un seul post, pas le même jour que HQ-007. Relire la règle « Showcase » du sub avant.
 - Réponse :
 
-### HQ-010 — Proposer nos calculateurs à 3 sites qui parlent de rupture conventionnelle (15 min)  [⏸ en attente — le stratège l'ouvre quand une place se libère]
+### HQ-010 — Proposer nos calculateurs à 3 sites qui parlent de rupture conventionnelle (15 min)  [❌ abandonnée le 13/11 : même raison]
 - Demandé par / le : growth (exp-EXP-001), 2026-11-12 21:20 UTC
 - Pourquoi : un site qui affiche notre calculateur nous envoie des visiteurs sans attendre Google. Seul un humain peut écrire à un site.
 - Action exacte :
@@ -95,7 +94,7 @@ Format :
   4. Noter la date d'envoi dans le tableau « Suivi » du même fichier (ou écrire ici « envoyé à 6, 7, 2 »).
 - Réponse :
 
-### HQ-011 — Vérifier la clé du site des concours, elle est refusée (3 min)  [🟡 ouvert — PRIORITÉ N°2]
+### HQ-011 — Recoller la clé du site des concours, elle est refusée (3 min)  [🟡 ouvert]
 - Demandé par / le : builder (exp-EXP-005), 2026-11-12 21:40
 - Pourquoi : la clé « Clé agent Superteam Earn » est bien enregistrée, mais le site la refuse (erreur 401 à 21h20 le 12/11). Sans elle, on ne voit pas les concours réservés aux IA.
 - Action exacte :

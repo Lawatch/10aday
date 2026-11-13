@@ -28,12 +28,16 @@ autonomes qui explorent, construisent, testent réellement et apprennent en cont
   sans compte à créer** (ex. régies publicitaires qui paient à une adresse, primes/concours payés en crypto), et construire dès maintenant des
   **actifs qui génèrent du flux** (trafic, audience, outils utilisés) monétisables dès que l'adresse sera disponible.
   La crypto est **uniquement un moyen d'être payé** : pas de trading, pas de spéculation, pas de farming d'airdrops ni de multi-comptes (règle 3).
-- **Autonomie maximale** : les agents font **tout seuls** tout ce qui est techniquement possible depuis leur session
-  (rechercher, construire, tester, publier dans ce dépôt, mesurer, décider, lancer et tuer des expériences, réécrire leurs propres règles de travail).
-  L'humain n'est sollicité que pour ce qu'un agent ne peut **physiquement** pas faire : ouvrir un compte à son nom, dépenser, s'engager
-  contractuellement, contacter directement des personnes (emails, DM), poster sur une plateforme qui exige un compte.
-  Chaque demande doit être prête à exécuter en ≤ 15 min (texte à copier-coller fourni).
-- **Exploration parallèle** : jusqu'à 3-4 expériences actives en même temps, avec des **modèles de revenus variés**, chacune dans son couloir.
+- **Mode propriétaire** (décision de l'humain, 2026-11-13) : les agents agissent **à sa place, avec carte blanche**. Ils décident,
+  exécutent, mesurent, arrêtent et relancent seuls. Aucune validation n'est demandée, aucune n'est attendue.
+- **Rien ne doit dépendre de l'humain.** On ne lance et on ne garde que des pistes que les agents mènent **de bout en bout** :
+  construire, faire venir du monde, mesurer, encaisser. Une piste qui attend une action répétée de l'humain (poster, inscrire un site,
+  valider des envois) est transformée ou arrêtée.
+- **Seule aide possible, une fois** : l'humain peut créer un compte ou donner une clé d'API (demande dans `state/HUMAN_QUEUE.md`, 2 ouvertes
+  au maximum). Les agents continuent sans attendre la réponse. Dépenser reste interdit (budget 0 €).
+- **Limite d'honnêteté** : carte blanche pour décider, pas pour tromper. Les agents ne se font pas passer pour une personne auprès de tiers,
+  ne créent pas de fausse identité, et respectent les règles des plateformes qu'une clé leur ouvre.
+- **Sobriété** : 6 passages par jour, un agent à la fois, 2 à 3 pistes actives. Chaque passage est un cycle complet avec un résultat visible.
 
 ## Règles absolues (non négociables, même si ça rapporterait)
 1. **Légal et honnête** : pas d'arnaque, pas de faux avis, pas de fausse urgence, pas d'usurpation d'identité, pas de contenu trompeur, pas de contrefaçon ni de reprise d'œuvres protégées.

@@ -1,5 +1,5 @@
-# AAAA-MM-JJ HH:MM — <expérience ou « exploration » / « pilotage »> — <rôle>
-<!-- Fichier : journal/AAAA-MM-JJ-HHMM-<couloir>-<rôle>.md — Règles d'écriture : ops/STYLE.md (français courant, concret, chiffré, sans jargon). 4 lignes, pas plus. -->
+# AAAA-MM-JJ HH:MM — <piste ou « pilotage »> — <rôle>
+<!-- Fichier : journal/AAAA-MM-JJ-HHMM-<EXP-00X ou pilotage>-<rôle>.md — Règles d'écriture : ops/STYLE.md. 4 lignes, pas plus. -->
 
 - **En une phrase** : ce que j'ai fait, comme je le dirais à quelqu'un qui ne connaît pas le projet.
 - **Résultat** : ce qui existe maintenant ou ce qu'on a mesuré, avec un chiffre (ex. « page en ligne : <lien> », « 0 visiteur »).

@@ -16,8 +16,8 @@ seuil_echec: ex. 0 visite après 7 jours en ligne
 valeur_actuelle: 0
 revenu_total_eur: 0
 lancee_le: AAAA-MM-JJ
-decision_le: AAAA-MM-JJ
-prochain_role: builder
+decision_le: AAAA-MM-JJ (7 jours maximum après le lancement)
+poids: 1
 lien_public:
 verdict:
 ---
@@ -29,7 +29,7 @@ Les autres champs (hypothese, metrique, seuils…) sont pour les agents.
 En-tête lu par ops/dispatch.py et ops/build_dashboard.py : une ligne `clé: valeur`, sans guillemets, sans retour à la ligne.
 - statut : active | pause | tuee | reussie
 - modele_revenu : vente | trafic-pub | affiliation | service | abonnement | prime | autre  (PAS de dons)
-- prochain_role : builder | growth  (le couloir de l'expérience lancera ce rôle au prochain tick)
+- poids : 1 à 5. Part des passages d'opérateur donnée à cette piste (le pilote l'augmente quand un signal apparaît)
 - valeur_actuelle : dernière valeur MESURÉE de la métrique (texte court, ex. "12 visites/sem (2026-11-20)")
 - verdict : rempli à la clôture, en clair (ex. « Arrêtée le 26/11 : 0 visiteur en 2 semaines. Google met plus longtemps que prévu à envoyer du monde. »)
 -->

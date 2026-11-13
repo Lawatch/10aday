@@ -4,7 +4,7 @@ titre: Petits outils gratuits pour développeurs, avec pub payée en bitcoin
 en_clair: Des pages en anglais qui aident les développeurs à écrire correctement les numéros de version de leurs logiciels (JavaScript, Python, PHP, Rust, Ruby, Java, C#, Android/Gradle). Quand il y aura des visiteurs, on y mettra une pub qui paie en bitcoin.
 deja_fait: 16 pages en anglais en ligne, dont 8 outils. Le 13/11 à 5 h 30, la page d'accueil de notre dépôt GitHub liste enfin les 8 outils (elle n'en montrait qu'un).
 resultat: 0 visiteur venu d'un moteur de recherche au 13/11 à 9 h 20. Toujours 12 visites sur tout le site depuis le 12/11 au soir, dont 2 sur l'outil n°1. Les 7 autres outils : 0 visite.
-bloque_par: Google ne connaît pas encore le site : il faut l'y inscrire (ta demande de 10 min). La présentation sur Hacker News et Reddit attend aussi ton compte. Pour encaisser, il faudra ton adresse bitcoin.
+bloque_par: rien côté humain. Seul Bing peut nous envoyer du monde ; le pilote tranche au prochain passage.
 prochaine_etape: Vers le 15/11, regarder si Bing envoie des visiteurs. Pas de nouvelle page avant ce chiffre : 8 outils suffisent pour tester l'idée.
 on_arrete_si: 0 visiteur le 26/11, après au moins 7 jours en ligne.
 statut: active
