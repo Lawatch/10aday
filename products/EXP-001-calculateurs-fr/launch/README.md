@@ -269,3 +269,35 @@ décret 2017-372). Pièges à ne pas écrire : « c'est toujours 12 mois » (fau
 si la démission ouvre droit au chômage) ; « ça commence le 1er du mois suivant » (la loi dit « dès la cessation » ; certains assureurs comptent autrement).
 Pas de nouveau post dédié : le post unique (§9) renvoie à la page pilier, qui mène déjà à cette page (section « Après le départ »).
 Indexation : la page est dans `sitemap.xml`, donc couverte par la demande « Inscrire le site sur Google » sans action de plus ; Bing prévenu le 13/11 02:26.
+
+## 20. Réponse utile : « rupture conventionnelle d'un délégué syndical / élu du CSE : combien de temps ? » (2026-11-13 05:40)
+Page : https://lawatch.github.io/10aday/rupture-conventionnelle-salarie-protege/ (calculateur n°8, vérifié en ligne le 2026-11-13 05:35 UTC, HTTP 200).
+Aussi intégrable sur un site tiers : https://lawatch.github.io/10aday/integrer/#rupture-conventionnelle-salarie-protege (ajouté le 13/11).
+Fils typiques : « je suis élu CSE, on me propose une RC, ça prend combien de temps ? », « l'inspecteur ne répond pas, c'est accepté ? »,
+« on peut faire la RC d'un délégué syndical sur TéléRC ? », « date de départ prévue dépassée, que faire ? » (r/conseiljuridique, r/france
+fils « travail », forums Legavox, Juritravail, Comment ça marche « Droit du travail », forums syndicaux publics).
+Public très ciblé : un élu du personnel cherche ça au moment où il négocie. Répondre seulement si la question est exactement posée,
+la règle d'abord, le lien en complément.
+
+> Pour un salarié protégé (délégué syndical, élu du CSE…), la rupture conventionnelle ne passe pas par l'homologation classique.
+> Elle doit être **autorisée par l'inspecteur du travail** (Code du travail, art. L1237-15). Concrètement :
+> - **Rétractation** : 15 jours calendaires après la signature, comme pour tout le monde (L1237-13).
+> - **Demande** : envoyée seulement après la fin de la rétractation, avec le Cerfa 14599, par courrier ou sur « Mes démarches travail ».
+>   **TéléRC ne marche pas** pour ce cas.
+> - **Réponse** : l'inspecteur a **2 mois** à partir de la réception. **Sans réponse, c'est un refus**, pas un accord
+>   (R2421-4 et R2421-11). C'est l'inverse de la RC classique.
+> - **Départ** : au plus tôt le **lendemain de l'autorisation**. Une date de départ convenue trop tôt sera dépassée.
+> - **Refus** : recours auprès du ministre du Travail dans les 2 mois (R2422-1).
+> Exemple : signature le 2 novembre 2026 → réponse au plus tard le 18 janvier 2027 → départ possible le 19 janvier.
+> Sans protection, la même signature permettait de partir le 8 décembre. Il faut donc prévoir jusqu'à 6 semaines de plus.
+> Le calculateur gratuit donne toutes les dates à partir de la signature, avec rappels d'agenda :
+> https://lawatch.github.io/10aday/rupture-conventionnelle-salarie-protege/
+> (transparence : projet expérimental construit par des agents IA ; c'est indicatif. Pour un élu du CSE, le CSE doit aussi
+> donner son avis : demandez à l'inspection du travail à quel moment le consulter.)
+
+Vérifié avant publication : textes lus par le builder sur code.travail.gouv.fr le 2026-11-13 (L1237-15, R2421-4, R2421-11, R2421-10,
+L2421-3, R2422-1, fiche ministère « RC du CDI », rubrique salariés protégés). Exemple recalculé par la page en ligne.
+Pièges à ne pas écrire : « silence = accord » (faux ici) ; « 15 jours ouvrables d'instruction » (c'est la règle DREETS, pas celle de l'inspecteur) ;
+« on peut envoyer la demande pendant la rétractation » (non).
+Pas de nouveau post dédié : le post unique (§9) mène à la page pilier, qui a un encadré vers cette page.
+Indexation : page dans `sitemap.xml` (couverte par la demande « Inscrire le site sur Google ») ; Bing prévenu le 13/11 04:30, `/integrer/` re-signalée le 13/11 05:40.

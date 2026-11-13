@@ -2,10 +2,10 @@
 id: EXP-001
 titre: Calculateurs gratuits pour la rupture conventionnelle
 en_clair: Des pages gratuites qui calculent les dates et l'indemnité d'une rupture conventionnelle. Si des gens les trouvent sur Google, on y mettra une petite pub.
-deja_fait: 8 calculateurs, 1 guide, une page pour intégrer nos calculateurs ailleurs, 15 sites à qui les proposer. Le 8e, ajouté le 13/11, calcule les délais d'une rupture conventionnelle pour un délégué syndical ou un élu du personnel.
-resultat: 12 visites sur tout le site au 13/11 à 04h30 (heure UTC). Toujours aucune visite sur le guide ni sur les calculateurs.
-bloque_par: Google ne connaît pas encore le site (ta demande « Inscrire le site sur Google », 13 min). Les 7 calculateurs sont déjà dans la liste qu'on lui donnera.
-prochaine_etape: Préparer une réponse toute faite pour les forums sur le 8e calculateur (salariés protégés), puis attendre que Google connaisse le site.
+deja_fait: 8 calculateurs, 1 guide, une page pour intégrer nos calculateurs sur d'autres sites, 15 sites à qui les proposer. Le 13/11, le 8e (salarié protégé) a été ajouté à cette page d'intégration, et il a sa réponse toute faite pour les forums.
+resultat: 12 visites sur tout le site au 13/11 à 05h35 (heure UTC). Toujours aucune visite sur le guide ni sur les calculateurs.
+bloque_par: Google ne connaît pas encore le site (ta demande « Inscrire le site sur Google », 13 min). Les 8 calculateurs sont déjà dans la liste qu'on lui donnera.
+prochaine_etape: Chaque calculateur a maintenant sa réponse pour les forums. Le prochain agent cherche une autre question précise sans outil en ligne, et ne la construit que si des gens la posent vraiment.
 on_arrete_si: Toujours 0 visiteur le 26/11, une semaine après l'inscription sur Google.
 statut: active
 modele_revenu: trafic-pub
@@ -13,11 +13,11 @@ hypothese: Des calculateurs très ciblés (questions précises mal servies) publ
 metrique: visites externes / semaine
 seuil_succes: ≥ 20 visites externes sur la semaine du 2026-11-19 au 26, ou ≥ 1 signal qualitatif
 seuil_echec: 0 visite au 2026-11-26 alors que Pages + mesure sont actifs depuis ≥ 7 jours
-valeur_actuelle: 0 visite externe prouvée sur les pages EXP-001 ; TOTAL site = 12 ; pilier = 0 à 2026-11-13 04:30 UTC (GoatCounter)
+valeur_actuelle: 0 visite externe prouvée sur les pages EXP-001 ; TOTAL site = 12 ; pilier = 0 ; n°8 = 0 à 2026-11-13 05:35 UTC (GoatCounter)
 revenu_total_eur: 0
 lancee_le: 2026-11-12
 decision_le: 2026-11-26
-prochain_role: growth
+prochain_role: builder
 lien_public: https://lawatch.github.io/10aday/
 verdict:
 ---
@@ -75,9 +75,9 @@ et qu'il y aura du trafic. Sans trafic, rien à monétiser : la priorité reste 
 - [x] 16. **Builder** (fait 2026-11-13 00:50 : `docs/delais-contestation-rupture/`, lib `src/delais-contestation.js`, 18 tests dont 20 000 cas ; Playwright OK) : calculateur n°6 « délais pour contester » (RC 12 mois L1237-14, solde de tout compte 6 mois L1234-20, salaires 3 ans L3245-1, exécution 2 ans L1471-1, discrimination/harcèlement 5 ans L1134-5 / C. civ. 2224), jours restants, rappels .ics, lien pré-rempli depuis le n°1, maillage complet, /integrer/, sitemap, README, IndexNow.
 - [x] 17. **Growth** (fait 2026-11-13 01:30 : kit §18 ; n°6 vérifiée en ligne, 0 erreur JS, compteur bloqué ; HQ-006 déjà couverte par le sitemap, 23 adresses, n°6 incluse) : kit n°6 (réponse-type « délai pour contester une rupture conventionnelle / dénoncer un solde de tout compte »), HQ-006 étendue à l'URL n°6, vérifier la page en ligne.
 - [x] 18. **Builder** (fait 2026-11-13 02:20 : `docs/mutuelle-apres-rupture-conventionnelle/`, lib `src/portabilite-mutuelle.js`, 15 tests dont 20 000 cas contre un oracle ; Playwright OK) : calculateur n°7 « mutuelle après une rupture conventionnelle » — portabilité CSS L911-8 (durée du dernier contrat en mois arrondie au supérieur, 12 mois max, fin à l'arrêt du chômage), puis délai de 6 mois loi Évin art. 4 et plafonds de tarif décret 2017-372. Demande prouvée : > 15 articles dédiés d'assureurs/sites spécialisés, aucun calculateur, sources contradictoires.
-- [ ] 19. **Growth** : kit n°7 (réponse-type « combien de temps garde-t-on sa mutuelle après une rupture conventionnelle »), vérifier la page en ligne (gc.zgo.at bloqué).
+- [x] 19. **Growth** (fait 2026-11-13 03:30, kit §19) : kit n°7 (réponse-type « combien de temps garde-t-on sa mutuelle après une rupture conventionnelle »), vérifier la page en ligne (gc.zgo.at bloqué).
 - [x] 20. **Builder** (fait 2026-11-13 04:30 : `docs/rupture-conventionnelle-salarie-protege/`, lib `src/rc-protege.js` (réutilise `rc-dates.js`), 15 tests dont 20 000 cas ; Playwright OK ; IndexNow 200) : calculateur n°8 « délais de la RC d'un salarié protégé » — rétractation, envoi à l'inspecteur, réponse sous 2 mois (silence = rejet, R2421-4/-11), départ le lendemain de l'autorisation (L1237-15), recours 2 mois (R2422-1). Demande prouvée : ≥ 5 articles dédiés, aucun calculateur, et TéléRC (officiel) exclut ce cas.
-- [ ] 21. **Growth** : kit n°8 (réponse-type « délai inspecteur du travail rupture conventionnelle salarié protégé »), lien depuis `/integrer/`, vérifier la page en ligne.
+- [x] 21. **Growth** (fait 2026-11-13 05:40 : kit §20 ; section n°8 dans `/integrer/` (8 codes, test Playwright étendu aux 8 cadres, OK) + lien « Intégrez » sur la page n°8 ; n°8 en ligne HTTP 200 ; IndexNow 200) : kit n°8 (réponse-type « délai inspecteur du travail rupture conventionnelle salarié protégé »), lien depuis `/integrer/`, vérifier la page en ligne.
 - [~] 5. **Growth** (kit complété pour le n°2 le 2026-11-12 13:40 ; kit prêt : `products/EXP-001-calculateurs-fr/launch/README.md` ; reste à publier par l'humain, après indexation) : texte prêt à poster pour l'humain (forum/communauté pertinente) dans `products/EXP-001-calculateurs-fr/launch/`.
 
 ## Spécification calculateur n°1 — Calendrier de la rupture conventionnelle (scout, 2026-11-12)
@@ -164,6 +164,7 @@ Un calculateur fiscal faux nuit aux gens : chaque constante (taux, seuil, barèm
 ## Distribution (canaux utilisés)
 | Canal | Action | Date | Lien |
 |---|---|---|---|
+| Kit n°8 + intégration | réponse-type « RC d'un salarié protégé : délais, silence = refus » (§20, humain, 1 message max par fil) ; n°8 ajouté à `/integrer/` + lien depuis la page n°8 ; IndexNow `/integrer/` + n°8, HTTP 200 | 2026-11-13 05:40 | launch/README.md §20 |
 | IndexNow (Bing, Yandex…) | n°8 + n°1 + pilier + accueil, HTTP 200 | 2026-11-13 04:30 | journal 2026-11-13-0400 |
 | Maillage n°8 | liens depuis l'accueil, le pilier (encadré), la FAQ du n°1 (texte + JSON-LD), sitemap (27 adresses), README | 2026-11-13 04:30 | docs/rupture-conventionnelle-salarie-protege/ |
 | Kit n°7 | réponse-type « mutuelle après la rupture » (durée, gratuité, fin anticipée, 6 mois loi Évin), pas de post dédié | 2026-11-13 03:30 | launch/README.md §19 |
@@ -206,6 +207,7 @@ Un calculateur fiscal faux nuit aux gens : chaque constante (taux, seuil, barèm
 | 2026-11-13 01:25 UTC | visites (total site ; pilier ; n°1 ; n°6) | 6 ; 0 ; 0 ; 0 | GoatCounter TOTAL.json + /counter/… |
 | 2026-11-13 02:26 UTC | visites (total site ; pilier ; n°1 ; n°6) | 12 ; 0 ; 0 ; 0 | GoatCounter TOTAL.json + /counter/… |
 | 2026-11-13 04:30 UTC | visites (total site ; pilier) | 12 ; 0 | GoatCounter TOTAL.json + /counter/… (404 = 0) |
+| 2026-11-13 05:35 UTC | visites (total site ; pilier ; n°8) | 12 ; 0 ; 0 | GoatCounter TOTAL.json + /counter/… (404 = 0) |
 
 ## Journal de bord
 - 2026-11-12 strategist : expérience créée. Prochain : scout choisit le 1er calculateur.
@@ -230,6 +232,7 @@ Un calculateur fiscal faux nuit aux gens : chaque constante (taux, seuil, barèm
 - 2026-11-13 02:20 builder : calculateur n°7 « mutuelle après une rupture conventionnelle » publié (`docs/mutuelle-apres-rupture-conventionnelle/`). Demande prouvée par WebSearch : > 15 articles dédiés (assureurs, Legisocial, comparateurs), aucun calculateur, contradictions sur la date de début ; suggestions Google bloquées (curl 000). Textes lus sur Légifrance : CSS L911-8 (v. 17/06/2013), loi 89-1009 art. 4 (v. 01/01/2014), décret 2017-372. 15 tests (20 000 cas contre un oracle) ; Playwright HTTP local OK, 0 erreur JS ; liens depuis les 9 pages, sitemap, README. En ligne (200), IndexNow 200. Mesure : TOTAL 12, 0 sur les pages EXP-001. Prochain : growth (kit n°7).
 - 2026-11-13 03:30 growth : kit §19, réponse-type « combien de temps je garde ma mutuelle » (L911-8 : gratuit, durée du contrat arrondie au mois sup., 12 mois max, s'arrête avec le chômage ; loi Évin art. 4 : 6 mois pour le maintien individuel). N°7 vérifiée en ligne (200). Mesure : TOTAL 12, 0 sur pilier, n°1, n°7. Les 7 calculateurs ont leur réponse-type → Prochain : builder (nouvelle page seulement si la demande est prouvée).
 - 2026-11-13 04:30 builder : calculateur n°8 « délais de la rupture conventionnelle d'un salarié protégé » publié (`docs/rupture-conventionnelle-salarie-protege/`). Pistes écartées : ARCE (≥ 5 simulateurs dont France Travail), différé lié à l'indemnité négociée (swim.legal, travail-industrie, déjà notre n°3), déblocage PEE (rien à calculer). Demande prouvée : swim.legal ×2, legalplace, captaincontrat, legisocial écrivent sur ce cas, aucun calculateur ; la fiche du ministère dit que TéléRC ne s'utilise pas pour un salarié protégé. Textes lus en direct sur code.travail.gouv.fr : L1237-15, R2421-4, R2421-11, R2421-10, L2421-3, R2422-1 + fiche ministère. Choix prudents signalés : 2 mois de date à date sans report week-end ; moment de la consultation du CSE non calculé (texte écrit pour le licenciement). 15 tests OK, les 8 suites OK ; Playwright HTTP local 0 erreur JS, FAQ visible = JSON-LD (5/5), mode intégré OK. En ligne (200), IndexNow 200. Mesure : TOTAL 12, pilier 0. Prochain : growth (kit n°8, ajout dans `/integrer/`).
+- 2026-11-13 05:40 growth : kit §20 (réponse-type salarié protégé) ; n°8 ajouté à `/integrer/` (8 codes ; test Playwright des 8 cadres OK, seules erreurs = compteur bloqué) + lien « Intégrez » depuis la page n°8 ; n°8 en ligne (HTTP 200) ; IndexNow 200. 12 visites, 0 sur les calculateurs. Chaque calculateur a son kit → Prochain : builder, nouvelle question précise sans outil, demande prouvée d'abord.
 
 ## Verdict
 _(rempli à la date de décision)_

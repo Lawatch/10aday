@@ -1,7 +1,7 @@
 const { chromium } = require('playwright');
 const fs = require('fs'), path = require('path');
 const DOCS = '/home/user/10aday/docs';
-const slugs = ['rupture-conventionnelle-dates','rupture-conventionnelle-indemnite','indemnite-conges-payes-depart','rupture-conventionnelle-impot-csg','chomage-rupture-conventionnelle','delais-contestation-rupture'];
+const slugs = ['rupture-conventionnelle-dates','rupture-conventionnelle-indemnite','indemnite-conges-payes-depart','rupture-conventionnelle-impot-csg','chomage-rupture-conventionnelle','delais-contestation-rupture','mutuelle-apres-rupture-conventionnelle','rupture-conventionnelle-salarie-protege'];
 const unesc = s => s.replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').replace(/&#x27;/g,"'").replace(/&amp;/g,'&');
 (async () => {
   const b = await chromium.launch();
