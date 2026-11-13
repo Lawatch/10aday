@@ -41,3 +41,11 @@ Page publiée : `docs/tools/maven-version-range-checker/` → https://lawatch.gi
 - Oracle Java : `mvr/oracle/Oracle.java`. Préparer les jars (`maven-resolver-util` et `maven-resolver-api` 1.9.24) avec `mvn dependency:copy-dependencies`, compiler `Oracle.java`, puis `MVN_CP="lib/*:cls" node mvr/test_mvr.js 1 2 3 4 5 6 7 8`. Résultat au 2026-11-12 : 2 115 512 vérifications (paires de versions + appartenance aux intervalles), 0 écart.
 - Vrai Maven : `mvr/real_mvn/run.sh DIR` crée un dépôt local (8 versions) et lance `mvn dependency:list` pour 17 écritures ; résultats dans `mvr/real_mvn/RESULTS.txt`. `node mvr/check_real.js` : même choix que Maven sur les 17, copie publiée identique.
 - Constats du vrai Maven : `[1.0,2.0)` → `2.0-rc1` ; `[1.0,2.0.min)` → `1.9.9` ; `[1.*]` refusé dans un `pom.xml` (caractère `*` interdit), alors que la bibliothèque l'accepte.
+
+## Outil n°6 : NuGet version range checker (`nvr/`)
+Page publiée : `docs/tools/nuget-version-range-checker/` → https://lawatch.github.io/10aday/tools/nuget-version-range-checker/ (générée : `python3 nvr/gen_page.py "2.7 million"`, depuis `nvr/page.tpl.html` + `nvr/real_restore/RESULTS.txt`).
+- `nvr/nvr.js` : portage ligne à ligne de NuGet.Versioning (NuGet/NuGet.Client, commit 7e935f9 du 12/11/2026) : `NuGetVersion.TryParse`, `VersionComparer`, `VersionRange.Parse` (avec versions flottantes), `FloatRange`, `Satisfies`, `IsBetter`/`FindBestMatch`, `ToNormalizedString`, `ToShortString`, `PrettyPrint`.
+- Oracle .NET : `nvr/oracle/` (paquet NuGet.Versioning 8.0.0). `apt-get install dotnet-sdk-8.0`, puis `dotnet build -c Release -o /tmp/claude-0/nu/obin nvr/oracle` et `node nvr/test_nvr.js 1 2 3 4 5 6 7 8` (variable `ORACLE_DLL` pour un autre chemin).
+- Résultat au 2026-11-13 : liste fixe (33 cas) + graines 1 à 8 (160 000 cas) = 2 705 885 vérifications, 0 écart.
+- Vrai `dotnet restore` : `bash nvr/real_restore/run.sh > nvr/real_restore/RESULTS.txt` (SDK 8.0.134, NuGet 6.8.2, flux local de faux paquets « Demo ») ; `node nvr/check_real.js` : 27/27 prédits.
+- Constats : NuGet prend la version la plus **basse** qui convient (`[1.0,2.0)` → 1.0.0) ; `1.0` = « 1.0 ou plus » (NU1603 si 1.0 manque) ; pré-versions ignorées sauf borne pré-version ou `-*` (NU1103 si seules des pré-versions conviennent) ; `1.2.*` sans aucune 1.2.x → 1.3.0 ; `^`, `~`, `>=` refusés.

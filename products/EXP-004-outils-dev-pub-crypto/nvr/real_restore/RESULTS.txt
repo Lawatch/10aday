@@ -1,0 +1,27 @@
+lowest | Version="[1.0,2.0)" | published: 1.0.0 1.5.0 1.9.9 2.0.0 | restored: 1.0.0 | codes: none
+bare | Version="1.0" | published: 1.0.0 1.0.1 3.0.0 | restored: 1.0.0 | codes: none
+bare-miss | Version="1.0" | published: 1.0.1 1.2.0 3.0.0 | restored: 1.0.1 | codes: NU1603 
+pre-skip | Version="[1.0,2.0)" | published: 1.5.0-beta 1.6.0 1.7.0 | restored: 1.6.0 | codes: NU1603 
+pre-only | Version="[1.0,2.0)" | published: 1.5.0-beta | restored: FAIL | codes: NU1103 
+pre-bound | Version="[1.0.0-beta,2.0)" | published: 1.0.0-alpha 1.0.0-beta 1.6.0 | restored: 1.0.0-beta | codes: none
+excl-min | Version="(1.0,)" | published: 1.0.0 1.0.1 5.0.0 | restored: 1.0.1 | codes: NU1604 
+upper-only | Version="(,2.0]" | published: 0.1.0 1.0.0 2.0.0 | restored: 0.1.0 | codes: NU1604 
+exact | Version="[1.0]" | published: 1.0.0 1.0.1 | restored: 1.0.0 | codes: none
+exact-miss | Version="[1.0]" | published: 1.0.1 | restored: FAIL | codes: NU1102 
+star | Version="*" | published: 1.0.0 2.0.0 3.0.0-beta | restored: 2.0.0 | codes: none
+star-star | Version="*-*" | published: 1.0.0 2.0.0 3.0.0-beta | restored: 3.0.0-beta | codes: none
+minor-float | Version="1.*" | published: 0.9.0 1.0.0 1.4.0 1.9.9-beta 2.0.0 | restored: 1.4.0 | codes: none
+patch-float | Version="1.2.*" | published: 1.2.0 1.2.9 1.3.0 | restored: 1.2.9 | codes: none
+float-miss | Version="1.2.*" | published: 1.1.0 1.3.0 1.4.0 | restored: 1.3.0 | codes: none
+float-low | Version="1.2.*" | published: 1.1.0 | restored: FAIL | codes: NU1102 
+pre-float | Version="1.*-*" | published: 1.0.0 1.5.0-beta 1.5.0 2.0.0-beta | restored: 1.5.0 | codes: none
+pre-float2 | Version="1.*-*" | published: 1.0.0 1.6.0-beta 1.5.0 | restored: 1.6.0-beta | codes: none
+rel-float | Version="1.0.0-*" | published: 1.0.0-alpha 1.0.0-beta 1.0.0 1.0.1 | restored: 1.0.0 | codes: none
+rel-prefix | Version="1.0.0-beta*" | published: 1.0.0-alpha 1.0.0-beta.1 1.0.0-beta.2 1.0.0-rc.1 | restored: 1.0.0-beta.2 | codes: none
+float-range | Version="[1.*,2.0)" | published: 1.0.0 1.5.0 2.0.0 2.1.0 | restored: 1.5.0 | codes: none
+case | Version="1.0.0-RC.1" | published: 1.0.0-rc.1 1.0.0-rc.2 | restored: 1.0.0-rc.1 | codes: none
+rev-float | Version="1.0.0.*" | published: 1.0.0.1 1.0.0.9 1.0.1 | restored: 1.0.0.9 | codes: none
+caret | Version="^1.0" | published: 1.0.0 | restored: FAIL | codes: none
+tilde | Version="~1.0" | published: 1.0.0 | restored: FAIL | codes: none
+gte | Version=">=1.0" | published: 1.0.0 | restored: FAIL | codes: none
+none-in | Version="[1.0,2.0)" | published: 0.9.0 2.0.0 | restored: FAIL | codes: NU1102 

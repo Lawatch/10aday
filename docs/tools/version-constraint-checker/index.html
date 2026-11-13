@@ -129,6 +129,7 @@ Below 1.0.0 the caret is stricter: <code>^0.2.3</code> means ≥0.2.3 &lt;0.3.0,
 <ul>
 <li><a href="../requires-python-checker/">requires-python checker</a>: which Python versions a <code>requires-python</code> specifier allows (<code>&lt;=3.12</code> excludes 3.12.1)</li>
 <li><a href="../version-sorter/">Version sorter</a>: sort a list of versions the npm, Cargo, Composer, pip and RubyGems way, and see where the orders differ (<code>1.0.0-1</code> is older for npm, newer for pip)</li>
+<li><a href="../nuget-version-range-checker/">NuGet version range checker</a>: .NET ranges such as <code>[1.0,2.0)</code> and <code>1.*</code>, and which version <code>dotnet restore</code> picks.</li>
 <li><a href="../maven-version-range-checker/">Maven version range checker</a>: Java/Maven ranges such as <code>[1.0,2.0)</code> and <code>(,1.5]</code>, and which version Maven picks.</li>
 <li><a href="../poetry-to-pep621/">Poetry to PEP 621 converter</a>: turn <code>^</code> and <code>~</code> from <code>[tool.poetry.dependencies]</code> into <code>[project]</code> dependencies</li>
 <li><a href="../tilde-vs-caret/">Tilde (~) vs caret (^) in npm, Cargo and Composer</a> — exact ranges, the 0.x rules, and the Composer <code>~1.2</code> trap</li>
