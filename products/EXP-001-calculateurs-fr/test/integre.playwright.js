@@ -1,7 +1,7 @@
 const { chromium } = require('playwright');
 const fs = require('fs'), path = require('path');
 const DOCS = '/home/user/10aday/docs';
-const slugs = ['rupture-conventionnelle-dates','rupture-conventionnelle-indemnite','indemnite-conges-payes-depart','rupture-conventionnelle-impot-csg','chomage-rupture-conventionnelle'];
+const slugs = ['rupture-conventionnelle-dates','rupture-conventionnelle-indemnite','indemnite-conges-payes-depart','rupture-conventionnelle-impot-csg','chomage-rupture-conventionnelle','delais-contestation-rupture'];
 const unesc = s => s.replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').replace(/&#x27;/g,"'").replace(/&amp;/g,'&');
 (async () => {
   const b = await chromium.launch();
@@ -33,6 +33,7 @@ const unesc = s => s.replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g
   const frames = await page.$$('iframe[data-10aday]');
   console.log('iframes', frames.length);
   for (let i = 0; i < frames.length; i++) {
+    await frames[i].scrollIntoViewIfNeeded(); await page.waitForTimeout(600); // iframes en loading=lazy
     const f = await frames[i].contentFrame();
     const info = await f.evaluate(() => {
       const vis = [...document.body.children].filter(e => getComputedStyle(e).display !== 'none').map(e => e.tagName + (e.id ? '#' + e.id : '') + (e.className ? '.' + e.className : ''));

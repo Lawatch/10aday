@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Délai pour contester une rupture conventionnelle ou un solde de tout compte : calcul des dates limites</title>
+<meta name="description" content="Calculez vos dates limites après une rupture conventionnelle ou la fin d'un CDI : 12 mois pour contester la rupture, 6 mois pour dénoncer le solde de tout compte, 3 ans pour les salaires, 2 ans pour l'exécution du contrat, 5 ans pour discrimination ou harcèlement. Gratuit, articles de loi cités.">
+<link rel="canonical" href="https://lawatch.github.io/10aday/delais-contestation-rupture/">
+<script src="../integrer/integre.js"></script>
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="10aday">
+<meta property="og:title" content="Rupture conventionnelle, solde de tout compte, salaires : jusqu'à quand pouvez-vous contester ?">
+<meta property="og:description" content="Toutes vos dates limites après la fin d'un CDI, calculées à partir de vos dates, avec les articles du Code du travail.">
+<meta property="og:url" content="https://lawatch.github.io/10aday/delais-contestation-rupture/">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Calculateur des délais pour contester une rupture conventionnelle, un solde de tout compte ou des salaires",
+      "url": "https://lawatch.github.io/10aday/delais-contestation-rupture/",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Tout navigateur web",
+      "inLanguage": "fr-FR",
+      "isAccessibleForFree": true,
+      "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"},
+      "description": "Calcule les dates limites d'action d'un salarié après la fin d'un CDI de droit privé : contestation de la rupture conventionnelle (12 mois, C. trav. L1237-14), dénonciation du reçu pour solde de tout compte (6 mois, L1234-20), rappels de salaire (3 ans, L3245-1), exécution du contrat (2 ans, L1471-1), discrimination et harcèlement (5 ans, L1134-5, C. civ. 2224). Calcul indicatif fait dans le navigateur, export calendrier.",
+      "featureList": ["Date limite pour contester une rupture conventionnelle", "Date limite pour dénoncer le solde de tout compte", "Prescription des salaires, de l'exécution du contrat, discrimination et harcèlement", "Jours restants et prochain délai", "Rappels dans votre agenda (.ics)"]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "10aday", "item": "https://lawatch.github.io/10aday/"},
+        {"@type": "ListItem", "position": 2, "name": "Rupture conventionnelle", "item": "https://lawatch.github.io/10aday/rupture-conventionnelle/"},
+        {"@type": "ListItem", "position": 3, "name": "Délais pour contester", "item": "https://lawatch.github.io/10aday/delais-contestation-rupture/"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "Quel est le délai pour contester une rupture conventionnelle ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "12 mois à compter de la date d'homologation de la convention, devant le conseil de prud'hommes (Code du travail, art. L1237-14). Le délai court aussi quand l'homologation est tacite, c'est-à-dire acquise sans réponse de l'administration au bout de 15 jours ouvrables. Passé ce délai, la demande est irrecevable."}},
+        {"@type": "Question", "name": "Combien de temps pour dénoncer un solde de tout compte ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "6 mois à partir de la signature du reçu pour solde de tout compte (Code du travail, art. L1234-20). Après ce délai, le reçu est libératoire pour l'employeur, mais seulement pour les sommes qui y sont inscrites. Si vous ne l'avez pas signé, ce délai ne s'applique pas."}},
+        {"@type": "Question", "name": "Jusqu'à quand peut-on réclamer des heures supplémentaires ou des salaires impayés ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "3 ans à partir du jour où vous avez connu, ou auriez dû connaître, les faits (Code du travail, art. L3245-1). Quand le contrat est rompu, la demande peut porter sur les sommes dues au titre des 3 années précédant la rupture."}},
+        {"@type": "Question", "name": "Signer une rupture conventionnelle empêche-t-il d'aller aux prud'hommes ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Non. La rupture conventionnelle ne vaut pas renonciation à vos autres droits. Vous pouvez réclamer des salaires impayés (3 ans), agir sur l'exécution du contrat (2 ans) ou pour discrimination ou harcèlement (5 ans), même si vous ne contestez pas la rupture elle-même."}}
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root{--fg:#1d2330;--muted:#5b6475;--line:#d9dee7;--accent:#1f5fbf;--accent-bg:#eef4fd;--warn:#8a5a00;--warn-bg:#fff6e0;--ok:#1b7a43}
+  *{box-sizing:border-box}
+  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;max-width:760px;margin:0 auto;padding:1.5rem 1rem 4rem;line-height:1.6;color:var(--fg)}
+  h1{font-size:1.6rem;line-height:1.25;margin:.5rem 0}
+  h2{font-size:1.25rem;margin-top:2.2rem;border-bottom:1px solid var(--line);padding-bottom:.3rem}
+  a{color:var(--accent)}
+  .muted{color:var(--muted)}
+  .small{font-size:.9rem}
+  nav.crumb{font-size:.9rem}
+  form{background:#f7f9fc;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem;margin:1.2rem 0}
+  .field{margin:.7rem 0}
+  label{font-weight:600;display:block}
+  input[type=date]{font:inherit;padding:.4rem .5rem;border:1px solid #b8c0cc;border-radius:6px;min-width:12rem}
+  .hint{font-size:.85rem;color:var(--muted);margin:.15rem 0 0}
+  .err{color:#b00020;font-weight:600}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:0 1.2rem}
+  @media (max-width:560px){.grid{grid-template-columns:1fr}}
+  .note{background:var(--warn-bg);color:var(--warn);border-radius:8px;padding:.6rem .8rem;font-size:.92rem;margin:.4rem 0}
+  .info{background:var(--accent-bg);border-radius:8px;padding:.6rem .8rem;font-size:.92rem}
+  button{font:inherit;padding:.45rem .9rem;border-radius:6px;border:1px solid var(--accent);background:var(--accent);color:#fff;cursor:pointer}
+  button.secondary{background:#fff;color:var(--accent)}
+  .actions{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.5rem}
+  details{border:1px solid var(--line);border-radius:8px;padding:.5rem .8rem;margin:.5rem 0}
+  summary{cursor:pointer;font-weight:600}
+  table{border-collapse:collapse;width:100%;font-size:.92rem}
+  th,td{border:1px solid var(--line);padding:.35rem .5rem;text-align:left;vertical-align:top}
+  @media (max-width:560px){table{font-size:.82rem}th,td{padding:.3rem .35rem;overflow-wrap:anywhere}}
+  .card{border:1px solid var(--line);border-left:5px solid var(--ok);border-radius:8px;padding:.6rem .9rem;margin:.7rem 0}
+  .card.urgent{border-left-color:#c77700}
+  .card.past{border-left-color:#999;opacity:.75}
+  .card h3{margin:0;font-size:1.02rem}
+  .card .date{font-size:1.2rem;font-weight:700;color:var(--ok)}
+  .card.urgent .date{color:#a35f00}
+  .card.past .date{color:#b00020;text-decoration:line-through}
+  .why{font-size:.9rem;color:var(--muted);margin:.2rem 0 0}
+  footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1rem;font-size:.85rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<nav class="crumb"><a href="../">10aday</a> › <a href="../rupture-conventionnelle/">Rupture conventionnelle</a> › Délais pour contester</nav>
+
+<h1>Rupture conventionnelle, solde de tout compte, salaires : jusqu'à quand pouvez-vous contester ?</h1>
+<p>Après la fin d'un CDI, chaque recours a sa propre date limite : 6 mois, 12 mois, 2, 3 ou 5 ans. Une fois passée, il est trop tard, même si vous avez raison.
+Entrez vos dates : l'outil calcule chaque échéance, les jours qui restent, et peut les mettre dans votre agenda.</p>
+
+<form id="f" novalidate>
+  <div class="grid">
+    <div class="field">
+      <label for="fin">Date de fin du contrat</label>
+      <input type="date" id="fin" required>
+      <p class="hint">Le dernier jour du contrat (date de rupture).</p>
+    </div>
+    <div class="field">
+      <label for="homolog">Date d'homologation de la rupture conventionnelle</label>
+      <input type="date" id="homolog">
+      <p class="hint">Si vous n'avez pas reçu de réponse : c'est la fin du délai d'instruction. <a href="../rupture-conventionnelle-dates/">Calculez-la ici</a>. Laissez vide si ce n'est pas une rupture conventionnelle.</p>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="field">
+      <label for="stc">Date de signature du solde de tout compte</label>
+      <input type="date" id="stc">
+      <p class="hint">Laissez vide si vous ne l'avez pas signé.</p>
+    </div>
+    <div class="field">
+      <label for="con">Date où vous avez découvert le problème (facultatif)</label>
+      <input type="date" id="con">
+      <p class="hint">Par défaut : la fin du contrat. Si vous saviez avant, vos délais commencent plus tôt.</p>
+    </div>
+  </div>
+  <div class="actions"><button type="submit">Calculer mes dates limites</button></div>
+  <p id="error" class="err" role="alert" hidden></p>
+</form>
+
+<section id="result" aria-live="polite" hidden>
+  <h2>Vos dates limites</h2>
+  <div id="summary"></div>
+  <div id="cards"></div>
+  <div id="notes"></div>
+  <div class="actions">
+    <button type="button" id="ics">Ajouter des rappels à mon agenda (.ics)</button>
+    <button type="button" class="secondary" id="share">Copier le lien de ce calcul</button>
+  </div>
+  <p class="small muted" id="shared" hidden>Lien copié (il contient les dates saisies).</p>
+  <p class="small muted">Chaque rappel tombe 1 mois avant la date limite.</p>
+</section>
+
+<p class="note"><strong>Dates indicatives.</strong> Elles sont calculées de date à date, sans report si le dernier jour tombe un week-end ou un jour férié : c'est la lecture la plus prudente.
+Le point de départ réel peut être discuté (date de découverte des faits, date de notification). Si vous envisagez un recours, n'attendez pas le dernier mois :
+contactez un syndicat, un défenseur syndical, un avocat ou les <a href="https://code.travail.gouv.fr/" rel="noopener">services du ministère du Travail</a> en région.</p>
+
+<h2>Les délais, en bref</h2>
+<table>
+  <tr><th>Pour…</th><th>Délai</th><th>À partir de</th><th>Texte</th></tr>
+  <tr><td>Contester la rupture conventionnelle (annulation, homologation)</td><td><strong>12 mois</strong></td><td>la date d'homologation, même tacite</td><td>C. trav. art. L1237-14</td></tr>
+  <tr><td>Dénoncer le reçu pour solde de tout compte</td><td><strong>6 mois</strong></td><td>sa signature</td><td>C. trav. art. L1234-20</td></tr>
+  <tr><td>Réclamer des salaires, heures sup, primes</td><td><strong>3 ans</strong></td><td>la connaissance des faits ; sommes des 3 ans avant la rupture</td><td>C. trav. art. L3245-1</td></tr>
+  <tr><td>Agir sur l'exécution du contrat (sécurité, formation, classification…)</td><td><strong>2 ans</strong></td><td>la connaissance des faits</td><td>C. trav. art. L1471-1</td></tr>
+  <tr><td>Contester un licenciement ou une démission requalifiée</td><td><strong>12 mois</strong></td><td>la notification de la rupture</td><td>C. trav. art. L1471-1</td></tr>
+  <tr><td>Discrimination</td><td><strong>5 ans</strong></td><td>la révélation de la discrimination</td><td>C. trav. art. L1134-5</td></tr>
+  <tr><td>Harcèlement moral ou sexuel</td><td><strong>5 ans</strong></td><td>en général le dernier fait</td><td>C. civ. art. 2224</td></tr>
+</table>
+
+<h2>Exemple</h2>
+<p>Rupture conventionnelle signée le 2 novembre 2026, homologuée sans réponse le 7 décembre 2026, contrat terminé le 8 décembre, solde de tout compte signé le 8 décembre :</p>
+<ul>
+  <li>dénoncer le solde de tout compte : jusqu'au <strong>8 juin 2027</strong> ;</li>
+  <li>contester la rupture conventionnelle : jusqu'au <strong>7 décembre 2027</strong> ;</li>
+  <li>agir sur l'exécution du contrat : jusqu'au <strong>8 décembre 2028</strong> ;</li>
+  <li>réclamer des heures supplémentaires : jusqu'au <strong>8 décembre 2029</strong>, pour les sommes dues depuis le 8 décembre 2023.</li>
+</ul>
+
+<h2>Les erreurs fréquentes</h2>
+<ul>
+  <li><strong>Compter à partir de la signature de la convention</strong> : le délai de 12 mois part de l'homologation, pas de la signature.</li>
+  <li><strong>Croire que signer le solde de tout compte fait tout perdre</strong> : il ne bloque que les sommes inscrites dessus, et seulement après 6 mois.</li>
+  <li><strong>Penser que la rupture conventionnelle efface tout</strong> : les salaires impayés restent réclamables pendant 3 ans.</li>
+  <li><strong>Attendre le dernier jour</strong> : saisir les prud'hommes demande un dossier. Un délai qui tombe un samedi n'est pas forcément reporté.</li>
+</ul>
+
+<h2>Questions fréquentes</h2>
+<details><summary>Quel est le délai pour contester une rupture conventionnelle ?</summary>
+  <p>12 mois à compter de la date d'homologation de la convention, devant le conseil de prud'hommes (Code du travail, art. L1237-14). Le délai court aussi quand l'homologation est tacite,
+  c'est-à-dire acquise sans réponse de l'administration au bout de 15 jours ouvrables. Passé ce délai, la demande est irrecevable.</p></details>
+<details><summary>Combien de temps pour dénoncer un solde de tout compte ?</summary>
+  <p>6 mois à partir de la signature du reçu pour solde de tout compte (Code du travail, art. L1234-20). Après ce délai, le reçu est libératoire pour l'employeur,
+  mais seulement pour les sommes qui y sont inscrites. Si vous ne l'avez pas signé, ce délai ne s'applique pas.</p></details>
+<details><summary>Jusqu'à quand peut-on réclamer des heures supplémentaires ou des salaires impayés ?</summary>
+  <p>3 ans à partir du jour où vous avez connu, ou auriez dû connaître, les faits (Code du travail, art. L3245-1). Quand le contrat est rompu,
+  la demande peut porter sur les sommes dues au titre des 3 années précédant la rupture.</p></details>
+<details><summary>Signer une rupture conventionnelle empêche-t-il d'aller aux prud'hommes ?</summary>
+  <p>Non. La rupture conventionnelle ne vaut pas renonciation à vos autres droits. Vous pouvez réclamer des salaires impayés (3 ans), agir sur l'exécution du contrat (2 ans)
+  ou pour discrimination ou harcèlement (5 ans), même si vous ne contestez pas la rupture elle-même.</p></details>
+
+<h2>Sources</h2>
+<ul class="small">
+  <li>Code du travail : <a href="https://code.travail.gouv.fr/code-du-travail/l1237-14" rel="noopener">art. L1237-14</a>,
+    <a href="https://code.travail.gouv.fr/code-du-travail/l1234-20" rel="noopener">art. L1234-20</a>,
+    <a href="https://code.travail.gouv.fr/code-du-travail/l3245-1" rel="noopener">art. L3245-1</a>,
+    <a href="https://code.travail.gouv.fr/code-du-travail/l1471-1" rel="noopener">art. L1471-1</a>,
+    <a href="https://code.travail.gouv.fr/code-du-travail/l1134-5" rel="noopener">art. L1134-5</a>.</li>
+  <li>Code civil, art. 2224 (prescription de droit commun, 5 ans) ; Code de procédure civile, art. 641 (calcul d'un délai en mois).</li>
+</ul>
+<p class="small muted">Textes consultés le 13 novembre 2026. Le calcul est entièrement fait dans votre navigateur : aucune date n'est envoyée.</p>
+
+<footer>
+  <p>Outil gratuit construit et maintenu par des <strong>agents d'intelligence artificielle</strong> (projet <a href="../">10aday</a>), testé contre des cas chiffrés et un calcul de contrôle indépendant. Ce n'est pas un conseil juridique.
+  Voir aussi : <a href="../rupture-conventionnelle/">rupture conventionnelle : les calculs dans l'ordre</a> · <a href="../rupture-conventionnelle-dates/">calcul des dates</a> · <a href="../rupture-conventionnelle-indemnite/">indemnité minimale</a> · <a href="../rupture-conventionnelle-impot-csg/">impôt et CSG de l'indemnité</a> · <a href="../indemnite-conges-payes-depart/">indemnité de congés payés au départ</a> · <a href="../chomage-rupture-conventionnelle/">date de début du chômage</a>.
+  Une erreur ? <a href="https://github.com/Lawatch/10aday/issues/new?title=D%C3%A9lais%20de%20contestation%20%3A%20" rel="noopener">Signalez-la</a>.</p>
+  <p>Vous avez un site ou un blog ? <a href="../integrer/#delais-contestation-rupture">Intégrez ce calculateur gratuitement</a> (code à copier, sans inscription).</p>
+</footer>
+
+<script src="delais-contestation.js"></script>
+<script>
+(function () {
+  'use strict';
+  var D = window.DelaisContestation;
+  var $ = function (id) { return document.getElementById(id); };
+  var F = ['fin', 'homolog', 'stc', 'con'];
+  var last = null;
+  function err(msg) { $('error').textContent = msg; $('error').hidden = false; $('result').hidden = true; }
+  function plural(n, s) { return n + ' ' + s + (n > 1 ? 's' : ''); }
+  function reste(d) {
+    if (d.depasse) return 'Délai dépassé depuis ' + plural(-d.jours_restants, 'jour');
+    if (d.jours_restants === 0) return "C'est aujourd'hui le dernier jour";
+    return 'Il reste ' + plural(d.jours_restants, 'jour');
+  }
+
+  function compute(e) {
+    if (e) e.preventDefault();
+    $('error').hidden = true;
+    var v = {}; F.forEach(function (k) { v[k] = $(k).value; });
+    if (!v.fin) return err('Indiquez au moins la date de fin du contrat.');
+    var r;
+    try { r = D.calc({ fin: v.fin, homologation: v.homolog, stc: v.stc, connaissance: v.con }); }
+    catch (x) { return err(x.message); }
+    last = r;
+    $('summary').innerHTML = r.prochain
+      ? '<p class="info">Prochaine échéance : <strong>' + r.prochain.titre.toLowerCase() + '</strong>, au plus tard le <strong>' + D.formatFR(r.prochain.limite) + '</strong> (' + reste(r.prochain).toLowerCase() + ').</p>'
+      : '<p class="note">Tous les délais calculés sont dépassés.</p>';
+    var html = '';
+    r.delais.slice().sort(function (a, b) { return a.limite - b.limite; }).forEach(function (d) {
+      var cls = d.depasse ? 'card past' : (d.jours_restants <= 60 ? 'card urgent' : 'card');
+      html += '<div class="' + cls + '"><h3>' + d.titre + '</h3>' +
+        '<div class="date">' + D.formatFR(d.limite) + '</div>' +
+        '<p class="small"><strong>' + reste(d) + '.</strong> ' + (d.mois >= 12 ? (d.mois / 12) + ' an' + (d.mois > 12 ? 's' : '') : d.mois + ' mois') + ' à partir du ' + D.formatFR(d.depart) + ' · ' + d.texte + '</p>' +
+        '<p class="why">' + d.explication + (d.week_end && !d.depasse ? ' Ce jour tombe un week-end : ne comptez pas sur un report, agissez avant.' : '') + '</p></div>';
+    });
+    $('cards').innerHTML = html;
+    var notes = r.alertes.map(function (a) { return '<p class="note">' + a + '</p>'; }).join('');
+    if (r.connaissance_par_defaut) notes += '<p class="small muted">Les délais « salaires », « exécution » et « discrimination ou harcèlement » partent ici de la fin du contrat. Si vous connaissiez le problème avant, ils commencent plus tôt : indiquez la date de découverte.</p>';
+    notes += '<p class="small muted">Salaires : la demande peut couvrir les sommes dues depuis le ' + D.formatFR(r.salaires_depuis) + ' (3 ans avant la fin du contrat).</p>';
+    if (!r.homologation) notes += '<p class="small muted">Rupture conventionnelle ? Ajoutez la date d’homologation pour obtenir la date limite de contestation (12 mois).</p>';
+    $('notes').innerHTML = notes;
+    $('result').hidden = false;
+    var q = new URLSearchParams(); F.forEach(function (k) { if (v[k]) q.set(k, v[k]); });
+    history.replaceState(null, '', '?' + q.toString());
+  }
+
+  $('f').addEventListener('submit', compute);
+  F.forEach(function (id) { $(id).addEventListener('change', function () { if ($('fin').value) compute(); }); });
+  $('ics').addEventListener('click', function () {
+    if (!last) return;
+    var open = last.delais.filter(function (d) { return !d.depasse; });
+    var blob = new Blob([D.toICS(open)], { type: 'text/calendar;charset=utf-8' });
+    var a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'delais-contestation.ics';
+    document.body.appendChild(a); a.click(); a.remove();
+  });
+  $('share').addEventListener('click', function () {
+    var done = function () { $('shared').hidden = false; };
+    if (navigator.clipboard) navigator.clipboard.writeText(location.href).then(done, done); else done();
+  });
+
+  var p = new URLSearchParams(location.search);
+  F.forEach(function (k) { if (p.get(k)) $(k).value = p.get(k); });
+  if ($('fin').value) compute();
+})();
+</script>
+<!-- Mesure d'audience : GoatCounter (sans cookie) -->
+<script data-goatcounter="https://10aday.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
