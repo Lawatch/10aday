@@ -5,3 +5,8 @@ The nuget package is a Go port of NuGet.Versioning
 (https://github.com/NuGet/NuGet.Client, src/NuGet.Core/NuGet.Versioning),
 Copyright (c) .NET Foundation and Contributors, licensed under the
 Apache License, Version 2.0.
+
+The gradle package is a Go port of Gradle's version parsing and selector
+classes (https://github.com/gradle/gradle, package
+org.gradle.api.internal.artifacts.ivyservice.ivyresolve.strategy),
+Copyright Gradle Inc., licensed under the Apache License, Version 2.0.
