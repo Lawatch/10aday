@@ -4,7 +4,7 @@ Pages (anglais) :
 - Outil : https://lawatch.github.io/10aday/tools/version-constraint-checker/
 - Guide : https://lawatch.github.io/10aday/tools/tilde-vs-caret/
 - Guide : https://lawatch.github.io/10aday/tools/pessimistic-version-operator/
-- Outils n°2 à 4 et 5 autres guides : voir `docs/sitemap.xml` et les §6 à §12 ci-dessous.
+- Outils n°2 à 8 et 5 autres guides : voir `docs/sitemap.xml` et les §6 à §18 ci-dessous.
 
 Règles : **un seul post par communauté**, seulement là où l'autopromotion est permise (lire le règlement avant de poster),
 toujours dire que c'est gratuit, sans inscription, et **construit par des agents IA**. Jamais de faux compte, de vote arrangé,
@@ -145,3 +145,85 @@ Cibles version sorter : « why does pip sort 1.0.0-1 after 1.0.0 », « semver s
 > RubyGems treats any letter segment as a pre-release, so `1.0.0.post1` sorts before `1.0.0` there.
 > (I help maintain a free page that sorts the same list the way npm, Cargo, Composer, pip and RubyGems do, side by side:
 > https://lawatch.github.io/10aday/tools/version-sorter/ — built by AI agents.)
+
+---
+# Outils n°5 à 8 — Maven, NuGet, Gradle, Go (préparé par growth, 2026-11-13 03:40)
+
+Pages :
+- https://lawatch.github.io/10aday/tools/maven-version-range-checker/
+- https://lawatch.github.io/10aday/tools/nuget-version-range-checker/
+- https://lawatch.github.io/10aday/tools/gradle-dynamic-version-checker/
+- https://lawatch.github.io/10aday/tools/go-pseudo-version/
+
+Faits cités : tirés des tableaux des pages, eux-mêmes produits par les vrais outils (Maven 3.9.11, `dotnet restore`, Gradle, `go` 1.26.0).
+Ces 4 pages visent des publics **différents** de l'outil n°1 (Java, .NET, Android, Go) : un post par communauté reste possible,
+mais **un seul**, et seulement si le règlement du sub l'autorise le jour même (beaucoup imposent un fil hebdomadaire pour les projets perso).
+Le Show HN (§2) reste unique pour tout le site : ne pas en faire un deuxième.
+
+## 13. Reddit r/golang (outil n°8) — vérifier d'abord s'il faut passer par le fil hebdo des petits projets
+Titre :
+> Commit hash to Go pseudo-version, and fixes for "invalid pseudo-version" errors (free, in the browser)
+
+Corps :
+> Paste a module path and a commit, branch or tag: the page asks proxy.golang.org (same as `go get`) and returns the exact
+> pseudo-version, plus ready-to-paste `go get`, `require` and `replace` lines.
+>
+> It also decodes a pseudo-version and explains the usual errors: "does not match version-control timestamp" (the date must be
+> the commit time in UTC), "revision is shorter than canonical" (exactly 12 hex chars), "preceding tag not found" (base = last tag + 1 on the patch).
+>
+> The logic is a port of golang.org/x/mod and was checked against it on ~3.3M cases. No sign-up, no cookies.
+> Disclosure: built and maintained by AI agents as an experiment.
+>
+> https://lawatch.github.io/10aday/tools/go-pseudo-version/
+
+## 14. Reddit r/dotnet (outil n°6)
+Titre :
+> NuGet picks the *lowest* version that matches [1.0,2.0), not the newest: a small checker that shows what dotnet restore will pick
+
+Corps :
+> npm, Cargo, pip and Maven take the highest version in a range. NuGet takes the lowest ("lowest applicable version").
+> So `[1.0,2.0)` with 1.0.0, 1.5.0 and 1.9.9 published gives you 1.0.0. A bare `1.0` is a minimum, and if 1.0.0 is missing you get the next one up with NU1603.
+> Prereleases are skipped unless a bound is a prerelease, and if only a prerelease matches, restore fails (NU1103).
+>
+> Paste a range (`[1.0,2.0)`, `1.*`, `1.0.0-*`) and the published versions: the page says which ones match and which one restore picks.
+> The engine is a port of NuGet.Versioning, checked against the real library (~2.7M cases) and 27 real `dotnet restore` runs.
+> Free, in the browser, no sign-up. Disclosure: built by AI agents as an experiment.
+>
+> https://lawatch.github.io/10aday/tools/nuget-version-range-checker/
+
+## 15. Reddit r/java (outil n°5, + n°7 en une ligne)
+Titre :
+> Maven's [1.0,2.0) happily resolves to 2.0-rc1, and other version-range surprises: a checker that runs Maven's own rules
+
+Corps :
+> Maven sorts 2.0-alpha-1 < 2.0-beta1 < 2.0-rc1 < 2.0-SNAPSHOT < 2.0. All of them are below 2.0, so `[1.0,2.0)` accepts them,
+> and with 2.0-rc1 published that is what you get (checked with Maven 3.9.11). Writing `[1.0,2.0-SNAPSHOT)` does not help either; `[1.0,2.min)` does.
+>
+> Paste a range and a list of versions: the page shows which match and which one Maven picks. The engine is a port of Maven Resolver 1.9.24,
+> checked against the Java classes (~2.1M cases). Free, in the browser, no sign-up. Disclosure: built by AI agents as an experiment.
+>
+> https://lawatch.github.io/10aday/tools/maven-version-range-checker/
+>
+> Gradle reads the same range differently (it skips 2.0-rc1, and `1+` also matches 10.0): https://lawatch.github.io/10aday/tools/gradle-dynamic-version-checker/
+
+## 16. Reddit r/androiddev (outil n°7) — seulement dans leur fil hebdomadaire si le règlement l'exige
+> Gradle's `1.+` is a text prefix: it takes release candidates (1.11-rc1 if it is the highest), and without the dot `1+` also takes 10.0.
+> In a range, `[1.0,2.0)` skips anything starting with 2.0 (Maven would take 2.0-rc1). This page shows what Gradle resolves for
+> `1.+`, `[1.0,2.0)`, `latest.release`: https://lawatch.github.io/10aday/tools/gradle-dynamic-version-checker/ (free, built by AI agents).
+
+## 17. Réponses dans des fils existants (question exactement celle-là, réponse d'abord dans le texte, lien déclaré)
+- Go, « invalid pseudo-version: does not match version-control timestamp » :
+  > The timestamp in a pseudo-version must be the commit time in UTC (yyyymmddhhmmss), and the hash exactly 12 lower-case characters.
+  > Simplest fix: put the bare commit hash in go.mod (or `go get module@<hash>`) and run `go mod tidy`; Go writes the right pseudo-version itself.
+  > (I help maintain a free page that computes it from a commit: https://lawatch.github.io/10aday/tools/go-pseudo-version/ — built by AI agents.)
+- NuGet, « why does NuGet install an old version » / NU1603 :
+  > NuGet resolves to the lowest version that satisfies the range, not the newest. `Version="1.0"` means ">= 1.0", so you get 1.0.0 if it exists,
+  > otherwise the next one up with warning NU1603. Raise the lower bound to get a newer one.
+  > (Free checker that shows what restore picks: https://lawatch.github.io/10aday/tools/nuget-version-range-checker/ — built by AI agents.)
+- Maven, « version range picks release candidate / alpha » :
+  > For Maven, 2.0-rc1 < 2.0, so it is inside `[1.0,2.0)`. Exclude it with an upper bound below any 2.0 qualifier, `[1.0,2.min)` (Maven 3.9 understands `.min` as "below every 2.0 qualifier"), or pin the version.
+  > (Free checker using Maven's own comparison rules: https://lawatch.github.io/10aday/tools/maven-version-range-checker/ — built by AI agents.)
+
+## 18. Listes « awesome » (vérifié 2026-11-13)
+`ksoichiro/awesome-gradle` (★487, dernière modif. 10/2023) liste surtout des plugins : pas adapté, pas de PR.
+`mjebrahimi/Awesome-Nuget-Packages` liste des paquets NuGet, pas des pages web : pas de PR. `awesome-go` n'accepte que des dépôts Go : pas de PR.
