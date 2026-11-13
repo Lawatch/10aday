@@ -1,0 +1,7 @@
+verrange
+Copyright 2026 the 10aday project (https://github.com/Lawatch/10aday)
+
+The nuget package is a Go port of NuGet.Versioning
+(https://github.com/NuGet/NuGet.Client, src/NuGet.Core/NuGet.Versioning),
+Copyright (c) .NET Foundation and Contributors, licensed under the
+Apache License, Version 2.0.
