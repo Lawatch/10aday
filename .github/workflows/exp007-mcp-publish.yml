@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['products/EXP-007-serveur-mcp-versions/server.json']
+    paths: ['products/EXP-007-serveur-mcp-versions/server.json', '.github/workflows/exp007-mcp-publish.yml']
 permissions:
   contents: read
   packages: write
