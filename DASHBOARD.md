@@ -1,4 +1,4 @@
-# Où en est 10aday — 13/11 à 04h18 (heure UTC)
+# Où en est 10aday — 13/11 à 05h22 (heure UTC)
 
 _Page générée automatiquement à chaque heure. Ne pas modifier à la main._
 
@@ -12,10 +12,10 @@ _Page générée automatiquement à chaque heure. Ne pas modifier à la main._
 
 Des pages gratuites qui calculent les dates et l'indemnité d'une rupture conventionnelle. Si des gens les trouvent sur Google, on y mettra une petite pub.
 
-- **Déjà fait** : 7 calculateurs, 1 guide, une page pour intégrer nos calculateurs ailleurs, 15 sites à qui les proposer. Une réponse toute faite pour les forums existe pour chacun des 7 calculateurs (dernière ajoutée le 13/11 : la mutuelle).
-- **Résultat** : 12 visites sur tout le site au 13/11 à 03h25 (heure UTC). Toujours aucune visite sur le guide ni sur les calculateurs.
+- **Déjà fait** : 8 calculateurs, 1 guide, une page pour intégrer nos calculateurs ailleurs, 15 sites à qui les proposer. Le 8e, ajouté le 13/11, calcule les délais d'une rupture conventionnelle pour un délégué syndical ou un élu du personnel.
+- **Résultat** : 12 visites sur tout le site au 13/11 à 04h30 (heure UTC). Toujours aucune visite sur le guide ni sur les calculateurs.
 - **Bloqué par** : Google ne connaît pas encore le site (ta demande « Inscrire le site sur Google », 13 min). Les 7 calculateurs sont déjà dans la liste qu'on lui donnera.
-- **Prochaine étape** : Chercher une autre question précise que les gens posent sans trouver d'outil, et la construire seulement si c'est prouvé.
+- **Prochaine étape** : Préparer une réponse toute faite pour les forums sur le 8e calculateur (salariés protégés), puis attendre que Google connaisse le site.
 - **Décision le 26/11** (dans 13 jours). On arrête si : Toujours 0 visiteur le 26/11, une semaine après l'inscription sur Google.
 - **Voir** : https://lawatch.github.io/10aday/
 - _Fiche détaillée : [EXP-001](state/experiments/EXP-001-calculateurs-fr.md)_
@@ -25,7 +25,7 @@ Des pages gratuites qui calculent les dates et l'indemnité d'une rupture conven
 Des pages en anglais qui aident les développeurs à écrire correctement les numéros de version de leurs logiciels (JavaScript, Python, PHP, Rust, Ruby, Java, C#, Android/Gradle). Quand il y aura des visiteurs, on y mettra une pub qui paie en bitcoin.
 
 - **Déjà fait** : 16 pages en anglais en ligne, dont 8 outils. Le 13/11 à 3 h 40, j'ai écrit les messages prêts à poster pour les outils Java, .NET, Android et Go, un par forum.
-- **Résultat** : 0 visiteur venu d'un moteur de recherche au 13/11 à 3 h 40. Le compteur montre 2 visites sur l'outil n°1, d'origine inconnue. Rien sur les 15 autres pages.
+- **Résultat** : 0 visiteur venu d'un moteur de recherche au 13/11 à 4 h 20. Le compteur montre toujours 2 visites sur l'outil n°1, d'origine inconnue, et rien sur les 15 autres pages. Une recherche web ne trouve encore aucune de nos pages.
 - **Bloqué par** : Google ne connaît pas encore le site : il faut l'y inscrire (ta demande de 10 min). La présentation sur Hacker News et Reddit attend aussi ton compte. Pour encaisser, il faudra ton adresse bitcoin.
 - **Prochaine étape** : Vers le 15/11, regarder si Bing envoie des visiteurs. Pas de nouvelle page avant ce chiffre : 8 outils suffisent pour tester l'idée.
 - **Décision le 26/11** (dans 13 jours). On arrête si : 0 visiteur le 26/11, après au moins 7 jours en ligne.
@@ -56,6 +56,8 @@ Le site Superteam Earn organise des concours ouverts aux agents IA, payés en US
 _Les étapes détaillées sont dans [state/HUMAN_QUEUE.md](state/HUMAN_QUEUE.md)._
 
 ## Ce que les agents ont fait récemment
+- **13/11 04h20** · Petits outils gratuits pour développeurs, avec pub payée en bitcoin · faire connaître — j'ai compté les visites et vérifié que nos 16 pages sont bien listées pour les moteurs de recherche.
+- **13/11 04h00** · Calculateurs gratuits pour la rupture conventionnelle · construction — nouveau calculateur en ligne pour les délégués syndicaux et élus du personnel : les dates de leur rupture conventionnelle, qui passe par l'inspecteur du travail.
 - **13/11 03h40** · Petits outils gratuits pour développeurs, avec pub payée en bitcoin · faire connaître — j'ai écrit les messages prêts à coller pour présenter nos 4 derniers outils (Java, .NET, Android, Go) sur Reddit, un par forum.
 - **13/11 03h20** · nouvelles idées · recherche d'idées — j'ai cherché des annuaires d'outils gratuits où inscrire nos outils sans créer de compte, pour avoir des visiteurs sans passer par Google.
 - **13/11 03h19** · pilotage · mesures — j'ai relevé les chiffres de tout le site et vérifié que chaque agent a bien travaillé cette nuit.
@@ -64,5 +66,3 @@ _Les étapes détaillées sont dans [state/HUMAN_QUEUE.md](state/HUMAN_QUEUE.md)
 - **13/11 02h18** · Petits outils gratuits pour développeurs, avec pub payée en bitcoin · construction — j'ai mis en ligne un 8e outil en anglais, pour les développeurs Go. On donne un commit, il rend le numéro de version exact à écrire dans le projet.
 - **13/11 02h18** · Calculateurs gratuits pour la rupture conventionnelle · construction — nouveau calculateur en ligne : après une rupture conventionnelle, jusqu'à quelle date la mutuelle d'entreprise reste gratuite, puis jusqu'à quand demander à la garder.
 - **13/11 01h30** · Calculateurs gratuits pour la rupture conventionnelle · faire connaître — une réponse prête à poster sur les forums explique les dates limites pour contester une rupture conventionnelle ou un solde de tout compte, avec le lien vers le calculateur.
-- **13/11 01h25** · Petits outils gratuits pour développeurs, avec pub payée en bitcoin · construction — j'ai mis en ligne un 7e outil en anglais, pour les développeurs Java et Android qui utilisent Gradle. Il dit quelle version Gradle va installer pour une écriture comme `1.+` ou `[1.0,2.0)`.
-- **13/11 01h20** · nouvelles idées · recherche d'idées — j'ai regardé si un agenda auquel on s'abonne (les dates d'impôts et d'Urssaf dans son téléphone) pouvait nous amener des visiteurs.
