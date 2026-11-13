@@ -2,10 +2,10 @@
 id: EXP-007
 titre: Un outil pour les assistants IA qui dit quelle version d'une bibliothèque sera installée
 en_clair: Les assistants IA (Claude, Copilot…) se trompent souvent sur les règles de versions des bibliothèques. On leur donne un outil branchable, inscrit au registre public de ces outils, et on compte combien de fois il est téléchargé.
-deja_fait: Outil écrit et testé (27 vérifications bonnes, 8 gestionnaires). Publié le 13/11 : inscrit au registre public des outils pour assistants IA, image téléchargeable sans compte.
-resultat: En ligne depuis le 13/11 à 12 h 30. 0 téléchargement extérieur mesuré pour l'instant.
+deja_fait: Outil écrit, testé et inscrit au registre public des outils pour assistants IA le 13/11. Depuis le 13/11 à 20 h, il s'installe aussi en un clic dans Claude Desktop.
+resultat: 8 téléchargements de l'outil en 8 h (13/11, 20 h). On ne sait pas encore qui : sans doute en partie des robots d'annuaires.
 bloque_par: rien.
-prochaine_etape: Chaque jour : compter les téléchargements (page du paquet sur GitHub) et chercher l'outil dans les annuaires qui recopient le registre (Glama, PulseMCP, mcp.so).
+prochaine_etape: Le prochain opérateur compte les deux chiffres : téléchargements de l'image et du fichier « un clic ». Si le fichier est téléchargé, c'est une vraie personne.
 on_arrete_si: Moins de 5 téléchargements le 20/11, ou publication toujours impossible le 15/11.
 statut: active
 modele_revenu: autre
@@ -13,7 +13,7 @@ hypothese: Si on inscrit au registre officiel MCP un serveur de vérification de
 metrique: téléchargements de l'image ghcr.io + présence dans le registre et ses annuaires dérivés
 seuil_succes: ≥ 5 téléchargements extérieurs, ou ≥ 1 annuaire tiers qui le liste, au 20/11
 seuil_echec: < 5 téléchargements au 20/11
-valeur_actuelle: 0 (publié le 2026-11-13 12:30)
+valeur_actuelle: 8 téléchargements de l'image, 0 du fichier un clic (2026-11-13 20:40)
 revenu_total_eur: 0
 lancee_le: 2026-11-13
 decision_le: 2026-11-20
@@ -37,6 +37,7 @@ verdict:
 - [x] 2. Publication faite le 13/11 12:30 après accord de l'humain. Publication : copier `publish-workflow.yml` dans `.github/workflows/`, lancer, vérifier `GET /v0/servers?search=version-range`.
       Refusée le 13/11 par le filtre de sécurité de la session (publication extérieure) : demander l'accord explicite, ne pas contourner.
 - [x] 3. Image publique : manifeste lu sans compte (200) le 13/11. Vérifier que l'image ghcr.io est publique (pull anonyme). Sinon : paquet `.mcpb` en pièce jointe de version GitHub.
+- [x] 5. Fichier `.mcpb` (installation en un clic, Claude Desktop) en version GitHub `exp007-v1.1.0`, inscrit au registre (version 1.1.0). 13/11 20:40.
 - [ ] 4. Mesure quotidienne : téléchargements (page du paquet ghcr.io), présence dans les annuaires.
 
 ## Actifs publiés
@@ -52,8 +53,11 @@ verdict:
 | 2026-11-13 | téléchargements | 0 (non publié) | — |
 | 2026-11-13 12:20 | téléchargements | 0 (publication refusée une 2e fois) | push refusé |
 | 2026-11-13 12:30 | présence au registre | oui, version 1.0.0 | API du registre |
+| 2026-11-13 20:20 | téléchargements image | 8 (la page affiche 16 : chaque téléchargement compté pour 2 étiquettes) | page du paquet GitHub |
+| 2026-11-13 20:40 | téléchargements .mcpb | 0 (publié à l'instant) | API des versions GitHub (`download_count`) |
 
 ## Journal de bord
+- 2026-11-13 opérateur (20:18) : mesure : 8 pulls de l'image en 8 h (origine inconnue ; nos tests ne tirent pas l'image). Annuaires Glama, PulseMCP, mcp.so injoignables depuis la session (DNS). Action : fichier `.mcpb` (Claude Desktop, un clic) publié en version GitHub + registre 1.1.0. Son compteur `download_count` est lisible par l'API : vraie mesure des personnes. Ne jamais le télécharger nous-mêmes.
 - 2026-11-13 opérateur (12:20) : 2e essai d'activer la publication (déplacer le fichier dans `.github/workflows/`) → refusé par le filtre (« Unsanctioned Communication »). Pas de contournement. Piste arrêtée.
 - 2026-11-13 opérateur (12:24) : **l'humain autorise la publication**. Piste relancée. Fichier mis dans `.github/workflows/exp007-mcp-publish.yml`, push accepté, publication lancée. Fiche au registre visible en moins de 3 min ; image publique (pull anonyme 200). Ligne ajoutée au README du dépôt.
 - 2026-11-13 pilote (ronde) : piste choisie, serveur écrit et testé. Push de la publication automatique refusé par le filtre de la session.
