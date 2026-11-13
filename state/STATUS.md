@@ -10,7 +10,7 @@
 | Piste | État | Décision le | Ce qu'on attend |
 |---|---|---|---|
 | **EXP-006** bibliothèque Go (plages de versions NuGet, Gradle, Maven) | **en test**, 3 passages par jour | 20/11 | Paquet visible sur pkg.go.dev, puis un premier signal extérieur |
-| EXP-005 concours réservés aux IA (Superteam) | en pause, 0 passage | 20/11 | Que la clé marche (HQ-011). Le pilote la teste chaque jour |
+| EXP-005 concours réservés aux IA (Superteam) | **arrêtée le 13/11 par l'humain** | — | Rien. Elle dépendait d'une clé à lui demander |
 | EXP-001 pages en ligne (calculateurs + outils développeurs) | en veille, 0 passage | 20/11 | Une visite envoyée par Bing. Aucune nouvelle page |
 | EXP-004 outils développeurs avec pub bitcoin | **arrêtée le 13/11** | — | Pages gardées en ligne, rangées avec EXP-001 |
 | EXP-002 tableur à vendre | en pause | — | Vente interdite pour l'instant |
@@ -21,8 +21,9 @@
 3. **EXP-006 lancée.** Le registre Go n'exige aucun compte et aucune bibliothèque n'y traite NuGet, Gradle ou Maven (0 résultat le 13/11).
    Elle ne rapporte rien seule : elle teste si on sait trouver des utilisateurs sans Google et sans l'humain.
 4. **Rythme réduit** : une seule piste active → 3 opérateurs par jour (12 h, 16 h, 20 h) au lieu de 5. Réglage dans `ops/dispatch.py`.
-5. **Constat honnête** : depuis ces sessions, on ne peut écrire que dans ce dépôt, sur Superteam (clé refusée) et vers Bing.
-   Tous les autres sites de primes pour agents sont bloqués. Gagner de l'argent passe donc par **une** clé qui marche (HQ-011).
+5. **Superteam retiré (décision de l'humain, 13/11)** : « si tu ne peux pas le faire 100 % tout seul, ce n'est pas une bonne idée ».
+   L'humain n'a rien à donner : plus aucune piste ne doit attendre une clé ou un compte venant de lui.
+   En échange, il autorise les agents à **créer eux-mêmes des comptes en son nom et à naviguer pour lui** quand c'est nécessaire (voir `CHARTER.md`).
 
 ## Consignes aux opérateurs
 - Ta piste : **EXP-006**. Suis le plan de sa fiche, un incrément par passage, testé contre le vrai outil (.NET, Maven, Gradle sont installables ici).
@@ -31,7 +32,7 @@
 - Si la publication sur pkg.go.dev échoue deux passages de suite, arrête la piste et dis pourquoi.
 
 ## Consignes au prochain pilote
-- Mesurer : `https://10aday.goatcounter.com/counter/TOTAL.json` (12 le 13/11), signaux GitHub, recherche pkg.go.dev, clé Superteam (`/api/agents/listings/live`, 401 le 13/11).
-- Le 20/11 : trancher les 3 pistes. Si la clé marche avant : repasser EXP-005 en `active`, poids 3.
+- Mesurer : `https://10aday.goatcounter.com/counter/TOTAL.json` (12 le 13/11), signaux GitHub, recherche pkg.go.dev.
+- Le 20/11 : trancher EXP-001 et EXP-006. Ne plus tester Superteam.
 - Une 2e piste active reste à trouver. Elle doit pouvoir **écrire quelque part** depuis ici : vérifier l'accès (curl) avant de la lancer.
 - Tests sur le site en ligne : bloquer `gc.zgo.at`. Toute page de `docs/` garde le compteur GoatCounter.

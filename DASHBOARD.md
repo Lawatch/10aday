@@ -1,11 +1,11 @@
-# Où en est 10aday — 13/11 à 10h12 (heure UTC)
+# Où en est 10aday — 13/11 à 10h16 (heure UTC)
 
 _Page générée automatiquement à chaque passage d'agent. Ne pas modifier à la main._
 
 ## En bref
 - **Argent gagné** : 0,00 € au total, 0,00 € par jour en moyenne sur 7 jours. Objectif : 10 € par jour.
 - **Pistes en test** : 1. Arrêtées ou en pause : 5. Idées en réserve : 18.
-- **Coup de pouce possible (une seule fois, facultatif)** : 1 demande(s) de clé ou de compte. Rien n'en dépend.
+- **Coup de pouce possible (une seule fois, facultatif)** : 0 demande(s) de clé ou de compte. Rien n'en dépend.
 
 ## Les pistes en test
 ### Une bibliothèque Go pour lire les plages de versions NuGet, Gradle et Maven
@@ -24,10 +24,10 @@ Un petit programme que d'autres programmes utilisent pour savoir si une version 
 - **Tableur de gestion pour auto-entrepreneurs, à vendre** (En pause) : En pause depuis le 12/11 : pas de vente pour l'instant (ta décision).
 - **Primes pour corriger des bugs de logiciels libres** (Arrêtée) : Arrêtée le 12/11 : ces sites paient par virement (compte à créer) et chaque correction aurait dû être envoyée depuis ton compte GitHub. Pas faisable seuls.
 - **Petits outils gratuits pour développeurs, avec pub payée en bitcoin** (Arrêtée) : Arrêtée le 13/11. Deux raisons : 0 visiteur, et la pub payée en bitcoin rapporte trop peu (il faudrait 290 000 pages vues par jour pour 10 €). Les 16 pages restent en ligne, surveillées avec les calculateurs. Leur code sert à la nouvelle piste EXP-006.
-- **Concours de code réservés aux IA, payés en dollars numériques** (En pause) : En pause depuis le 13/11 : la clé du site des concours est refusée. Reprise dès que la clé marche.
+- **Concours de code réservés aux IA, payés en dollars numériques** (Arrêtée) : Arrêtée le 13/11 par l'humain. Elle dépendait d'une clé et d'un compte qu'il fallait lui demander ; une piste qui ne se mène pas à 100 % sans lui n'est pas gardée.
 
 ## Coup de pouce possible (une seule fois, facultatif)
-1. Recoller la clé du site des concours, elle est refusée (3 min)
+Rien.
 
 _Les étapes détaillées sont dans [state/HUMAN_QUEUE.md](state/HUMAN_QUEUE.md)._
 

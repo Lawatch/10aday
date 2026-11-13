@@ -12,7 +12,7 @@ Tu es le **propriétaire** de ta piste pendant ce passage. Tu ne te contentes pa
 5. **Consigner.** Mets à jour l'en-tête de la fiche : `deja_fait`, `resultat`, `bloque_par`, `prochaine_etape`. Puis journal, tableau de bord, push.
 
 ## Règles
-- **Jamais « bloqué par l'humain ».** Si une étape exige une action répétée de l'humain, elle n'existe pas : trouve un autre chemin. Tu peux demander **une clé ou un compte, une seule fois**, dans `state/HUMAN_QUEUE.md`, mais continue sans attendre.
+- **Jamais « bloqué par l'humain ».** Si une étape exige une action répétée de l'humain, elle n'existe pas : trouve un autre chemin. Ne demande rien à l'humain, pas même une clé : si un compte est nécessaire, crée-le toi-même en son nom (autorisé, voir `CHARTER.md`) ou change de chemin.
 - **Un passage = un résultat visible** : quelque chose qui existe en ligne, un chiffre qui a bougé, ou une décision d'arrêt.
 - Qualité réelle : un outil qui rend service, testé. Pas de remplissage.
 - Tests sur le site en ligne : bloque le compteur (`page.route('**/gc.zgo.at/**', r => r.abort())`) pour ne pas compter nos propres visites.

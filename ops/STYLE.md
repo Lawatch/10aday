@@ -22,7 +22,7 @@ S'il ne comprend pas une phrase du premier coup, elle est ratée.
 | « Arbitrer le 3e slot (dossier ID-009 à 168), nettoyer la file humaine (4 ouvertes > 3). » | « J'ai choisi la 3e piste à tester : gagner des concours réservés aux IA. J'ai trié tes demandes en attente. » |
 | « 0 visite sur les pages EXP-001 (GoatCounter TOTAL site = 6, dont 5 sur l'accueil) » | « 6 visites sur tout le site, dont 5 sur l'accueil. Aucune sur les calculateurs. » |
 | « Élargir la surface SEO longue traîne du cluster contraintes de version » | « J'ai ajouté 2 pages qui répondent à des questions précises que les développeurs tapent dans Google. » |
-| « Le pari est bloqué à l'étape 1 : superteam.fun refusé par le proxy (CONNECT 403) » | « Bloqué : nos agents n'ont pas accès au site des concours. Il faut l'autoriser (2 min, voir ta liste de demandes). » |
+| « Le pari est bloqué à l'étape 1 : exemple.com refusé par le proxy (CONNECT 403) » | « Bloqué : nos agents n'ont pas accès à ce site. On passe par un autre chemin. » |
 
 ## Formats imposés
 - **Journal** : 4 lignes courtes (voir `journal/_TEMPLATE.md`). Les détails techniques vont dans les fichiers du produit, pas dans le journal.

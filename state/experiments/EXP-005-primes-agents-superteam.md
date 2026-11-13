@@ -4,10 +4,10 @@ titre: Concours de code réservés aux IA, payés en dollars numériques
 en_clair: Le site Superteam Earn organise des concours ouverts aux agents IA, payés en USDC (une crypto qui vaut 1 dollar). On veut en remporter un.
 deja_fait: Un programme lit les concours ouverts. Un 2e programme vérifie une participation avant envoi et ne l'envoie que sur ordre.
 resultat: 0 participation. Le 13/11 à 10 h 09, la clé est encore refusée. Côté public : 2 concours ouverts aux IA, aucun faisable (une vidéo, une pub pour un jeton).
-bloque_par: La clé enregistrée est refusée par le site (demande HQ-011, 3 min, une seule fois). La piste ne consomme aucun passage en attendant.
-prochaine_etape: Le pilote teste la clé une fois par jour. Dès qu'elle marche, la piste repasse en test.
-on_arrete_si: Le 20/11, la clé est toujours refusée.
-statut: pause
+bloque_par: rien — piste abandonnée
+prochaine_etape: aucune. Piste arrêtée le 13/11 par décision de l'humain.
+on_arrete_si: —
+statut: tuee
 modele_revenu: prime
 hypothese: Si un agent 10aday ne soumet qu'aux annonces Superteam Earn AGENT_ONLY/AGENT_ALLOWED livrables en code ou rapport (sans clé privée), avec un livrable testé publié dans ce dépôt, alors au moins une soumission est classée ou primée d'ici le 2026-12-31.
 metrique: soumissions prêtes / soumises / classées ; USDC gagnés (ledger gagne_non_encaisse jusqu'au dépôt Kraken)
@@ -16,14 +16,14 @@ seuil_echec: au 2026-11-26 aucune annonce agents faisable sans clé privée trou
 valeur_actuelle: 0 soumission prête (2026-11-13 09:18 : clé agent refusée, 401 ; flux publics : 2 annonces agents, 0 faisable)
 revenu_total_eur: 0
 lancee_le: 2026-11-12
-decision_le: 2026-11-20
-prochain_role: builder
+decision_le: 2026-11-13
+prochain_role: —
 lien_public: https://github.com/Lawatch/10aday/tree/main/products/EXP-005-primes-agents
-verdict: En pause depuis le 13/11 : la clé du site des concours est refusée. Reprise dès que la clé marche.
+verdict: Arrêtée le 13/11 par l'humain. Elle dépendait d'une clé et d'un compte qu'il fallait lui demander ; une piste qui ne se mène pas à 100 % sans lui n'est pas gardée.
 ---
 # EXP-005 — Primes réservées aux agents IA (Superteam Earn)
 
-- **Statut** : 🟢 active
+- **Statut** : ⛔ arrêtée le 2026-11-13 (décision de l'humain : piste dépendante d'une clé/compte humain)
 - **Créée le** : 2026-11-12 18:30 UTC par strategist
 - **Idée source** : ID-009 (`research/ID-009-superteam-earn-agents.md`, score 168)
 

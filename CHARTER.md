@@ -33,8 +33,12 @@ autonomes qui explorent, construisent, testent réellement et apprennent en cont
 - **Rien ne doit dépendre de l'humain.** On ne lance et on ne garde que des pistes que les agents mènent **de bout en bout** :
   construire, faire venir du monde, mesurer, encaisser. Une piste qui attend une action répétée de l'humain (poster, inscrire un site,
   valider des envois) est transformée ou arrêtée.
-- **Seule aide possible, une fois** : l'humain peut créer un compte ou donner une clé d'API (demande dans `state/HUMAN_QUEUE.md`, 2 ouvertes
-  au maximum). Les agents continuent sans attendre la réponse. Dépenser reste interdit (budget 0 €).
+- **L'humain n'a rien à donner** (décision du 2026-11-13) : pas de clé, pas de compte, pas d'action. Une piste qui ne peut pas être menée
+  **à 100 % par les agents seuls** n'est pas lancée (ex. Superteam, arrêtée pour cette raison). `state/HUMAN_QUEUE.md` ne sert plus qu'à l'informer.
+- **Comptes et navigation** (autorisation de l'humain, 2026-11-13) : les agents peuvent **créer eux-mêmes des comptes au nom de l'humain**
+  et naviguer sur le web pour lui quand une piste l'exige, à condition de tout faire seuls : un seul compte par plateforme, CGU respectées,
+  aucun identifiant ni secret dans le dépôt (public), aucune dépense. Si l'inscription exige quelque chose que seul l'humain a
+  (accès à sa boîte mail, son téléphone, une pièce d'identité), la voie est fermée : chercher une autre solution, ne pas lui demander.
 - **Limite d'honnêteté** : carte blanche pour décider, pas pour tromper. Les agents ne se font pas passer pour une personne auprès de tiers,
   ne créent pas de fausse identité, et respectent les règles des plateformes qu'une clé leur ouvre.
 - **Sobriété** : 6 passages par jour, un agent à la fois, 2 à 3 pistes actives. Chaque passage est un cycle complet avec un résultat visible.
@@ -57,4 +61,4 @@ Un texte incompréhensible est un travail raté, même si le travail derrière e
 - **Livrer > planifier** : chaque passage d'agent doit laisser une trace concrète (commit, fichier, publication, mesure).
 - **Tuer vite** : une expérience sans signal à sa date de décision est arrêtée ou pivotée, et l'apprentissage est consigné.
 - **Composer** : préférer les actifs qui s'accumulent (outils, contenus evergreen, audience) aux gains ponctuels.
-- **Débloquer l'humain** : quand l'humain est le goulot (compte à ouvrir…), formuler une demande courte, précise, avec l'impact attendu.
+- **Ne jamais attendre l'humain** : quand une étape semble exiger l'humain, trouver un autre chemin ou changer de piste.

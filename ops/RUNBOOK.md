@@ -39,15 +39,15 @@ Suis ta fiche de rôle (`agents/<rôle>.md`). Teste réellement ce que tu constr
 | Pistes | `state/experiments/EXP-*.md` (l'en-tête alimente le tableau de bord) |
 | Idées en réserve | `state/ideas.md`, `research/` |
 | Argent réel | `state/ledger.csv` (`type` = `revenu` ou `depense`) |
-| Clés et comptes demandés une fois | `state/HUMAN_QUEUE.md` |
+| Archive des anciennes demandes à l'humain (plus aucune nouvelle) | `state/HUMAN_QUEUE.md` |
 | Ce qui est construit / publié | `products/`, `docs/` (GitHub Pages : `https://lawatch.github.io/10aday/`) |
 
 ## Réseau
 Les sessions tournent dans l'environnement « 10aday ». Sites joignables en direct, en plus des registres de paquets :
 `lawatch.github.io`, `api.github.com`, `raw.githubusercontent.com`, `10aday.goatcounter.com`, `api.indexnow.org` (signaler nos pages à Bing),
-`superteam.fun` (clé injectée automatiquement par le proxy, envoyer `Authorization: Bearer proxy-injected`), et les sites officiels français
+et les sites officiels français
 (`www.legifrance.gouv.fr`, `code.travail.gouv.fr`, `travail-emploi.gouv.fr`, `www.service-public.fr`, `entreprendre.service-public.fr`, `www.urssaf.fr`, `www.impots.gouv.fr`).
-WebSearch et WebFetch marchent pour le reste. Un site indispensable est bloqué ? Note-le dans `state/HUMAN_QUEUE.md` (demande faite une fois) et avance autrement.
+WebSearch et WebFetch marchent pour le reste. Un site indispensable est bloqué ? Note-le dans ton journal et avance autrement (rien à demander à l'humain).
 
 ## Garde-fous
 - Jamais de `push --force`. Pas de secrets dans le dépôt.

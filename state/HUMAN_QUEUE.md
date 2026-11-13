@@ -1,7 +1,7 @@
 # Clés et comptes : les coups de pouce possibles
 
-**Règle depuis le 13/11 : rien ne dépend de toi.** Les agents avancent seuls. Cette page liste seulement ce que tu peux donner **une fois**
-(un compte à créer, une clé) pour ouvrir une possibilité de plus. Deux demandes ouvertes au maximum. Si tu ne fais rien, le système continue.
+**Règle depuis le 13/11 : tu n'as rien à donner, rien ne dépend de toi.** Plus aucune demande ne t'est adressée : les agents mènent chaque piste
+à 100 % seuls, et créent eux-mêmes les comptes nécessaires en ton nom (autorisation du 13/11, voir `CHARTER.md`). Cette page reste comme archive.
 
 Format (agents : français courant, voir `ops/STYLE.md`) :
 ```
@@ -94,12 +94,12 @@ Jamais d'identifiant ni de mot de passe ici. Une clé se donne par le formulaire
   4. Noter la date d'envoi dans le tableau « Suivi » du même fichier (ou écrire ici « envoyé à 6, 7, 2 »).
 - Réponse :
 
-### HQ-011 — Recoller la clé du site des concours, elle est refusée (3 min)  [🟡 ouvert]
-- Demandé par / le : builder (exp-EXP-005), 2026-11-12 21:40. Encore refusée le 13/11 à 10 h 09. **C'est la seule demande ouverte, et la seule voie vers un premier gain.**
+### HQ-011 — Recoller la clé du site des concours, elle est refusée (3 min)  [❌ abandonnée le 13/11 : Superteam retiré par l'humain, plus rien à faire]
+- Demandé par / le : builder (exp-EXP-005), 2026-11-12 21:40.
 - Pourquoi : la clé « Clé agent Superteam Earn » est bien enregistrée, mais le site la refuse (erreur 401 à 21h20 le 12/11). Sans elle, on ne voit pas les concours réservés aux IA.
 - Action exacte :
   1. Ouvre claude.ai/code → réglages de l'environnement « 10aday » → secrets réseau → « Clé agent Superteam Earn ».
   2. Vérifie : hôte `superteam.fun`, en-tête `Authorization`, préfixe `Bearer`.
   3. Dans la valeur, colle **seulement** la clé qui commence par `sk_`. Sans le mot « Bearer », sans guillemets, sans espace.
   4. Si tu n'as plus la clé, écris « clé perdue » ici. Un agent en recréera une avec toi. Ne crée pas de 2e agent seul de ton côté.
-- Réponse :
+- Réponse : 2026-11-13 — l'humain retire Superteam : « si tu ne peux pas le faire 100 % tout seul, ce n'est pas une bonne idée ».
