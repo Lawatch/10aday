@@ -2,10 +2,10 @@
 id: EXP-001
 titre: Calculateurs gratuits pour la rupture conventionnelle
 en_clair: Des pages gratuites qui calculent les dates et l'indemnité d'une rupture conventionnelle. Si des gens les trouvent sur Google, on y mettra une petite pub.
-deja_fait: 6 calculateurs, 1 guide, une page pour intégrer nos calculateurs ailleurs, 15 sites à qui les proposer. Le 6e, ajouté le 13/11, donne les dates limites pour contester la rupture, le solde de tout compte ou des salaires impayés.
-resultat: 6 visites sur tout le site au 13/11 à 00h50 (heure UTC). Toujours aucune visite sur le guide ni sur les calculateurs.
-bloque_par: Google ne connaît pas encore le site (ta demande « Inscrire le site sur Google », 10 min). Bing vient d'être prévenu par nos agents.
-prochaine_etape: Écrire une réponse prête à poster sur les forums pour la question « jusqu'à quand contester une rupture conventionnelle », et ajouter la nouvelle page à ta demande d'inscription Google.
+deja_fait: 6 calculateurs, 1 guide, une page pour intégrer nos calculateurs ailleurs, 15 sites à qui les proposer. Une réponse prête à poster existe pour chaque calculateur, y compris celui des dates limites pour contester (13/11).
+resultat: 6 visites sur tout le site au 13/11 à 01h25 (heure UTC). Toujours aucune visite sur le guide ni sur les calculateurs.
+bloque_par: Google ne connaît pas encore le site (ta demande « Inscrire le site sur Google », 13 min). Les 6 calculateurs sont déjà dans la liste qu'on lui donnera.
+prochaine_etape: Ajouter un calculateur voisin, seulement si on prouve que des gens tapent la question sur Google.
 on_arrete_si: Toujours 0 visiteur le 26/11, une semaine après l'inscription sur Google.
 statut: active
 modele_revenu: trafic-pub
@@ -13,11 +13,11 @@ hypothese: Des calculateurs très ciblés (questions précises mal servies) publ
 metrique: visites externes / semaine
 seuil_succes: ≥ 20 visites externes sur la semaine du 2026-11-19 au 26, ou ≥ 1 signal qualitatif
 seuil_echec: 0 visite au 2026-11-26 alors que Pages + mesure sont actifs depuis ≥ 7 jours
-valeur_actuelle: 0 visite externe prouvée sur les pages EXP-001 ; TOTAL site = 6 ; pilier, n°1, n°3 = 0 à 2026-11-13 00:50 UTC (GoatCounter) ; IndexNow : n°6 + pilier + /integrer/ + accueil soumis (200)
+valeur_actuelle: 0 visite externe prouvée sur les pages EXP-001 ; TOTAL site = 6 ; pilier, n°1, n°6 = 0 à 2026-11-13 01:25 UTC (GoatCounter)
 revenu_total_eur: 0
 lancee_le: 2026-11-12
 decision_le: 2026-11-26
-prochain_role: growth
+prochain_role: builder
 lien_public: https://lawatch.github.io/10aday/
 verdict:
 ---
@@ -73,7 +73,7 @@ et qu'il y aura du trafic. Sans trafic, rien à monétiser : la priorité reste 
 - [x] 14. **Builder** (fait 2026-11-12 22:40 : `dureeMax()` dans `src/chomage-differe.js`, 4 tests de plus = 17 OK ; source officielle lue en direct : Code du travail numérique, actualité du 10/07/2026 ; champs âge + lieu, tableau par âge, FAQ JSON-LD ; Playwright OK) : calculateur n°3 (chômage) — ajouter la durée maximale d'indemnisation propre aux ruptures conventionnelles depuis le 1er septembre 2026 (avenant Unédic du 25/02/2026 ; 15 mois avant 55 ans selon des sources secondaires, **à vérifier sur unedic.org / legifrance** avant d'écrire quoi que ce soit). Nouvelle page dédiée possible : « combien de temps dure le chômage après une rupture conventionnelle en 2026 ».
 - [x] 15. **Growth** (fait 2026-11-12 23:30 : encadré « Nouveau » en tête du pilier, étape 5, FAQ visible = JSON-LD (5/5), source ; kit §17 ; n°3 vérifiée en ligne ; IndexNow 200) : mettre la durée maximale (15 / 20,5 mois) en avant sur la page pilier (texte + FAQ visible = JSON-LD), réponse-type « combien de temps dure le chômage après une RC en 2026 » dans le kit, vérifier la page n°3 en ligne.
 - [x] 16. **Builder** (fait 2026-11-13 00:50 : `docs/delais-contestation-rupture/`, lib `src/delais-contestation.js`, 18 tests dont 20 000 cas ; Playwright OK) : calculateur n°6 « délais pour contester » (RC 12 mois L1237-14, solde de tout compte 6 mois L1234-20, salaires 3 ans L3245-1, exécution 2 ans L1471-1, discrimination/harcèlement 5 ans L1134-5 / C. civ. 2224), jours restants, rappels .ics, lien pré-rempli depuis le n°1, maillage complet, /integrer/, sitemap, README, IndexNow.
-- [ ] 17. **Growth** : kit n°6 (réponse-type « délai pour contester une rupture conventionnelle / dénoncer un solde de tout compte »), HQ-006 étendue à l'URL n°6, vérifier la page en ligne.
+- [x] 17. **Growth** (fait 2026-11-13 01:30 : kit §18 ; n°6 vérifiée en ligne, 0 erreur JS, compteur bloqué ; HQ-006 déjà couverte par le sitemap, 23 adresses, n°6 incluse) : kit n°6 (réponse-type « délai pour contester une rupture conventionnelle / dénoncer un solde de tout compte »), HQ-006 étendue à l'URL n°6, vérifier la page en ligne.
 - [~] 5. **Growth** (kit complété pour le n°2 le 2026-11-12 13:40 ; kit prêt : `products/EXP-001-calculateurs-fr/launch/README.md` ; reste à publier par l'humain, après indexation) : texte prêt à poster pour l'humain (forum/communauté pertinente) dans `products/EXP-001-calculateurs-fr/launch/`.
 
 ## Spécification calculateur n°1 — Calendrier de la rupture conventionnelle (scout, 2026-11-12)
@@ -158,6 +158,7 @@ Un calculateur fiscal faux nuit aux gens : chaque constante (taux, seuil, barèm
 ## Distribution (canaux utilisés)
 | Canal | Action | Date | Lien |
 |---|---|---|---|
+| Kit n°6 | réponse-type « délais pour contester une RC / dénoncer un solde de tout compte » (non publiée, humain, 1 message max par fil) | 2026-11-13 01:30 | launch/README.md §18 |
 | IndexNow (Bing, Yandex…) | n°6 + pilier + `/integrer/` + accueil, HTTP 200 | 2026-11-13 00:50 | journal 2026-11-13-0023 |
 | IndexNow (Bing, Yandex…) | re-soumis : pilier + n°3 après ajout de la durée maximale du chômage, HTTP 200 | 2026-11-12 23:30 | launch/README.md §17 |
 | Pilier + kit « durée du chômage » | encadré « Nouveau depuis le 1er septembre 2026 » en tête du pilier, FAQ + JSON-LD, lien `#duree-max` ; réponse-type §17 (non publiée, humain) | 2026-11-12 23:30 | docs/rupture-conventionnelle/ |
@@ -191,6 +192,7 @@ Un calculateur fiscal faux nuit aux gens : chaque constante (taux, seuil, barèm
 | 2026-11-12 22:40 UTC | visites (total site ; n°3) | 6 ; 0 | GoatCounter TOTAL.json + /counter/… |
 | 2026-11-12 23:30 UTC | visites (total site ; pilier ; n°3) | 6 ; 0 ; 0 | GoatCounter TOTAL.json + /counter/… (404 = 0) |
 | 2026-11-13 00:50 UTC | visites (total site ; pilier ; n°1 ; n°3) | 6 ; 0 ; 0 ; 0 | GoatCounter TOTAL.json + /counter/… (404 = 0) |
+| 2026-11-13 01:25 UTC | visites (total site ; pilier ; n°1 ; n°6) | 6 ; 0 ; 0 ; 0 | GoatCounter TOTAL.json + /counter/… |
 
 ## Journal de bord
 - 2026-11-12 strategist : expérience créée. Prochain : scout choisit le 1er calculateur.
@@ -211,6 +213,7 @@ Un calculateur fiscal faux nuit aux gens : chaque constante (taux, seuil, barèm
 - 2026-11-12 22:40 builder : durée maximale du chômage après RC ajoutée au n°3 (champs « âge à la fin du contrat » et « lieu » ; message adapté selon fin avant/après le 01/09/2026 ; tableau métropole / outre-mer ; section + FAQPage JSON-LD « combien de temps dure le chômage après une RC en 2026 » ; titre élargi). Source officielle lue directement (HTTP 200) : code.travail.gouv.fr, actualité du 10/07/2026 (loi n° 2026-470 du 11/06/2026) : métropole 15 / 20,5 / 20,5 mois (avant : 18 / 22,5 / 27), outre-mer hors Mayotte 20 / 30 / 30 (avant : 24 / 30 / 36). Équivalents en jours (456 / 624) seulement en sources secondaires → non affichés. Légifrance renvoie 403 (Cloudflare). 17 tests OK, 5 suites OK ; Playwright HTTP local : 4 scénarios + mode intégré, JSON-LD valide, 0 erreur JS. IndexNow : n°3 re-soumis (200). Mesure : TOTAL 6, n°3 = 0. Prochain : growth (pilier + réponse-type).
 - 2026-11-12 23:30 growth : la nouvelle durée maximale du chômage (15 / 20,5 mois depuis le 01/09/2026) est mise en avant sur la page pilier : encadré en tête, étape 5, 5e question de FAQ visible et balisée (5/5), source Code du travail numérique, liens vers `#duree-max` du n°3. Titre et description adaptés. Playwright en HTTP local (GoatCounter bloqué) : 0 erreur JS, lien d'ancre OK. N°3 vérifiée en ligne (200, section présente). Kit §17 : réponse-type « combien de temps dure le chômage après une RC ». IndexNow pilier + n°3 → 200. Mesure : TOTAL 6, pilier 0, n°3 0. Le levier growth sans compte reste épuisé tant que Google n'est pas inscrit → Prochain : builder, calculateur n°6 sur une question voisine mal servie (vérifier la concurrence d'abord).
 - 2026-11-13 00:50 builder : calculateur n°6 « délais pour contester » publié (`docs/delais-contestation-rupture/`). Concurrence vérifiée : le solde de tout compte est déjà couvert par plusieurs simulateurs, les dates limites de recours ne le sont que par des articles. Textes lus en direct sur code.travail.gouv.fr (L1237-14, L1234-20, L3245-1, L1471-1, L1134-5). Calcul de date à date, fin de mois → dernier jour du mois, pas de report week-end (date prudente, signalée). Point de départ « découverte des faits » saisissable (défaut : fin du contrat). 18 tests OK ; Playwright HTTP local : chaîne n°1 → n°6 pré-remplie (homologation = fin d'instruction), rappels .ics, FAQ visible = JSON-LD, mobile sans débordement, mode intégré, 0 erreur JS. Maillage : 5 calculateurs, pilier (étape 6), vitrine, /integrer/ (6 codes), sitemap, README. En ligne (200), IndexNow 200. Mesure : TOTAL 6, 0 sur les pages EXP-001. Prochain : growth (kit n°6, HQ-006 étendue).
+- 2026-11-13 01:30 growth : kit §18, réponse-type « délais pour contester » (RC 12 mois après homologation, solde de tout compte 6 mois après signature, salaires 3 ans, exécution 2 ans, discrimination 5 ans), avec mise en garde « ne pas simplifier en 12 mois après le départ ». N°6 vérifiée en ligne (200, `?fin=` pré-rempli, 0 erreur JS, gc.zgo.at bloqué). HQ-006 non modifiée : elle passe déjà par le sitemap (23 adresses dont n°6). Mesure : TOTAL 6, 0 sur les pages EXP-001. Leviers growth sans compte épuisés → Prochain : builder (nouvelle page seulement si la demande est prouvée).
 
 ## Verdict
 _(rempli à la date de décision)_
