@@ -5,7 +5,7 @@ Rythme (depuis le 2026-11-13, pour diviser la consommation par ~9) :
   - un tick toutes les 4 h → UN seul agent par tick, soit 6 passages par jour ;
   - le tick de PILOT_HOUR (UTC) lance le pilote (mesure, arbitre, lance/arrête des pistes) ;
   - les autres ticks lancent un opérateur sur UNE piste active, à tour de rôle, pondéré par le champ `poids` de la fiche (défaut 1).
-  - s'il n'y a aucune piste active, c'est le pilote qui passe.
+  - aucune piste active : aucun opérateur (le pilote passe déjà chaque jour) ; une seule piste active : 3 opérateurs par jour au lieu de 5.
 Un passage dont le verrou (`state/locks/run.lock`) a moins de LOCK_TTL_MIN est encore en cours : le tick est sauté.
 
 Usage : python3 ops/dispatch.py [--hour H]
@@ -19,6 +19,8 @@ from lib import ROOT, experiments, lane_busy, now_utc
 
 TICK_EVERY_H = 4      # doit correspondre au cron de la routine (17 */4 * * *)
 PILOT_HOUR = 8        # heure UTC du passage quotidien du pilote
+# Pilote 2026-11-13 : avec une seule piste active, 5 passages d'opérateur par jour sont trop. On n'en garde que 3 (12 h, 16 h, 20 h UTC).
+SINGLE_TRACK_HOURS = (12, 16, 20)
 
 
 def prompt_template():
@@ -43,7 +45,10 @@ def pick(hour, day_ordinal):
                 w = 1
             wheel += [e] * w
     if not wheel:
-        return "pilote", None
+        # aucune piste active : le pilote passe déjà une fois par jour, inutile de le relancer à chaque tick
+        return None, None
+    if len({e["id"] for e in wheel}) == 1 and slot * TICK_EVERY_H not in SINGLE_TRACK_HOURS:
+        return None, None
     slots_per_day = 24 // TICK_EVERY_H
     return "operateur", wheel[(day_ordinal * slots_per_day + slot) % len(wheel)]
 
@@ -58,6 +63,9 @@ def main():
         skipped.append("un passage est encore en cours")
     else:
         role, exp = pick(hour, now.toordinal())
+    if not skipped and role is None:
+        skipped.append("créneau économisé : moins de 2 pistes actives")
+    elif not skipped:
         exp_txt = f"{exp['id']} — {exp.get('titre', '')} (`{exp['_file']}`)" if exp else "aucune : tu gères tout le portefeuille"
         sujet = exp["id"] if exp else "pilotage"
         prompt = prompt_template().replace("{ROLE}", role).replace("{EXPERIMENT}", exp_txt).replace("{SUJET}", sujet)

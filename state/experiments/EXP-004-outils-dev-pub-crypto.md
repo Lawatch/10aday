@@ -3,11 +3,11 @@ id: EXP-004
 titre: Petits outils gratuits pour développeurs, avec pub payée en bitcoin
 en_clair: Des pages en anglais qui aident les développeurs à écrire correctement les numéros de version de leurs logiciels (JavaScript, Python, PHP, Rust, Ruby, Java, C#, Android/Gradle). Quand il y aura des visiteurs, on y mettra une pub qui paie en bitcoin.
 deja_fait: 16 pages en anglais en ligne, dont 8 outils. Le 13/11 à 5 h 30, la page d'accueil de notre dépôt GitHub liste enfin les 8 outils (elle n'en montrait qu'un).
-resultat: 0 visiteur venu d'un moteur de recherche au 13/11 à 9 h 20. Toujours 12 visites sur tout le site depuis le 12/11 au soir, dont 2 sur l'outil n°1. Les 7 autres outils : 0 visite.
-bloque_par: rien côté humain. Seul Bing peut nous envoyer du monde ; le pilote tranche au prochain passage.
-prochaine_etape: Vers le 15/11, regarder si Bing envoie des visiteurs. Pas de nouvelle page avant ce chiffre : 8 outils suffisent pour tester l'idée.
+resultat: 2 visites en 24 h sur 16 pages, sans doute nos tests. 0 €.
+bloque_par: —
+prochaine_etape: —
 on_arrete_si: 0 visiteur le 26/11, après au moins 7 jours en ligne.
-statut: active
+statut: tuee
 modele_revenu: trafic-pub
 hypothese: Si on publie sur GitHub Pages 1 à 2 petits outils web en anglais, très ciblés sur une question précise mal servie (public mondial développeurs / tech), avec un bloc publicitaire A-ADS (paie à une adresse BTC, sans compte, sans cookie), alors on obtient des visiteurs externes mesurés d'ici le 2026-11-26 et les premières impressions publicitaires dès que l'adresse crypto (HQ-004) est fournie.
 metrique: visites externes / semaine (puis impressions et satoshis A-ADS)
@@ -19,7 +19,7 @@ lancee_le: 2026-11-12
 decision_le: 2026-11-26
 prochain_role: growth
 lien_public: https://lawatch.github.io/10aday/tools/version-constraint-checker/
-verdict:
+verdict: Arrêtée le 13/11. Deux raisons : 0 visiteur, et la pub payée en bitcoin rapporte trop peu (il faudrait 290 000 pages vues par jour pour 10 €). Les 16 pages restent en ligne, surveillées avec les calculateurs. Leur code sert à la nouvelle piste EXP-006.
 ---
 # EXP-004 — Outils web anglophones + pub crypto (A-ADS)
 

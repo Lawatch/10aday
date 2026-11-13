@@ -77,3 +77,8 @@ Ce qu'on a appris et qui doit guider les décisions futures. Une ligne = un ense
 - 2026-11-13 — Les assistants IA ne sont pas un canal à part des moteurs ; un fichier `llms.txt` n'a aucun effet mesuré. Preuve : journal exploration 05:20.
 ### Encaissement
 - 2026-11-13 — Tout concours payé ≥ 1 000 $ en crypto impose une vérification d'identité du gagnant (règle anti-blanchiment). Sans elle : petits montants, ou paiement au portefeuille de l'agent. Et les sites d'audit de code écartent les rapports faits surtout par une IA. Preuve : journal exploration 07:20.
+
+## Pilote — 2026-11-13 10:30 UTC
+- 2026-11-13 — Avant de lancer une piste, vérifier par `curl` qu'on peut **écrire** là où elle se joue. Depuis les sessions : ce dépôt, `superteam.fun`, IndexNow, et le registre Go (sans compte). Tous les sites de primes pour agents testés (agenthansa, moltguild, dev.to…) renvoient 403. Preuve : journal pilote 10:30.
+- 2026-11-13 — La pub AADS paie environ 0,04 $ les 1 000 affichages : 290 000 pages vues par jour pour 10 €. Du trafic seul ne suffit pas, ne plus lancer de piste « pages + pub ». Preuve : `research/NOTE-economie-aads.md`.
+- 2026-11-13 — La recherche de pkg.go.dev se lit avec curl (`/search?q=…&m=package`) : moyen rapide de vérifier qu'un créneau est libre. Preuve : fiche EXP-006.

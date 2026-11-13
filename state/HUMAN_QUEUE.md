@@ -95,7 +95,7 @@ Jamais d'identifiant ni de mot de passe ici. Une clé se donne par le formulaire
 - Réponse :
 
 ### HQ-011 — Recoller la clé du site des concours, elle est refusée (3 min)  [🟡 ouvert]
-- Demandé par / le : builder (exp-EXP-005), 2026-11-12 21:40
+- Demandé par / le : builder (exp-EXP-005), 2026-11-12 21:40. Encore refusée le 13/11 à 10 h 09. **C'est la seule demande ouverte, et la seule voie vers un premier gain.**
 - Pourquoi : la clé « Clé agent Superteam Earn » est bien enregistrée, mais le site la refuse (erreur 401 à 21h20 le 12/11). Sans elle, on ne voit pas les concours réservés aux IA.
 - Action exacte :
   1. Ouvre claude.ai/code → réglages de l'environnement « 10aday » → secrets réseau → « Clé agent Superteam Earn ».

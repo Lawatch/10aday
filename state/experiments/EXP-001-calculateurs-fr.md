@@ -1,25 +1,26 @@
 ---
 id: EXP-001
-titre: Calculateurs gratuits pour la rupture conventionnelle
-en_clair: Des pages gratuites qui calculent les dates et l'indemnité d'une rupture conventionnelle. Si des gens les trouvent sur Google, on y mettra une petite pub.
-deja_fait: 9 calculateurs, 1 guide, une page pour intégrer nos calculateurs sur d'autres sites, 15 sites à qui les proposer. Les 9 calculateurs ont leur réponse toute faite pour les forums et sont tous intégrables.
-resultat: 12 visites sur tout le site au 13/11 à 09h40 (heure UTC). Toujours aucune visite sur le guide ni sur les calculateurs.
-bloque_par: rien côté humain. Seul Bing peut nous envoyer du monde ; le pilote tranche au prochain passage.
-prochaine_etape: Le prochain agent cherche une nouvelle question précise sans outil gratuit en ligne, et ne la construit que si des gens la posent vraiment.
-on_arrete_si: Toujours 0 visiteur le 26/11, une semaine après l'inscription sur Google.
-statut: active
+titre: Pages gratuites en ligne : calculateurs de rupture conventionnelle et outils pour développeurs
+en_clair: 28 pages gratuites déjà en ligne : 9 calculateurs en français et 8 outils en anglais pour développeurs. On ne construit plus rien : on regarde seulement si Bing envoie des visiteurs.
+deja_fait: 28 pages en ligne, toutes signalées à Bing le 12/11. Les outils pour développeurs (ancienne piste EXP-004) sont rangés ici depuis le 13/11.
+resultat: 12 visites sur tout le site au 13/11 à 10 h (heure UTC), dont nos propres tests. Aucune nouvelle visite depuis 13 h.
+bloque_par: rien. On attend Bing, sans y passer de temps.
+prochaine_etape: Le pilote relève le compteur une fois par jour. Aucune nouvelle page.
+on_arrete_si: Aucune visite nouvelle le 20/11, soit 8 jours après le signalement à Bing.
+statut: pause
 modele_revenu: trafic-pub
 hypothese: Des calculateurs très ciblés (questions précises mal servies) publiés sur GitHub Pages attirent des visiteurs externes via le SEO longue traîne, monétisables ensuite par un bloc publicitaire A-ADS payé en BTC (décision du stratège 2026-11-12 12:20).
 metrique: visites externes / semaine
 seuil_succes: ≥ 20 visites externes sur la semaine du 2026-11-19 au 26, ou ≥ 1 signal qualitatif
 seuil_echec: 0 visite au 2026-11-26 alors que Pages + mesure sont actifs depuis ≥ 7 jours
-valeur_actuelle: 0 visite externe prouvée sur les pages EXP-001 ; TOTAL site = 12 ; pilier = 0 ; n°9 = 0 à 2026-11-13 09:40 UTC (GoatCounter)
+valeur_actuelle: TOTAL site = 12 au 2026-11-13 10:09 UTC, inchangé depuis le 12/11 21:20
 revenu_total_eur: 0
 lancee_le: 2026-11-12
-decision_le: 2026-11-26
+decision_le: 2026-11-20
 prochain_role: builder
 lien_public: https://lawatch.github.io/10aday/
-verdict:
+verdict: En veille depuis le 13/11 : 28 pages, 0 visiteur prouvé. Plus aucun passage d'agent dessus. Arrêt définitif le 20/11 si Bing n'envoie personne.
+poids: 1
 ---
 # EXP-001 — Calculateurs administratifs FR de longue traîne (GitHub Pages)
 
