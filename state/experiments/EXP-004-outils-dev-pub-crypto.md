@@ -2,10 +2,10 @@
 id: EXP-004
 titre: Petits outils gratuits pour développeurs, avec pub payée en bitcoin
 en_clair: Des pages en anglais qui aident les développeurs à écrire correctement les numéros de version de leurs logiciels (JavaScript, Python, PHP, Rust, Ruby, Java, C#, Android/Gradle). Quand il y aura des visiteurs, on y mettra une pub qui paie en bitcoin.
-deja_fait: 15 pages en anglais en ligne, dont 7 outils. Le dernier, ajouté le 13/11 à 1 h 25, dit quelle version Gradle (Java, Android) va installer pour `1.+` ou `[1.0,2.0)`. Bing est prévenu de chaque page.
-resultat: 0 visiteur sur ces pages au 13/11 à 1 h 25. Bing a accepté nos demandes, il passera dans les jours qui viennent.
+deja_fait: 16 pages en anglais en ligne, dont 8 outils. Le dernier, ajouté le 13/11 à 2 h 30, sert aux développeurs Go : on donne un commit, il rend le numéro de version exact à écrire, et corrige les erreurs « invalid pseudo-version ». Bing est prévenu de chaque page.
+resultat: 0 visiteur venu d'un moteur de recherche au 13/11 à 2 h 30. Le compteur montre 2 visites sur l'outil n°1, d'origine inconnue. Bing a accepté nos demandes.
 bloque_par: Google ne connaît pas encore le site : il faut l'y inscrire (ta demande de 10 min). La présentation sur Hacker News et Reddit attend aussi ton compte. Pour encaisser, il faudra ton adresse bitcoin.
-prochaine_etape: Vers le 15/11, regarder si Bing envoie des visiteurs. D'ici là, une page de plus seulement si la question est vraiment cherchée.
+prochaine_etape: Vers le 15/11, regarder si Bing envoie des visiteurs. Pas de nouvelle page avant ce chiffre : 8 outils suffisent pour tester l'idée.
 on_arrete_si: 0 visiteur le 26/11, après au moins 7 jours en ligne.
 statut: active
 modele_revenu: trafic-pub
@@ -13,11 +13,11 @@ hypothese: Si on publie sur GitHub Pages 1 à 2 petits outils web en anglais, tr
 metrique: visites externes / semaine (puis impressions et satoshis A-ADS)
 seuil_succes: ≥ 20 visites externes sur la semaine du 2026-11-19 au 26, ou ≥ 1 satoshi gagné si l'adresse est branchée
 seuil_echec: outil en ligne depuis ≥ 7 jours avec mesure active et 0 visite externe au 2026-11-26
-valeur_actuelle: 0 vue sur les pages EXP-004 d'après les compteurs publics GoatCounter au 2026-11-13 01:25 UTC (TOTAL.json = 6) ; 15 pages publiées (7 outils, 8 guides) ; IndexNow HTTP 200 pour toutes ; bloc AADS réservé, inactif
+valeur_actuelle: GoatCounter au 2026-11-13 02:30 UTC : TOTAL = 12 ; outil n°1 = 2 visites (origine inconnue), autres pages EXP-004 = 0 ; 16 pages publiées (8 outils, 8 guides) ; IndexNow HTTP 200 pour toutes ; bloc AADS réservé, inactif
 revenu_total_eur: 0
 lancee_le: 2026-11-12
 decision_le: 2026-11-26
-prochain_role: builder
+prochain_role: growth
 lien_public: https://lawatch.github.io/10aday/tools/version-constraint-checker/
 verdict:
 ---
@@ -65,6 +65,7 @@ verdict:
 - [x] 3h. **Builder** (2026-11-12 23:30) : outil n°5 **Maven version range checker** (`docs/tools/maven-version-range-checker/`) : on tape `[1.0,2.0)` et une liste de versions, il dit lesquelles conviennent et laquelle Maven choisit. Aucun outil web trouvé (seulement des plugins et CLI). Moteur = portage de Maven Resolver 1.9.24 : 2 115 512 vérifications contre les classes Java, 0 écart ; 17 essais avec le vrai `mvn`, tous identiques.
 - [x] 3i. **Builder** (2026-11-13 00:35) : outil n°6 **NuGet version range checker** (`docs/tools/nuget-version-range-checker/`) : on tape `[1.0,2.0)` ou `1.*` et les versions publiées, il dit laquelle `dotnet restore` choisit (la plus basse qui convient, pas la plus récente). Concurrence : seul MyGet SemVer Explorer (ancien, lié à un flux). Moteur = portage de NuGet.Versioning : 2 705 885 vérifications contre la vraie bibliothèque, 0 écart ; 27 essais avec le vrai `dotnet restore`, tous prédits.
 - [x] 3j. **Builder** (2026-11-13 01:25) : outil n°7 **Gradle dynamic version checker** (`docs/tools/gradle-dynamic-version-checker/`) : on tape `1.+`, `[1.0,2.0)` ou `latest.release` et les versions publiées, il dit laquelle Gradle prend. Concurrence : aucun outil web (WebSearch 13/11 : seulement la doc Gradle, un fil discuss.gradle.org « turn 2.+ into 2.4 » et des tâches locales). Moteur = portage de Gradle 8.14.3 : 1 332 043 vérifications contre les vraies classes, 0 écart ; 27 essais avec le vrai `gradle`, tous prédits.
+- [x] 3k. **Builder** (2026-11-13 02:30) : outil n°8 **Go pseudo-version generator and decoder** (`docs/tools/go-pseudo-version/`) : commit, branche ou tag → pseudo-version exacte via `proxy.golang.org` (lignes `go get`, `require`, `replace`) ; décodeur hors ligne (base, heure, hash) ; vérification d'une version collée et correction. Moteur = portage de golang.org/x/mod : 3 281 224 vérifications contre le code Go, 0 écart ; erreurs citées tirées du vrai `go` 1.26.0. Concurrence : aucun outil web trouvé.
 - [ ] 4. Mesure hebdo (visites, impressions, sats) → `state/ledger.csv` uniquement pour ce qui est encaissé.
 
 ## Vérification A-ADS (scout, 2026-11-12)
@@ -161,9 +162,11 @@ WebFetch (ENOTFOUND) : vérification faite par `WebSearch` avec `allowed_domains
 | 2026-11-12 23:25 | visites externes | 0 sur EXP-004 (TOTAL = 6 ; outils n°1 à 4, tilde-vs-caret, prerelease-versions : 0) | GoatCounter |
 | 2026-11-13 00:30 | visites externes | 0 sur EXP-004 (TOTAL = 6 ; outils n°1 à 5, tilde-vs-caret : 0) | GoatCounter |
 | 2026-11-13 01:25 | visites externes | 0 sur EXP-004 (TOTAL = 6 ; outils n°1, 5, 6, 7 et tilde-vs-caret : 404 = 0) | GoatCounter |
+| 2026-11-13 02:30 | visites externes | TOTAL = 12 ; outil n°1 = 2 (origine inconnue) ; outils n°7, n°8 = 0 | GoatCounter |
 | 2026-11-12 18:45 | visites externes | 0 sur EXP-004 (TOTAL = 6 : 5 sur `/10aday/`, 0 sur les 9 pages `/10aday/tools/*`). ⚠ Les compteurs par page exigent le préfixe `/10aday/` (ex. `%2F10aday%2Ftools%2Fpoetry-to-pep621%2F`) ; sans lui, ils renvoient toujours 0 ou 404 | GoatCounter |
 
 ## Journal de bord
+- 2026-11-13 builder (02:30) : **outil n°8 publié**, `tools/go-pseudo-version/`. Nouveau public : Go. Partie 1 : module + commit/branche/tag → la page interroge `proxy.golang.org` (comme `go get`) et donne la pseudo-version, l'heure, le hash complet et les lignes `go get`/`require`/`replace` ; accepte un lien GitHub de commit. Partie 2 : décodeur hors ligne (base, heure UTC, hash, ordre, `+incompatible`, erreurs de forme) et bouton « vérifier » qui renvoie le vrai message de Go puis la bonne version. Tableau des 3 formes calculé par le moteur, tableau de 7 vrais messages de `go` 1.26.0 avec correctifs, FAQ (6). Moteur `gpv/gpv.js` : 3 281 224 vérifications contre golang.org/x/mod, 0 écart. Playwright 1200/390 px : 0 erreur. IndexNow 200. Mesure : outil n°1 = 2 visites, le reste 0. Prochain : growth (ajouter les outils n°5 à 8 au kit de lancement, puis mesure Bing le 15/11).
 - 2026-11-13 builder (01:25) : **outil n°7 publié**, `tools/gradle-dynamic-version-checker/`. Nouveau public : Gradle (Java, Kotlin, Android). On tape la version d'une dépendance (`1.+`, `1+`, `[1.0,2.0)`, `]1.0,2.0[`, `(,2.0]`, `latest.release`, `1.2.3`) et les versions publiées : sens en clair, version prise par Gradle, statut de chaque version. Alertes : bêta/RC choisie, `+` sans point (`1+` prend 10.0), versions écartées parce qu'elles commencent par la borne (2.0-rc1), `^`, `~`, `*`, `>=` lus comme une version fixe. Tableau tiré de 27 vrais `gradle --offline`, antisèche et ordre de tri calculés par le moteur, FAQ (6). Moteur `gvr/gvr.js`, oracle `gvr/oracle/Oracle.java` (vraies classes du Gradle installé) : 1 332 043 vérifications, 0 écart du premier coup. Liens depuis l'index, le sitemap, les outils n°1, 5 et 6. IndexNow 200. Mesure : 0 visite EXP-004.
 - 2026-11-13 builder (00:35) : **outil n°6 publié**, `tools/nuget-version-range-checker/`. Nouveau public : les développeurs C#/.NET. On tape la `Version` d'un `PackageReference` (`[1.0,2.0)`, `1.0`, `1.*`, `1.*-*`, `1.0.0-*`, `(,2.0]`) et les versions publiées : sens en clair, version prise par `dotnet restore`, statut de chaque version (choisie, convient, pré-version ignorée, hors plage), avertissements NU1603/NU1604, échecs NU1102/NU1103, aide pour `^`, `~`, `>=`. Piège mis en avant : NuGet prend la plus basse qui convient. Tableau tiré de 27 vrais `dotnet restore`. Moteur `nvr/nvr.js` (portage de NuGet.Versioning) : 2 705 885 vérifications contre la bibliothèque, 0 écart. Playwright 1200/390 px : 0 erreur. Mesure : 0 visite EXP-004. Prochain : builder.
 - 2026-11-12 builder (23:30) : **outil n°5 publié**, `tools/maven-version-range-checker/`. Nouveau public : les développeurs Java. On tape une écriture Maven (`[1.0,2.0)`, `(,1.5]`, `[1.0]`, `1.0`) et une liste de versions : sens en clair, version choisie par Maven, découpage de chaque version. Alertes : borne haute exclue qui laisse passer les bêtas et RC (avec le correctif `X.min)`), `*` refusé dans un pom, version nue = choix « souple », LATEST/RELEASE dépréciés. Plus un tableau du piège tiré du vrai Maven, une antisèche et un ordre de tri, calculés par le moteur. Moteur `mvr/mvr.js` (portage de Maven Resolver 1.9.24) : 2 115 512 vérifications contre les classes Java, 0 écart. 17 essais `mvn dependency:list` sur un dépôt local, tous reproduits. Concurrence : aucune page web (WebSearch). Playwright 1200/390 px : 0 erreur. IndexNow 200. Mesure : 0 visite EXP-004. Prochain : builder.
