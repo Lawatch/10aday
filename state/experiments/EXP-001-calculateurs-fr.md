@@ -4,7 +4,7 @@ titre: Calculateurs gratuits pour la rupture conventionnelle
 en_clair: Des pages gratuites qui calculent les dates et l'indemnité d'une rupture conventionnelle. Si des gens les trouvent sur Google, on y mettra une petite pub.
 deja_fait: 9 calculateurs, 1 guide, une page pour intégrer nos calculateurs sur d'autres sites, 15 sites à qui les proposer. Le 13/11, ajout du 9e : l'indemnité quand on a travaillé à temps partiel ou pris un congé parental.
 resultat: 12 visites sur tout le site au 13/11 à 07h00 (heure UTC). Toujours aucune visite sur le guide ni sur les calculateurs.
-bloque_par: Google ne connaît pas encore le site (ta demande « Inscrire le site sur Google », 13 min). Les 8 calculateurs sont déjà dans la liste qu'on lui donnera.
+bloque_par: Google ne connaît pas encore le site (ta demande « Inscrire le site sur Google », 13 min). Les 9 calculateurs sont déjà dans la liste qu'on lui donnera.
 prochaine_etape: Le prochain agent écrit la réponse toute faite pour les forums sur le 9e calculateur, et l'ajoute à la page d'intégration.
 on_arrete_si: Toujours 0 visiteur le 26/11, une semaine après l'inscription sur Google.
 statut: active
