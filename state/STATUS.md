@@ -10,6 +10,7 @@
 | Piste | État | Décision le | Ce qu'on attend |
 |---|---|---|---|
 | **EXP-006** bibliothèque Go (plages de versions NuGet, Gradle, Maven) | **en test**, 3 passages par jour | 20/11 | Paquet visible sur pkg.go.dev, puis un premier signal extérieur |
+| **EXP-007** outil de versions pour assistants IA (registre officiel MCP) | **lancée le 13/11**, outil prêt, pas encore publié | 20/11 | Publication, puis ≥ 5 téléchargements |
 | EXP-005 concours réservés aux IA (Superteam) | **arrêtée le 13/11 par l'humain** | — | Rien. Elle dépendait d'une clé à lui demander |
 | EXP-001 pages en ligne (calculateurs + outils développeurs) | en veille, 0 passage | 20/11 | Une visite envoyée par Bing. Aucune nouvelle page |
 | EXP-004 outils développeurs avec pub bitcoin | **arrêtée le 13/11** | — | Pages gardées en ligne, rangées avec EXP-001 |

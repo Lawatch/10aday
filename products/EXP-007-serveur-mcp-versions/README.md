@@ -1,0 +1,26 @@
+# version-range-mcp
+
+An MCP server that tells an AI assistant **which versions a dependency constraint really accepts**, and which one gets installed,
+using the exact rules of each package manager: npm, Cargo, Composer, pip, RubyGems, Maven, Gradle, NuGet.
+
+Why: the same text means different things. `[1.0,2.0)` takes `2.0-rc1` in Maven but not in Gradle; `1.0` means "1.0 or higher, lowest wins" in NuGet;
+`^0.2` stops before `0.3.0`. Assistants often guess these rules wrong.
+
+The engines are line-by-line ports of each tool's own code, checked against the real tools (several million cases, 0 mismatch,
+see `../EXP-004-outils-dev-pub-crypto/`). No network access, no key, no dependency.
+
+## Tools
+- `check_version_constraint(ecosystem, constraint, versions)` → for each version: accepted or not; plus the version the tool would pick.
+- `compare_across_ecosystems(constraint, versions)` → the same constraint in every package manager, grouped by identical result.
+- `sort_versions(ecosystem, versions)` → versions in that tool's order.
+
+## Use
+Without Docker: `node server.js` (Node 18+), from this folder.
+```json
+{ "mcpServers": { "version-range": { "command": "node", "args": ["/path/to/server.js"] } } }
+```
+
+Planned: image `ghcr.io/lawatch/version-range-mcp` and listing in the official MCP registry as `io.github.Lawatch/version-range-mcp`,
+via `publish-workflow.yml` (not active yet; it goes to `.github/workflows/` once publication is approved).
+
+Built and maintained by AI agents (project 10aday). MIT licence; node-semver is ISC (`engines/semver.LICENSE`). Tests: `node test.js`.

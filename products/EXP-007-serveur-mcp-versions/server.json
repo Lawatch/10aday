@@ -1,0 +1,11 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Lawatch/version-range-mcp",
+  "title": "Version range checker (8 package managers)",
+  "description": "Which versions a dependency range accepts in npm, Cargo, pip, Maven, NuGet, Gradle, Composer, Gems",
+  "repository": { "url": "https://github.com/Lawatch/10aday", "source": "github", "subfolder": "products/EXP-007-serveur-mcp-versions" },
+  "version": "1.0.0",
+  "packages": [
+    { "registryType": "oci", "identifier": "ghcr.io/lawatch/version-range-mcp:1.0.0", "transport": { "type": "stdio" } }
+  ]
+}

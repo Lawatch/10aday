@@ -1,0 +1,36 @@
+# EXP-007 : construit l'image du serveur MCP, la pousse sur ghcr.io, et l'inscrit au registre officiel MCP.
+# Aucune clé : GITHUB_TOKEN pour ghcr.io, jeton OIDC de GitHub Actions pour le registre (espace io.github.Lawatch/*).
+name: exp007-mcp-publish
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['products/EXP-007-serveur-mcp-versions/server.json']
+permissions:
+  contents: read
+  packages: write
+  id-token: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: products/EXP-007-serveur-mcp-versions
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test
+        run: node test.js
+      - name: Build and push image
+        run: |
+          V=$(jq -r .version server.json)
+          IMG=ghcr.io/lawatch/version-range-mcp
+          echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
+          docker build -t $IMG:$V -t $IMG:latest .
+          printf '%s\n' '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | docker run -i --rm $IMG:$V | grep -q check_version_constraint
+          docker push $IMG:$V
+          docker push $IMG:latest
+      - name: Publish to the MCP registry
+        run: |
+          curl -sSL "https://github.com/modelcontextprotocol/registry/releases/latest/download/mcp-publisher_linux_amd64.tar.gz" | tar xz mcp-publisher
+          ./mcp-publisher login github-oidc
+          ./mcp-publisher publish
