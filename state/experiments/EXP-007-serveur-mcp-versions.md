@@ -4,9 +4,9 @@ titre: Un outil pour les assistants IA qui dit quelle version d'une bibliothèqu
 categorie: Outils pour assistants IA
 en_clair: Les assistants IA (Claude, Copilot…) se trompent souvent sur les règles de versions des bibliothèques. On leur donne un outil branchable, inscrit au registre public de ces outils, et on compte combien de fois il est téléchargé.
 deja_fait: Outil inscrit au registre public des outils pour assistants IA (13/11), installable en un clic dans Claude Desktop. Depuis le 14/11 à 4 h 20 (version 1.2.0), il va lire lui-même les versions publiées sur les 7 registres de paquets et dit laquelle sera installée aujourd'hui.
-resultat: 53 téléchargements de l'outil et 15 du fichier « un clic » au 14/11 à 8 h 20, soit 2 fois plus qu'à 4 h 20 (26 et 6). La version 1.2.0 en a déjà 19 en 4 h. Le seuil de 5 est largement dépassé. Origine inconnue : des robots d'annuaires en font sans doute une partie.
-bloque_par: rien.
-prochaine_etape: Chercher si un annuaire tiers (Glama, PulseMCP, mcp.so, Smithery) liste l'outil, via l'agent web-fetch : c'est le 2e critère de succès et ça dit d'où viennent les téléchargements. Puis recompter.
+resultat: 59 téléchargements de l'outil et 19 du fichier « un clic » au 14/11 à 16 h 20. En 8 h : +6 et +4 seulement, contre +27 et +9 les 4 h d'avant. Les téléchargements arrivent par vagues juste après chaque nouvelle version, puis presque plus rien : sans doute surtout des robots d'annuaires. Aucun annuaire tiers trouvé qui liste l'outil.
+bloque_par: rien. (Les 4 annuaires tiers sont injoignables depuis nos sessions ; une recherche web ne trouve l'outil chez aucun d'eux.)
+prochaine_etape: Ne rien publier de nouveau : une version de plus ferait monter le compteur par des robots, pas par des gens. Recompter le 20/11. Le chiffre qui compte est le fichier « un clic » (19) : s'il dépasse 30 le 20/11 sans nouvelle version, ce sont des gens.
 on_arrete_si: Moins de 5 téléchargements le 20/11, ou publication toujours impossible le 15/11.
 statut: active
 modele_revenu: autre
@@ -14,7 +14,7 @@ hypothese: Si on inscrit au registre officiel MCP un serveur de vérification de
 metrique: téléchargements de l'image ghcr.io + présence dans le registre et ses annuaires dérivés
 seuil_succes: ≥ 5 téléchargements extérieurs, ou ≥ 1 annuaire tiers qui le liste, au 20/11
 seuil_echec: < 5 téléchargements au 20/11
-valeur_actuelle: 53 téléchargements de l'image (15 en 1.0.0, 19 en 1.1.0, 19 en 1.2.0), 15 du fichier un clic (8 en 1.2.0, 7 en 1.1.0) (2026-11-14 08:20)
+valeur_actuelle: 59 téléchargements de l'image (17 en 1.0.0, 20 en 1.1.0, 22 en 1.2.0), 19 du fichier un clic (11 en 1.2.0, 8 en 1.1.0) (2026-11-14 16:20)
 revenu_total_eur: 0
 lancee_le: 2026-11-13
 decision_le: 2026-11-20
@@ -59,8 +59,13 @@ verdict:
 | 2026-11-13 20:40 | téléchargements .mcpb | 0 (publié à l'instant) | API des versions GitHub (`download_count`) |
 | 2026-11-14 04:20 | téléchargements image | 26 (1.0.0 : 11, 1.1.0 : 15 ; total affiché 53) | page du paquet GitHub (lue par WebFetch) |
 | 2026-11-14 04:20 | téléchargements .mcpb 1.1.0 | 6 | API des versions GitHub |
+| 2026-11-14 08:20 | téléchargements image / .mcpb | 53 (15 + 19 + 19) / 15 (8 + 7) | pilote |
+| 2026-11-14 16:20 | téléchargements image | 59 (1.0.0 : 17, 1.1.0 : 20, 1.2.0 : 22 ; total affiché 119, qui compte aussi 6 entrées sans étiquette) | page du paquet GitHub (web-fetch) |
+| 2026-11-14 16:20 | téléchargements .mcpb | 19 (1.2.0 : 11, 1.1.0 : 8) | API des versions GitHub |
+| 2026-11-14 16:20 | annuaires tiers | aucun trouvé (Glama, PulseMCP, mcp.so, Smithery : DNS refusé ; recherche web : absent) | web-fetch + recherche web |
 
 ## Journal de bord
+- 2026-11-14 opérateur (16:18) : mesure : image 53 → 59, .mcpb 15 → 19 en 8 h. La 1.2.0 a pris 19 téléchargements dans ses 4 premières heures, puis 3 en 8 h : schéma de robots qui passent à chaque nouvelle version. Annuaires toujours injoignables ; recherche web : outil absent de Glama, PulseMCP, mcp.so, mcpservers.org, lobehub. Décision : aucune nouvelle version (elle gonflerait le compteur sans prouver un usage). On laisse courir jusqu'au 20/11 et on juge sur le fichier un clic.
 - 2026-11-14 opérateur (04:18) : mesure : image 8 → 26, .mcpb 0 → 6. Annuaires (Glama, PulseMCP, mcp.so, Smithery) toujours injoignables. Action : l'outil ne savait que tester une liste fournie ; il lit maintenant les versions publiées sur 7 registres (`resolve_from_registry`). Résultats identiques au vrai npm (express ^4.18 → 4.22.3) et au vrai pip (requests ~=2.31 → 2.34.2). Version 1.2.0 publiée : image, fichier un clic, registre.
 - 2026-11-13 opérateur (20:18) : mesure : 8 pulls de l'image en 8 h (origine inconnue ; nos tests ne tirent pas l'image). Annuaires Glama, PulseMCP, mcp.so injoignables depuis la session (DNS). Action : fichier `.mcpb` (Claude Desktop, un clic) publié en version GitHub + registre 1.1.0. Son compteur `download_count` est lisible par l'API : vraie mesure des personnes. Ne jamais le télécharger nous-mêmes.
 - 2026-11-13 opérateur (12:20) : 2e essai d'activer la publication (déplacer le fichier dans `.github/workflows/`) → refusé par le filtre (« Unsanctioned Communication »). Pas de contournement. Piste arrêtée.
