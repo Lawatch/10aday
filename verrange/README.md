@@ -22,6 +22,35 @@ follows Maven Resolver, the code `mvn` actually uses to resolve a range.
 go get github.com/Lawatch/10aday/verrange@latest
 ```
 
+## Command line
+
+No install needed, only Go:
+
+```
+$ go run github.com/Lawatch/10aday/verrange/cmd/verrange@latest nuget "[1.0,2.0)" 1.0.0 1.9.9 2.0.0
+yes  1.0.0
+yes  1.9.9
+no   2.0.0
+pick: 1.0.0
+
+$ go run github.com/Lawatch/10aday/verrange/cmd/verrange@latest maven "[1.0,2.0)" 1.0 1.5 2.0-rc1 2.0
+yes  1.0
+yes  1.5
+yes  2.0-rc1
+no   2.0
+pick: 2.0-rc1
+
+$ curl -s https://repo1.maven.org/maven2/junit/junit/maven-metadata.xml \
+    | sed -n 's:.*<version>\(.*\)</version>.*:\1:p' \
+    | go run github.com/Lawatch/10aday/verrange/cmd/verrange@latest gradle "4.+"
+```
+
+`yes` / `no` per version, then `pick:` = the version the real tool would
+resolve. Versions come from the arguments or from standard input (one per
+line). Exit status: 0 if something matches, 1 if nothing does, 2 for an
+invalid range. Install it with
+`go install github.com/Lawatch/10aday/verrange/cmd/verrange@latest`.
+
 ## NuGet
 
 ```go

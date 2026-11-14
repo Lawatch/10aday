@@ -113,6 +113,7 @@ to sort versions, the <a href="../version-sorter/">Version sorter</a>; for betas
 <p>No. Gradle does not know these signs and reads the whole text as a fixed version, so the build looks for a version literally called &quot;^1.0&quot; and fails. Use 1.+ for &quot;any 1.x&quot; or a range: [1.0,2.0) for &quot;&gt;=1.0 &lt;2.0&quot;, (1.0,) for &quot;&gt;1.0&quot;.</p>
 
 <p>For Go programs: the same rules as a library, <a href="https://pkg.go.dev/github.com/Lawatch/10aday/verrange/gradle">github.com/Lawatch/10aday/verrange/gradle</a> (open source, no dependencies, tested against the Gradle 8.14.3 classes and real Gradle builds).</p>
+<p>From a terminal, with Go installed: <code>go run github.com/Lawatch/10aday/verrange/cmd/verrange@latest gradle "1.+" 1.0 1.9 2.0</code> prints yes or no for each version, then the one the tool would pick (<a href="https://pkg.go.dev/github.com/Lawatch/10aday/verrange/cmd/verrange">command docs</a>).</p>
 
 <h2>Sources</h2>
 <ul>

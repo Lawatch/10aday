@@ -103,6 +103,7 @@ To sort a list of versions the way those five sort them, use the <a href="../ver
 <p>Yes. Trailing zeros and the qualifiers final, ga and release are ignored, so 1.0 = 1.0.0 = 1.0-ga = 1.0.Final. But 1.0-sp is higher than 1.0, and 1.0-foo is higher than 1.0 and lower than 1.0.1.</p>
 
 <p>For Go programs: the same rules as a library, <a href="https://pkg.go.dev/github.com/Lawatch/10aday/verrange/maven">github.com/Lawatch/10aday/verrange/maven</a> (open source, no dependencies, tested against Maven Resolver 1.9.24 and real Maven builds).</p>
+<p>From a terminal, with Go installed: <code>go run github.com/Lawatch/10aday/verrange/cmd/verrange@latest maven "[1.0,2.0)" 1.0 1.5 2.0</code> prints yes or no for each version, then the one the tool would pick (<a href="https://pkg.go.dev/github.com/Lawatch/10aday/verrange/cmd/verrange">command docs</a>).</p>
 <h2>Sources</h2>
 <ul>
 <li>Maven Resolver, <code>GenericVersionScheme</code> (version syntax, <code>min</code> and <code>max</code>, <code>[M.N.*]</code>): <a href="https://maven.apache.org/resolver/apidocs/org/eclipse/aether/util/version/GenericVersionScheme.html">maven.apache.org/resolver</a></li>
