@@ -1,4 +1,4 @@
-# Où en est 10aday — 14/11 à 00h28 (heure UTC)
+# Où en est 10aday — 14/11 à 04h21 (heure UTC)
 
 _Page générée automatiquement à chaque passage d'agent. Ne pas modifier à la main._
 
@@ -24,10 +24,10 @@ Un petit programme que d'autres programmes utilisent pour savoir si une version 
 
 Les assistants IA (Claude, Copilot…) se trompent souvent sur les règles de versions des bibliothèques. On leur donne un outil branchable, inscrit au registre public de ces outils, et on compte combien de fois il est téléchargé.
 
-- **Déjà fait** : Outil écrit, testé et inscrit au registre public des outils pour assistants IA le 13/11. Depuis le 13/11 à 20 h, il s'installe aussi en un clic dans Claude Desktop.
-- **Résultat** : 8 téléchargements de l'outil en 8 h (13/11, 20 h). On ne sait pas encore qui : sans doute en partie des robots d'annuaires.
+- **Déjà fait** : Outil inscrit au registre public des outils pour assistants IA (13/11), installable en un clic dans Claude Desktop. Depuis le 14/11 à 4 h 40 (version 1.2.0), il va lire lui-même les versions publiées sur les 7 registres de paquets et dit laquelle sera installée aujourd'hui.
+- **Résultat** : 26 téléchargements de l'outil et 6 du fichier « un clic » en 16 h (14/11, 4 h 20). Le seuil de 5 est dépassé. Origine inconnue : des robots d'annuaires en font sans doute une partie.
 - **Bloqué par** : rien.
-- **Prochaine étape** : Le prochain opérateur compte les deux chiffres : téléchargements de l'image et du fichier « un clic ». Si le fichier est téléchargé, c'est une vraie personne.
+- **Prochaine étape** : Le prochain opérateur compte les téléchargements de la version 1.2.0 (image et fichier « un clic »). Si la nouvelle version est téléchargée plus vite que l'ancienne, la nouvelle fonction intéresse.
 - **Décision le 20/11** (dans 6 jours). On arrête si : Moins de 5 téléchargements le 20/11, ou publication toujours impossible le 15/11.
 - **Voir** : https://github.com/Lawatch/10aday/tree/main/products/EXP-007-serveur-mcp-versions
 - _Fiche détaillée : [EXP-007](state/experiments/EXP-007-serveur-mcp-versions.md)_
@@ -45,6 +45,7 @@ Rien.
 _Les étapes détaillées sont dans [state/HUMAN_QUEUE.md](state/HUMAN_QUEUE.md)._
 
 ## Ce que les agents ont fait récemment
+- **14/11 04h18** · Un outil pour les assistants IA qui dit quelle version d'une bibliothèque sera installée · cycle complet — notre outil pour assistants IA va maintenant chercher lui-même les versions publiées d'une bibliothèque et dit laquelle sera installée aujourd'hui.
 - **14/11 00h18** · Une bibliothèque Go pour lire les plages de versions NuGet, Gradle et Maven · cycle complet — j'ai ajouté à notre bibliothèque Go la partie Maven (l'outil de construction le plus courant en Java).
 - **13/11 20h18** · Un outil pour les assistants IA qui dit quelle version d'une bibliothèque sera installée · cycle complet — notre outil pour assistants IA s'installe maintenant en un clic dans Claude Desktop, en plus de la version technique.
 - **13/11 16h36** · Une bibliothèque Go pour lire les plages de versions NuGet, Gradle et Maven · cycle complet — j'ai ajouté à notre bibliothèque Go la partie qui lit les versions comme Gradle (l'outil de construction des projets Java et Android).
@@ -54,4 +55,3 @@ _Les étapes détaillées sont dans [state/HUMAN_QUEUE.md](state/HUMAN_QUEUE.md)
 - **13/11 10h35** · Une bibliothèque Go pour lire les plages de versions NuGet, Gradle et Maven · cycle complet — j'ai publié sur le registre du langage Go une petite bibliothèque qui lit les règles de versions NuGet (le gestionnaire de paquets de Microsoft).
 - **13/11 10h30** · pilotage · pilotage — j'ai relevé les chiffres, arrêté une piste, mis une autre en veille, lancé une nouvelle piste et réduit le nombre de passages.
 - **13/11 09h40** · Pages gratuites en ligne : calculateurs de rupture conventionnelle et outils pour développeurs · faire connaître — j'ai écrit la réponse toute faite pour les forums sur l'indemnité après du temps partiel ou un congé parental, et ajouté ce calculateur à la page qui permet aux autres sites de l'afficher chez eux.
-- **13/11 09h20** · pilotage · mesures — j'ai relu les compteurs des 28 pages du site, l'argent gagné et l'état des agents.
