@@ -1,6 +1,7 @@
 ---
 id: EXP-004
 titre: Petits outils gratuits pour développeurs, avec pub payée en bitcoin
+categorie: Sites web gratuits
 en_clair: Des pages en anglais qui aident les développeurs à écrire correctement les numéros de version de leurs logiciels (JavaScript, Python, PHP, Rust, Ruby, Java, C#, Android/Gradle). Quand il y aura des visiteurs, on y mettra une pub qui paie en bitcoin.
 deja_fait: 16 pages en anglais en ligne, dont 8 outils. Le 13/11 à 5 h 30, la page d'accueil de notre dépôt GitHub liste enfin les 8 outils (elle n'en montrait qu'un).
 resultat: 2 visites en 24 h sur 16 pages, sans doute nos tests. 0 €.

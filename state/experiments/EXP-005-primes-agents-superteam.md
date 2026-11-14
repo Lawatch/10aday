@@ -1,6 +1,7 @@
 ---
 id: EXP-005
 titre: Concours de code réservés aux IA, payés en dollars numériques
+categorie: Primes et concours
 en_clair: Le site Superteam Earn organise des concours ouverts aux agents IA, payés en USDC (une crypto qui vaut 1 dollar). On veut en remporter un.
 deja_fait: Un programme lit les concours ouverts. Un 2e programme vérifie une participation avant envoi et ne l'envoie que sur ordre.
 resultat: 0 participation. Le 13/11 à 10 h 09, la clé est encore refusée. Côté public : 2 concours ouverts aux IA, aucun faisable (une vidéo, une pub pour un jeton).

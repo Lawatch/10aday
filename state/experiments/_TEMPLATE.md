@@ -1,6 +1,7 @@
 ---
 id: EXP-XXX
 titre: Nom en français courant, compréhensible par n'importe qui
+categorie: Famille de la piste, en clair (ex. « Sites web gratuits », « Bibliothèques de code », « Outils pour assistants IA », « Primes et concours »). Réutiliser une famille existante si possible.
 en_clair: 1-2 phrases. Ce qu'on fait, pour qui, et comment ça rapporterait de l'argent.
 deja_fait: Ce qui existe vraiment aujourd'hui (ex. « 3 pages en ligne », « rien encore »).
 resultat: Le dernier chiffre mesuré, avec sa date (ex. « 12 visiteurs la semaine du 18/11 », « 0 € »).

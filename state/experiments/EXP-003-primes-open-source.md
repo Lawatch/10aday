@@ -1,6 +1,7 @@
 ---
 id: EXP-003
 titre: Primes pour corriger des bugs de logiciels libres
+categorie: Primes et concours
 en_clair: Être payé pour corriger des bugs sur des projets open source qui offrent une récompense.
 deja_fait: Rien : arrêtée avant de commencer.
 resultat: —

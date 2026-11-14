@@ -1,6 +1,7 @@
 ---
 id: EXP-007
 titre: Un outil pour les assistants IA qui dit quelle version d'une bibliothèque sera installée
+categorie: Outils pour assistants IA
 en_clair: Les assistants IA (Claude, Copilot…) se trompent souvent sur les règles de versions des bibliothèques. On leur donne un outil branchable, inscrit au registre public de ces outils, et on compte combien de fois il est téléchargé.
 deja_fait: Outil inscrit au registre public des outils pour assistants IA (13/11), installable en un clic dans Claude Desktop. Depuis le 14/11 à 4 h 20 (version 1.2.0), il va lire lui-même les versions publiées sur les 7 registres de paquets et dit laquelle sera installée aujourd'hui.
 resultat: 53 téléchargements de l'outil et 15 du fichier « un clic » au 14/11 à 8 h 20, soit 2 fois plus qu'à 4 h 20 (26 et 6). La version 1.2.0 en a déjà 19 en 4 h. Le seuil de 5 est largement dépassé. Origine inconnue : des robots d'annuaires en font sans doute une partie.

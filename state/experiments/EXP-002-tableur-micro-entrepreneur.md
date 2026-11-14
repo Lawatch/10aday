@@ -1,6 +1,7 @@
 ---
 id: EXP-002
 titre: Tableur de gestion pour auto-entrepreneurs, à vendre
+categorie: Produits à vendre
 en_clair: Un tableur pour suivre son chiffre d'affaires et ses cotisations, vendu quelques euros.
 deja_fait: Rien : mise en pause avant de commencer.
 resultat: —

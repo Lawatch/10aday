@@ -1,6 +1,7 @@
 ---
 id: EXP-006
 titre: Une bibliothèque Go pour lire les plages de versions NuGet, Gradle et Maven
+categorie: Bibliothèques de code
 en_clair: Un petit programme que d'autres programmes utilisent pour savoir si une version de logiciel est acceptée par une règle (« entre 1.0 et 2.0 »). Il est diffusé par le registre du langage Go, qui n'exige aucun compte. But : nos premiers utilisateurs venus sans Google, et des liens vers nos pages.
 deja_fait: Les trois parties sont en ligne sur le registre Go : NuGet et Gradle le 13/11, Maven le 14/11. Chacune donne les mêmes réponses que le vrai outil, sur 2,7 à 8,5 millions de vérifications.
 resultat: Le module sort 1er dans la recherche du registre Go sur ses 3 sujets. Au 14/11 à 8 h 20 : 0 projet qui l'utilise, 0 étoile, 17 visites sur le site.

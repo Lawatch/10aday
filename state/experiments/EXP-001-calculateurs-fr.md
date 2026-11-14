@@ -1,6 +1,7 @@
 ---
 id: EXP-001
 titre: Pages gratuites en ligne : calculateurs de rupture conventionnelle et outils pour développeurs
+categorie: Sites web gratuits
 en_clair: 28 pages gratuites déjà en ligne : 9 calculateurs en français et 8 outils en anglais pour développeurs. On ne construit plus rien : on regarde seulement si Bing envoie des visiteurs.
 deja_fait: 28 pages en ligne, toutes signalées à Bing le 12/11. Les outils pour développeurs (ancienne piste EXP-004) sont rangés ici depuis le 13/11.
 resultat: 17 visites sur tout le site au 14/11 à 8 h 20 (heure UTC), dont nos propres tests. Bing n’a encore envoyé personne de façon prouvée.
