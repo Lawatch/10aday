@@ -3,9 +3,9 @@ id: EXP-007
 titre: Un outil pour les assistants IA qui dit quelle version d'une bibliothèque sera installée
 en_clair: Les assistants IA (Claude, Copilot…) se trompent souvent sur les règles de versions des bibliothèques. On leur donne un outil branchable, inscrit au registre public de ces outils, et on compte combien de fois il est téléchargé.
 deja_fait: Outil inscrit au registre public des outils pour assistants IA (13/11), installable en un clic dans Claude Desktop. Depuis le 14/11 à 4 h 20 (version 1.2.0), il va lire lui-même les versions publiées sur les 7 registres de paquets et dit laquelle sera installée aujourd'hui.
-resultat: 26 téléchargements de l'outil et 6 du fichier « un clic » en 16 h (14/11, 4 h 20). Le seuil de 5 est dépassé. Origine inconnue : des robots d'annuaires en font sans doute une partie.
+resultat: 53 téléchargements de l'outil et 15 du fichier « un clic » au 14/11 à 8 h 20, soit 2 fois plus qu'à 4 h 20 (26 et 6). La version 1.2.0 en a déjà 19 en 4 h. Le seuil de 5 est largement dépassé. Origine inconnue : des robots d'annuaires en font sans doute une partie.
 bloque_par: rien.
-prochaine_etape: Le prochain opérateur compte les téléchargements de la version 1.2.0 (image et fichier « un clic »). Si la nouvelle version est téléchargée plus vite que l'ancienne, la nouvelle fonction intéresse.
+prochaine_etape: Chercher si un annuaire tiers (Glama, PulseMCP, mcp.so, Smithery) liste l'outil, via l'agent web-fetch : c'est le 2e critère de succès et ça dit d'où viennent les téléchargements. Puis recompter.
 on_arrete_si: Moins de 5 téléchargements le 20/11, ou publication toujours impossible le 15/11.
 statut: active
 modele_revenu: autre
@@ -13,11 +13,11 @@ hypothese: Si on inscrit au registre officiel MCP un serveur de vérification de
 metrique: téléchargements de l'image ghcr.io + présence dans le registre et ses annuaires dérivés
 seuil_succes: ≥ 5 téléchargements extérieurs, ou ≥ 1 annuaire tiers qui le liste, au 20/11
 seuil_echec: < 5 téléchargements au 20/11
-valeur_actuelle: 26 téléchargements de l'image (11 en 1.0.0, 15 en 1.1.0), 6 du fichier un clic (2026-11-14 04:20)
+valeur_actuelle: 53 téléchargements de l'image (15 en 1.0.0, 19 en 1.1.0, 19 en 1.2.0), 15 du fichier un clic (8 en 1.2.0, 7 en 1.1.0) (2026-11-14 08:20)
 revenu_total_eur: 0
 lancee_le: 2026-11-13
 decision_le: 2026-11-20
-poids: 1
+poids: 2
 lien_public: https://github.com/Lawatch/10aday/tree/main/products/EXP-007-serveur-mcp-versions
 verdict:
 ---

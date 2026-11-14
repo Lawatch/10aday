@@ -3,7 +3,7 @@ id: EXP-006
 titre: Une bibliothèque Go pour lire les plages de versions NuGet, Gradle et Maven
 en_clair: Un petit programme que d'autres programmes utilisent pour savoir si une version de logiciel est acceptée par une règle (« entre 1.0 et 2.0 »). Il est diffusé par le registre du langage Go, qui n'exige aucun compte. But : nos premiers utilisateurs venus sans Google, et des liens vers nos pages.
 deja_fait: Les trois parties sont en ligne sur le registre Go : NuGet et Gradle le 13/11, Maven le 14/11. Chacune donne les mêmes réponses que le vrai outil, sur 2,7 à 8,5 millions de vérifications.
-resultat: Le 14/11 à 0 h 28, le module sort 1er dans la recherche du registre Go pour « nuget version », « gradle dynamic version » et « maven range ». 0 utilisateur extérieur, 0 étoile, 16 visites sur le site.
+resultat: Le module sort 1er dans la recherche du registre Go sur ses 3 sujets. Au 14/11 à 8 h 20 : 0 projet qui l'utilise, 0 étoile, 17 visites sur le site.
 bloque_par: rien.
 prochaine_etape: Ajouter une petite commande à lancer en une ligne, puis compter les utilisateurs.
 on_arrete_si: Le 20/11, le paquet n'apparaît pas dans la recherche de pkg.go.dev, ou aucun signal extérieur (aucun projet qui l'utilise, 0 étoile, 0 visite venue du registre).
@@ -13,7 +13,7 @@ hypothese: Si on publie sur le registre Go (sans compte) un module qui lit les p
 metrique: présence dans la recherche pkg.go.dev (oui/non) ; « Imported by » ; étoiles / issues du dépôt ; visites GoatCounter des pages outils
 seuil_succes: paquet listé dans la recherche pkg.go.dev ET ≥ 1 signal extérieur au 2026-11-20
 seuil_echec: paquet non listé au 2026-11-17, ou 0 signal extérieur au 2026-11-20
-valeur_actuelle: recherche pkg.go.dev oui (1er sur « nuget version », « gradle dynamic version », « maven range ») ; Imported by 0 ; 0 étoile ; site 16 visites (2026-11-14 00:28)
+valeur_actuelle: recherche pkg.go.dev oui (1er sur « nuget version », « gradle dynamic version », « maven range ») ; Imported by 0 sur les 3 paquets ; 0 étoile ; site 17 visites (2026-11-14 08:20)
 revenu_total_eur: 0
 lancee_le: 2026-11-13
 decision_le: 2026-11-20

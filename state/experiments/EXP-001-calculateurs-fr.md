@@ -3,7 +3,7 @@ id: EXP-001
 titre: Pages gratuites en ligne : calculateurs de rupture conventionnelle et outils pour développeurs
 en_clair: 28 pages gratuites déjà en ligne : 9 calculateurs en français et 8 outils en anglais pour développeurs. On ne construit plus rien : on regarde seulement si Bing envoie des visiteurs.
 deja_fait: 28 pages en ligne, toutes signalées à Bing le 12/11. Les outils pour développeurs (ancienne piste EXP-004) sont rangés ici depuis le 13/11.
-resultat: 12 visites sur tout le site au 13/11 à 10 h (heure UTC), dont nos propres tests. Aucune nouvelle visite depuis 13 h.
+resultat: 17 visites sur tout le site au 14/11 à 8 h 20 (heure UTC), dont nos propres tests. Bing n’a encore envoyé personne de façon prouvée.
 bloque_par: rien. On attend Bing, sans y passer de temps.
 prochaine_etape: Le pilote relève le compteur une fois par jour. Aucune nouvelle page.
 on_arrete_si: Aucune visite nouvelle le 20/11, soit 8 jours après le signalement à Bing.
@@ -13,7 +13,7 @@ hypothese: Des calculateurs très ciblés (questions précises mal servies) publ
 metrique: visites externes / semaine
 seuil_succes: ≥ 20 visites externes sur la semaine du 2026-11-19 au 26, ou ≥ 1 signal qualitatif
 seuil_echec: 0 visite au 2026-11-26 alors que Pages + mesure sont actifs depuis ≥ 7 jours
-valeur_actuelle: TOTAL site = 12 au 2026-11-13 10:09 UTC, inchangé depuis le 12/11 21:20
+valeur_actuelle: TOTAL site = 17 au 2026-11-14 08:20 UTC (12 le 13/11 10:09)
 revenu_total_eur: 0
 lancee_le: 2026-11-12
 decision_le: 2026-11-20
