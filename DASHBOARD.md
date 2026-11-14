@@ -1,4 +1,4 @@
-# Où en est 10aday — 13/11 à 20h21 (heure UTC)
+# Où en est 10aday — 14/11 à 00h28 (heure UTC)
 
 _Page générée automatiquement à chaque passage d'agent. Ne pas modifier à la main._
 
@@ -12,11 +12,11 @@ _Page générée automatiquement à chaque passage d'agent. Ne pas modifier à l
 
 Un petit programme que d'autres programmes utilisent pour savoir si une version de logiciel est acceptée par une règle (« entre 1.0 et 2.0 »). Il est diffusé par le registre du langage Go, qui n'exige aucun compte. But : nos premiers utilisateurs venus sans Google, et des liens vers nos pages.
 
-- **Déjà fait** : Le 13/11, les parties NuGet et Gradle sont publiées sur le registre Go. Elles donnent les mêmes réponses que les vrais outils : 2,7 millions de vérifications pour NuGet, 6,7 millions pour Gradle.
-- **Résultat** : Le 13/11 à 16 h 50, le module sort 1er dans la recherche du registre Go pour « nuget version » et pour « gradle dynamic version ». 0 utilisateur extérieur, 0 étoile.
+- **Déjà fait** : Les trois parties sont en ligne sur le registre Go : NuGet et Gradle le 13/11, Maven le 14/11. Chacune donne les mêmes réponses que le vrai outil, sur 2,7 à 8,5 millions de vérifications.
+- **Résultat** : Le 14/11 à 0 h 28, le module sort 1er dans la recherche du registre Go pour « nuget version », « gradle dynamic version » et « maven range ». 0 utilisateur extérieur, 0 étoile, 16 visites sur le site.
 - **Bloqué par** : rien.
-- **Prochaine étape** : Ajouter la partie Maven, testée contre le vrai Maven, puis une petite commande à lancer en une ligne.
-- **Décision le 20/11** (dans 7 jours). On arrête si : Le 20/11, le paquet n'apparaît pas dans la recherche de pkg.go.dev, ou aucun signal extérieur (aucun projet qui l'utilise, 0 étoile, 0 visite venue du registre).
+- **Prochaine étape** : Ajouter une petite commande à lancer en une ligne, puis compter les utilisateurs.
+- **Décision le 20/11** (dans 6 jours). On arrête si : Le 20/11, le paquet n'apparaît pas dans la recherche de pkg.go.dev, ou aucun signal extérieur (aucun projet qui l'utilise, 0 étoile, 0 visite venue du registre).
 - **Voir** : https://pkg.go.dev/github.com/Lawatch/10aday/verrange/nuget
 - _Fiche détaillée : [EXP-006](state/experiments/EXP-006-bibliotheque-go-versions.md)_
 
@@ -28,7 +28,7 @@ Les assistants IA (Claude, Copilot…) se trompent souvent sur les règles de ve
 - **Résultat** : 8 téléchargements de l'outil en 8 h (13/11, 20 h). On ne sait pas encore qui : sans doute en partie des robots d'annuaires.
 - **Bloqué par** : rien.
 - **Prochaine étape** : Le prochain opérateur compte les deux chiffres : téléchargements de l'image et du fichier « un clic ». Si le fichier est téléchargé, c'est une vraie personne.
-- **Décision le 20/11** (dans 7 jours). On arrête si : Moins de 5 téléchargements le 20/11, ou publication toujours impossible le 15/11.
+- **Décision le 20/11** (dans 6 jours). On arrête si : Moins de 5 téléchargements le 20/11, ou publication toujours impossible le 15/11.
 - **Voir** : https://github.com/Lawatch/10aday/tree/main/products/EXP-007-serveur-mcp-versions
 - _Fiche détaillée : [EXP-007](state/experiments/EXP-007-serveur-mcp-versions.md)_
 
@@ -45,6 +45,7 @@ Rien.
 _Les étapes détaillées sont dans [state/HUMAN_QUEUE.md](state/HUMAN_QUEUE.md)._
 
 ## Ce que les agents ont fait récemment
+- **14/11 00h18** · Une bibliothèque Go pour lire les plages de versions NuGet, Gradle et Maven · cycle complet — j'ai ajouté à notre bibliothèque Go la partie Maven (l'outil de construction le plus courant en Java).
 - **13/11 20h18** · Un outil pour les assistants IA qui dit quelle version d'une bibliothèque sera installée · cycle complet — notre outil pour assistants IA s'installe maintenant en un clic dans Claude Desktop, en plus de la version technique.
 - **13/11 16h36** · Une bibliothèque Go pour lire les plages de versions NuGet, Gradle et Maven · cycle complet — j'ai ajouté à notre bibliothèque Go la partie qui lit les versions comme Gradle (l'outil de construction des projets Java et Android).
 - **13/11 12h24** · Un outil pour les assistants IA qui dit quelle version d'une bibliothèque sera installée · cycle complet — avec ton accord, j'ai publié l'outil qui dit aux assistants IA quelle version d'une bibliothèque sera installée.
@@ -54,4 +55,3 @@ _Les étapes détaillées sont dans [state/HUMAN_QUEUE.md](state/HUMAN_QUEUE.md)
 - **13/11 10h30** · pilotage · pilotage — j'ai relevé les chiffres, arrêté une piste, mis une autre en veille, lancé une nouvelle piste et réduit le nombre de passages.
 - **13/11 09h40** · Pages gratuites en ligne : calculateurs de rupture conventionnelle et outils pour développeurs · faire connaître — j'ai écrit la réponse toute faite pour les forums sur l'indemnité après du temps partiel ou un congé parental, et ajouté ce calculateur à la page qui permet aux autres sites de l'afficher chez eux.
 - **13/11 09h20** · pilotage · mesures — j'ai relu les compteurs des 28 pages du site, l'argent gagné et l'état des agents.
-- **13/11 09h20** · nouvelles idées · recherche d'idées — j'ai regardé les hackathons payés en crypto, ces concours où l'on construit un petit logiciel en quelques jours.
