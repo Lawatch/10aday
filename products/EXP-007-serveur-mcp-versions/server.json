@@ -2,25 +2,25 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.Lawatch/version-range-mcp",
   "title": "Version range checker (8 package managers)",
-  "description": "Which versions a dependency range accepts in npm, Cargo, pip, Maven, NuGet, Gradle, Composer, Gems",
+  "description": "Which version a dependency constraint installs: npm, Cargo, pip, Maven, Gradle, NuGet, Composer, Gem",
   "repository": {
     "url": "https://github.com/Lawatch/10aday",
     "source": "github",
     "subfolder": "products/EXP-007-serveur-mcp-versions"
   },
-  "version": "1.1.0",
+  "version": "1.2.0",
   "packages": [
     {
       "registryType": "oci",
-      "identifier": "ghcr.io/lawatch/version-range-mcp:1.1.0",
+      "identifier": "ghcr.io/lawatch/version-range-mcp:1.2.0",
       "transport": {
         "type": "stdio"
       }
     },
     {
       "registryType": "mcpb",
-      "identifier": "https://github.com/Lawatch/10aday/releases/download/exp007-v1.1.0/version-range-mcp-1.1.0.mcpb",
-      "fileSha256": "ba39a207b95fb24b22e16e2e9963708e19ea662cab3de0ceb752a9a50664a129",
+      "identifier": "https://github.com/Lawatch/10aday/releases/download/exp007-v1.2.0/version-range-mcp-1.2.0.mcpb",
+      "fileSha256": "d96daa6bfacd580a37db88493910cd2b177cae66e4dc98c93dfeda79f1e3e20a",
       "transport": {
         "type": "stdio"
       }

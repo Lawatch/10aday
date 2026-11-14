@@ -41,9 +41,20 @@ const input = [
 ].map(JSON.stringify).join('\n') + '\n';
 const out = cp.execFileSync(process.execPath, [path.join(__dirname, 'server.js')], { input }).toString().trim().split('\n').map(JSON.parse);
 assert.strictEqual(out.length, 4); assert.strictEqual(out[0].result.serverInfo.name, 'version-range-mcp');
-assert.strictEqual(out[1].result.tools.length, 3);
+assert.strictEqual(out[1].result.tools.length, 4);
 assert.strictEqual(out[2].result.structuredContent.picked, '1.2.3'); assert.strictEqual(out[3].error.code, -32601); n += 4;
 const sj = JSON.parse(fs.readFileSync(path.join(__dirname, 'server.json'), 'utf8'));
 assert.ok(sj.description.length <= 100); assert.ok(sj.packages[0].identifier.endsWith(':' + sj.version)); n += 2;
 assert.ok(fs.readFileSync(path.join(__dirname, 'Dockerfile'), 'utf8').includes('io.modelcontextprotocol.server.name="' + sj.name + '"')); n++;
-console.log('OK ' + n + ' checks');
+assert.ok(S.TOOLS.some(function (x) { return x.name === 'resolve_from_registry' && x.annotations.openWorldHint; })); n++;
+// 4) live registries (skipped with OFFLINE=1). Expected answers checked with the real npm and pip on 2026-11-14.
+if (process.env.OFFLINE) { console.log('OK ' + n + ' checks (live registry checks skipped)'); return; }
+(async function () {
+  const cs = [['npm', 'express', '^4.18'], ['cargo', 'serde', '1'], ['composer', 'laravel/framework', '^10.0'], ['pip', 'requests', '~=2.31'],
+    ['rubygems', 'rails', '~> 7.1'], ['maven', 'com.google.guava:guava', '[32.0,33.0)'], ['gradle', 'com.google.guava:guava', '32.+'], ['nuget', 'Newtonsoft.Json', '13.*']];
+  for (const [e, p, c] of cs) { const r = await S.resolveFromRegistry({ ecosystem: e, package: p, constraint: c }); assert.ok(r.installs && r.matching_count > 0, e + ' ' + p); n++; }
+  assert.strictEqual((await S.resolveFromRegistry({ ecosystem: 'maven', package: 'com.google.guava:guava', constraint: '[32.0,33.0)' })).installs, '32.1.3-jre'); n++;
+  await assert.rejects(S.resolveFromRegistry({ ecosystem: 'npm', package: 'nope-not-a-pkg-xyz-123', constraint: '*' }), /not found/); n++;
+  await assert.rejects(S.resolveFromRegistry({ ecosystem: 'maven', package: 'guava', constraint: '1' }), /groupId:artifactId/); n++;
+  console.log('OK ' + n + ' checks');
+})().catch(function (e) { console.error(e); process.exit(1); });

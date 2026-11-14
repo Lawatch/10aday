@@ -2,23 +2,64 @@
   "manifest_version": "0.2",
   "name": "version-range-mcp",
   "display_name": "Version range checker (8 package managers)",
-  "version": "1.1.0",
-  "description": "Which versions a dependency range accepts in npm, Cargo, pip, Maven, NuGet, Gradle, Composer, RubyGems, and which one gets installed.",
-  "long_description": "Answers 'does this version match this constraint?' exactly as each package manager would. The engines are ports of each tool's own code, checked against the real tools. No network access, no key, no dependency. Built and maintained by AI agents (project 10aday).",
-  "author": { "name": "10aday (AI agents)", "url": "https://github.com/Lawatch/10aday" },
-  "repository": { "type": "git", "url": "https://github.com/Lawatch/10aday" },
+  "version": "1.2.0",
+  "description": "Which version a dependency constraint installs, with the exact rules of npm, Cargo, pip, Maven, Gradle, NuGet, Composer, RubyGems, read live from the public registries.",
+  "long_description": "Answers 'which version will this constraint install?' exactly as each package manager would. resolve_from_registry reads the published versions from npmjs, crates.io, Packagist, PyPI, RubyGems, Maven Central or NuGet (read-only, no key). The other tools work offline. The engines are ports of each tool's own code, checked against the real tools. Built and maintained by AI agents (project 10aday).",
+  "author": {
+    "name": "10aday (AI agents)",
+    "url": "https://github.com/Lawatch/10aday"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lawatch/10aday"
+  },
   "homepage": "https://github.com/Lawatch/10aday/tree/main/products/EXP-007-serveur-mcp-versions",
   "license": "MIT",
-  "keywords": ["semver", "version", "dependency", "maven", "gradle", "nuget", "pip", "npm"],
+  "keywords": [
+    "semver",
+    "version",
+    "dependency",
+    "maven",
+    "gradle",
+    "nuget",
+    "pip",
+    "npm",
+    "dependencies",
+    "pypi",
+    "crates",
+    "packagist"
+  ],
   "server": {
     "type": "node",
     "entry_point": "server.js",
-    "mcp_config": { "command": "node", "args": ["${__dirname}/server.js"] }
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/server.js"
+      ]
+    }
   },
   "tools": [
-    { "name": "check_version_constraint", "description": "For each version: accepted by the constraint or not, and the version the tool would install." },
-    { "name": "compare_across_ecosystems", "description": "The same constraint in every package manager, grouped by identical result." },
-    { "name": "sort_versions", "description": "Versions sorted in a given package manager's order." }
+    {
+      "name": "resolve_from_registry",
+      "description": "Reads a real package's published versions and tells which one a constraint installs today."
+    },
+    {
+      "name": "check_version_constraint",
+      "description": "For each version: accepted by the constraint or not, and the version the tool would install."
+    },
+    {
+      "name": "compare_across_ecosystems",
+      "description": "The same constraint in every package manager, grouped by identical result."
+    },
+    {
+      "name": "sort_versions",
+      "description": "Versions sorted in a given package manager's order."
+    }
   ],
-  "compatibility": { "runtimes": { "node": ">=18.0.0" } }
+  "compatibility": {
+    "runtimes": {
+      "node": ">=18.0.0"
+    }
+  }
 }
