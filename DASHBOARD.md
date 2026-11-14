@@ -1,4 +1,4 @@
-# Où en est 10aday — 14/11 à 09h42 (heure UTC)
+# Où en est 10aday — 14/11 à 12h23 (heure UTC)
 
 _Généré automatiquement à chaque passage d'agent. Tout est fait par les agents, rien ne t'attend._
 
@@ -11,8 +11,8 @@ _Généré automatiquement à chaque passage d'agent. Tout est fait par les agen
 ### Bibliothèques de code
 1 piste testée : 1 en test.
 - **Une bibliothèque Go pour lire les plages de versions NuGet, Gradle et Maven** — _en test_
-  - Fait : Les trois parties sont en ligne sur le registre Go : NuGet et Gradle le 13/11, Maven le 14/11. Chacune donne les mêmes réponses que le vrai outil, sur 2,7 à 8,5 millions de vérifications.
-  - Résultat : Le module sort 1er dans la recherche du registre Go sur ses 3 sujets. Au 14/11 à 8 h 20 : 0 projet qui l'utilise, 0 étoile, 17 visites sur le site.
+  - Fait : Les trois parties sont en ligne sur le registre Go (NuGet, Gradle, Maven), testées contre les vrais outils. Depuis le 14/11 à 12 h 20, une commande s'utilise en une ligne, sans rien installer d'autre que Go.
+  - Résultat : 1er dans la recherche du registre Go sur « nuget version range », « maven version range » et « gradle version range ». Au 14/11 à 12 h 20 : 0 projet qui l'utilise, 0 étoile, 17 visites sur le site.
 
 ### Outils pour assistants IA
 1 piste testée : 1 en test.
@@ -50,10 +50,11 @@ _Généré automatiquement à chaque passage d'agent. Tout est fait par les agen
   - Décision : Arrêtée le 13/11 par l'humain. Elle dépendait d'une clé et d'un compte qu'il fallait lui demander ; une piste qui ne se mène pas à 100 % sans lui n'est pas gardée.
 
 ## Pistes en test : la suite
-- **Une bibliothèque Go pour lire les plages de versions NuGet, Gradle et Maven** : Ajouter une petite commande à lancer en une ligne, puis compter les utilisateurs. Décision le 20/11 (dans 6 jours). On arrête si : Le 20/11, le paquet n'apparaît pas dans la recherche de pkg.go.dev, ou aucun signal extérieur (aucun projet qui l'utilise, 0 étoile, 0 visite venue du registre).
+- **Une bibliothèque Go pour lire les plages de versions NuGet, Gradle et Maven** : Compter les utilisateurs chaque jour jusqu'au 20/11, sans rien ajouter. Décision le 20/11. Décision le 20/11 (dans 6 jours). On arrête si : Le 20/11, le paquet n'apparaît pas dans la recherche de pkg.go.dev, ou aucun signal extérieur (aucun projet qui l'utilise, 0 étoile, 0 visite venue du registre).
 - **Un outil pour les assistants IA qui dit quelle version d'une bibliothèque sera installée** : Chercher si un annuaire tiers (Glama, PulseMCP, mcp.so, Smithery) liste l'outil, via l'agent web-fetch : c'est le 2e critère de succès et ça dit d'où viennent les téléchargements. Puis recompter. Décision le 20/11 (dans 6 jours). On arrête si : Moins de 5 téléchargements le 20/11, ou publication toujours impossible le 15/11.
 
 ## Derniers passages d'agents
+- **14/11 12h20** · Une bibliothèque Go pour lire les plages de versions NuGet, Gradle et Maven · travail sur la piste — j'ai ajouté à la bibliothèque Go une commande qu'un développeur lance en une ligne pour tester une règle de versions NuGet, Maven ou Gradle.
 - **14/11 08h20** · pilotage · pilotage — j'ai relevé tous les chiffres et donné la priorité à l'outil pour assistants IA, le seul dont l'usage monte.
 - **14/11 04h18** · Un outil pour les assistants IA qui dit quelle version d'une bibliothèque sera installée · travail sur la piste — notre outil pour assistants IA va maintenant chercher lui-même les versions publiées d'une bibliothèque et dit laquelle sera installée aujourd'hui.
 - **14/11 00h18** · Une bibliothèque Go pour lire les plages de versions NuGet, Gradle et Maven · travail sur la piste — j'ai ajouté à notre bibliothèque Go la partie Maven (l'outil de construction le plus courant en Java).
@@ -61,4 +62,3 @@ _Généré automatiquement à chaque passage d'agent. Tout est fait par les agen
 - **13/11 16h36** · Une bibliothèque Go pour lire les plages de versions NuGet, Gradle et Maven · travail sur la piste — j'ai ajouté à notre bibliothèque Go la partie qui lit les versions comme Gradle (l'outil de construction des projets Java et Android).
 - **13/11 12h24** · Un outil pour les assistants IA qui dit quelle version d'une bibliothèque sera installée · travail sur la piste — avec ton accord, j'ai publié l'outil qui dit aux assistants IA quelle version d'une bibliothèque sera installée.
 - **13/11 12h20** · Un outil pour les assistants IA qui dit quelle version d'une bibliothèque sera installée · travail sur la piste — j'ai réessayé de publier l'outil pour assistants IA, le filtre de sécurité a refusé une 2e fois, alors j'ai arrêté la piste.
-- **13/11 10h40** · pilotage · pilotage — j'ai lancé une 2e piste : un outil que les assistants IA branchent pour savoir quelle version d'une bibliothèque sera installée.
