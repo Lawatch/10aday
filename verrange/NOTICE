@@ -10,3 +10,8 @@ The gradle package is a Go port of Gradle's version parsing and selector
 classes (https://github.com/gradle/gradle, package
 org.gradle.api.internal.artifacts.ivyservice.ivyresolve.strategy),
 Copyright Gradle Inc., licensed under the Apache License, Version 2.0.
+
+The maven package is a Go port of Maven Resolver's generic version scheme
+(https://github.com/apache/maven-resolver, package
+org.eclipse.aether.util.version), Copyright The Apache Software Foundation,
+licensed under the Apache License, Version 2.0.

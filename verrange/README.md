@@ -8,11 +8,13 @@ tell you which published version they would pick. Zero dependencies.
 | Package | Ecosystem | Status |
 |---|---|---|
 | [`nuget`](https://pkg.go.dev/github.com/Lawatch/10aday/verrange/nuget) | NuGet / `dotnet restore` (`[1.0,2.0)`, `1.*`, `1.0.0-beta*`, `*-*`) | ready |
-| `maven` | Maven (`[1.0,2.0)`, Maven version order) | planned |
+| [`maven`](https://pkg.go.dev/github.com/Lawatch/10aday/verrange/maven) | Maven 3.9 (`[1.0,2.0)`, `(,1.0],[1.2,)`, `[1.0]`, Maven Resolver version order) | ready |
 | [`gradle`](https://pkg.go.dev/github.com/Lawatch/10aday/verrange/gradle) | Gradle (`1.+`, `latest.release`, `[1.0,2.0)`, Gradle version order) | ready |
 
 Go already has good libraries for semver, npm, Composer, PyPI and Cargo
-ranges. This module covers the .NET and JVM ecosystems, which had none.
+ranges. This module covers the .NET and JVM ecosystems: NuGet floating
+versions and Gradle dynamic versions had no Go library, and for Maven it
+follows Maven Resolver, the code `mvn` actually uses to resolve a range.
 
 ## Install
 
@@ -62,6 +64,49 @@ Try it in the browser: [NuGet version range checker](https://lawatch.github.io/1
 Related tools: [Maven range checker](https://lawatch.github.io/10aday/tools/maven-version-range-checker/),
 [Gradle dynamic version checker](https://lawatch.github.io/10aday/tools/gradle-dynamic-version-checker/).
 
+## Maven
+
+```go
+import "github.com/Lawatch/10aday/verrange/maven"
+
+published := []string{"1.0", "1.5", "1.10", "2.0-rc1", "2.0", "2.0.1"}
+
+c, err := maven.ParseConstraint("[1.0,2.0)")
+if err != nil { /* Maven would fail the build too: "[2.0,1.0]", "[1.0", "[1.0)"... */ }
+v, ok := c.Select(published)                                    // "2.0-rc1", true: pre-releases are inside!
+v, ok = maven.MustParseConstraint("[1.0,2.0-alpha)").Select(published) // "1.10", true
+v, ok = maven.MustParseConstraint("[3.0]").Select([]string{"3.0.RELEASE"}) // "3.0", false: build fails
+
+c.Contains("1.0.0")            // true
+maven.Compare("1.0", "1.0-ga") // 0
+maven.Sort(versions)           // Maven order, lowest first
+```
+
+What it gets right, because Maven 3.9 does it this way:
+
+- Version order of Maven Resolver (`GenericVersionScheme`): `1.0` = `1.0.0` = `1.0-ga` = `1.0.Final`;
+  `alpha` < `beta` < `milestone` < `rc` = `cr` < `snapshot` < release < `sp` < other words;
+  `1.0a1` is alpha 1; `min` / `max` at the end sort below / above everything (`[1.0,2.min)`).
+  This is the order Maven uses for ranges, not maven-artifact's `ComparableVersion`.
+- Ranges and unions: `[1.0,2.0)`, `(,1.0]`, `[1.0,)`, `(,1.0],[1.2,)`, `[1.*]`; Maven's own error cases.
+- `Select`: highest published version in the range, snapshots and pre-releases included.
+  A plain version or a single-version range (`[1.0]`) is used as an exact string,
+  without looking at the published list: `[3.0]` fails if only `3.0.RELEASE` exists.
+- Non-ASCII digits count as digits, as in Java: `١.٠` = `1.0`.
+
+### How it is tested
+
+- **8,456,138 checks, 0 differences** against the real Maven Resolver 1.9.24 classes
+  (shipped with Maven 3.9.11): comparison of every pair of versions and
+  `containsVersion` of every constraint, on fixed traps and generated inputs.
+  A 197,886-check sample ships in `maven/testdata/oracle.json.gz`.
+- **33 real `mvn dependency:list` runs** (Maven 3.9.11, local repository with 14 versions):
+  for each one, `Select` picks the version Maven resolved, or fails when Maven failed
+  (`maven/testdata/real_mvn.txt`).
+
+Not modelled: "nearest wins" between several declarations, `LATEST` / `RELEASE`
+metaversions, and version properties (`${...}`).
+
 ## Gradle
 
 ```go
@@ -105,8 +150,9 @@ rich versions (`strictly`, `prefer`, `reject`), and Ivy statuses other than the 
 
 Written by AI agents of the [10aday](https://github.com/Lawatch/10aday) project,
 and tested against the official tools as described above. Bug reports with a
-range where the result differs from `dotnet restore` or Gradle are welcome as issues.
+range where the result differs from `dotnet restore`, `mvn` or Gradle are welcome as issues.
 
 License: Apache-2.0. The `nuget` package is a port of NuGet.Versioning
 (Apache-2.0, .NET Foundation) and the `gradle` package a port of Gradle's
-version classes (Apache-2.0, Gradle Inc.); see NOTICE.
+version classes (Apache-2.0, Gradle Inc.) and the `maven` package a port of
+Maven Resolver's version scheme (Apache-2.0, Apache Software Foundation); see NOTICE.
