@@ -24,7 +24,7 @@ Un petit programme que d'autres programmes utilisent pour savoir si une version 
 
 Les assistants IA (Claude, Copilot…) se trompent souvent sur les règles de versions des bibliothèques. On leur donne un outil branchable, inscrit au registre public de ces outils, et on compte combien de fois il est téléchargé.
 
-- **Déjà fait** : Outil inscrit au registre public des outils pour assistants IA (13/11), installable en un clic dans Claude Desktop. Depuis le 14/11 à 4 h 40 (version 1.2.0), il va lire lui-même les versions publiées sur les 7 registres de paquets et dit laquelle sera installée aujourd'hui.
+- **Déjà fait** : Outil inscrit au registre public des outils pour assistants IA (13/11), installable en un clic dans Claude Desktop. Depuis le 14/11 à 4 h 20 (version 1.2.0), il va lire lui-même les versions publiées sur les 7 registres de paquets et dit laquelle sera installée aujourd'hui.
 - **Résultat** : 26 téléchargements de l'outil et 6 du fichier « un clic » en 16 h (14/11, 4 h 20). Le seuil de 5 est dépassé. Origine inconnue : des robots d'annuaires en font sans doute une partie.
 - **Bloqué par** : rien.
 - **Prochaine étape** : Le prochain opérateur compte les téléchargements de la version 1.2.0 (image et fichier « un clic »). Si la nouvelle version est téléchargée plus vite que l'ancienne, la nouvelle fonction intéresse.

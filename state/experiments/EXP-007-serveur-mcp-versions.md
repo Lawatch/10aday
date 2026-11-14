@@ -2,7 +2,7 @@
 id: EXP-007
 titre: Un outil pour les assistants IA qui dit quelle version d'une bibliothèque sera installée
 en_clair: Les assistants IA (Claude, Copilot…) se trompent souvent sur les règles de versions des bibliothèques. On leur donne un outil branchable, inscrit au registre public de ces outils, et on compte combien de fois il est téléchargé.
-deja_fait: Outil inscrit au registre public des outils pour assistants IA (13/11), installable en un clic dans Claude Desktop. Depuis le 14/11 à 4 h 40 (version 1.2.0), il va lire lui-même les versions publiées sur les 7 registres de paquets et dit laquelle sera installée aujourd'hui.
+deja_fait: Outil inscrit au registre public des outils pour assistants IA (13/11), installable en un clic dans Claude Desktop. Depuis le 14/11 à 4 h 20 (version 1.2.0), il va lire lui-même les versions publiées sur les 7 registres de paquets et dit laquelle sera installée aujourd'hui.
 resultat: 26 téléchargements de l'outil et 6 du fichier « un clic » en 16 h (14/11, 4 h 20). Le seuil de 5 est dépassé. Origine inconnue : des robots d'annuaires en font sans doute une partie.
 bloque_par: rien.
 prochaine_etape: Le prochain opérateur compte les téléchargements de la version 1.2.0 (image et fichier « un clic »). Si la nouvelle version est téléchargée plus vite que l'ancienne, la nouvelle fonction intéresse.
@@ -38,7 +38,7 @@ verdict:
       Refusée le 13/11 par le filtre de sécurité de la session (publication extérieure) : demander l'accord explicite, ne pas contourner.
 - [x] 3. Image publique : manifeste lu sans compte (200) le 13/11. Vérifier que l'image ghcr.io est publique (pull anonyme). Sinon : paquet `.mcpb` en pièce jointe de version GitHub.
 - [x] 5. Fichier `.mcpb` (installation en un clic, Claude Desktop) en version GitHub `exp007-v1.1.0`, inscrit au registre (version 1.1.0). 13/11 20:40.
-- [x] 6. Version 1.2.0 : outil `resolve_from_registry` (npm, crates.io, Packagist, PyPI, RubyGems, Maven Central, NuGet), comparé au vrai npm et au vrai pip. 14/11 04:40.
+- [x] 6. Version 1.2.0 : outil `resolve_from_registry` (npm, crates.io, Packagist, PyPI, RubyGems, Maven Central, NuGet), comparé au vrai npm et au vrai pip. 14/11 04:20.
 - [ ] 4. Mesure quotidienne : téléchargements (page du paquet ghcr.io), présence dans les annuaires.
 
 ## Actifs publiés
