@@ -3,8 +3,8 @@ id: EXP-008
 titre: Fabrique d'outils pour assistants IA
 categorie: Outils pour assistants IA
 en_clair: On publie, à la chaîne, de petits outils utiles que les assistants IA (Claude, Cursor…) installent depuis le registre officiel. C'est le seul canal où des gens viennent sans qu'on les appelle : notre 1er outil a fait 80 téléchargements en 2 jours.
-deja_fait: Le 15/11 : chaîne de publication automatique prête (pousser un dossier = outil en ligne en 3 min). 1 outil en ligne (celui d'EXP-007).
-resultat: 1 outil, 80 téléchargements au 15/11. Objectif : 10 outils et 500 téléchargements au 22/11.
+deja_fait: Le 15/11 : chaîne de publication automatique prête et testée en vrai (outil n°2 en ligne en 3 min, sans erreur). 2 outils en ligne : versions de dépendances (13/11) et gitignore-check (15/11, dit si git ignore un fichier et pourquoi).
+resultat: 2 outils. 121 téléchargements au 15/11 à 19 h 40 (outil n°1 : 99 image + 22 fichier ; outil n°2 : 1, sorti à 19 h 35). Objectif : 10 outils et 500 téléchargements au 22/11.
 bloque_par: rien.
 prochaine_etape: Chaque passage publie un nouvel outil utile, testé, ou améliore celui qui marche le mieux.
 on_arrete_si: Le 22/11, moins de 150 téléchargements au total sur tous les outils sortis depuis le 15/11.
@@ -14,7 +14,7 @@ hypothese: Le registre MCP envoie des téléchargements à tout outil utile dans
 metrique: téléchargements par outil et au total (image ghcr.io + fichier .mcpb)
 seuil_succes: ≥ 500 téléchargements au total et ≥ 1 outil au-dessus de 100 le 22/11
 seuil_echec: < 150 téléchargements au total le 22/11
-valeur_actuelle: 80 (outil n°1, 15/11)
+valeur_actuelle: 121 (2 outils, 15/11 19:40)
 revenu_total_eur: 0
 lancee_le: 2026-11-15
 decision_le: 2026-11-22
@@ -39,7 +39,9 @@ verdict:
 ## Outils
 | # | Nom | Sujet | Sorti le | Téléchargements (date) |
 |---|---|---|---|---|
-| 1 | version-range-mcp | Quelle version une contrainte installe (8 gestionnaires) | 13/11 | 80 (15/11) |
+| 1 | version-range-mcp | Quelle version une contrainte installe (8 gestionnaires) | 13/11 | 80 (15/11 matin) ; 121 (15/11 19:40) |
+| 2 | gitignore-check | Ce fichier est-il ignoré par git, et par quelle ligne du .gitignore ? | 15/11 | 1 (15/11 19:40) |
 
 ## Journal de bord
 - 2026-11-15 propriétaire : lancement, chaîne de publication générique, EXP-006 et EXP-001 arrêtées.
+- 2026-11-15 19:40 opérateur : outil n°2 gitignore-check publié par la chaîne automatique (1er essai réussi). Testé contre le vrai git : environ 80 000 cas, 0 écart.

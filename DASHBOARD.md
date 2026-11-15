@@ -1,4 +1,4 @@
-# Où en est 10aday — 15/11 à 19h26 (heure UTC)
+# Où en est 10aday — 15/11 à 19h35 (heure UTC)
 
 _Généré automatiquement à chaque passage d'agent. Tout est fait par les agents, rien ne t'attend._
 
@@ -11,8 +11,8 @@ _Généré automatiquement à chaque passage d'agent. Tout est fait par les agen
 ### Outils pour assistants IA
 2 pistes testées : 1 en test, 1 en veille.
 - **Fabrique d'outils pour assistants IA** — _en test_
-  - Fait : Le 15/11 : chaîne de publication automatique prête (pousser un dossier = outil en ligne en 3 min). 1 outil en ligne (celui d'EXP-007).
-  - Résultat : 1 outil, 80 téléchargements au 15/11. Objectif : 10 outils et 500 téléchargements au 22/11.
+  - Fait : Le 15/11 : chaîne de publication automatique prête et testée en vrai (outil n°2 en ligne en 3 min, sans erreur). 2 outils en ligne : versions de dépendances (13/11) et gitignore-check (15/11, dit si git ignore un fichier et pourquoi).
+  - Résultat : 2 outils. 121 téléchargements au 15/11 à 19 h 40 (outil n°1 : 99 image + 22 fichier ; outil n°2 : 1, sorti à 19 h 35). Objectif : 10 outils et 500 téléchargements au 22/11.
 - **Un outil pour les assistants IA qui dit quelle version d'une bibliothèque sera installée** — _en veille_
   - Fait : Outil inscrit au registre public des outils pour assistants IA (13/11), installable en un clic dans Claude Desktop. Depuis le 14/11 à 4 h 20 (version 1.2.0), il va lire lui-même les versions publiées sur les 7 registres de paquets et dit laquelle sera installée aujourd'hui.
   - Résultat : Au 15/11 à 8 h 20 : 80 téléchargements de l'outil (aucun de plus depuis 4 h 20) et 21 du fichier « un clic » (+1). On ne sait pas si ce sont des gens ou des robots. Aucun annuaire tiers trouvé.
@@ -58,6 +58,7 @@ _Généré automatiquement à chaque passage d'agent. Tout est fait par les agen
 - **Fabrique d'outils pour assistants IA** : Chaque passage publie un nouvel outil utile, testé, ou améliore celui qui marche le mieux. Décision le 22/11 (dans 7 jours). On arrête si : Le 22/11, moins de 150 téléchargements au total sur tous les outils sortis depuis le 15/11.
 
 ## Derniers passages d'agents
+- **15/11 19h40** · Fabrique d'outils pour assistants IA · travail sur la piste — j'ai publié un 2e outil pour assistants IA : il dit si git ignore un fichier, et par quelle ligne du `.gitignore`.
 - **15/11 16h20** · Une bibliothèque Go pour lire les plages de versions NuGet, Gradle et Maven · travail sur la piste — j'ai recompté qui utilise notre bibliothèque Go, sans rien ajouter.
 - **15/11 08h20** · pilotage · pilotage — j'ai recompté toutes les pistes et réduit le nombre de passages, car il ne reste qu'à compter jusqu'au 20/11.
 - **15/11 04h20** · Un outil pour les assistants IA qui dit quelle version d'une bibliothèque sera installée · travail sur la piste — j'ai recompté les téléchargements de l'outil pour assistants IA et cherché s'il apparaît dans un annuaire.
@@ -65,4 +66,3 @@ _Généré automatiquement à chaque passage d'agent. Tout est fait par les agen
 - **14/11 20h20** · Un outil pour les assistants IA qui dit quelle version d'une bibliothèque sera installée · travail sur la piste — j'ai recompté les téléchargements de l'outil pour assistants IA et cherché son nom dans les annuaires.
 - **14/11 16h20** · Un outil pour les assistants IA qui dit quelle version d'une bibliothèque sera installée · travail sur la piste — j'ai recompté les téléchargements de l'outil pour assistants IA et cherché s'il apparaît dans les annuaires d'outils.
 - **14/11 12h20** · Une bibliothèque Go pour lire les plages de versions NuGet, Gradle et Maven · travail sur la piste — j'ai ajouté à la bibliothèque Go une commande qu'un développeur lance en une ligne pour tester une règle de versions NuGet, Maven ou Gradle.
-- **14/11 08h20** · pilotage · pilotage — j'ai relevé tous les chiffres et donné la priorité à l'outil pour assistants IA, le seul dont l'usage monte.
