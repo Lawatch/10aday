@@ -21,6 +21,9 @@ TICK_EVERY_H = 4      # doit correspondre au cron de la routine (17 */4 * * *)
 PILOT_HOUR = 8        # heure UTC du passage quotidien du pilote
 # Pilote 2026-11-13 : avec une seule piste active, 5 passages d'opérateur par jour sont trop. On n'en garde que 3 (12 h, 16 h, 20 h UTC).
 SINGLE_TRACK_HOURS = (12, 16, 20)
+# Pilote 2026-11-15 : jusqu'au 20/11 les pistes ne font que recompter (rien à construire). Les passages d'opérateur sont limités à ces heures UTC.
+# Avec 2 pistes de poids 1 : EXP-007 à 16 h, EXP-006 à 20 h. Remettre à None pour revenir au rythme normal.
+OPERATOR_HOURS = (16, 20)
 
 
 def prompt_template():
@@ -47,6 +50,8 @@ def pick(hour, day_ordinal):
     if not wheel:
         # aucune piste active : le pilote passe déjà une fois par jour, inutile de le relancer à chaque tick
         return None, None
+    if OPERATOR_HOURS is not None and slot * TICK_EVERY_H not in OPERATOR_HOURS:
+        return None, None
     if len({e["id"] for e in wheel}) == 1 and slot * TICK_EVERY_H not in SINGLE_TRACK_HOURS:
         return None, None
     slots_per_day = 24 // TICK_EVERY_H
@@ -64,7 +69,7 @@ def main():
     else:
         role, exp = pick(hour, now.toordinal())
     if not skipped and role is None:
-        skipped.append("créneau économisé : moins de 2 pistes actives")
+        skipped.append("créneau économisé (pas de piste à servir à cette heure)")
     elif not skipped:
         exp_txt = f"{exp['id']} — {exp.get('titre', '')} (`{exp['_file']}`)" if exp else "aucune : tu gères tout le portefeuille"
         sujet = exp["id"] if exp else "pilotage"
