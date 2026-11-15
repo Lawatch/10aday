@@ -4,7 +4,7 @@ titre: Une bibliothèque Go pour lire les plages de versions NuGet, Gradle et Ma
 categorie: Bibliothèques de code
 en_clair: Un petit programme que d'autres programmes utilisent pour savoir si une version de logiciel est acceptée par une règle (« entre 1.0 et 2.0 »). Il est diffusé par le registre du langage Go, qui n'exige aucun compte. But : nos premiers utilisateurs venus sans Google, et des liens vers nos pages.
 deja_fait: Les trois parties sont en ligne sur le registre Go (NuGet, Gradle, Maven), testées contre les vrais outils. Depuis le 14/11 à 12 h 20, une commande s'utilise en une ligne, sans rien installer d'autre que Go.
-resultat: 1er dans la recherche du registre Go sur ses 3 sujets. Au 15/11 à 8 h 20 : 0 projet qui l'utilise, 0 étoile, 17 visites sur le site. Rien n'a bougé depuis le 14/11.
+resultat: 1er dans la recherche du registre Go sur ses 3 sujets. Au 15/11 à 16 h 20 : 0 projet qui l'utilise, 0 étoile, 17 visites sur le site. Rien n'a bougé depuis le 14/11.
 bloque_par: rien.
 prochaine_etape: Un passage par jour (16 h UTC) recompte, sans rien ajouter. Décision le 20/11.
 on_arrete_si: Le 20/11, le paquet n'apparaît pas dans la recherche de pkg.go.dev, ou aucun signal extérieur (aucun projet qui l'utilise, 0 étoile, 0 visite venue du registre).
@@ -14,7 +14,7 @@ hypothese: Si on publie sur le registre Go (sans compte) un module qui lit les p
 metrique: présence dans la recherche pkg.go.dev (oui/non) ; « Imported by » ; étoiles / issues du dépôt ; visites GoatCounter des pages outils
 seuil_succes: paquet listé dans la recherche pkg.go.dev ET ≥ 1 signal extérieur au 2026-11-20
 seuil_echec: paquet non listé au 2026-11-17, ou 0 signal extérieur au 2026-11-20
-valeur_actuelle: recherche pkg.go.dev oui (1er sur les 3 sujets) ; Imported by 0 sur les 3 paquets ; 0 étoile ; site 17 visites (2026-11-15 08:20)
+valeur_actuelle: recherche pkg.go.dev oui (1er sur les 3 sujets) ; Imported by 0 sur les 3 paquets et la commande ; 0 étoile ; site 17 visites (2026-11-15 16:20)
 revenu_total_eur: 0
 lancee_le: 2026-11-13
 decision_le: 2026-11-20
@@ -68,6 +68,7 @@ verdict:
 | 2026-11-14 12:20 | Imported by / étoiles / issues / visites site (TOTAL) | 0 / 0 / 0 / 17 | pkg.go.dev, api.github.com, GoatCounter |
 | 2026-11-14 12:35 | Recherche pkg.go.dev : « nuget version range » / « maven version range » / « gradle version range » | 1er + 2e (commande) / 1er / 1er (commande) | curl, opérateur |
 | 2026-11-15 00:20 | Imported by / étoiles / issues / visites site (TOTAL) / recherche (3 requêtes) | 0 / 0 / 0 / 17 / 1ers inchangés | pkg.go.dev, api.github.com, GoatCounter |
+| 2026-11-15 16:20 | Imported by (4 paquets) / étoiles / copies / issues / visites site (TOTAL) / recherche (3 requêtes) | 0 / 0 / 0 / 0 / 17 / 1ers inchangés | pkg.go.dev, api.github.com, GoatCounter |
 
 ## Journal de bord
 - 2026-11-13 pilote : piste lancée.

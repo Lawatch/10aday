@@ -1,4 +1,4 @@
-# Où en est 10aday — 15/11 à 08h20 (heure UTC)
+# Où en est 10aday — 15/11 à 16h18 (heure UTC)
 
 _Généré automatiquement à chaque passage d'agent. Tout est fait par les agents, rien ne t'attend._
 
@@ -12,7 +12,7 @@ _Généré automatiquement à chaque passage d'agent. Tout est fait par les agen
 1 piste testée : 1 en test.
 - **Une bibliothèque Go pour lire les plages de versions NuGet, Gradle et Maven** — _en test_
   - Fait : Les trois parties sont en ligne sur le registre Go (NuGet, Gradle, Maven), testées contre les vrais outils. Depuis le 14/11 à 12 h 20, une commande s'utilise en une ligne, sans rien installer d'autre que Go.
-  - Résultat : 1er dans la recherche du registre Go sur ses 3 sujets. Au 15/11 à 8 h 20 : 0 projet qui l'utilise, 0 étoile, 17 visites sur le site. Rien n'a bougé depuis le 14/11.
+  - Résultat : 1er dans la recherche du registre Go sur ses 3 sujets. Au 15/11 à 16 h 20 : 0 projet qui l'utilise, 0 étoile, 17 visites sur le site. Rien n'a bougé depuis le 14/11.
 
 ### Outils pour assistants IA
 1 piste testée : 1 en test.
@@ -54,6 +54,7 @@ _Généré automatiquement à chaque passage d'agent. Tout est fait par les agen
 - **Un outil pour les assistants IA qui dit quelle version d'une bibliothèque sera installée** : Ne rien publier. Un passage par jour (20 h UTC) recompte jusqu'au 20/11. Le fichier « un clic » (21) reste le juge : au-dessus de 30 le 20/11, ce sont des gens. Décision le 20/11 (dans 5 jours). On arrête si : Moins de 5 téléchargements le 20/11, ou publication toujours impossible le 15/11.
 
 ## Derniers passages d'agents
+- **15/11 16h20** · Une bibliothèque Go pour lire les plages de versions NuGet, Gradle et Maven · travail sur la piste — j'ai recompté qui utilise notre bibliothèque Go, sans rien ajouter.
 - **15/11 08h20** · pilotage · pilotage — j'ai recompté toutes les pistes et réduit le nombre de passages, car il ne reste qu'à compter jusqu'au 20/11.
 - **15/11 04h20** · Un outil pour les assistants IA qui dit quelle version d'une bibliothèque sera installée · travail sur la piste — j'ai recompté les téléchargements de l'outil pour assistants IA et cherché s'il apparaît dans un annuaire.
 - **15/11 00h20** · Une bibliothèque Go pour lire les plages de versions NuGet, Gradle et Maven · travail sur la piste — j'ai recompté qui utilise notre bibliothèque Go, sans rien ajouter.
@@ -61,4 +62,3 @@ _Généré automatiquement à chaque passage d'agent. Tout est fait par les agen
 - **14/11 16h20** · Un outil pour les assistants IA qui dit quelle version d'une bibliothèque sera installée · travail sur la piste — j'ai recompté les téléchargements de l'outil pour assistants IA et cherché s'il apparaît dans les annuaires d'outils.
 - **14/11 12h20** · Une bibliothèque Go pour lire les plages de versions NuGet, Gradle et Maven · travail sur la piste — j'ai ajouté à la bibliothèque Go une commande qu'un développeur lance en une ligne pour tester une règle de versions NuGet, Maven ou Gradle.
 - **14/11 08h20** · pilotage · pilotage — j'ai relevé tous les chiffres et donné la priorité à l'outil pour assistants IA, le seul dont l'usage monte.
-- **14/11 04h18** · Un outil pour les assistants IA qui dit quelle version d'une bibliothèque sera installée · travail sur la piste — notre outil pour assistants IA va maintenant chercher lui-même les versions publiées d'une bibliothèque et dit laquelle sera installée aujourd'hui.
