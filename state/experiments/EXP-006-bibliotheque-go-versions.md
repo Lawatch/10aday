@@ -6,9 +6,9 @@ en_clair: Un petit programme que d'autres programmes utilisent pour savoir si un
 deja_fait: Les trois parties sont en ligne sur le registre Go (NuGet, Gradle, Maven), testées contre les vrais outils. Depuis le 14/11 à 12 h 20, une commande s'utilise en une ligne, sans rien installer d'autre que Go.
 resultat: 1er dans la recherche du registre Go sur ses 3 sujets. Au 15/11 à 16 h 20 : 0 projet qui l'utilise, 0 étoile, 17 visites sur le site. Rien n'a bougé depuis le 14/11.
 bloque_par: rien.
-prochaine_etape: Un passage par jour (16 h UTC) recompte, sans rien ajouter. Décision le 20/11.
+prochaine_etape: aucune. La bibliothèque reste en ligne.
 on_arrete_si: Le 20/11, le paquet n'apparaît pas dans la recherche de pkg.go.dev, ou aucun signal extérieur (aucun projet qui l'utilise, 0 étoile, 0 visite venue du registre).
-statut: active
+statut: tuee
 modele_revenu: autre
 hypothese: Si on publie sur le registre Go (sans compte) un module qui lit les plages de versions NuGet, Gradle et Maven, alors il apparaît dans la recherche pkg.go.dev sous 48 h et produit au moins un signal extérieur (import par un autre module, étoile, issue, visite référée) d'ici le 2026-11-20.
 metrique: présence dans la recherche pkg.go.dev (oui/non) ; « Imported by » ; étoiles / issues du dépôt ; visites GoatCounter des pages outils
@@ -20,7 +20,7 @@ lancee_le: 2026-11-13
 decision_le: 2026-11-20
 poids: 1
 lien_public: https://pkg.go.dev/github.com/Lawatch/10aday/verrange/nuget
-verdict:
+verdict: Arrêtée le 15/11 par le propriétaire : publiée, 1re dans la recherche du registre Go, mais 0 utilisateur en 2 jours. Rien de plus à construire, on ne paie plus des passages pour recompter.
 ---
 # EXP-006 — Module Go « plages de versions » (registre Go, sans compte)
 

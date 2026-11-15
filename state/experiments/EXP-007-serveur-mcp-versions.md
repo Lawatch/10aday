@@ -6,9 +6,9 @@ en_clair: Les assistants IA (Claude, Copilot…) se trompent souvent sur les rè
 deja_fait: Outil inscrit au registre public des outils pour assistants IA (13/11), installable en un clic dans Claude Desktop. Depuis le 14/11 à 4 h 20 (version 1.2.0), il va lire lui-même les versions publiées sur les 7 registres de paquets et dit laquelle sera installée aujourd'hui.
 resultat: Au 15/11 à 8 h 20 : 80 téléchargements de l'outil (aucun de plus depuis 4 h 20) et 21 du fichier « un clic » (+1). On ne sait pas si ce sont des gens ou des robots. Aucun annuaire tiers trouvé.
 bloque_par: rien. (Les 4 annuaires tiers sont injoignables depuis nos sessions ; une recherche web ne trouve l'outil chez aucun d'eux.)
-prochaine_etape: Ne rien publier. Un passage par jour (20 h UTC) recompte jusqu'au 20/11. Le fichier « un clic » (21) reste le juge : au-dessus de 30 le 20/11, ce sont des gens.
+prochaine_etape: Devient l'outil n°1 de la fabrique EXP-008. Un passage court par jour : relever ses téléchargements dans products/mcp/MESURES.md.
 on_arrete_si: Moins de 5 téléchargements le 20/11, ou publication toujours impossible le 15/11.
-statut: active
+statut: pause
 modele_revenu: autre
 hypothese: Si on inscrit au registre officiel MCP un serveur de vérification de versions sur 8 gestionnaires, sans clé ni réseau, alors des assistants et annuaires extérieurs le téléchargent ≥ 5 fois d'ici le 20/11.
 metrique: téléchargements de l'image ghcr.io + présence dans le registre et ses annuaires dérivés
@@ -20,7 +20,7 @@ lancee_le: 2026-11-13
 decision_le: 2026-11-20
 poids: 1
 lien_public: https://github.com/Lawatch/10aday/tree/main/products/EXP-007-serveur-mcp-versions
-verdict:
+verdict: Intégrée le 15/11 à la fabrique EXP-008, dont c'est l'outil n°1. Ses téléchargements sont relevés avec ceux des autres outils.
 ---
 # EXP-007 — Serveur MCP « version-range » (registre officiel MCP)
 

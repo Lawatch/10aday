@@ -17,13 +17,13 @@ import sys
 
 from lib import ROOT, experiments, lane_busy, now_utc
 
-TICK_EVERY_H = 4      # doit correspondre au cron de la routine (17 */4 * * *)
-PILOT_HOUR = 8        # heure UTC du passage quotidien du pilote
+TICK_EVERY_H = 3      # doit correspondre au cron de la routine (17 */3 * * *) — sprint du 15/11 : 8 passages par jour
+PILOT_HOUR = 9        # heure UTC du passage quotidien du pilote
 # Pilote 2026-11-13 : avec une seule piste active, 5 passages d'opérateur par jour sont trop. On n'en garde que 3 (12 h, 16 h, 20 h UTC).
-SINGLE_TRACK_HOURS = (12, 16, 20)
+SINGLE_TRACK_HOURS = tuple(range(0, 24, 3))  # propriétaire 15/11 : une piste seule produit aussi à chaque créneau
 # Pilote 2026-11-15 : jusqu'au 20/11 les pistes ne font que recompter (rien à construire). Les passages d'opérateur sont limités à ces heures UTC.
 # Avec 2 pistes de poids 1 : EXP-007 à 16 h, EXP-006 à 20 h. Remettre à None pour revenir au rythme normal.
-OPERATOR_HOURS = (16, 20)
+OPERATOR_HOURS = None  # propriétaire 15/11 : fin du mode « on recompte », tous les créneaux produisent
 
 
 def prompt_template():

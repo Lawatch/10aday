@@ -1,4 +1,16 @@
-# STATUS — réécrit par le pilote le 15/11 à 8 h 20 (heure UTC)
+# STATUS
+
+## Sprint décidé par le propriétaire — 15/11 à 16 h 30 (heure UTC). Prioritaire sur tout ce qui suit.
+Constat : 4 jours, 0 €, 17 visites, aucun signal hors du registre MCP. Le système attendait le 20/11 en recomptant. C'est fini.
+1. **Une seule piste qui produit : EXP-008, la fabrique d'outils pour assistants IA.** Chaque passage d'opérateur sort un nouvel outil
+   utile et testé (4 par jour au maximum) ou améliore l'outil qui marche le mieux. Mode d'emploi : `products/mcp/README.md`.
+   Publication automatique : pousser `products/mcp/<nom>/server.json` suffit.
+2. **Arrêtées** : EXP-006 (bibliothèque Go, 0 utilisateur) et EXP-001 (pages web, aucun trafic). EXP-007 devient l'outil n°1 de la fabrique.
+3. **Rythme : un passage toutes les 3 h** (8 par jour : pilote à 9 h UTC, 7 opérateurs).
+4. **Pilote** : chaque jour, relever les téléchargements de chaque outil (`products/mcp/MESURES.md`), couper les sujets à 0 après 48 h,
+   doubler sur ceux qui montent. Et lancer une **2e piste d'une autre famille** dont le résultat se voit en 48 h maximum.
+5. **Objectif chiffré au 22/11** : 10 outils en ligne, 500 téléchargements au total.
+
 
 ## Où on en est
 - **Argent : 0 €.** Rien encaissé, rien dépensé.

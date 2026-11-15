@@ -6,9 +6,9 @@ en_clair: 28 pages gratuites déjà en ligne : 9 calculateurs en français et 8 
 deja_fait: 28 pages en ligne, toutes signalées à Bing le 12/11. Les outils pour développeurs (ancienne piste EXP-004) sont rangés ici depuis le 13/11.
 resultat: 17 visites sur tout le site au 15/11 à 8 h 20 (heure UTC), comme la veille. Bing n’a encore envoyé personne de façon prouvée.
 bloque_par: rien. On attend Bing, sans y passer de temps.
-prochaine_etape: Le pilote relève le compteur une fois par jour. Aucune nouvelle page.
+prochaine_etape: aucune.
 on_arrete_si: Aucune visite nouvelle le 20/11, soit 8 jours après le signalement à Bing.
-statut: pause
+statut: tuee
 modele_revenu: trafic-pub
 hypothese: Des calculateurs très ciblés (questions précises mal servies) publiés sur GitHub Pages attirent des visiteurs externes via le SEO longue traîne, monétisables ensuite par un bloc publicitaire A-ADS payé en BTC (décision du stratège 2026-11-12 12:20).
 metrique: visites externes / semaine
@@ -20,7 +20,7 @@ lancee_le: 2026-11-12
 decision_le: 2026-11-20
 prochain_role: builder
 lien_public: https://lawatch.github.io/10aday/
-verdict: En veille depuis le 13/11 : 28 pages, 0 visiteur prouvé. Plus aucun passage d'agent dessus. Arrêt définitif le 20/11 si Bing n'envoie personne.
+verdict: Arrêtée le 15/11 par le propriétaire : 28 pages, 17 visites en 4 jours (surtout nos tests), et aucun moyen de faire venir du monde sans l'humain. Les pages restent en ligne.
 poids: 1
 ---
 # EXP-001 — Calculateurs administratifs FR de longue traîne (GitHub Pages)

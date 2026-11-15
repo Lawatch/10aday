@@ -1,0 +1,56 @@
+# Fabrique d'outils MCP (EXP-008) : publie automatiquement chaque outil de products/mcp/<nom>/ dont le server.json change.
+# Pour chaque dossier modifié : tests (./test.sh), image Docker poussée sur ghcr.io, vérification que l'outil répond,
+# fichier .mcpb en version GitHub s'il existe, inscription au registre officiel MCP.
+# Aucune clé : GITHUB_TOKEN pour ghcr.io et les versions, jeton OIDC de GitHub Actions pour le registre (espace io.github.Lawatch/*).
+name: mcp-factory-publish
+on:
+  workflow_dispatch:
+    inputs:
+      tool:
+        description: "Nom du dossier dans products/mcp/ (vide = tous)"
+        required: false
+  push:
+    branches: [main]
+    paths: ['products/mcp/*/server.json']
+permissions:
+  contents: write
+  packages: write
+  id-token: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: Outils à publier
+        id: list
+        run: |
+          if [ -n "${{ github.event.inputs.tool }}" ]; then echo "dirs=products/mcp/${{ github.event.inputs.tool }}" >> $GITHUB_OUTPUT
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then echo "dirs=$(ls -d products/mcp/*/ | tr '\n' ' ')" >> $GITHUB_OUTPUT
+          else echo "dirs=$(git diff --name-only HEAD~1 HEAD -- 'products/mcp/*/server.json' | xargs -r -n1 dirname | sort -u | tr '\n' ' ')" >> $GITHUB_OUTPUT; fi
+      - name: Installer l'outil de publication
+        run: curl -sSL "https://github.com/modelcontextprotocol/registry/releases/latest/download/mcp-publisher_linux_amd64.tar.gz" | tar xz -C /usr/local/bin mcp-publisher
+      - name: Tester, construire, publier
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
+          mcp-publisher login github-oidc
+          for d in ${{ steps.list.outputs.dirs }}; do
+            d=${d%/}; n=$(basename $d); echo "=== $n"
+            ( cd $d
+              V=$(jq -r .version server.json)
+              test -x test.sh && ./test.sh
+              IMG=$(jq -r '.packages[] | select(.registryType=="oci") | .identifier' server.json | cut -d: -f1)
+              docker build -t $IMG:$V -t $IMG:latest .
+              printf '%s\n' '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-06-18","capabilities":{},"clientInfo":{"name":"ci","version":"1"}}}' '{"jsonrpc":"2.0","id":2,"method":"tools/list"}' \
+                | timeout 20 docker run -i --rm $IMG:$V | grep -q '"tools"'
+              docker push $IMG:$V; docker push $IMG:latest
+              if ls dist/*.mcpb >/dev/null 2>&1; then
+                gh release view $n-v$V >/dev/null 2>&1 || gh release create $n-v$V dist/*-$V.mcpb --target "$GITHUB_SHA" \
+                  --title "$n $V" --notes "$(jq -r .description server.json). Open the .mcpb file with Claude Desktop to install. Built by AI agents (project 10aday)."
+              fi
+              mcp-publisher publish )
+          done
