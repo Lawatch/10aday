@@ -1,0 +1,1000 @@
+{"dockerignore":"!dist\n!a/.git\n","paths":["é/.git/a.txt/é","a b/Dockerfile/ab/Dockerfile","src/c/src/.git/","Dockerfile","b.md/keep/.env/b.md",".dockerignore/.git/b","c/dist","node_modules/ab/x.log/a"]}
+{"dockerignore":"/*.log/./dist\n?\n..\n!é/[ab]\n?/a*\nkeep/*.log/a*\n","paths":["b.md/é/node_modules/c","a.txt/.dockerignore/node_modules","a/b","src/ab/keep/y.log","a b/ab/y.log/Dockerfile","a/a.txt","x.log/.env",".env/x.log/keep","x.log/a b/.dockerignore/.env"]}
+{"dockerignore":"keep/\n**b/[ab]/dist\n","paths":[".git/dist"]}
+{"dockerignore":".env\na*/é\n**b\né/x.log/a b","paths":["a/Dockerfile/a.txt/x.log","a b",".env/.env/",".env/b","x.log","node_modules/.dockerignore/b.md","b.md/y.log"]}
+{"dockerignore":"!\\*/dist\n!a*\nnode_modules/a?\n/*b/Dockerfile/node_modules","paths":["dist/b.md/x.log","src/é/c/.env","a/node_modules/a","keep",".env/c/.git","c/c/src/.dockerignore","x.log","é/é/b/b.md"]}
+{"dockerignore":"\\*/\\*/.git\nkeep\n# **\na?","paths":["b","node_modules/node_modules/c/b",".git/.env"]}
+{"dockerignore":"\n!.","paths":["a b/src","src","a/b.md/b/dist","é/b.md/"]}
+{"dockerignore":"!é\n  a b/\\* \n","paths":["ab/b/Dockerfile","x.log/keep/é/.env",".dockerignore/a.txt/a.txt/.dockerignore","dist","b","a.txt/dist/.git/dist"]}
+{"dockerignore":"!*b/*.log\n/\\*\nnode_modules/**b/\n","paths":["x.log/.env/c/Dockerfile","x.log/.dockerignore",".dockerignore/.env/src/y.log",".env/x.log/Dockerfile/y.log","c/b.md",".env/a.txt/ab/src"]}
+{"dockerignore":"!Dockerfile/*b/src\nb\n! a?\n!é/?\n/é/.\na b/*b\n","paths":["y.log/y.log/y.log/é","a.txt/keep/","é"]}
+{"dockerignore":"# ./?\n/*.log/..\n![^a]/src/*\n?/./é\n/a*/b\nnode_modules/**/b","paths":["b/é/","b.md/é/dist/x.log",".env",".git/ab/a.txt","a b/y.log/b/.git","a.txt/.env/keep/dist"]}
+{"dockerignore":".git/Dockerfile/\n./**/.\n[a-c]*/[^a]\n[^a]/keep/*b\n!keep/?","paths":["c/b.md/a b/.env","node_modules/dist/Dockerfile","a b/a/a.txt","x.log/a b/x.log/c",".git/c","y.log"]}
+{"dockerignore":".\n# ./a b\n!*/.git\n!b/a?/\\*\n**b/keep\n!x.log/x.log\n","paths":["y.log/é/dist/dist","keep/src",".dockerignore","a.txt/Dockerfile","c/keep/c/.git","dist/.git/Dockerfile","dist/keep","keep/.env","a b/a.txt/Dockerfile/a","x.log/y.log/ab"]}
+{"dockerignore":"*.log\n[ab]/é\na?/.git","paths":["a.txt/y.log/Dockerfile/y.log","Dockerfile/c","y.log/.git/.dockerignore","a.txt/y.log/ab","b.md/.dockerignore/b.md/y.log","a.txt/Dockerfile/a b/ab","é"]}
+{"dockerignore":"![a-c]*/b/*.log\na b/x.log\n!**/a?","paths":["ab/é/a b",".git/y.log/keep","ab/a b","a/é/y.log","b.md/",".env/dist/node_modules","c/c","x.log"]}
+{"dockerignore":"!.env/a*/a?\n[a-c]*/?/a*\n[^a]/[a-c]*/a\na b/[a-c]*/a?/\n*b/","paths":["c/Dockerfile/.env",".env/c"]}
+{"dockerignore":"!a?\n![^a]/a b/[ab]\na*/keep/?\n!a\nsrc/a","paths":[".env/c/y.log/c/","c/a b/.git/a.txt","src/x.log/b/dist"]}
+{"dockerignore":"/\\*\n","paths":["c/node_modules",".env/ab/Dockerfile/dist","src/c","a b/é/.env/Dockerfile",".git/.env","x.log/y.log","Dockerfile/ab/c/é","node_modules"]}
+{"dockerignore":".env/[ab]\n!b\n  *b/keep ","paths":["a b/b/.env/é",".git/Dockerfile","x.log/a.txt/c/a",".env/keep/.env","b.md/node_modules","dist/a/.dockerignore/é","Dockerfile/.git",".env/node_modules/é/a"]}
+{"dockerignore":"x.log/node_modules\n!src","paths":["node_modules/a b/","node_modules/x.log/é"]}
+{"dockerignore":"# src\nb/a*/b\na*\n# a*/a\n[^a]/Dockerfile/\n","paths":[".git/.git/b",".dockerignore",".git/ab","a.txt/a.txt/a.txt/a b","Dockerfile/a b","x.log/Dockerfile/.git/dist","é/","ab/ab/.git"]}
+{"dockerignore":"!**b/**b\n../é","paths":["y.log/.git","c/keep",".git/y.log","b",".dockerignore/.git/ab/c","ab/a/a.txt","Dockerfile/.env/a.txt/Dockerfile","b.md/node_modules/ab/ab","é"]}
+{"dockerignore":"dist\n*/.git/**b\n[^a]/a?/b\nb/x.log","paths":["ab/é/ab"]}
+{"dockerignore":".env/.git\n/a b/*b/é\n!node_modules/a?/[ab]\n!node_modules\n","paths":["src/keep/node_modules","keep/a b","dist/b.md","x.log/a.txt"]}
+{"dockerignore":"x.log\n.git/\\*/\\*\n  node_modules/.git/ \nb/\n/src/*/\\*\nDockerfile","paths":["a/Dockerfile","keep/Dockerfile","ab/src","Dockerfile/é/.env","node_modules/node_modules/keep/b/","ab/.dockerignore/dist","b/keep/.env","b.md"]}
+{"dockerignore":"!**/..\n\\*\n  *.log/a b \na*","paths":["keep/node_modules/ab","é/.env","y.log/.dockerignore/a","x.log/ab/.git","x.log/node_modules/dist","a b/x.log/ab/b.md","b.md/b/b.md"]}
+{"dockerignore":"  *b/[a-c]* \nb/\n!.env\n!é\n**b/[^a]\n!é/?\n","paths":["a.txt/b.md","x.log/src/é/node_modules","a b","dist/.dockerignore/.env","c/dist/dist","b.md/a b/é/.env","a/a.txt"]}
+{"dockerignore":"a/a?/é\n!**/\na*/\n/.git","paths":["keep/.dockerignore/.dockerignore/ab"]}
+{"dockerignore":"../.env\n","paths":[".dockerignore/a/c/keep","Dockerfile/keep/c","src/a.txt/Dockerfile","ab/y.log/é",".dockerignore/b.md/dist/dist"]}
+{"dockerignore":"node_modules/./é\n# **/é","paths":["b/keep/a.txt","y.log/y.log/b","keep/y.log","a b/y.log/b"]}
+{"dockerignore":"!./.git\n!a/\n","paths":["a.txt/node_modules/.env/a.txt","é/ab","y.log/Dockerfile","b","node_modules/node_modules/.env","dist"]}
+{"dockerignore":"./?/*b/dist","paths":["src/.env/ab","y.log/.env/a.txt/y.log","src/é","a.txt/a b/é/ab",".dockerignore",".git/keep/y.log/é"]}
+{"dockerignore":"[ab]\n/.\n","paths":["a/dist/b.md/Dockerfile","keep/src/dist","x.log/a","b.md","é/x.log","a/.dockerignore/a b",".dockerignore/a/a/é","a.txt/é/.git"]}
+{"dockerignore":"!*/?\na/.env/a*\n![^a]/**\nb/*/é\nDockerfile/?\n","paths":["b/ab/b/","ab/b.md/node_modules/a",".env/b/"]}
+{"dockerignore":"a?\nnode_modules\n!keep/..\n!Dockerfile/*.log\na b/","paths":["keep/x.log","a.txt/a.txt/node_modules","src/a/src","é/b/é","a.txt/",".env/Dockerfile"]}
+{"dockerignore":"!a*\n\\*\n!a b/.env/src\n![ab]/\\*/..\n!dist/a b/é","paths":["b.md/ab/.dockerignore",".dockerignore/b.md/src","dist/a","Dockerfile/é/a b/","a b/c/.dockerignore/.env","ab","x.log/src","x.log/keep/a b","y.log"]}
+{"dockerignore":"\\*/é/\\*\n./**\n[ab]\n","paths":["Dockerfile/.dockerignore/c","y.log/é/.git","b.md/x.log/keep/node_modules","b/a.txt/src/","c/c","dist/b.md/Dockerfile/a.txt","x.log","node_modules/src/.git","ab/y.log/a"]}
+{"dockerignore":"[^a]/**\nsrc/\n/a*/Dockerfile\n**/.\n","paths":["node_modules/keep","b.md/a.txt/.dockerignore","dist/b/.git/.dockerignore",".env/c","é","c/y.log","b/ab/","Dockerfile"]}
+{"dockerignore":"a\n!a b\n","paths":["Dockerfile/x.log/b.md",".dockerignore/y.log/y.log","src/a b/keep","a b/a/y.log/.dockerignore","a.txt/b/é","a","node_modules/node_modules/.env/.git","ab/a/.git"]}
+{"dockerignore":"keep/?/Dockerfile\n/[^a]\n[^a]/?/Dockerfile\n!Dockerfile/a b/.env\na?/[a-c]*/**b\n","paths":["b/.dockerignore",".dockerignore","Dockerfile/é/src/b",".git/x.log","é/b.md/b.md","c"]}
+{"dockerignore":"a/keep/a*\né/*\n?\n!../\\*/?\na/[ab]/a*\n","paths":[".dockerignore/node_modules/a.txt","é/Dockerfile","a b/dist/y.log","Dockerfile/a b/a b"]}
+{"dockerignore":"!a/**/.git\n\n","paths":[".env","a/é","ab","c/a.txt/.dockerignore","c/ab/a.txt/","b.md/c/y.log/b.md","b/ab/a b/keep","dist/y.log/keep","node_modules/node_modules/a b","y.log/.dockerignore/c/a"]}
+{"dockerignore":"![^a]/dist\n.git/*.log\n\\*/\n  keep/**b/.. \n!/src\né/**/Dockerfile","paths":["ab/b","a.txt/b/.dockerignore/.dockerignore","y.log/src","é","x.log/node_modules"]}
+{"dockerignore":"\\*/a/.\nb/a*/é","paths":["a.txt/a b/a.txt/node_modules","a.txt/node_modules/keep/a.txt","dist/keep/.dockerignore","ab/.git/a.txt/x.log","a.txt/a b/.git/Dockerfile","node_modules/node_modules","keep/c/a/a","é/é/b.md/.dockerignore"]}
+{"dockerignore":".git/**b\n!.git/[a-c]*\n[^a]/*/Dockerfile\nkeep/a b\n","paths":["b/y.log/x.log","dist/c","a",".env/Dockerfile/dist/keep","b.md/a/a"]}
+{"dockerignore":"!*b/a b","paths":["a.txt","b/x.log/c",".env/node_modules/node_modules/.git/",".git/y.log/b/é","a/b.md/c"]}
+{"dockerignore":"!a b/**/a*\n*/a?\n.git/.git/[a-c]*\n/a b/**\n","paths":["ab/src","dist/.git","é/a b/b.md/a.txt",".dockerignore/é","b.md/b.md/c/b.md","c","x.log/y.log",".env","ab/dist/x.log/a b"]}
+{"dockerignore":"!a?\n# x.log/*/Dockerfile","paths":["a b/.git","a b/é/b.md"]}
+{"dockerignore":"[a-c]*/a b\na?\n[^a]/keep\n.\na*\n","paths":["dist/a b","y.log/ab/src","keep/a b","ab/","b.md/x.log/a.txt","src/ab/a/é","a/a.txt/c/b",".git/.dockerignore/b/é"]}
+{"dockerignore":"  \\* \n*/*.log/**b\na*/[a-c]*\n!*.log/src/node_modules\n../a\n!x.log/.env/","paths":["a.txt/node_modules/é","node_modules","src","b/node_modules/.env","keep/","a/y.log/Dockerfile/node_modules","é","a b/b/b.md","c/y.log"]}
+{"dockerignore":"/[a-c]*\n\n!node_modules/?\nnode_modules/**/**b\na b\n","paths":["é/dist/a","src/c/b.md/b.md",".env/.git/node_modules/a b","y.log/x.log/y.log/src","ab/x.log"]}
+{"dockerignore":"a b\n/**/.env\nnode_modules/Dockerfile/é\n","paths":["b.md/é/dist/a/","x.log","node_modules/.dockerignore/a b",".env/a.txt/.env",".git/keep/b","b","b.md/node_modules"]}
+{"dockerignore":"!src/*b\nkeep/[a-c]*\n!node_modules/a*\n**/a?/?","paths":["x.log/node_modules","ab","y.log/x.log","src/node_modules/a/keep","x.log/.git/c/a b","src/.env/dist/src","src/a/Dockerfile"]}
+{"dockerignore":"src/*b\ndist/a b/keep\n!b/**b/node_modules\n","paths":["a.txt/é/a/.env",".git/a",".env/keep/a","src","é/y.log","c/keep/c/a","a/c/","b/.env/Dockerfile"]}
+{"dockerignore":"b/*/?\n!\\*/.env\ndist\na b/.env\n","paths":["Dockerfile/a b/b","a"]}
+{"dockerignore":"!x.log\n![a-c]*\n[a-c]*/.env/.git\n.git/[ab]\n!dist\né/dist\n","paths":["Dockerfile/a.txt/é","dist/x.log/a.txt/.env/","src/keep/a/Dockerfile","x.log/x.log/dist",".dockerignore/.git",".git/a.txt/a/é"]}
+{"dockerignore":"! ?/keep/a?\n! .git\n.env/a b\n","paths":["node_modules/x.log/a.txt/","b"]}
+{"dockerignore":"dist/**b\n./*.log/?\n*.log/*\n","paths":["keep/b/Dockerfile","é","node_modules/","Dockerfile/b/b","a b/.env/.dockerignore/b",".dockerignore","keep/keep/é"]}
+{"dockerignore":"../[ab]\na?/node_modules/b\n/[ab]\n!\\*\n!x.log","paths":["keep/b",".env/src/src/.env","b/node_modules/c","c/c","b/x.log","é/dist/.env","c/x.log/c/a","x.log/node_modules/é","ab/x.log"]}
+{"dockerignore":"# \\*\n[a-c]*\n!.env/[a-c]*\nDockerfile\n","paths":["a b/é/ab/b.md","a/.git/node_modules"]}
+{"dockerignore":"a?/x.log\n*.log/?/a*\n/Dockerfile\na b\n**\n","paths":["a/keep/.dockerignore/a"]}
+{"dockerignore":".git/.git","paths":["b/node_modules","b.md/b","b.md/.env","é/.git/b","c/é","b.md/x.log"]}
+{"dockerignore":"!*b\na b/*/\n.git/*\n!é/src\nDockerfile/Dockerfile/x.log\n[^a]/\n","paths":["Dockerfile/Dockerfile","ab/ab/b.md/é",".git/x.log/.git",".git/a/a.txt",".env/a/a b/b","a/src/.git/.env","b/Dockerfile"]}
+{"dockerignore":"!./a*\n*.log/*.log","paths":["node_modules/b.md/a/é/"]}
+{"dockerignore":"!é\na\n! [a-c]*/keep\n![a-c]*/dist/**\n../dist/","paths":[".env","x.log/a/y.log","a.txt","b/b/.env","b/.env","é"]}
+{"dockerignore":"!*b/?\nkeep/*/*.log\n/*.log/*b","paths":["a b/b/.git","src/dist","a/node_modules","a/a b/y.log","x.log/c"]}
+{"dockerignore":"!?\n!*b/*/dist\n","paths":["é/b.md/a.txt/","é/.git","ab/src/b","ab/Dockerfile/src/a.txt"]}
+{"dockerignore":"dist/..\nb/../","paths":["dist/Dockerfile","y.log/src/","node_modules","c/é/y.log","ab/é/é/x.log","a"]}
+{"dockerignore":".env/node_modules/**b\n","paths":[".env/dist/","x.log/a b/a/",".dockerignore/b.md/.dockerignore/a","a.txt","a","node_modules/.git/.git/a","a b/ab/dist/é","keep/keep/dist/src","c/node_modules/x.log","dist/.env"]}
+{"dockerignore":"?/.git\n*.log\n!é/a*\n**b/a?","paths":["b.md/b.md/.dockerignore/Dockerfile",".dockerignore","dist/é"]}
+{"dockerignore":"/a","paths":["dist","b/.env","x.log/y.log","c/x.log"]}
+{"dockerignore":".git/./*b","paths":["a b/.git/dist","b/dist/a b/a.txt","x.log/a",".dockerignore/dist"]}
+{"dockerignore":"a b/x.log\n![ab]/\\*\né\nb/*b\n/x.log\na*/a b/\\*\n","paths":["b/src","src",".git/c/b/ab","b.md/c/y.log","é/a.txt/a.txt","x.log/dist",".env",".dockerignore"]}
+{"dockerignore":"x.log/.\n..\n!x.log\n! [ab]/keep/..\n","paths":["src/c/c/dist","keep/a.txt/dist/.env",".dockerignore/","c/ab/x.log"]}
+{"dockerignore":"a*/**b\n","paths":["x.log/Dockerfile","src/.env/a.txt/ab","node_modules/x.log","y.log/src/Dockerfile/b.md","y.log/Dockerfile/a/b"]}
+{"dockerignore":"b\nDockerfile/.\n! a/[ab]\n?/a b/[^a]","paths":["node_modules/a.txt/","a","y.log/.dockerignore/.git/dist","node_modules/a","a.txt/y.log","src/y.log/a.txt/src","b.md","x.log/.env/.git/node_modules"]}
+{"dockerignore":"src/keep/[a-c]*\n!.env/*\n.env/./src\n./.git\né/.git\n!a?\n","paths":[".dockerignore/a b/src/ab"]}
+{"dockerignore":"b/b/src\n**b/\\*/keep","paths":["src/.env/x.log"]}
+{"dockerignore":"!**b/node_modules\n../x.log/[a-c]*\nsrc\n","paths":[".dockerignore","c/x.log/y.log","a.txt/a.txt/.dockerignore","é/src/.dockerignore/.git","c/b/node_modules/ab","a.txt/a b","a/y.log/é/a.txt","keep"]}
+{"dockerignore":"!../node_modules\n*b/a b","paths":[".git/keep/node_modules/.git"]}
+{"dockerignore":"*.log/keep/?/\n*\ndist/.env/b\n*.log\n!a*/../**\n../**/a?\n","paths":["a b","é/keep/c",".dockerignore","keep/a.txt/a b/x.log",".git","b.md/b/","é/y.log/Dockerfile"]}
+{"dockerignore":"a*/.env/a\n!src/src/src\n!Dockerfile/.env\n![a-c]*/Dockerfile\n/\\*/Dockerfile\n.env/*b/Dockerfile\n","paths":[".git/y.log/.dockerignore","x.log/.env/é/b","node_modules/Dockerfile",".env/ab/é/y.log",".git/ab/.git",".git/c","src/x.log/ab/x.log/","a/","b/a b","b.md"]}
+{"dockerignore":"**/./?\n# node_modules/a/src\n!*.log/é","paths":["Dockerfile","a b/y.log/node_modules/keep","a","b.md/b.md/.env",".dockerignore/x.log/b/ab","a.txt","ab/y.log/a b/a/","node_modules/y.log","b.md/y.log/é"]}
+{"dockerignore":"dist\n!../é/[^a]\n","paths":[".env/a b/a","x.log/.git/.dockerignore/node_modules","y.log/x.log/a/a.txt","dist/a/ab/keep","b.md/b",".env/.git/src/a.txt","node_modules/b",".dockerignore/","keep"]}
+{"dockerignore":"./é\n","paths":["dist/.dockerignore","ab/node_modules/a b",".dockerignore/y.log/a.txt/b.md","b/b/src",".git/.git/b.md","é/Dockerfile","a/keep/Dockerfile/","x.log/.env/a b"]}
+{"dockerignore":"**/.env\nsrc\n**b\n./keep\n!node_modules\n","paths":["a.txt/y.log","b/a b","b/ab/a b"]}
+{"dockerignore":"  b \n[a-c]*\n.git/**b\n","paths":["src/b/keep/a b","dist/keep/dist/c",".dockerignore/x.log/y.log/.git","x.log/x.log/b/x.log","ab/Dockerfile/Dockerfile/src"]}
+{"dockerignore":"! \n! .git\n!**/.git\n!Dockerfile\n!./b\n!.env\n","paths":["a b/.env","é/a","ab/keep","x.log/keep/node_modules/keep","dist/a.txt/c","b/b.md","Dockerfile/.git"]}
+{"dockerignore":"!?/*.log\né/..\na*/a?/..\n./[^a]/a?\n/[ab]/*.log/src","paths":["ab/a b","b","y.log","b.md/b/b/x.log/","a b/src/b.md"]}
+{"dockerignore":"! node_modules/.git/*b\na?\né\n**b/Dockerfile","paths":["dist/node_modules/keep/é","ab/b/.git/c","src/é",".env/.git/a.txt","a.txt/.dockerignore/keep/.env","é"]}
+{"dockerignore":"  node_modules/[^a] \n","paths":[".git/b/x.log",".dockerignore/ab/a b","b.md/node_modules/Dockerfile/","node_modules/node_modules/src","src/x.log/","x.log/b","b/node_modules","c/keep"]}
+{"dockerignore":"./../.\n![a-c]*/é/..\n!x.log\n*b/dist/..\n!a*/.git/?\n.git/[ab]\n","paths":["c/a.txt/x.log/a","y.log/b.md/",".env","y.log/b","a/a b/Dockerfile"]}
+{"dockerignore":"[ab]\na?/./a*/\n!node_modules/.\n!a*/src/**b\n","paths":["a b","keep/a b/x.log/a","node_modules/y.log/b.md","é","dist/c/a b"]}
+{"dockerignore":"!Dockerfile/**/.git\n\\*/src/x.log\n.env/\\*\ndist/\n# */[ab]/.","paths":["b.md/c/Dockerfile/y.log","node_modules/c/dist/b","Dockerfile","dist/dist/y.log/Dockerfile",".env","node_modules/a.txt/"]}
+{"dockerignore":"*b/x.log/*","paths":["y.log/.git/y.log","ab/keep/keep","ab/a","dist/node_modules","dist/a.txt/dist"]}
+{"dockerignore":"*.log/Dockerfile\n.git/**b\n!*.log/*b/keep\n[ab]/a b/[^a]","paths":["b.md/b","src/dist/Dockerfile/c","b/.dockerignore","a b/y.log/a","c/é",".env/keep/.dockerignore/a b","src/node_modules/node_modules","ab/é/.env/c"]}
+{"dockerignore":"?/a?\n!.env\n..","paths":["node_modules/.git/a","ab/","a.txt","a/Dockerfile/src","dist","b.md","é/keep/"]}
+{"dockerignore":"!é\n","paths":["x.log/y.log/.dockerignore"]}
+{"dockerignore":"x.log\n.\n  ../a* \n./[a-c]*/a?/\n# **b\nDockerfile\n","paths":["node_modules/dist","a.txt/.env/b.md","Dockerfile/a/.env",".dockerignore/a.txt/a/é","src/ab/.git/a.txt","a/node_modules/a b/dist","dist"]}
+{"dockerignore":"!./Dockerfile/a*\n\\*\n!.\n!\\*\n!node_modules/é\n**","paths":["node_modules/Dockerfile/.env/.git","dist/a b/Dockerfile/","é/a b/.env","ab/b.md/b.md","a b/ab/.dockerignore/.env/","src"]}
+{"dockerignore":"!.git/keep/..\n  keep \n*b/Dockerfile/node_modules","paths":["src/y.log",".env/.dockerignore"]}
+{"dockerignore":"**b/.env","paths":[".dockerignore/y.log/.git","y.log/a.txt/ab","c","a b/a b","a/x.log"]}
+{"dockerignore":"?/dist/\n!a/.git\n!*.log/.git/b\n?/*.log/a b/\n  a/./. \n# [^a]/*/a b","paths":[".git/b.md","node_modules/a.txt/é","y.log/a b/c/c","node_modules/é/.env"]}
+{"dockerignore":"!.env/src\n# **b/?\n!b/é/?\n","paths":["node_modules/é/a b"]}
+{"dockerignore":"![a-c]*/*.log/Dockerfile\n!a/node_modules\na/\n[a-c]*/.git\n/?\n","paths":["y.log","src/a/b.md","c/ab/.dockerignore/c","keep/node_modules/src/.git"]}
+{"dockerignore":"![^a]\na?\n./**b/*b\nkeep/*b\n","paths":["b.md/node_modules/.dockerignore","Dockerfile/src/a/a.txt","a.txt"]}
+{"dockerignore":"?/../\n!**b/b/*.log\n*/../src","paths":["Dockerfile/keep","dist/b.md/ab/keep",".dockerignore","b.md/c/.env","ab","a/é/.env/c"]}
+{"dockerignore":"\nsrc/dist/**b\nkeep/**b\n!src\n.git\n","paths":["src","keep","é/.dockerignore/a/c"]}
+{"dockerignore":"![^a]\na*","paths":["a b/b/dist","a.txt/",".git","y.log/keep/dist/é","a.txt/ab/.dockerignore",".dockerignore/a.txt/","ab/Dockerfile/a b","b.md/b.md/a","Dockerfile/"]}
+{"dockerignore":"a b/*.log/[a-c]*\n**b\na/.git/b\nDockerfile/b/dist\n","paths":["a b","dist/x.log"]}
+{"dockerignore":"x.log/a*/**b\ndist/.\n","paths":["ab/","dist/src","keep/y.log","a/.env/a b","y.log/.git/é/.dockerignore/",".env/Dockerfile/.dockerignore/a",".git/src/.git",".env/.git/é/dist/"]}
+{"dockerignore":"[a-c]*\n! node_modules/.git\n!.git\n  . \n!.env\n","paths":[".env/keep","b/.dockerignore/c/b.md",".dockerignore","x.log/.git/node_modules","b/x.log/keep/src","ab/src/é/","src/src/b","a/.dockerignore/Dockerfile/Dockerfile/","node_modules/ab/.env","keep/b.md/keep"]}
+{"dockerignore":"![a-c]*/.git/..\na b/*b\n!*/[ab]\n!*.log/\\*\n../[^a]/b\n!**//*b\n","paths":["y.log","a/.git/x.log/a","keep","src/y.log/"]}
+{"dockerignore":"  node_modules/*b \n!é\n\\*\n","paths":["src/b.md/a","a b"]}
+{"dockerignore":".git\n*/*.log\n[ab]\n**b/[a-c]*/\n./a*/é\n","paths":[".git","src/b.md/c","node_modules/b/a.txt","ab/é","dist/b.md/ab/","a/.git/.dockerignore/x.log"]}
+{"dockerignore":"![ab]/\\*\n","paths":["a.txt/a.txt/b","a b/keep/b.md/x.log","node_modules/src/b.md","a/b.md/Dockerfile/é"]}
+{"dockerignore":"*b/é/.env\n!..\na b/a/**\n./b\n!..\n","paths":["node_modules/a","é/.env","b/ab/.env/src","a.txt/.env/.git/b.md","dist","c/é/node_modules","x.log","y.log/dist/y.log/.dockerignore"]}
+{"dockerignore":"!**/a*/.env\n../keep","paths":["y.log","dist/a.txt/keep/a b","node_modules/","a"]}
+{"dockerignore":"**b","paths":["ab/","dist/b.md"]}
+{"dockerignore":"# .env\n.\n!x.log/[ab]/*\n**b\n","paths":[".git","b.md","x.log/b.md/.env/node_modules",".env/y.log/.env","a.txt",".dockerignore/a/y.log"]}
+{"dockerignore":"a b/a\nsrc\n[a-c]*/dist\n","paths":["dist/y.log/b.md/ab","Dockerfile/a.txt/b.md/node_modules","a.txt/ab","b/y.log","Dockerfile/.env/y.log/",".git"]}
+{"dockerignore":"/keep/.git/?\n!a b\n!b\n!.git/b/a?","paths":["é/.dockerignore/a",".dockerignore","a.txt/Dockerfile/.dockerignore/a b","keep/c/b.md","src/Dockerfile/a b"]}
+{"dockerignore":"/a b","paths":["node_modules","b/.git","a b/dist","b.md/c","dist/.dockerignore/x.log/b.md","Dockerfile","src/a",".dockerignore/é/a b/.dockerignore","é","c/b.md/node_modules"]}
+{"dockerignore":"[a-c]*/**\n","paths":["ab/x.log/x.log/b","x.log","y.log/x.log/.env/y.log","é/.dockerignore/keep/","src/keep/a.txt/b.md","keep/é/.env","a.txt/c/a/c/"]}
+{"dockerignore":"Dockerfile/?/keep\n![^a]/x.log\n![^a]/b/**b\n!a b","paths":["dist/é/x.log","src/é/Dockerfile"]}
+{"dockerignore":"![ab]/\\*/[a-c]*\n!.git/**b\nx.log\n!.git","paths":["src/.dockerignore/Dockerfile",".dockerignore/"]}
+{"dockerignore":"!.env\n!.git/..\na\nDockerfile/é/**","paths":["a b"]}
+{"dockerignore":"# Dockerfile/../.env\n!keep/x.log/?\n**/**b/a*\n!keep/*.log\n!src\n*/dist/a","paths":["keep","dist/.dockerignore","dist/é/é/.dockerignore","node_modules/.env/.git/x.log","y.log",".env/b.md/é/node_modules","é","b.md/é/src"]}
+{"dockerignore":"./src/a*\n!a/\n[^a]/é/a?\n!.env/Dockerfile/a*\nx.log/a b/**b\n","paths":["b","a.txt/b/b","a/ab","a b/a/c/c","x.log/keep/y.log/c","a/Dockerfile","ab/keep/node_modules/b.md","ab/é"]}
+{"dockerignore":"node_modules\n**b/[a-c]*/*b\ndist/**","paths":[".dockerignore/b.md/b/x.log","b.md/b.md","c","a b/ab/.env/Dockerfile","node_modules/src/y.log"]}
+{"dockerignore":".git\n.env/Dockerfile\n","paths":["a b/Dockerfile/é/y.log/","y.log/Dockerfile/","b/b","b.md/keep/x.log","ab"]}
+{"dockerignore":"!keep\na?\n.env","paths":["é/src/node_modules/","keep/a.txt","a/.git","b/y.log/a b","y.log/",".git","ab/x.log","c"]}
+{"dockerignore":"?\n!../keep\n!a*","paths":["node_modules/a b","ab","a b/.dockerignore/b/.env"]}
+{"dockerignore":"*b/*.log/.","paths":["c/Dockerfile/y.log/node_modules",".dockerignore/y.log/.dockerignore","a b/.env/Dockerfile","b/.dockerignore","dist/dist","x.log/y.log/b.md/a.txt","a.txt",".env/.env"]}
+{"dockerignore":"x.log/*\n# [a-c]*/src/x.log\na?/.\n/[^a]/a b/node_modules","paths":["y.log/é/node_modules/b","dist/keep/b.md/","keep/.dockerignore","Dockerfile/é"]}
+{"dockerignore":"a?/a b/\n/Dockerfile/a b/[ab]\n\\*/x.log/[ab]\n.././.env\n","paths":["b/.dockerignore/node_modules","x.log/é/.git","dist/Dockerfile/a b",".git","Dockerfile/é/é","b.md/.git","a b","a/"]}
+{"dockerignore":"!.env/*.log/[^a]\nkeep/\\*/a","paths":["a.txt/.git","src/keep/Dockerfile/Dockerfile"]}
+{"dockerignore":"a/.\né/**/*.log\n.env/*.log\na b/\\*\n","paths":["a/ab","dist/node_modules/a/c","a.txt/ab","node_modules/y.log/ab/c","é/","Dockerfile"]}
+{"dockerignore":"dist/x.log/[ab]/\n!node_modules/**\n","paths":["y.log","c/é/.env/b.md","é/b/a.txt/.env"]}
+{"dockerignore":"!a\n[^a]/.git/.env\n","paths":["ab","y.log/.git","keep/src","a b/keep","node_modules/é/src","c/b.md",".dockerignore/y.log"]}
+{"dockerignore":"!node_modules","paths":["a/keep","node_modules/a.txt/c/.dockerignore","Dockerfile",".env/é","c/a b/é/a b","b/é",".git/ab/.git"]}
+{"dockerignore":"src/a b\n!**/*b","paths":["src/c","Dockerfile/b.md","a b/x.log/é/ab","keep/y.log","c/keep/a.txt/y.log","dist"]}
+{"dockerignore":"![^a]\n[^a]/*b/**","paths":["Dockerfile/node_modules","x.log/keep","node_modules/x.log/ab/node_modules","a.txt/b/é","x.log/","a b/node_modules/",".dockerignore","keep/src/src","ab/ab/.git/.git","Dockerfile/x.log/a b"]}
+{"dockerignore":"/\\*/*\na/.git/[^a]\n!.env/.env/.env\nkeep/b/?\n.env/src\n","paths":["a/.env",".dockerignore/b.md/ab/ab","b.md/é","ab/keep","ab/a.txt/c","a b","b/c/ab","y.log/é/.dockerignore","keep/y.log"]}
+{"dockerignore":"**/a/\n  *.log/.env \n*b/x.log/.git/","paths":["b/b.md/a.txt/b","ab/dist","Dockerfile/b.md/keep/node_modules","a b","b.md/a b/a b/ab"]}
+{"dockerignore":"![^a]\n[a-c]*/*b\n!?/b/**b\n.env/\n","paths":["Dockerfile/node_modules","b/é/.dockerignore/a","b/a.txt/b.md/node_modules","src/a.txt/Dockerfile/a.txt","c/c/","b/x.log/b.md/a.txt","a/src","x.log/c"]}
+{"dockerignore":"!*.log/\\*\n","paths":["c/Dockerfile/a.txt"]}
+{"dockerignore":"Dockerfile\n\\*\n**b\na?/**/[ab]\n  [ab] \n!keep/?\n","paths":["a b/.env/ab",".git/Dockerfile/b","a b/c/keep/.git","dist/y.log/dist"]}
+{"dockerignore":"!Dockerfile/src","paths":["x.log","c/src","keep/é/dist/é","c/.git/dist/b",".dockerignore/é/.git","a b/","src/x.log/src/x.log",".env"]}
+{"dockerignore":"!**\n!x.log/**b\n/*.log/a/*b","paths":["Dockerfile/c/a/.git","b",".env/Dockerfile/dist",".dockerignore/","dist/.git/keep"]}
+{"dockerignore":"b/../é\n[ab]/./a\n[ab]/src/[ab]\n","paths":["é","node_modules/a.txt",".git/keep/node_modules","x.log","b/",".git/node_modules/Dockerfile/a b","a/keep",".env/.env/keep/a b","dist/b/",".env/a.txt/.dockerignore/.env"]}
+{"dockerignore":"a?/\n/\\*/.git/.\ndist/.git/a*\n[^a]/keep/..\n","paths":[".env/b/ab/","c/","dist/src","ab/.env/src/"]}
+{"dockerignore":"*.log/Dockerfile\n.env/a?/a b\n**/.env\n**b/*/[ab]","paths":["x.log","a/b.md","Dockerfile/a.txt/.dockerignore/","keep","dist/a.txt",".env","a b","c",".git/.dockerignore"]}
+{"dockerignore":"é/Dockerfile/*b\n.git\n?\n","paths":["b/c/a"]}
+{"dockerignore":"!\\*\nx.log\n[a-c]*/dist/**\n![a-c]*\n**b/*b\n","paths":["keep"]}
+{"dockerignore":"x.log\n# Dockerfile/a/..\n[^a]/*/dist\n/.\n","paths":["a b","keep/dist"]}
+{"dockerignore":"/a?/**\n!../é/\n","paths":["ab/.env/node_modules","x.log/.git/b.md/","a b/é/.env/keep","é/Dockerfile","b/a.txt/","y.log/src/.git/c"]}
+{"dockerignore":"/**/../..\nb/?/é\n*b/a*/Dockerfile\n[a-c]*/","paths":["a.txt/dist",".dockerignore/b/a/.git",".dockerignore/ab/c/ab","b.md/keep/a b/a b",".env/keep/node_modules/","b.md/b.md/x.log"]}
+{"dockerignore":"[^a]/[a-c]*\nnode_modules\nkeep/a*/*.log\n!**/keep/[a-c]*\n[^a]/**b/Dockerfile\nsrc/a*/\\*","paths":["a b/node_modules","a b/ab","c","a/y.log/ab/.git"]}
+{"dockerignore":"!dist\n./\n  *.log \nnode_modules/*b/\na/Dockerfile\n!a?\n","paths":["y.log","c/src/c/",".dockerignore/.dockerignore/a.txt/a.txt","dist/keep/Dockerfile/a","node_modules/x.log/b","é/b.md","é/y.log",".git/b/dist","node_modules/a b/a/",".git/a b/a b"]}
+{"dockerignore":"!\\*\na?\n!\\*\n!a*/../a\n![^a]/*.log/\\*\n","paths":["a.txt/ab/a.txt/ab",".env/a/keep","dist/c/node_modules/Dockerfile","é",".dockerignore/.git/.env/node_modules","ab/src"]}
+{"dockerignore":"é/\\*\n*b/*/\n!é/**/src\n  node_modules/x.log/a \n# **/**/*","paths":["b.md/b/b/a","y.log/dist/b","a/ab/.git","node_modules/b/dist/src","é/a.txt/.env/a.txt","a.txt/y.log"]}
+{"dockerignore":"[^a]/a/src\nsrc\n!../a b/[^a]\na\n![ab]/dist/keep\n","paths":["b/","a/b","node_modules/src","b/ab","a.txt/y.log/src","node_modules/a.txt"]}
+{"dockerignore":".git/b/?\n! src//\n!**b\n  **b/[^a]/é \n[ab]/\\*\n","paths":["a.txt/a b/keep","ab/node_modules/keep/a b","b/b.md/"]}
+{"dockerignore":"/**/?\n[^a]/dist\nkeep\nx.log/\\*\n./[ab]\n![a-c]*/keep/x.log\n","paths":["b/a/.dockerignore/src","ab/a.txt/b.md",".env/a b","x.log/a b/x.log",".git","a b/node_modules/é","a"]}
+{"dockerignore":"dist/?/dist\nkeep/a*/a b/\n!*.log/src\n![ab]/**\n!src/é\n","paths":["dist/src/b.md/x.log","b/.dockerignore/ab",".env/node_modules/x.log","dist/b/y.log/.dockerignore","x.log/a/node_modules/.git","a.txt/ab/keep","node_modules/y.log",".git","y.log/.dockerignore"]}
+{"dockerignore":".\n![ab]\n!src/Dockerfile/dist\n! */**\n","paths":["a.txt"]}
+{"dockerignore":"  a*/node_modules/dist \nb/dist/\\*\n!*b/*.log\n/?\n","paths":["x.log/b.md/c","x.log/","é/.env",".env/a b","x.log/a.txt/x.log","ab"]}
+{"dockerignore":"*\n//*/.git\n*b\nDockerfile/a?/a?\n.env/[a-c]*/a?\n/*.log\n","paths":["a/y.log","a/b/c","c/src/y.log/a.txt","y.log",".env/b.md","ab/b.md/a.txt","node_modules/y.log/Dockerfile","x.log/dist"]}
+{"dockerignore":"a b\n![ab]","paths":["ab/b/dist/y.log"]}
+{"dockerignore":"!Dockerfile/a b/a\n","paths":[".dockerignore/a.txt/y.log","Dockerfile/","src/x.log/.dockerignore/ab/",".dockerignore/ab/.env/b"]}
+{"dockerignore":"../[ab]\na b/a\n!node_modules\n!node_modules\n[ab]\n./node_modules\n","paths":["b/src/a","Dockerfile/dist/","c/a b/node_modules",".env/.dockerignore/a.txt","a.txt/dist/é","src","dist/c/b.md","b.md/é","a/a b/.dockerignore"]}
+{"dockerignore":".env\n","paths":["a b/keep","a/keep/node_modules/é/",".env/b/x.log","src/a.txt","x.log","keep/Dockerfile/y.log/b/"]}
+{"dockerignore":"**/../[a-c]*","paths":["a.txt/dist",".dockerignore/.env/Dockerfile/dist"]}
+{"dockerignore":"**/**b\n.env/\\*/[a-c]*\n","paths":["node_modules/x.log/Dockerfile/x.log","dist/c/"]}
+{"dockerignore":"![ab]/a\né/..\n","paths":["keep/","Dockerfile/y.log/Dockerfile/a","node_modules/Dockerfile/a b/é/","ab/b/b","b.md/keep/ab/",".env/node_modules/a/c","a/node_modules/a b/y.log/"]}
+{"dockerignore":"!**b/.env\n","paths":[".env","y.log/","a","b/a b","src/b/a.txt/ab","src/src"]}
+{"dockerignore":"!x.log/[^a]/*b\nx.log\n\\*/a?\n!*/a*\n!/[ab]","paths":["b",".git/node_modules/é/b.md","src/.git",".dockerignore/.git/ab","a.txt",".env/é/b.md","a/Dockerfile/Dockerfile/Dockerfile","a/b","é/keep/x.log/"]}
+{"dockerignore":"![a-c]*\na?/*b/a?\na?/*b\n?/keep/\n","paths":["dist/b.md/.dockerignore","é/Dockerfile/Dockerfile/",".git"]}
+{"dockerignore":"\\*/.git\n!\\*\n/a\n# [a-c]*/*/a?\n!?/keep/é","paths":["a.txt"]}
+{"dockerignore":"[^a]/.env/..\na*/[^a]\n!**b/**b\nnode_modules\n  [^a]/[ab] \nx.log/a?/","paths":["dist/node_modules/.env","b/dist/a/.git","b.md/src","keep","src"]}
+{"dockerignore":"src/*\n!*/**/a*\n!","paths":["a.txt/b.md/ab",".env","ab/é/x.log","Dockerfile/b.md/dist/","Dockerfile/dist","src/a b/a b","y.log/a","src/.dockerignore"]}
+{"dockerignore":"a*\nkeep/Dockerfile\n.git/node_modules\né/*b/[ab]\n../**b/src\n","paths":["é/Dockerfile",".dockerignore",".env","y.log/c/a/.env","a b/.dockerignore/é/node_modules"]}
+{"dockerignore":"é\n# .././\\*\né/**/**\na?/a?/src","paths":["x.log/.git/ab","y.log"]}
+{"dockerignore":"!é/src/**b\na b\n!**b\nnode_modules\nkeep/[ab]\n/../dist\n","paths":["Dockerfile/a/é","a.txt/.git",".git/Dockerfile/ab/node_modules",".env/b.md/.git","b/keep/","dist/dist","dist/node_modules/c",".env/a b","y.log/src"]}
+{"dockerignore":"a?/.git/keep\n!a/a b/.git\na b/**b\n","paths":["Dockerfile","x.log/a.txt/a b/dist","a/Dockerfile","a/c/a.txt/.dockerignore","a.txt/.git/b/","é/.dockerignore/.git","keep/src"]}
+{"dockerignore":"!keep/.git/..\n!.git\n!a/./x.log\n","paths":["ab/Dockerfile/.env","keep/.env/.git","a.txt/é/ab","a b/keep/c/y.log","c","b/ab","a b/dist/x.log/y.log","node_modules/x.log/y.log","node_modules/.env/a b/ab"]}
+{"dockerignore":"!b/a\n","paths":["Dockerfile"]}
+{"dockerignore":".env/\n*b/","paths":["a","x.log","a b/a.txt/.dockerignore/"]}
+{"dockerignore":"!a*/keep\n!*.log/[^a]\n! **b/[ab]/é\n/[a-c]*\n/dist/.\nkeep/**b/\n","paths":["node_modules/a","keep","a.txt/é/c","a/a b/ab/y.log",".dockerignore/a/b"]}
+{"dockerignore":"!*.log/\\*/.env\n[a-c]*/.git/\n  \\*/é \n/\\*/*.log/.env\n![^a]\n*b/?/[ab]","paths":["a.txt/ab/c/a.txt","src/Dockerfile/src/keep","src/a","x.log/b/x.log/a b/"]}
+{"dockerignore":"*b\n","paths":["é/é/.dockerignore/a b","x.log/c"]}
+{"dockerignore":"!./.\n/*\n","paths":["node_modules/dist/keep",".env/keep/a/b.md","Dockerfile/a/a b","ab/.dockerignore/b.md/b.md","y.log","é/y.log/é/.env"]}
+{"dockerignore":"a/./a?\n","paths":["node_modules/.dockerignore","x.log/a/Dockerfile",".git/keep/b","a/a b/.dockerignore","c/node_modules/dist/.dockerignore","node_modules/.git/src","é/é",".git/é/a b/c"]}
+{"dockerignore":"x.log","paths":[".dockerignore","c/b/b.md/src","b.md/a/a/é","dist/x.log"]}
+{"dockerignore":"*b/?\n*.log/.git/a\nnode_modules/[ab]/a?","paths":["a.txt/.dockerignore/.git/.env","Dockerfile/node_modules","dist/","Dockerfile/.env/keep/src","c/node_modules/src","ab/a.txt",".dockerignore/src/keep/","a b/keep","b/é/.dockerignore/"]}
+{"dockerignore":"x.log\nb","paths":["x.log/c","b/.dockerignore/y.log","Dockerfile/.dockerignore/","src/Dockerfile/src/x.log",".env","é/.dockerignore","src/src/.dockerignore/.env","a b/.dockerignore/.env","b.md/ab/a.txt/node_modules"]}
+{"dockerignore":"src","paths":["keep/c/a","a/y.log/b.md",".dockerignore/dist/a.txt","a.txt/a.txt/c/"]}
+{"dockerignore":"é\nx.log/a*/\n!\\*/*b/?\n!\\*/.env/**\n","paths":["a.txt/","dist/y.log/.git/a"]}
+{"dockerignore":"!../\\*\n!a*\n!a?/keep/[ab]\n","paths":["dist","y.log/b/x.log","a/a b","keep/.git","a/.git/Dockerfile/a b",".env/dist/.dockerignore",".dockerignore/a b/dist",".git/src"]}
+{"dockerignore":"./dist/\\*\n","paths":[".env/.dockerignore/x.log",".dockerignore/.dockerignore","c/a",".env/node_modules/.git/a.txt/","dist",".git/keep/b.md","src/keep/.env/.git/","ab/ab"]}
+{"dockerignore":"!a*/..\n!?/node_modules\n!./\\*/Dockerfile\n!b\n!*b\n*b\n","paths":["é/b","keep",".dockerignore",".env/keep/ab","b.md/é/a.txt/a b",".env/Dockerfile/é/b.md/","ab/node_modules/Dockerfile","a b/Dockerfile/.git","dist"]}
+{"dockerignore":".git\n!é/[ab]/a*\n**\n/?\n!**/[ab]/é\n!a/.git/x.log","paths":[".git/c/a.txt","b","é/Dockerfile/node_modules",".dockerignore/keep"]}
+{"dockerignore":"[a-c]*/*b/Dockerfile","paths":["a/src/Dockerfile/",".git/b.md/src"]}
+{"dockerignore":"*b/.env/.git\n!./[a-c]*\n.env/[^a]\nb\nx.log/*/a b\n","paths":[".dockerignore/.env/b/c/","a.txt","x.log","a/x.log/x.log/a.txt","dist/a b","a/b"]}
+{"dockerignore":"!\\*/src/keep\n!**/dist\na?\nnode_modules/node_modules\na?\nnode_modules/Dockerfile\n","paths":["Dockerfile","ab","a b/.git/keep","a/.git","y.log/c/dist/","a.txt/.env"]}
+{"dockerignore":"x.log/[ab]\n![ab]\n!*.log\na*\n","paths":["a/","a b/a"]}
+{"dockerignore":"../src\n","paths":["a/.git","y.log","dist/dist/.env/c","x.log","c/",".git/é","keep"]}
+{"dockerignore":"é/a/dist\n!b/a?\n![a-c]*/b/[a-c]*\n!.env/\\*/b\n.git\na/..\n","paths":["keep/Dockerfile/.env/.env",".env"]}
+{"dockerignore":"?\n/a*/*\n!?/.env\n# é/.git/.git\n[a-c]*/*","paths":["b",".git/.git/a"]}
+{"dockerignore":"./src/é\n**b/Dockerfile\n?/node_modules/.git\n  a?/keep \n","paths":["ab/node_modules/","c"]}
+{"dockerignore":"! [^a]/**b\nDockerfile/[ab]\n*.log\n../**/Dockerfile\n# b/./..\n!*/.env\n","paths":["dist/.dockerignore/.dockerignore/ab","a.txt/.dockerignore/é/dist","keep/b.md/.git/é","a/Dockerfile/b.md/a","ab/keep/b/","c/b.md/.env","a.txt/é/b/c","x.log/dist/","é/.git/node_modules","ab/.git/node_modules/dist"]}
+{"dockerignore":"./a b/..\nnode_modules/x.log\n.git/\n","paths":["dist/a/dist",".git/dist","a b/a.txt/.dockerignore","é/y.log/a b/.git/",".dockerignore/x.log/Dockerfile"]}
+{"dockerignore":"src\n*b/a b\n!**/x.log\n.git/a/.env\n![^a]//src\n!./**/a?","paths":["src/b/x.log/é","a b","b.md/a.txt/keep/é","src/keep/Dockerfile/.dockerignore","keep/é","node_modules/b/a b","b.md/y.log","y.log/src/b/","keep/b.md/node_modules"]}
+{"dockerignore":"Dockerfile/[^a]/\\*\n!.env/b/Dockerfile\n./../src/.git\n![a-c]*/**b\n!a?/[^a]\n# *.log/a b","paths":["é/b/b/a.txt","src/node_modules/node_modules/",".dockerignore/dist/.env","a/dist/.env/y.log","a b/src/b.md/dist","c/x.log/dist","y.log/.env/y.log/keep","a/.env/.dockerignore","b/keep/é"]}
+{"dockerignore":"!.env/..\n./b/?\n  x.log/dist \n!..\n.git/*b\n","paths":[".git/y.log/y.log/b/","b.md/Dockerfile/ab/a.txt/","b","c/Dockerfile/.dockerignore/src","ab/a.txt/ab/ab/"]}
+{"dockerignore":"[ab]\n./node_modules//.git\n**b","paths":["dist/é/a.txt","a b","b/dist/Dockerfile/ab","Dockerfile/b"]}
+{"dockerignore":"../**\n![ab]/\\*/\n[ab]/\n","paths":["b","b.md","ab","x.log"]}
+{"dockerignore":"Dockerfile\n","paths":["é/a b/a b","src/c/b/node_modules"]}
+{"dockerignore":"\\*/dist/\\*\n  .env \na\n!x.log/[a-c]*/*.log\n!*b\n!node_modules/**/.env","paths":["ab/a.txt","keep/a b/node_modules","a/node_modules/a b",".env/","y.log/c/a.txt"]}
+{"dockerignore":"! a b\n","paths":[".dockerignore/c/Dockerfile",".git/.git"]}
+{"dockerignore":"!*b\na?/\n*b/..\n","paths":["ab/dist/a.txt/y.log",".env/a b/x.log/","ab/.env/keep","é/dist/ab","y.log/ab/src/.dockerignore",".dockerignore"]}
+{"dockerignore":"dist/\n# b/*.log\nx.log/keep","paths":["a.txt/y.log","a/a.txt/src","b"]}
+{"dockerignore":"!a*/b/*b\ndist/b\n  .env \n*.log/\n/keep/node_modules/a\n./a*/a?\n","paths":["y.log","a.txt","dist"]}
+{"dockerignore":"\\*/?/.git\n","paths":["a/Dockerfile/ab/b.md","src/é","x.log/a b/dist","a.txt/c/x.log",".env/é"]}
+{"dockerignore":"!a*/a*\na/[ab]/\\*\n!src/\\*","paths":["é","y.log/a.txt",".git/Dockerfile/x.log/x.log","src","Dockerfile/x.log","node_modules/keep/keep","y.log/.env/.git/"]}
+{"dockerignore":"?/b/\\*\n!a?/[a-c]*/\nb\na*/a\n!src\n","paths":["dist",".dockerignore/y.log/Dockerfile","a b","é","node_modules/.dockerignore",".git/a/.env"]}
+{"dockerignore":"!**\n!*b/a*/é\n[^a]/keep/[^a]\n","paths":["node_modules/b/.dockerignore/.dockerignore/","x.log",".git/dist/a/","src/node_modules/ab","a b/.git","a b/dist/dist","Dockerfile/x.log",".env/a.txt/.dockerignore/é","b.md/b.md/c/b.md"]}
+{"dockerignore":"!.git/a\n","paths":[".dockerignore/keep","c","a.txt/src"]}
+{"dockerignore":"!*b\n!/.git/?\n./**b/src/[a-c]*\n","paths":["src/a/y.log/.git","x.log/c","src/c","keep/Dockerfile","b/b/a.txt","a/a b/b.md/.env"]}
+{"dockerignore":"../a*/x.log\n! dist\n/[^a]/[^a]\n!node_modules\n./é/**b\n# ./..\n","paths":["b/é","b.md/y.log/.git",".env/.dockerignore","a.txt/ab","a b/"]}
+{"dockerignore":"*\n.env\n./a*/keep/b\n*.log\n/dist/**/.git","paths":["c/c/y.log",".dockerignore/keep/c","src/a b/é/b"]}
+{"dockerignore":"\\*/*\n","paths":[".dockerignore/é/a b/src","Dockerfile/dist/b/a.txt","x.log/b","b"]}
+{"dockerignore":"!**b/*.log/x.log\n! *.log/.git\na*/Dockerfile\na*/../node_modules","paths":[".git/dist/a/src","a.txt/a.txt",".dockerignore/Dockerfile",".git/a/dist","src/.dockerignore","Dockerfile/.git/b/.git"]}
+{"dockerignore":"a?/a b\n**b\n!./?/[^a]\n./*b/a?\n./é\n[a-c]*/.env\n","paths":["a/é/a/dist","b/y.log/keep/é"]}
+{"dockerignore":"![a-c]*/**\n![a-c]*","paths":["a",".env","c/.dockerignore","Dockerfile/a/dist"]}
+{"dockerignore":"!dist/a b\n!keep/**/*.log\n![ab]/é\n././.git\n.git/a*/\\*","paths":["Dockerfile/dist/a b","ab/b.md/é/é",".git/.git/dist/x.log","Dockerfile/keep","y.log","Dockerfile/.env","src/a b","dist/.dockerignore","a/a b/é","Dockerfile/é"]}
+{"dockerignore":"node_modules/*b\n# .git/../*\n[a-c]*/**/..\nsrc","paths":["a b/x.log/.git/node_modules","a b/dist",".dockerignore/a b"]}
+{"dockerignore":"!**b/keep/**b\n.git\na*/é/\n..\na*/*.log\n  b/Dockerfile \n","paths":["x.log","a.txt/Dockerfile/x.log","src","y.log/x.log/b.md"]}
+{"dockerignore":"a b/[a-c]*\n!a?\n/?\n","paths":["src/dist/node_modules","c/node_modules","b/.env","x.log/.dockerignore",".dockerignore/.env/y.log/src","dist/b/keep","y.log",".git"]}
+{"dockerignore":"node_modules\na b\n*.log\n!b/.\n","paths":["a/b.md/src/","é/b.md/b.md","dist","b.md/a.txt/a b/a","a b/dist/ab/node_modules","b/y.log"]}
+{"dockerignore":"!**/a*\n  keep/[ab] \n!*b\n","paths":["a b/.git","dist/c","é/a.txt","keep"]}
+{"dockerignore":"..\n.env/x.log\n!*b/Dockerfile\ndist/a?\n","paths":["y.log/b/b.md",".git/b/y.log","a/","dist/Dockerfile/node_modules/é","a b","dist/.dockerignore/.git","c/ab"]}
+{"dockerignore":"keep\nx.log/a*/\n?/*/a?\n# é","paths":["x.log/node_modules","node_modules/y.log/y.log/Dockerfile",".env/b","Dockerfile/é/dist","a.txt/a/é"]}
+{"dockerignore":"./a/dist\n../.\ndist/[^a]/a\n   \n!Dockerfile/[ab]\n","paths":[".env/src"]}
+{"dockerignore":"[ab]","paths":["keep/é","y.log/é","src/a.txt"]}
+{"dockerignore":"a?/keep/a*\n.\n.env/","paths":["y.log/.dockerignore",".dockerignore/keep/Dockerfile/node_modules","a/ab/ab",".dockerignore/a.txt/ab",".dockerignore/a.txt/.git/.env","x.log/a",".git/b/src","keep/Dockerfile/node_modules"]}
+{"dockerignore":"!?/.\n!node_modules","paths":["a/dist","keep/.dockerignore/a/b","a.txt/dist/src","node_modules/a/a b","Dockerfile/src/a b/.env","b"]}
+{"dockerignore":"![a-c]*/.\n!**b/../é\n.git/Dockerfile\n!node_modules/.env\n","paths":["dist","keep/Dockerfile","a.txt/dist/c/b","b/dist","é/src","a.txt/b/.dockerignore/.git","b/.git/keep","Dockerfile/.env/b.md","a"]}
+{"dockerignore":"src/b\n!a?/x.log\n!**b/a*\n*b/a?/a","paths":["b/src","y.log/c/c/dist/","ab/c/.env/src","é","ab/dist/node_modules/dist","keep/keep/.env","a b","b.md/a.txt"]}
+{"dockerignore":"**b\n","paths":["b","node_modules/x.log","a b/.git/.env/src",".dockerignore/b.md/y.log"]}
+{"dockerignore":"!..\n*b\n/**\n!a/Dockerfile/node_modules\n!?/[a-c]*","paths":[".git/y.log/c","a"]}
+{"dockerignore":"dist\n!?/?/\n!dist/*b","paths":[".dockerignore/keep",".env/b",".dockerignore/b.md/b.md",".dockerignore/ab",".git/a b"]}
+{"dockerignore":"![ab]/Dockerfile/**b\n!a b/../keep\n!*.log/a b","paths":["ab/","x.log/y.log/ab",".dockerignore","ab/b.md","b.md/.env","keep/b"]}
+{"dockerignore":"!a*\n**/.env/Dockerfile\n.env/\\*\na/dist\n","paths":["y.log","x.log/y.log/keep","a/b","Dockerfile/.dockerignore/ab/node_modules","é","b/a b/","a b/c"]}
+{"dockerignore":"b\n!dist/.git/..\n","paths":["y.log","a"]}
+{"dockerignore":"keep/x.log/?\n","paths":["é"]}
+{"dockerignore":"!*.log\n!.env\n[^a]/x.log/é\nb/**\n/keep/a?/a b","paths":["Dockerfile/a/c/b","x.log","a b/b/Dockerfile/x.log",".git/Dockerfile/a b/keep","c/ab/src/","é/é/c/keep"]}
+{"dockerignore":"![ab]/.git\n[ab]\n","paths":["b.md/a.txt/a b/.env","a/src/.git/Dockerfile","x.log/src/keep/.env/","a.txt/a","dist","Dockerfile/src/x.log"]}
+{"dockerignore":"/\\*/**/**b\ndist\nsrc/*/a b\n","paths":["a.txt/Dockerfile","node_modules/y.log/a b","dist/Dockerfile/src","src/",".env/a/x.log","Dockerfile","y.log/x.log/a","é",".git"]}
+{"dockerignore":"[ab]\n**\n\\*/a b\n  **/* \n","paths":[".git/b.md",".dockerignore","b.md/c/x.log/x.log/","y.log/keep/a b/dist","y.log/.env/src",".git/.env","b/a.txt/"]}
+{"dockerignore":"![ab]/../?\n*b/.","paths":["dist/c/a b/é","node_modules/b.md/.dockerignore/x.log","ab/a",".env/a.txt/y.log","a.txt/a.txt/.git","src/ab/ab/a b","keep","Dockerfile"]}
+{"dockerignore":"a*/a?","paths":["b.md","c/b/a b/y.log/"]}
+{"dockerignore":".env\na?\n**\n","paths":["a/"]}
+{"dockerignore":"\\*\n**b/**b/Dockerfile\n!keep\n\n/*b/.git\n!.","paths":["src/c","y.log/node_modules/ab"]}
+{"dockerignore":"!node_modules\n/[^a]/./*b\nkeep\nDockerfile/*.log/a\n","paths":["x.log/y.log/.git/b.md","é/.git/.env/.dockerignore","b.md/.env/x.log/é",".git","b.md/b/keep"]}
+{"dockerignore":"# Dockerfile/*.log/Dockerfile\n!/?\n!**/[ab]/keep\né/.\n","paths":["src/y.log","y.log/.env/a/.git","ab/c/keep","b.md/a/b.md",".git/b.md",".env","keep/src/.git","node_modules","a.txt","c/b/"]}
+{"dockerignore":"! \\*/node_modules\n\\*\n./dist\n*.log","paths":["é/keep/.dockerignore","a"]}
+{"dockerignore":"?\n! ?\n","paths":["keep/dist",".env/x.log","dist/node_modules"]}
+{"dockerignore":"!\nDockerfile/[a-c]*/[^a]\n/a*\n# ../*\n./keep/?\na/b/?","paths":["a/node_modules","x.log/node_modules/a/.dockerignore/","src/b",".dockerignore/x.log","a b/.env/.dockerignore","keep/.dockerignore","node_modules","c/c/b",".dockerignore/ab/a/ab"]}
+{"dockerignore":"!*","paths":["x.log/.git/keep/é","src/b.md/src/dist",".dockerignore/b.md","ab/Dockerfile/node_modules/é","Dockerfile/.dockerignore","a.txt","b.md/keep/.git","b.md/.git/b/node_modules"]}
+{"dockerignore":"/**b\n/Dockerfile\n! Dockerfile/x.log\n**/./a b","paths":[".env/.git/a.txt/Dockerfile","y.log/é/é",".git/","ab",".git/a.txt/src/Dockerfile","a b/keep/x.log/","Dockerfile/dist","src/c/Dockerfile/.env","a"]}
+{"dockerignore":"!a*/a b\n![ab]\n*.log/x.log\n# a b/[ab]\nDockerfile\n!b/node_modules\n","paths":["keep","Dockerfile","é/y.log/a.txt/src","a/","é/dist/src","node_modules/c/é/","dist/a.txt/Dockerfile"]}
+{"dockerignore":"!é/[a-c]*\n","paths":["y.log","a.txt/keep","dist/a b/a.txt","a","Dockerfile/.git/.dockerignore",".git/a.txt","Dockerfile/c/a/src",".dockerignore/c/a b","b","b.md"]}
+{"dockerignore":"!*b\ndist/é/[^a]\n..\nsrc/a b/\n","paths":[".git/src/x.log/c",".dockerignore/.git/y.log/a b","a.txt/a/c","dist/dist","dist/.env","keep/Dockerfile/a b",".git/b/c/é/"]}
+{"dockerignore":"!*b/src/..\n","paths":["src/keep/dist","é/","b.md/dist/dist/b.md"]}
+{"dockerignore":"\\*/a*\n!/*\n!.env/Dockerfile/*b\n!\\*/a*/a*\nDockerfile/keep\nx.log/\\*/?\n","paths":[".dockerignore","y.log/b/src","Dockerfile/keep/a","c/c/x.log"]}
+{"dockerignore":"*b/[a-c]*\na*/.git/.\n*.log/*b/[a-c]*\n[a-c]*/a\nb/../*\n","paths":["a b","keep","a/a"]}
+{"dockerignore":"a?/é/é\n../src\nkeep/**b/..\n![ab]/é/[ab]\n","paths":["Dockerfile/Dockerfile","a.txt/dist","c/.git/.git/src",".env/c/é","é"]}
+{"dockerignore":".\n[ab]/*b\n[ab]/[^a]/*","paths":["b","c/keep","Dockerfile/.dockerignore/src","c/Dockerfile/y.log","é/","a/c","dist/dist/src/node_modules","keep/.dockerignore","node_modules/Dockerfile"]}
+{"dockerignore":"! src/dist\n!a*/src\n./../*b\n","paths":["a b/y.log/b.md/Dockerfile"]}
+{"dockerignore":"  a/.. \n*.log\n!keep/src/é\n*b/**b/b\n/.git/.git/.git\n","paths":["b.md/.dockerignore"]}
+{"dockerignore":"?/é/[a-c]*\nx.log\n# .git/keep","paths":["node_modules/keep/.git"]}
+{"dockerignore":"! .//é\n!a\nkeep/**b\n!../a\n/[^a]/é/\\*\n!a b/dist\n","paths":[".dockerignore","a.txt/","src/keep","Dockerfile/c/a/dist","b.md","a.txt/y.log/c","a.txt/a b"]}
+{"dockerignore":"!a*/src/node_modules\na?/\\*/Dockerfile\n!keep/x.log\n! a/.","paths":["c/ab",".env/dist/ab/ab","x.log/x.log","node_modules/b/.env/b.md","a.txt/dist"]}
+{"dockerignore":"a","paths":["é"]}
+{"dockerignore":"!dist/a?\n**/.git\n","paths":["b/a b/é/dist"]}
+{"dockerignore":"!**/a*/Dockerfile","paths":[".dockerignore"]}
+{"dockerignore":"*/.env\n!src\nsrc/keep\n!**b\n!x.log","paths":[".env/.env","node_modules/c/a.txt",".dockerignore/a b/b.md/b","node_modules/.dockerignore/é/a.txt/","é/b","é/keep/.env/src","a/a.txt/keep/.env","Dockerfile",".env/a.txt/x.log/a.txt"]}
+{"dockerignore":"a/..\n!**/x.log/*.log\n*b/x.log/*b\n!a*//a b\n","paths":["b/","Dockerfile/.dockerignore/c/c","node_modules","x.log","a/src/dist","y.log/c","b.md/.env/.dockerignore"]}
+{"dockerignore":"*/[a-c]*/é/","paths":["Dockerfile/y.log/keep"]}
+{"dockerignore":"a","paths":["Dockerfile","a/keep","keep/a.txt/b"]}
+{"dockerignore":"\\*/a b\n.env/src/a?\n# .git\n!\\*/b/.env\né","paths":["é/dist","node_modules/a.txt/é/a.txt","b/y.log/.dockerignore"]}
+{"dockerignore":"a/*b/[a-c]*\n  src/src/b \nnode_modules/*b\n[ab]/./..\n! a*/./?\n","paths":["b.md/c/b/dist","ab/","y.log/keep/é/b.md","Dockerfile/é/Dockerfile/dist",".dockerignore","y.log/src/ab","a.txt/src/a.txt","é/a.txt/a/a.txt","Dockerfile/é/b"]}
+{"dockerignore":".git\n\\*\n!a/**b/dist\n./*/?\n/b/?","paths":["é/.git","é/c","y.log"]}
+{"dockerignore":"\\*/a?/**\n# *b\n./\n  * \n","paths":["é","node_modules/b.md/x.log/","a/node_modules/src","y.log/node_modules","x.log/a/keep/","a b/dist/x.log","keep",".dockerignore"]}
+{"dockerignore":"é/[^a]\n![^a]\n../b/\\*\n\\*/dist\n","paths":["é","c/src","b/b.md/.git",".env/node_modules","src/node_modules/b/ab","a/a b/.git/Dockerfile","ab/keep"]}
+{"dockerignore":"!a b/**/é","paths":["src/y.log/","src/ab/c/.dockerignore",".env/y.log/a b","a","é","b/.env/a.txt"]}
+{"dockerignore":"Dockerfile/*\n/.env/a?\n","paths":[".git/Dockerfile","a b","b.md","ab/","ab/a.txt/node_modules","a/b.md/a b/node_modules",".git/é","Dockerfile","b/x.log"]}
+{"dockerignore":"x.log\n","paths":["a/src/src/Dockerfile","c/ab/dist/.dockerignore","dist/ab/b/c"]}
+{"dockerignore":"**b/[ab]\nnode_modules/./keep","paths":["x.log/y.log/x.log","a.txt/a b","ab/x.log/keep","b/src/a","b/.git"]}
+{"dockerignore":"# [^a]\n\\*\n**\n!*.log//keep\n..\nb/*.log/a b","paths":["Dockerfile/b/c","a b/b.md/é/keep","é","a/b.md/é/src/",".dockerignore/Dockerfile/b.md","x.log/.env/x.log","c","src"]}
+{"dockerignore":"node_modules/[ab]/a\nnode_modules/a/b\n# a b\n!.git\n","paths":["ab/node_modules","a b","y.log/Dockerfile/dist","src/.git/.git","c/c/.git"]}
+{"dockerignore":"*/?","paths":["src","b.md/ab/","ab","a","c/b.md/node_modules/src",".env/b.md/x.log/b"]}
+{"dockerignore":"**/src/Dockerfile\na*\n!a b/*\n!**\n.git\n./?/?/[a-c]*","paths":["Dockerfile/keep/.env/c","src/a/b/a.txt/","src/a.txt",".dockerignore/.git/b/","a b/b/é/node_modules","Dockerfile/.git"]}
+{"dockerignore":"/[a-c]*/**\nx.log/./dist\nDockerfile/a b/*b\n?/.env/[a-c]*","paths":["é/x.log",".dockerignore/keep/a",".git/b.md/a b/","c/","a.txt","c/Dockerfile","node_modules",".git/a b/.git","é/dist","x.log/b.md/b.md/b/"]}
+{"dockerignore":"  keep/a? \n*.log\n[a-c]*/*/a?\n! .env","paths":["Dockerfile/a b/Dockerfile/.git","a b/.git/ab","a.txt/é/dist/.env","b/node_modules/node_modules","ab","Dockerfile/b/b.md",".git/keep/c",".env","é"]}
+{"dockerignore":"/keep","paths":["dist/é","c/x.log","dist/ab","é/src","keep/.dockerignore/é/node_modules"]}
+{"dockerignore":"é/*b/node_modules","paths":["a/b.md/x.log","c/src","dist/dist/ab/b","src/x.log/node_modules","Dockerfile/dist",".env/.env/node_modules/c","é/","keep"]}
+{"dockerignore":"*/node_modules/Dockerfile/\n  x.log/.. \n","paths":[".env","Dockerfile","é/.git/a","a/.git/Dockerfile","src/src/","y.log/keep","ab/c/.env/é",".git/y.log/a/node_modules"]}
+{"dockerignore":"/dist/dist\n!**/src/node_modules\n","paths":["keep","b.md"]}
+{"dockerignore":"*.log\n!node_modules/[ab]/\\*\na\n*b\n!*\n","paths":["ab","a/","src/Dockerfile/c/node_modules","y.log/y.log/a/src","a b/ab/a b/","a b/é/.env/a.txt","a b/.dockerignore/.dockerignore/b.md/",".git/node_modules/a/b.md"]}
+{"dockerignore":"Dockerfile/*.log/[^a]\n/**/é\n# [ab]/b\n[a-c]*/[^a]/é\n! keep/a*/a b\n!dist/[ab]/dist\n","paths":["ab/src","a/src","c","a b/c/b/dist","Dockerfile/x.log/b.md","a b/a.txt/c/Dockerfile","x.log/Dockerfile/é"]}
+{"dockerignore":".env/*/*b\n/src\n./node_modules\na*/./.env\n.env","paths":["keep/c/node_modules","x.log/b.md","dist/ab","x.log/.env/a b","b"]}
+{"dockerignore":".././*\na?\n","paths":["a b/x.log/keep/.dockerignore"]}
+{"dockerignore":"!\\*/a/\n/*.log\n!..","paths":["c/y.log/b.md/c","a b/keep/a b/dist",".env",".dockerignore/.env/.dockerignore","dist/src/b/node_modules","b/a.txt/dist"]}
+{"dockerignore":"!\\*/é\na*/\n!**\n**/.\n?/dist/*\n.git/.env/.env","paths":["b/a/a/.env","dist","b.md","c/node_modules/b/a","node_modules/b/b/","b/é/Dockerfile","src/b.md/y.log/b.md/","x.log/.dockerignore/a b"]}
+{"dockerignore":"keep/.env/keep\n!/node_modules/.git\n!é/[a-c]*\ndist/./é\n![^a]/*.log\né/**b/\\*","paths":["a.txt","a b/é","src/é","b.md/b.md/y.log/.git",".dockerignore/a b/a b",".git/.dockerignore","ab/a b/y.log"]}
+{"dockerignore":"?\na*/a b\n./b\n","paths":["Dockerfile/.env/y.log/x.log",".env","Dockerfile/keep"]}
+{"dockerignore":"*/a b","paths":[".env/.git","b/x.log","é/src","a/dist/node_modules","node_modules","ab/.git/c","x.log",".dockerignore/a b/node_modules"]}
+{"dockerignore":"*.log/.env\n!./?/dist\n.env/a*\n","paths":[".git/a.txt/x.log/node_modules",".dockerignore/node_modules/ab/a.txt","node_modules/x.log/b/a b","y.log/Dockerfile/.env/src","src/y.log","b.md/a","a b/.dockerignore/ab","src/Dockerfile/node_modules/.dockerignore","dist"]}
+{"dockerignore":"!../a b\n/*.log/\\*\n[^a]/.\n![a-c]*","paths":["Dockerfile/node_modules/ab","a.txt","a/b",".git/src/y.log/a.txt/","y.log/.env/b.md","b","c"]}
+{"dockerignore":"[^a]\n.git/*.log\n?/\\*/b\n","paths":["y.log/Dockerfile/.dockerignore/b","b.md/dist/node_modules","a/.git","é","b/a/keep/node_modules",".env/.dockerignore/.git/a",".dockerignore/node_modules/x.log"]}
+{"dockerignore":"!é\n","paths":[".env/a.txt","b/a.txt/b","ab/keep/x.log/"]}
+{"dockerignore":"\n","paths":["é/","dist/a b/src",".env/b.md","src/é/","ab/node_modules"]}
+{"dockerignore":"[ab]\n[a-c]*/node_modules/\\*\nsrc/é\n! **/.env\n!./x.log\n./\\*","paths":["a b","c/src/ab",".git","node_modules/.dockerignore",".env/ab/src/b.md","src/a b/src/dist"]}
+{"dockerignore":".git","paths":["a b/x.log/b/x.log"]}
+{"dockerignore":"é/a?/\\*","paths":[".dockerignore/src/a/y.log/","ab","y.log/é/dist/ab","c/b.md/Dockerfile/a.txt","é/keep","node_modules/b.md","b.md",".git"]}
+{"dockerignore":"dist\n!*/b/**b","paths":["Dockerfile/Dockerfile/b","b.md/node_modules/keep/dist","a b/dist","é",".env/c","node_modules/y.log/b","ab"]}
+{"dockerignore":"[ab]\n/src/b/é","paths":["b","Dockerfile/keep/x.log/","x.log/.dockerignore/src","dist/node_modules/b"]}
+{"dockerignore":"![^a]/é\n!\\*/*/.git\na b/*.log/node_modules\n[^a]\n!**\n!Dockerfile","paths":["b/a/y.log/x.log","Dockerfile/ab/x.log/c","dist/x.log/","c",".dockerignore/dist"]}
+{"dockerignore":"[a-c]*/**/?","paths":[".git/b.md/b","dist/b/b/b.md","é/c/keep/.git","ab",".env/a b/dist","src","a.txt/keep","keep/a.txt/.dockerignore"]}
+{"dockerignore":"./*.log/[^a]\n!*\n!a b/[a-c]*\n","paths":[".env/.git/y.log","a b/a b/.dockerignore","dist/src"]}
+{"dockerignore":"\\*\n./Dockerfile/x.log\n# [ab]/[ab]\n  b \n.git/**\n","paths":["node_modules/.dockerignore","b.md/ab/.git/node_modules","dist/b","node_modules/.env/.env",".env","b.md/ab/a.txt/dist","b/b/node_modules","node_modules/node_modules/a b"]}
+{"dockerignore":"!node_modules/[a-c]*\n*.log/keep\n","paths":[".git/y.log/b"]}
+{"dockerignore":"[^a]/**b/a*\n./[^a]\nsrc/x.log\n../?/node_modules\n!a*/*.log\né\n","paths":[".dockerignore/b.md","b.md/a b"]}
+{"dockerignore":"!x.log\nx.log/[^a]/?\na*/[a-c]*\n*b\n/[ab]","paths":["c/y.log/a.txt/.dockerignore","c/src","x.log/.git/.git/Dockerfile/","b/Dockerfile","a b/a/é/a.txt",".dockerignore/","a.txt/b.md/x.log","a b/a/b/c","keep/.dockerignore/.env/ab","a b/c/.git"]}
+{"dockerignore":"*b/*/[^a]\na?/.git/[^a]\n!Dockerfile\nkeep/node_modules\n!**b/*.log/.git","paths":["src/.dockerignore/.git/.env","b/node_modules/é","y.log","a b/y.log/.dockerignore/b",".env/y.log/dist","b/x.log/","x.log/.env/c/node_modules","a/b.md/"]}
+{"dockerignore":"?/a?/node_modules\n![^a]\n?/b/Dockerfile\n!dist","paths":[".dockerignore/a/Dockerfile","y.log/a","b/node_modules","keep/a/a/.env","c/é"]}
+{"dockerignore":"!*b/*b\n./\\*\n**/**/*b\n![^a]\n!dist\n.env/.env/.git\n","paths":["c/a b/ab","Dockerfile","node_modules/keep/a/Dockerfile","a b/dist/.dockerignore/.dockerignore","b/node_modules","ab/.env/node_modules/.dockerignore/"]}
+{"dockerignore":"../..\n*.log\nDockerfile/*b","paths":["c","dist/.env/x.log/keep",".dockerignore/.dockerignore/.git"]}
+{"dockerignore":"!.env/[a-c]*\nnode_modules/a?\n  **b/./.env \n# a*\n!*.log\n!Dockerfile","paths":["b","y.log/Dockerfile/x.log","Dockerfile/Dockerfile/ab/é","a.txt","src","node_modules/ab/b/node_modules",".git","keep/dist/dist"]}
+{"dockerignore":"!node_modules/é/[ab]\n/Dockerfile\n!b\n*b\n!keep/[^a]\n","paths":[".dockerignore","é/keep/.env/a b",".env/src/é/a.txt"]}
+{"dockerignore":"**b/.\n!node_modules/**\n/node_modules/a?","paths":["b/keep",".env/c/y.log","dist","a.txt/b/","c/.env/é","a/keep",".env/y.log","ab/y.log/node_modules/é"]}
+{"dockerignore":"?\n?\n!?/Dockerfile\n..\n*//*.log","paths":["y.log","x.log/é/é",".env/c","c","dist/.git/.env/.env","é/src",".env/dist",".dockerignore/src/b.md"]}
+{"dockerignore":"*.log\na?//\\*\na?\n/.git\na\n.\n","paths":["ab/ab/.env/ab","Dockerfile/a b/b/x.log",".env/node_modules","x.log","b/.env/.git"]}
+{"dockerignore":"!./..\n/keep/?\n*b\n# x.log/**b/a b\n","paths":["ab/","dist",".dockerignore/x.log/keep/keep","a b/x.log/.env","a.txt/b",".git"]}
+{"dockerignore":"  a?/[^a]/Dockerfile \n!*.log/[^a]/..\na\n","paths":["dist/b.md","a/dist/keep",".dockerignore/keep","node_modules/dist/keep",".dockerignore/a.txt/.dockerignore","b/c/a b","a b/.dockerignore"]}
+{"dockerignore":"! ..\n!a b/?/keep\n!keep/..\nsrc/**/*\n.git\n.env/**","paths":["b.md/a b/keep","src/b/y.log/keep","b.md/a b/a b","a.txt/é","keep","src/c/keep",".dockerignore/dist"]}
+{"dockerignore":"!?/[ab]/\\*\n[^a]\n\\*\ndist/*.log/[a-c]*\n!../src","paths":["dist/b/ab"]}
+{"dockerignore":"# Dockerfile/keep\n./*/a*","paths":["c/.dockerignore/Dockerfile/b","y.log/y.log/b.md","a.txt/node_modules"]}
+{"dockerignore":".env/*.log/keep/\n!../dist/a*\n!dist\n./Dockerfile\n","paths":["a/a.txt/a/a","dist/.dockerignore",".dockerignore/dist/b/a.txt","a.txt/.env/.dockerignore","c/.env","a b/Dockerfile","Dockerfile/c","ab/src"]}
+{"dockerignore":"*.log/?/\n**b/node_modules\n","paths":["a/b/Dockerfile/x.log","node_modules","a.txt/ab/é/a","src/.git/dist/dist",".env","b","a b/.git"]}
+{"dockerignore":"*.log/a","paths":["y.log/dist/y.log","a b/a.txt/b/node_modules",".dockerignore","a/ab/y.log","a b/b/Dockerfile/y.log/"]}
+{"dockerignore":".git/node_modules/dist\n! \\*/[^a]/a\n# **/.env","paths":["ab/c/y.log","dist/keep",".dockerignore"]}
+{"dockerignore":"a b/é\n./b/*\n!*/.\n  keep \n**","paths":["a.txt/y.log/c","dist/node_modules/.git/.env","keep/node_modules","c/b.md/node_modules/",".env"]}
+{"dockerignore":"!é/Dockerfile/[ab]\n\\*/x.log\n!a?\nx.log/[a-c]*/\n[^a]/x.log","paths":["dist/a.txt/x.log/x.log"]}
+{"dockerignore":"x.log/b/keep\n**\n/\\*/**\n[a-c]*/../b\n!b/**b","paths":[".dockerignore/x.log/src","node_modules/.git/y.log","ab/é/.env",".dockerignore/a.txt","b.md/keep/.dockerignore/.dockerignore","ab/a.txt/é/é"]}
+{"dockerignore":"node_modules/a?\n!*//**b\n# /a/src\nkeep/**b\n","paths":[".dockerignore","src/.dockerignore/y.log","node_modules/b.md/a b/keep/","keep/c/","a b/b.md/ab/ab","ab","dist/src/é/node_modules/","b.md/ab/.git/Dockerfile"]}
+{"dockerignore":".env/\n!*b/[a-c]*/.env\na b/b\ndist/**/dist\n/dist/a\n**b/.env","paths":["a/node_modules/b.md","keep","dist/b.md","a/src","b/Dockerfile/keep","ab"]}
+{"dockerignore":"**/a*/\\*\n!*/Dockerfile\n?/a?/\n\n![ab]/a b\n","paths":["keep"]}
+{"dockerignore":"/a*\n*b/a/.\n../.git\n!node_modules/x.log\n","paths":["ab/a/a.txt"]}
+{"dockerignore":"b/a*\n!node_modules\n!.env/[ab]\nkeep\n!../a*","paths":["b/.dockerignore","b.md/.dockerignore/src","keep"]}
+{"dockerignore":"!*.log/a/.git\nb\n  **/\\* \n","paths":["node_modules/a.txt/a.txt/.dockerignore"]}
+{"dockerignore":"!keep/dist/..\n[a-c]*","paths":["a b",".git/b/","node_modules/.env/é",".env","a/.git/src","y.log/.dockerignore","b/src/b"]}
+{"dockerignore":"!*/*b\n*.log/[^a]\n*/[^a]\n  a?/../* \n  [^a]/[ab] ","paths":["c/.git","é/c/","y.log/.env/","ab","b.md/b","Dockerfile/.git"]}
+{"dockerignore":"!b\n\\*/*.log\n!node_modules/node_modules\n!.git/\\*\n!keep/**b\n","paths":["node_modules/b.md/.env/.dockerignore",".env/y.log","b/.env","y.log/dist","ab/c/dist","b.md/.git/keep",".env/a/c"]}
+{"dockerignore":"!é/[^a]/.git\n*/**b/Dockerfile\n![a-c]*/dist/*.log\n[^a]/?","paths":["é"]}
+{"dockerignore":"!a?//a b\n# Dockerfile/*\n/*b/dist\n/dist/b\n[^a]/[ab]","paths":[".env/y.log/.git"]}
+{"dockerignore":"dist\n![ab]/a b\n!.git/\\*/**\n/\\*","paths":[".git/y.log/c/Dockerfile","Dockerfile"]}
+{"dockerignore":"\n! \\*/node_modules/x.log\n!keep/é","paths":[".env","a.txt/y.log/ab","b.md/ab/é","node_modules/.env/Dockerfile/Dockerfile","a b/ab/b.md/Dockerfile","a b/a b/.git/"]}
+{"dockerignore":"/node_modules/**\n# .git\n./a b/a?\n/*b/.","paths":["b.md/a.txt/a b/","a.txt/.env/.git/é","keep/.dockerignore/a b/.git",".git/.env","dist/node_modules/keep"]}
+{"dockerignore":"!é/[ab]/?","paths":["dist/y.log","x.log/.env/"]}
+{"dockerignore":"!\\*/..\n!é/[^a]\n","paths":["é/b/Dockerfile","é/.env",".git/node_modules/Dockerfile",".git/b.md","a.txt/x.log","a.txt/y.log","b.md/a b/x.log/é","y.log/"]}
+{"dockerignore":"![ab]/.git/[^a]\n  a?/\\*/\\* \n!x.log/*/*b\n!/é","paths":["src/keep/c",".git/dist",".dockerignore/a b/y.log","dist/a.txt/node_modules",".dockerignore/a","a.txt/y.log/a/y.log","dist/dist/.dockerignore","é/b.md"]}
+{"dockerignore":"![a-c]*/*b","paths":[".git","a/a.txt"]}
+{"dockerignore":"  */.. \nnode_modules/?/.git\nkeep/../.\n!..\n","paths":["node_modules","x.log","a.txt/b.md/b.md","ab/b/c",".git/Dockerfile","a/b/dist/b/","src/é","b/.git/.env/.git"]}
+{"dockerignore":"[^a]/a/a?\n/a b/node_modules/..\na*\n./.git\n?\n[a-c]*/a?","paths":["dist/.env/y.log","a/a.txt/src","é/a.txt","x.log","a/dist/a b","ab","a b/Dockerfile"]}
+{"dockerignore":"!dist","paths":["src/Dockerfile","a/dist","src/node_modules/a.txt/b","src/c/y.log/x.log"]}
+{"dockerignore":"**b/Dockerfile","paths":["c/ab","b/.dockerignore/a b/.env",".dockerignore","y.log","x.log/","a.txt/é/","b/a b","x.log/Dockerfile/é/.git","keep/src"]}
+{"dockerignore":"**/[ab]\n!a b\n**\nnode_modules/**/*.log\n","paths":[".git",".env/é","é","dist/keep/dist","a/","Dockerfile/a b/a/","dist/dist","keep/a b/dist","ab/a"]}
+{"dockerignore":"!*.log/*/[a-c]*\n![a-c]*/Dockerfile/[^a]\n/**/a\nx.log\nnode_modules/./.git\n*b/dist/src\n","paths":["dist/Dockerfile/keep/a b",".env/.env/x.log","x.log","y.log/c/node_modules","a b/keep/ab"]}
+{"dockerignore":"!/a b\n/dist\n!*/src","paths":["a b/é/src/","keep/dist/b.md","node_modules/dist/a b/","a b/b/.dockerignore",".env/.dockerignore/src"]}
+{"dockerignore":"**\n!**b/.\n!node_modules/**/dist\n  x.log \n!x.log\n[a-c]*/.env/é","paths":["a/node_modules",".env","b/.env/b.md","a b/a.txt/dist/y.log",".dockerignore/.git"]}
+{"dockerignore":"a*\n!.\né\n\\*/*/[ab]\n!/\\*","paths":["a.txt/src/ab","node_modules","é/ab/c/a","ab/.git/y.log","y.log","Dockerfile/b.md/.git","b.md","x.log/a/x.log/dist"]}
+{"dockerignore":"!a\n/a b\nsrc\n","paths":["src/node_modules/a b/keep","b/a/.git/keep","y.log/a.txt/node_modules/b.md/","dist/a.txt/é/.git",".env","c"]}
+{"dockerignore":"!src/a*/a*\n!é/\n\nnode_modules/*b\n\\*\n!.git\n","paths":["c/.dockerignore/y.log/src",".git/b"]}
+{"dockerignore":"**b/b/*\n[ab]/src\n!x.log/[^a]\ndist","paths":["y.log/x.log","x.log/é/é","a b/node_modules/.git","c/.dockerignore/ab","a/x.log"]}
+{"dockerignore":"!**b/src/[^a]\n!../[^a]\n?\n","paths":["b","é/.git/keep",".dockerignore/c/src/.env",".env/a/ab/node_modules","keep/keep","x.log/dist/","node_modules/ab/b"]}
+{"dockerignore":"/[a-c]*/src/src\n!*b/keep/\nkeep/.\n# .","paths":["a b/c","a/c/b","Dockerfile/node_modules","x.log/ab/c"]}
+{"dockerignore":"!?/*b\n![a-c]*\nx.log/..\nnode_modules/..","paths":["b/a.txt","ab"]}
+{"dockerignore":"b/src/[ab]\n!node_modules/a*\nsrc/?/é\n[ab]/[ab]/\\*\n.env/a b\nnode_modules/\n","paths":["dist/a/c","a","a.txt","y.log/keep/.env/src"]}
+{"dockerignore":"b/a*\n","paths":["a/src"]}
+{"dockerignore":"/b/src\n!?\n/keep/é\n!*.log/**\n!é/\na?\n","paths":["b.md/dist","c/src/é/keep","Dockerfile/b.md/.git",".env","Dockerfile/ab/c/x.log","a/ab/keep/b.md","node_modules/node_modules/.dockerignore/c","a/keep/a b/a b"]}
+{"dockerignore":"!**/.env\n**b/dist","paths":["y.log","Dockerfile/a/a.txt/a b"]}
+{"dockerignore":".env/a","paths":[".dockerignore","a.txt/y.log","keep","a/src/.dockerignore/x.log"]}
+{"dockerignore":"![ab]\né/é/.\n*b/x.log/é\nDockerfile/*b/*.log\n","paths":["a.txt/src","c/dist/src","é/.env","a/a/node_modules","x.log/.env","node_modules/c","b.md/dist","b/a"]}
+{"dockerignore":"/a*/[^a]/a\n!a/*.log\né/../[^a]\na b/..\n# .env/a*/dist\na b","paths":[".dockerignore/.env/b/keep","a.txt"]}
+{"dockerignore":"src\n!\n","paths":["a/keep/a/src","y.log/c/b.md","ab/keep/a/x.log"]}
+{"dockerignore":"!**/[a-c]*\n!.git\né/**/*.log\n*b\nb","paths":["Dockerfile/c/keep",".git/a b","é/x.log/ab/é","dist/a/c","dist/é/ab"]}
+{"dockerignore":"!a/../a?\nb/?\nb/a b/a\n!.git\n!\n","paths":["src/a b",".git/.dockerignore"]}
+{"dockerignore":"?/./**/\n!./a\n![a-c]*/*/a b\n[a-c]*","paths":["a/keep/b.md"]}
+{"dockerignore":".git\n!node_modules/a*/[a-c]*\nDockerfile/*/\\*\n.git\n*b","paths":["é/.env","keep","src/a b/y.log","Dockerfile/dist/Dockerfile/é","c/.env/b/b.md"]}
+{"dockerignore":"!a/[ab]\n/é\n![ab]/b/[a-c]*\n\\*/**b/.env\n?\n","paths":[".env/keep/y.log","a.txt","c/.dockerignore","src/a","keep/b/Dockerfile","x.log/.env"]}
+{"dockerignore":".\nnode_modules/..\n  **b/é \nDockerfile\n//[a-c]*\n*.log","paths":["node_modules/b/.dockerignore","src/dist/ab/keep","c"]}
+{"dockerignore":"**b/**b\na?\n!*\n/./*\na b/a?","paths":["a/","c/b/Dockerfile","y.log/.env/a/ab","ab/c",".dockerignore/y.log/b.md","a b/","é"]}
+{"dockerignore":".env/../a\n*/Dockerfile\na?\n","paths":["x.log/node_modules/ab/keep","c/src/b","ab/.git/a b/y.log","Dockerfile/a.txt/é/b.md"]}
+{"dockerignore":"!*b/[a-c]*\n!?/[^a]/dist\nb/x.log/a?\n","paths":["ab/a.txt/.git/Dockerfile/",".dockerignore/a b/keep","src"]}
+{"dockerignore":"/b/[^a]/Dockerfile\n!*b\nnode_modules/*/.env\n  .env/.env \n*.log/\\*/a?\n","paths":["a.txt/ab","x.log/é/ab","a b/keep"]}
+{"dockerignore":"./b/?\n!x.log\n.git\n!*b/b\n  .env/Dockerfile/? \n","paths":["y.log/node_modules/a b","keep","Dockerfile","c","x.log/c/src","a.txt",".git/.git","a/c/.env/ab",".env/"]}
+{"dockerignore":"a*/a?\n# ?","paths":["keep/ab/b.md/","c",".env/é","b.md","ab/a b/b.md",".git","a b/src/node_modules/ab","x.log/.dockerignore/a b","a/a/keep"]}
+{"dockerignore":"**/node_modules/\\*\n","paths":["b.md"]}
+{"dockerignore":"[a-c]*/.\n.git","paths":["c/a b/c/x.log","ab"]}
+{"dockerignore":"!.","paths":["é","b.md","b/x.log/a b","dist/b/a.txt/é"]}
+{"dockerignore":"a*/keep\n**b/x.log/.git\n!**\n","paths":["dist/keep/","a.txt","c/dist"]}
+{"dockerignore":"a b/*b/b\n**b/keep\n!./\\*/a*\na/[ab]/**b\na/\\*/b\n","paths":["b.md","b","x.log/a b/keep",".env/dist/x.log","dist/y.log",".git/c/é/é"]}
+{"dockerignore":"  a?/a? \n.git/\nDockerfile/[^a]/\n./src/[ab]\na\n!*\n","paths":[".dockerignore/src/ab/b","ab/a"]}
+{"dockerignore":"**/[a-c]*\n# b/\\*/node_modules\n/dist\n# .\n/?","paths":["c/Dockerfile/x.log/node_modules","é/","b","é/src","ab/a/","src/a b","a b/c/a b/node_modules","node_modules/node_modules/.dockerignore/y.log",".git/dist/"]}
+{"dockerignore":"!?/[^a]\na/**/**b\n**b\n# /.env/src\na*/./\n!é/a?/\\*","paths":[".dockerignore/","é/ab/keep/a",".git/dist/a/Dockerfile","c","é/é"]}
+{"dockerignore":"/[a-c]*/a b/x.log\n**b/x.log/dist\n!*.log\n/./a/Dockerfile\n! a b/./node_modules\n","paths":["node_modules/b","é/.dockerignore/","a/.env/x.log","c/a.txt/a.txt/b.md","b"]}
+{"dockerignore":"!a b/[^a]\n","paths":["é/ab/a.txt/.dockerignore","c/y.log/node_modules/é","c/ab/c","src/src/node_modules/dist"]}
+{"dockerignore":"/src/?\n# [a-c]*/*\n/.env/*.log/a?\n**b/.git/node_modules","paths":[".dockerignore","c"]}
+{"dockerignore":"?/Dockerfile\n# ././src\n!**/é/a*\n","paths":["src/.dockerignore","ab/node_modules/src/src/"]}
+{"dockerignore":"./.env/*.log/\n.git/é\n!\\*/[^a]\n[a-c]*\n","paths":["Dockerfile/.git",".git/node_modules/Dockerfile","src/.git/keep","node_modules/a","a/dist/c",".env/keep/.dockerignore","keep/src","ab/a/é"]}
+{"dockerignore":"!src\n  [^a]/. \n!","paths":["a b","x.log/é/x.log/b.md","b/é/ab/ab","src/é/Dockerfile/c","keep",".git/é/é","ab","node_modules/b","Dockerfile/.env/b"]}
+{"dockerignore":"!dist\n!**/./keep\n  ?/?/**b \n!/b/Dockerfile\n.git/**/b\n/../[ab]","paths":["b/a.txt/a.txt/","c","b/dist","node_modules","b.md/Dockerfile"]}
+{"dockerignore":"[^a]/[^a]/*.log\n! src\n/**b/..\n*.log\n","paths":["c/keep/a.txt",".git/a b/b.md","é/.git/.env/x.log","a b/.env/keep/y.log","x.log"]}
+{"dockerignore":"Dockerfile/b/node_modules\n![^a]/src\na?\n/keep/**/a?\n! *\n!","paths":["node_modules/.dockerignore","src","y.log/ab","é/y.log","a b","a.txt/a b/a/src",".env/a.txt/node_modules"]}
+{"dockerignore":"./..\n! .env/?\nx.log/../a b\n# **\n","paths":["Dockerfile/a b/a/","a b/node_modules/x.log"]}
+{"dockerignore":"Dockerfile/./.\nDockerfile/a b/?\n","paths":["é/b.md/.git/b/",".git/keep","node_modules","c/x.log/.env"]}
+{"dockerignore":"./a\n**\nDockerfile/**/x.log\n![a-c]*/[^a]/x.log","paths":["a/c/a",".dockerignore/a/","é/.git/a.txt","a.txt",".git/a.txt/é","keep","a/.dockerignore/","Dockerfile/b/Dockerfile/a.txt","ab/a/a/a"]}
+{"dockerignore":"! **\n![^a]","paths":["y.log/a b/a b","b",".dockerignore","a.txt","a",".env/b.md/"]}
+{"dockerignore":"[ab]\n.env/..\n# x.log\nkeep/**b/..\n! ?\n","paths":["x.log/.git/src/a b","b/b/é","a b/.dockerignore/é/Dockerfile","a b/Dockerfile/a/c/"]}
+{"dockerignore":"!b/.\na*/\n  Dockerfile/.env \n../*\n! b/.env","paths":["é/x.log","y.log/y.log","a b",".env/c","b.md","c/Dockerfile/","b/y.log/a b","src/keep/.git/b.md"]}
+{"dockerignore":"!?/src\ndist\n**/[^a]/b\nkeep/b\na b","paths":["é","src/é/src","src/.env/node_modules","a b/x.log","dist/é/é/b.md/","c/.git/c/","a.txt/a"]}
+{"dockerignore":"/node_modules/**\n","paths":["b/é/a/ab","keep/keep/y.log/.git",".git","node_modules","src","Dockerfile","a.txt/.git/","é/x.log"]}
+{"dockerignore":"a?/[ab]/node_modules","paths":["x.log",".git/c"]}
+{"dockerignore":"! b/[ab]\n# src/*.log/..\n!./*.log\n","paths":["b",".env/x.log","keep/.git/keep","a b","é/","keep/.git/b.md","c",".git/dist/.git/é","x.log","ab"]}
+{"dockerignore":"![a-c]*\nkeep/a*\n# .env\nsrc/[ab]\n*.log/b/a?/\nnode_modules/[^a]\n","paths":["y.log/.git/keep",".git/b.md",".env/y.log","é/.env","a/a b/src","b/dist/keep","x.log/y.log/a/src"]}
+{"dockerignore":"/b\n[^a]/?/.env\n# a/[a-c]*\n..\n","paths":["Dockerfile/a.txt/c","y.log/é","x.log/.git"]}
+{"dockerignore":"x.log\nx.log/./b\n/**b/é\n!Dockerfile/*b\na b/","paths":["a b/keep","b/.git/a","a/b.md","node_modules/Dockerfile/ab/node_modules/","b/","b.md/.env/node_modules","a.txt/y.log/.dockerignore"]}
+{"dockerignore":"!a","paths":["b.md/.env/b.md/Dockerfile",".git/a b","é"]}
+{"dockerignore":"../Dockerfile/a b\n!a\n[a-c]*/**/**\n","paths":["x.log/a.txt/é","é","a b/x.log/.env/.dockerignore","keep",".git/b.md","src/é/a.txt",".git/dist/y.log"]}
+{"dockerignore":"[^a]/src/[^a]\n*\n[ab]/*.log\nDockerfile\n*.log/**b\n","paths":["a.txt/src/b.md/a/","x.log/a.txt",".dockerignore/",".env/é","b.md/y.log/.dockerignore","keep/node_modules","a",".env/x.log/b.md"]}
+{"dockerignore":"!x.log\n!/é/[a-c]*\n# [^a]/a*/..\n/\n!node_modules\n  *b/.. ","paths":["a b/src/x.log"]}
+{"dockerignore":"  é/keep \n/é/..\n\\*/dist\n!Dockerfile/[a-c]*/[a-c]*\n\n/?\n","paths":["Dockerfile/b/keep","src/a/.env/.git",".git/é/dist","keep","x.log/keep/y.log/b.md"]}
+{"dockerignore":"./?/.\n/./a?\n! a*/**b/src\n[^a]/src\n!?/*b/keep\n  ./[a-c]* \n","paths":["node_modules/c/a/b.md"]}
+{"dockerignore":"!b/\\*\n*b/\\*/src\n*b\n?/*","paths":["y.log/.git/x.log/","ab/dist/node_modules/.git/","a.txt/y.log","a.txt/dist/a/dist"]}
+{"dockerignore":"[a-c]*\n//src\na/b\n.env/a/*b","paths":["node_modules/node_modules/x.log/.dockerignore","a.txt/.env","dist","node_modules/a.txt"]}
+{"dockerignore":"b\n","paths":["src/a b/Dockerfile","a b"]}
+{"dockerignore":"é/[ab]/.git/\n![ab]\n?/?\n","paths":["Dockerfile","a b/Dockerfile","ab/a b/x.log","y.log/src/ab","node_modules/Dockerfile/Dockerfile/a.txt","a.txt/.dockerignore/x.log/node_modules",".dockerignore/é/Dockerfile"]}
+{"dockerignore":"//[ab]\n!./x.log/dist\n","paths":["Dockerfile/.git/ab",".git/src/y.log/.git","x.log/é/.git/Dockerfile","a/b/.git/y.log","ab/.git/.env","b.md/y.log/y.log/ab","y.log/node_modules","c/y.log","src/c"]}
+{"dockerignore":"! keep\na\n./*\nsrc/..\n","paths":["keep/a b/.dockerignore/.dockerignore","b.md/a b/b",".env/keep/.env/node_modules",".dockerignore/dist/é/.dockerignore","a.txt/y.log","x.log/src/b/a.txt","b","a b/","é/y.log",".git"]}
+{"dockerignore":"keep\n![a-c]*/[^a]\n!..\nx.log","paths":["x.log/c/x.log/b.md","b/dist/x.log/Dockerfile","node_modules/a.txt/keep","x.log/","é/.dockerignore","a b/b.md","keep/a.txt",".git/Dockerfile"]}
+{"dockerignore":"Dockerfile/**/src\n/.env/./.\nDockerfile/[a-c]*\n","paths":["é/a b/src/é","a b/y.log","y.log"]}
+{"dockerignore":"  node_modules/[a-c]*/[ab] \na b/a b\n**b/\nsrc/node_modules/node_modules\n./**b/*.log\n?/b/b\n","paths":["b.md","x.log/","node_modules/dist/.git/b"]}
+{"dockerignore":"!a*/b\nb\n!.\n**b\n!src/keep/a?","paths":["node_modules/a","Dockerfile","b.md/c/b","ab/"]}
+{"dockerignore":"\\*/*.log","paths":["ab/dist/Dockerfile/a b","x.log/node_modules/a.txt","Dockerfile/dist/node_modules",".git/a/b.md",".dockerignore/y.log/",".git/Dockerfile/ab/.git/","dist/","a/a b/.env","a b/ab/ab/keep","node_modules/y.log/ab/b.md"]}
+{"dockerignore":"Dockerfile/.git\n!a*\n*.log\n/*b/Dockerfile","paths":["a","Dockerfile/b/a.txt","a b/é/a","src/.env/.git"]}
+{"dockerignore":"![a-c]*\n//**/Dockerfile\n","paths":["b/a.txt","keep/keep"]}
+{"dockerignore":"[^a]\n?/a?\n!é/[ab]","paths":["a.txt/c","é/b/a.txt","Dockerfile/dist","c",".env/Dockerfile/node_modules/é","src/ab/","keep/b","a.txt/.env/a b/a.txt"]}
+{"dockerignore":"/a/[^a]\n*b/\\*\na?/*b/b\n/a?/Dockerfile/\n!*/a?\n","paths":["b.md",".dockerignore/x.log/src","a/src/a.txt","b/.env/keep/","c/keep/node_modules","a b","a.txt/Dockerfile/","é/b/é/src"]}
+{"dockerignore":"b\na*\n*.log\na?/.env/.\n/Dockerfile/x.log\n","paths":["a/",".git/ab/.git/b.md",".git/c/node_modules/.env",".dockerignore/a b",".env/node_modules","keep/ab/b/a.txt",".git/y.log/a/a b/","dist","node_modules/y.log/x.log/.git","a b/a"]}
+{"dockerignore":"../**/*b\na?/b\n!src/*/é\n[a-c]*/.env","paths":[".env/é","y.log/keep","x.log/x.log/keep/keep"]}
+{"dockerignore":"**b/*.log/[a-c]*\n*.log/\n[^a]/a\n[^a]/dist/a?\n\\*/**b\n! .env/*.log","paths":["x.log/a.txt","b/keep/.env/keep","c","b.md/b"]}
+{"dockerignore":"..","paths":["c/","node_modules","b.md/a","é/é","a.txt","c/y.log/b/",".git/b/a b",".git/Dockerfile/node_modules/keep","y.log/é/b.md","dist/.git"]}
+{"dockerignore":"/*.log/src\n*.log/a/b\n./[a-c]*/**\n*.log/\n[a-c]*/x.log\n!..\n","paths":["c","x.log"]}
+{"dockerignore":"!.git/a/a*\n**b/Dockerfile/node_modules\n!.\n*\n","paths":[".dockerignore"]}
+{"dockerignore":"!.env/*b/..\n![a-c]*\n![^a]/./a*","paths":["y.log","b/c/b","a.txt/keep/b","src/a/x.log/a","dist","b/a/y.log","é/y.log/node_modules","keep/b.md","ab/dist/node_modules"]}
+{"dockerignore":"\na\n.git/a?/.git","paths":["dist/x.log/b.md"]}
+{"dockerignore":".git/x.log/b\n/dist\n","paths":["a b","b.md/a b/Dockerfile","keep"]}
+{"dockerignore":"!a?\n!Dockerfile\n![a-c]*/a?\n!a b/*/src\n\\*/b/[ab]/","paths":["y.log/keep/node_modules","keep/.env","é/c/y.log","y.log/a.txt/c/.git","Dockerfile/a/a.txt",".dockerignore","é/b.md/y.log/","a.txt/keep","Dockerfile/a.txt","dist"]}
+{"dockerignore":"node_modules/a/x.log","paths":["ab/.dockerignore/b","Dockerfile/x.log","b/é/a b",".env","Dockerfile/b.md"]}
+{"dockerignore":"a?/a*\n!..\n!./a?/","paths":["a.txt/c/y.log","src/a b/.dockerignore","c/node_modules","a/","a b","node_modules/b/node_modules/b.md","a/.dockerignore/x.log","b.md","a/a/a b/a"]}
+{"dockerignore":"Dockerfile\n*.log/.env\n\\*/*b\né/Dockerfile\n","paths":["y.log/b.md/dist","node_modules/.dockerignore","x.log/","c/a.txt/node_modules/",".dockerignore","a/y.log/a.txt/b","ab"]}
+{"dockerignore":"a?//[ab]\n[a-c]*/[^a]\nkeep/\\*/a?\n","paths":["b.md/é/keep","é/.git/","a/keep/node_modules","b/a/b.md","ab/x.log"]}
+{"dockerignore":"Dockerfile/.git/node_modules\n**b/*\na?/é/dist\n![^a]/node_modules\n!.git/a*/*b\n.git/node_modules/a b/","paths":["é/a.txt/keep","ab/src","x.log/a b/a b/dist"]}
+{"dockerignore":"/./\\*/","paths":["a.txt/node_modules/dist","dist/.git/a.txt","Dockerfile","é/c/Dockerfile/keep","ab/keep/.dockerignore/b.md","keep/a b/a b",".git/b/b.md"]}
+{"dockerignore":".env\n./a*//a?\na?\n**/*/*.log","paths":["Dockerfile/é/dist/é","dist/keep/"]}
+{"dockerignore":"!a?/?\n!*/.git/*b\n!/node_modules\né\n.git/*/a*\n!a b/Dockerfile/","paths":["b/a b/a b","a.txt/ab/.dockerignore/dist","a/node_modules"]}
+{"dockerignore":"!*/[a-c]*/**\n\n!*b\n/[ab]/../é\n!..\n!./\\*","paths":["node_modules/x.log/.git","a b/.env","Dockerfile","c/ab","a.txt/.env/.dockerignore"]}
+{"dockerignore":"[^a]/\n# [^a]/.git/[ab]\n","paths":["b.md/c","b/a b"]}
+{"dockerignore":"?/**b\n.git/a*","paths":["b.md"]}
+{"dockerignore":"*.log/Dockerfile\nDockerfile\n*.log/a\nsrc","paths":["a","x.log/a.txt",".dockerignore/src/y.log/y.log","a b/c","dist/é/y.log/a","x.log/c/b/ab","Dockerfile/ab/a"]}
+{"dockerignore":"  [^a]/?/.. \n.git/b/b\n?\n!a/**/*b\nb/**\n","paths":[".git/.git/ab/.git","a b/",".dockerignore/node_modules/a","src/.dockerignore/a.txt","ab/Dockerfile/.git/.env"]}
+{"dockerignore":"!**b/*/..\n.git\n","paths":["a.txt/a/a/"]}
+{"dockerignore":".env\n.env\né\n**\n![ab]\n","paths":["c/Dockerfile","keep/b/","a b","x.log/Dockerfile/ab/b",".dockerignore/dist/node_modules/y.log","b.md/b/a b/é"]}
+{"dockerignore":"x.log/\\*\n/b/a\n*b/*b/*\nb/x.log\n","paths":["b.md/c/c","a/a.txt","a.txt/a b/é","a b"]}
+{"dockerignore":"!é/.git/.env\n../.env/node_modules\ndist/[^a]/*.log\n","paths":["é","dist/a b/é","b/y.log/b/ab/","node_modules/c/.env","b.md/keep",".git/keep/é",".git/.git/.dockerignore/a.txt/","Dockerfile/dist/src"]}
+{"dockerignore":"!.git/é/a b\n","paths":["a b/.dockerignore/b","keep/b.md","b.md","dist/.dockerignore","b/.git",".env/keep/keep","y.log/x.log",".git/ab/.dockerignore/a",".dockerignore/x.log/dist/"]}
+{"dockerignore":"dist/","paths":["ab/node_modules","x.log/c/.git","é/y.log/b.md/dist","a/node_modules/ab","keep/a/x.log","dist/x.log","a/.git/.env/c","x.log/b.md/node_modules/"]}
+{"dockerignore":"!Dockerfile\n!./**b/a?\n/a?/*\n[^a]/?/.env\na?/**/a*\n","paths":["ab/é/c/b.md",".git/x.log/a.txt","keep",".git/Dockerfile","ab/b.md/ab/b.md"]}
+{"dockerignore":"/Dockerfile/Dockerfile\n!x.log\n!*.log/**/é\n!Dockerfile\ndist/./","paths":["a.txt/Dockerfile/keep","c/.git",".dockerignore/a/a","b.md/a b/keep/dist"]}
+{"dockerignore":"!**b/dist\n!Dockerfile//keep\nsrc/Dockerfile\na?/a*/a*\nnode_modules/a*/x.log\n.git/a","paths":["b.md/a.txt/.env"]}
+{"dockerignore":"?\n! ?\né/.env\n/.\n!x.log\n../x.log\n","paths":["c",".dockerignore/ab/node_modules/x.log",".env/.dockerignore/.git","a/c/y.log","é/.env/Dockerfile/node_modules","a b/"]}
+{"dockerignore":"*.log/?/.\n# é/**\nnode_modules/.env/\n! a?\ndist/*b\n!*.log/a*/*","paths":["y.log"]}
+{"dockerignore":"[a-c]*/*.log","paths":["ab/x.log/y.log/x.log","a/ab/.git","dist/ab/","y.log/a","b.md/x.log","a/é",".env/b.md/Dockerfile/a b","a.txt/src/Dockerfile/.git"]}
+{"dockerignore":"dist/**/[a-c]*\na?/Dockerfile/?\n./Dockerfile/*.log/node_modules","paths":[".env/src/a","ab/c/x.log"]}
+{"dockerignore":"*b\n!x.log/node_modules/node_modules\n!é/[^a]/\\*\nkeep/b/é\n*/?/a\n[^a]","paths":["b.md/c","src/node_modules/keep","a/Dockerfile","Dockerfile","a b/.env/.git/keep","é"]}
+{"dockerignore":"é\nkeep/[a-c]*/Dockerfile\n","paths":["é/c/.git/"]}
+{"dockerignore":"?/**/[ab]\n","paths":["ab/b.md/node_modules/","Dockerfile/y.log/x.log","y.log/.git/.dockerignore/.dockerignore","a","b/src","y.log/keep/x.log/ab","y.log/node_modules",".env/.git/b/b.md"]}
+{"dockerignore":"[ab]/keep/[a-c]*\n!Dockerfile/src/?\n\né/?/a b\ndist/.env/b\né/\n","paths":["x.log/.dockerignore","b/é/.git","y.log/.env/a/a.txt","é"]}
+{"dockerignore":"!../a?/*b\n?\n!dist/a?\n","paths":["c/a b","é/b/src/a"]}
+{"dockerignore":"**/a b/[ab]\nnode_modules/a\na/*/a*\n!node_modules/.git\n./*b/b\n/a\n","paths":["é","a"]}
+{"dockerignore":"dist/é/dist\na b//[a-c]*\ndist\n# b\n**/é","paths":["node_modules/a/a","src/src/keep","Dockerfile/a/.git/src","b.md/a/.git/é"]}
+{"dockerignore":"[ab]\n!a*/*/a*","paths":["y.log/keep/b","a.txt/keep","a b"]}
+{"dockerignore":"a b/a/a?\n\n/[^a]/a*\n/dist\nnode_modules/..\n.git/./b\n","paths":["x.log/src/é",".git/b/y.log",".dockerignore/x.log/.dockerignore","c/x.log/a/Dockerfile","y.log/dist/a b/Dockerfile","a b/src/x.log/b.md","a/dist/dist","a b/.git/c/a.txt","keep"]}
+{"dockerignore":"**\n!*.log/**b\n*/a b/.\n.env\n!a*\n?/[ab]/**b\n","paths":[".git/.git/dist/b","keep/y.log/.git","x.log","node_modules/a b/dist/x.log","dist","a.txt/b.md/node_modules","src",".env",".git/c"]}
+{"dockerignore":"!**b\n# **b/a\n[ab]\n!é/*.log\né","paths":["é",".env/é","a.txt","y.log","ab/keep/Dockerfile/a"]}
+{"dockerignore":"*/a?\nnode_modules\n# [a-c]*/a\nsrc/src/\n!Dockerfile/a?/*b\n","paths":["Dockerfile/Dockerfile/c/node_modules","x.log/b",".env/ab/"]}
+{"dockerignore":"./.git/src\n!node_modules/**/\n!a/[a-c]*\n.git/a b\n!*.log\na*/Dockerfile\n","paths":["a b","node_modules","a.txt/.env/keep","src/.git/a.txt/a.txt","c","b.md/",".env/a b/a/ab","src/c/","a.txt/node_modules/b/a b"]}
+{"dockerignore":"../b/\n!keep\n!*b\nsrc/*b\nsrc/*\n[a-c]*/.git/[^a]","paths":[".env/.env","x.log/a.txt/y.log/.git","x.log/dist","ab/b.md/.dockerignore","a/b.md/.dockerignore/x.log","a.txt/a.txt/a b/.env/","y.log/a b/Dockerfile/.dockerignore","a.txt/a/keep","node_modules/b/c","src/src/"]}
+{"dockerignore":"**b\n*/*.log/src\n!keep\n[ab]/dist","paths":["a b/keep/.git/Dockerfile","b.md/y.log/b.md","Dockerfile/b/y.log","dist/é/b.md/","b/.git/c/src"]}
+{"dockerignore":"!keep/*b\n\\*\n  **//? \n","paths":["y.log/a/é/a","a.txt/x.log/a/keep","a/src/dist/a.txt","a b/b/src/a.txt",".dockerignore/keep"]}
+{"dockerignore":".env","paths":[".git/.dockerignore/node_modules","b.md/","dist/b.md","c/src/c","c/a","a/ab/Dockerfile/b"]}
+{"dockerignore":"a b/Dockerfile\n[a-c]*/\\*\n","paths":["dist/.git/node_modules/a.txt","node_modules/node_modules","a.txt/a b/ab/"]}
+{"dockerignore":"*\na*\nnode_modules/../[^a]\n/a?\n!a*\nkeep/","paths":["a/é","é","y.log","b/a.txt/c","ab/.git","ab/a/Dockerfile/","Dockerfile/"]}
+{"dockerignore":"[^a]\n*.log/é/.git\n  src \n!a*","paths":["c"]}
+{"dockerignore":"!a?\n![ab]/\\*/?\nDockerfile/node_modules/*\nnode_modules/../\\*\n","paths":[".git/b.md","a/dist/.git","b/a.txt","y.log/.dockerignore/src",".dockerignore/a b","c/a.txt/.dockerignore/y.log","Dockerfile"]}
+{"dockerignore":"# *.log\ndist\n# ?/dist/x.log\nDockerfile/Dockerfile/..","paths":["node_modules/b.md/","y.log/a.txt/.git/"]}
+{"dockerignore":"!*b","paths":["b.md/Dockerfile/a.txt","a/.dockerignore","node_modules/a/a b/c",".git",".env"]}
+{"dockerignore":"!.git\n../[^a]\na b","paths":["dist/b","b.md/c/.git","a b/y.log/b.md/.env/","c","y.log"]}
+{"dockerignore":"././keep\nnode_modules/\nnode_modules/[^a]/\n?","paths":["ab/dist/a b/x.log","a.txt/src/.git"]}
+{"dockerignore":"a b/a b/a b\n!a*\nkeep/.env/\n[ab]/keep/..","paths":["src","ab/ab/b",".git/Dockerfile"]}
+{"dockerignore":"./[a-c]*/a\n!src/x.log/node_modules\n!/é\n!a\n","paths":["x.log/b.md","x.log/a b/node_modules","c/.git/b","b.md/dist/c/","c/b.md/keep","a b/c/b.md",".git/é/.env/c","Dockerfile/.git/a/dist"]}
+{"dockerignore":"[^a]/b/keep\n!.\n","paths":["x.log/.git","node_modules/.dockerignore","src/.dockerignore","Dockerfile/x.log/c/Dockerfile","c/.env","é"]}
+{"dockerignore":"/?\nnode_modules/node_modules\n*.log/**/*b\nb\nkeep/[ab]/b","paths":["src/b.md/é","x.log/x.log/a",".git/dist/a/b","y.log/src/y.log/Dockerfile"]}
+{"dockerignore":"*.log\né/../.env\n\\*/x.log\n  *.log/** ","paths":[".env/keep/src/x.log",".dockerignore/x.log/src"]}
+{"dockerignore":"b/\n/dist/*.log\nx.log\n!.\n/[a-c]*/src\n.","paths":["a b"]}
+{"dockerignore":"# **/node_modules/[ab]\n[^a]/**b\n[^a]\n","paths":["ab/b.md/b.md","a b/b.md","node_modules/.dockerignore/","node_modules/x.log/dist","dist/x.log","ab/b/.env",".env/Dockerfile","b.md/.dockerignore/é/.dockerignore"]}
+{"dockerignore":"*.log/Dockerfile\nnode_modules/src/\n*b//dist\nDockerfile/\n!*\n","paths":["a b/b.md","é/b/é/a.txt","a/keep/b.md/keep","keep/b/a/y.log",".env","x.log/node_modules/.env/ab","b.md/a b"]}
+{"dockerignore":"//a*/.git\n!.git\n# ?/src\n\\*/a?/[ab]\n","paths":["src","b/ab/c","b/Dockerfile/","b/ab/y.log/keep","c/a.txt/keep/ab","a.txt/b.md/a.txt/","é/a b/ab","a b/b.md/Dockerfile/"]}
+{"dockerignore":"!**b/[ab]\n/dist\nDockerfile\na b\n# node_modules/keep\n!./a*/\\*\n","paths":["a.txt/ab/y.log/.dockerignore","a.txt/é/node_modules/é",".env/dist","src/a/a b/b.md/",".dockerignore","Dockerfile/src/.env","c/"]}
+{"dockerignore":"  keep/ \nnode_modules/*.log/**\nx.log\n*/b/[ab]\nx.log/**/","paths":["a/dist/.git/é","ab/y.log/","ab/y.log/a","x.log/","c/.dockerignore","a b/c/a b/é"]}
+{"dockerignore":"  Dockerfile/[a-c]*/[a-c]* \n*.log/[^a]/dist\n","paths":["b.md/",".dockerignore/Dockerfile/.git/y.log","ab/.git/é/é","x.log/a.txt/.env","y.log/keep",".git/a.txt/é/node_modules"]}
+{"dockerignore":"! [^a]/a\n*.log/\n*b/[ab]\n","paths":["b.md/.dockerignore/node_modules/x.log","b.md/b.md/a","dist/node_modules/y.log/src","b.md/y.log/.dockerignore","b/.git/b/dist","x.log/ab","c/.env","a/c/b.md/.env","a.txt/x.log/a.txt"]}
+{"dockerignore":"![a-c]*/./a*\n.env/x.log","paths":["b.md/node_modules/src/a.txt","é/b/Dockerfile/x.log","x.log/b.md/.git/x.log","node_modules/.env","src",".git","keep/.git/","dist/src/.env/a",".dockerignore/ab/src/keep/"]}
+{"dockerignore":"Dockerfile/é/.\n/é/node_modules\n../\nnode_modules/*/\na/**b\n","paths":["a/dist/a/dist"]}
+{"dockerignore":"[a-c]*\nkeep/[ab]/*b\n\\*/b/*b\n","paths":["dist/src/a.txt","keep/dist/keep/x.log","é/dist/Dockerfile/a b"]}
+{"dockerignore":"!./[a-c]*\n![^a]/[ab]/b\nb/[ab]/a\n","paths":["x.log","c/.dockerignore","b.md/é/src","b.md/.git/c/y.log/","Dockerfile/b.md/node_modules","b.md/a b"]}
+{"dockerignore":"dist//a*","paths":["b/a/.git/.dockerignore","a/dist/src/.dockerignore","Dockerfile","a/","y.log/ab/c/node_modules"]}
+{"dockerignore":"./?\na b/b/","paths":["a","a b",".dockerignore","Dockerfile"]}
+{"dockerignore":"keep/.git/a\ndist/./\n!a?/?\n.git/**\n![a-c]*/src\n","paths":["a.txt",".env/a b/é/a.txt","a/é/a.txt/a b",".git/b/dist/keep","dist/c/a b","x.log/é/dist/.env"]}
+{"dockerignore":"!..\né/a*\n!**/.env/[ab]\n","paths":["b.md/é","y.log/","ab/c/ab","keep/keep/b.md","node_modules/b/.git","a b/x.log/b.md/keep","src/b/src/ab","dist/a.txt/keep/keep"]}
+{"dockerignore":"!Dockerfile/../src\n!**/src/**b\nsrc/.env\n! keep/Dockerfile/[ab]\n!*b","paths":["dist/x.log/node_modules/c","a b/x.log","node_modules","é/b.md/a b/dist","b/.git/node_modules/b","é/.env/a b","c/a.txt"]}
+{"dockerignore":"keep/./a b\nb/x.log\nkeep/?/\nb\nkeep/é\n","paths":[".git/a/.git","Dockerfile/b.md/",".git/Dockerfile/b/","é/dist/.git/.env",".git/b.md/node_modules/a","x.log/y.log/","node_modules/a.txt"]}
+{"dockerignore":"  a* \n/*\nb/a*\n*/**b\na?/keep/a*\n../*b","paths":["y.log/",".dockerignore/a b","keep/node_modules","a b/c","Dockerfile/a.txt",".git","ab/.env/a/keep","Dockerfile/src/c"]}
+{"dockerignore":".env/a b/?\na?\n!dist/[ab]\n","paths":["a.txt/Dockerfile","b.md/.dockerignore/",".dockerignore/a b/Dockerfile","dist/.env/node_modules/node_modules",".dockerignore/x.log/x.log"]}
+{"dockerignore":"!node_modules\n![ab]\n\\*\n!.\n/.env\n  ? ","paths":["Dockerfile/a b/x.log","y.log","ab","a","b.md","c/c/a/a b","c/b.md/é/.dockerignore","a b/a b/y.log/x.log"]}
+{"dockerignore":"!**\n!node_modules/**b\n!?/Dockerfile\n# b\n","paths":["a/é","b.md/b.md/a.txt/keep","é/Dockerfile/b/.env",".env/keep/",".dockerignore","Dockerfile/.env/node_modules/","Dockerfile/ab/Dockerfile","src/Dockerfile/.git","Dockerfile/dist/.env","b/Dockerfile"]}
+{"dockerignore":"!*\nsrc\n[a-c]*/x.log/\\*","paths":[".git/c/b","ab/.dockerignore/node_modules","dist/x.log/a b/ab","Dockerfile/a.txt","a.txt/.git/b.md/a/"]}
+{"dockerignore":"!é/b\n[^a]\nnode_modules//é","paths":["é/a.txt","a/b/.dockerignore/.dockerignore",".env/a/src","node_modules/.git/dist/Dockerfile","ab/b.md","a.txt/node_modules/c/node_modules","ab/src/node_modules/","a/c"]}
+{"dockerignore":"a*/\n**/.env/\n!a?/Dockerfile/.env\nkeep/a?/\n!?\n!keep","paths":["src/é/x.log","a.txt/b/b.md"]}
+{"dockerignore":"é/Dockerfile","paths":["a/src/a.txt/b","x.log/a.txt/x.log","ab/node_modules/x.log","Dockerfile","dist/a.txt/a","b/é/keep","src/.dockerignore/.env","dist/Dockerfile/a.txt","x.log/dist"]}
+{"dockerignore":"!.git\n!.\n[^a]\nnode_modules/keep/.env/\n!../é/src\n","paths":[".dockerignore/.git/dist/ab",".env/é/ab","x.log/.git/a","b.md/a b"]}
+{"dockerignore":"[ab]/?/dist\n!a*\n.env\n# *b/*\n/x.log/**b/.git\n./*b\n","paths":["é/keep","a.txt/dist/.dockerignore"]}
+{"dockerignore":"/?\n[a-c]*/\\*","paths":[".dockerignore/.env/.git","b.md/b",".env/.dockerignore/keep/a b","é","ab/ab",".env/a/ab/y.log/","y.log/.dockerignore/b/node_modules","a/c/node_modules/keep"]}
+{"dockerignore":"*b/Dockerfile/x.log\n*.log\n","paths":["node_modules/Dockerfile/","b/node_modules","ab/node_modules/é/a b","y.log/"]}
+{"dockerignore":"! ..\nDockerfile/[a-c]*\n","paths":["ab/dist/.env"]}
+{"dockerignore":"# a?\n**/Dockerfile\na\n**\n.git\n","paths":["a b/c","a b/keep/é/é","y.log/.env/b","ab/a b","ab/b/b",".env/ab/y.log/dist"]}
+{"dockerignore":".git/[a-c]*/*/\n","paths":["é/.git/node_modules"]}
+{"dockerignore":"!./é\n?/a*/[ab]\n![ab]/src\n[ab]/*/?\n[^a]/\n  ?/src/? ","paths":["a b/.git","node_modules","ab","b/y.log/.git",".dockerignore/ab","c","y.log/a.txt","y.log/c/.git","b/node_modules"]}
+{"dockerignore":"dist\n..\n/é/*b\n/Dockerfile/**b","paths":["x.log/c/keep","é/ab/a b"]}
+{"dockerignore":"a b/a","paths":["c/x.log/c/ab",".git/.env/.env/Dockerfile","dist/é/x.log/a b"]}
+{"dockerignore":"keep/[ab]/a?\n**b\nb\n!keep/*.log\n","paths":["a/node_modules/a","node_modules",".git/y.log/node_modules/Dockerfile","dist/y.log/ab","a.txt/keep/.dockerignore","a.txt/a b/a b/a"]}
+{"dockerignore":"!..\nx.log\ndist/*b\n!b\n\n","paths":["c/b/a.txt"]}
+{"dockerignore":"# node_modules/[ab]\n!a*\n!\\*/..","paths":["a.txt/dist","y.log/x.log/src",".git/b"]}
+{"dockerignore":"a*/node_modules\na?/node_modules\n","paths":["node_modules/node_modules/src/keep"]}
+{"dockerignore":"!src/[a-c]*/é\n![ab]\n!src\n# a?/../dist\n[^a]/\\*\n","paths":["a.txt/.dockerignore","a/b.md/a b","a.txt/é","x.log/x.log","src/b","c/y.log/.env"]}
+{"dockerignore":"\ndist/?\n!.\n  ./**b/. \n","paths":["a.txt/b","é","keep/keep/a b","Dockerfile/Dockerfile/Dockerfile","ab/b.md/keep/keep"]}
+{"dockerignore":"/node_modules/\\*/*b\n","paths":["b.md/node_modules/b","node_modules/Dockerfile"]}
+{"dockerignore":"/dist/src/b\n# Dockerfile/Dockerfile","paths":["é/x.log"]}
+{"dockerignore":"![a-c]*\ndist","paths":["Dockerfile/a b/x.log"]}
+{"dockerignore":"/node_modules\n.git/.\n./a b/a/.\na b\n","paths":[".git","y.log/node_modules"]}
+{"dockerignore":"![a-c]*/\\*\nx.log/node_modules/..\n!node_modules/keep\n","paths":["c/Dockerfile/x.log","x.log/a.txt/x.log","dist/a b/src/src",".env/src/x.log","src/a.txt","a b/Dockerfile","b/a/é"]}
+{"dockerignore":"[a-c]*/a\n# x.log\n/x.log/./é\nb/x.log/\n./b/dist","paths":[".dockerignore/é/.env","b.md","é/node_modules/b/.git","ab/dist/c/",".git/x.log/a b/keep","node_modules/c/y.log/dist","Dockerfile/src/Dockerfile/.dockerignore",".git/a b"]}
+{"dockerignore":"./.git\n! **/*b/a?\nnode_modules/a?/a b\n!Dockerfile/node_modules\n  **/../**b \n?\n","paths":["b.md/é","b/.dockerignore","node_modules/Dockerfile/c","b.md/x.log/c/.git/","y.log/a.txt/.git",".env/b/src/b.md","c/.git/"]}
+{"dockerignore":"*/*/.env\n!*\na?/dist/*","paths":["node_modules/keep"]}
+{"dockerignore":"!a b/dist\na?/node_modules/*.log\n!a*/dist/src\n!/b","paths":["b/a/.dockerignore/b.md"]}
+{"dockerignore":"/x.log/\n!.git\n.\n!a\n","paths":[".dockerignore/src/é/ab","ab/dist/a"]}
+{"dockerignore":"/[ab]\n!**b/?/b\n!node_modules/a\n","paths":["dist/b","ab/y.log/a.txt","c/.git/é/b","dist/a/é/é"]}
+{"dockerignore":"!dist/é\n../[^a]","paths":["src/a b/b/a b","c/.dockerignore/b/.env","dist/a b/dist/.dockerignore","node_modules","a.txt/a.txt/y.log/.dockerignore","a/src","b","x.log/y.log/ab/.git"]}
+{"dockerignore":"keep/[ab]\n","paths":["dist/.git","x.log/node_modules/a.txt","keep","ab/.env/src"]}
+{"dockerignore":".git\n# *.log/**b/.git\nsrc/[^a]/.\n*b/\n*/.\nb/[^a]","paths":["a/b.md",".env/.dockerignore/c/b.md",".env/ab","x.log/","b.md/node_modules","node_modules/dist","dist/b.md","ab/b/c","é/ab"]}
+{"dockerignore":"**b/a*\n!**/src\n# \na/[^a]/*.log\n?/\\*\nkeep/[a-c]*","paths":["dist/é/.env","a.txt/a.txt/keep/.env","b","a/.env/b/keep/","a.txt/ab",".git/ab/b.md"]}
+{"dockerignore":"/[^a]/x.log/[^a]","paths":["keep",".git/x.log/node_modules","x.log/node_modules/b","é/a b/Dockerfile/.git"]}
+{"dockerignore":"*.log\n/[ab]/*\nDockerfile/a?/*\na*/\\*\n# [a-c]*","paths":["b.md/Dockerfile/.git/a.txt","é/node_modules","keep/ab/b.md/src","a.txt/","src",".env/a/.git/.env","b/c/b.md","y.log"]}
+{"dockerignore":"!..//Dockerfile","paths":["y.log/a.txt/a/c","dist/.env","b.md/.env",".env/b.md","a b/keep/a/Dockerfile","x.log","b.md/Dockerfile/keep","node_modules/a b/b/.env/"]}
+{"dockerignore":"!node_modules\n![^a]","paths":["Dockerfile/.dockerignore/dist","ab/b.md/b/a.txt","é/.dockerignore/b.md/a"]}
+{"dockerignore":"!*/a?\n","paths":["src/keep/node_modules/.env","b/b.md/é","b/é/x.log",".env","b.md","a b/src/a b","Dockerfile","b/.env/.git","keep"]}
+{"dockerignore":"?\nnode_modules/*.log/Dockerfile\n..\n!é\n  a*/.git \n/*b/[^a]","paths":["é","src/b/x.log","b.md/ab",".dockerignore/é","src/b.md/ab/x.log","y.log/a.txt/c","node_modules"]}
+{"dockerignore":".env/é\n","paths":["b.md/.dockerignore/src/é","c/","é/.git/a",".env/c/ab","src"]}
+{"dockerignore":"../dist\n!b/?\na?/src/dist\nsrc\n\\*\né/\n","paths":["b.md/y.log/b","keep",".env/Dockerfile/dist/a b","src/c/.dockerignore/b","b.md/.git/é","é","c/b.md/b.md","a/b.md/.git","node_modules/é/","src/b.md/b/b.md"]}
+{"dockerignore":"a*\n**b\n!keep\n**b","paths":["keep/node_modules/node_modules","b.md/a b/dist","Dockerfile/b.md/dist",".env/a/dist","Dockerfile/keep/node_modules/keep"]}
+{"dockerignore":"!.git\n!a/src\n!\n  ? \nkeep","paths":[".git/a b/keep","keep/b/Dockerfile/keep"]}
+{"dockerignore":"[a-c]*/.git/b/\na?/a b/\n![a-c]*/src/node_modules\n!?","paths":["a","y.log/y.log","a.txt","Dockerfile"]}
+{"dockerignore":"**/Dockerfile/*.log\n/?/?\n[ab]/dist","paths":["é/b.md/dist/Dockerfile","ab/a/.git/b.md","b.md/Dockerfile/.env","dist",".git/dist/a.txt"]}
+{"dockerignore":"!x.log/*.log\n\n[ab]/a b//\n*/a/..\n**b\n","paths":["c","a.txt/b","a b/Dockerfile"]}
+{"dockerignore":"a*/\\*/[^a]\n!*b/.git/*.log\n!*.log/*.log/node_modules\n!**/.git\n*b/*/\\*\né/x.log/a*\n","paths":[".git/node_modules",".env/.dockerignore/c","Dockerfile/.env/ab/.dockerignore","a.txt","keep","b/.env/.dockerignore",".env/.env/a/node_modules"]}
+{"dockerignore":"x.log","paths":["a/é",".env/src/b.md","dist/Dockerfile","Dockerfile/Dockerfile/src/b.md","src/x.log/a.txt",".git/dist/ab/src","x.log/b.md/ab/dist"]}
+{"dockerignore":"!a?/é/Dockerfile\n# ?\n./\\*\nx.log\n","paths":[".dockerignore/a/b/ab","a","src/c/a b/c","a b/node_modules/.git","keep",".git/a/y.log/x.log"]}
+{"dockerignore":"!**/Dockerfile/*.log\n","paths":["dist/ab","é/y.log/a b",".git/é/é/b.md","ab/a/a.txt/src","ab/.git/.env/.env","a b/a/a/Dockerfile","x.log/b.md",".env/keep","node_modules/.dockerignore/ab/é"]}
+{"dockerignore":"!é\n","paths":["y.log/src/y.log/","b/Dockerfile/.env","b/b.md","a.txt/src/node_modules","ab/keep/.dockerignore/.git"]}
+{"dockerignore":"[^a]\n![a-c]*\n# node_modules//é\n","paths":[".dockerignore","c/node_modules","ab/node_modules/.env","keep","node_modules/x.log/é"]}
+{"dockerignore":"keep/\n/**b\n.git/[a-c]*/.git\n!node_modules/a b/*b\n?/a b/*b/\n..\n","paths":["a.txt/.git/é","b.md/x.log/b.md/.env"]}
+{"dockerignore":"x.log/x.log\n\\*/a\na b/..\n","paths":[".env/a/.dockerignore/.git"]}
+{"dockerignore":"**b/b\n!/.git/.git\n!a*\n.env/Dockerfile/Dockerfile\n","paths":["b/dist/c","y.log/Dockerfile/a/a b","ab/b.md/dist/.dockerignore","dist/x.log",".dockerignore/Dockerfile/b","keep/node_modules/y.log","a b/","a/node_modules/a b/keep"]}
+{"dockerignore":"!../a*\nx.log/Dockerfile\n!é/\\*\nx.log\n","paths":["a b",".dockerignore/é","ab/dist/b.md/b.md","node_modules/é"]}
+{"dockerignore":"src/\n!**/keep/[^a]\n","paths":["x.log/ab/a.txt"]}
+{"dockerignore":"\\*","paths":["y.log/.dockerignore","a/.git/node_modules/y.log",".git/y.log/a","x.log/ab/","src/a/Dockerfile",".env/"]}
+{"dockerignore":"\n  /a? \n!b/.git/Dockerfile","paths":["b.md","Dockerfile/a","Dockerfile/é","b/.git/node_modules/a b","node_modules/node_modules/y.log/b/","c/y.log","dist","c/.git","node_modules/y.log/node_modules/src","ab/.dockerignore"]}
+{"dockerignore":"","paths":[".dockerignore/a.txt/.git/c/","b.md/keep/c/node_modules","node_modules/node_modules","c/.env/a.txt","a b/x.log/b/.dockerignore/"]}
+{"dockerignore":"![a-c]*\n!Dockerfile/dist/.\n/**\n  Dockerfile/x.log/. \na?/b","paths":["y.log/.git/.env","a","Dockerfile/y.log/Dockerfile/c","b/a.txt/dist/src","node_modules","c"]}
+{"dockerignore":"! dist/.git/a?\n/.git/dist\n/.env/[^a]\nb","paths":["x.log/a b/a.txt","Dockerfile/x.log","y.log/ab/Dockerfile/c","node_modules/node_modules","keep",".env/x.log/node_modules/","b/c","src/a b","dist/y.log/ab","c/a.txt/c/node_modules"]}
+{"dockerignore":"x.log/b\n*/.env/.\n[ab]/.\n/a b/keep\n","paths":["a","ab/y.log/dist/b"]}
+{"dockerignore":"x.log/[^a]\n!..\né\n.git/","paths":["b/a/c"]}
+{"dockerignore":"keep\n","paths":["src/keep/Dockerfile/.git","a b/c/keep","ab/.git","keep","Dockerfile/.env","x.log","src/.dockerignore/y.log"]}
+{"dockerignore":"**b\n/../[a-c]*","paths":["y.log/b","c/Dockerfile/keep/a b",".dockerignore/keep/.git/ab","c/.dockerignore/.git/src","b.md/a.txt/Dockerfile","node_modules/src","é","a.txt/.env"]}
+{"dockerignore":"!src\n!*\né/[ab]\n","paths":[".git/c","y.log/keep/y.log",".env/","Dockerfile","y.log/Dockerfile/y.log/x.log","é/x.log",".git/x.log/b.md/a"]}
+{"dockerignore":"keep\na b/.git/?\n./b/.\n[^a]/\\*/*b\n!a b\n","paths":[".git/dist/Dockerfile/b","a b","a/.dockerignore/.git/Dockerfile",".env","b/","keep/x.log/src",".git/a.txt"]}
+{"dockerignore":"/*.log\n*b\nnode_modules/src\na*/a b/..","paths":["node_modules/a b/node_modules"]}
+{"dockerignore":"# é/[^a]\n!x.log/[^a]/*b\n./keep/keep","paths":["a.txt",".env/ab/b.md/é","b.md/","x.log/dist/.git/","a/Dockerfile/.git/a.txt","node_modules/a/b/","src/.env/node_modules/Dockerfile","keep","src/.dockerignore"]}
+{"dockerignore":"! .","paths":["node_modules/y.log",".env/a","é/Dockerfile/.env/a","é/Dockerfile/.git/Dockerfile",".env/b","b/x.log/ab/c",".git/keep/node_modules","src","keep"]}
+{"dockerignore":"\\*/..\n","paths":["x.log/ab/Dockerfile","node_modules/c/dist","a/Dockerfile/c","keep","Dockerfile/node_modules/y.log","a/é/node_modules/Dockerfile",".git/.env/a","ab/x.log/.dockerignore"]}
+{"dockerignore":"!node_modules\n!a*/*b\n*/.\nb/**","paths":["b.md/.env/y.log","Dockerfile/x.log/keep",".git/.dockerignore","b.md/keep/c","src/b",".git/Dockerfile","keep"]}
+{"dockerignore":"!.env\n./*\n# \n!Dockerfile/Dockerfile","paths":["b.md/c/c/é",".dockerignore/b.md/dist/src","c/b/é/.dockerignore"]}
+{"dockerignore":".././.env\n  dist/a?/* \nsrc\na\nsrc/[a-c]*/\na b","paths":["a.txt","dist/Dockerfile/.dockerignore/ab","c/"]}
+{"dockerignore":"keep\n**b/[^a]/b\n!b\n!keep/\na\n","paths":["x.log/é","keep","a/b.md/c",".env/.git/a.txt/","y.log/Dockerfile/y.log",".git","a b/é/a.txt","x.log/keep"]}
+{"dockerignore":"/[a-c]*\n","paths":["ab/a b/a.txt/Dockerfile","y.log/c/Dockerfile/b.md","node_modules/a/a/node_modules/",".dockerignore/Dockerfile/c","a.txt/node_modules/Dockerfile/.dockerignore/"]}
+{"dockerignore":"/a?/a\n![^a]/..\n./keep/\n","paths":["dist/b/src","a/y.log/x.log/.env","é/y.log",".env/","b/b.md/x.log/x.log"]}
+{"dockerignore":"[a-c]*/?/a\n! keep/node_modules\n! \\*\nb/*\n**\n","paths":["c/ab/é/.git","src/a.txt","node_modules/b/ab","é/.dockerignore/x.log","a/.dockerignore/a.txt"]}
+{"dockerignore":"!./.env/*.log\n//node_modules\n*.log\nnode_modules/.git\n","paths":["node_modules/b.md","a b/y.log/dist","c/.git/Dockerfile","y.log/a b","a b/.git/b","x.log","ab/y.log/node_modules/a b","src/b.md/a b","keep/x.log/a b/Dockerfile"]}
+{"dockerignore":"!Dockerfile\ndist/[a-c]*/a?\n","paths":["a b/src/ab",".env/keep/","keep/b","src/y.log/.dockerignore/b.md"]}
+{"dockerignore":"a*/*b\n/a*\n","paths":["é","a b/.dockerignore/c/y.log","dist/keep/a.txt/dist","a b/dist","src/keep/.git/c","x.log/b/src"]}
+{"dockerignore":".git\n[a-c]*/**b/[^a]\n/./*/.git\n!./**\n![^a]/[ab]/.env","paths":["a.txt",".git/keep","a/src/b.md/.git","keep/a b/keep","b/a",".dockerignore/a b","dist/.git","a b/keep/src",".dockerignore/a.txt","c/y.log"]}
+{"dockerignore":"a/*b/**b\n!**/src\n*b/*b\n","paths":[".git/a.txt/.git/a.txt","x.log/node_modules/.dockerignore","keep/ab/.dockerignore/src","ab",".dockerignore/b","c/dist/y.log"]}
+{"dockerignore":"[ab]/.git/[a-c]*\n!é\nb/node_modules/[a-c]*","paths":["src/x.log/.dockerignore/b.md","keep/dist/Dockerfile/dist"]}
+{"dockerignore":"! src/a*/b\n!*b/../node_modules\n","paths":["ab/","node_modules/b/"]}
+{"dockerignore":"!*b/*b\n  ./*/é \n","paths":["b/b",".git/keep/b.md/b.md","é/Dockerfile/b.md/b.md/"]}
+{"dockerignore":".git\n.\n![a-c]*/a?/a\n","paths":["b/.git/src/dist","ab","c/é/c","Dockerfile"]}
+{"dockerignore":"a?/node_modules//\n[ab]/.env/dist\n","paths":["ab/c/y.log/node_modules",".dockerignore/b.md/x.log/.git"]}
+{"dockerignore":"!src\n/[ab]/a/?\na b/keep/.env\n!Dockerfile/node_modules/.git\n!**b/.\n! x.log/a*/.git\n","paths":["b.md"]}
+{"dockerignore":"![a-c]*/.git/**b","paths":[".dockerignore/b/dist/.env","ab/.env/a.txt","b/b.md/a",".env","é"]}
+{"dockerignore":".env/é/[ab]\n../\n.git//a*\n*b/[a-c]*/Dockerfile\n.env/\n\\*/","paths":["é/a","b.md/é/a/src","src/dist/src/src","src/ab/y.log/é/","a.txt/","y.log/a/ab/.dockerignore"]}
+{"dockerignore":"/é/dist\n!b/Dockerfile/a b\n.//b\n.git/..\n!\\*/src\n","paths":["ab/x.log/src","c/.git/x.log/a","Dockerfile/keep/.git/",".env/y.log/.git/a b","a.txt/x.log/.dockerignore/x.log"]}
+{"dockerignore":"!a*/.env\n# a b/.env/é\n*.log/.git/a*\n","paths":["x.log/a/é/y.log","a",".dockerignore/y.log/Dockerfile","Dockerfile","a b/b.md/é","b.md/b/y.log","c","b.md/y.log","src"]}
+{"dockerignore":"*b/**b/../\nsrc/a*/**b\n  .env/é/* \nb/a?\n!é/a b\n?","paths":[".env","src","a b/a/ab",".dockerignore"]}
+{"dockerignore":"src\n!src/*b\nb/Dockerfile/.\n**b/*b/*.log\n!Dockerfile/./\\*","paths":["a.txt/b.md/.dockerignore/b","dist/b.md/x.log/.git","x.log/dist/a.txt/.git","Dockerfile/é","c/x.log/a/dist","b/y.log/Dockerfile/a b/","a.txt/Dockerfile/a.txt"]}
+{"dockerignore":"# .git/x.log/é\n!\\*/**/a\n.env/é/é\n! a?/a*/[ab]","paths":["node_modules/keep/ab/src","node_modules/c","y.log/é/keep","dist/.dockerignore/c/keep","b","x.log/é/y.log",".dockerignore/x.log"]}
+{"dockerignore":"!*.log/keep/keep\n!a b\n","paths":["src","b.md","a b/a b/ab",".env/a b/a b/b"]}
+{"dockerignore":"/[ab]/**b/a\nkeep/?\nDockerfile\n*.log/x.log/.\n!x.log/a\n![ab]","paths":["node_modules/dist","node_modules/src","a.txt/"]}
+{"dockerignore":"/.git/a?\na*/a\n","paths":[".dockerignore/.git/y.log","é/dist",".git/ab/x.log","b/node_modules/é","a b/y.log/.git/a b","keep/.env/.env"]}
+{"dockerignore":"*/[a-c]*/**b\nx.log/a?\n  ./node_modules/a b \n!**/[^a]/..","paths":[".env/ab","b.md/src/a.txt/node_modules","node_modules/x.log",".git/y.log/a/a b","src/b/.dockerignore","a.txt/a.txt/Dockerfile/b"]}
+{"dockerignore":".git/x.log/\na b/a*/[a-c]*/\né\n!a?/src\n.git/[ab]/b\n/node_modules/..\n","paths":["a/keep","b/a/a.txt/dist","a b",".dockerignore","b.md/a b","ab/"]}
+{"dockerignore":"/.\n!src/*.log\n[ab]/a/keep\n.git/.git/src\n","paths":[".git/src/é",".dockerignore/.git","node_modules/.env"]}
+{"dockerignore":"![^a]/a\n./Dockerfile\n.env/node_modules\n","paths":["dist/a.txt/keep/a",".git/é",".env/y.log/ab","Dockerfile","x.log","keep"]}
+{"dockerignore":".git/b/a?\n!./..\n!a\n*.log/a//\nnode_modules/.git/**b\na b/dist\n","paths":["a.txt/ab","é/x.log","b.md/b/y.log","node_modules/y.log","a/é/.git","Dockerfile/a b/c/keep","Dockerfile/src/a/a","y.log/Dockerfile/b.md/keep","b/c/.dockerignore/y.log"]}
+{"dockerignore":"[a-c]*/[^a]/.git\n\\*/x.log\na b\n  x.log/x.log \n!*b/*b/Dockerfile\n/[ab]/.env\n","paths":["b.md/x.log/a.txt","b/.dockerignore","dist","Dockerfile/node_modules/y.log/ab/","keep/node_modules/é","ab/b.md/b/","x.log"]}
+{"dockerignore":"# keep\n*\n\\*/src\n!src\n/x.log","paths":[".env/ab","c","y.log/y.log/ab","a.txt/a b/node_modules"]}
+{"dockerignore":".env/a*\n.env/keep/?\nsrc/a?/[ab]\n**b\n!a*/.env/.","paths":["y.log/src/node_modules","b.md/c/.dockerignore",".git/Dockerfile/ab/a.txt","a b/node_modules/Dockerfile/keep"]}
+{"dockerignore":"  *.log \nb\n!a\ndist\nnode_modules/*.log/..","paths":["keep/a b/y.log/a","ab/y.log/.git","a b/.dockerignore/b.md/dist","node_modules/dist","x.log/.env","Dockerfile","c","a.txt/keep"]}
+{"dockerignore":"![^a]\n/a b/\\*\n!a*/\\*/*\nsrc\na/dist/.env","paths":["c/node_modules","a b/src/","Dockerfile/src/b.md","b.md/b.md/b/ab","y.log","é/.git/a/é",".env","b/src/x.log/a.txt"]}
+{"dockerignore":"a b//.\n  [^a]/a b/.. \n  a*/b \n../..\n/keep/dist/a b\n","paths":["keep","Dockerfile/dist/a",".dockerignore","ab","a.txt/a b/keep/"]}
+{"dockerignore":"Dockerfile/x.log","paths":["Dockerfile/.git","dist/.dockerignore/a b/Dockerfile","b.md/a/é/node_modules","a.txt","b/b.md","y.log/ab/y.log/a b","x.log/c"]}
+{"dockerignore":"b\nb/.env/.env","paths":["src/é","a b/a/src/b","é/.env/ab","node_modules/.git/y.log","src/node_modules/dist","b","a.txt","a b/ab/b/dist","ab/.git/c/src"]}
+{"dockerignore":"**\n!./*/x.log","paths":["Dockerfile/ab/.env/keep","b.md/.env/é",".git/Dockerfile","c","node_modules/b.md/",".dockerignore/ab","src/a b","Dockerfile/b/c/",".dockerignore/a.txt/a b","Dockerfile/a/Dockerfile"]}
+{"dockerignore":"**b/?/a/\n!Dockerfile/[^a]/keep\n![a-c]*/**b\n  *.log \na*/*.log/a*","paths":["Dockerfile/.env/c","c/y.log/.dockerignore/.env","b.md/y.log/src/src","c/b/"]}
+{"dockerignore":"./b/./[ab]\n!*.log\n","paths":["b.md/ab/ab/é","ab","y.log/dist/a.txt/keep","x.log/.env/Dockerfile/é",".dockerignore/.dockerignore/y.log","a/a.txt","Dockerfile/c/src/a.txt"]}
+{"dockerignore":"**/?\na?/**/[ab]\n**\n!*b\ndist/*b\nDockerfile","paths":[".dockerignore","c/é/b.md","b/b/",".git/b.md","keep/a.txt","x.log/c/.git","Dockerfile/a/.git/a/","x.log/src","src/.dockerignore/src"]}
+{"dockerignore":"a*/**/\\*\n/*/dist","paths":["a.txt/é","a.txt/x.log/a/keep","node_modules/node_modules/src","x.log","a b/","a.txt/ab/.env/a.txt","b/a b/.git",".env/src/c","keep/a b/node_modules/"]}
+{"dockerignore":"a*\n**b/a b/keep\n![a-c]*/**\n/a?/a b\n!?/a*/*b\n[a-c]*//src/","paths":["x.log","b/.env/.dockerignore","node_modules/.git/a","a/é",".env/Dockerfile/","keep/y.log","dist/a b",".dockerignore/node_modules/ab/b"]}
+{"dockerignore":"?/..\n/dist/a?\na b/dist\n.env/.git\n","paths":["b.md/Dockerfile",".env/dist/src/node_modules","y.log/keep/node_modules/.env","node_modules/"]}
+{"dockerignore":"a b/.git/b\n","paths":["b.md/ab/y.log/x.log"]}
+{"dockerignore":".git/dist\n!x.log/[ab]/b\n./a*/é\na/.env/\n!x.log/*b/.git\n","paths":["keep","b/é/a b"]}
+{"dockerignore":"a?\n?\n![a-c]*/\\*\n\\*/src","paths":["src/.git","keep","é/y.log/b/y.log","Dockerfile/Dockerfile/a b","y.log",".dockerignore/src"]}
+{"dockerignore":"[^a]/*\n","paths":["x.log/dist/Dockerfile","ab/keep/dist",".dockerignore/"]}
+{"dockerignore":"![ab]\n!a*\n/dist/[^a]\n/node_modules/*.log\n//dist","paths":["ab"]}
+{"dockerignore":"src/../dist/\n!b/x.log/.env\n!a*/a b\n![ab]/*.log\n","paths":["x.log","y.log/b.md","a.txt/x.log/c/c","dist/node_modules/src/b","dist/c/a.txt","c/src/Dockerfile/src/",".git","c/.env/.dockerignore"]}
+{"dockerignore":"keep","paths":["é/b.md","b.md/.dockerignore/.git/src/","b/keep/a b/a b","b/y.log/","a.txt/c/","c/c/.env"]}
+{"dockerignore":"!?/**b\n*.log\n**b/*/*.log\n*b/a b/?\na?/é\n","paths":["dist/Dockerfile","Dockerfile/.env/c/.dockerignore","dist/ab/keep/y.log","c/node_modules","é/b/é","y.log/.env/.env/a",".git/src","node_modules/a.txt/ab"]}
+{"dockerignore":"*/\\*\n!../.env/keep","paths":["dist/keep/b","keep/a/ab/c","ab",".dockerignore","b/.env/dist"]}
+{"dockerignore":"dist/[^a]\n","paths":["a b","dist/node_modules/y.log/b.md","c",".env/dist","b.md","keep/dist/ab/y.log",".env/b"]}
+{"dockerignore":"src\nDockerfile\na?/a?/*.log\n**b/b/**","paths":[".env/dist/b"]}
+{"dockerignore":"b\nnode_modules/[ab]\n[ab]/.env/dist\n","paths":["a.txt/ab/a.txt/a b","b.md/ab/é",".env","src/.dockerignore/a/é","Dockerfile/","c","ab/ab",".git/y.log/ab",".dockerignore/Dockerfile"]}
+{"dockerignore":"\n  a b/**b/dist \né\n!?/keep/dist","paths":["ab/keep/é","é","ab/a b",".dockerignore/.git/keep","a/c/src/src","node_modules",".dockerignore/c/Dockerfile/ab"]}
+{"dockerignore":"[a-c]*/.git/**b\n![a-c]*\n./a*\nb\n!a*\n!.git/[^a]/b","paths":["a/é/y.log/b.md","x.log","dist/.env/c/y.log","b.md","Dockerfile/ab/Dockerfile/é",".env","keep/.dockerignore/keep/y.log"]}
+{"dockerignore":"/Dockerfile/[ab]/dist\n/b/./node_modules\na?/\n","paths":[".git/node_modules",".env/.git/a/b","node_modules/é/y.log/a b"]}
+{"dockerignore":"../*b/Dockerfile\na\n./a b\n.git\nx.log/[^a]\n![a-c]*/*.log/*\n","paths":["keep/.dockerignore/dist","y.log/.git/ab/a b",".dockerignore/x.log/ab/a"]}
+{"dockerignore":"!\\*\né\n/Dockerfile/a*","paths":[".dockerignore/keep/"]}
+{"dockerignore":"[a-c]*\n/.git\n[ab]/b/**\n!.env\n!.env/[ab]/src","paths":["src/src/.git","b.md/src/b.md/a","Dockerfile/a/x.log/a","y.log/.dockerignore/a/Dockerfile"]}
+{"dockerignore":".env\n![ab]\n./.env\n!*b/*b","paths":["y.log/node_modules/b.md/.dockerignore",".dockerignore/ab/b/","src/c/y.log","c","a",".git"]}
+{"dockerignore":"!a*/a?\na?/keep\n","paths":[".dockerignore","c/a/a/node_modules"]}
+{"dockerignore":"![ab]\n","paths":[".dockerignore/y.log/Dockerfile/x.log","dist/é/c/.env","src/é/node_modules/c","a.txt/node_modules/","ab/.env/keep","é/src/c/ab","b/y.log/.dockerignore/a.txt",".dockerignore/b/a/c","b/b.md/b"]}
+{"dockerignore":"!é/Dockerfile\na/.\n","paths":["b/keep","src/.git/keep","a b","y.log"]}
+{"dockerignore":"!dist/x.log\n!node_modules\n","paths":["Dockerfile/é","keep"]}
+{"dockerignore":"  keep/a* \n","paths":["a b/node_modules/keep/a b",".git/keep","y.log/node_modules/.env/a/","c/x.log/a.txt/y.log","a b/a.txt/src/.env","a.txt/a b/a","keep","a.txt/.git/b/a.txt","a b/b.md"]}
+{"dockerignore":"é/src\n**b//\n!./\\*/[^a]\n# b/Dockerfile/b\n","paths":["dist/a.txt/b","y.log/.env","c","keep/b/b.md","x.log/y.log/src/.git/","node_modules/b.md/.git/b","y.log/dist"]}
+{"dockerignore":"/keep/[ab]\n!*/src/[a-c]*\na b\na*/a\n/a\nsrc\n","paths":["a.txt/dist","a.txt/b/x.log/x.log","dist/a","b.md/.dockerignore",".git/a/.env","a","c/dist",".env/node_modules/.dockerignore/","b/.dockerignore/keep"]}
+{"dockerignore":"!?/b\n/Dockerfile/Dockerfile/node_modules\ndist/dist\na?\n[a-c]*/dist/[^a]\n!**b/*\n","paths":["b.md"]}
+{"dockerignore":"a?\n**b/.\na*/x.log/é\n./?/é\n*/x.log/.env\n","paths":["b/y.log/y.log/a.txt","b.md/b.md/keep/.git",".dockerignore",".env/keep/.git","a/a.txt/x.log/Dockerfile"]}
+{"dockerignore":"!*/\\*","paths":["é","src/dist/node_modules","b/.dockerignore/a b/node_modules","y.log/node_modules/Dockerfile"]}
+{"dockerignore":"a/.\n!keep/*\n","paths":["a/b.md/a.txt/dist","dist/y.log/c","c/.git/a b","a b/node_modules"]}
+{"dockerignore":"!\n[ab]/**b/*b\n!..","paths":["node_modules/y.log/b",".dockerignore/dist/keep","é/.dockerignore/Dockerfile","src","keep/ab/b.md","keep/a","a b/Dockerfile/node_modules/dist",".git/a.txt/c/keep",".git/.env/é"]}
+{"dockerignore":"!\\*/dist/?\n![^a]/*.log\n?/\n.git/keep/a b","paths":[".git","a b/y.log/c","b.md/b.md","node_modules","y.log/b/.env/.env","ab/é","c/src/node_modules","é/y.log","a b/.git"]}
+{"dockerignore":"! node_modules/?\n!src/b/Dockerfile\n!.git/./[^a]\n","paths":["y.log/","a b/x.log/keep/.dockerignore","é/a/keep/.env","é/a b/é/é","a.txt/c/é",".env/Dockerfile/.env"]}
+{"dockerignore":"../?/..\n./.git/\n*.log/**b/.git/\n*.log/\nkeep/é/**b\n!.././*","paths":["keep/é/b.md/b.md",".dockerignore/.dockerignore/a b/.dockerignore/","y.log/Dockerfile/b.md","keep/keep","a/b.md/é/a b","dist/.dockerignore/b.md/b/","a/b.md/","a.txt/é"]}
+{"dockerignore":"/?/[^a]\n","paths":["b.md","node_modules/.env","src/a b","c/dist/.git/b",".git/Dockerfile/.env",".env/y.log/dist","Dockerfile/.dockerignore/y.log"]}
+{"dockerignore":"\\*/x.log/?\na*/[a-c]*/\n./*b/[^a]/**","paths":[".env/a b/dist",".dockerignore/node_modules/.git","src","c/node_modules/dist","ab/.git"]}
+{"dockerignore":"/node_modules/*.log\ndist/..\n\\*/.git\n# ..\n","paths":[".env/ab/.env/","a b/dist"]}
+{"dockerignore":"!..\n..//**b\n/dist\nx.log/Dockerfile/a b\n# .env/..\n# .git","paths":["b/b/a.txt","é/Dockerfile/","é/ab/","Dockerfile/y.log/b","x.log/x.log/a.txt/y.log","node_modules/.env/src/.env","x.log/.env/Dockerfile/b.md","Dockerfile/.dockerignore/.git","a"]}
+{"dockerignore":"./../Dockerfile\n/keep/\\*","paths":[".git/keep","ab/src/.git/ab","b/node_modules/.dockerignore",".env/a b",".env/b/dist","node_modules/a","src/node_modules/a b/ab","b/"]}
+{"dockerignore":"![^a]/dist\n!*b/*\n.git\ndist/a*\n!x.log/a/b\n!*b\n","paths":["node_modules","src/Dockerfile","dist/.dockerignore/.env/ab","a/é"]}
+{"dockerignore":"b/a*/\na*/keep","paths":[".dockerignore/dist/x.log","a b",".env/a b"]}
+{"dockerignore":"!/.\nb/dist\n.git/a\n**\nx.log/dist/.git/\n*b/keep","paths":["dist/b.md/.dockerignore/b","ab/ab/keep/ab","x.log","a b"]}
+{"dockerignore":"!Dockerfile/*b/dist\ndist/dist/*b\nx.log/**/.\n/[a-c]*/node_modules\n","paths":["keep/b.md","src/ab","node_modules/.git/src/.dockerignore"]}
+{"dockerignore":"/.git\n/x.log/é/?\n","paths":["a b/a"]}
+{"dockerignore":"  /[a-c]* \n!?//Dockerfile\n*/./\n","paths":[".dockerignore/.git/","a b/.env/y.log","node_modules","b/",".git/y.log/y.log","Dockerfile/a","a.txt/c","ab/é"]}
+{"dockerignore":"!\\*/?/[ab]\n.git","paths":["b/dist/.git/ab/","b.md/ab/node_modules","node_modules/.env","node_modules/dist/node_modules",".dockerignore/keep/.env/src/","keep/.git","dist/.dockerignore/y.log","b/keep/src",".git/.git/ab",".dockerignore/y.log/c"]}
+{"dockerignore":"[ab]/../*","paths":[".env/.env/","b.md/dist/y.log","b/keep/ab/y.log","dist/Dockerfile","y.log/ab/ab/.env"]}
+{"dockerignore":"!.env\n# [ab]/\n!?\n","paths":["keep/src/é/dist","y.log/é","c/a.txt","keep/",".git/ab"]}
+{"dockerignore":"/b/a b\n!**b\n*b\nb/*.log","paths":["a.txt/x.log",".git/y.log","b/a.txt/dist","y.log/.dockerignore/b.md","b.md/a b","src/dist/dist/b.md",".dockerignore","ab"]}
+{"dockerignore":"!.env/a?\n./**/?\na b/a b\n!node_modules/src/.env\n[ab]\n","paths":["a b/a","b.md/a b/y.log/Dockerfile","a","a.txt","c","node_modules/node_modules","b.md/a b/y.log/b","y.log/.dockerignore/src"]}
+{"dockerignore":"[^a]//.git/\n/a b/?/src\na/a?/..\n!Dockerfile/**\na?/.git\n!.\n","paths":[".git/é/.dockerignore","a.txt/x.log/b","b.md/ab","src/a/ab/","Dockerfile/y.log/.git",".env/y.log/src","é/.dockerignore/y.log/dist","a",".dockerignore","src/b/a b/a b"]}
+{"dockerignore":"*b/dist/.git","paths":[".dockerignore/dist/x.log/x.log","keep/y.log/x.log/x.log","ab/é","b.md/",".git/y.log/","y.log/a/ab"]}
+{"dockerignore":"a b/Dockerfile/Dockerfile","paths":[".env/","a b/y.log/a.txt",".dockerignore/.dockerignore/é","é/.dockerignore/b/b.md","c/x.log","node_modules/c",".git/y.log","src/src/.dockerignore"]}
+{"dockerignore":"keep/[ab]/b\n.env/dist/a?\n!.git/./.env\na/.git\n! ../dist/[ab]","paths":["b/x.log","a.txt/y.log/.env","b.md/b","Dockerfile","a/ab","x.log/Dockerfile/src","a b",".git","x.log/é"]}
+{"dockerignore":".git\n![a-c]*\n!node_modules/*.log\n**b/é\na?\n!*/x.log\n","paths":["a.txt","Dockerfile/x.log","a b/src/node_modules/src",".git","src/b/b/ab","é/a/src/é","c/é","src/a b","y.log/b"]}
+{"dockerignore":"é/?/*.log\na*\nnode_modules/[ab]/é","paths":["dist/Dockerfile/b.md","a/a/x.log","Dockerfile/","x.log"]}
+{"dockerignore":"src/keep\nb","paths":["node_modules","dist","b.md/",".dockerignore/Dockerfile/.dockerignore","a b/é","x.log/b/ab/src/","c/.env",".env/a.txt"]}
+{"dockerignore":"  .git \n# node_modules/**b\n","paths":["node_modules/a.txt/b.md/",".git/a b","a b/keep/c/.dockerignore","a.txt/b.md/a b/b.md","keep/é"]}
+{"dockerignore":"!**b/.\n!\n.git/dist/*.log\n!?/**/[ab]\n**b/.git/[^a]","paths":["b/x.log","x.log","é/","y.log/é/node_modules/.git","a b"]}
+{"dockerignore":"**/\n  keep/.env \n/a*\na*\n./a?/.git\n","paths":["keep/node_modules/.dockerignore",".dockerignore/.env/a.txt/ab"]}
+{"dockerignore":"[a-c]*","paths":[".dockerignore/node_modules","a b/dist/.env","src/y.log/é/","b/b","a b/é","ab/src/a.txt/.git","keep/a.txt/b",".env/y.log","dist/Dockerfile/x.log/b.md","Dockerfile/b/Dockerfile"]}
+{"dockerignore":"Dockerfile/.env/é/\n!src\nnode_modules\n.git\n# ?\na*/é/","paths":["y.log"]}
+{"dockerignore":"x.log/a*/.env","paths":["src/.dockerignore/keep","keep/y.log/b.md","b.md/b.md",".env","a.txt","a/.env/src","keep/node_modules/a/é","node_modules/.env/y.log/Dockerfile","b"]}
+{"dockerignore":"!a*/*b\n  node_modules/a* \n/a*/\\*","paths":["dist/x.log/keep","Dockerfile","b.md/b/.git/keep"]}
+{"dockerignore":"!?/[a-c]*/dist\n.env\n**b/.env\nb\n","paths":[".dockerignore","x.log/Dockerfile/x.log","x.log/src","x.log/dist/Dockerfile/ab"]}
+{"dockerignore":"**b/?/*b\n!?/src\n**b/src\n/x.log\n*.log/.env/node_modules\n!.env/Dockerfile","paths":["keep","é/c","src/b.md","é/.git/a",".git/src/keep","é/node_modules/keep/","node_modules/.dockerignore","ab/a/a.txt/b.md"]}
+{"dockerignore":"dist\n","paths":["a.txt",".git/c/dist","b.md","b/keep","a b/x.log/node_modules/x.log/","b/a.txt/a/keep","keep/a.txt","src"]}
+{"dockerignore":"*b/*b/*b\na b/\\*\n*.log/\\*\n./../\\*\n","paths":["x.log","dist/x.log","Dockerfile",".env","c/.dockerignore/.git/node_modules"]}
+{"dockerignore":"*\n![a-c]*/src\n..\n*//\\*\n","paths":["ab/é",".git/y.log/b","y.log/Dockerfile/.env",".dockerignore/a b/dist/keep","b/x.log/a b","dist","a/a.txt",".dockerignore/é/node_modules"]}
+{"dockerignore":"keep/keep\na?\n# .\n*\nkeep//**b\n*b/src/..\n","paths":[".dockerignore/é/.git/.dockerignore",".env/a/é","ab/.dockerignore/y.log/"]}
+{"dockerignore":"*.log\n*.log/[ab]/**\n!b/a/a?\n!dist\n!dist/Dockerfile\nDockerfile","paths":["dist/c","a b/y.log/","keep/c/y.log/y.log","node_modules/.dockerignore/dist"]}
+{"dockerignore":"!**b\n!a*\n!src","paths":["b.md/a.txt/b.md/a b/","y.log/Dockerfile/c/b.md","a b/ab/.env","dist"]}
+{"dockerignore":"!é/Dockerfile\n/node_modules/.git/dist\n![a-c]*/node_modules/.git\n  [a-c]* ","paths":["x.log/.env","a b/","dist/a b/node_modules/y.log","c/x.log/.git/ab","y.log/src","c/.env/","é",".env/.env/dist/a.txt","ab/node_modules"]}
+{"dockerignore":"a?/*/Dockerfile\n./b","paths":["a b","node_modules/node_modules/b.md","x.log/keep/.git/.git","src/b.md","y.log","b.md/node_modules"]}
+{"dockerignore":"Dockerfile/.env/.env\n!./a*\n?/*b/src\n","paths":["keep/é/.dockerignore/c","dist","y.log/.dockerignore/dist/src","keep/a.txt/a/a b","keep/keep/é",".git/.dockerignore/keep"]}
+{"dockerignore":"a/a?\n# [ab]\n!dist/[ab]/.git\n!**b\n!a","paths":["keep/","a/.env","a b/node_modules","b.md/é/dist/b.md"]}
+{"dockerignore":"a?/*b/**\nkeep/é\n!*.log/.env/Dockerfile\n  x.log/a b/a b \n!x.log\n/.git/x.log","paths":["a.txt/c","c"]}
+{"dockerignore":"!a","paths":["src/ab/keep/.git"]}
+{"dockerignore":"**/a*\na*/?/**b\n!.git\ndist/**/*\ndist/a*\n/\\*/a?","paths":["y.log/a.txt/b.md/src"]}
+{"dockerignore":"x.log/.git/src/\ndist/\n\\*/x.log/**b\n[ab]/keep/a\n.git\n","paths":["é/a/.env","Dockerfile/Dockerfile/a","a b/c/a","a"]}
+{"dockerignore":"!a b\n!a b\nb/.env/[^a]\n","paths":[".dockerignore/é","Dockerfile","c/Dockerfile/b/y.log","keep/src/","x.log/dist"]}
+{"dockerignore":"node_modules/é/*\n.git/a b/dist\ndist/a*/.\n./.git/a*/a*\n!é/src","paths":["keep/y.log","keep/Dockerfile/.dockerignore","node_modules/a.txt/dist","dist"]}
+{"dockerignore":"b/Dockerfile/\n# [^a]/[^a]/\\*\na*/dist\n/.git","paths":["ab/a.txt","a b",".env/x.log","node_modules/Dockerfile/y.log/.env","dist/dist/a"]}
+{"dockerignore":"**/[^a]/\\*/\n","paths":["c/é/dist/dist","c/","dist","src/ab/é"]}
+{"dockerignore":"é/dist/[^a]","paths":["src/.git/node_modules/b.md","x.log/.dockerignore",".dockerignore/node_modules","x.log/node_modules/b","dist/y.log","x.log/é/b/a b","a b/a/"]}
+{"dockerignore":"/.\na b/a?/a?\n","paths":[".env","a.txt/x.log","é/.env/src/x.log",".dockerignore/a.txt/é/keep","x.log/.git/.dockerignore"]}
+{"dockerignore":"!a\n","paths":["a.txt","c/y.log/.env/b.md","dist","x.log/c/b/b.md","y.log","a b/a/ab/src"]}
+{"dockerignore":"!.env\n/a\n!a?/.env/**b\n","paths":["é/node_modules/y.log","y.log"]}
+{"dockerignore":"/Dockerfile/a?/Dockerfile\n","paths":["a.txt/c/a.txt","b/dist/src/keep","keep/dist/keep/keep","é","y.log","a.txt/.env",".env/x.log","a b/a.txt",".git/x.log/src/b.md","src/.dockerignore/"]}
+{"dockerignore":"b/dist\nkeep/a*/a*/\n![a-c]*","paths":["a.txt"]}
+{"dockerignore":"/[a-c]*\n!a/[ab]\n/**/node_modules","paths":["é/node_modules/y.log","keep/node_modules","y.log/x.log/dist/y.log",".dockerignore/","x.log/.env","src/y.log/keep/a.txt",".git/y.log","Dockerfile/b/dist"]}
+{"dockerignore":"/?/src","paths":[".dockerignore/src","node_modules/",".dockerignore/node_modules","dist/.dockerignore/.env"]}
+{"dockerignore":"  *.log \n! dist/a\n/[a-c]*/a?\nb/*.log\n*b/**\n**/a*","paths":["a.txt/src",".env/.git/b.md","x.log/keep/a","ab/y.log"]}
+{"dockerignore":"!*b/src/a*\n","paths":["x.log/","x.log/.dockerignore",".dockerignore/ab/.env",".dockerignore/c"]}
+{"dockerignore":"**b/.env/\n!src/*.log\na b\na b/../.env\nsrc/.env/src\n!**/src/a*","paths":["dist/é/dist/é",".git/x.log/dist/","b/a/y.log/dist","b.md/.env/b.md",".git/a b/c","a/node_modules/"]}
+{"dockerignore":"/é/.env\n![^a]\n!*b\né/src\n!é/[^a]/[ab]\n.git/**/a\n","paths":[".dockerignore/src/src/b","Dockerfile/Dockerfile/.env","b/Dockerfile/","keep/a.txt/a b/b.md","x.log/a/ab",".git/ab/é","node_modules/node_modules/src","keep/c","b/node_modules"]}
+{"dockerignore":"../b\n*b/a\nDockerfile/*.log\ndist/*b/","paths":["node_modules/a",".env/a",".env/b.md/a/.git","dist/.env/.env","x.log/node_modules/dist","ab/Dockerfile/b/a b"]}
+{"dockerignore":"[^a]/.\n!.env/**b\n!b\na b/b\n*/[^a]\nDockerfile\n","paths":[".git",".env/dist","a/","a.txt/é/dist/c"]}
+{"dockerignore":"a\na?/dist\n**b/a b/x.log/","paths":["ab","dist/Dockerfile/a b/dist","é/é/a b",".env","keep/b.md/src/é","dist/.git/a b/c","node_modules/é/a b"]}
+{"dockerignore":"/..\n","paths":[".env/a b/dist/c","é","node_modules/b.md/é/dist","node_modules/c/b/keep","keep","x.log/keep"]}
+{"dockerignore":"![^a]\n/./.\na\n","paths":[".dockerignore/b/","Dockerfile/b.md","y.log/.env/Dockerfile","keep","src/src/a b/c","a b/a.txt/a b","b/Dockerfile/src/é","ab/a/src/b.md"]}
+{"dockerignore":"!a?/","paths":["a b/b","a/é/dist","dist/.dockerignore",".env","ab/Dockerfile","b/b.md/.dockerignore/keep","Dockerfile/.git/y.log","b/ab/Dockerfile"]}
+{"dockerignore":"!\n./**b\nkeep/\n\\*","paths":["node_modules/","dist/.env"]}
+{"dockerignore":"!a b/../.\n!?/[^a]\n!\\*/**/keep\nnode_modules/.env\n\\*\n?/..","paths":[".git/keep/Dockerfile",".git/.git/c","src/a/ab","a.txt",".git/dist","keep/ab"]}
+{"dockerignore":"/.git\n!/\n!keep/b\n","paths":["b.md/b","src/a",".env/node_modules/.dockerignore/keep","b.md/src/y.log/.dockerignore",".git/a b/ab"]}
+{"dockerignore":"/a*\n.env\n!?/?\n","paths":["Dockerfile/y.log/keep/src",".git/a.txt/dist/","ab/a b","y.log/a.txt/a","a b/a","a/a.txt/Dockerfile","é/c/a b/c"]}
+{"dockerignore":"[ab]/keep\n!Dockerfile/[^a]/dist\n!é/src\n","paths":["a/c/é","a.txt/src/ab"]}
+{"dockerignore":"Dockerfile/Dockerfile\n*\n./[ab]/?/a b\n!.git\n[ab]","paths":["b/ab","node_modules/","Dockerfile/.dockerignore/b/","b.md"]}
+{"dockerignore":".env\n!./a\n!dist\n[^a]/**/\n**/.git\n!x.log/**b/dist\n","paths":["dist/é","y.log/x.log","b.md/src/.env/keep","y.log/.dockerignore/c"]}
+{"dockerignore":"Dockerfile/Dockerfile/.env\n*b/./**","paths":["c/.dockerignore","dist/b/a/"]}
+{"dockerignore":"!a?/node_modules\n# x.log/.git\na b\n!**b/[a-c]*\na*/**/dist\n","paths":["keep/.env/y.log/.dockerignore","a/ab/node_modules/","c/node_modules",".env","c/ab/.env","src","Dockerfile/ab",".git/dist/.dockerignore/.env"]}
+{"dockerignore":"# é\n!.env/.env\n**b//..","paths":["c/b"]}
+{"dockerignore":"\\*\n!\\*/.\n?/../[a-c]*/","paths":["a/x.log/é/é","keep/node_modules/.git","a/y.log/ab",".dockerignore/.git/ab","y.log/c/keep/Dockerfile","x.log"]}
+{"dockerignore":".git\n!a/.\na?/\n!b/\\*\n","paths":["y.log/.dockerignore/.git"]}
+{"dockerignore":"!*b/x.log/é\n/**b/b\nx.log\ndist/Dockerfile/Dockerfile\n","paths":[".git/keep/a b","b.md/.env/a b/","é/keep/.git","é/dist","a.txt/c/.git/node_modules","x.log/keep"]}
+{"dockerignore":"!é/x.log/a?\n![a-c]*/[^a]/x.log\n","paths":["ab/é/.env","y.log/b.md/node_modules","b/.git","Dockerfile/é","a.txt",".git","Dockerfile/a.txt/Dockerfile"]}
+{"dockerignore":"!.git/node_modules/.\n","paths":["b","b.md/.env","é/src/a.txt","keep/.env","a/a.txt/a",".dockerignore","b.md/node_modules/a.txt/.env","keep/.git/x.log/y.log","a/y.log/b.md/é"]}
+{"dockerignore":"!a b/*.log\ndist/?/b\n!.git/a*\n*/node_modules/*b\nDockerfile/a b\n","paths":["dist/a.txt/x.log/a b"]}
+{"dockerignore":"src/a?\n!b\n!*\na b\n..","paths":[".git","y.log","Dockerfile/a.txt","dist/node_modules","x.log/a/.git/ab",".env/node_modules/src/ab","keep/","a/.git/.env","src/Dockerfile"]}
+{"dockerignore":"! ","paths":["node_modules","a.txt/x.log/ab","a/ab/c","b.md/.git/b.md/a","x.log/keep/.dockerignore","keep/node_modules/a/c",".env/a","b/dist/b/dist/",".env/a b/b/c/"]}
+{"dockerignore":"*.log/b\n[a-c]*/../a?\n!../*.log/.env\n","paths":["dist/keep/Dockerfile","dist/src"]}
+{"dockerignore":"keep/é\n**b\n!?/[a-c]*/node_modules\na/*\n","paths":[".env/é/a b/b","ab/é/.dockerignore/c","keep/a/b/b.md","a.txt/c/node_modules"]}
+{"dockerignore":"/.\n*/node_modules/a b\na b/[a-c]*/*b\n![ab]\n# **b/x.log/.\n!*.log/","paths":["dist/src/b","b.md/node_modules/.env/b","x.log","ab",".env/","b/keep/","a b/x.log/c",".dockerignore/Dockerfile/"]}
+{"dockerignore":"/dist\n.git/.git/a\na b\n!.env/dist\n!./a/[ab]","paths":["node_modules"]}
+{"dockerignore":"b\n*/Dockerfile\n!a b/[^a]","paths":["a b/a/b","x.log","src/dist"]}
+{"dockerignore":"! a?\n?\nDockerfile/keep\n!é/a*/Dockerfile\nx.log/dist","paths":["é","dist/x.log/node_modules/y.log","a b","a.txt","keep/a b","b.md/.dockerignore",".env/Dockerfile/x.log/a b"]}
+{"dockerignore":"a*/\\*\n/b\n","paths":["Dockerfile/y.log",".env/dist/b.md/c","y.log/a b/dist","b","keep"]}
+{"dockerignore":"*/[^a]\n!\\*\n!a b\n./..\n*\n","paths":["a.txt/a.txt/.dockerignore/.env","src/ab/b.md/ab","a b/é/node_modules","y.log/keep/keep/","x.log/a/a.txt","ab/.dockerignore/src/keep",".env/src","keep/Dockerfile/a","ab/c/.dockerignore","a b/.dockerignore/"]}
+{"dockerignore":"/dist/..\n./é/**b/[a-c]*\né/keep\n","paths":["Dockerfile/y.log/a.txt",".git/c","a.txt/y.log/x.log/é","dist/src/dist/a b","node_modules/dist/y.log/a.txt"]}
+{"dockerignore":"*/x.log\n","paths":[".env/keep","x.log","c/é","node_modules/c","b","y.log/a.txt",".git/.git/keep","a b/b.md","y.log/.dockerignore/keep/.env"]}
+{"dockerignore":"!**\n[a-c]*/..\n!**b\n**b/*b/\n[^a]/dist/a","paths":[".git","b.md/a b/é",".dockerignore/a b/x.log","a.txt","c/dist","keep/"]}
+{"dockerignore":"!/\\*/*b\n./a*\n!Dockerfile/[^a]/é","paths":["x.log/Dockerfile/","b/.dockerignore"]}
+{"dockerignore":"!x.log\n.git\n","paths":["x.log",".dockerignore/c","c","src","b.md/keep/.git","ab/.env/c/dist/"]}
+{"dockerignore":"!node_modules/a\n!dist/**\n![a-c]*/.\n","paths":["a b",".env/src/keep/"]}
+{"dockerignore":"\\*/.\n[ab]","paths":["b/ab/ab/",".env","src/src/y.log/b.md","keep/node_modules"]}
+{"dockerignore":"Dockerfile/[^a]\n/.git/**b\na?/.","paths":["Dockerfile/a/b.md/é","b/a b/.env/keep",".dockerignore/.dockerignore/b.md/b.md","ab/keep/.env","a.txt/y.log/b.md","Dockerfile/Dockerfile/node_modules/a.txt"]}
+{"dockerignore":".env/.git","paths":["Dockerfile/b/keep","y.log/y.log/b.md/dist","y.log/c/keep/a.txt",".env/keep","a.txt","b.md/a/keep/x.log"]}
+{"dockerignore":"!.\nkeep/.git","paths":["Dockerfile/é","a/a.txt/é/a","ab/","keep/keep","é/é/dist/é","a b","é/node_modules/node_modules/c","node_modules/src/.git/ab"]}
+{"dockerignore":"![^a]/Dockerfile/[ab]\n!src/*b","paths":[".dockerignore/src/src/.env/"]}
+{"dockerignore":"!a*/\\*/é\n.git/a/\\*\n?/keep/a\n.","paths":["é"]}
+{"dockerignore":"!é/[^a]/keep\n../src\n!dist/../[a-c]*\n[ab]/a*\n","paths":["Dockerfile/a.txt","b/y.log/","c/.git",".git/dist/Dockerfile/keep/","b.md/Dockerfile/Dockerfile","x.log/c/b/.env","keep",".env"]}
+{"dockerignore":"!**/dist\n*.log/**b\n! \\*\n**b/./*","paths":["b.md","src/keep/y.log/y.log/","dist"]}
+{"dockerignore":"![^a]/node_modules/a b\n\\*","paths":["Dockerfile/y.log","ab/x.log/é/node_modules/","x.log/a/.git/src"]}
+{"dockerignore":".\nsrc/Dockerfile","paths":["a.txt/Dockerfile/a b/.dockerignore"]}
+{"dockerignore":"*/\ndist\n/.git\nkeep/*/[ab]\n/.env\n!a b/?/a*\n","paths":[".env/a.txt/ab"]}
+{"dockerignore":"./?\na b/\\*/\n!**/b","paths":["node_modules/node_modules",".dockerignore/keep/a b/ab",".dockerignore/b.md/a b","b.md/.env","Dockerfile/b"]}
+{"dockerignore":"!\\*/.git\n.env/*.log\n!\\*\n[^a]/src\na*/*/.","paths":["c/b.md","b/Dockerfile",".git/a b","Dockerfile/dist","a.txt/é","ab/.dockerignore/node_modules/x.log",".dockerignore/keep/y.log"]}
+{"dockerignore":"/\\*/b\n./*\n[a-c]*/**/\n! [a-c]*/.git/[ab]\nnode_modules\n!x.log\n","paths":["src/b","a b"]}
+{"dockerignore":"Dockerfile/[ab]/\\*\n!b/é/[ab]\n!*\n","paths":["y.log/ab","node_modules/é/c",".dockerignore","ab/.dockerignore/y.log/keep","Dockerfile/.git/dist","src/.git/Dockerfile","src/x.log/ab"]}
+{"dockerignore":"src/a*\n!*b/node_modules\n  [^a]/dist \nsrc/a?/*\n! ..\na/*.log/src","paths":["ab/c/y.log","a b/a b/dist","y.log/x.log","ab/a b/src/","y.log/a b","keep/.git","y.log/.env/.dockerignore/a.txt"]}
+{"dockerignore":"  a/dist/? \n","paths":["ab/a/b.md","é/é/x.log/c","a.txt/src","c/y.log/a.txt/a/","x.log",".git/dist/b/b"]}
+{"dockerignore":"[a-c]*/a b/Dockerfile","paths":["ab/.dockerignore/c/Dockerfile","c/keep/é/y.log"]}
+{"dockerignore":"a b/**b\nx.log/.\n![ab]/[ab]\n","paths":["ab/a","a b/é/dist","ab/.git/b/Dockerfile",".env","ab/src/.env","ab/dist","node_modules/b.md/b.md","ab/node_modules/ab","a"]}
+{"dockerignore":"b\n!a b/[^a]/.env\n/a b/src\n![ab]","paths":["é/a.txt","ab/.env/a b"]}
+{"dockerignore":"a?/.git\n!x.log/dist\n/?/x.log\nkeep/.env","paths":["ab/.dockerignore","é/.env/.git/a b","y.log/src","b.md/dist",".dockerignore"]}
+{"dockerignore":"!*.log/\\*/a?\n/x.log/**b\n![^a]/../**\na b/\nb/../\n![^a]/*.log/Dockerfile\n","paths":["b/keep/b/.env",".git/ab/Dockerfile","é/dist/.env/x.log","Dockerfile/.dockerignore/dist/y.log","node_modules"]}
+{"dockerignore":"**/\n**/*.log/[ab]\na?\n","paths":["dist/x.log/a/b.md","keep/b/y.log",".env/y.log","Dockerfile/src/a b"]}
+{"dockerignore":".git/*.log/dist\n..","paths":["node_modules/","y.log/keep/","x.log/b.md/.git/.git","y.log/Dockerfile/Dockerfile/dist","Dockerfile/x.log/src","Dockerfile/dist/a b/.env","c/a b/b/y.log"]}
+{"dockerignore":"**b/*/a\n/\\*/**\n  src ","paths":["y.log/a b/keep/b.md/","node_modules/.env/a","b/keep/b/keep","a.txt/.env","c/a b/y.log/a b","a.txt/a.txt/ab/a b/","y.log/b"]}
+{"dockerignore":"!/keep/x.log\nDockerfile/*.log/*\n!node_modules//node_modules\n/a b/keep/[^a]","paths":["ab","a b/dist/dist/node_modules","node_modules","x.log/é","b/a.txt/dist"]}
+{"dockerignore":"[a-c]*/a/[^a]\n!..\n/**/dist/*\n!a*/[a-c]*/**\n!**b/a*/*b","paths":["node_modules/dist/a b/a.txt","keep","dist","b.md/a/Dockerfile/dist",".dockerignore/dist",".dockerignore/keep","Dockerfile/.dockerignore/a b",".git"]}
+{"dockerignore":".//dist","paths":["node_modules/é/b.md/y.log","b/ab","a b/x.log",".env/a.txt/src/b","a/.dockerignore","b/Dockerfile","c/","node_modules/keep/keep","y.log/keep/y.log","x.log/b.md/a.txt/dist"]}
+{"dockerignore":"  a/*.log \n!.env/*\n//?/src\n","paths":["keep/keep/x.log",".dockerignore/dist/dist/","a.txt/é","b/y.log","b.md/b/b/Dockerfile","b.md/x.log","a/é/.env"]}
+{"dockerignore":"\\*/a/*\n.env/[^a]\n# .env/x.log\n/a b/.git\na b/src/a\n","paths":["é/x.log/x.log/Dockerfile","node_modules/ab/.env/.dockerignore","keep/src/x.log",".env/node_modules/",".git/b/é/c"]}
+{"dockerignore":"dist/*b/é\n! ?\nb\n\\*/[ab]/a b\n**/keep\n","paths":["b/é","dist/.git/b/a","src/a.txt/.dockerignore/b.md"]}
+{"dockerignore":"keep/dist/.\n! a b/[^a]/\n!Dockerfile/é\n[a-c]*/b/*b","paths":["c/ab/ab","dist/.dockerignore/Dockerfile/keep/","Dockerfile/node_modules","y.log/é","a/ab/.dockerignore/a"]}
+{"dockerignore":"a b/a*/.env\n**/[a-c]*\n./.env\n","paths":["x.log/keep/src/x.log",".env/é/ab",".git/c/node_modules",".env/c/ab","a.txt",".env/keep/y.log/y.log","b.md/.git/dist/Dockerfile","é","Dockerfile/c","keep/"]}
+{"dockerignore":"# dist/\n!node_modules\n!é\n./?/node_modules/[ab]\n","paths":["b.md/src","ab/ab/ab/"]}
+{"dockerignore":"!./src/..\n./b/[^a]/x.log\n!\\*/x.log\n!.env/x.log/*\n","paths":["a b/é","keep/dist","ab/src/b/node_modules","keep/Dockerfile/.env/dist"]}
+{"dockerignore":"./\n!b\n![^a]/*.log\n/../.\n!*.log/[^a]/*.log\n\\*\n","paths":["dist","b/b/x.log/ab",".env/Dockerfile/src/b","Dockerfile/a.txt","a.txt/a b/ab/x.log/","b.md/.dockerignore/.dockerignore/.env"]}
+{"dockerignore":"**b/a?\na b\nkeep\n!Dockerfile/*.log/\n/*.log/.env\n","paths":["a/a b/","c/a.txt/node_modules","é/node_modules/x.log","dist/ab","é/dist/.env/y.log","b.md/a/Dockerfile/a","src/src"]}
+{"dockerignore":"![ab]\nkeep/Dockerfile\n","paths":["b.md/x.log/x.log","a","ab/.env/b.md","y.log/a b",".git/a","é/.dockerignore/a/a b/","src/c/a"]}
+{"dockerignore":"**b/src/\n..//*.log\n!../.env\n! *\na*\n  x.log/** \n","paths":["y.log/ab/dist","keep/x.log/.env/b","c/a/dist"]}
+{"dockerignore":"[a-c]*/keep/keep\n  .git/.git/[^a] \n!*b\n*.log/[ab]\n! Dockerfile/**\na b","paths":["a/é/b.md/dist","Dockerfile","y.log/x.log","keep/keep/a b","a.txt/a/node_modules"]}
+{"dockerignore":"[ab]/a b/**b","paths":["b.md/a.txt",".dockerignore/x.log/dist","y.log/Dockerfile","a/.git","ab/ab/keep/keep","b.md/ab","y.log/.git/.git/Dockerfile","dist/x.log/a.txt/b.md/"]}
+{"dockerignore":"é\n!*/src\nnode_modules\n./.git/./[^a]\n","paths":["b","src/a",".git/b/c/src",".dockerignore/a/a.txt/y.log/","src/y.log/b","ab/b.md/.dockerignore","node_modules/a.txt/src/a b"]}
+{"dockerignore":"!./node_modules/?\n/b\nb","paths":["Dockerfile","x.log/dist/y.log","c/ab","é/a","node_modules/.env/src","ab"]}
+{"dockerignore":"! a*\n.//.git\n*.log/.\nx.log/*b\n/./**b\n!b/?/.env","paths":["y.log/x.log","b/ab/c","c/c/a.txt","dist/b.md/a.txt/.env","keep",".env/ab/.env","a.txt"]}
+{"dockerignore":"! a*\n./keep/x.log/b\n*/a b\n# **b/a*/[a-c]*\na*/[ab]/*.log\n!dist/?/.\n","paths":["é/.git"]}
+{"dockerignore":"**b/*.log\n../node_modules\n","paths":["b.md/src/.git","keep","c","src/é/a","ab"]}
+{"dockerignore":"!a b/.git\n.\nDockerfile\n!é","paths":[".dockerignore/node_modules","Dockerfile/keep/Dockerfile/b.md",".git/y.log/é/ab","x.log/é/keep/c"]}
+{"dockerignore":"x.log/**/dist\n![^a]/x.log/*b\n../x.log/src\n!a*/a\n*.log/?/dist\n![^a]\n","paths":["ab/dist/b.md","a b/.dockerignore","c/é/b",".git/y.log","ab/y.log/.git/keep",".dockerignore/a b/é/src"]}
+{"dockerignore":"src/.env\n! \nsrc/x.log/keep/\n./[^a]/[^a]/a","paths":["a.txt/y.log/b/src"]}
+{"dockerignore":"a b/Dockerfile\n  *.log \na*/.git","paths":["Dockerfile/.env","a b","b.md/ab",".dockerignore/","b/b.md/x.log/",".git/Dockerfile/c/a/","b/b.md/keep/.dockerignore","a/ab/keep"]}
+{"dockerignore":"!b/a\n[ab]\n","paths":[".git/y.log/Dockerfile/ab","é","y.log","c/é/.dockerignore/b.md","Dockerfile/a/a/node_modules/","b/é",".env","c/.env/a/a","keep/dist/y.log"]}
+{"dockerignore":"!keep/*.log\n[ab]/é\n../\\*\n/?/node_modules/a*\nx.log/b/..","paths":["x.log","keep/.dockerignore/b/a/"]}
+{"dockerignore":"*.log/x.log/[a-c]*\n../.git","paths":["y.log/y.log/b","ab/b/.git"]}
+{"dockerignore":"! .env/?\n/Dockerfile\n","paths":["dist/src/b.md/b.md"]}
+{"dockerignore":"![ab]/Dockerfile\n[ab]\n?/[ab]\n.env\n# [^a]/[^a]/\\*\n[^a]\n","paths":["b.md/b/a","c/é/keep/x.log","Dockerfile/.env/.git/y.log",".git/a/a b","b/keep/é","a/node_modules/src/x.log","x.log/c/keep"]}
+{"dockerignore":"?/./\n","paths":["a.txt/x.log/x.log",".dockerignore","node_modules"]}
+{"dockerignore":"/**/[a-c]*\n","paths":["é/a/Dockerfile","a.txt/.dockerignore/dist","a b/.dockerignore","x.log","keep/","c/Dockerfile","Dockerfile","a/x.log/.env"]}
+{"dockerignore":"![^a]","paths":["b.md/a","a/.env/dist/x.log","a/src/.env","src/a.txt/b.md/node_modules","Dockerfile/src/a b",".dockerignore"]}
+{"dockerignore":"**/[^a]\n! node_modules/Dockerfile\n![a-c]*//x.log","paths":["dist/y.log/a b",".env"]}
+{"dockerignore":"/*.log/[^a]/Dockerfile\n./../[a-c]*/","paths":["dist/dist/c/.env","a.txt/.env/a.txt","ab"]}
+{"dockerignore":"x.log/é/*\n.env/a?\n\\*","paths":["c","a.txt","x.log/x.log/b/keep/","x.log/.git/src/.dockerignore","é/Dockerfile","keep","é/.git","b.md"]}
+{"dockerignore":"[a-c]*/*b\n/.git/a?/**","paths":["src/c/b","a.txt/a/keep/dist"]}
+{"dockerignore":"a?\n!.git/[ab]/\nnode_modules/a b/**b","paths":[".env/ab/c/keep","node_modules/keep/","dist/a b","node_modules/ab/a",".git/b.md","a b/node_modules/Dockerfile"]}
+{"dockerignore":"?/b/?\nb/..\n/**b\n","paths":["Dockerfile",".env/.env/src/b","keep/é/.env",".dockerignore/b/a.txt","keep/b/c","é/keep/node_modules","a b/b/x.log","b.md/b/y.log","a.txt/ab/Dockerfile","src/y.log/node_modules/src"]}
+{"dockerignore":"a?/*.log\n?\n! \\*/*/x.log\nDockerfile/é\n","paths":["x.log","dist/y.log/node_modules/a b","y.log/é/a b","é/b.md/keep/dist"]}
+{"dockerignore":"# **\n!b/.env/dist\n","paths":["b/ab","x.log/b","Dockerfile/dist/é/.git","c/x.log","src",".git"]}
+{"dockerignore":"/src/a b\n!.git\n!\\*/\\*\n","paths":["b.md/keep","a b/b/ab/a","c/ab/.dockerignore"]}
+{"dockerignore":".git/.env/[ab]\n!dist/dist\n**b/*.log","paths":["ab/.dockerignore/node_modules",".dockerignore/c/.env/.git"]}
+{"dockerignore":"*.log\n*b\n!a b/\n/Dockerfile\n**/dist/\ndist/x.log/*","paths":["x.log/node_modules/",".git","Dockerfile/dist","a.txt/é/.git/"]}
+{"dockerignore":"../[a-c]*","paths":["keep/keep/ab/Dockerfile","Dockerfile/.dockerignore","dist/é/a.txt/x.log","a/c/ab",".git","b/a/b/x.log","keep/.dockerignore/é/keep","dist/.git","dist/x.log/.dockerignore/y.log","a b/.dockerignore/y.log"]}
+{"dockerignore":"keep\n!a b/?\ndist/**b\n!a?/a b/.\n/Dockerfile\n# [ab]//[^a]","paths":[".env",".dockerignore/src/ab/a.txt",".dockerignore/.env"]}
+{"dockerignore":"!*b/.env\n!b/[a-c]*\né/**b\n../a/*\n!node_modules","paths":["a b/c","x.log/x.log/node_modules","ab","a/a.txt/src/keep","dist/b.md/ab/dist","node_modules/.dockerignore/a.txt/a.txt","é/a/a.txt"]}
+{"dockerignore":"!*.log\n!**b\n!\\*","paths":["a/c/.env","Dockerfile/b/a.txt","dist","ab/node_modules/.dockerignore","é/a.txt","Dockerfile/x.log/x.log"]}
+{"dockerignore":"*.log/?\n  a*/**b/src \n./*b/keep\n!*.log/[ab]/*.log\n! .git/**b/node_modules","paths":[".env/a.txt"]}
+{"dockerignore":"*/dist/**\nb/é/.\n","paths":["a/dist/y.log/b"]}
+{"dockerignore":"# b\n!Dockerfile/é/dist\n.git\n**b","paths":["c/a b/b.md","src/a/keep","a b/node_modules/a b/a","x.log","c/a.txt/"]}
+{"dockerignore":"/x.log/a/*\n","paths":["b/Dockerfile/c/ab",".git"]}
+{"dockerignore":"x.log/*\n!dist/.\nkeep","paths":["keep/a","a.txt/.env/b"]}
+{"dockerignore":"!?/?\n","paths":["x.log/ab/b/b.md","ab/keep","a/.dockerignore/b.md/.git","a b/é",".dockerignore/keep","c/c/a/y.log/",".env/ab/src","é/keep/.git/"]}
+{"dockerignore":"a\n!*/[a-c]*","paths":["a.txt/b/.env"]}
+{"dockerignore":"a/dist","paths":["node_modules/x.log/src/b.md","src/b/.dockerignore/.git",".dockerignore/.env","b","ab",".git/node_modules/c"]}
+{"dockerignore":"node_modules/node_modules/**\n**b\n[^a]/.\n","paths":["b.md","b/a.txt/b.md",".git/.git","keep/y.log"]}
+{"dockerignore":"\\*/a\n?\n*.log/é/.env\n!**\n*.log/[a-c]*/x.log\n\\*/[ab]/*","paths":["a","keep/b.md/.env","b/ab","node_modules","y.log"]}
+{"dockerignore":"!\\*/*\n**b/*/..\n!keep/*.log/[ab]","paths":["a/a.txt"]}
+{"dockerignore":"![^a]/x.log","paths":["b.md/b.md/a.txt/y.log","c/b.md/src"]}
+{"dockerignore":"keep/.git/a\n!a\n[^a]/*","paths":["keep/.env/","a b/.env","Dockerfile/a","a/node_modules/dist","ab",".git/y.log/src",".env/b.md/ab/ab"]}
+{"dockerignore":"!keep/../b\n# **b/src/?\na?/a\nb/*b/..","paths":["Dockerfile","b/b/.env/dist","a/node_modules/Dockerfile","node_modules/",".env/a.txt/y.log","a/b.md/a b","ab/x.log"]}
+{"dockerignore":"!a?/**b\nDockerfile/a?/a?\n\\*/node_modules\n!.git/[^a]/Dockerfile\n!.env/é/*\n/**/dist/*\n","paths":[".git/b/Dockerfile","node_modules/keep/Dockerfile","a b"]}
+{"dockerignore":"!a/*.log/[ab]","paths":[".env/y.log/c/a b","a/ab","a b","keep/c/ab/","Dockerfile","c/src/a/dist"]}
+{"dockerignore":"[^a]/b/é/\n![^a]/a b/..\n!../x.log","paths":["src/x.log/a","b.md/ab/b",".dockerignore/b","ab/b","keep/é/ab/.dockerignore","x.log/a/node_modules/keep","b/.dockerignore/src"]}
+{"dockerignore":"# a/Dockerfile\na b\nsrc\n..\n*b/a?/*.log","paths":["src/.env/src","é/ab","b.md/x.log","a b/a",".git/node_modules/c/a.txt/","dist/é","c/c/ab/a b"]}
+{"dockerignore":"# .env/.env/.git\n!é/*/*b\n","paths":["dist/b.md/.git/Dockerfile/","src/c/","a b/dist/é/.dockerignore/","keep","dist/ab/b/dist",".git/Dockerfile","b/dist/a b","a.txt/a.txt/b.md","src/keep/ab"]}
+{"dockerignore":"a*/x.log\n!*b\n# */**\n!a*/**b\n# ../.env","paths":[".env/ab","y.log","Dockerfile/a.txt/é","x.log/a b/b","x.log/node_modules/keep/é","a.txt/b/node_modules/c","dist/ab","a b/dist"]}
+{"dockerignore":"\\*\na*","paths":["node_modules/","c/.git","src/.dockerignore","b.md/keep/.git","dist","a","é",".env","a b/b/é/a"]}
+{"dockerignore":"Dockerfile/a?\n!**/a*/x.log\n!.env/.git/[a-c]*\na?\n/?/[^a]/é\n[ab]\n","paths":["a.txt/node_modules","Dockerfile/Dockerfile/dist/Dockerfile","dist/keep/a b","b.md/b.md/.env"]}
+{"dockerignore":"  a b/.env \n[^a]\n./\\*\n!../a b\n/\n!.env\n","paths":["ab/.env","é/y.log/ab",".dockerignore"]}
+{"dockerignore":"/x.log/\n![ab]\n# .env/../?\nnode_modules\na*\n","paths":["dist/.dockerignore/x.log/dist","ab/a","dist/a b/.dockerignore","é/.dockerignore/.env/Dockerfile",".env/.git/dist/src","é/.env/b.md","b.md/c/c/.dockerignore",".git/a.txt/é/"]}
+{"dockerignore":"![^a]/*.log/.env\n//dist\nsrc\n","paths":["é/.git/x.log",".dockerignore/node_modules/Dockerfile/x.log","a","é/a b/node_modules/b.md","c/"]}
+{"dockerignore":"[^a]\n!**\n!**b","paths":["a.txt/x.log/keep/x.log","x.log/keep","a/","c/.git","c/é/b.md"]}
+{"dockerignore":"/a b\n!node_modules\nkeep/[a-c]*/x.log\n.\n![^a]/a*\n","paths":["node_modules/é","a/b.md/src/","é/.env/keep"]}
+{"dockerignore":"!?/**b\nsrc/keep\n.env/x.log","paths":["dist",".dockerignore/.env/dist/","Dockerfile/.dockerignore","é/.env/.env/Dockerfile/","a/a","ab","a/c",".env/node_modules/dist/c"]}
+{"dockerignore":"**/*b/a*\nDockerfile\n![ab]/","paths":["dist","x.log/y.log/node_modules/.git","x.log/b.md/node_modules","é/ab/.dockerignore","c/b/node_modules"]}
+{"dockerignore":"a/\\*\n?\n!*b/a?\n!node_modules/a?/a*\n!*b/**b/**\n","paths":["b.md/node_modules/dist/c","Dockerfile/Dockerfile/b/","a b/.env","dist/b.md/src/b","é/src","src/a.txt/b/src","c/é/c/x.log"]}
+{"dockerignore":".env/é/**b\n.git/..\n[ab]\nx.log/keep/*\n!src/é\n","paths":[".git/a/.env/é","é/dist/a b/b.md","c/src",".env/b","b.md/keep","b/src/.dockerignore","b/.dockerignore/.git","c/keep/y.log/a","keep/é/.env/x.log"]}
+{"dockerignore":"node_modules\n!a/x.log/dist\n/é/é","paths":[".dockerignore/a","keep/y.log","y.log/ab","a"]}
+{"dockerignore":"Dockerfile/*b/node_modules/\nb\n*/a?/.git\n/../node_modules\n./x.log/[^a]/.\n  *.log/[^a]/a \n","paths":["c/a b","b","a/.dockerignore/src/c","ab",".dockerignore","Dockerfile/x.log","a/b.md/é/"]}
+{"dockerignore":"!keep/[^a]\nnode_modules/**b/?\n[^a]/a*/dist","paths":["b/.env/keep/a.txt",".git/a b/.dockerignore/node_modules","node_modules/.dockerignore/c","b/x.log","y.log/src/a b/b","y.log/x.log/src/ab",".env/a.txt/dist","y.log/.env/x.log","ab/Dockerfile/b/",".env/y.log/é/"]}
+{"dockerignore":"b/./node_modules\n!keep/.env\n!..\n./a/dist","paths":["src/node_modules/.env/","a/y.log","b.md","ab/b"]}
+{"dockerignore":"Dockerfile/**b/keep\n*.log\n./[a-c]*/a?\n!*\n?","paths":["a b/x.log/é","b.md/keep/.git/a b"]}
+{"dockerignore":"keep\n!x.log/\\*\n!a b/keep\nb\n/../a b\n","paths":[".git","b/a.txt/.env"]}
+{"dockerignore":"/.git\n!.git/**\n\\*/a b\n![ab]/*/**\n!?/.env\n","paths":["x.log/",".git/é","b/.git/keep","b.md/y.log/.git",".dockerignore/Dockerfile","a/c/a/y.log"]}
+{"dockerignore":"!*/*.log/[^a]\n.git\n/b\n.git/*.log\n","paths":["b/b","a b/x.log/a.txt/.git/","x.log/a b","src/b.md/dist","a b/Dockerfile","dist","x.log/x.log/keep","b/","é/y.log/b"]}
+{"dockerignore":"./[ab]\n!a?/node_modules\n","paths":["a b/dist/a/a b",".dockerignore/dist/.env/c","y.log/c/ab","src","a.txt/x.log/y.log","b.md/keep/keep/y.log","x.log/a.txt/.dockerignore/y.log","node_modules/b.md/b.md/b","x.log/a b"]}
+{"dockerignore":"a*/b/é\né/*.log\n","paths":["é/",".dockerignore/a.txt","b.md/b/Dockerfile/é","a b/dist/b/b.md"]}
+{"dockerignore":"![a-c]*\n*\nb/[ab]/","paths":["y.log/keep/node_modules","é/keep/.dockerignore/a","b.md","Dockerfile/a/é/.env",".git/.env","keep/.git"]}
+{"dockerignore":"b/a?/b\n","paths":["node_modules/src/src/.git","y.log/ab/b.md","x.log","a",".env/keep/src","a b/Dockerfile/.env/.env","é/.dockerignore/ab/Dockerfile"]}
+{"dockerignore":"!keep/node_modules/\n**/..\n!?\n!a b\n","paths":["node_modules/b.md/dist","y.log/dist/a b/keep","dist/a b","ab/x.log/keep","b/y.log","dist/é/Dockerfile","a.txt"]}
+{"dockerignore":".env\n!*b/b\n!./*b/.git\n!**b/**b\na b\n**/?/a","paths":["keep/src",".env","b.md/.git/.dockerignore","b/a/a.txt",".dockerignore","ab/src/dist","y.log/dist","a b/c"]}
+{"dockerignore":"\\*/**/a\n  *.log/*/[ab] \n![^a]/a\n!Dockerfile/./*\nb/","paths":["dist/y.log/node_modules/","a b/Dockerfile/keep/","src/a.txt","é/node_modules","y.log/c/é",".env/dist/a.txt"]}
+{"dockerignore":"keep","paths":[".env","Dockerfile/c/node_modules","src/b/keep"]}
+{"dockerignore":"!../a?\n*.log/\\*/é\n!keep/a/a*\nDockerfile/Dockerfile/*\n!*/é\n[a-c]*\n","paths":["c/x.log/x.log","keep/ab/keep","b.md/.env/.git/y.log"]}
+{"dockerignore":"!/[ab]/\\*\n**\n","paths":["src/.git/.env/c","y.log/b/node_modules","dist/y.log/node_modules/"]}
+{"dockerignore":"*b\n/**\n!.git/\n![^a]/?/**\n/**\n\\*/.env/**b\n","paths":["keep/.git","node_modules/x.log",".dockerignore/c/src/.env","b.md/a.txt/x.log","Dockerfile","b/ab/.dockerignore","dist/b.md/node_modules/ab"]}
+{"dockerignore":"a?\n!*b/**b/[ab]\n.env\n","paths":["b/dist","é/b.md","a/.dockerignore/a b","c/Dockerfile","y.log/a b/src/b/","a b/dist","dist/Dockerfile/.dockerignore"]}
+{"dockerignore":"[^a]/*/*b\n!a?\n!*b/\n!Dockerfile/.git/Dockerfile\n","paths":["b.md/é/dist/a.txt","keep","b.md/.dockerignore/keep","x.log/y.log/ab/.dockerignore"]}
+{"dockerignore":"!b\n/dist/*\n!/a?/[ab]\nsrc/a\n","paths":["keep/dist/Dockerfile","src/","b.md/é","b",".dockerignore/a.txt","keep/b","y.log",".git/node_modules/dist","ab/.env/dist"]}
+{"dockerignore":"a?/\\*\n","paths":["a b/a b","Dockerfile",".dockerignore"]}
+{"dockerignore":"  [^a]/[a-c]* \n!*.log/.git\nsrc/*/a b\n","paths":["c/é/Dockerfile/é","ab/ab/b.md/b.md","a b/b.md/a/y.log","x.log/a",".git","src/a b"]}
+{"dockerignore":"!dist\na/b/","paths":["keep/y.log/y.log","x.log/.env",".dockerignore/node_modules/keep/","keep/node_modules/a.txt"]}
+{"dockerignore":"!src\na b/../[ab]\n[^a]\nkeep/a*/a","paths":["b.md/ab/ab","b/node_modules/ab/y.log","b.md/.dockerignore/c","a b","keep/a/x.log","Dockerfile/a/é/b","a.txt/a/y.log/c"]}
+{"dockerignore":"x.log/**/é\n![a-c]*","paths":["node_modules","c/b","src/keep/b.md/c","Dockerfile","x.log/a.txt/x.log/node_modules","y.log","src/node_modules/.dockerignore",".git","a"]}
+{"dockerignore":"!a?\n**\na b/\n![a-c]*//**b\n","paths":["src/y.log/a/y.log","é/c/é","a/é/node_modules","é/b/a","b","src/x.log/a","keep/a b","c",".git/src/dist/é"]}
+{"dockerignore":"[a-c]*/*.log\nDockerfile\nkeep\n!.\n  src/**/ \nb/./b\n","paths":["b/a b/a/.git",".git/.env/keep/é","dist/y.log","a.txt/.dockerignore/c/Dockerfile","keep/b/b/","x.log/a/a.txt","ab/b/b.md/a b"]}
+{"dockerignore":"Dockerfile/**/.\n\\*/*b\n!*\n","paths":["keep/",".git/a.txt/é/dist","x.log/Dockerfile/a b","b/keep/src/.env/","keep/é/x.log/","é",".dockerignore/a/keep","a.txt/.dockerignore/b","src/a.txt"]}
+{"dockerignore":".git\n!*b/[a-c]*\né\n  .git \n","paths":["c/.git/",".git/c/a b","a/.git/src","keep/y.log/.env/keep","b.md/dist/node_modules"]}
+{"dockerignore":"  [ab]/? \n","paths":["y.log/Dockerfile/","a.txt/y.log/src/a","node_modules","y.log/y.log/x.log/src","a b/keep"]}
+{"dockerignore":"**\né/*b/**\n# [ab]/\\*\nb","paths":["b/a/x.log","b/x.log/.dockerignore/.git","ab/é/ab/.env/",".env/dist/src/.env","src","a b/Dockerfile/keep","b.md/keep/b","ab/keep/.git/b","é/b"]}
+{"dockerignore":"node_modules/a?\n!**b/\n.env\n/é\nsrc\n.//[ab]/a*\n","paths":["é/.git/b/c","dist/b.md/ab","c/src","é/a/ab/y.log","c/","node_modules"]}
+{"dockerignore":"?/src/**b\n","paths":["é/x.log/dist/a.txt","keep/a.txt/src","c/é/node_modules","a.txt",".dockerignore/src/c/b.md"]}
+{"dockerignore":"[a-c]*/\n/a?\n[ab]/src/?","paths":["a.txt/Dockerfile","src","c/.git/a.txt","node_modules/dist"]}
+{"dockerignore":"!\\*/[ab]\n","paths":["c/src/a/x.log","b","node_modules/ab/ab",".git/node_modules","a.txt/.dockerignore/.env/Dockerfile","ab/.git/node_modules","node_modules/a b/y.log","src/.git/a.txt"]}
+{"dockerignore":"!.env/keep/\\*\n!é/a\na b\n.git/.git\n!keep\n!a b\n","paths":["x.log/a/.dockerignore/a b","b.md/b.md","é/dist/.git/a b","a.txt/a/keep/b","keep","node_modules/Dockerfile","a/y.log","src/Dockerfile/.git"]}
+{"dockerignore":"!*/**b\nb/.git/.env\n[ab]/..\nnode_modules/[^a]/\n![a-c]*","paths":["c/.dockerignore","a/é",".git/keep/é",".git/x.log","a b/.git/"]}
+{"dockerignore":"**/","paths":["a/.env","b.md/a.txt/ab/Dockerfile",".git/Dockerfile","é"]}
+{"dockerignore":"[^a]\n[a-c]*/b/a\n  **b ","paths":["c","src/.dockerignore","keep",".env/x.log/keep/.dockerignore","dist/b.md","node_modules","a b/keep"]}
+{"dockerignore":"!a?","paths":[".git/é/src/y.log","b/b.md",".dockerignore/c/node_modules",".env/a.txt","dist/node_modules/Dockerfile","node_modules/c/é","a.txt"]}
+{"dockerignore":"b/**\n.env\n","paths":[".git"]}
+{"dockerignore":"\\*\nb/x.log/node_modules\nx.log/b","paths":["a b/c","a/ab/b.md","x.log/node_modules","é/Dockerfile","src","keep/node_modules/c","keep/a/c","Dockerfile","a.txt","x.log/b/node_modules"]}
+{"dockerignore":"dist/a\n!node_modules/a b/[a-c]*\n[a-c]*\nsrc\n! [^a]\né/a*/.env\n","paths":["b.md/y.log/keep/src",".dockerignore/Dockerfile",".dockerignore/a.txt/src"]}
+{"dockerignore":"dist\n!?/[^a]\n**\n","paths":["Dockerfile/ab",".dockerignore/x.log/é","src","x.log/src/a b/node_modules",".dockerignore/y.log/keep/ab","c/a.txt/a b/","a/a.txt/ab","b","c/x.log/src"]}
+{"dockerignore":"/**/*/..\nb/./keep\n!a/src\n","paths":[".env/node_modules/b.md/a.txt/",".env/c/node_modules",".dockerignore/node_modules/.env/a","ab/.dockerignore/keep/é",".env/node_modules/a",".env/node_modules/b",".git","keep/b.md/c/","a/b.md/c/a.txt","keep/Dockerfile/"]}
+{"dockerignore":"/**b\n!**/..\n# \\*/*/x.log\n!**b\nb/src\nDockerfile//keep\n","paths":["Dockerfile/ab/x.log/é","ab/dist/","Dockerfile/x.log","a/.env","b/Dockerfile/a/node_modules","b.md/keep/.git/.git","node_modules/a.txt","keep/x.log/.git/dist"]}
+{"dockerignore":"!dist/**/[^a]\n[ab]/src\nsrc/.git\n!.\n!é/é\n[^a]/src/a","paths":["src/keep/y.log","c/a.txt","b/b/a.txt","b.md/b.md","x.log","dist/é/é/","b/ab/b","a b",".dockerignore","ab/.dockerignore/"]}
+{"dockerignore":"./?\nkeep/node_modules/é\n","paths":[".dockerignore/dist/","a.txt/.dockerignore/a.txt/b.md",".env/b.md/é","y.log/b",".git/Dockerfile/b/b.md","node_modules/ab","dist/node_modules","x.log/node_modules/a"]}
+{"dockerignore":"*.log\n!a*\n  src/* \n","paths":["a/y.log/node_modules/a b"]}
+{"dockerignore":"/./dist\n  keep \n!*/b/.\nb\n!./[a-c]*\n! a*\n","paths":["é/b.md","y.log/.env","c/.dockerignore/y.log","b/.dockerignore/b/dist","x.log/x.log/x.log","b.md/é/node_modules","Dockerfile/",".git/src","dist/.dockerignore"]}
+{"dockerignore":"  .env/é/[^a] \n\\*/Dockerfile/\n  /? \n/[^a]\nb/./x.log\nkeep/a*/*","paths":["b.md/Dockerfile/x.log/x.log","x.log/c","dist","a b","é/a"]}
+{"dockerignore":"dist/dist\n!.env/\n![ab]/b\na b/**b","paths":["é/a/ab","b.md/ab","Dockerfile/b.md/x.log/Dockerfile","b/.dockerignore/.dockerignore","ab/a.txt/",".env/.git/Dockerfile/b.md","a.txt/src/src/.dockerignore"]}
+{"dockerignore":"!a?/**b\na b/é/node_modules\n?/*.log/\n[a-c]*/x.log\nkeep/x.log\n[^a]/b\n","paths":["b/src/a b/.env/","b.md/x.log/b.md","keep/x.log/b","Dockerfile/a.txt","a.txt/Dockerfile","Dockerfile/x.log/dist","a b","b.md/x.log/a b/keep/"]}
+{"dockerignore":"!src\n*b/node_modules/dist\n/a/[^a]/[^a]","paths":["a b/x.log/x.log"]}
+{"dockerignore":"a b/\n/*.log/?\n[a-c]*/\n","paths":["b.md/.git/dist","a b/a b/c/node_modules","a b/.env",".env","a b/é/.env"]}
+{"dockerignore":"!a\nnode_modules\ndist\n!a*/node_modules\n!src/**\n?/*b\n","paths":["ab",".dockerignore/.dockerignore","x.log/x.log/.git"]}
+{"dockerignore":"./a?\nb\n*.log/*.log/a b\n/a/\\*/node_modules\n!.//.\n","paths":[".env/src/ab","node_modules/.env/","dist/.dockerignore",".env/.dockerignore/Dockerfile","y.log/a.txt","ab/c/b/src/",".env/Dockerfile/c/keep"]}
+{"dockerignore":"/é\n","paths":["keep/b.md/.env","ab",".env/b.md/b.md","node_modules/ab/y.log","y.log/x.log","dist/b/src/x.log"]}
+{"dockerignore":".git/a*/\\*\n","paths":["a.txt","b"]}
+{"dockerignore":"/*b/[^a]/*b\n!..\n/[^a]/a b","paths":["é/c/a","ab/Dockerfile","b/b.md/.env/","src/é/b.md",".dockerignore/a","a b/","node_modules","b.md","a.txt/a/a/y.log"]}
+{"dockerignore":"!node_modules/a b\n..\n\\*/[ab]/a?\nx.log/.\n","paths":[".git/ab/y.log"]}
+{"dockerignore":"?/a b/[ab]\né\n","paths":["node_modules/x.log/a b/","Dockerfile/é/b.md/src",".git/keep/a",".env",".git/src/ab"]}
+{"dockerignore":".git\n!src/b\n/src/b/b","paths":["Dockerfile/node_modules/node_modules/node_modules/","keep/Dockerfile/é/.env","node_modules/c/","b.md/c","src/a.txt/é/Dockerfile","b/a b/Dockerfile/b.md","y.log","a.txt/dist","a"]}
+{"dockerignore":"x.log","paths":["keep/b","x.log",".dockerignore/a/dist","a",".git/keep/.git"]}
+{"dockerignore":"![^a]\n!a?/.env/src\n!a b\n![ab]/keep/.git\n[ab]/\n","paths":["é/node_modules/Dockerfile/x.log"]}
+{"dockerignore":"!*\n! a*/**b\na/[ab]\nb/\n/x.log/*.log\n**/**b/**","paths":["x.log/a b",".git","a/y.log/dist/a","y.log/ab",".env/é/x.log/.git","ab","b.md/ab","dist",".dockerignore","b/keep/é/ab"]}
+{"dockerignore":"!./a?/**b\n[a-c]*/a?/*.log","paths":["b/b.md/node_modules/a","c/a b","src"]}
+{"dockerignore":"dist\n*.log/*.log\n/*.log/src\n?/..\n","paths":["src","a","b",".env/é/.git/dist","node_modules/é/é","c","node_modules/ab/.git/.git","a.txt/a.txt/dist/Dockerfile","y.log/c"]}
+{"dockerignore":"[ab]/b/\n!*/a?\n[a-c]*\nb\nkeep/node_modules\n./b/?/**","paths":["a.txt/Dockerfile/.dockerignore","y.log/y.log/","b.md/Dockerfile/.git/Dockerfile",".env","src/","node_modules/ab/Dockerfile","b.md/a","keep/.dockerignore/x.log/a","keep/dist/é/"]}
+{"dockerignore":"./.env\na/é/a*\n![ab]/a b","paths":["c/b/node_modules","b.md/keep/b",".dockerignore/a b/y.log",".dockerignore/x.log/Dockerfile"]}
+{"dockerignore":"a b\na?/a?/a\n!**b/a b\n/dist/?\n","paths":["src/Dockerfile/.dockerignore"]}
+{"dockerignore":"![ab]/.env/b\n!..\né/.env/.env","paths":["a/node_modules/a b",".dockerignore/a/dist/dist",".env","dist/x.log/.env/Dockerfile"]}
+{"dockerignore":"! keep/**b\na*\n!a*\n","paths":["c/b","a b/node_modules/a/a.txt",".dockerignore/a/",".git",".env","é/b.md"]}
+{"dockerignore":"[ab]/dist/\\*\n!.git/.env/keep\na b/keep","paths":["Dockerfile/node_modules","b/x.log/src/a b","dist/a/dist","x.log/Dockerfile/x.log/node_modules"]}
+{"dockerignore":"[ab]/node_modules/a*\n","paths":[".dockerignore/dist/x.log","Dockerfile/.git/","é/","c/y.log/.git/c/","node_modules/x.log/é/node_modules","b/src/.env"]}
+{"dockerignore":"?/\n\n","paths":["c/a b/node_modules/a.txt",".env","keep/a/keep/","keep/a.txt/keep/a.txt","ab/a.txt"]}
+{"dockerignore":"a*/node_modules/\n*.log\n.git/a*\n**\n!src/a/.\n!../b/a?\n","paths":["y.log/c/b.md/é","b/keep/é"]}
+{"dockerignore":"*b//keep\n!src/?/..\n# node_modules\n\\*\n!keep/node_modules","paths":[".env/y.log/src/a",".env/dist/Dockerfile","é","b.md/.git/.dockerignore"]}
+{"dockerignore":"Dockerfile/a*\na b/**/\n! [a-c]*/*b/..\n","paths":["dist/a/.env/Dockerfile/","x.log/c","Dockerfile/y.log"]}
+{"dockerignore":".git/src\ndist\n","paths":["b/.git/b.md/.env","b/.git/x.log","src/a b",".git","x.log","keep/b.md",".env/a b/é/x.log","Dockerfile/b","é"]}
+{"dockerignore":"**\n!é/a*/\\*\n?\na?/a/keep","paths":["a b/node_modules/node_modules","b.md/Dockerfile/é/y.log","dist","x.log/src","a b/y.log",".dockerignore/Dockerfile"]}
+{"dockerignore":"**","paths":["Dockerfile/node_modules/a b",".env/.dockerignore","Dockerfile/keep",".git/src/ab/a.txt","c/b/.dockerignore"]}
+{"dockerignore":"../Dockerfile\n!src\n..","paths":["a.txt/b/b.md","c/.env/.env/c","a.txt/x.log/"]}
+{"dockerignore":"src/*.log/[ab]\n![a-c]*\n","paths":[".dockerignore/.git","y.log/b/node_modules","dist","ab"]}
+{"dockerignore":"!\n!a b/a*/keep","paths":[".env/é/ab","y.log/Dockerfile/c","Dockerfile"]}
+{"dockerignore":"!../?\n!a?/Dockerfile/\\*\n/.git/keep\n!?/**b\n","paths":[".dockerignore"]}
+{"dockerignore":"/**b\nkeep/node_modules\n","paths":["y.log/.env/b","b/.dockerignore/keep/b","y.log/a b/dist","ab/dist/keep",".git/b.md","a b/src/.git"]}
+{"dockerignore":"dist/\\*/x.log\n","paths":["src/keep/.git/a b","y.log/a","node_modules/a","b/Dockerfile"]}

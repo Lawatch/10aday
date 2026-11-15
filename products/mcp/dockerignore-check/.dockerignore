@@ -1,0 +1,4 @@
+# Only server.js and engine.js are needed in the image.
+*
+!server.js
+!engine.js

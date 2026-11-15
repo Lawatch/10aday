@@ -1,0 +1,25 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Lawatch/dockerignore-check",
+  "title": "Dockerignore checker (exact Docker rules)",
+  "description": "Which files does docker build send, and which .dockerignore line decides? Exact BuildKit rules.",
+  "repository": {
+    "url": "https://github.com/Lawatch/10aday",
+    "source": "github",
+    "subfolder": "products/mcp/dockerignore-check"
+  },
+  "version": "1.0.0",
+  "packages": [
+    {
+      "registryType": "oci",
+      "identifier": "ghcr.io/lawatch/dockerignore-check:1.0.0",
+      "transport": { "type": "stdio" }
+    },
+    {
+      "registryType": "mcpb",
+      "identifier": "https://github.com/Lawatch/10aday/releases/download/dockerignore-check-v1.0.0/dockerignore-check-1.0.0.mcpb",
+      "fileSha256": "d68d78ce67cdd69e65adce5b60b4959caa8ebce4cd207efb1df655a75c51cb33",
+      "transport": { "type": "stdio" }
+    }
+  ]
+}

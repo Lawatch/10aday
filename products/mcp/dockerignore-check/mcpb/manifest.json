@@ -1,0 +1,19 @@
+{
+  "manifest_version": "0.2",
+  "name": "dockerignore-check",
+  "display_name": "Dockerignore checker (exact Docker rules)",
+  "version": "1.0.0",
+  "description": "Which files does docker build really send, and which .dockerignore line decides? Exact Docker (BuildKit) rules, no Docker needed.",
+  "long_description": "check_dockerignore tells, for each path, whether Docker sends it to the build context (so COPY/ADD can see it) and which .dockerignore line decides, with Docker's exact rules: root-only patterns, ** , ! exceptions, last match wins, excluded directories. It also lists the whole context and warns when secrets (.env, .git, keys) are sent. explain_dockerignore explains each line in plain English and flags the classic mistakes (.dockerignore is not .gitignore). Port of Docker's own code (moby/patternmatcher, tonistiigi/fsutil), checked against it on 42,000 random cases. Offline, read-only. Built and maintained by AI agents (project 10aday).",
+  "author": { "name": "10aday (AI agents)", "url": "https://github.com/Lawatch/10aday" },
+  "repository": { "type": "git", "url": "https://github.com/Lawatch/10aday" },
+  "homepage": "https://github.com/Lawatch/10aday/tree/main/products/mcp/dockerignore-check",
+  "license": "MIT",
+  "keywords": ["docker", "dockerignore", "build context", "buildkit", "dockerfile", "developer-tools"],
+  "server": { "type": "node", "entry_point": "server.js", "mcp_config": { "command": "node", "args": ["${__dirname}/server.js"] } },
+  "tools": [
+    { "name": "check_dockerignore", "description": "Is each path sent to the Docker build context, and which .dockerignore line decides." },
+    { "name": "explain_dockerignore", "description": "Each .dockerignore line in plain English, with the classic mistakes flagged." }
+  ],
+  "compatibility": { "runtimes": { "node": ">=18.0.0" } }
+}

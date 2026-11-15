@@ -1,0 +1,1000 @@
+{"sent":[".dockerignore/",".dockerignore/.git/",".dockerignore/.git/b","Dockerfile","a b/","a b/Dockerfile/","a b/Dockerfile/ab/","a b/Dockerfile/ab/Dockerfile","b.md/","b.md/keep/","b.md/keep/.env/","b.md/keep/.env/b.md","c/","c/dist","node_modules/","node_modules/ab/","node_modules/ab/x.log/","node_modules/ab/x.log/a","src/","src/c/","src/c/src/","src/c/src/.git/","é/","é/.git/","é/.git/a.txt/","é/.git/a.txt/é"]}
+{"sent":[".env/",".env/x.log/",".env/x.log/keep","a b/","a b/ab/","a b/ab/y.log/","a b/ab/y.log/Dockerfile","a.txt/","a.txt/.dockerignore/","a.txt/.dockerignore/node_modules","b.md/","b.md/é/","b.md/é/node_modules/","b.md/é/node_modules/c","src/","src/ab/","src/ab/keep/","src/ab/keep/y.log","x.log/","x.log/.env","x.log/a b/","x.log/a b/.dockerignore/","x.log/a b/.dockerignore/.env"]}
+{"sent":[".git/",".git/dist"]}
+{"sent":["a/","a/Dockerfile/","a/Dockerfile/a.txt/","a/Dockerfile/a.txt/x.log","b.md/","b.md/y.log","node_modules/","node_modules/.dockerignore/","node_modules/.dockerignore/b.md","x.log"]}
+{"sent":[".env/",".env/c/",".env/c/.git","a/","a/node_modules/","a/node_modules/a","c/","c/c/","c/c/src/","c/c/src/.dockerignore","dist/","dist/b.md/","dist/b.md/x.log","keep","src/","src/é/","src/é/c/","src/é/c/.env","x.log","é/","é/é/","é/é/b/","é/é/b/b.md"]}
+{"sent":[".git/",".git/.env","b","node_modules/","node_modules/node_modules/","node_modules/node_modules/c/","node_modules/node_modules/c/b"]}
+{"sent":["a b/","a b/src","a/","a/b.md/","a/b.md/b/","a/b.md/b/dist","src","é/","é/b.md/"]}
+{"sent":[".dockerignore/",".dockerignore/a.txt/",".dockerignore/a.txt/a.txt/",".dockerignore/a.txt/a.txt/.dockerignore","a.txt/","a.txt/dist/","a.txt/dist/.git/","a.txt/dist/.git/dist","ab/","ab/b/","ab/b/Dockerfile","b","dist","x.log/","x.log/keep/","x.log/keep/é/","x.log/keep/é/.env"]}
+{"sent":[".dockerignore/",".dockerignore/.env/",".dockerignore/.env/src/",".dockerignore/.env/src/y.log",".env/",".env/a.txt/",".env/a.txt/ab/",".env/a.txt/ab/src",".env/x.log/",".env/x.log/Dockerfile/",".env/x.log/Dockerfile/y.log","c/","c/b.md","x.log/","x.log/.dockerignore","x.log/.env/","x.log/.env/c/","x.log/.env/c/Dockerfile"]}
+{"sent":["a.txt/","a.txt/keep/","y.log/","y.log/y.log/","y.log/y.log/y.log/","y.log/y.log/y.log/é"]}
+{"sent":[".env",".git/",".git/ab/",".git/ab/a.txt","a b/","a b/y.log/","a b/y.log/b/","a b/y.log/b/.git","a.txt/","a.txt/.env/","a.txt/.env/keep/","a.txt/.env/keep/dist","b.md/","b.md/é/","b.md/é/dist/","b.md/é/dist/x.log","b/"]}
+{"sent":[]}
+{"sent":[".dockerignore","a b/","a b/a.txt/","a b/a.txt/Dockerfile/","a b/a.txt/Dockerfile/a","a.txt/","a.txt/Dockerfile","c/","c/keep/","c/keep/c/","c/keep/c/.git","dist/","dist/.git/","dist/.git/Dockerfile","dist/keep","keep/","keep/.env","keep/src","x.log/","x.log/y.log/","x.log/y.log/ab","y.log/","y.log/é/","y.log/é/dist/","y.log/é/dist/dist"]}
+{"sent":["Dockerfile/","Dockerfile/c","a.txt/","a.txt/Dockerfile/","a.txt/Dockerfile/a b/","a.txt/Dockerfile/a b/ab","a.txt/y.log/","a.txt/y.log/Dockerfile/","a.txt/y.log/Dockerfile/y.log","a.txt/y.log/ab","b.md/","b.md/.dockerignore/","b.md/.dockerignore/b.md/","b.md/.dockerignore/b.md/y.log","é"]}
+{"sent":[".env/",".env/dist/",".env/dist/node_modules",".git/",".git/y.log/",".git/y.log/keep","a/","a/é/","a/é/y.log","ab/","ab/a b","ab/é/","ab/é/a b","b.md/","c/","c/c","x.log"]}
+{"sent":[".env/",".env/c","c/","c/Dockerfile/","c/Dockerfile/.env"]}
+{"sent":[".env/",".env/c/",".env/c/y.log/",".env/c/y.log/c/","c/","c/a b/","c/a b/.git/","c/a b/.git/a.txt","src/","src/x.log/","src/x.log/b/","src/x.log/b/dist"]}
+{"sent":[".env/",".env/ab/",".env/ab/Dockerfile/",".env/ab/Dockerfile/dist",".git/",".git/.env","Dockerfile/","Dockerfile/ab/","Dockerfile/ab/c/","Dockerfile/ab/c/é","a b/","a b/é/","a b/é/.env/","a b/é/.env/Dockerfile","c/","c/node_modules","node_modules","src/","src/c","x.log/","x.log/y.log"]}
+{"sent":[".env/",".env/keep/",".env/keep/.env",".env/node_modules/",".env/node_modules/é/",".env/node_modules/é/a",".git/",".git/Dockerfile","Dockerfile/","Dockerfile/.git","a b/","a b/b/","a b/b/.env/","a b/b/.env/é","b.md/","b.md/node_modules","dist/","dist/a/","dist/a/.dockerignore/","dist/a/.dockerignore/é","x.log/","x.log/a.txt/","x.log/a.txt/c/","x.log/a.txt/c/a"]}
+{"sent":["node_modules/","node_modules/a b/","node_modules/x.log/","node_modules/x.log/é"]}
+{"sent":[".dockerignore",".git/",".git/.git/",".git/.git/b",".git/ab","Dockerfile/","Dockerfile/a b","x.log/","x.log/Dockerfile/","x.log/Dockerfile/.git/","x.log/Dockerfile/.git/dist","é/"]}
+{"sent":[".dockerignore/",".dockerignore/.git/",".dockerignore/.git/ab/",".dockerignore/.git/ab/c",".git/",".git/y.log","Dockerfile/","Dockerfile/.env/","Dockerfile/.env/a.txt/","Dockerfile/.env/a.txt/Dockerfile","ab/","ab/a/","ab/a/a.txt","b","b.md/","b.md/node_modules/","b.md/node_modules/ab/","b.md/node_modules/ab/ab","c/","c/keep","y.log/","y.log/.git","é"]}
+{"sent":["ab/","ab/é/","ab/é/ab"]}
+{"sent":["dist/","dist/b.md","keep/","keep/a b","src/","src/keep/","src/keep/node_modules","x.log/","x.log/a.txt"]}
+{"sent":["a/","a/Dockerfile","ab/","ab/.dockerignore/","ab/.dockerignore/dist","ab/src","b.md","keep/","keep/Dockerfile","node_modules/","node_modules/node_modules/","node_modules/node_modules/keep/","node_modules/node_modules/keep/b/"]}
+{"sent":["b.md/","b.md/b/","b.md/b/b.md","keep/","keep/node_modules/","keep/node_modules/ab","x.log/","x.log/ab/","x.log/ab/.git","x.log/node_modules/","x.log/node_modules/dist","y.log/","y.log/.dockerignore/","y.log/.dockerignore/a","é/","é/.env"]}
+{"sent":["a b","a.txt/","a.txt/b.md","a/","a/a.txt","b.md/","b.md/a b/","b.md/a b/é/","b.md/a b/é/.env","c/","c/dist/","c/dist/dist","dist/","dist/.dockerignore/","dist/.dockerignore/.env","x.log/","x.log/src/","x.log/src/é/","x.log/src/é/node_modules"]}
+{"sent":["keep/","keep/.dockerignore/","keep/.dockerignore/.dockerignore/","keep/.dockerignore/.dockerignore/ab"]}
+{"sent":[".dockerignore/",".dockerignore/a/",".dockerignore/a/c/",".dockerignore/a/c/keep",".dockerignore/b.md/",".dockerignore/b.md/dist/",".dockerignore/b.md/dist/dist","Dockerfile/","Dockerfile/keep/","Dockerfile/keep/c","ab/","ab/y.log/","ab/y.log/é","src/","src/a.txt/","src/a.txt/Dockerfile"]}
+{"sent":["a b/","a b/y.log/","a b/y.log/b","b/","b/keep/","b/keep/a.txt","keep/","keep/y.log","y.log/","y.log/y.log/","y.log/y.log/b"]}
+{"sent":["a.txt/","a.txt/node_modules/","a.txt/node_modules/.env/","a.txt/node_modules/.env/a.txt","b","dist","node_modules/","node_modules/node_modules/","node_modules/node_modules/.env","y.log/","y.log/Dockerfile","é/","é/ab"]}
+{"sent":[".dockerignore",".git/",".git/keep/",".git/keep/y.log/",".git/keep/y.log/é","a.txt/","a.txt/a b/","a.txt/a b/é/","a.txt/a b/é/ab","src/","src/.env/","src/.env/ab","src/é","y.log/","y.log/.env/","y.log/.env/a.txt/","y.log/.env/a.txt/y.log"]}
+{"sent":[".dockerignore/",".dockerignore/a/",".dockerignore/a/a/",".dockerignore/a/a/é","a.txt/","a.txt/é/","a.txt/é/.git","b.md","keep/","keep/src/","keep/src/dist","x.log/","x.log/a","é/","é/x.log"]}
+{"sent":[".env/",".env/b/","ab/","ab/b.md/","ab/b.md/node_modules/","ab/b.md/node_modules/a","b/","b/ab/","b/ab/b/"]}
+{"sent":[".env/",".env/Dockerfile","a.txt/","a.txt/a.txt/","a.txt/a.txt/node_modules","keep/","keep/x.log","src/","src/a/","src/a/src","é/","é/b/","é/b/é"]}
+{"sent":[".dockerignore/",".dockerignore/b.md/",".dockerignore/b.md/src","Dockerfile/","Dockerfile/é/","Dockerfile/é/a b/","a b/","a b/c/","a b/c/.dockerignore/","a b/c/.dockerignore/.env","ab","b.md/","b.md/ab/","b.md/ab/.dockerignore","dist/","dist/a","x.log/","x.log/keep/","x.log/keep/a b","x.log/src","y.log"]}
+{"sent":[]}
+{"sent":[]}
+{"sent":[".dockerignore/",".dockerignore/y.log/",".dockerignore/y.log/y.log","Dockerfile/","Dockerfile/x.log/","Dockerfile/x.log/b.md","a b/","a b/a/","a b/a/y.log/","a b/a/y.log/.dockerignore","a.txt/","a.txt/b/","a.txt/b/é","ab/","ab/a/","ab/a/.git","node_modules/","node_modules/node_modules/","node_modules/node_modules/.env/","node_modules/node_modules/.env/.git","src/","src/a b/","src/a b/keep"]}
+{"sent":[".dockerignore",".git/",".git/x.log","Dockerfile/","Dockerfile/é/","Dockerfile/é/src/","Dockerfile/é/src/b"]}
+{"sent":[".dockerignore/",".dockerignore/node_modules/",".dockerignore/node_modules/a.txt","Dockerfile/","Dockerfile/a b/","Dockerfile/a b/a b","a b/","a b/dist/","a b/dist/y.log"]}
+{"sent":[".env","a/","a/é","ab","b.md/","b.md/c/","b.md/c/y.log/","b.md/c/y.log/b.md","b/","b/ab/","b/ab/a b/","b/ab/a b/keep","c/","c/a.txt/","c/a.txt/.dockerignore","c/ab/","c/ab/a.txt/","dist/","dist/y.log/","dist/y.log/keep","node_modules/","node_modules/node_modules/","node_modules/node_modules/a b","y.log/","y.log/.dockerignore/","y.log/.dockerignore/c/","y.log/.dockerignore/c/a"]}
+{"sent":["a.txt/","a.txt/b/","a.txt/b/.dockerignore/","a.txt/b/.dockerignore/.dockerignore","ab/","ab/b","x.log/","x.log/node_modules","y.log/","y.log/src","é"]}
+{"sent":["a.txt/","a.txt/a b/","a.txt/a b/.git/","a.txt/a b/.git/Dockerfile","a.txt/a b/a.txt/","a.txt/a b/a.txt/node_modules","a.txt/node_modules/","a.txt/node_modules/keep/","a.txt/node_modules/keep/a.txt","ab/","ab/.git/","ab/.git/a.txt/","ab/.git/a.txt/x.log","dist/","dist/keep/","dist/keep/.dockerignore","keep/","keep/c/","keep/c/a/","keep/c/a/a","node_modules/","node_modules/node_modules","é/","é/é/","é/é/b.md/","é/é/b.md/.dockerignore"]}
+{"sent":[".env/",".env/Dockerfile/",".env/Dockerfile/dist/",".env/Dockerfile/dist/keep","a","b.md/","b.md/a/","b.md/a/a","b/","b/y.log/","b/y.log/x.log","dist/","dist/c"]}
+{"sent":[".env/",".env/node_modules/",".env/node_modules/node_modules/",".env/node_modules/node_modules/.git/",".git/",".git/y.log/",".git/y.log/b/",".git/y.log/b/é","a.txt","a/","a/b.md/","a/b.md/c","b/","b/x.log/","b/x.log/c"]}
+{"sent":[".dockerignore/",".dockerignore/é",".env","ab/","ab/dist/","ab/dist/x.log/","ab/dist/x.log/a b","ab/src","b.md/","b.md/b.md/","b.md/b.md/c/","b.md/b.md/c/b.md","c","dist/","dist/.git","x.log/","x.log/y.log","é/","é/a b/","é/a b/b.md/","é/a b/b.md/a.txt"]}
+{"sent":["a b/","a b/.git","a b/é/","a b/é/b.md"]}
+{"sent":[".git/",".git/.dockerignore/",".git/.dockerignore/b/",".git/.dockerignore/b/é","b.md/","b.md/x.log/","b.md/x.log/a.txt","dist/","dist/a b","keep/","keep/a b","src/","src/ab/","src/ab/a/","src/ab/a/é","y.log/","y.log/ab/","y.log/ab/src"]}
+{"sent":["a b/","a.txt/","a.txt/node_modules/","a.txt/node_modules/é","a/","a/y.log/","a/y.log/Dockerfile/","a/y.log/Dockerfile/node_modules","b/","b/node_modules/","b/node_modules/.env","c/","c/y.log","keep/","node_modules","src","é"]}
+{"sent":[".env/",".env/.git/",".env/.git/node_modules/",".env/.git/node_modules/a b","src/","src/c/","src/c/b.md/","src/c/b.md/b.md","y.log/","y.log/x.log/","y.log/x.log/y.log/","y.log/x.log/y.log/src","é/","é/dist/","é/dist/a"]}
+{"sent":[".git/",".git/keep/",".git/keep/b","b","b.md/","b.md/node_modules","b.md/é/","b.md/é/dist/","b.md/é/dist/a/","node_modules/","node_modules/.dockerignore/","node_modules/.dockerignore/a b","x.log"]}
+{"sent":["ab","src/","src/.env/","src/.env/dist/","src/.env/dist/src","src/a/","src/a/Dockerfile","src/node_modules/","src/node_modules/a/","src/node_modules/a/keep","x.log/","x.log/.git/","x.log/.git/c/","x.log/.git/c/a b","x.log/node_modules","y.log/","y.log/x.log"]}
+{"sent":[".env/",".env/keep/",".env/keep/a",".git/",".git/a","a.txt/","a.txt/é/","a.txt/é/a/","a.txt/é/a/.env","a/","a/c/","b/","b/.env/","b/.env/Dockerfile","c/","c/keep/","c/keep/c/","c/keep/c/a","src","é/","é/y.log"]}
+{"sent":["Dockerfile/","Dockerfile/a b/","Dockerfile/a b/b","a"]}
+{"sent":[".dockerignore/",".dockerignore/.git",".git/",".git/a.txt/",".git/a.txt/a/",".git/a.txt/a/é","Dockerfile/","Dockerfile/a.txt/","Dockerfile/a.txt/é","dist/","dist/x.log/","dist/x.log/a.txt/","dist/x.log/a.txt/.env/","src/","src/keep/","src/keep/a/","src/keep/a/Dockerfile","x.log/","x.log/x.log/","x.log/x.log/dist"]}
+{"sent":["b","node_modules/","node_modules/x.log/","node_modules/x.log/a.txt/"]}
+{"sent":[".dockerignore","Dockerfile/","Dockerfile/b/","Dockerfile/b/b","a b/","a b/.env/","a b/.env/.dockerignore/","a b/.env/.dockerignore/b","keep/","keep/b/","keep/b/Dockerfile","keep/keep/","keep/keep/é","node_modules/","é"]}
+{"sent":[".env/",".env/src/",".env/src/src/",".env/src/src/.env","ab/","ab/x.log","c/","c/c","c/x.log/","c/x.log/c/","c/x.log/c/a","keep/","keep/b","x.log/","x.log/node_modules/","x.log/node_modules/é","é/","é/dist/","é/dist/.env"]}
+{"sent":[]}
+{"sent":[]}
+{"sent":["b.md/","b.md/.env","b.md/b","b.md/x.log","b/","b/node_modules","c/","c/é","é/","é/.git/","é/.git/b"]}
+{"sent":[".env/",".env/a/",".env/a/a b/",".env/a/a b/b",".git/","Dockerfile/","Dockerfile/Dockerfile","a/","a/src/","a/src/.git/","a/src/.git/.env","ab/","ab/ab/","ab/ab/b.md/","ab/ab/b.md/é"]}
+{"sent":["node_modules/","node_modules/b.md/","node_modules/b.md/a/","node_modules/b.md/a/é/"]}
+{"sent":[".env","a.txt","b/","b/.env","b/b/","b/b/.env","x.log/","x.log/a/","x.log/a/y.log","é"]}
+{"sent":["a b/","a b/b/","a b/b/.git","a/","a/a b/","a/a b/y.log","a/node_modules","src/","src/dist","x.log/","x.log/c"]}
+{"sent":["ab/","ab/Dockerfile/","ab/Dockerfile/src/","ab/Dockerfile/src/a.txt","ab/src/","ab/src/b","é/","é/.git","é/b.md/","é/b.md/a.txt/"]}
+{"sent":["a","ab/","ab/é/","ab/é/é/","ab/é/é/x.log","c/","c/é/","c/é/y.log","dist/","dist/Dockerfile","node_modules","y.log/","y.log/src/"]}
+{"sent":[".dockerignore/",".dockerignore/b.md/",".dockerignore/b.md/.dockerignore/",".dockerignore/b.md/.dockerignore/a",".env/",".env/dist/","a","a b/","a b/ab/","a b/ab/dist/","a b/ab/dist/é","a.txt","c/","c/node_modules/","c/node_modules/x.log","dist/","dist/.env","keep/","keep/keep/","keep/keep/dist/","keep/keep/dist/src","node_modules/","node_modules/.git/","node_modules/.git/.git/","node_modules/.git/.git/a","x.log/","x.log/a b/","x.log/a b/a/"]}
+{"sent":[".dockerignore","b.md/","b.md/b.md/","b.md/b.md/.dockerignore/","b.md/b.md/.dockerignore/Dockerfile","dist/","dist/é"]}
+{"sent":["b/","b/.env","c/","c/x.log","dist","x.log/","x.log/y.log"]}
+{"sent":[".dockerignore/",".dockerignore/dist","a b/","a b/.git/","a b/.git/dist","b/","b/dist/","b/dist/a b/","b/dist/a b/a.txt","x.log/","x.log/a"]}
+{"sent":[".dockerignore",".env",".git/",".git/c/",".git/c/b/",".git/c/b/ab","b.md/","b.md/c/","b.md/c/y.log","b/","b/src","src"]}
+{"sent":[".dockerignore/","c/","c/ab/","c/ab/x.log","keep/","keep/a.txt/","keep/a.txt/dist/","keep/a.txt/dist/.env","src/","src/c/","src/c/c/","src/c/c/dist"]}
+{"sent":["node_modules/","node_modules/x.log","src/","src/.env/","src/.env/a.txt/","src/.env/a.txt/ab","x.log/","x.log/Dockerfile","y.log/","y.log/Dockerfile/","y.log/Dockerfile/a/","y.log/Dockerfile/a/b","y.log/src/","y.log/src/Dockerfile/","y.log/src/Dockerfile/b.md"]}
+{"sent":["a","a.txt/","a.txt/y.log","b.md","node_modules/","node_modules/a","node_modules/a.txt/","src/","src/y.log/","src/y.log/a.txt/","src/y.log/a.txt/src","x.log/","x.log/.env/","x.log/.env/.git/","x.log/.env/.git/node_modules","y.log/","y.log/.dockerignore/","y.log/.dockerignore/.git/","y.log/.dockerignore/.git/dist"]}
+{"sent":[".dockerignore/",".dockerignore/a b/",".dockerignore/a b/src/",".dockerignore/a b/src/ab"]}
+{"sent":["src/","src/.env/","src/.env/x.log"]}
+{"sent":[".dockerignore","a.txt/","a.txt/a b","a.txt/a.txt/","a.txt/a.txt/.dockerignore","a/","a/y.log/","a/y.log/é/","a/y.log/é/a.txt","c/","c/b/","c/b/node_modules/","c/b/node_modules/ab","c/x.log/","c/x.log/y.log","keep","é/","é/src/","é/src/.dockerignore/","é/src/.dockerignore/.git"]}
+{"sent":[".git/",".git/keep/",".git/keep/node_modules/",".git/keep/node_modules/.git"]}
+{"sent":[".dockerignore",".git","a b","b.md/","b.md/b/","keep/","keep/a.txt/","keep/a.txt/a b/","keep/a.txt/a b/x.log","é/","é/keep/","é/keep/c","é/y.log/","é/y.log/Dockerfile"]}
+{"sent":[".env/",".env/ab/",".env/ab/é/",".env/ab/é/y.log",".git/",".git/ab/",".git/ab/.git",".git/c",".git/y.log/",".git/y.log/.dockerignore","a/","b.md","b/","b/a b","node_modules/","node_modules/Dockerfile","src/","src/x.log/","src/x.log/ab/","src/x.log/ab/x.log/","x.log/","x.log/.env/","x.log/.env/é/","x.log/.env/é/b"]}
+{"sent":[".dockerignore/",".dockerignore/x.log/","Dockerfile","a b/","a b/y.log/","a b/y.log/node_modules/","a b/y.log/node_modules/keep","a.txt","ab/","ab/y.log/","ab/y.log/a b/","b.md/","b.md/b.md/","b.md/b.md/.env","b.md/y.log/","node_modules/","node_modules/y.log"]}
+{"sent":[".dockerignore/",".env/",".env/.git/",".env/.git/src/",".env/.git/src/a.txt",".env/a b/",".env/a b/a","b.md/","b.md/b","keep","node_modules/","node_modules/b","x.log/","x.log/.git/","x.log/.git/.dockerignore/","x.log/.git/.dockerignore/node_modules","y.log/","y.log/x.log/","y.log/x.log/a/","y.log/x.log/a/a.txt"]}
+{"sent":[".dockerignore/",".dockerignore/y.log/",".dockerignore/y.log/a.txt/",".dockerignore/y.log/a.txt/b.md",".git/",".git/.git/",".git/.git/b.md","a/","a/keep/","a/keep/Dockerfile/","ab/","ab/node_modules/","ab/node_modules/a b","b/","b/b/","b/b/src","dist/","dist/.dockerignore","x.log/","x.log/.env/","x.log/.env/a b"]}
+{"sent":["a.txt/","a.txt/y.log"]}
+{"sent":[".dockerignore/",".dockerignore/x.log/",".dockerignore/x.log/y.log/",".dockerignore/x.log/y.log/.git","dist/","dist/keep/","dist/keep/dist/","dist/keep/dist/c","src/","src/b/","src/b/keep/","src/b/keep/a b","x.log/","x.log/x.log/","x.log/x.log/b/","x.log/x.log/b/x.log"]}
+{"sent":[],"error":"invalid excludepatterns: [! !.git !**/.git !Dockerfile !b !.env]: illegal exclusion pattern: \"!\""}
+{"sent":["b","b.md/","b.md/b/","b.md/b/b/","b.md/b/b/x.log/","y.log"]}
+{"sent":[".env/",".env/.git/",".env/.git/a.txt","a.txt/","a.txt/.dockerignore/","a.txt/.dockerignore/keep/","a.txt/.dockerignore/keep/.env","dist/","dist/node_modules/","dist/node_modules/keep/","dist/node_modules/keep/é","src/","src/é"]}
+{"sent":[".dockerignore/",".dockerignore/ab/",".dockerignore/ab/a b",".git/",".git/b/",".git/b/x.log","b.md/","b.md/node_modules/","b.md/node_modules/Dockerfile/","b/","b/node_modules","c/","c/keep","node_modules/","node_modules/node_modules/","node_modules/node_modules/src","src/","src/x.log/","x.log/","x.log/b"]}
+{"sent":[".env","a/","a/a b/","a/a b/Dockerfile","c/","c/a.txt/","c/a.txt/x.log/","c/a.txt/x.log/a","y.log/","y.log/b","y.log/b.md/"]}
+{"sent":["a b","dist/","dist/c/","dist/c/a b","keep/","keep/a b/","keep/a b/x.log/","keep/a b/x.log/a","node_modules/","node_modules/y.log/","node_modules/y.log/b.md","é"]}
+{"sent":[".env","Dockerfile","b.md/","b.md/c/","b.md/c/Dockerfile/","b.md/c/Dockerfile/y.log","node_modules/","node_modules/a.txt/","node_modules/c/","node_modules/c/dist/","node_modules/c/dist/b"]}
+{"sent":["ab/","ab/a","ab/keep/","ab/keep/keep","dist/","dist/a.txt/","dist/a.txt/dist","dist/node_modules","y.log/","y.log/.git/","y.log/.git/y.log"]}
+{"sent":[".env/",".env/keep/",".env/keep/.dockerignore/",".env/keep/.dockerignore/a b","a b/","a b/y.log/","a b/y.log/a","ab/","ab/é/","ab/é/.env/","ab/é/.env/c","b.md/","b.md/b","b/","b/.dockerignore","c/","c/é","src/","src/dist/","src/dist/Dockerfile/","src/dist/Dockerfile/c","src/node_modules/","src/node_modules/node_modules"]}
+{"sent":["a.txt","a/","a/Dockerfile/","a/Dockerfile/src","ab/","b.md","dist","node_modules/","node_modules/.git/","node_modules/.git/a","é/","é/keep/"]}
+{"sent":["x.log/","x.log/y.log/","x.log/y.log/.dockerignore"]}
+{"sent":[".dockerignore/",".dockerignore/a.txt/",".dockerignore/a.txt/a/",".dockerignore/a.txt/a/é","a.txt/","a.txt/.env/","a.txt/.env/b.md","a/","a/node_modules/","a/node_modules/a b/","a/node_modules/a b/dist","dist","node_modules/","node_modules/dist","src/","src/ab/","src/ab/.git/","src/ab/.git/a.txt"]}
+{"sent":[]}
+{"sent":[".env/",".env/.dockerignore","src/","src/y.log"]}
+{"sent":[".dockerignore/",".dockerignore/y.log/",".dockerignore/y.log/.git","a b/","a b/a b","a/","a/x.log","c","y.log/","y.log/a.txt/","y.log/a.txt/ab"]}
+{"sent":[".git/",".git/b.md","node_modules/","node_modules/a.txt/","node_modules/a.txt/é","node_modules/é/","node_modules/é/.env","y.log/","y.log/a b/","y.log/a b/c/","y.log/a b/c/c"]}
+{"sent":["node_modules/","node_modules/é/","node_modules/é/a b"]}
+{"sent":["keep/","keep/node_modules/","keep/node_modules/src/","keep/node_modules/src/.git","src/","src/a/","src/a/b.md","y.log"]}
+{"sent":["Dockerfile/","Dockerfile/src/","Dockerfile/src/a/","Dockerfile/src/a/a.txt","a.txt","b.md/","b.md/node_modules/","b.md/node_modules/.dockerignore"]}
+{"sent":[".dockerignore","Dockerfile/","Dockerfile/keep","a/","a/é/","a/é/.env/","a/é/.env/c","ab","b.md/","b.md/c/","b.md/c/.env","dist/","dist/b.md/","dist/b.md/ab/","dist/b.md/ab/keep"]}
+{"sent":["keep","src","é/","é/.dockerignore/","é/.dockerignore/a/","é/.dockerignore/a/c"]}
+{"sent":[".dockerignore/",".dockerignore/a.txt/",".git","Dockerfile/","b.md/","b.md/b.md/","b.md/b.md/a","y.log/","y.log/keep/","y.log/keep/dist/","y.log/keep/dist/é"]}
+{"sent":["dist/","dist/x.log"]}
+{"sent":[".env/",".env/.git/",".env/.git/é/",".env/.git/é/dist/",".env/Dockerfile/",".env/Dockerfile/.dockerignore/",".env/Dockerfile/.dockerignore/a",".git/",".git/src/",".git/src/.git","a/","a/.env/","a/.env/a b","ab/","keep/","keep/y.log","y.log/","y.log/.git/","y.log/.git/é/","y.log/.git/é/.dockerignore/"]}
+{"sent":[".dockerignore",".env/",".env/keep","keep/","keep/b.md/","keep/b.md/keep","node_modules/","node_modules/ab/","node_modules/ab/.env","src/","src/src/","src/src/b","x.log/","x.log/.git/","x.log/.git/node_modules"]}
+{"sent":["a/","a/.git/","a/.git/x.log/","a/.git/x.log/a","keep","src/","src/y.log/","y.log"]}
+{"sent":["a b","src/","src/b.md/","src/b.md/a"]}
+{"sent":["ab/","dist/","dist/b.md/","dist/b.md/ab/","node_modules/","node_modules/b/","src/","src/b.md/","src/b.md/c"]}
+{"sent":["a b/","a b/keep/","a b/keep/b.md/","a b/keep/b.md/x.log","a.txt/","a.txt/a.txt/","a.txt/a.txt/b","a/","a/b.md/","a/b.md/Dockerfile/","a/b.md/Dockerfile/é","node_modules/","node_modules/src/","node_modules/src/b.md"]}
+{"sent":["a.txt/","a.txt/.env/","a.txt/.env/.git/","a.txt/.env/.git/b.md","c/","c/é/","c/é/node_modules","dist","node_modules/","node_modules/a","x.log","y.log/","y.log/dist/","y.log/dist/y.log/","y.log/dist/y.log/.dockerignore","é/","é/.env"]}
+{"sent":["a","dist/","dist/a.txt/","dist/a.txt/keep/","dist/a.txt/keep/a b","node_modules/","y.log"]}
+{"sent":["dist/","dist/b.md"]}
+{"sent":[".dockerignore/",".dockerignore/a/",".dockerignore/a/y.log",".env/",".env/y.log/",".env/y.log/.env",".git","a.txt","b.md","x.log/","x.log/b.md/","x.log/b.md/.env/","x.log/b.md/.env/node_modules"]}
+{"sent":[".git","Dockerfile/","Dockerfile/.env/","Dockerfile/.env/y.log/","Dockerfile/a.txt/","Dockerfile/a.txt/b.md/","Dockerfile/a.txt/b.md/node_modules","a.txt/","a.txt/ab","b/","b/y.log","dist/","dist/y.log/","dist/y.log/b.md/","dist/y.log/b.md/ab"]}
+{"sent":[".dockerignore","a.txt/","a.txt/Dockerfile/","a.txt/Dockerfile/.dockerignore/","a.txt/Dockerfile/.dockerignore/a b","keep/","keep/c/","keep/c/b.md","src/","src/Dockerfile/","src/Dockerfile/a b","é/","é/.dockerignore/","é/.dockerignore/a"]}
+{"sent":[".dockerignore/",".dockerignore/é/",".dockerignore/é/a b/",".dockerignore/é/a b/.dockerignore","Dockerfile","b.md/","b.md/c","b/","b/.git","c/","c/b.md/","c/b.md/node_modules","dist/","dist/.dockerignore/","dist/.dockerignore/x.log/","dist/.dockerignore/x.log/b.md","node_modules","src/","src/a","é"]}
+{"sent":["a.txt/","ab/","keep/","keep/é/","keep/é/.env","src/","src/keep/","src/keep/a.txt/","src/keep/a.txt/b.md","x.log","y.log/","y.log/x.log/","y.log/x.log/.env/","y.log/x.log/.env/y.log","é/","é/.dockerignore/","é/.dockerignore/keep/"]}
+{"sent":["dist/","dist/é/","dist/é/x.log","src/","src/é/","src/é/Dockerfile"]}
+{"sent":[".dockerignore/","src/","src/.dockerignore/","src/.dockerignore/Dockerfile"]}
+{"sent":["a b"]}
+{"sent":[".env/",".env/b.md/",".env/b.md/é/",".env/b.md/é/node_modules","b.md/","b.md/é/","b.md/é/src","dist/","dist/.dockerignore","dist/é/","dist/é/é/","dist/é/é/.dockerignore","keep","node_modules/","node_modules/.env/","node_modules/.env/.git/","node_modules/.env/.git/x.log","y.log","é"]}
+{"sent":["a b/","a b/a/","a b/a/c/","a b/a/c/c","a.txt/","a.txt/b/","a.txt/b/b","a/","a/Dockerfile","a/ab","ab/","ab/keep/","ab/keep/node_modules/","ab/keep/node_modules/b.md","ab/é","b","x.log/","x.log/keep/","x.log/keep/y.log/","x.log/keep/y.log/c"]}
+{"sent":[".dockerignore/",".dockerignore/b.md/",".dockerignore/b.md/b/",".dockerignore/b.md/b/x.log","a b/","a b/ab/","a b/ab/.env/","a b/ab/.env/Dockerfile","b.md/","b.md/b.md","c"]}
+{"sent":["a b/","a b/Dockerfile/","a b/Dockerfile/é/","a b/Dockerfile/é/y.log/","ab","b.md/","b.md/keep/","b.md/keep/x.log","b/","b/b","y.log/","y.log/Dockerfile/"]}
+{"sent":[".git","a/","a/.git","b/","b/y.log/","b/y.log/a b","c","keep/","keep/a.txt","y.log/","é/","é/src/","é/src/node_modules/"]}
+{"sent":["a b/","a b/.dockerignore/","a b/.dockerignore/b/","a b/.dockerignore/b/.env","ab","node_modules/","node_modules/a b"]}
+{"sent":[".dockerignore/",".dockerignore/y.log/",".dockerignore/y.log/.dockerignore",".env/",".env/.env","a b/","a b/.env/","a b/.env/Dockerfile","a.txt","b/","b/.dockerignore","c/","c/Dockerfile/","c/Dockerfile/y.log/","c/Dockerfile/y.log/node_modules","dist/","dist/dist","x.log/","x.log/y.log/","x.log/y.log/b.md/","x.log/y.log/b.md/a.txt"]}
+{"sent":["Dockerfile/","Dockerfile/é","dist/","dist/keep/","dist/keep/b.md/","keep/","keep/.dockerignore","y.log/","y.log/é/","y.log/é/node_modules/","y.log/é/node_modules/b"]}
+{"sent":[".git","Dockerfile/","Dockerfile/é/","Dockerfile/é/é","a b","a/","b.md/","b.md/.git","b/","b/.dockerignore/","b/.dockerignore/node_modules","dist/","dist/Dockerfile/","dist/Dockerfile/a b","x.log/","x.log/é/","x.log/é/.git"]}
+{"sent":["a.txt/","a.txt/.git","src/","src/keep/","src/keep/Dockerfile/","src/keep/Dockerfile/Dockerfile"]}
+{"sent":["Dockerfile","a.txt/","a.txt/ab","dist/","dist/node_modules/","dist/node_modules/a/","dist/node_modules/a/c","node_modules/","node_modules/y.log/","node_modules/y.log/ab/","node_modules/y.log/ab/c","é/"]}
+{"sent":["c/","c/é/","c/é/.env/","c/é/.env/b.md","y.log","é/","é/b/","é/b/a.txt/","é/b/a.txt/.env"]}
+{"sent":[".dockerignore/",".dockerignore/y.log","a b/","a b/keep","ab","c/","c/b.md","keep/","keep/src","node_modules/","node_modules/é/","node_modules/é/src","y.log/","y.log/.git"]}
+{"sent":[".env/",".env/é",".git/",".git/ab/",".git/ab/.git","Dockerfile","a/","a/keep","b/","b/é","c/","c/a b/","c/a b/é/","c/a b/é/a b","node_modules/","node_modules/a.txt/","node_modules/a.txt/c/","node_modules/a.txt/c/.dockerignore"]}
+{"sent":["Dockerfile/","Dockerfile/b.md","a b/","a b/x.log/","a b/x.log/é/","a b/x.log/é/ab","c/","c/keep/","c/keep/a.txt/","c/keep/a.txt/y.log","dist","keep/","keep/y.log","src/","src/c"]}
+{"sent":[".dockerignore","Dockerfile/","Dockerfile/node_modules","Dockerfile/x.log/","Dockerfile/x.log/a b","a b/","a b/node_modules/","a.txt/","a.txt/b/","a.txt/b/é","ab/","ab/ab/","ab/ab/.git/","ab/ab/.git/.git","keep/","keep/src/","keep/src/src","node_modules/","node_modules/x.log/","node_modules/x.log/ab/","node_modules/x.log/ab/node_modules","x.log/","x.log/keep"]}
+{"sent":[".dockerignore/",".dockerignore/b.md/",".dockerignore/b.md/ab/",".dockerignore/b.md/ab/ab","a b","a/","a/.env","ab/","ab/a.txt/","ab/a.txt/c","ab/keep","b.md/","b.md/é","b/","b/c/","b/c/ab","keep/","keep/y.log","y.log/","y.log/é/","y.log/é/.dockerignore"]}
+{"sent":["Dockerfile/","Dockerfile/b.md/","Dockerfile/b.md/keep/","Dockerfile/b.md/keep/node_modules","a b","ab/","ab/dist","b.md/","b.md/a b/","b.md/a b/a b/","b.md/a b/a b/ab","b/","b/b.md/","b/b.md/a.txt/","b/b.md/a.txt/b"]}
+{"sent":["Dockerfile/","Dockerfile/node_modules","a/","a/src","b/","b/a.txt/","b/a.txt/b.md/","b/a.txt/b.md/node_modules","b/x.log/","b/x.log/b.md/","b/x.log/b.md/a.txt","b/é/","b/é/.dockerignore/","b/é/.dockerignore/a","c/","c/c/","src/","src/a.txt/","src/a.txt/Dockerfile/","src/a.txt/Dockerfile/a.txt","x.log/","x.log/c"]}
+{"sent":["c/","c/Dockerfile/","c/Dockerfile/a.txt"]}
+{"sent":[".git/",".git/Dockerfile/","dist/","dist/y.log/","dist/y.log/dist"]}
+{"sent":[".dockerignore/",".dockerignore/é/",".dockerignore/é/.git",".env","a b/","c/","c/.git/","c/.git/dist/","c/.git/dist/b","c/src","keep/","keep/é/","keep/é/dist/","keep/é/dist/é","src/","src/x.log/","src/x.log/src/","src/x.log/src/x.log","x.log"]}
+{"sent":[".dockerignore/",".env/",".env/Dockerfile/",".env/Dockerfile/dist","Dockerfile/","Dockerfile/c/","Dockerfile/c/a/","Dockerfile/c/a/.git","b","dist/","dist/.git/","dist/.git/keep"]}
+{"sent":[".env/",".env/.env/",".env/.env/keep/",".env/.env/keep/a b",".env/a.txt/",".env/a.txt/.dockerignore/",".env/a.txt/.dockerignore/.env",".git/",".git/keep/",".git/keep/node_modules",".git/node_modules/",".git/node_modules/Dockerfile/",".git/node_modules/Dockerfile/a b","a/","a/keep","b/","dist/","dist/b/","node_modules/","node_modules/a.txt","x.log"]}
+{"sent":[".env/",".env/b/",".env/b/ab/","dist/","dist/src"]}
+{"sent":[".git/",".git/.dockerignore","Dockerfile/","Dockerfile/a.txt/","Dockerfile/a.txt/.dockerignore/","a b","a/","a/b.md","c","dist/","dist/a.txt","keep","x.log"]}
+{"sent":[]}
+{"sent":["keep"]}
+{"sent":["a b","keep/","keep/dist"]}
+{"sent":["a b/","a b/é/","a b/é/.env/","a b/é/.env/keep","ab/","b/","b/a.txt/","x.log/","x.log/.git/","x.log/.git/b.md/","y.log/","y.log/src/","y.log/src/.git/","y.log/src/.git/c","é/","é/Dockerfile"]}
+{"sent":[".dockerignore/",".dockerignore/ab/",".dockerignore/ab/c/",".dockerignore/ab/c/ab",".dockerignore/b/",".dockerignore/b/a/",".dockerignore/b/a/.git",".env/",".env/keep/",".env/keep/node_modules/"]}
+{"sent":["a b/","a b/ab","a b/node_modules","a/","a/y.log/","a/y.log/ab/","a/y.log/ab/.git","c"]}
+{"sent":[".dockerignore/",".dockerignore/.dockerignore/",".dockerignore/.dockerignore/a.txt/",".dockerignore/.dockerignore/a.txt/a.txt",".git/",".git/a b/",".git/a b/a b",".git/b/",".git/b/dist","c/","c/src/","c/src/c/","dist/","dist/keep/","dist/keep/Dockerfile/","dist/keep/Dockerfile/a","node_modules/","node_modules/x.log/","node_modules/x.log/b","é/","é/b.md","é/y.log"]}
+{"sent":[".dockerignore/",".dockerignore/.git/",".dockerignore/.git/.env/",".dockerignore/.git/.env/node_modules",".env/",".env/a/",".env/a/keep","a.txt/","a.txt/ab/","a.txt/ab/a.txt/","a.txt/ab/a.txt/ab","dist/","dist/c/","dist/c/node_modules/","dist/c/node_modules/Dockerfile","é"]}
+{"sent":["a.txt/","a.txt/y.log","a/","a/ab/","a/ab/.git","b.md/","b.md/b/","b.md/b/b/","b.md/b/b/a","node_modules/","node_modules/b/","node_modules/b/dist/","node_modules/b/dist/src","y.log/","y.log/dist/","y.log/dist/b","é/","é/a.txt/","é/a.txt/.env/","é/a.txt/.env/a.txt"]}
+{"sent":["a.txt/","a.txt/y.log/","a.txt/y.log/src","b/","b/ab","node_modules/","node_modules/a.txt","node_modules/src"]}
+{"sent":["a.txt/","a.txt/a b/","a.txt/a b/keep","ab/","ab/node_modules/","ab/node_modules/keep/","ab/node_modules/keep/a b","b/","b/b.md/"]}
+{"sent":[".env/",".env/a b",".git","a b/","a b/node_modules/","ab/","ab/a.txt/","ab/a.txt/b.md","x.log/","x.log/a b/","x.log/a b/x.log"]}
+{"sent":[".env/",".env/node_modules/",".env/node_modules/x.log",".git","a.txt/","a.txt/ab/","a.txt/ab/keep","b/","b/.dockerignore/","b/.dockerignore/ab","dist/","dist/b/","dist/b/y.log/","dist/b/y.log/.dockerignore","dist/src/","dist/src/b.md/","dist/src/b.md/x.log","node_modules/","node_modules/y.log","x.log/","x.log/a/","x.log/a/node_modules/","x.log/a/node_modules/.git","y.log/","y.log/.dockerignore"]}
+{"sent":["a.txt"]}
+{"sent":[".env/",".env/a b","ab","x.log/","x.log/a.txt/","x.log/a.txt/x.log","x.log/b.md/","x.log/b.md/c"]}
+{"sent":[]}
+{"sent":["ab/","ab/b/","ab/b/dist/","ab/b/dist/y.log"]}
+{"sent":[".dockerignore/",".dockerignore/a.txt/",".dockerignore/a.txt/y.log",".dockerignore/ab/",".dockerignore/ab/.env/",".dockerignore/ab/.env/b","Dockerfile/","src/","src/x.log/","src/x.log/.dockerignore/","src/x.log/.dockerignore/ab/"]}
+{"sent":[".env/",".env/.dockerignore/",".env/.dockerignore/a.txt","Dockerfile/","Dockerfile/dist/","a.txt/","a.txt/dist/","a.txt/dist/é","b.md/","b.md/é","c/","c/a b/","c/a b/node_modules","dist/","dist/c/","dist/c/b.md","src"]}
+{"sent":["a b/","a b/keep","a/","a/keep/","a/keep/node_modules/","a/keep/node_modules/é/","keep/","keep/Dockerfile/","keep/Dockerfile/y.log/","keep/Dockerfile/y.log/b/","src/","src/a.txt","x.log"]}
+{"sent":[".dockerignore/",".dockerignore/.env/",".dockerignore/.env/Dockerfile/",".dockerignore/.env/Dockerfile/dist"]}
+{"sent":["dist/","dist/c/","node_modules/","node_modules/x.log/","node_modules/x.log/Dockerfile/","node_modules/x.log/Dockerfile/x.log"]}
+{"sent":[".env/",".env/node_modules/",".env/node_modules/a/",".env/node_modules/a/c","Dockerfile/","Dockerfile/y.log/","Dockerfile/y.log/Dockerfile/","Dockerfile/y.log/Dockerfile/a","a/","a/node_modules/","a/node_modules/a b/","a/node_modules/a b/y.log/","ab/","ab/b/","ab/b/b","b.md/","b.md/keep/","b.md/keep/ab/","keep/","node_modules/","node_modules/Dockerfile/","node_modules/Dockerfile/a b/","node_modules/Dockerfile/a b/é/"]}
+{"sent":[".env","a","b/","b/a b","src/","src/b/","src/b/a.txt/","src/b/a.txt/ab","src/src","y.log/"]}
+{"sent":[".dockerignore/",".dockerignore/.git/",".dockerignore/.git/ab",".env/",".env/é/",".env/é/b.md",".git/",".git/node_modules/",".git/node_modules/é/",".git/node_modules/é/b.md","a.txt","a/","a/Dockerfile/","a/Dockerfile/Dockerfile/","a/Dockerfile/Dockerfile/Dockerfile","a/b","b","src/","src/.git","é/","é/keep/","é/keep/x.log/"]}
+{"sent":[".git","dist/","dist/b.md/","dist/b.md/.dockerignore","é/","é/Dockerfile/","é/Dockerfile/Dockerfile/"]}
+{"sent":["a.txt"]}
+{"sent":["b.md/","b.md/src","dist/","dist/node_modules/","dist/node_modules/.env","keep","src"]}
+{"sent":[],"error":"invalid excludepatterns: [src/* !*/**/a* !]: illegal exclusion pattern: \"!\""}
+{"sent":[".dockerignore",".env","y.log/","y.log/c/","y.log/c/a/","y.log/c/a/.env","é/","é/Dockerfile"]}
+{"sent":["x.log/","x.log/.git/","x.log/.git/ab","y.log"]}
+{"sent":[".env/",".env/a b",".env/b.md/",".env/b.md/.git",".git/",".git/Dockerfile/",".git/Dockerfile/ab/",".git/Dockerfile/ab/node_modules","Dockerfile/","Dockerfile/a/","Dockerfile/a/é","a.txt/","a.txt/.git","b/","b/keep/","y.log/","y.log/src"]}
+{"sent":["Dockerfile","a.txt/","a.txt/.git/","a.txt/.git/b/","a/","a/Dockerfile","a/c/","a/c/a.txt/","a/c/a.txt/.dockerignore","keep/","keep/src","x.log/","x.log/a.txt/","x.log/a.txt/a b/","x.log/a.txt/a b/dist","é/","é/.dockerignore/","é/.dockerignore/.git"]}
+{"sent":["a b/","a b/dist/","a b/dist/x.log/","a b/dist/x.log/y.log","a b/keep/","a b/keep/c/","a b/keep/c/y.log","a.txt/","a.txt/é/","a.txt/é/ab","ab/","ab/Dockerfile/","ab/Dockerfile/.env","b/","b/ab","c","keep/","keep/.env/","keep/.env/.git","node_modules/","node_modules/.env/","node_modules/.env/a b/","node_modules/.env/a b/ab","node_modules/x.log/","node_modules/x.log/y.log"]}
+{"sent":["Dockerfile"]}
+{"sent":["a","x.log"]}
+{"sent":[".dockerignore/",".dockerignore/a/",".dockerignore/a/b","keep","node_modules/","node_modules/a"]}
+{"sent":["a.txt/","a.txt/ab/","a.txt/ab/c/","a.txt/ab/c/a.txt","src/","src/Dockerfile/","src/Dockerfile/src/","src/Dockerfile/src/keep","src/a","x.log/","x.log/b/","x.log/b/x.log/","x.log/b/x.log/a b/"]}
+{"sent":["x.log/","x.log/c","é/","é/é/","é/é/.dockerignore/","é/é/.dockerignore/a b"]}
+{"sent":[]}
+{"sent":[".git/",".git/keep/",".git/keep/b",".git/é/",".git/é/a b/",".git/é/a b/c","a/","a/a b/","a/a b/.dockerignore","c/","c/node_modules/","c/node_modules/dist/","c/node_modules/dist/.dockerignore","node_modules/","node_modules/.dockerignore","node_modules/.git/","node_modules/.git/src","x.log/","x.log/a/","x.log/a/Dockerfile","é/","é/é"]}
+{"sent":[".dockerignore","b.md/","b.md/a/","b.md/a/a/","b.md/a/a/é","c/","c/b/","c/b/b.md/","c/b/b.md/src","dist/","dist/x.log"]}
+{"sent":[".dockerignore/",".dockerignore/src/",".dockerignore/src/keep/","Dockerfile/","Dockerfile/.env/","Dockerfile/.env/keep/","Dockerfile/.env/keep/src","Dockerfile/node_modules","a b/","a b/keep","a.txt/","a.txt/.dockerignore/","a.txt/.dockerignore/.git/","a.txt/.dockerignore/.git/.env","ab/","ab/a.txt","b/","c/","c/node_modules/","c/node_modules/src","dist/"]}
+{"sent":[".env","Dockerfile/","Dockerfile/.dockerignore/","a b/","a b/.dockerignore/","a b/.dockerignore/.env","b.md/","b.md/ab/","b.md/ab/a.txt/","b.md/ab/a.txt/node_modules","src/","src/Dockerfile/","src/Dockerfile/src/","src/Dockerfile/src/x.log","src/src/","src/src/.dockerignore/","src/src/.dockerignore/.env","é/","é/.dockerignore"]}
+{"sent":[".dockerignore/",".dockerignore/dist/",".dockerignore/dist/a.txt","a.txt/","a.txt/a.txt/","a.txt/a.txt/c/","a/","a/y.log/","a/y.log/b.md","keep/","keep/c/","keep/c/a"]}
+{"sent":["a.txt/","dist/","dist/y.log/","dist/y.log/.git/","dist/y.log/.git/a"]}
+{"sent":[".dockerignore/",".dockerignore/a b/",".dockerignore/a b/dist",".env/",".env/dist/",".env/dist/.dockerignore",".git/",".git/src","a/","a/.git/","a/.git/Dockerfile/","a/.git/Dockerfile/a b","a/a b","dist","keep/","keep/.git","y.log/","y.log/b/","y.log/b/x.log"]}
+{"sent":[".dockerignore/",".dockerignore/.dockerignore",".env/",".env/.dockerignore/",".env/.dockerignore/x.log",".env/node_modules/",".env/node_modules/.git/",".env/node_modules/.git/a.txt/",".git/",".git/keep/",".git/keep/b.md","ab/","ab/ab","c/","c/a","dist","src/","src/keep/","src/keep/.env/","src/keep/.env/.git/"]}
+{"sent":[".dockerignore",".env/",".env/Dockerfile/",".env/Dockerfile/é/",".env/Dockerfile/é/b.md/",".env/keep/",".env/keep/ab","b.md/","b.md/é/","b.md/é/a.txt/","b.md/é/a.txt/a b","dist","keep","é/","é/b"]}
+{"sent":[]}
+{"sent":[".git/",".git/b.md/",".git/b.md/src","a/","a/src/","a/src/Dockerfile/"]}
+{"sent":[".dockerignore/",".dockerignore/.env/",".dockerignore/.env/b/",".dockerignore/.env/b/c/","a.txt","a/","a/b","a/x.log/","a/x.log/x.log/","a/x.log/x.log/a.txt","dist/","dist/a b","x.log"]}
+{"sent":["Dockerfile","a b/","a b/.git/","a b/.git/keep","a.txt/","a.txt/.env","a/","a/.git","y.log/","y.log/c/","y.log/c/dist/"]}
+{"sent":[]}
+{"sent":[".git/",".git/é","a/","a/.git","c/","dist/","dist/dist/","dist/dist/.env/","dist/dist/.env/c","keep","x.log","y.log"]}
+{"sent":[".env","keep/","keep/Dockerfile/","keep/Dockerfile/.env/","keep/Dockerfile/.env/.env"]}
+{"sent":[".git/",".git/.git/",".git/.git/a"]}
+{"sent":["ab/","ab/node_modules/","c"]}
+{"sent":["a.txt/","a.txt/.dockerignore/","a.txt/.dockerignore/é/","a.txt/.dockerignore/é/dist","a.txt/é/","a.txt/é/b/","a.txt/é/b/c","a/","a/Dockerfile/","a/Dockerfile/b.md/","a/Dockerfile/b.md/a","ab/","ab/.git/","ab/.git/node_modules/","ab/.git/node_modules/dist","ab/keep/","ab/keep/b/","c/","c/b.md/","c/b.md/.env","dist/","dist/.dockerignore/","dist/.dockerignore/.dockerignore/","dist/.dockerignore/.dockerignore/ab","keep/","keep/b.md/","keep/b.md/.git/","keep/b.md/.git/é","é/","é/.git/","é/.git/node_modules"]}
+{"sent":[".dockerignore/",".dockerignore/x.log/",".dockerignore/x.log/Dockerfile","a b/","a b/a.txt/","a b/a.txt/.dockerignore","dist/","dist/a/","dist/a/dist","é/","é/y.log/","é/y.log/a b/","é/y.log/a b/.git/"]}
+{"sent":["a b","b.md/","b.md/a.txt/","b.md/a.txt/keep/","b.md/a.txt/keep/é","b.md/y.log","keep/","keep/b.md/","keep/b.md/node_modules","keep/é","node_modules/","node_modules/b/","node_modules/b/a b","src/","src/b/","src/b/x.log/","src/b/x.log/é","y.log/","y.log/src/","y.log/src/b/"]}
+{"sent":[".dockerignore/",".dockerignore/dist/",".dockerignore/dist/.env","a b/","a b/src/","a b/src/b.md/","a b/src/b.md/dist","a/","a/.env/","a/.env/.dockerignore","a/dist/","a/dist/.env/","a/dist/.env/y.log","b/","b/keep/","b/keep/é","c/","c/x.log/","c/x.log/dist","src/","src/node_modules/","src/node_modules/node_modules/","y.log/","y.log/.env/","y.log/.env/y.log/","y.log/.env/y.log/keep","é/","é/b/","é/b/b/","é/b/b/a.txt"]}
+{"sent":[".git/",".git/y.log/",".git/y.log/y.log/",".git/y.log/y.log/b/","ab/","ab/a.txt/","ab/a.txt/ab/","ab/a.txt/ab/ab/","b","b.md/","b.md/Dockerfile/","b.md/Dockerfile/ab/","b.md/Dockerfile/ab/a.txt/","c/","c/Dockerfile/","c/Dockerfile/.dockerignore/","c/Dockerfile/.dockerignore/src"]}
+{"sent":["Dockerfile/","dist/","dist/é/","dist/é/a.txt"]}
+{"sent":["ab","b.md","x.log"]}
+{"sent":["src/","src/c/","src/c/b/","src/c/b/node_modules","é/","é/a b/","é/a b/a b"]}
+{"sent":["ab/","ab/a.txt","keep/","keep/a b/","keep/a b/node_modules","y.log/","y.log/c/","y.log/c/a.txt"]}
+{"sent":[".dockerignore/",".dockerignore/c/",".dockerignore/c/Dockerfile",".git/",".git/.git"]}
+{"sent":[".dockerignore",".env/",".env/a b/",".env/a b/x.log/","y.log/","y.log/ab/","y.log/ab/src/","y.log/ab/src/.dockerignore","é/","é/dist/","é/dist/ab"]}
+{"sent":["a.txt/","a.txt/y.log","a/","a/a.txt/","a/a.txt/src","b"]}
+{"sent":["a.txt","dist"]}
+{"sent":[".env/",".env/é","a.txt/","a.txt/c/","a.txt/c/x.log","a/","a/Dockerfile/","a/Dockerfile/ab/","a/Dockerfile/ab/b.md","src/","src/é","x.log/","x.log/a b/","x.log/a b/dist"]}
+{"sent":[".git/",".git/Dockerfile/",".git/Dockerfile/x.log/",".git/Dockerfile/x.log/x.log","Dockerfile/","Dockerfile/x.log","node_modules/","node_modules/keep/","node_modules/keep/keep","src","y.log/","y.log/.env/","y.log/.env/.git/","y.log/a.txt","é"]}
+{"sent":[".dockerignore/",".dockerignore/y.log/",".dockerignore/y.log/Dockerfile",".git/",".git/a/",".git/a/.env","a b","dist","node_modules/","node_modules/.dockerignore","é"]}
+{"sent":[".env/",".env/a.txt/",".env/a.txt/.dockerignore/",".env/a.txt/.dockerignore/é",".git/",".git/dist/",".git/dist/a/","Dockerfile/","Dockerfile/x.log","a b/","a b/.git","a b/dist/","a b/dist/dist","b.md/","b.md/b.md/","b.md/b.md/c/","b.md/b.md/c/b.md","node_modules/","node_modules/b/","node_modules/b/.dockerignore/","node_modules/b/.dockerignore/.dockerignore/","src/","src/node_modules/","src/node_modules/ab","x.log"]}
+{"sent":[".dockerignore/",".dockerignore/keep","a.txt/","a.txt/src","c"]}
+{"sent":["a/","a/a b/","a/a b/b.md/","a/a b/b.md/.env","b/","b/b/","b/b/a.txt","keep/","keep/Dockerfile","src/","src/a/","src/a/y.log/","src/a/y.log/.git","src/c","x.log/","x.log/c"]}
+{"sent":[".env/",".env/.dockerignore","a b/","a.txt/","a.txt/ab","b.md/","b.md/y.log/","b.md/y.log/.git","b/"]}
+{"sent":[]}
+{"sent":[".dockerignore/",".dockerignore/é/",".dockerignore/é/a b/",".dockerignore/é/a b/src","Dockerfile/","Dockerfile/dist/","Dockerfile/dist/b/","Dockerfile/dist/b/a.txt","b","x.log/","x.log/b"]}
+{"sent":[".dockerignore/",".dockerignore/Dockerfile",".git/",".git/a/",".git/a/dist",".git/dist/",".git/dist/a/",".git/dist/a/src","Dockerfile/","Dockerfile/.git/","Dockerfile/.git/b/","Dockerfile/.git/b/.git","a.txt/","a.txt/a.txt","src/","src/.dockerignore"]}
+{"sent":["a/","a/é/","a/é/a/","a/é/a/dist"]}
+{"sent":[".env","Dockerfile/","Dockerfile/a/","Dockerfile/a/dist","a","c/","c/.dockerignore"]}
+{"sent":["Dockerfile/","Dockerfile/.env","Dockerfile/dist/","Dockerfile/dist/a b","Dockerfile/keep","Dockerfile/é","a/","a/a b/","a/a b/é","ab/","ab/b.md/","ab/b.md/é/","ab/b.md/é/é","dist/","dist/.dockerignore","src/","src/a b","y.log"]}
+{"sent":[".dockerignore/",".dockerignore/a b"]}
+{"sent":["a.txt/","a.txt/Dockerfile/","a.txt/Dockerfile/x.log","src","x.log","y.log/","y.log/x.log/","y.log/x.log/b.md"]}
+{"sent":[".dockerignore/",".dockerignore/.env/",".dockerignore/.env/y.log/",".dockerignore/.env/y.log/src",".git","dist/","dist/b/","dist/b/keep","src/","src/dist/","src/dist/node_modules","x.log/","x.log/.dockerignore","y.log"]}
+{"sent":["a/","a/b.md/","a/b.md/src/","b.md/","b.md/a.txt/","b.md/a.txt/a b/","b.md/a.txt/a b/a","b/","b/y.log","dist","é/","é/b.md/","é/b.md/b.md"]}
+{"sent":["a b/","a b/.git","dist/","dist/c","keep","é/","é/a.txt"]}
+{"sent":[".git/",".git/b/",".git/b/y.log","a b","a/","c/","c/ab","dist/","dist/.dockerignore/","dist/.dockerignore/.git","dist/Dockerfile/","dist/Dockerfile/node_modules/","dist/Dockerfile/node_modules/é","y.log/","y.log/b/","y.log/b/b.md"]}
+{"sent":[".env/",".env/b","Dockerfile/","Dockerfile/é/","Dockerfile/é/dist","a.txt/","a.txt/a/","a.txt/a/é","node_modules/","node_modules/y.log/","node_modules/y.log/y.log/","node_modules/y.log/y.log/Dockerfile","x.log/","x.log/node_modules"]}
+{"sent":[".env/",".env/src"]}
+{"sent":["keep/","keep/é","src/","src/a.txt","y.log/","y.log/é"]}
+{"sent":[".dockerignore/",".dockerignore/a.txt/",".dockerignore/a.txt/.git/",".dockerignore/a.txt/.git/.env",".dockerignore/a.txt/ab",".dockerignore/keep/",".dockerignore/keep/Dockerfile/",".dockerignore/keep/Dockerfile/node_modules",".git/",".git/b/",".git/b/src","a/","a/ab/","a/ab/ab","keep/","keep/Dockerfile/","keep/Dockerfile/node_modules","x.log/","x.log/a","y.log/","y.log/.dockerignore"]}
+{"sent":["Dockerfile/","Dockerfile/src/","Dockerfile/src/a b/","Dockerfile/src/a b/.env","a.txt/","a.txt/dist/","a.txt/dist/src","a/","a/dist","b","keep/","keep/.dockerignore/","keep/.dockerignore/a/","keep/.dockerignore/a/b","node_modules/","node_modules/a/","node_modules/a/a b"]}
+{"sent":["Dockerfile/","Dockerfile/.env/","Dockerfile/.env/b.md","a","a.txt/","a.txt/b/","a.txt/b/.dockerignore/","a.txt/b/.dockerignore/.git","a.txt/dist/","a.txt/dist/c/","a.txt/dist/c/b","b/","b/.git/","b/.git/keep","b/dist","dist","keep/","keep/Dockerfile","é/","é/src"]}
+{"sent":["a b","ab/","ab/c/","ab/c/.env/","ab/c/.env/src","ab/dist/","ab/dist/node_modules/","ab/dist/node_modules/dist","b.md/","b.md/a.txt","b/","b/src","keep/","keep/keep/","keep/keep/.env","y.log/","y.log/c/","y.log/c/c/","y.log/c/c/dist/","é"]}
+{"sent":[".dockerignore/",".dockerignore/b.md/",".dockerignore/b.md/y.log","node_modules/","node_modules/x.log"]}
+{"sent":[]}
+{"sent":[".dockerignore/",".dockerignore/ab",".dockerignore/b.md/",".dockerignore/b.md/b.md",".dockerignore/keep",".env/",".env/b",".git/",".git/a b"]}
+{"sent":[".dockerignore","ab/","ab/b.md","b.md/","b.md/.env","keep/","keep/b","x.log/","x.log/y.log/","x.log/y.log/ab"]}
+{"sent":["Dockerfile/","Dockerfile/.dockerignore/","Dockerfile/.dockerignore/ab/","Dockerfile/.dockerignore/ab/node_modules","a b/","a b/c","a/","a/b","b/","b/a b/","x.log/","x.log/y.log/","x.log/y.log/keep","y.log","é"]}
+{"sent":["a","y.log"]}
+{"sent":["é"]}
+{"sent":[".git/",".git/Dockerfile/",".git/Dockerfile/a b/",".git/Dockerfile/a b/keep","Dockerfile/","Dockerfile/a/","Dockerfile/a/c/","Dockerfile/a/c/b","a b/","a b/b/","a b/b/Dockerfile/","a b/b/Dockerfile/x.log","c/","c/ab/","c/ab/src/","x.log","é/","é/é/","é/é/c/","é/é/c/keep"]}
+{"sent":["Dockerfile/","Dockerfile/src/","Dockerfile/src/x.log","a.txt/","a.txt/a","b.md/","b.md/a.txt/","b.md/a.txt/a b/","b.md/a.txt/a b/.env","dist","x.log/","x.log/src/","x.log/src/keep/","x.log/src/keep/.env/"]}
+{"sent":[".env/",".env/a/",".env/a/x.log",".git","Dockerfile","a.txt/","a.txt/Dockerfile","node_modules/","node_modules/y.log/","node_modules/y.log/a b","src/","y.log/","y.log/x.log/","y.log/x.log/a","é"]}
+{"sent":[]}
+{"sent":[".env/",".env/a.txt/",".env/a.txt/y.log","Dockerfile","a.txt/","a.txt/a.txt/","a.txt/a.txt/.git","dist/","dist/c/","dist/c/a b/","dist/c/a b/é","keep","node_modules/","node_modules/b.md/","node_modules/b.md/.dockerignore/","node_modules/b.md/.dockerignore/x.log","src/","src/ab/","src/ab/ab/","src/ab/ab/a b"]}
+{"sent":["b.md","c/","c/b/","c/b/a b/","c/b/a b/y.log/"]}
+{"sent":[]}
+{"sent":["src/","src/c","y.log/","y.log/node_modules/","y.log/node_modules/ab"]}
+{"sent":[".git","b.md/","b.md/.env/","b.md/.env/x.log/","b.md/.env/x.log/é","b.md/b/","b.md/b/keep","x.log/","x.log/y.log/","x.log/y.log/.git/","x.log/y.log/.git/b.md","é/","é/.git/","é/.git/.env/","é/.git/.env/.dockerignore"]}
+{"sent":[".env",".git/",".git/b.md","a.txt","ab/","ab/c/","ab/c/keep","b.md/","b.md/a/","b.md/a/b.md","c/","c/b/","keep/","keep/src/","keep/src/.git","node_modules","src/","src/y.log","y.log/","y.log/.env/","y.log/.env/a/","y.log/.env/a/.git"]}
+{"sent":["a","é/","é/keep/","é/keep/.dockerignore"]}
+{"sent":[".env/",".env/x.log","dist/","dist/node_modules","keep/","keep/dist"]}
+{"sent":[],"error":"invalid excludepatterns: [! Dockerfile/[a-c]*/[^a] a* keep/? a/b/?]: illegal exclusion pattern: \"!\""}
+{"sent":[".dockerignore/",".dockerignore/b.md","Dockerfile/","Dockerfile/.dockerignore","a.txt","ab/","ab/Dockerfile/","ab/Dockerfile/node_modules/","ab/Dockerfile/node_modules/é","b.md/","b.md/.git/","b.md/.git/b/","b.md/.git/b/node_modules","b.md/keep/","b.md/keep/.git","src/","src/b.md/","src/b.md/src/","src/b.md/src/dist","x.log/","x.log/.git/","x.log/.git/keep/","x.log/.git/keep/é"]}
+{"sent":[".env/",".env/.git/",".env/.git/a.txt/",".env/.git/a.txt/Dockerfile",".git/",".git/a.txt/",".git/a.txt/src/",".git/a.txt/src/Dockerfile","a","src/","src/c/","src/c/Dockerfile/","src/c/Dockerfile/.env","y.log/","y.log/é/","y.log/é/é"]}
+{"sent":["a/","dist/","dist/a.txt/","dist/a.txt/Dockerfile","keep","node_modules/","node_modules/c/","node_modules/c/é/","é/","é/dist/","é/dist/src","é/y.log/","é/y.log/a.txt/","é/y.log/a.txt/src"]}
+{"sent":[".dockerignore/",".dockerignore/c/",".dockerignore/c/a b",".git/",".git/a.txt","Dockerfile/","Dockerfile/.git/","Dockerfile/.git/.dockerignore","Dockerfile/c/","Dockerfile/c/a/","Dockerfile/c/a/src","a","a.txt/","a.txt/keep","b","b.md","dist/","dist/a b/","dist/a b/a.txt","y.log"]}
+{"sent":[".dockerignore/",".dockerignore/.git/",".dockerignore/.git/y.log/",".dockerignore/.git/y.log/a b",".git/",".git/b/",".git/b/c/",".git/b/c/é/",".git/src/",".git/src/x.log/",".git/src/x.log/c","a.txt/","a.txt/a/","a.txt/a/c","dist/","dist/.env","dist/dist","keep/","keep/Dockerfile/","keep/Dockerfile/a b"]}
+{"sent":["b.md/","b.md/dist/","b.md/dist/dist/","b.md/dist/dist/b.md","src/","src/keep/","src/keep/dist","é/"]}
+{"sent":[".dockerignore","Dockerfile/","c/","c/c/","c/c/x.log","y.log/","y.log/b/","y.log/b/src"]}
+{"sent":[]}
+{"sent":[".env/",".env/c/",".env/c/é","Dockerfile/","Dockerfile/Dockerfile","a.txt/","a.txt/dist","c/","c/.git/","c/.git/.git/","c/.git/.git/src","é"]}
+{"sent":["Dockerfile/","Dockerfile/.dockerignore/","Dockerfile/.dockerignore/src","a/","a/c","b","c/","c/Dockerfile/","c/Dockerfile/y.log","c/keep","dist/","dist/dist/","dist/dist/src/","dist/dist/src/node_modules","keep/","keep/.dockerignore","node_modules/","node_modules/Dockerfile","é/"]}
+{"sent":["a b/","a b/y.log/","a b/y.log/b.md/","a b/y.log/b.md/Dockerfile"]}
+{"sent":["b.md/","b.md/.dockerignore"]}
+{"sent":["node_modules/","node_modules/keep/","node_modules/keep/.git"]}
+{"sent":[".dockerignore","Dockerfile/","Dockerfile/c/","Dockerfile/c/a/","Dockerfile/c/a/dist","a.txt/","a.txt/a b","a.txt/y.log/","a.txt/y.log/c","b.md","src/","src/keep"]}
+{"sent":[".env/",".env/dist/",".env/dist/ab/",".env/dist/ab/ab","a.txt/","a.txt/dist","c/","c/ab","node_modules/","node_modules/b/","node_modules/b/.env/","node_modules/b/.env/b.md","x.log/","x.log/x.log"]}
+{"sent":["é"]}
+{"sent":["b/","b/a b/","b/a b/é/","b/a b/é/dist"]}
+{"sent":[".dockerignore"]}
+{"sent":[".dockerignore/",".dockerignore/a b/",".dockerignore/a b/b.md/",".dockerignore/a b/b.md/b",".env/",".env/a.txt/",".env/a.txt/x.log/",".env/a.txt/x.log/a.txt","Dockerfile","a/","a/a.txt/","a/a.txt/keep/","a/a.txt/keep/.env","node_modules/","node_modules/.dockerignore/","node_modules/.dockerignore/é/","node_modules/.dockerignore/é/a.txt/","node_modules/c/","node_modules/c/a.txt","é/","é/b","é/keep/","é/keep/.env/","é/keep/.env/src"]}
+{"sent":["Dockerfile/","Dockerfile/.dockerignore/","Dockerfile/.dockerignore/c/","Dockerfile/.dockerignore/c/c","a/","a/src/","a/src/dist","b.md/","b.md/.env/","b.md/.env/.dockerignore","b/","node_modules","x.log","y.log/","y.log/c"]}
+{"sent":["Dockerfile/","Dockerfile/y.log/","Dockerfile/y.log/keep"]}
+{"sent":["Dockerfile","keep/","keep/a.txt/","keep/a.txt/b"]}
+{"sent":["b/","b/y.log/","b/y.log/.dockerignore","node_modules/","node_modules/a.txt/","node_modules/a.txt/é/","node_modules/a.txt/é/a.txt"]}
+{"sent":[".dockerignore","Dockerfile/","Dockerfile/é/","Dockerfile/é/Dockerfile/","Dockerfile/é/Dockerfile/dist","Dockerfile/é/b","a.txt/","a.txt/src/","a.txt/src/a.txt","ab/","b.md/","b.md/c/","b.md/c/b/","b.md/c/b/dist","y.log/","y.log/keep/","y.log/keep/é/","y.log/keep/é/b.md","y.log/src/","y.log/src/ab","é/","é/a.txt/","é/a.txt/a/","é/a.txt/a/a.txt"]}
+{"sent":["y.log","é/","é/.git"]}
+{"sent":[]}
+{"sent":[".env/",".env/node_modules","a/","a/a b/","a/a b/.git/","a/a b/.git/Dockerfile","ab/","ab/keep","b/","b/b.md/","b/b.md/.git","c/","c/src","src/","src/node_modules/","src/node_modules/b/","src/node_modules/b/ab","é"]}
+{"sent":[".env/",".env/y.log/",".env/y.log/a b","a","b/","b/.env/","b/.env/a.txt","src/","src/ab/","src/ab/c/","src/ab/c/.dockerignore","src/y.log/","é"]}
+{"sent":[".git/",".git/Dockerfile",".git/é","Dockerfile","a b","a/","a/b.md/","a/b.md/a b/","a/b.md/a b/node_modules","ab/","ab/a.txt/","ab/a.txt/node_modules","b.md","b/","b/x.log"]}
+{"sent":["a/","a/src/","a/src/src/","a/src/src/Dockerfile","c/","c/ab/","c/ab/dist/","c/ab/dist/.dockerignore","dist/","dist/ab/","dist/ab/b/","dist/ab/b/c"]}
+{"sent":["a.txt/","a.txt/a b","ab/","ab/x.log/","ab/x.log/keep","b/","b/.git","b/src/","b/src/a","x.log/","x.log/y.log/","x.log/y.log/x.log"]}
+{"sent":[]}
+{"sent":["a b","ab/","ab/node_modules","c/","c/c/","c/c/.git","src/","src/.git/","src/.git/.git","y.log/","y.log/Dockerfile/","y.log/Dockerfile/dist"]}
+{"sent":[".env/",".env/b.md/",".env/b.md/x.log/",".env/b.md/x.log/b","a","ab","b.md/","b.md/ab/","c/","c/b.md/","c/b.md/node_modules/","c/b.md/node_modules/src","src"]}
+{"sent":[".dockerignore/",".dockerignore/.git/",".dockerignore/.git/b/","Dockerfile/","Dockerfile/.git","Dockerfile/keep/","Dockerfile/keep/.env/","Dockerfile/keep/.env/c","a b/","a b/b/","a b/b/é/","a b/b/é/node_modules","src/","src/a.txt","src/a/","src/a/b/","src/a/b/a.txt/"]}
+{"sent":[".dockerignore/",".dockerignore/keep/",".dockerignore/keep/a",".git/",".git/a b/",".git/a b/.git",".git/b.md/",".git/b.md/a b/","a.txt","c/","node_modules","x.log/","x.log/b.md/","x.log/b.md/b.md/","x.log/b.md/b.md/b/","é/","é/dist","é/x.log"]}
+{"sent":[".env",".git/",".git/keep/",".git/keep/c","Dockerfile/","Dockerfile/a b/","Dockerfile/a b/Dockerfile/","Dockerfile/a b/Dockerfile/.git","Dockerfile/b/","Dockerfile/b/b.md","a b/","a b/.git/","a.txt/","a.txt/é/","a.txt/é/dist/","a.txt/é/dist/.env","ab","b/","b/node_modules/","b/node_modules/node_modules","é"]}
+{"sent":["c/","c/x.log","dist/","dist/ab","dist/é","é/","é/src"]}
+{"sent":[".env/",".env/.env/",".env/.env/node_modules/",".env/.env/node_modules/c","Dockerfile/","Dockerfile/dist","a/","a/b.md/","a/b.md/x.log","c/","c/src","dist/","dist/dist/","dist/dist/ab/","dist/dist/ab/b","keep","src/","src/x.log/","src/x.log/node_modules","é/"]}
+{"sent":[".env",".git/",".git/y.log/",".git/y.log/a/",".git/y.log/a/node_modules","Dockerfile","a/","a/.git/","a/.git/Dockerfile","ab/","ab/c/","ab/c/.env/","ab/c/.env/é","src/","src/src/","y.log/","y.log/keep","é/","é/.git/","é/.git/a"]}
+{"sent":["b.md","keep"]}
+{"sent":[".git/",".git/node_modules/",".git/node_modules/a/",".git/node_modules/a/b.md","a b/","a b/.dockerignore/","a b/.dockerignore/.dockerignore/","a b/.dockerignore/.dockerignore/b.md/","a b/ab/","a b/ab/a b/","a b/é/","a b/é/.env/","a b/é/.env/a.txt","a/","ab","src/","src/Dockerfile/","src/Dockerfile/c/","src/Dockerfile/c/node_modules","y.log/","y.log/y.log/","y.log/y.log/a/","y.log/y.log/a/src"]}
+{"sent":["Dockerfile/","Dockerfile/x.log/","Dockerfile/x.log/b.md","a b/","a b/a.txt/","a b/a.txt/c/","a b/a.txt/c/Dockerfile","a b/c/","a b/c/b/","a b/c/b/dist","a/","a/src","ab/","ab/src","c","x.log/","x.log/Dockerfile/"]}
+{"sent":["b","dist/","dist/ab","keep/","keep/c/","keep/c/node_modules","x.log/","x.log/.env/","x.log/.env/a b","x.log/b.md"]}
+{"sent":["a b/","a b/x.log/","a b/x.log/keep/","a b/x.log/keep/.dockerignore"]}
+{"sent":[".dockerignore/",".dockerignore/.env/",".dockerignore/.env/.dockerignore",".env","a b/","a b/keep/","a b/keep/a b/","a b/keep/a b/dist","b/","b/a.txt/","b/a.txt/dist","c/","c/y.log/","c/y.log/b.md/","c/y.log/b.md/c","dist/","dist/src/","dist/src/b/","dist/src/b/node_modules"]}
+{"sent":[]}
+{"sent":[".dockerignore/",".dockerignore/a b/",".dockerignore/a b/a b",".git/",".git/.dockerignore","a b/","a b/é","a.txt","ab/","ab/a b/","ab/a b/y.log","b.md/","b.md/b.md/","b.md/b.md/y.log/","b.md/b.md/y.log/.git","src/","src/é"]}
+{"sent":[".env","Dockerfile/","Dockerfile/.env/","Dockerfile/.env/y.log/","Dockerfile/.env/y.log/x.log","Dockerfile/keep"]}
+{"sent":[".dockerignore/",".env/",".env/.git","a/","a/dist/","a/dist/node_modules","ab/","ab/.git/","ab/.git/c","b/","b/x.log","node_modules","x.log","é/","é/src"]}
+{"sent":[".dockerignore/",".dockerignore/node_modules/",".dockerignore/node_modules/ab/",".dockerignore/node_modules/ab/a.txt",".git/",".git/a.txt/",".git/a.txt/x.log/",".git/a.txt/x.log/node_modules","a b/","a b/.dockerignore/","a b/.dockerignore/ab","b.md/","b.md/a","dist","node_modules/","node_modules/x.log/","node_modules/x.log/b/","node_modules/x.log/b/a b","src/","src/Dockerfile/","src/Dockerfile/node_modules/","src/Dockerfile/node_modules/.dockerignore","src/y.log","y.log/","y.log/Dockerfile/","y.log/Dockerfile/.env/","y.log/Dockerfile/.env/src"]}
+{"sent":[".git/",".git/src/",".git/src/y.log/",".git/src/y.log/a.txt/","Dockerfile/","Dockerfile/node_modules/","Dockerfile/node_modules/ab","a.txt","a/","a/b","b","c","y.log/","y.log/.env/","y.log/.env/b.md"]}
+{"sent":[".dockerignore/",".dockerignore/node_modules/",".dockerignore/node_modules/x.log",".env/",".env/.dockerignore/",".env/.dockerignore/.git/",".env/.dockerignore/.git/a","a/","a/.git","b.md/","b.md/dist/","b.md/dist/node_modules","y.log/","y.log/Dockerfile/","y.log/Dockerfile/.dockerignore/","y.log/Dockerfile/.dockerignore/b"]}
+{"sent":[".env/",".env/a.txt","ab/","ab/keep/","ab/keep/x.log/","b/","b/a.txt/","b/a.txt/b"]}
+{"sent":[".env/",".env/b.md","ab/","ab/node_modules","dist/","dist/a b/","dist/a b/src","src/","src/é/","é/"]}
+{"sent":[".env/",".env/ab/",".env/ab/src/",".env/ab/src/b.md",".git","a b","c/","c/src/","c/src/ab","node_modules/","node_modules/.dockerignore","src/","src/a b/","src/a b/src/","src/a b/src/dist"]}
+{"sent":["a b/","a b/x.log/","a b/x.log/b/","a b/x.log/b/x.log"]}
+{"sent":[".dockerignore/",".dockerignore/src/",".dockerignore/src/a/",".dockerignore/src/a/y.log/",".git","ab","b.md","c/","c/b.md/","c/b.md/Dockerfile/","c/b.md/Dockerfile/a.txt","node_modules/","node_modules/b.md","y.log/","y.log/é/","y.log/é/dist/","y.log/é/dist/ab","é/","é/keep"]}
+{"sent":[".env/",".env/c","Dockerfile/","Dockerfile/Dockerfile/","Dockerfile/Dockerfile/b","a b/","a b/dist","ab","b.md/","b.md/node_modules/","b.md/node_modules/keep/","b.md/node_modules/keep/dist","node_modules/","node_modules/y.log/","node_modules/y.log/b","é"]}
+{"sent":["Dockerfile/","Dockerfile/keep/","Dockerfile/keep/x.log/","dist/","dist/node_modules/","dist/node_modules/b","x.log/","x.log/.dockerignore/","x.log/.dockerignore/src"]}
+{"sent":[".dockerignore/",".dockerignore/dist","Dockerfile/","Dockerfile/ab/","Dockerfile/ab/x.log/","Dockerfile/ab/x.log/c","b/","b/a/","b/a/y.log/","b/a/y.log/x.log","c","dist/","dist/x.log/"]}
+{"sent":[".env/",".env/a b/",".env/a b/dist",".git/",".git/b.md/",".git/b.md/b","a.txt/","a.txt/keep","ab","dist/","dist/b/","dist/b/b/","dist/b/b/b.md","keep/","keep/a.txt/","keep/a.txt/.dockerignore","src","é/","é/c/","é/c/keep/","é/c/keep/.git"]}
+{"sent":[".env/",".env/.git/",".env/.git/y.log","a b/","a b/a b/","a b/a b/.dockerignore","dist/","dist/src"]}
+{"sent":[".env","b.md/","b.md/ab/","b.md/ab/.git/","b.md/ab/.git/node_modules","b.md/ab/a.txt/","b.md/ab/a.txt/dist","dist/","dist/b","node_modules/","node_modules/.dockerignore","node_modules/.env/","node_modules/.env/.env","node_modules/node_modules/","node_modules/node_modules/a b"]}
+{"sent":[".git/",".git/y.log/",".git/y.log/b"]}
+{"sent":[".dockerignore/",".dockerignore/b.md","b.md/","b.md/a b"]}
+{"sent":[".dockerignore/","a.txt/","c/","c/src","c/y.log/","c/y.log/a.txt/","c/y.log/a.txt/.dockerignore","keep/","keep/.dockerignore/","keep/.dockerignore/.env/","keep/.dockerignore/.env/ab","x.log/","x.log/.git/","x.log/.git/.git/","x.log/.git/.git/Dockerfile/"]}
+{"sent":[".env/",".env/y.log/",".env/y.log/dist","a b/","a b/y.log/","a b/y.log/.dockerignore/","a b/y.log/.dockerignore/b","a/","a/b.md/","b/","b/node_modules/","b/x.log/","src/","src/.dockerignore/","src/.dockerignore/.git/","src/.dockerignore/.git/.env","x.log/","x.log/.env/","x.log/.env/c/","x.log/.env/c/node_modules","y.log"]}
+{"sent":[".dockerignore/",".dockerignore/a/",".dockerignore/a/Dockerfile","b/","b/node_modules","c/","c/é","keep/","keep/a/","keep/a/a/","keep/a/a/.env","y.log/","y.log/a"]}
+{"sent":["Dockerfile","b/","b/node_modules","c/","node_modules/","node_modules/keep/","node_modules/keep/a/","node_modules/keep/a/Dockerfile"]}
+{"sent":[".dockerignore/",".dockerignore/.dockerignore/",".dockerignore/.dockerignore/.git","c","dist/","dist/.env/","dist/.env/x.log/","dist/.env/x.log/keep"]}
+{"sent":[".git","Dockerfile/","Dockerfile/Dockerfile/","Dockerfile/Dockerfile/ab/","Dockerfile/Dockerfile/ab/é","a.txt","b","keep/","keep/dist/","keep/dist/dist","node_modules/","src","y.log/","y.log/Dockerfile/","y.log/Dockerfile/x.log"]}
+{"sent":[".dockerignore",".env/",".env/src/",".env/src/é/",".env/src/é/a.txt","é/","é/keep/","é/keep/.env/","é/keep/.env/a b"]}
+{"sent":[".env/",".env/c/",".env/c/y.log",".env/y.log","a.txt/","a/","a/keep","c/","c/.env/","c/.env/é","dist"]}
+{"sent":[".dockerignore/",".dockerignore/src/",".dockerignore/src/b.md",".env/",".env/c",".env/dist","dist/","dist/.git/","dist/.git/.env/","dist/.git/.env/.env","x.log/","x.log/é/","x.log/é/é","y.log"]}
+{"sent":[".env/",".env/node_modules","Dockerfile/","Dockerfile/a b/","Dockerfile/a b/b/","Dockerfile/a b/b/x.log","b/","b/.env/","b/.env/.git"]}
+{"sent":[".dockerignore/",".dockerignore/x.log/",".dockerignore/x.log/keep/",".dockerignore/x.log/keep/keep",".git","a.txt/","a.txt/b","dist"]}
+{"sent":[".dockerignore/",".dockerignore/a.txt/",".dockerignore/a.txt/.dockerignore",".dockerignore/keep","a b/","a b/.dockerignore","b/","b/c/","b/c/a b","dist/","dist/b.md","node_modules/","node_modules/dist/","node_modules/dist/keep"]}
+{"sent":[".dockerignore/",".dockerignore/dist","a.txt/","a.txt/é","b.md/","b.md/a b/","b.md/a b/a b","b.md/a b/keep","keep","src/"]}
+{"sent":["dist/","dist/b/","dist/b/ab"]}
+{"sent":["a.txt/","a.txt/node_modules","c/","c/.dockerignore/","c/.dockerignore/Dockerfile/","c/.dockerignore/Dockerfile/b","y.log/","y.log/y.log/","y.log/y.log/b.md"]}
+{"sent":[".dockerignore/",".dockerignore/dist/",".dockerignore/dist/b/",".dockerignore/dist/b/a.txt","a b/","a b/Dockerfile","a.txt/","a.txt/.env/","a.txt/.env/.dockerignore","a/","a/a.txt/","a/a.txt/a/","a/a.txt/a/a","ab/","ab/src","c/","c/.env","dist/","dist/.dockerignore"]}
+{"sent":[".env","a b/","a b/.git","a.txt/","a.txt/ab/","a.txt/ab/é/","a.txt/ab/é/a","a/","a/b/","a/b/Dockerfile/","a/b/Dockerfile/x.log","b","node_modules","src/","src/.git/","src/.git/dist/","src/.git/dist/dist"]}
+{"sent":[".dockerignore","a b/","a b/a.txt/","a b/a.txt/b/","a b/a.txt/b/node_modules","a b/b/","a b/b/Dockerfile/","a b/b/Dockerfile/y.log/","a/","a/ab/","a/ab/y.log","y.log/","y.log/dist/","y.log/dist/y.log"]}
+{"sent":[".dockerignore","ab/","ab/c/","ab/c/y.log","dist/","dist/keep"]}
+{"sent":[]}
+{"sent":["dist/","dist/a.txt/","dist/a.txt/x.log/","dist/a.txt/x.log/x.log"]}
+{"sent":[]}
+{"sent":[".dockerignore","a b/","a b/b.md/","a b/b.md/ab/","a b/b.md/ab/ab","ab","b.md/","b.md/ab/","b.md/ab/.git/","b.md/ab/.git/Dockerfile","dist/","dist/src/","dist/src/é/","dist/src/é/node_modules/","keep/","keep/c/","node_modules/","node_modules/b.md/","node_modules/b.md/a b/","node_modules/b.md/a b/keep/","src/","src/.dockerignore/","src/.dockerignore/y.log"]}
+{"sent":["a/","a/node_modules/","a/node_modules/b.md","a/src","ab","b/","b/Dockerfile/","b/Dockerfile/keep","dist/","dist/b.md","keep"]}
+{"sent":["keep"]}
+{"sent":[]}
+{"sent":["b.md/","b.md/.dockerignore/","b.md/.dockerignore/src","b/","b/.dockerignore"]}
+{"sent":["node_modules/","node_modules/a.txt/","node_modules/a.txt/a.txt/","node_modules/a.txt/a.txt/.dockerignore"]}
+{"sent":[".env",".git/",".git/b/","node_modules/","node_modules/.env/","node_modules/.env/é","y.log/","y.log/.dockerignore"]}
+{"sent":[]}
+{"sent":[".env/",".env/a/",".env/a/c",".env/y.log","ab/","ab/c/","ab/c/dist","b.md/","b.md/.git/","b.md/.git/keep","b/","b/.env","node_modules/","node_modules/b.md/","node_modules/b.md/.env/","node_modules/b.md/.env/.dockerignore","y.log/","y.log/dist"]}
+{"sent":["é"]}
+{"sent":[".env/",".env/y.log/",".env/y.log/.git"]}
+{"sent":[".git/",".git/y.log/",".git/y.log/c/",".git/y.log/c/Dockerfile","Dockerfile"]}
+{"sent":[".env","a b/","a b/a b/","a b/a b/.git/","a b/ab/","a b/ab/b.md/","a b/ab/b.md/Dockerfile","a.txt/","a.txt/y.log/","a.txt/y.log/ab","b.md/","b.md/ab/","b.md/ab/é","node_modules/","node_modules/.env/","node_modules/.env/Dockerfile/","node_modules/.env/Dockerfile/Dockerfile"]}
+{"sent":[".git/",".git/.env","a.txt/","a.txt/.env/","a.txt/.env/.git/","a.txt/.env/.git/é","b.md/","b.md/a.txt/","b.md/a.txt/a b/","dist/","dist/node_modules/","dist/node_modules/keep","keep/","keep/.dockerignore/","keep/.dockerignore/a b/","keep/.dockerignore/a b/.git"]}
+{"sent":["dist/","dist/y.log","x.log/","x.log/.env/"]}
+{"sent":[".git/",".git/b.md",".git/node_modules/",".git/node_modules/Dockerfile","a.txt/","a.txt/x.log","a.txt/y.log","b.md/","b.md/a b/","b.md/a b/x.log/","b.md/a b/x.log/é","y.log/","é/","é/.env","é/b/","é/b/Dockerfile"]}
+{"sent":[".dockerignore/",".dockerignore/a",".dockerignore/a b/",".dockerignore/a b/y.log",".git/",".git/dist","a.txt/","a.txt/y.log/","a.txt/y.log/a/","a.txt/y.log/a/y.log","dist/","dist/a.txt/","dist/a.txt/node_modules","dist/dist/","dist/dist/.dockerignore","src/","src/keep/","src/keep/c","é/","é/b.md"]}
+{"sent":[".git","a/","a/a.txt"]}
+{"sent":[".git/",".git/Dockerfile","a.txt/","a.txt/b.md/","a.txt/b.md/b.md","a/","a/b/","a/b/dist/","a/b/dist/b/","ab/","ab/b/","ab/b/c","b/","b/.git/","b/.git/.env/","b/.git/.env/.git","node_modules","src/","src/é","x.log"]}
+{"sent":["dist/","dist/.env/","dist/.env/y.log","x.log"]}
+{"sent":["a/","a/dist","src/","src/Dockerfile","src/c/","src/c/y.log/","src/c/y.log/x.log","src/node_modules/","src/node_modules/a.txt/","src/node_modules/a.txt/b"]}
+{"sent":[".dockerignore","a.txt/","a.txt/é/","b/","b/.dockerignore/","b/.dockerignore/a b/","b/.dockerignore/a b/.env","b/a b","c/","c/ab","keep/","keep/src","x.log/","x.log/Dockerfile/","x.log/Dockerfile/é/","x.log/Dockerfile/é/.git","y.log"]}
+{"sent":[]}
+{"sent":[".env/",".env/.env/",".env/.env/x.log","a b/","a b/keep/","a b/keep/ab","dist/","dist/Dockerfile/","dist/Dockerfile/keep/","dist/Dockerfile/keep/a b","y.log/","y.log/c/","y.log/c/node_modules"]}
+{"sent":[".env/",".env/.dockerignore/",".env/.dockerignore/src","a b/","a b/b/","a b/b/.dockerignore","a b/é/","a b/é/src/","keep/","keep/dist/","keep/dist/b.md","node_modules/","node_modules/dist/","node_modules/dist/a b/"]}
+{"sent":["a b/","a b/a.txt/","a b/a.txt/dist/","a b/a.txt/dist/y.log","b/","b/.env/","b/.env/b.md"]}
+{"sent":["Dockerfile/","Dockerfile/b.md/","Dockerfile/b.md/.git","b.md","node_modules","x.log/","x.log/a/","x.log/a/x.log/","x.log/a/x.log/dist","y.log"]}
+{"sent":[".env","b/","b/a/","b/a/.git/","b/a/.git/keep","c","dist/","dist/a.txt/","dist/a.txt/é/","dist/a.txt/é/.git","y.log/","y.log/a.txt/","y.log/a.txt/node_modules/","y.log/a.txt/node_modules/b.md/"]}
+{"sent":[".git/",".git/b","c/","c/.dockerignore/","c/.dockerignore/y.log/","c/.dockerignore/y.log/src"]}
+{"sent":["a b/","a b/node_modules/","a b/node_modules/.git","a/","a/x.log","c/","c/.dockerignore/","c/.dockerignore/ab","x.log/","x.log/é/","x.log/é/é","y.log/","y.log/x.log"]}
+{"sent":[".dockerignore/",".dockerignore/c/",".dockerignore/c/src/",".dockerignore/c/src/.env",".env/",".env/a/",".env/a/ab/",".env/a/ab/node_modules","keep/","keep/keep","node_modules/","node_modules/ab/","node_modules/ab/b","x.log/","x.log/dist/"]}
+{"sent":["Dockerfile/","Dockerfile/node_modules","a b/","a b/c","a/","a/c/","a/c/b","x.log/","x.log/ab/","x.log/ab/c"]}
+{"sent":["ab","b/","b/a.txt"]}
+{"sent":["a","a.txt","dist/","dist/a/","dist/a/c","y.log/","y.log/keep/","y.log/keep/.env/","y.log/keep/.env/src"]}
+{"sent":["a/","a/src"]}
+{"sent":[".env","Dockerfile/","Dockerfile/ab/","Dockerfile/ab/c/","Dockerfile/ab/c/x.log","Dockerfile/b.md/","Dockerfile/b.md/.git","a/","a/ab/","a/ab/keep/","a/ab/keep/b.md","a/keep/","a/keep/a b/","a/keep/a b/a b","b.md/","b.md/dist","c/","c/src/","c/src/é/","c/src/é/keep","node_modules/","node_modules/node_modules/","node_modules/node_modules/.dockerignore/","node_modules/node_modules/.dockerignore/c"]}
+{"sent":["Dockerfile/","Dockerfile/a/","Dockerfile/a/a.txt/","Dockerfile/a/a.txt/a b","y.log"]}
+{"sent":[".dockerignore","a.txt/","a.txt/y.log","a/","a/src/","a/src/.dockerignore/","a/src/.dockerignore/x.log","keep"]}
+{"sent":["a.txt/","a.txt/src","a/","a/a/","a/a/node_modules","b.md/","b.md/dist","b/","b/a","c/","c/dist/","c/dist/src","node_modules/","node_modules/c","x.log/","x.log/.env","é/","é/.env"]}
+{"sent":[".dockerignore/",".dockerignore/.env/",".dockerignore/.env/b/",".dockerignore/.env/b/keep","a.txt"]}
+{"sent":[],"error":"invalid excludepatterns: [src !]: illegal exclusion pattern: \"!\""}
+{"sent":[".git/",".git/a b","Dockerfile/","Dockerfile/c/","Dockerfile/c/keep","dist/","dist/a/","dist/a/c","dist/é/","dist/é/ab","é/"]}
+{"sent":[],"error":"invalid excludepatterns: [!a? b/? b/a b/a !.git !]: illegal exclusion pattern: \"!\""}
+{"sent":[]}
+{"sent":["Dockerfile/","Dockerfile/dist/","Dockerfile/dist/Dockerfile/","Dockerfile/dist/Dockerfile/é","c/","c/.env/","c/.env/b/","c/.env/b/b.md","keep","src/","src/a b/","src/a b/y.log","é/","é/.env"]}
+{"sent":[".env/",".env/keep/",".env/keep/y.log","a.txt","keep/","keep/b/","keep/b/Dockerfile","src/","src/a","x.log/","x.log/.env"]}
+{"sent":["node_modules/","node_modules/b/","node_modules/b/.dockerignore","src/","src/dist/","src/dist/ab/","src/dist/ab/keep"]}
+{"sent":[]}
+{"sent":["Dockerfile/","Dockerfile/a.txt/","Dockerfile/a.txt/é/","Dockerfile/a.txt/é/b.md","c/","c/src/","c/src/b","x.log/","x.log/node_modules/","x.log/node_modules/ab/","x.log/node_modules/ab/keep"]}
+{"sent":[".dockerignore/",".dockerignore/a b/",".dockerignore/a b/keep","ab/","ab/a.txt/","ab/a.txt/.git/","ab/a.txt/.git/Dockerfile/","src"]}
+{"sent":["a b/","a b/keep","a.txt/","a.txt/ab","x.log/","x.log/é/","x.log/é/ab"]}
+{"sent":[".env/","Dockerfile","a.txt","a/","a/c/","a/c/.env/","a/c/.env/ab","c","keep","x.log/","x.log/c/","x.log/c/src","y.log/","y.log/node_modules/","y.log/node_modules/a b"]}
+{"sent":[".env/",".env/é",".git","a b/","a b/src/","a b/src/node_modules/","a b/src/node_modules/ab","a/","a/a/","a/a/keep","ab/","ab/a b/","ab/a b/b.md","b.md","c","keep/","keep/ab/","keep/ab/b.md/","x.log/","x.log/.dockerignore/","x.log/.dockerignore/a b"]}
+{"sent":["b.md"]}
+{"sent":[]}
+{"sent":["b.md","b/","b/x.log/","b/x.log/a b","dist/","dist/b/","dist/b/a.txt/","dist/b/a.txt/é","é"]}
+{"sent":["a.txt","c/","c/dist","dist/","dist/keep/"]}
+{"sent":[".env/",".env/dist/",".env/dist/x.log",".git/",".git/c/",".git/c/é/",".git/c/é/é","b","b.md","dist/","dist/y.log","x.log/","x.log/a b/"]}
+{"sent":[".dockerignore/",".dockerignore/src/",".dockerignore/src/ab/",".dockerignore/src/ab/b","ab/","ab/a"]}
+{"sent":[".git/",".git/dist/","node_modules/","node_modules/node_modules/","node_modules/node_modules/.dockerignore/","node_modules/node_modules/.dockerignore/y.log","src/"]}
+{"sent":[".dockerignore/",".git/",".git/dist/",".git/dist/a/",".git/dist/a/Dockerfile","c","é/","é/é"]}
+{"sent":["a/","a/.env/","a/.env/x.log","b","c/","c/a.txt/","c/a.txt/a.txt/","c/a.txt/a.txt/b.md","node_modules/","node_modules/b","é/","é/.dockerignore/"]}
+{"sent":["c/","c/ab/","c/ab/c","c/y.log/","c/y.log/node_modules/","c/y.log/node_modules/é","src/","src/src/","src/src/node_modules/","src/src/node_modules/dist","é/","é/ab/","é/ab/a.txt/","é/ab/a.txt/.dockerignore"]}
+{"sent":[".dockerignore","c"]}
+{"sent":["ab/","ab/node_modules/","ab/node_modules/src/","ab/node_modules/src/src/","src/","src/.dockerignore"]}
+{"sent":[".env/",".env/keep/",".env/keep/.dockerignore",".git/",".git/node_modules/",".git/node_modules/Dockerfile","Dockerfile/","Dockerfile/.git","keep/","keep/src","node_modules/","node_modules/a","src/","src/.git/","src/.git/keep"]}
+{"sent":[],"error":"invalid excludepatterns: [!src [^a] !]: illegal exclusion pattern: \"!\""}
+{"sent":["b.md/","b.md/Dockerfile","c","node_modules"]}
+{"sent":[".git/",".git/a b/",".git/a b/b.md","a b/","a b/.env/","a b/.env/keep/","a b/.env/keep/y.log","c/","c/keep/","c/keep/a.txt","é/","é/.git/","é/.git/.env/","é/.git/.env/x.log"]}
+{"sent":[],"error":"invalid excludepatterns: [Dockerfile/b/node_modules ![^a]/src a? keep/**/a? !* !]: illegal exclusion pattern: \"!\""}
+{"sent":["Dockerfile/","Dockerfile/a b/","Dockerfile/a b/a/"]}
+{"sent":[".git/",".git/keep","c/","c/x.log/","c/x.log/.env","node_modules","é/","é/b.md/","é/b.md/.git/","é/b.md/.git/b/"]}
+{"sent":[]}
+{"sent":[".dockerignore",".env/",".env/b.md/","a","a.txt","b","y.log/","y.log/a b/","y.log/a b/a b"]}
+{"sent":["a b/","a b/.dockerignore/","a b/.dockerignore/é/","a b/.dockerignore/é/Dockerfile","a b/Dockerfile/","a b/Dockerfile/a/","a b/Dockerfile/a/c/","b/","b/b/","b/b/é","x.log/","x.log/.git/","x.log/.git/src/","x.log/.git/src/a b"]}
+{"sent":[".env/",".env/c","b.md","b/","b/y.log/","b/y.log/a b","c/","c/Dockerfile/","src/","src/keep/","src/keep/.git/","src/keep/.git/b.md","y.log/","y.log/y.log","é/","é/x.log"]}
+{"sent":["a.txt/","a.txt/a","c/","c/.git/","c/.git/c/","src/","src/.env/","src/.env/node_modules","src/é/","src/é/src","é"]}
+{"sent":[".git","Dockerfile","a.txt/","a.txt/.git/","b/","b/é/","b/é/a/","b/é/a/ab","keep/","keep/keep/","keep/keep/y.log/","keep/keep/y.log/.git","node_modules","src","é/","é/x.log"]}
+{"sent":[".git/",".git/c","x.log"]}
+{"sent":[".env/",".env/x.log",".git/",".git/dist/",".git/dist/.git/",".git/dist/.git/é","a b","ab","b","c","keep/","keep/.git/","keep/.git/b.md","keep/.git/keep","x.log","é/"]}
+{"sent":[".env/",".env/y.log",".git/",".git/b.md","a/","a/a b/","a/a b/src","b/","b/dist/","b/dist/keep","x.log/","x.log/y.log/","x.log/y.log/a/","x.log/y.log/a/src","y.log/","y.log/.git/","y.log/.git/keep","é/","é/.env"]}
+{"sent":["Dockerfile/","Dockerfile/a.txt/","Dockerfile/a.txt/c","x.log/","x.log/.git","y.log/","y.log/é"]}
+{"sent":["a.txt/","a.txt/y.log/","a.txt/y.log/.dockerignore","a/","a/b.md","b.md/","b.md/.env/","b.md/.env/node_modules","b/","b/.git/","b/.git/a","node_modules/","node_modules/Dockerfile/","node_modules/Dockerfile/ab/","node_modules/Dockerfile/ab/node_modules/"]}
+{"sent":[".git/",".git/a b","b.md/","b.md/.env/","b.md/.env/b.md/","b.md/.env/b.md/Dockerfile","é"]}
+{"sent":[".git/",".git/b.md",".git/dist/",".git/dist/y.log","a b/","keep","src/","src/é/","src/é/a.txt","x.log/","x.log/a.txt/","x.log/a.txt/é","é"]}
+{"sent":[]}
+{"sent":["a b/","a b/src/","a b/src/x.log"]}
+{"sent":[".git/",".git/é/",".git/é/dist","Dockerfile/","Dockerfile/b/","Dockerfile/b/keep","keep","src/","src/a/","src/a/.env/","src/a/.env/.git","x.log/","x.log/keep/","x.log/keep/y.log/","x.log/keep/y.log/b.md"]}
+{"sent":["node_modules/","node_modules/c/","node_modules/c/a/","node_modules/c/a/b.md"]}
+{"sent":["a.txt/","a.txt/dist/","a.txt/dist/a/","a.txt/dist/a/dist","a.txt/y.log","y.log/","y.log/.git/","y.log/.git/x.log/"]}
+{"sent":["dist","node_modules/","node_modules/a.txt","node_modules/node_modules/","node_modules/node_modules/x.log/","node_modules/node_modules/x.log/.dockerignore"]}
+{"sent":["a b","src/","src/a b/","src/a b/Dockerfile"]}
+{"sent":[".dockerignore/",".dockerignore/é/",".dockerignore/é/Dockerfile","Dockerfile","a b/","a b/Dockerfile","a.txt/","a.txt/.dockerignore/","a.txt/.dockerignore/x.log/","a.txt/.dockerignore/x.log/node_modules","ab/","ab/a b/","ab/a b/x.log","node_modules/","node_modules/Dockerfile/","node_modules/Dockerfile/Dockerfile/","node_modules/Dockerfile/Dockerfile/a.txt","y.log/","y.log/src/","y.log/src/ab"]}
+{"sent":[".git/",".git/src/",".git/src/y.log/",".git/src/y.log/.git","Dockerfile/","Dockerfile/.git/","Dockerfile/.git/ab","ab/","ab/.git/","ab/.git/.env","b.md/","b.md/y.log/","b.md/y.log/y.log/","b.md/y.log/y.log/ab","c/","c/y.log","src/","src/c","x.log/","x.log/é/","x.log/é/.git/","x.log/é/.git/Dockerfile","y.log/","y.log/node_modules"]}
+{"sent":[]}
+{"sent":[".git/",".git/Dockerfile","a b/","a b/b.md","b/","b/dist/","b/dist/x.log/","b/dist/x.log/Dockerfile","node_modules/","node_modules/a.txt/","node_modules/a.txt/keep","é/","é/.dockerignore"]}
+{"sent":["a b/","a b/y.log","y.log","é/","é/a b/","é/a b/src/","é/a b/src/é"]}
+{"sent":["b.md","node_modules/","node_modules/dist/","node_modules/dist/.git/","x.log/"]}
+{"sent":["Dockerfile","b.md/","b.md/c/","node_modules/","node_modules/a"]}
+{"sent":[".dockerignore/",".dockerignore/y.log/",".git/",".git/Dockerfile/",".git/Dockerfile/ab/",".git/Dockerfile/ab/.git/",".git/a/",".git/a/b.md","Dockerfile/","Dockerfile/dist/","Dockerfile/dist/node_modules","a b/","a b/ab/","a b/ab/ab/","a b/ab/ab/keep","a/","a/a b/","a/a b/.env","ab/","ab/dist/","ab/dist/Dockerfile/","ab/dist/Dockerfile/a b","dist/","node_modules/","node_modules/y.log/","node_modules/y.log/ab/","node_modules/y.log/ab/b.md","x.log/","x.log/node_modules/","x.log/node_modules/a.txt"]}
+{"sent":["Dockerfile/","Dockerfile/b/","Dockerfile/b/a.txt","a","a b/","a b/é/","a b/é/a","src/","src/.env/","src/.env/.git"]}
+{"sent":["b/","b/a.txt","keep/","keep/keep"]}
+{"sent":[".env/",".env/Dockerfile/",".env/Dockerfile/node_modules/",".env/Dockerfile/node_modules/é","Dockerfile/","Dockerfile/dist","a.txt/","a.txt/.env/","a.txt/.env/a b/","a.txt/.env/a b/a.txt","a.txt/c","keep/","keep/b","src/","src/ab/","é/","é/b/","é/b/a.txt"]}
+{"sent":[".dockerignore/",".dockerignore/x.log/",".dockerignore/x.log/src","a b","a.txt/","a.txt/Dockerfile/","a/","a/src/","a/src/a.txt","b.md","b/","b/.env/","b/.env/keep/","c/","c/keep/","c/keep/node_modules","é/","é/b/","é/b/é/","é/b/é/src"]}
+{"sent":[".dockerignore/",".dockerignore/a b",".env/",".env/node_modules",".git/",".git/ab/",".git/ab/.git/",".git/ab/.git/b.md",".git/c/",".git/c/node_modules/",".git/c/node_modules/.env",".git/y.log/",".git/y.log/a/",".git/y.log/a/a b/","dist","keep/","keep/ab/","keep/ab/b/","keep/ab/b/a.txt","node_modules/","node_modules/y.log/","node_modules/y.log/x.log/","node_modules/y.log/x.log/.git"]}
+{"sent":[".env/",".env/é","x.log/","x.log/x.log/","x.log/x.log/keep/","x.log/x.log/keep/keep","y.log/","y.log/keep"]}
+{"sent":["b.md/","b.md/b","b/","b/keep/","b/keep/.env/","b/keep/.env/keep","c"]}
+{"sent":[".git/",".git/Dockerfile/",".git/Dockerfile/node_modules/",".git/Dockerfile/node_modules/keep",".git/b/",".git/b/a b","a.txt","b.md/","b.md/a","c/","c/y.log/","c/y.log/b/","dist/","dist/.git","node_modules","y.log/","y.log/é/","y.log/é/b.md","é/","é/é"]}
+{"sent":["c"]}
+{"sent":[]}
+{"sent":["a.txt/","a.txt/keep/","a.txt/keep/b","ab/","ab/dist/","ab/dist/node_modules","b/","b/a/","b/a/y.log","b/c/","b/c/b","dist","keep/","keep/b.md","src/","src/a/","src/a/x.log/","src/a/x.log/a","y.log","é/","é/y.log/","é/y.log/node_modules"]}
+{"sent":["dist/","dist/x.log/","dist/x.log/b.md"]}
+{"sent":["a b","b.md/","b.md/a b/","b.md/a b/Dockerfile","keep"]}
+{"sent":[".dockerignore","Dockerfile/","Dockerfile/a.txt","Dockerfile/a/","Dockerfile/a/a.txt","a.txt/","a.txt/keep","dist","keep/","keep/.env","y.log/","y.log/a.txt/","y.log/a.txt/c/","y.log/a.txt/c/.git","y.log/keep/","y.log/keep/node_modules","é/","é/b.md/","é/b.md/y.log/","é/c/","é/c/y.log"]}
+{"sent":[".env","Dockerfile/","Dockerfile/b.md","Dockerfile/x.log","ab/","ab/.dockerignore/","ab/.dockerignore/b","b/","b/é/","b/é/a b"]}
+{"sent":["a b","a.txt/","a.txt/c/","a.txt/c/y.log","a/","a/.dockerignore/","a/.dockerignore/x.log","a/a/","a/a/a b/","a/a/a b/a","b.md","c/","c/node_modules","node_modules/","node_modules/b/","node_modules/b/node_modules/","node_modules/b/node_modules/b.md","src/","src/a b/","src/a b/.dockerignore"]}
+{"sent":[".dockerignore","a/","a/y.log/","a/y.log/a.txt/","a/y.log/a.txt/b","ab","c/","c/a.txt/","c/a.txt/node_modules/","node_modules/","node_modules/.dockerignore","x.log/","y.log/","y.log/b.md/","y.log/b.md/dist"]}
+{"sent":["a/","a/keep/","a/keep/node_modules","ab/","ab/x.log","b.md/","b/","b/a/","b/a/b.md","é/","é/.git/"]}
+{"sent":["ab/","ab/src","x.log/","x.log/a b/","x.log/a b/a b/","x.log/a b/a b/dist","é/","é/a.txt/","é/a.txt/keep"]}
+{"sent":[".git/",".git/b/",".git/b/b.md","Dockerfile","a.txt/","a.txt/node_modules/","a.txt/node_modules/dist","ab/","ab/keep/","ab/keep/.dockerignore/","ab/keep/.dockerignore/b.md","dist/","dist/.git/","dist/.git/a.txt","keep/","keep/a b/","keep/a b/a b","é/","é/c/","é/c/Dockerfile/","é/c/Dockerfile/keep"]}
+{"sent":["Dockerfile/","Dockerfile/é/","Dockerfile/é/dist/","Dockerfile/é/dist/é","dist/","dist/keep/"]}
+{"sent":["a.txt/","a.txt/ab/","a.txt/ab/.dockerignore/","a.txt/ab/.dockerignore/dist","a/","a/node_modules","b/","b/a b/","b/a b/a b"]}
+{"sent":["Dockerfile","a b/","a b/.env","a.txt/","a.txt/.env/","a.txt/.env/.dockerignore","c/","c/ab","node_modules/","node_modules/x.log/","node_modules/x.log/.git"]}
+{"sent":["b.md/","b.md/c"]}
+{"sent":["b.md"]}
+{"sent":[".dockerignore/",".dockerignore/src/",".dockerignore/src/y.log/",".dockerignore/src/y.log/y.log","a","a b/","a b/c","dist/","dist/é/","dist/é/y.log/","dist/é/y.log/a","x.log/","x.log/a.txt","x.log/c/","x.log/c/b/","x.log/c/b/ab"]}
+{"sent":[".dockerignore/",".dockerignore/node_modules/",".dockerignore/node_modules/a",".git/",".git/.git/",".git/.git/ab/",".git/.git/ab/.git","a b/","ab/","ab/Dockerfile/","ab/Dockerfile/.git/","ab/Dockerfile/.git/.env","src/","src/.dockerignore/","src/.dockerignore/a.txt"]}
+{"sent":["a.txt/","a.txt/a/","a.txt/a/a/"]}
+{"sent":[]}
+{"sent":["a b","a.txt/","a.txt/a b/","a.txt/a b/é","a/","a/a.txt","b.md/","b.md/c/","b.md/c/c"]}
+{"sent":[".git/",".git/.git/",".git/.git/.dockerignore/",".git/.git/.dockerignore/a.txt/",".git/keep/",".git/keep/é","Dockerfile/","Dockerfile/dist/","Dockerfile/dist/src","b.md/","b.md/keep","b/","b/y.log/","b/y.log/b/","b/y.log/b/ab/","dist/","dist/a b/","dist/a b/é","node_modules/","node_modules/c/","node_modules/c/.env","é"]}
+{"sent":[".dockerignore/",".dockerignore/x.log/",".dockerignore/x.log/dist/",".env/",".env/keep/",".env/keep/keep",".git/",".git/ab/",".git/ab/.dockerignore/",".git/ab/.dockerignore/a","a b/","a b/.dockerignore/","a b/.dockerignore/b","b.md","b/","b/.git","dist/","dist/.dockerignore","keep/","keep/b.md","y.log/","y.log/x.log"]}
+{"sent":["a/","a/.git/","a/.git/.env/","a/.git/.env/c","a/node_modules/","a/node_modules/ab","ab/","ab/node_modules","keep/","keep/a/","keep/a/x.log","x.log/","x.log/b.md/","x.log/b.md/node_modules/","x.log/c/","x.log/c/.git","é/","é/y.log/","é/y.log/b.md/","é/y.log/b.md/dist"]}
+{"sent":[".git/",".git/Dockerfile",".git/x.log/",".git/x.log/a.txt","ab/","keep"]}
+{"sent":[".dockerignore/",".dockerignore/a/",".dockerignore/a/a","a.txt/","a.txt/Dockerfile/","a.txt/Dockerfile/keep","b.md/","b.md/a b/","b.md/a b/keep/","b.md/a b/keep/dist","c/","c/.git"]}
+{"sent":["b.md/","b.md/a.txt/","b.md/a.txt/.env"]}
+{"sent":[".dockerignore/",".dockerignore/ab/",".dockerignore/ab/node_modules/",".dockerignore/ab/node_modules/x.log",".env/",".env/.dockerignore/",".env/.dockerignore/.git","a b/","a/","a/c/","a/c/y.log","c","é/"]}
+{"sent":["y.log"]}
+{"sent":[".env/",".env/b.md/",".env/b.md/Dockerfile/",".env/b.md/Dockerfile/a b","a.txt/","a.txt/src/","a.txt/src/Dockerfile/","a.txt/src/Dockerfile/.git","a/","a/ab/","a/ab/.git","a/é","ab/","b.md/","dist/","dist/ab/","y.log/","y.log/a"]}
+{"sent":[".env/",".env/src/",".env/src/a","ab/","ab/c/","ab/c/x.log"]}
+{"sent":["Dockerfile","a/","a/Dockerfile","b.md/","b.md/c","src/","src/node_modules/","src/node_modules/keep"]}
+{"sent":[]}
+{"sent":[".env/",".env/.git/",".env/.git/b/",".env/.git/b/b.md","Dockerfile/","Dockerfile/y.log/","Dockerfile/y.log/x.log","a","ab/","ab/b.md/","ab/b.md/node_modules/","b/","b/src","y.log/","y.log/.git/","y.log/.git/.dockerignore/","y.log/.git/.dockerignore/.dockerignore","y.log/keep/","y.log/keep/x.log/","y.log/keep/x.log/ab","y.log/node_modules"]}
+{"sent":["b/","b/é/","b/é/.git","x.log/","x.log/.dockerignore","y.log/","y.log/.env/","y.log/.env/a/","y.log/.env/a/a.txt"]}
+{"sent":[]}
+{"sent":["é"]}
+{"sent":["Dockerfile/","Dockerfile/a/","Dockerfile/a/.git/","Dockerfile/a/.git/src","b.md/","b.md/a/","b.md/a/.git/","node_modules/","node_modules/a/","node_modules/a/a","src/","src/src/","src/src/keep"]}
+{"sent":["a b","a.txt/","a.txt/keep","y.log/","y.log/keep/","y.log/keep/b"]}
+{"sent":[".dockerignore/",".dockerignore/x.log/",".dockerignore/x.log/.dockerignore",".git/","a b/","a b/.git/","a b/.git/c/","a b/.git/c/a.txt","a b/src/","a b/src/x.log/","a b/src/x.log/b.md","a/","a/dist/","a/dist/dist","c/","c/x.log/","c/x.log/a/","c/x.log/a/Dockerfile","keep","x.log/","x.log/src/","x.log/src/é","y.log/","y.log/dist/","y.log/dist/a b/","y.log/dist/a b/Dockerfile"]}
+{"sent":["a.txt/","a.txt/b.md/","a.txt/b.md/node_modules"]}
+{"sent":[".env/",".env/é","a.txt","ab/","ab/keep/","ab/keep/Dockerfile/","ab/keep/Dockerfile/a","y.log"]}
+{"sent":[".env/","Dockerfile/","Dockerfile/Dockerfile/","Dockerfile/Dockerfile/c/","Dockerfile/Dockerfile/c/node_modules","x.log/","x.log/b"]}
+{"sent":[".env/",".env/a b/",".env/a b/a/",".env/a b/a/ab","a b","a.txt/","a.txt/.env/","a.txt/.env/keep","a.txt/node_modules/","a.txt/node_modules/b/","a.txt/node_modules/b/a b","b.md/","c","node_modules","src/","src/.git/","src/.git/a.txt/","src/.git/a.txt/a.txt","src/c/"]}
+{"sent":[".env/",".env/.env","a.txt/","a.txt/a.txt/","a.txt/a.txt/a b/","a.txt/a.txt/a b/.env/","a.txt/a/","a.txt/a/keep","a/","a/b.md/","a/b.md/.dockerignore/","a/b.md/.dockerignore/x.log","ab/","ab/b.md/","ab/b.md/.dockerignore","node_modules/","node_modules/b/","node_modules/b/c","src/","x.log/","x.log/a.txt/","x.log/a.txt/y.log/","x.log/a.txt/y.log/.git","x.log/dist","y.log/","y.log/a b/","y.log/a b/Dockerfile/","y.log/a b/Dockerfile/.dockerignore"]}
+{"sent":["Dockerfile/","b.md/","b.md/y.log/","b.md/y.log/b.md","dist/","dist/é/","dist/é/b.md/"]}
+{"sent":[".dockerignore/",".dockerignore/keep","a b/","a.txt/","a.txt/x.log/","y.log/"]}
+{"sent":[".git/",".git/.dockerignore/",".git/.dockerignore/node_modules","a/","a/ab/","a/ab/Dockerfile/","a/ab/Dockerfile/b","b.md/","c/","c/a","c/src/","c/src/c","dist/","dist/b.md"]}
+{"sent":["a.txt/","a.txt/a b/","a.txt/a b/ab/","dist/","dist/.git/","dist/.git/node_modules/","dist/.git/node_modules/a.txt","node_modules/","node_modules/node_modules"]}
+{"sent":["a/","a/é","ab/","ab/.git","ab/a/","ab/a/Dockerfile/"]}
+{"sent":[]}
+{"sent":[".dockerignore/",".dockerignore/a b",".git/",".git/b.md","Dockerfile","a/","a/dist/","a/dist/.git","b/","b/a.txt","c/","c/a.txt/","c/a.txt/.dockerignore/","c/a.txt/.dockerignore/y.log","y.log/","y.log/.dockerignore/","y.log/.dockerignore/src"]}
+{"sent":["node_modules/","node_modules/b.md/","y.log/","y.log/a.txt/","y.log/a.txt/.git/"]}
+{"sent":[".env",".git","a/","a/.dockerignore","b.md/","b.md/Dockerfile/","b.md/Dockerfile/a.txt","node_modules/","node_modules/a/","node_modules/a/a b/","node_modules/a/a b/c"]}
+{"sent":["b.md/","b.md/c/","b.md/c/.git","c","dist/","dist/b","y.log"]}
+{"sent":["a.txt/","a.txt/src/","a.txt/src/.git","ab/","ab/dist/","ab/dist/a b/","ab/dist/a b/x.log"]}
+{"sent":[".git/",".git/Dockerfile","ab/","ab/ab/","ab/ab/b","src"]}
+{"sent":[".git/",".git/é/",".git/é/.env/",".git/é/.env/c","Dockerfile/","Dockerfile/.git/","Dockerfile/.git/a/","Dockerfile/.git/a/dist","a b/","a b/c/","a b/c/b.md","b.md/","b.md/dist/","b.md/dist/c/","c/","c/.git/","c/.git/b","c/b.md/","c/b.md/keep","x.log/","x.log/a b/","x.log/a b/node_modules","x.log/b.md"]}
+{"sent":["Dockerfile/","Dockerfile/x.log/","Dockerfile/x.log/c/","Dockerfile/x.log/c/Dockerfile","c/","c/.env","node_modules/","node_modules/.dockerignore","src/","src/.dockerignore","x.log/","x.log/.git","é"]}
+{"sent":[".git/",".git/dist/",".git/dist/a/",".git/dist/a/b","src/","src/b.md/","src/b.md/é","x.log/","x.log/x.log/","x.log/x.log/a","y.log/","y.log/src/","y.log/src/y.log/","y.log/src/y.log/Dockerfile"]}
+{"sent":[".dockerignore/",".dockerignore/x.log/",".dockerignore/x.log/src"]}
+{"sent":["a b"]}
+{"sent":[".env/",".env/Dockerfile","a b/","a b/b.md","ab/","ab/b.md/","ab/b.md/b.md","ab/b/","ab/b/.env","b.md/","b.md/.dockerignore/","b.md/.dockerignore/é/","b.md/.dockerignore/é/.dockerignore","dist/","dist/x.log","node_modules/","node_modules/.dockerignore/","node_modules/x.log/","node_modules/x.log/dist"]}
+{"sent":[".env","a b/","a b/b.md","a/","a/keep/","a/keep/b.md/","a/keep/b.md/keep","b.md/","b.md/a b","keep/","keep/b/","keep/b/a/","keep/b/a/y.log","x.log/","x.log/node_modules/","x.log/node_modules/.env/","x.log/node_modules/.env/ab","é/","é/b/","é/b/é/","é/b/é/a.txt"]}
+{"sent":["a b/","a b/b.md/","a b/b.md/Dockerfile/","a.txt/","a.txt/b.md/","a.txt/b.md/a.txt/","b/","b/Dockerfile/","b/ab/","b/ab/c","b/ab/y.log/","b/ab/y.log/keep","c/","c/a.txt/","c/a.txt/keep/","c/a.txt/keep/ab","src","é/","é/a b/","é/a b/ab"]}
+{"sent":[".dockerignore",".env/",".env/dist","a.txt/","a.txt/ab/","a.txt/ab/y.log/","a.txt/ab/y.log/.dockerignore","a.txt/é/","a.txt/é/node_modules/","a.txt/é/node_modules/é","c/","src/","src/a/","src/a/a b/","src/a/a b/b.md/"]}
+{"sent":["a b/","a b/c/","a b/c/a b/","a b/c/a b/é","a/","a/dist/","a/dist/.git/","a/dist/.git/é","ab/","ab/y.log/","ab/y.log/a","c/","c/.dockerignore"]}
+{"sent":[".dockerignore/",".dockerignore/Dockerfile/",".dockerignore/Dockerfile/.git/",".dockerignore/Dockerfile/.git/y.log",".git/",".git/a.txt/",".git/a.txt/é/",".git/a.txt/é/node_modules","ab/","ab/.git/","ab/.git/é/","ab/.git/é/é","b.md/","x.log/","x.log/a.txt/","x.log/a.txt/.env","y.log/","y.log/keep"]}
+{"sent":["a.txt/","a.txt/x.log/","a.txt/x.log/a.txt","a/","a/c/","a/c/b.md/","a/c/b.md/.env","b.md/","b.md/.dockerignore/","b.md/.dockerignore/node_modules/","b.md/.dockerignore/node_modules/x.log","b.md/b.md/","b.md/b.md/a","b.md/y.log/","b.md/y.log/.dockerignore","b/","b/.git/","b/.git/b/","b/.git/b/dist","c/","c/.env","dist/","dist/node_modules/","dist/node_modules/y.log/","dist/node_modules/y.log/src"]}
+{"sent":[".dockerignore/",".dockerignore/ab/",".dockerignore/ab/src/",".dockerignore/ab/src/keep/",".git","b.md/","b.md/node_modules/","b.md/node_modules/src/","b.md/node_modules/src/a.txt","dist/","dist/src/","dist/src/.env/","dist/src/.env/a","keep/","keep/.git/","node_modules/","node_modules/.env","src","x.log/","x.log/b.md/","x.log/b.md/.git/","x.log/b.md/.git/x.log","é/","é/b/","é/b/Dockerfile/","é/b/Dockerfile/x.log"]}
+{"sent":["a/","a/dist/","a/dist/a/","a/dist/a/dist"]}
+{"sent":["dist/","dist/src/","dist/src/a.txt","keep/","keep/dist/","keep/dist/keep/","keep/dist/keep/x.log","é/","é/dist/","é/dist/Dockerfile/","é/dist/Dockerfile/a b"]}
+{"sent":["Dockerfile/","Dockerfile/b.md/","Dockerfile/b.md/node_modules","b.md/","b.md/.git/","b.md/.git/c/","b.md/.git/c/y.log/","b.md/a b","b.md/é/","b.md/é/src","c/","c/.dockerignore","x.log"]}
+{"sent":["Dockerfile","a/","a/dist/","a/dist/src/","a/dist/src/.dockerignore","b/","b/a/","b/a/.git/","b/a/.git/.dockerignore","y.log/","y.log/ab/","y.log/ab/c/","y.log/ab/c/node_modules"]}
+{"sent":[".dockerignore","Dockerfile","a b"]}
+{"sent":[".env/",".env/a b/",".env/a b/é/",".env/a b/é/a.txt",".git/","a.txt","a/","a/é/","a/é/a.txt/","a/é/a.txt/a b","x.log/","x.log/é/","x.log/é/dist/","x.log/é/dist/.env"]}
+{"sent":["a b/","a b/x.log/","a b/x.log/b.md/","a b/x.log/b.md/keep","ab/","ab/c/","ab/c/ab","b.md/","b.md/é","dist/","dist/a.txt/","dist/a.txt/keep/","dist/a.txt/keep/keep","keep/","keep/keep/","keep/keep/b.md","node_modules/","node_modules/b/","node_modules/b/.git","src/","src/b/","src/b/src/","src/b/src/ab","y.log/"]}
+{"sent":["a b/","a b/x.log","b/","b/.git/","b/.git/node_modules/","b/.git/node_modules/b","c/","c/a.txt","dist/","dist/x.log/","dist/x.log/node_modules/","dist/x.log/node_modules/c","node_modules","é/","é/.env/","é/.env/a b","é/b.md/","é/b.md/a b/","é/b.md/a b/dist"]}
+{"sent":[".git/",".git/Dockerfile/",".git/Dockerfile/b/",".git/a/",".git/a/.git",".git/b.md/",".git/b.md/node_modules/",".git/b.md/node_modules/a","Dockerfile/","Dockerfile/b.md/","node_modules/","node_modules/a.txt","x.log/","x.log/y.log/","é/","é/dist/","é/dist/.git/","é/dist/.git/.env"]}
+{"sent":[]}
+{"sent":[".dockerignore/",".dockerignore/a b/",".dockerignore/a b/Dockerfile",".dockerignore/x.log/",".dockerignore/x.log/x.log","a.txt/","a.txt/Dockerfile","b.md/","b.md/.dockerignore/","dist/","dist/.env/","dist/.env/node_modules/","dist/.env/node_modules/node_modules"]}
+{"sent":["Dockerfile/","Dockerfile/a b/","Dockerfile/a b/x.log","a b/","a b/a b/","a b/a b/y.log/","a b/a b/y.log/x.log","ab","b.md","y.log"]}
+{"sent":[".dockerignore",".env/",".env/keep/","Dockerfile/","Dockerfile/.env/","Dockerfile/.env/node_modules/","Dockerfile/ab/","Dockerfile/ab/Dockerfile","Dockerfile/dist/","Dockerfile/dist/.env","a/","a/é","b.md/","b.md/b.md/","b.md/b.md/a.txt/","b.md/b.md/a.txt/keep","b/","b/Dockerfile","src/","src/Dockerfile/","src/Dockerfile/.git","é/","é/Dockerfile/","é/Dockerfile/b/","é/Dockerfile/b/.env"]}
+{"sent":[".git/",".git/c/",".git/c/b","Dockerfile/","Dockerfile/a.txt","a.txt/","a.txt/.git/","a.txt/.git/b.md/","a.txt/.git/b.md/a/","ab/","ab/.dockerignore/","ab/.dockerignore/node_modules","dist/","dist/x.log/","dist/x.log/a b/","dist/x.log/a b/ab"]}
+{"sent":[".env/",".env/a/",".env/a/src","a.txt/","a.txt/node_modules/","a.txt/node_modules/c/","a.txt/node_modules/c/node_modules","a/","a/b/","a/b/.dockerignore/","a/b/.dockerignore/.dockerignore","a/c","ab/","ab/b.md","ab/src/","ab/src/node_modules/","node_modules/","node_modules/.git/","node_modules/.git/dist/","node_modules/.git/dist/Dockerfile"]}
+{"sent":["src/","src/é/","src/é/x.log"]}
+{"sent":["Dockerfile","a/","a/src/","a/src/a.txt/","a/src/a.txt/b","ab/","ab/node_modules/","ab/node_modules/x.log","b/","b/é/","b/é/keep","dist/","dist/Dockerfile/","dist/Dockerfile/a.txt","dist/a.txt/","dist/a.txt/a","src/","src/.dockerignore/","src/.dockerignore/.env","x.log/","x.log/a.txt/","x.log/a.txt/x.log","x.log/dist"]}
+{"sent":[".dockerignore/",".dockerignore/.git/",".dockerignore/.git/dist/",".dockerignore/.git/dist/ab",".env/",".env/é/",".env/é/ab","b.md/","b.md/a b","x.log/","x.log/.git/","x.log/.git/a"]}
+{"sent":["a.txt/","a.txt/dist/","a.txt/dist/.dockerignore","é/","é/keep"]}
+{"sent":[".dockerignore/",".dockerignore/.env/",".dockerignore/.env/.git",".env/",".env/.dockerignore/",".env/.dockerignore/keep/",".env/.dockerignore/keep/a b",".env/a/",".env/a/ab/",".env/a/ab/y.log/","ab/","ab/ab","b.md/","b.md/b","y.log/","y.log/.dockerignore/","y.log/.dockerignore/b/","y.log/.dockerignore/b/node_modules"]}
+{"sent":["ab/","ab/node_modules/","ab/node_modules/é/","ab/node_modules/é/a b","b/","b/node_modules","node_modules/","node_modules/Dockerfile/"]}
+{"sent":["ab/","ab/dist/","ab/dist/.env"]}
+{"sent":[]}
+{"sent":["é/","é/.git/","é/.git/node_modules"]}
+{"sent":[".dockerignore/",".dockerignore/ab","a b/","a b/.git","ab","node_modules","y.log/","y.log/a.txt","y.log/c/","y.log/c/.git"]}
+{"sent":["x.log/","x.log/c/","x.log/c/keep","é/"]}
+{"sent":[".git/",".git/.env/",".git/.env/.env/",".git/.env/.env/Dockerfile","c/","c/x.log/","c/x.log/c/","c/x.log/c/ab","dist/","dist/é/","dist/é/x.log/","dist/é/x.log/a b"]}
+{"sent":[".git/",".git/y.log/",".git/y.log/node_modules/",".git/y.log/node_modules/Dockerfile","a.txt/","a.txt/keep/","a.txt/keep/.dockerignore","a/","a/node_modules/","a/node_modules/a","dist/","dist/y.log/","node_modules"]}
+{"sent":["c/","c/b/","c/b/a.txt"]}
+{"sent":[".git/",".git/b","a.txt/","a.txt/dist","y.log/","y.log/x.log/","y.log/x.log/src"]}
+{"sent":["node_modules/","node_modules/node_modules/","node_modules/node_modules/src/","node_modules/node_modules/src/keep"]}
+{"sent":["a.txt/","a.txt/.dockerignore","a.txt/é","a/","a/b.md/","a/b.md/a b","c/","c/y.log/","c/y.log/.env","src/","src/b","x.log/","x.log/x.log"]}
+{"sent":["Dockerfile/","Dockerfile/Dockerfile/","Dockerfile/Dockerfile/Dockerfile","a.txt/","keep/","keep/keep/","é"]}
+{"sent":["b.md/","b.md/node_modules/","b.md/node_modules/b","node_modules/","node_modules/Dockerfile"]}
+{"sent":["é/","é/x.log"]}
+{"sent":["Dockerfile/","Dockerfile/a b/","Dockerfile/a b/x.log"]}
+{"sent":["y.log/","y.log/node_modules"]}
+{"sent":[".env/",".env/src/",".env/src/x.log","a b/","a b/Dockerfile","b/","b/a/","b/a/é","c/","c/Dockerfile/","c/Dockerfile/x.log","dist/","dist/a b/","dist/a b/src/","dist/a b/src/src","src/","src/a.txt"]}
+{"sent":[".dockerignore/",".dockerignore/é/",".dockerignore/é/.env",".git/",".git/a b",".git/x.log/",".git/x.log/a b/",".git/x.log/a b/keep","Dockerfile/","Dockerfile/src/","Dockerfile/src/Dockerfile/","Dockerfile/src/Dockerfile/.dockerignore","ab/","ab/dist/","ab/dist/c/","b.md","node_modules/","node_modules/c/","node_modules/c/y.log/","node_modules/c/y.log/dist","é/","é/node_modules/","é/node_modules/b/","é/node_modules/b/.git"]}
+{"sent":[".env/","b.md/","b.md/x.log/","b.md/x.log/c/","b.md/x.log/c/.git/","b.md/é","node_modules/","node_modules/Dockerfile/","node_modules/Dockerfile/c","y.log/","y.log/a.txt/","y.log/a.txt/.git"]}
+{"sent":["node_modules/","node_modules/keep"]}
+{"sent":["b/","b/a/","b/a/.dockerignore/","b/a/.dockerignore/b.md"]}
+{"sent":[".dockerignore/",".dockerignore/src/",".dockerignore/src/é/",".dockerignore/src/é/ab","ab/","ab/dist/","ab/dist/a"]}
+{"sent":["ab/","ab/y.log/","ab/y.log/a.txt","c/","c/.git/","c/.git/é/","c/.git/é/b","dist/","dist/a/","dist/a/é/","dist/a/é/é","dist/b"]}
+{"sent":["a.txt/","a.txt/a.txt/","a.txt/a.txt/y.log/","a.txt/a.txt/y.log/.dockerignore","a/","a/src","b","c/","c/.dockerignore/","c/.dockerignore/b/","c/.dockerignore/b/.env","dist/","dist/a b/","dist/a b/dist/","dist/a b/dist/.dockerignore","node_modules","src/","src/a b/","src/a b/b/","src/a b/b/a b","x.log/","x.log/y.log/","x.log/y.log/ab/","x.log/y.log/ab/.git"]}
+{"sent":["ab/","ab/.env/","ab/.env/src","dist/","dist/.git","keep","x.log/","x.log/node_modules/","x.log/node_modules/a.txt"]}
+{"sent":[]}
+{"sent":[".git/",".git/ab/",".git/ab/b.md","a.txt/","a.txt/a.txt/","a.txt/a.txt/keep/","a.txt/a.txt/keep/.env","a.txt/ab","a/","a/.env/","a/.env/b/","a/.env/b/keep/","b","dist/","dist/é/","dist/é/.env"]}
+{"sent":[".git/",".git/x.log/",".git/x.log/node_modules","keep","x.log/","x.log/node_modules/","x.log/node_modules/b","é/","é/a b/","é/a b/Dockerfile/","é/a b/Dockerfile/.git"]}
+{"sent":[".env/",".env/a/",".env/a/.git/",".env/a/.git/.env","a.txt/","b.md/","b.md/Dockerfile/","b.md/Dockerfile/.git/","b.md/Dockerfile/.git/a.txt","b/","keep/","keep/ab/","keep/ab/b.md/","keep/ab/b.md/src","src","é/","é/node_modules"]}
+{"sent":[".env/",".env/b.md","a b/","a b/keep/","a b/keep/a/","a b/keep/a/Dockerfile","b.md/","b.md/.env","b.md/Dockerfile/","b.md/Dockerfile/keep","dist/","dist/.env","node_modules/","node_modules/a b/","node_modules/a b/b/","node_modules/a b/b/.env/","x.log","y.log/","y.log/a.txt/","y.log/a.txt/a/","y.log/a.txt/a/c"]}
+{"sent":["Dockerfile/","Dockerfile/.dockerignore/","Dockerfile/.dockerignore/dist","ab/","ab/b.md/","ab/b.md/b/","ab/b.md/b/a.txt","é/","é/.dockerignore/","é/.dockerignore/b.md/","é/.dockerignore/b.md/a"]}
+{"sent":[".env","Dockerfile","a b/","a b/src/","a b/src/a b","b.md","b/","b/.env/","b/.env/.git","b/b.md/","b/b.md/é","b/é/","b/é/x.log","keep","src/","src/keep/","src/keep/node_modules/","src/keep/node_modules/.env"]}
+{"sent":[".dockerignore/",".dockerignore/é","b.md/","b.md/ab","node_modules","src/","src/b.md/","src/b.md/ab/","src/b.md/ab/x.log","src/b/","src/b/x.log","y.log/","y.log/a.txt/","y.log/a.txt/c","é"]}
+{"sent":[".env/",".env/c/",".env/c/ab","b.md/","b.md/.dockerignore/","b.md/.dockerignore/src/","b.md/.dockerignore/src/é","c/","src","é/","é/.git/","é/.git/a"]}
+{"sent":[".env/",".env/Dockerfile/",".env/Dockerfile/dist/",".env/Dockerfile/dist/a b","a/","a/b.md/","a/b.md/.git","b.md/","b.md/.git/","b.md/.git/é","b.md/y.log/","b.md/y.log/b","c/","c/b.md/","c/b.md/b.md","keep","node_modules/","node_modules/é/"]}
+{"sent":[".env/",".env/a/",".env/a/dist","Dockerfile/","Dockerfile/b.md/","Dockerfile/b.md/dist","Dockerfile/keep/","Dockerfile/keep/node_modules/","Dockerfile/keep/node_modules/keep","b.md/","keep/","keep/node_modules/","keep/node_modules/node_modules"]}
+{"sent":[],"error":"invalid excludepatterns: [!.git !a/src ! ? keep]: illegal exclusion pattern: \"!\""}
+{"sent":["Dockerfile","a","a.txt","y.log/","y.log/y.log"]}
+{"sent":[".git/",".git/dist/",".git/dist/a.txt","ab/","ab/a/","ab/a/.git/","ab/a/.git/b.md","b.md/","b.md/Dockerfile/","b.md/Dockerfile/.env","dist","é/","é/b.md/","é/b.md/dist/","é/b.md/dist/Dockerfile"]}
+{"sent":[]}
+{"sent":[".env/",".env/.dockerignore/",".env/.dockerignore/c",".env/.env/",".env/.env/a/",".env/.env/a/node_modules",".git/",".git/node_modules","Dockerfile/","Dockerfile/.env/","Dockerfile/.env/ab/","Dockerfile/.env/ab/.dockerignore","a.txt","b/","b/.env/","b/.env/.dockerignore","keep"]}
+{"sent":[".env/",".env/src/",".env/src/b.md",".git/",".git/dist/",".git/dist/ab/",".git/dist/ab/src","Dockerfile/","Dockerfile/Dockerfile/","Dockerfile/Dockerfile/src/","Dockerfile/Dockerfile/src/b.md","a/","a/é","dist/","dist/Dockerfile","src/","src/x.log/","src/x.log/a.txt"]}
+{"sent":[".dockerignore/",".dockerignore/a/",".dockerignore/a/b/",".dockerignore/a/b/ab",".git/",".git/a/",".git/a/y.log/",".git/a/y.log/x.log","a","a b/","a b/node_modules/","a b/node_modules/.git","keep","src/","src/c/","src/c/a b/","src/c/a b/c"]}
+{"sent":[".env/",".env/keep",".git/",".git/é/",".git/é/é/",".git/é/é/b.md","a b/","a b/a/","a b/a/a/","a b/a/a/Dockerfile","ab/","ab/.git/","ab/.git/.env/","ab/.git/.env/.env","ab/a/","ab/a/a.txt/","ab/a/a.txt/src","dist/","dist/ab","node_modules/","node_modules/.dockerignore/","node_modules/.dockerignore/ab/","node_modules/.dockerignore/ab/é","x.log/","x.log/b.md","é/","é/y.log/","é/y.log/a b"]}
+{"sent":["a.txt/","a.txt/src/","a.txt/src/node_modules","ab/","ab/keep/","ab/keep/.dockerignore/","ab/keep/.dockerignore/.git","b/","b/Dockerfile/","b/Dockerfile/.env","b/b.md","y.log/","y.log/src/","y.log/src/y.log/"]}
+{"sent":[".dockerignore","ab/","ab/node_modules/","ab/node_modules/.env","c/","c/node_modules","keep","node_modules/","node_modules/x.log/","node_modules/x.log/é"]}
+{"sent":["a.txt/","a.txt/.git/","a.txt/.git/é","b.md/","b.md/x.log/","b.md/x.log/b.md/","b.md/x.log/b.md/.env"]}
+{"sent":[".env/",".env/a/",".env/a/.dockerignore/",".env/a/.dockerignore/.git"]}
+{"sent":[".dockerignore/",".dockerignore/Dockerfile/",".dockerignore/Dockerfile/b","a b/","a/","a/node_modules/","a/node_modules/a b/","a/node_modules/a b/keep","ab/","ab/b.md/","ab/b.md/dist/","ab/b.md/dist/.dockerignore","b/","b/dist/","b/dist/c","dist/","dist/x.log","keep/","keep/node_modules/","keep/node_modules/y.log","y.log/","y.log/Dockerfile/","y.log/Dockerfile/a/","y.log/Dockerfile/a/a b"]}
+{"sent":[".dockerignore/",".dockerignore/é","a b","ab/","ab/dist/","ab/dist/b.md/","ab/dist/b.md/b.md","node_modules/","node_modules/é"]}
+{"sent":["x.log/","x.log/ab/","x.log/ab/a.txt"]}
+{"sent":[".env/",".git/",".git/y.log/",".git/y.log/a","a/","a/.git/","a/.git/node_modules/","a/.git/node_modules/y.log","src/","src/a/","src/a/Dockerfile","x.log/","x.log/ab/","y.log/","y.log/.dockerignore"]}
+{"sent":["Dockerfile/","Dockerfile/a","Dockerfile/é","b.md","b/","b/.git/","b/.git/node_modules/","b/.git/node_modules/a b","c/","c/.git","c/y.log","dist","node_modules/","node_modules/node_modules/","node_modules/node_modules/y.log/","node_modules/node_modules/y.log/b/","node_modules/y.log/","node_modules/y.log/node_modules/","node_modules/y.log/node_modules/src"]}
+{"sent":[".dockerignore/",".dockerignore/a.txt/",".dockerignore/a.txt/.git/",".dockerignore/a.txt/.git/c/","a b/","a b/x.log/","a b/x.log/b/","a b/x.log/b/.dockerignore/","b.md/","b.md/keep/","b.md/keep/c/","b.md/keep/c/node_modules","c/","c/.env/","c/.env/a.txt","node_modules/","node_modules/node_modules"]}
+{"sent":[]}
+{"sent":[".env/",".env/x.log/",".env/x.log/node_modules/","Dockerfile/","Dockerfile/x.log","c/","c/a.txt/","c/a.txt/c/","c/a.txt/c/node_modules","dist/","dist/y.log/","dist/y.log/ab","keep","node_modules/","node_modules/node_modules","src/","src/a b","x.log/","x.log/a b/","x.log/a b/a.txt","y.log/","y.log/ab/","y.log/ab/Dockerfile/","y.log/ab/Dockerfile/c"]}
+{"sent":["ab/","ab/y.log/","ab/y.log/dist/","ab/y.log/dist/b"]}
+{"sent":["b/","b/a/","b/a/c"]}
+{"sent":["Dockerfile/","Dockerfile/.env","a b/","a b/c/","a b/c/keep","ab/","ab/.git","src/","src/.dockerignore/","src/.dockerignore/y.log","src/keep/","src/keep/Dockerfile/","src/keep/Dockerfile/.git","x.log"]}
+{"sent":[".dockerignore/",".dockerignore/keep/",".dockerignore/keep/.git/","node_modules/","node_modules/src","y.log/","é"]}
+{"sent":[".env/",".git/",".git/c",".git/x.log/",".git/x.log/b.md/",".git/x.log/b.md/a","Dockerfile","y.log/","y.log/Dockerfile/","y.log/Dockerfile/y.log/","y.log/Dockerfile/y.log/x.log","y.log/keep/","y.log/keep/y.log","é/","é/x.log"]}
+{"sent":[".env",".git/",".git/a.txt",".git/dist/",".git/dist/Dockerfile/",".git/dist/Dockerfile/b","a b","a/","a/.dockerignore/","a/.dockerignore/.git/","a/.dockerignore/.git/Dockerfile"]}
+{"sent":["node_modules/","node_modules/a b/","node_modules/a b/node_modules"]}
+{"sent":[".env/",".env/ab/",".env/ab/b.md/",".env/ab/b.md/é","a.txt","a/","a/Dockerfile/","a/Dockerfile/.git/","a/Dockerfile/.git/a.txt","b.md/","keep","node_modules/","node_modules/a/","node_modules/a/b/","src/","src/.dockerignore","src/.env/","src/.env/node_modules/","src/.env/node_modules/Dockerfile","x.log/","x.log/dist/","x.log/dist/.git/"]}
+{"sent":[".env/",".env/a",".env/b",".git/",".git/keep/",".git/keep/node_modules","b/","b/x.log/","b/x.log/ab/","b/x.log/ab/c","keep","node_modules/","node_modules/y.log","src","é/","é/Dockerfile/","é/Dockerfile/.env/","é/Dockerfile/.env/a","é/Dockerfile/.git/","é/Dockerfile/.git/Dockerfile"]}
+{"sent":[".git/",".git/.env/",".git/.env/a","Dockerfile/","Dockerfile/node_modules/","Dockerfile/node_modules/y.log","a/","a/Dockerfile/","a/Dockerfile/c","a/é/","a/é/node_modules/","a/é/node_modules/Dockerfile","ab/","ab/x.log/","ab/x.log/.dockerignore","keep","node_modules/","node_modules/c/","node_modules/c/dist","x.log/","x.log/ab/","x.log/ab/Dockerfile"]}
+{"sent":[]}
+{"sent":[]}
+{"sent":["a.txt","c/","dist/","dist/Dockerfile/","dist/Dockerfile/.dockerignore/","dist/Dockerfile/.dockerignore/ab"]}
+{"sent":[".env/",".env/.git/",".env/.git/a.txt/",".git","a b/","a b/é/","a b/é/a.txt","keep","x.log/","x.log/keep","x.log/é","y.log/","y.log/Dockerfile/","y.log/Dockerfile/y.log"]}
+{"sent":[".dockerignore/",".dockerignore/Dockerfile/",".dockerignore/Dockerfile/c","node_modules/","node_modules/a/","node_modules/a/a/","node_modules/a/a/node_modules/","y.log/","y.log/c/","y.log/c/Dockerfile/","y.log/c/Dockerfile/b.md"]}
+{"sent":[".env/","a/","a/y.log/","a/y.log/x.log/","a/y.log/x.log/.env","b/","b/b.md/","b/b.md/x.log/","b/b.md/x.log/x.log","dist/","dist/b/","dist/b/src","é/","é/y.log"]}
+{"sent":[]}
+{"sent":["a b/","a b/.git/","a b/.git/b","a b/y.log/","a b/y.log/dist","ab/","ab/y.log/","ab/y.log/node_modules/","ab/y.log/node_modules/a b","c/","c/.git/","c/.git/Dockerfile","keep/","keep/x.log/","keep/x.log/a b/","keep/x.log/a b/Dockerfile","src/","src/b.md/","src/b.md/a b"]}
+{"sent":[".env/",".env/keep/","a b/","a b/src/","a b/src/ab","keep/","keep/b","src/","src/y.log/","src/y.log/.dockerignore/","src/y.log/.dockerignore/b.md"]}
+{"sent":["dist/","dist/keep/","dist/keep/a.txt/","dist/keep/a.txt/dist","src/","src/keep/","src/keep/.git/","src/keep/.git/c","x.log/","x.log/b/","x.log/b/src","é"]}
+{"sent":[".dockerignore/",".dockerignore/a b",".dockerignore/a.txt",".git/",".git/keep","a b/","a b/keep/","a b/keep/src","a.txt","a/","a/src/","a/src/b.md/","a/src/b.md/.git","b/","b/a","c/","c/y.log","dist/","dist/.git","keep/","keep/a b/","keep/a b/keep"]}
+{"sent":[".dockerignore/",".dockerignore/b",".git/",".git/a.txt/",".git/a.txt/.git/",".git/a.txt/.git/a.txt","ab","c/","c/dist/","c/dist/y.log","keep/","keep/ab/","keep/ab/.dockerignore/","keep/ab/.dockerignore/src","x.log/","x.log/node_modules/","x.log/node_modules/.dockerignore"]}
+{"sent":["keep/","keep/dist/","keep/dist/Dockerfile/","keep/dist/Dockerfile/dist","src/","src/x.log/","src/x.log/.dockerignore/","src/x.log/.dockerignore/b.md"]}
+{"sent":["ab/","node_modules/","node_modules/b/"]}
+{"sent":[".git/",".git/keep/",".git/keep/b.md/",".git/keep/b.md/b.md","b/","b/b","é/","é/Dockerfile/","é/Dockerfile/b.md/","é/Dockerfile/b.md/b.md/"]}
+{"sent":["Dockerfile","ab","b/","b/.git/","b/.git/src/","b/.git/src/dist","c/","c/é/","c/é/c"]}
+{"sent":[".dockerignore/",".dockerignore/b.md/",".dockerignore/b.md/x.log/",".dockerignore/b.md/x.log/.git","ab/","ab/c/","ab/c/y.log/","ab/c/y.log/node_modules"]}
+{"sent":["b.md"]}
+{"sent":[".dockerignore/",".dockerignore/b/",".dockerignore/b/dist/",".dockerignore/b/dist/.env",".env","ab/","ab/.env/","ab/.env/a.txt","b/","b/b.md/","b/b.md/a","é"]}
+{"sent":["a.txt/","b.md/","b.md/é/","b.md/é/a/","b.md/é/a/src","src/","src/ab/","src/ab/y.log/","src/ab/y.log/é/","src/dist/","src/dist/src/","src/dist/src/src","y.log/","y.log/a/","y.log/a/ab/","y.log/a/ab/.dockerignore","é/","é/a"]}
+{"sent":[".env/",".env/y.log/",".env/y.log/.git/",".env/y.log/.git/a b","Dockerfile/","Dockerfile/keep/","Dockerfile/keep/.git/","a.txt/","a.txt/x.log/","a.txt/x.log/.dockerignore/","a.txt/x.log/.dockerignore/x.log","ab/","ab/x.log/","ab/x.log/src","c/","c/.git/","c/.git/x.log/","c/.git/x.log/a"]}
+{"sent":[".dockerignore/",".dockerignore/y.log/",".dockerignore/y.log/Dockerfile","Dockerfile","a","a b/","a b/b.md/","a b/b.md/é","b.md/","b.md/b/","b.md/b/y.log","b.md/y.log","c","src","x.log/","x.log/a/","x.log/a/é/","x.log/a/é/y.log"]}
+{"sent":[".dockerignore",".env","src"]}
+{"sent":["Dockerfile/","Dockerfile/é","a.txt/","a.txt/Dockerfile/","a.txt/Dockerfile/a.txt","a.txt/b.md/","a.txt/b.md/.dockerignore/","a.txt/b.md/.dockerignore/b","b/","b/y.log/","b/y.log/Dockerfile/","b/y.log/Dockerfile/a b/","c/","c/x.log/","c/x.log/a/","c/x.log/a/dist","dist/","dist/b.md/","dist/b.md/x.log/","dist/b.md/x.log/.git","x.log/","x.log/dist/","x.log/dist/a.txt/","x.log/dist/a.txt/.git"]}
+{"sent":[".dockerignore/",".dockerignore/x.log","b","dist/","dist/.dockerignore/","dist/.dockerignore/c/","dist/.dockerignore/c/keep","node_modules/","node_modules/c","node_modules/keep/","node_modules/keep/ab/","node_modules/keep/ab/src","x.log/","x.log/é/","x.log/é/y.log","y.log/","y.log/é/","y.log/é/keep"]}
+{"sent":[".env/",".env/a b/",".env/a b/a b/",".env/a b/a b/b","a b/","a b/a b/","a b/a b/ab","b.md","src"]}
+{"sent":["a.txt/","node_modules/","node_modules/dist","node_modules/src"]}
+{"sent":[".dockerignore/",".dockerignore/.git/",".dockerignore/.git/y.log",".git/","a b/","a b/y.log/","a b/y.log/.git/","a b/y.log/.git/a b","b/","b/node_modules/","b/node_modules/é","keep/","keep/.env/","keep/.env/.env","é/","é/dist"]}
+{"sent":[".env/",".env/ab",".git/",".git/y.log/",".git/y.log/a/",".git/y.log/a/a b","a.txt/","a.txt/a.txt/","a.txt/a.txt/Dockerfile/","a.txt/a.txt/Dockerfile/b","b.md/","b.md/src/","b.md/src/a.txt/","b.md/src/a.txt/node_modules","node_modules/","node_modules/x.log","src/","src/b/","src/b/.dockerignore"]}
+{"sent":[".dockerignore","a b","a/","a/keep","ab/","b.md/","b.md/a b","b/","b/a/","b/a/a.txt/","b/a/a.txt/dist"]}
+{"sent":[".dockerignore/",".dockerignore/.git",".git/",".git/src/",".git/src/é","node_modules/","node_modules/.env"]}
+{"sent":[".env/",".env/y.log/",".env/y.log/ab",".git/",".git/é","dist/","dist/a.txt/","dist/a.txt/keep/","dist/a.txt/keep/a","keep","x.log"]}
+{"sent":["Dockerfile/","Dockerfile/a b/","Dockerfile/a b/c/","Dockerfile/a b/c/keep","Dockerfile/src/","Dockerfile/src/a/","Dockerfile/src/a/a","a.txt/","a.txt/ab","a/","a/é/","a/é/.git","b.md/","b.md/b/","b.md/b/y.log","b/","b/c/","b/c/.dockerignore/","b/c/.dockerignore/y.log","node_modules/","node_modules/y.log","y.log/","y.log/Dockerfile/","y.log/Dockerfile/b.md/","y.log/Dockerfile/b.md/keep","é/","é/x.log"]}
+{"sent":["Dockerfile/","Dockerfile/node_modules/","Dockerfile/node_modules/y.log/","Dockerfile/node_modules/y.log/ab/","ab/","ab/b.md/","ab/b.md/b/","b.md/","b.md/x.log/","b.md/x.log/a.txt","b/","b/.dockerignore","dist","keep/","keep/node_modules/","keep/node_modules/é","x.log"]}
+{"sent":[]}
+{"sent":[".git/",".git/Dockerfile/","b.md/","b.md/c/","b.md/c/.dockerignore","y.log/","y.log/src/","y.log/src/node_modules"]}
+{"sent":["Dockerfile","a b/","a b/.dockerignore/","a b/.dockerignore/b.md/","a b/.dockerignore/b.md/dist","a.txt/","a.txt/keep","ab/","ab/y.log/","ab/y.log/.git","c","keep/","keep/a b/","keep/a b/y.log/","keep/a b/y.log/a"]}
+{"sent":[".env","Dockerfile/","Dockerfile/src/","Dockerfile/src/b.md","a b/","a b/src/","b.md/","b.md/b.md/","b.md/b.md/b/","b.md/b.md/b/ab","b/","b/src/","b/src/x.log/","b/src/x.log/a.txt","c/","c/node_modules","y.log","é/","é/.git/","é/.git/a/","é/.git/a/é"]}
+{"sent":[".dockerignore","Dockerfile/","Dockerfile/dist/","Dockerfile/dist/a","a.txt/","a.txt/a b/","a.txt/a b/keep/","ab","keep"]}
+{"sent":["Dockerfile/","Dockerfile/.git","a.txt","b.md/","b.md/a/","b.md/a/é/","b.md/a/é/node_modules","b/","b/b.md","dist/","dist/.dockerignore/","dist/.dockerignore/a b/","dist/.dockerignore/a b/Dockerfile","x.log/","x.log/c","y.log/","y.log/ab/","y.log/ab/y.log/","y.log/ab/y.log/a b"]}
+{"sent":["a b/","a b/a/","a b/a/src/","a b/a/src/b","a b/ab/","a b/ab/b/","a b/ab/b/dist","a.txt","ab/","ab/.git/","ab/.git/c/","ab/.git/c/src","node_modules/","node_modules/.git/","node_modules/.git/y.log","src/","src/node_modules/","src/node_modules/dist","src/é","é/","é/.env/","é/.env/ab"]}
+{"sent":[]}
+{"sent":["Dockerfile/","Dockerfile/.env/","Dockerfile/.env/c","b.md/","b.md/y.log/","b.md/y.log/src/","b.md/y.log/src/src","c/","c/b/","c/y.log/","c/y.log/.dockerignore/","c/y.log/.dockerignore/.env"]}
+{"sent":[".dockerignore/",".dockerignore/.dockerignore/",".dockerignore/.dockerignore/y.log","Dockerfile/","Dockerfile/c/","Dockerfile/c/src/","Dockerfile/c/src/a.txt","a/","a/a.txt","ab","b.md/","b.md/ab/","b.md/ab/ab/","b.md/ab/ab/é","x.log/","x.log/.env/","x.log/.env/Dockerfile/","x.log/.env/Dockerfile/é","y.log/","y.log/dist/","y.log/dist/a.txt/","y.log/dist/a.txt/keep"]}
+{"sent":["b/","b/b/"]}
+{"sent":[".env/",".env/src/",".env/src/c","a b/","a.txt/","a.txt/ab/","a.txt/ab/.env/","a.txt/ab/.env/a.txt","a.txt/x.log/","a.txt/x.log/a/","a.txt/x.log/a/keep","a.txt/é","b/","b/a b/","b/a b/.git","keep/","keep/a b/","keep/a b/node_modules/","node_modules/","node_modules/node_modules/","node_modules/node_modules/src","x.log"]}
+{"sent":[".dockerignore/",".dockerignore/node_modules/",".dockerignore/node_modules/ab/",".dockerignore/node_modules/ab/b",".env/",".env/Dockerfile/","a/","a/é","b/","b/.env/","b/.env/.dockerignore","dist/","dist/a b","keep/","keep/y.log","node_modules/","node_modules/.git/","node_modules/.git/a","x.log"]}
+{"sent":[".env/",".env/dist/",".env/dist/src/",".env/dist/src/node_modules","b.md/","b.md/Dockerfile","node_modules/","y.log/","y.log/keep/","y.log/keep/node_modules/","y.log/keep/node_modules/.env"]}
+{"sent":["b.md/","b.md/ab/","b.md/ab/y.log/","b.md/ab/y.log/x.log"]}
+{"sent":["b/","b/é/","b/é/a b","keep"]}
+{"sent":[".dockerignore/",".dockerignore/src","Dockerfile/","Dockerfile/Dockerfile/","Dockerfile/Dockerfile/a b","keep","src/","src/.git","y.log"]}
+{"sent":[".dockerignore/","ab/","ab/keep/","ab/keep/dist","x.log/","x.log/dist/","x.log/dist/Dockerfile"]}
+{"sent":["ab"]}
+{"sent":[".git","a.txt/","a.txt/x.log/","a.txt/x.log/c/","a.txt/x.log/c/c","c/","c/.env/","c/.env/.dockerignore","c/src/","c/src/Dockerfile/","c/src/Dockerfile/src/","x.log","y.log/","y.log/b.md"]}
+{"sent":["a.txt/","a.txt/c/","b.md/","b.md/.dockerignore/","b.md/.dockerignore/.git/","b.md/.dockerignore/.git/src/","b/","b/keep/","b/keep/a b/","b/keep/a b/a b","b/y.log/","c/","c/c/","c/c/.env","é/","é/b.md"]}
+{"sent":[".git/",".git/src","Dockerfile/","Dockerfile/.env/","Dockerfile/.env/c/","Dockerfile/.env/c/.dockerignore","c/","c/node_modules","dist/","dist/Dockerfile","dist/ab/","dist/ab/keep/","dist/ab/keep/y.log","node_modules/","node_modules/a.txt/","node_modules/a.txt/ab","é/","é/b/","é/b/é"]}
+{"sent":[".dockerignore","ab","b/","b/.env/","b/.env/dist","dist/","dist/keep/","dist/keep/b","keep/","keep/a/","keep/a/ab/","keep/a/ab/c"]}
+{"sent":[".env/",".env/b",".env/dist","a b","b.md","c","dist/","dist/node_modules/","dist/node_modules/y.log/","dist/node_modules/y.log/b.md","keep/","keep/dist/","keep/dist/ab/","keep/dist/ab/y.log"]}
+{"sent":[".env/",".env/dist/",".env/dist/b"]}
+{"sent":[".dockerignore/",".dockerignore/Dockerfile",".env",".git/",".git/y.log/",".git/y.log/ab","Dockerfile/","a.txt/","a.txt/ab/","a.txt/ab/a.txt/","a.txt/ab/a.txt/a b","ab/","ab/ab","b.md/","b.md/ab/","b.md/ab/é","c","src/","src/.dockerignore/","src/.dockerignore/a/","src/.dockerignore/a/é"]}
+{"sent":[".dockerignore/",".dockerignore/.git/",".dockerignore/.git/keep",".dockerignore/c/",".dockerignore/c/Dockerfile/",".dockerignore/c/Dockerfile/ab","a/","a/c/","a/c/src/","a/c/src/src","ab/","ab/a b","ab/keep/","ab/keep/é","node_modules"]}
+{"sent":[".env","Dockerfile/","Dockerfile/ab/","Dockerfile/ab/Dockerfile/","Dockerfile/ab/Dockerfile/é","a/","a/é/","a/é/y.log/","a/é/y.log/b.md","b.md","dist/","dist/.env/","dist/.env/c/","dist/.env/c/y.log","keep/","keep/.dockerignore/","keep/.dockerignore/keep/","keep/.dockerignore/keep/y.log","x.log"]}
+{"sent":[".env/",".env/.git/",".env/.git/a/",".env/.git/a/b",".git/",".git/node_modules","node_modules/","node_modules/é/","node_modules/é/y.log/","node_modules/é/y.log/a b"]}
+{"sent":[".dockerignore/",".dockerignore/x.log/",".dockerignore/x.log/ab/",".dockerignore/x.log/ab/a","keep/","keep/.dockerignore/","keep/.dockerignore/dist","y.log/","y.log/.git/","y.log/.git/ab/","y.log/.git/ab/a b"]}
+{"sent":[".dockerignore/",".dockerignore/keep/"]}
+{"sent":["Dockerfile/","Dockerfile/a/","Dockerfile/a/x.log/","Dockerfile/a/x.log/a","src/","src/src/","src/src/.git","y.log/","y.log/.dockerignore/","y.log/.dockerignore/a/","y.log/.dockerignore/a/Dockerfile"]}
+{"sent":[".dockerignore/",".dockerignore/ab/",".dockerignore/ab/b/",".git","a","c","src/","src/c/","src/c/y.log","y.log/","y.log/node_modules/","y.log/node_modules/b.md/","y.log/node_modules/b.md/.dockerignore"]}
+{"sent":[".dockerignore","c/","c/a/","c/a/a/","c/a/a/node_modules"]}
+{"sent":[".dockerignore/",".dockerignore/b/",".dockerignore/b/a/",".dockerignore/b/a/c",".dockerignore/y.log/",".dockerignore/y.log/Dockerfile/",".dockerignore/y.log/Dockerfile/x.log","a.txt/","a.txt/node_modules/","ab/","ab/.env/","ab/.env/keep","b/","b/b.md/","b/b.md/b","b/y.log/","b/y.log/.dockerignore/","b/y.log/.dockerignore/a.txt","dist/","dist/é/","dist/é/c/","dist/é/c/.env","src/","src/é/","src/é/node_modules/","src/é/node_modules/c","é/","é/src/","é/src/c/","é/src/c/ab"]}
+{"sent":["a b","b/","b/keep","src/","src/.git/","src/.git/keep","y.log"]}
+{"sent":["Dockerfile/","Dockerfile/é","keep"]}
+{"sent":[".git/",".git/keep","a b/","a b/a.txt/","a b/a.txt/src/","a b/a.txt/src/.env","a b/b.md","a b/node_modules/","a b/node_modules/keep/","a b/node_modules/keep/a b","a.txt/","a.txt/.git/","a.txt/.git/b/","a.txt/.git/b/a.txt","a.txt/a b/","a.txt/a b/a","c/","c/x.log/","c/x.log/a.txt/","c/x.log/a.txt/y.log","keep","y.log/","y.log/node_modules/","y.log/node_modules/.env/","y.log/node_modules/.env/a/"]}
+{"sent":["c","dist/","dist/a.txt/","keep/","node_modules/","node_modules/b.md/","node_modules/b.md/.git/","x.log/","x.log/y.log/","x.log/y.log/src/","x.log/y.log/src/.git/","y.log/","y.log/.env","y.log/dist"]}
+{"sent":[".env/",".env/node_modules/",".env/node_modules/.dockerignore/",".git/",".git/a/",".git/a/.env","a.txt/","a.txt/b/","a.txt/b/x.log/","a.txt/b/x.log/x.log","a.txt/dist","b.md/","b.md/.dockerignore","b/","b/.dockerignore/","b/.dockerignore/keep","c/","c/dist","dist/","dist/a"]}
+{"sent":["b.md"]}
+{"sent":[".dockerignore",".env/",".env/keep/",".env/keep/.git","a/","a/a.txt/","a/a.txt/x.log/","a/a.txt/x.log/Dockerfile","b.md/","b.md/b.md/","b.md/b.md/keep/","b.md/b.md/keep/.git"]}
+{"sent":["b/","b/.dockerignore/","b/.dockerignore/a b/","b/.dockerignore/a b/node_modules","src/","src/dist/","src/dist/node_modules","y.log/","y.log/node_modules/","y.log/node_modules/Dockerfile","é"]}
+{"sent":["a b/","a b/node_modules","c/","c/.git/","c/.git/a b","dist/","dist/y.log/","dist/y.log/c"]}
+{"sent":[],"error":"invalid excludepatterns: [! [ab]/**b/*b !..]: illegal exclusion pattern: \"!\""}
+{"sent":[".git","a b/","a b/.git","a b/y.log/","a b/y.log/c","ab/","ab/é","b.md/","b.md/b.md","node_modules","y.log/","y.log/b/","y.log/b/.env/","y.log/b/.env/.env"]}
+{"sent":[".env/",".env/Dockerfile/",".env/Dockerfile/.env","a b/","a b/x.log/","a b/x.log/keep/","a b/x.log/keep/.dockerignore","a.txt/","a.txt/c/","a.txt/c/é","y.log/","é/","é/a b/","é/a b/é/","é/a b/é/é","é/a/","é/a/keep/","é/a/keep/.env"]}
+{"sent":[".dockerignore/",".dockerignore/.dockerignore/",".dockerignore/.dockerignore/a b/",".dockerignore/.dockerignore/a b/.dockerignore/","a.txt/","a.txt/é","a/","a/b.md/","a/b.md/é/","a/b.md/é/a b","dist/","dist/.dockerignore/","dist/.dockerignore/b.md/","dist/.dockerignore/b.md/b/","keep/","keep/keep","keep/é/","keep/é/b.md/","keep/é/b.md/b.md"]}
+{"sent":[".env/",".env/y.log/",".env/y.log/dist",".git/",".git/Dockerfile/",".git/Dockerfile/.env","Dockerfile/","Dockerfile/.dockerignore/","Dockerfile/.dockerignore/y.log","b.md","c/","c/dist/","c/dist/.git/","c/dist/.git/b","node_modules/","node_modules/.env","src/","src/a b"]}
+{"sent":[".dockerignore/",".dockerignore/node_modules/",".dockerignore/node_modules/.git",".env/",".env/a b/",".env/a b/dist","ab/","ab/.git","c/","c/node_modules/","c/node_modules/dist","src"]}
+{"sent":[".env/",".env/ab/",".env/ab/.env/","a b/","a b/dist"]}
+{"sent":["Dockerfile/","Dockerfile/.dockerignore/","Dockerfile/.dockerignore/.git","Dockerfile/y.log/","Dockerfile/y.log/b","a","b/","b/b/","b/b/a.txt","node_modules/","node_modules/.env/","node_modules/.env/src/","node_modules/.env/src/.env","x.log/","x.log/.env/","x.log/.env/Dockerfile/","x.log/.env/Dockerfile/b.md","x.log/x.log/","x.log/x.log/a.txt/","x.log/x.log/a.txt/y.log","é/","é/Dockerfile/","é/ab/"]}
+{"sent":[".env/",".env/a b",".env/b/",".env/b/dist",".git/",".git/keep","ab/","ab/src/","ab/src/.git/","ab/src/.git/ab","b/","b/node_modules/","b/node_modules/.dockerignore","node_modules/","node_modules/a","src/","src/node_modules/","src/node_modules/a b/","src/node_modules/a b/ab"]}
+{"sent":["a/","a/é","dist/","dist/.dockerignore/","dist/.dockerignore/.env/","dist/.dockerignore/.env/ab","node_modules","src/","src/Dockerfile"]}
+{"sent":[".dockerignore/",".dockerignore/dist/",".dockerignore/dist/x.log",".env/",".env/a b","a b"]}
+{"sent":[],"error":"invalid excludepatterns: [!/ b/dist .git/a ** x.log/dist/.git *b/keep]: illegal exclusion pattern: \"!\""}
+{"sent":["keep/","keep/b.md","node_modules/","node_modules/.git/","node_modules/.git/src/","node_modules/.git/src/.dockerignore","src/","src/ab"]}
+{"sent":["a b/","a b/a"]}
+{"sent":[]}
+{"sent":[".dockerignore/",".dockerignore/keep/",".dockerignore/keep/.env/",".dockerignore/keep/.env/src/",".dockerignore/y.log/",".dockerignore/y.log/c","b.md/","b.md/ab/","b.md/ab/node_modules","b/","b/dist/","b/dist/.git/","b/dist/.git/ab/","b/keep/","b/keep/src","dist/","dist/.dockerignore/","dist/.dockerignore/y.log","keep/","keep/.git","node_modules/","node_modules/.env","node_modules/dist/","node_modules/dist/node_modules"]}
+{"sent":[]}
+{"sent":[".git/",".git/ab","c/","c/a.txt","keep/","keep/src/","keep/src/é/","keep/src/é/dist","y.log/","y.log/é"]}
+{"sent":[".dockerignore",".git/",".git/y.log","a.txt/","a.txt/x.log","b.md/","b.md/a b","src/","src/dist/","src/dist/dist/","src/dist/dist/b.md","y.log/","y.log/.dockerignore/","y.log/.dockerignore/b.md"]}
+{"sent":["a b/","a.txt","b.md/","b.md/a b/","b.md/a b/y.log/","b.md/a b/y.log/Dockerfile","node_modules/","node_modules/node_modules","y.log/","y.log/.dockerignore/","y.log/.dockerignore/src"]}
+{"sent":[".dockerignore",".env/",".env/y.log/",".env/y.log/src",".git/",".git/é/",".git/é/.dockerignore","Dockerfile/","Dockerfile/y.log/","Dockerfile/y.log/.git","a.txt/","a.txt/x.log/","a.txt/x.log/b","b.md/","b.md/ab","src/","src/a/","src/a/ab/","src/b/","src/b/a b/","src/b/a b/a b","é/","é/.dockerignore/","é/.dockerignore/y.log/","é/.dockerignore/y.log/dist"]}
+{"sent":[".dockerignore/",".dockerignore/dist/",".dockerignore/dist/x.log/",".dockerignore/dist/x.log/x.log",".git/",".git/y.log/","ab/","ab/é","b.md/","keep/","keep/y.log/","keep/y.log/x.log/","keep/y.log/x.log/x.log","y.log/","y.log/a/","y.log/a/ab"]}
+{"sent":[".dockerignore/",".dockerignore/.dockerignore/",".dockerignore/.dockerignore/é",".env/",".git/",".git/y.log","a b/","a b/y.log/","a b/y.log/a.txt","c/","c/x.log","node_modules/","node_modules/c","src/","src/src/","src/src/.dockerignore","é/","é/.dockerignore/","é/.dockerignore/b/","é/.dockerignore/b/b.md"]}
+{"sent":[".git","Dockerfile","a b","a.txt/","a.txt/y.log/","a.txt/y.log/.env","a/","a/ab","b.md/","b.md/b","b/","b/x.log","x.log/","x.log/Dockerfile/","x.log/Dockerfile/src","x.log/é"]}
+{"sent":["Dockerfile/","Dockerfile/x.log","a b/","a b/src/","a b/src/node_modules/","a b/src/node_modules/src","a.txt","c/","c/é","src/","src/a b","src/b/","src/b/b/","src/b/b/ab","y.log/","y.log/b","é/","é/a/","é/a/src/","é/a/src/é"]}
+{"sent":["Dockerfile/","dist/","dist/Dockerfile/","dist/Dockerfile/b.md","x.log"]}
+{"sent":[".dockerignore/",".dockerignore/Dockerfile/",".dockerignore/Dockerfile/.dockerignore",".env/",".env/a.txt","a b/","a b/é","b.md/","c/","c/.env","dist","node_modules","x.log/","x.log/b/","x.log/b/ab/","x.log/b/ab/src/"]}
+{"sent":["a b/","a b/keep/","a b/keep/c/","a b/keep/c/.dockerignore","a.txt/","a.txt/b.md/","a.txt/b.md/a b/","a.txt/b.md/a b/b.md","keep/","keep/é","node_modules/","node_modules/a.txt/","node_modules/a.txt/b.md/"]}
+{"sent":[],"error":"invalid excludepatterns: [!**b ! .git/dist/*.log !?/**/[ab] **b/.git/[^a]]: illegal exclusion pattern: \"!\""}
+{"sent":[]}
+{"sent":[".dockerignore/",".dockerignore/node_modules",".env/",".env/y.log","Dockerfile/","Dockerfile/b/","Dockerfile/b/Dockerfile","dist/","dist/Dockerfile/","dist/Dockerfile/x.log/","dist/Dockerfile/x.log/b.md","keep/","keep/a.txt/","keep/a.txt/b","src/","src/y.log/","src/y.log/é/"]}
+{"sent":["y.log"]}
+{"sent":[".env","a.txt","a/","a/.env/","a/.env/src","b","b.md/","b.md/b.md","keep/","keep/node_modules/","keep/node_modules/a/","keep/node_modules/a/é","keep/y.log/","keep/y.log/b.md","node_modules/","node_modules/.env/","node_modules/.env/y.log/","node_modules/.env/y.log/Dockerfile","src/","src/.dockerignore/","src/.dockerignore/keep"]}
+{"sent":["Dockerfile","b.md/","b.md/b/","b.md/b/.git/","b.md/b/.git/keep","dist/","dist/x.log/","dist/x.log/keep"]}
+{"sent":[".dockerignore","x.log/","x.log/Dockerfile/","x.log/Dockerfile/x.log","x.log/dist/","x.log/dist/Dockerfile/","x.log/dist/Dockerfile/ab","x.log/src"]}
+{"sent":[".git/",".git/src/",".git/src/keep","ab/","ab/a/","ab/a/a.txt/","ab/a/a.txt/b.md","keep","node_modules/","node_modules/.dockerignore","src/","src/b.md","é/","é/.git/","é/.git/a","é/c","é/node_modules/","é/node_modules/keep/"]}
+{"sent":[".git/",".git/c/",".git/c/dist","a b/","a b/x.log/","a b/x.log/node_modules/","a b/x.log/node_modules/x.log/","a.txt","b.md","b/","b/a.txt/","b/a.txt/a/","b/a.txt/a/keep","b/keep","keep/","keep/a.txt","src"]}
+{"sent":[".env","Dockerfile","c/","c/.dockerignore/","c/.dockerignore/.git/","c/.dockerignore/.git/node_modules","dist/","dist/x.log","x.log"]}
+{"sent":[]}
+{"sent":[]}
+{"sent":["a b/","a b/y.log/","dist/","dist/c","keep/","keep/c/","keep/c/y.log/","keep/c/y.log/y.log","node_modules/","node_modules/.dockerignore/","node_modules/.dockerignore/dist"]}
+{"sent":["a b/","a b/ab/","a b/ab/.env","b.md/","b.md/a.txt/","b.md/a.txt/b.md/","b.md/a.txt/b.md/a b/","dist","y.log/","y.log/Dockerfile/","y.log/Dockerfile/c/","y.log/Dockerfile/c/b.md"]}
+{"sent":[".env/",".env/.env/",".env/.env/dist/",".env/.env/dist/a.txt","dist/","dist/a b/","dist/a b/node_modules/","dist/a b/node_modules/y.log","x.log/","x.log/.env","y.log/","y.log/src","é"]}
+{"sent":["a b","b.md/","b.md/node_modules","node_modules/","node_modules/node_modules/","node_modules/node_modules/b.md","src/","src/b.md","x.log/","x.log/keep/","x.log/keep/.git/","x.log/keep/.git/.git","y.log"]}
+{"sent":[".git/",".git/.dockerignore/",".git/.dockerignore/keep","dist","keep/","keep/a.txt/","keep/a.txt/a/","keep/a.txt/a/a b","keep/keep/","keep/keep/é","keep/é/","keep/é/.dockerignore/","keep/é/.dockerignore/c","y.log/","y.log/.dockerignore/","y.log/.dockerignore/dist/","y.log/.dockerignore/dist/src"]}
+{"sent":["a b/","a b/node_modules","a/","a/.env","b.md/","b.md/é/","b.md/é/dist/","b.md/é/dist/b.md","keep/"]}
+{"sent":["a.txt/","a.txt/c","c"]}
+{"sent":["src/","src/ab/","src/ab/keep/","src/ab/keep/.git"]}
+{"sent":["y.log/"]}
+{"sent":["Dockerfile/","Dockerfile/Dockerfile/","Dockerfile/Dockerfile/a","a","a b/","a b/c/","a b/c/a","é/","é/a/","é/a/.env"]}
+{"sent":[".dockerignore/",".dockerignore/é","Dockerfile","c/","c/Dockerfile/","c/Dockerfile/b/","c/Dockerfile/b/y.log","keep/","keep/src/","x.log/","x.log/dist"]}
+{"sent":["dist","keep/","keep/Dockerfile/","keep/Dockerfile/.dockerignore","keep/y.log","node_modules/","node_modules/a.txt/","node_modules/a.txt/dist"]}
+{"sent":[".env/",".env/x.log","a b","ab/","ab/a.txt","dist/","dist/dist/","dist/dist/a","node_modules/","node_modules/Dockerfile/","node_modules/Dockerfile/y.log/","node_modules/Dockerfile/y.log/.env"]}
+{"sent":["c/","c/é/","c/é/dist/","c/é/dist/dist","dist","src/","src/ab/","src/ab/é"]}
+{"sent":[".dockerignore/",".dockerignore/node_modules","a b/","a b/a/","dist/","dist/y.log","src/","src/.git/","src/.git/node_modules/","src/.git/node_modules/b.md","x.log/","x.log/.dockerignore","x.log/node_modules/","x.log/node_modules/b","x.log/é/","x.log/é/b/","x.log/é/b/a b"]}
+{"sent":[".dockerignore/",".dockerignore/a.txt/",".dockerignore/a.txt/é/",".dockerignore/a.txt/é/keep",".env","a.txt/","a.txt/x.log","x.log/","x.log/.git/","x.log/.git/.dockerignore","é/","é/.env/","é/.env/src/","é/.env/src/x.log"]}
+{"sent":["a b/","a b/a/","a b/a/ab/","a b/a/ab/src","a.txt","c/","c/y.log/","c/y.log/.env/","c/y.log/.env/b.md","dist","x.log/","x.log/c/","x.log/c/b/","x.log/c/b/b.md","y.log"]}
+{"sent":["y.log","é/","é/node_modules/","é/node_modules/y.log"]}
+{"sent":[".env/",".env/x.log",".git/",".git/x.log/",".git/x.log/src/",".git/x.log/src/b.md","a b/","a b/a.txt","a.txt/","a.txt/.env","a.txt/c/","a.txt/c/a.txt","b/","b/dist/","b/dist/src/","b/dist/src/keep","keep/","keep/dist/","keep/dist/keep/","keep/dist/keep/keep","src/","src/.dockerignore/","y.log","é"]}
+{"sent":["a.txt"]}
+{"sent":[".dockerignore/",".git/",".git/y.log","Dockerfile/","Dockerfile/b/","Dockerfile/b/dist","keep/","src/","src/y.log/","src/y.log/keep/","src/y.log/keep/a.txt","x.log/","x.log/.env","y.log/","y.log/x.log/","y.log/x.log/dist/","y.log/x.log/dist/y.log","é/"]}
+{"sent":[".dockerignore/",".dockerignore/node_modules",".dockerignore/src","dist/","dist/.dockerignore/","dist/.dockerignore/.env","node_modules/"]}
+{"sent":[".env/",".env/.git/",".env/.git/b.md"]}
+{"sent":[".dockerignore/",".dockerignore/ab/",".dockerignore/ab/.env",".dockerignore/c","x.log/","x.log/.dockerignore"]}
+{"sent":[".git/",".git/a b/",".git/a b/c",".git/x.log/",".git/x.log/dist/","a/","a/node_modules/","b.md/","b.md/.env/","b.md/.env/b.md","b/","b/a/","b/a/y.log/","b/a/y.log/dist","dist/","dist/é/","dist/é/dist/","dist/é/dist/é"]}
+{"sent":[".dockerignore/",".dockerignore/src/",".dockerignore/src/src/",".dockerignore/src/src/b",".git/",".git/ab/",".git/ab/é","Dockerfile/","Dockerfile/Dockerfile/","Dockerfile/Dockerfile/.env","b/","b/Dockerfile/","b/node_modules","keep/","keep/a.txt/","keep/a.txt/a b/","keep/a.txt/a b/b.md","keep/c","node_modules/","node_modules/node_modules/","node_modules/node_modules/src","x.log/","x.log/a/","x.log/a/ab"]}
+{"sent":[".env/",".env/a",".env/b.md/",".env/b.md/a/",".env/b.md/a/.git","ab/","ab/Dockerfile/","ab/Dockerfile/b/","ab/Dockerfile/b/a b","dist/","dist/.env/","dist/.env/.env","node_modules/","node_modules/a","x.log/","x.log/node_modules/","x.log/node_modules/dist"]}
+{"sent":[".env/",".env/dist",".git","a.txt/","a/"]}
+{"sent":[".env","ab","dist/","dist/.git/","dist/.git/a b/","dist/.git/a b/c","dist/Dockerfile/","dist/Dockerfile/a b/","dist/Dockerfile/a b/dist","keep/","keep/b.md/","keep/b.md/src/","keep/b.md/src/é","node_modules/","node_modules/é/","node_modules/é/a b","é/","é/é/","é/é/a b"]}
+{"sent":[".env/",".env/a b/",".env/a b/dist/",".env/a b/dist/c","keep","node_modules/","node_modules/b.md/","node_modules/b.md/é/","node_modules/b.md/é/dist","node_modules/c/","node_modules/c/b/","node_modules/c/b/keep","x.log/","x.log/keep","é"]}
+{"sent":[".dockerignore/",".dockerignore/b/","Dockerfile/","Dockerfile/b.md","a b/","a b/a.txt/","a b/a.txt/a b","ab/","ab/a/","ab/a/src/","ab/a/src/b.md","b/","b/Dockerfile/","b/Dockerfile/src/","b/Dockerfile/src/é","keep","src/","src/src/","src/src/a b/","src/src/a b/c","y.log/","y.log/.env/","y.log/.env/Dockerfile"]}
+{"sent":[".env","Dockerfile/","Dockerfile/.git/","Dockerfile/.git/y.log","a b/","a b/b","a/","a/é/","a/é/dist","ab/","ab/Dockerfile","b/","b/ab/","b/ab/Dockerfile","b/b.md/","b/b.md/.dockerignore/","b/b.md/.dockerignore/keep","dist/","dist/.dockerignore"]}
+{"sent":[],"error":"invalid excludepatterns: [! **b keep \\*]: illegal exclusion pattern: \"!\""}
+{"sent":[".git/",".git/.git/",".git/.git/c",".git/dist",".git/keep/",".git/keep/Dockerfile","a.txt","keep/","keep/ab","src/","src/a/","src/a/ab"]}
+{"sent":[],"error":"invalid excludepatterns: [.git !/ !keep/b]: illegal exclusion pattern: \"!\""}
+{"sent":[".git/",".git/a.txt/",".git/a.txt/dist/","Dockerfile/","Dockerfile/y.log/","Dockerfile/y.log/keep/","Dockerfile/y.log/keep/src","y.log/","y.log/a.txt/","y.log/a.txt/a","é/","é/c/","é/c/a b/","é/c/a b/c"]}
+{"sent":["a.txt/","a.txt/src/","a.txt/src/ab","a/","a/c/","a/c/é"]}
+{"sent":[]}
+{"sent":["b.md/","b.md/src/","b.md/src/.env/","b.md/src/.env/keep","dist/","dist/é","y.log/","y.log/.dockerignore/","y.log/.dockerignore/c","y.log/x.log"]}
+{"sent":["c/","c/.dockerignore","dist/","dist/b/","dist/b/a/"]}
+{"sent":[".env",".git/",".git/dist/",".git/dist/.dockerignore/",".git/dist/.dockerignore/.env","Dockerfile/","Dockerfile/ab","a/","a/ab/","a/ab/node_modules/","c/","c/ab/","c/ab/.env","c/node_modules","keep/","keep/.env/","keep/.env/y.log/","keep/.env/y.log/.dockerignore","src"]}
+{"sent":["c/","c/b"]}
+{"sent":[".dockerignore/",".dockerignore/.git/",".dockerignore/.git/ab","keep/","keep/node_modules/","keep/node_modules/.git","x.log","y.log/","y.log/c/","y.log/c/keep/","y.log/c/keep/Dockerfile"]}
+{"sent":["y.log/","y.log/.dockerignore/","y.log/.dockerignore/.git"]}
+{"sent":[".git/",".git/keep/",".git/keep/a b","a.txt/","a.txt/c/","a.txt/c/.git/","a.txt/c/.git/node_modules","b.md/","b.md/.env/","b.md/.env/a b/","é/","é/dist","é/keep/","é/keep/.git"]}
+{"sent":[".git","Dockerfile/","Dockerfile/a.txt/","Dockerfile/a.txt/Dockerfile","Dockerfile/é","a.txt","ab/","ab/é/","ab/é/.env","b/","b/.git","y.log/","y.log/b.md/","y.log/b.md/node_modules"]}
+{"sent":[".dockerignore","a/","a/a.txt/","a/a.txt/a","a/y.log/","a/y.log/b.md/","a/y.log/b.md/é","b","b.md/","b.md/.env","b.md/node_modules/","b.md/node_modules/a.txt/","b.md/node_modules/a.txt/.env","keep/","keep/.env","keep/.git/","keep/.git/x.log/","keep/.git/x.log/y.log","é/","é/src/","é/src/a.txt"]}
+{"sent":["dist/","dist/a.txt/","dist/a.txt/x.log/","dist/a.txt/x.log/a b"]}
+{"sent":[".env/",".env/node_modules/",".env/node_modules/src/",".env/node_modules/src/ab",".git","Dockerfile/","Dockerfile/a.txt","a/","a/.git/","a/.git/.env","dist/","dist/node_modules","keep/","src/","src/Dockerfile","x.log/","x.log/a/","x.log/a/.git/","x.log/a/.git/ab","y.log"]}
+{"sent":[],"error":"invalid excludepatterns: [!]: illegal exclusion pattern: \"!\""}
+{"sent":["dist/","dist/keep/","dist/keep/Dockerfile","dist/src"]}
+{"sent":[".env/",".env/é/","a.txt/","a.txt/c/","a.txt/c/node_modules","keep/","keep/a/"]}
+{"sent":[".dockerignore/",".dockerignore/Dockerfile/",".env/","a b/","a b/x.log/","a b/x.log/c","ab","b.md/","b.md/node_modules/","b.md/node_modules/.env/","b.md/node_modules/.env/b","b/","b/keep/","dist/","dist/src/","dist/src/b","x.log"]}
+{"sent":["node_modules"]}
+{"sent":["a b/","a b/a/","a b/a/b","src/","src/dist","x.log"]}
+{"sent":[".env/",".env/Dockerfile/",".env/Dockerfile/x.log/",".env/Dockerfile/x.log/a b","a b","a.txt","b.md/","b.md/.dockerignore","dist/","dist/x.log/","dist/x.log/node_modules/","dist/x.log/node_modules/y.log","keep/","keep/a b"]}
+{"sent":[".env/",".env/dist/",".env/dist/b.md/",".env/dist/b.md/c","Dockerfile/","Dockerfile/y.log","keep","y.log/","y.log/a b/","y.log/a b/dist"]}
+{"sent":[]}
+{"sent":[".git/",".git/c","Dockerfile/","Dockerfile/y.log/","Dockerfile/y.log/a.txt","a.txt/","a.txt/y.log/","a.txt/y.log/x.log/","a.txt/y.log/x.log/é","dist/","dist/src/","dist/src/dist/","dist/src/dist/a b","node_modules/","node_modules/dist/","node_modules/dist/y.log/","node_modules/dist/y.log/a.txt"]}
+{"sent":[".env/",".env/keep",".git/",".git/.git/",".git/.git/keep","a b/","a b/b.md","b","c/","c/é","node_modules/","node_modules/c","x.log","y.log/","y.log/.dockerignore/","y.log/.dockerignore/keep/","y.log/.dockerignore/keep/.env","y.log/a.txt"]}
+{"sent":[".dockerignore/",".dockerignore/a b/",".dockerignore/a b/x.log",".git","a.txt","b.md/","b.md/a b/","b.md/a b/é","c/","c/dist","keep/"]}
+{"sent":["b/","b/.dockerignore","x.log/","x.log/Dockerfile/"]}
+{"sent":[".dockerignore/",".dockerignore/c","ab/","ab/.env/","ab/.env/c/","ab/.env/c/dist/","b.md/","b.md/keep/","b.md/keep/.git","c","src","x.log"]}
+{"sent":[".env/",".env/src/",".env/src/keep/","a b"]}
+{"sent":[".env","keep/","keep/node_modules","src/","src/src/","src/src/y.log/","src/src/y.log/b.md"]}
+{"sent":[".dockerignore/",".dockerignore/.dockerignore/",".dockerignore/.dockerignore/b.md/",".dockerignore/.dockerignore/b.md/b.md","Dockerfile/","Dockerfile/Dockerfile/","Dockerfile/Dockerfile/node_modules/","Dockerfile/Dockerfile/node_modules/a.txt","Dockerfile/a/","Dockerfile/a/b.md/","Dockerfile/a/b.md/é","a.txt/","a.txt/y.log/","a.txt/y.log/b.md","b/","b/a b/","b/a b/.env/","b/a b/.env/keep"]}
+{"sent":[".env/",".env/keep","Dockerfile/","Dockerfile/b/","Dockerfile/b/keep","a.txt","b.md/","b.md/a/","b.md/a/keep/","b.md/a/keep/x.log","y.log/","y.log/c/","y.log/c/keep/","y.log/c/keep/a.txt","y.log/y.log/","y.log/y.log/b.md/","y.log/y.log/b.md/dist"]}
+{"sent":["Dockerfile/","Dockerfile/é","a b","a/","a/a.txt/","a/a.txt/é/","a/a.txt/é/a","ab/","keep/","keep/keep","node_modules/","node_modules/src/","node_modules/src/.git/","node_modules/src/.git/ab","é/","é/node_modules/","é/node_modules/node_modules/","é/node_modules/node_modules/c","é/é/","é/é/dist/","é/é/dist/é"]}
+{"sent":[".dockerignore/",".dockerignore/src/",".dockerignore/src/src/",".dockerignore/src/src/.env/"]}
+{"sent":["é"]}
+{"sent":[".env",".git/",".git/dist/",".git/dist/Dockerfile/",".git/dist/Dockerfile/keep/","Dockerfile/","Dockerfile/a.txt","b.md/","b.md/Dockerfile/","b.md/Dockerfile/Dockerfile","b/","b/y.log/","c/","c/.git","keep","x.log/","x.log/c/","x.log/c/b/","x.log/c/b/.env"]}
+{"sent":["b.md","dist","src/","src/keep/","src/keep/y.log/","src/keep/y.log/y.log/"]}
+{"sent":["Dockerfile/","Dockerfile/y.log","ab/","ab/x.log/","ab/x.log/é/","ab/x.log/é/node_modules/","x.log/","x.log/a/","x.log/a/.git/","x.log/a/.git/src"]}
+{"sent":["a.txt/","a.txt/Dockerfile/","a.txt/Dockerfile/a b/","a.txt/Dockerfile/a b/.dockerignore"]}
+{"sent":[]}
+{"sent":[".dockerignore/",".dockerignore/b.md/",".dockerignore/b.md/a b",".dockerignore/keep/",".dockerignore/keep/a b/",".dockerignore/keep/a b/ab","Dockerfile/","Dockerfile/b","b.md/","b.md/.env","node_modules/","node_modules/node_modules"]}
+{"sent":[".dockerignore/",".dockerignore/keep/",".dockerignore/keep/y.log",".git/",".git/a b","Dockerfile/","Dockerfile/dist","a.txt/","ab/","b/","b/Dockerfile","c/","c/b.md"]}
+{"sent":[]}
+{"sent":[".dockerignore","Dockerfile/","Dockerfile/.git/","Dockerfile/.git/dist","ab/","ab/.dockerignore/","ab/.dockerignore/y.log/","ab/.dockerignore/y.log/keep","node_modules/","node_modules/é/","node_modules/é/c","src/","src/.git/","src/.git/Dockerfile","src/x.log/","src/x.log/ab","y.log/","y.log/ab"]}
+{"sent":["a b/","a b/a b/","a b/a b/dist","ab/","ab/a b/","ab/a b/src/","ab/c/","ab/c/y.log","keep/","keep/.git","y.log/","y.log/.env/","y.log/.env/.dockerignore/","y.log/.env/.dockerignore/a.txt","y.log/a b","y.log/x.log"]}
+{"sent":[".git/",".git/dist/",".git/dist/b/",".git/dist/b/b","a.txt/","a.txt/src","ab/","ab/a/","ab/a/b.md","c/","c/y.log/","c/y.log/a.txt/","c/y.log/a.txt/a/","x.log","é/","é/é/","é/é/x.log/","é/é/x.log/c"]}
+{"sent":["ab/","ab/.dockerignore/","ab/.dockerignore/c/","ab/.dockerignore/c/Dockerfile","c/","c/keep/","c/keep/é/","c/keep/é/y.log"]}
+{"sent":[".env","a","a b/","a b/é/","a b/é/dist","ab/","ab/.git/","ab/.git/b/","ab/.git/b/Dockerfile","ab/a","ab/dist","ab/node_modules/","ab/node_modules/ab","ab/src/","ab/src/.env","node_modules/","node_modules/b.md/","node_modules/b.md/b.md"]}
+{"sent":["ab/","ab/.env/","ab/.env/a b","é/","é/a.txt"]}
+{"sent":[".dockerignore","ab/","ab/.dockerignore","b.md/","b.md/dist","y.log/","y.log/src","é/","é/.env/","é/.env/.git/","é/.env/.git/a b"]}
+{"sent":[".git/",".git/ab/",".git/ab/Dockerfile","Dockerfile/","Dockerfile/.dockerignore/","Dockerfile/.dockerignore/dist/","Dockerfile/.dockerignore/dist/y.log","b/","b/keep/","b/keep/b/","b/keep/b/.env","node_modules","é/","é/dist/","é/dist/.env/","é/dist/.env/x.log"]}
+{"sent":[]}
+{"sent":["Dockerfile/","Dockerfile/dist/","Dockerfile/dist/a b/","Dockerfile/dist/a b/.env","Dockerfile/x.log/","Dockerfile/x.log/src","c/","c/a b/","c/a b/b/","c/a b/b/y.log","node_modules/","x.log/","x.log/b.md/","x.log/b.md/.git/","x.log/b.md/.git/.git","y.log/","y.log/Dockerfile/","y.log/Dockerfile/Dockerfile/","y.log/Dockerfile/Dockerfile/dist","y.log/keep/"]}
+{"sent":["a.txt/","a.txt/.env","a.txt/a.txt/","a.txt/a.txt/ab/","a.txt/a.txt/ab/a b/","b/","b/keep/","b/keep/b/","b/keep/b/keep","c/","c/a b/","c/a b/y.log/","c/a b/y.log/a b","node_modules/","node_modules/.env/","node_modules/.env/a","y.log/","y.log/a b/","y.log/a b/keep/","y.log/a b/keep/b.md/","y.log/b"]}
+{"sent":["a b/","a b/dist/","a b/dist/dist/","a b/dist/dist/node_modules","ab","b/","b/a.txt/","b/a.txt/dist","node_modules","x.log/","x.log/é"]}
+{"sent":[".dockerignore/",".dockerignore/dist",".dockerignore/keep",".git","Dockerfile/","Dockerfile/.dockerignore/","Dockerfile/.dockerignore/a b","b.md/","b.md/a/","b.md/a/Dockerfile/","b.md/a/Dockerfile/dist","dist","keep","node_modules/","node_modules/dist/"]}
+{"sent":[".env/",".env/a.txt/",".env/a.txt/src/",".env/a.txt/src/b","a b/","a b/x.log","a/","a/.dockerignore","b/","b/Dockerfile","b/ab","c/","node_modules/","node_modules/keep/","node_modules/keep/keep","node_modules/é/","node_modules/é/b.md/","node_modules/é/b.md/y.log","x.log/","x.log/b.md/","x.log/b.md/a.txt/","x.log/b.md/a.txt/dist","y.log/","y.log/keep/","y.log/keep/y.log"]}
+{"sent":[".dockerignore/",".dockerignore/dist/",".dockerignore/dist/dist/","a.txt/","a.txt/é","a/","a/é/","a/é/.env","b.md/","b.md/b/","b.md/b/b/","b.md/b/b/Dockerfile","b.md/x.log","b/","b/y.log","keep/","keep/keep/","keep/keep/x.log"]}
+{"sent":[".env/",".env/node_modules/",".git/",".git/b/",".git/b/é/",".git/b/é/c","keep/","keep/src/","keep/src/x.log","node_modules/","node_modules/ab/","node_modules/ab/.env/","node_modules/ab/.env/.dockerignore","é/","é/x.log/","é/x.log/x.log/","é/x.log/x.log/Dockerfile"]}
+{"sent":["dist/","dist/.git/","dist/.git/b/","dist/.git/b/a","src/","src/a.txt/","src/a.txt/.dockerignore/","src/a.txt/.dockerignore/b.md"]}
+{"sent":["Dockerfile/","Dockerfile/node_modules","a/","a/ab/","a/ab/.dockerignore/","a/ab/.dockerignore/a","c/","c/ab/","c/ab/ab","dist/","dist/.dockerignore/","dist/.dockerignore/Dockerfile/","dist/.dockerignore/Dockerfile/keep/","y.log/","y.log/é"]}
+{"sent":[".git/","Dockerfile/","keep/","x.log/","x.log/keep/","x.log/keep/src/","x.log/keep/src/x.log","é"]}
+{"sent":["ab/","ab/ab/","ab/ab/ab/","b.md/","b.md/src"]}
+{"sent":["a b/","a b/é","ab/","ab/src/","ab/src/b/","ab/src/b/node_modules","keep/","keep/Dockerfile/","keep/Dockerfile/.env/","keep/Dockerfile/.env/dist","keep/dist"]}
+{"sent":[".env/",".env/Dockerfile/",".env/Dockerfile/src/",".env/Dockerfile/src/b","Dockerfile/","Dockerfile/a.txt","a.txt/","a.txt/a b/","a.txt/a b/ab/","a.txt/a b/ab/x.log/","b.md/","b.md/.dockerignore/","b.md/.dockerignore/.dockerignore/","b.md/.dockerignore/.dockerignore/.env","b/","b/b/","b/b/x.log/","b/b/x.log/ab","dist"]}
+{"sent":["a/","a/a b/","b.md/","b.md/a/","b.md/a/Dockerfile/","b.md/a/Dockerfile/a","c/","c/a.txt/","c/a.txt/node_modules","dist/","dist/ab","src/","src/src","é/","é/dist/","é/dist/.env/","é/dist/.env/y.log","é/node_modules/","é/node_modules/x.log"]}
+{"sent":[".git/",".git/a","a","ab/","ab/.env/","ab/.env/b.md","b.md/","b.md/x.log/","b.md/x.log/x.log","src/","src/c/","src/c/a","y.log/","y.log/a b","é/","é/.dockerignore/","é/.dockerignore/a/","é/.dockerignore/a/a b/"]}
+{"sent":["c/","c/a/","c/a/dist","keep/","keep/x.log/","keep/x.log/.env/","keep/x.log/.env/b","y.log/","y.log/ab/","y.log/ab/dist"]}
+{"sent":["Dockerfile","a.txt/","a.txt/a/","a.txt/a/node_modules","a/","a/é/","a/é/b.md/","a/é/b.md/dist","keep/","keep/keep/","keep/keep/a b","y.log/","y.log/x.log"]}
+{"sent":[".dockerignore/",".dockerignore/x.log/",".dockerignore/x.log/dist","a/","a/.git","ab/","ab/ab/","ab/ab/keep/","ab/ab/keep/keep","b.md/","b.md/a.txt","b.md/ab","dist/","dist/x.log/","dist/x.log/a.txt/","dist/x.log/a.txt/b.md/","y.log/","y.log/.git/","y.log/.git/.git/","y.log/.git/.git/Dockerfile","y.log/Dockerfile"]}
+{"sent":[".dockerignore/",".dockerignore/a/",".dockerignore/a/a.txt/",".dockerignore/a/a.txt/y.log/",".git/","ab/","ab/b.md/","ab/b.md/.dockerignore","b","src/","src/a","src/y.log/","src/y.log/b"]}
+{"sent":["Dockerfile","ab","c/","c/ab","node_modules/","node_modules/.env/","node_modules/.env/src","x.log/","x.log/dist/","x.log/dist/y.log","é/","é/a"]}
+{"sent":[".env/","a.txt","c/","c/c/","c/c/a.txt","dist/","dist/b.md/","dist/b.md/a.txt/","dist/b.md/a.txt/.env","keep"]}
+{"sent":["é/","é/.git"]}
+{"sent":["ab","b.md/","b.md/src/","b.md/src/.git","c","keep","src/","src/é/","src/é/a"]}
+{"sent":[".dockerignore/",".dockerignore/node_modules",".git/",".git/y.log/",".git/y.log/é/",".git/y.log/é/ab","x.log/","x.log/é/","x.log/é/keep/","x.log/é/keep/c"]}
+{"sent":[".dockerignore/",".dockerignore/a b/",".dockerignore/a b/é/",".dockerignore/a b/é/src",".git/",".git/y.log","a b/","a b/.dockerignore","ab/","ab/dist/","ab/dist/b.md","ab/y.log/","ab/y.log/.git/","ab/y.log/.git/keep","c/","c/é/","c/é/b"]}
+{"sent":[],"error":"invalid excludepatterns: [src/.env ! src/x.log/keep [^a]/[^a]/a]: illegal exclusion pattern: \"!\""}
+{"sent":[".dockerignore/",".git/",".git/Dockerfile/",".git/Dockerfile/c/",".git/Dockerfile/c/a/","Dockerfile/","Dockerfile/.env","a b","a/","a/ab/","a/ab/keep","b.md/","b.md/ab","b/","b/b.md/","b/b.md/keep/","b/b.md/keep/.dockerignore","b/b.md/x.log/"]}
+{"sent":[".env",".git/",".git/y.log/",".git/y.log/Dockerfile/",".git/y.log/Dockerfile/ab","Dockerfile/","Dockerfile/a/","Dockerfile/a/a/","Dockerfile/a/a/node_modules/","c/","c/.env/","c/.env/a/","c/.env/a/a","c/é/","c/é/.dockerignore/","c/é/.dockerignore/b.md","keep/","keep/dist/","keep/dist/y.log","y.log","é"]}
+{"sent":["keep/","keep/.dockerignore/","keep/.dockerignore/b/","keep/.dockerignore/b/a/"]}
+{"sent":["ab/","ab/b/","ab/b/.git","y.log/","y.log/y.log/","y.log/y.log/b"]}
+{"sent":["dist/","dist/src/","dist/src/b.md/","dist/src/b.md/b.md"]}
+{"sent":[".git/",".git/a/",".git/a/a b","Dockerfile/","Dockerfile/.env/","Dockerfile/.env/.git/","Dockerfile/.env/.git/y.log","b.md/","b.md/b/","b.md/b/a","x.log/","x.log/c/","x.log/c/keep"]}
+{"sent":[".dockerignore","a.txt/","a.txt/x.log/","a.txt/x.log/x.log","node_modules"]}
+{"sent":["Dockerfile","keep/","x.log","é/"]}
+{"sent":[".dockerignore","Dockerfile/","Dockerfile/src/","Dockerfile/src/a b","a/","a/.env/","a/.env/dist/","a/.env/dist/x.log","a/src/","a/src/.env","b.md/","b.md/a","src/","src/a.txt/","src/a.txt/b.md/","src/a.txt/b.md/node_modules"]}
+{"sent":[".env","dist/","dist/y.log/","dist/y.log/a b"]}
+{"sent":["a.txt/","a.txt/.env/","a.txt/.env/a.txt","ab","dist/","dist/dist/","dist/dist/c/","dist/dist/c/.env"]}
+{"sent":["a.txt","b.md","c","keep","x.log/","x.log/.git/","x.log/.git/src/","x.log/.git/src/.dockerignore","x.log/x.log/","x.log/x.log/b/","x.log/x.log/b/keep/","é/","é/.git","é/Dockerfile"]}
+{"sent":["a.txt/","a.txt/a/","a.txt/a/keep/","a.txt/a/keep/dist","src/","src/c/","src/c/b"]}
+{"sent":[".env/",".env/ab/",".env/ab/c/",".env/ab/c/keep",".git/",".git/b.md","a b/","a b/node_modules/","a b/node_modules/Dockerfile","dist/","dist/a b","node_modules/","node_modules/ab/","node_modules/ab/a","node_modules/keep/"]}
+{"sent":[".dockerignore/",".env/",".env/.env/",".env/.env/src/","Dockerfile","a.txt/","b.md/","keep/","keep/é/","keep/é/.env","src/","src/y.log/","src/y.log/node_modules/","src/y.log/node_modules/src","é/","é/keep/","é/keep/node_modules"]}
+{"sent":["dist/","dist/y.log/","dist/y.log/node_modules/","dist/y.log/node_modules/a b","x.log","y.log/","y.log/é/","y.log/é/a b"]}
+{"sent":[".git","Dockerfile/","Dockerfile/dist/","Dockerfile/dist/é/","Dockerfile/dist/é/.git","b/","b/ab","c/","c/x.log","src","x.log/","x.log/b"]}
+{"sent":["a b/","a b/b/","a b/b/ab/","a b/b/ab/a","b.md/","b.md/keep","c/","c/ab/","c/ab/.dockerignore"]}
+{"sent":[".dockerignore/",".dockerignore/c/",".dockerignore/c/.env/",".dockerignore/c/.env/.git","ab/","ab/.dockerignore/","ab/.dockerignore/node_modules"]}
+{"sent":[".git","a.txt/","a.txt/é/","a.txt/é/.git/"]}
+{"sent":[".git","Dockerfile/","Dockerfile/.dockerignore","a b/","a b/.dockerignore/","a b/.dockerignore/y.log","a/","a/c/","a/c/ab","b/","b/a/","b/a/b/","b/a/b/x.log","dist/","dist/.git","dist/x.log/","dist/x.log/.dockerignore/","dist/x.log/.dockerignore/y.log","dist/é/","dist/é/a.txt/","dist/é/a.txt/x.log","keep/","keep/.dockerignore/","keep/.dockerignore/é/","keep/.dockerignore/é/keep","keep/keep/","keep/keep/ab/","keep/keep/ab/Dockerfile"]}
+{"sent":[".dockerignore/",".dockerignore/.env",".dockerignore/src/",".dockerignore/src/ab/",".dockerignore/src/ab/a.txt",".env"]}
+{"sent":["a b/","a b/c","a/","a/a.txt/","a/a.txt/src/","a/a.txt/src/keep","ab","dist/","dist/b.md/","dist/b.md/ab/","dist/b.md/ab/dist","node_modules/","node_modules/.dockerignore/","node_modules/.dockerignore/a.txt/","node_modules/.dockerignore/a.txt/a.txt","x.log/","x.log/x.log/","x.log/x.log/node_modules","é/","é/a/","é/a/a.txt"]}
+{"sent":["Dockerfile/","Dockerfile/b/","Dockerfile/b/a.txt","Dockerfile/x.log/","Dockerfile/x.log/x.log","a/","a/c/","a/c/.env","ab/","ab/node_modules/","ab/node_modules/.dockerignore","dist","é/","é/a.txt"]}
+{"sent":[".env/",".env/a.txt"]}
+{"sent":["a/","a/dist/"]}
+{"sent":["c/","c/a.txt/","src/","src/a/","src/a/keep","x.log"]}
+{"sent":[".git","b/","b/Dockerfile/","b/Dockerfile/c/","b/Dockerfile/c/ab"]}
+{"sent":["a.txt/","a.txt/.env/","a.txt/.env/b"]}
+{"sent":[".dockerignore/",".dockerignore/keep",".env/",".env/ab/",".env/ab/src","a b/","a b/é","a/","a/.dockerignore/","a/.dockerignore/b.md/","a/.dockerignore/b.md/.git","ab/","ab/keep","c/","c/c/","c/c/a/","c/c/a/y.log/","x.log/","x.log/ab/","x.log/ab/b/","x.log/ab/b/b.md","é/","é/keep/","é/keep/.git/"]}
+{"sent":["a.txt/","a.txt/b/","a.txt/b/.env"]}
+{"sent":[".dockerignore/",".dockerignore/.env",".git/",".git/node_modules/",".git/node_modules/c","ab","b","node_modules/","node_modules/x.log/","node_modules/x.log/src/","node_modules/x.log/src/b.md","src/","src/b/","src/b/.dockerignore/","src/b/.dockerignore/.git"]}
+{"sent":[".git/",".git/.git","b.md","keep/","keep/y.log"]}
+{"sent":["a","b/","b/ab","keep/","keep/b.md/","keep/b.md/.env","node_modules","y.log"]}
+{"sent":["a/","a/a.txt"]}
+{"sent":["b.md/","b.md/b.md/","b.md/b.md/a.txt/","b.md/b.md/a.txt/y.log","c/","c/b.md/","c/b.md/src"]}
+{"sent":[".env/",".env/b.md/",".env/b.md/ab/",".env/b.md/ab/ab",".git/",".git/y.log/",".git/y.log/src","Dockerfile/","Dockerfile/a","a b/","a b/.env","a/","a/node_modules/","a/node_modules/dist","ab","keep/","keep/.env/"]}
+{"sent":[".env/",".env/a.txt/",".env/a.txt/y.log","Dockerfile","a/","a/b.md/","a/b.md/a b","a/node_modules/","a/node_modules/Dockerfile","ab/","ab/x.log","node_modules/"]}
+{"sent":[".git/",".git/b/",".git/b/Dockerfile","a b","node_modules/","node_modules/keep/","node_modules/keep/Dockerfile"]}
+{"sent":[".env/",".env/y.log/",".env/y.log/c/",".env/y.log/c/a b","Dockerfile","a b","a/","a/ab","c/","c/src/","c/src/a/","c/src/a/dist","keep/","keep/c/","keep/c/ab/"]}
+{"sent":[".dockerignore/",".dockerignore/b","ab/","ab/b","b.md/","b.md/ab/","b.md/ab/b","b/","b/.dockerignore/","b/.dockerignore/src","keep/","keep/é/","keep/é/ab/","keep/é/ab/.dockerignore","src/","src/x.log/","src/x.log/a","x.log/","x.log/a/","x.log/a/node_modules/","x.log/a/node_modules/keep"]}
+{"sent":[".git/",".git/node_modules/",".git/node_modules/c/",".git/node_modules/c/a.txt/","b.md/","b.md/x.log","c/","c/c/","c/c/ab/","c/c/ab/a b","dist/","dist/é","é/","é/ab"]}
+{"sent":[".git/",".git/Dockerfile","a b/","a b/dist/","a b/dist/é/","a b/dist/é/.dockerignore/","a.txt/","a.txt/a.txt/","a.txt/a.txt/b.md","b/","b/dist/","b/dist/a b","dist/","dist/ab/","dist/ab/b/","dist/ab/b/dist","dist/b.md/","dist/b.md/.git/","dist/b.md/.git/Dockerfile/","keep","src/","src/c/","src/keep/","src/keep/ab"]}
+{"sent":[".env/",".env/ab","Dockerfile/","Dockerfile/a.txt/","Dockerfile/a.txt/é","a b/","a b/dist","a.txt/","a.txt/b/","a.txt/b/node_modules/","a.txt/b/node_modules/c","dist/","dist/ab","x.log/","x.log/a b/","x.log/a b/b","x.log/node_modules/","x.log/node_modules/keep/","x.log/node_modules/keep/é","y.log"]}
+{"sent":[".env","b.md/","b.md/keep/","b.md/keep/.git","c/","c/.git","dist","node_modules/","src/","src/.dockerignore","é"]}
+{"sent":["Dockerfile/","Dockerfile/Dockerfile/","Dockerfile/Dockerfile/dist/","Dockerfile/Dockerfile/dist/Dockerfile","a.txt/","a.txt/node_modules","b.md/","b.md/b.md/","b.md/b.md/.env","dist/","dist/keep/","dist/keep/a b"]}
+{"sent":[".dockerignore","ab/","ab/.env"]}
+{"sent":[".env/",".env/.git/",".env/.git/dist/",".env/.git/dist/src",".git/",".git/a.txt/",".git/a.txt/é/","b.md/","b.md/c/","b.md/c/c/","b.md/c/c/.dockerignore","dist/","dist/.dockerignore/","dist/.dockerignore/x.log/","dist/.dockerignore/x.log/dist","dist/a b/","dist/a b/.dockerignore","é/","é/.dockerignore/","é/.dockerignore/.env/","é/.dockerignore/.env/Dockerfile","é/.env/","é/.env/b.md"]}
+{"sent":[".dockerignore/",".dockerignore/node_modules/",".dockerignore/node_modules/Dockerfile/",".dockerignore/node_modules/Dockerfile/x.log","a","c/","é/","é/.git/","é/.git/x.log","é/a b/","é/a b/node_modules/","é/a b/node_modules/b.md"]}
+{"sent":["a.txt/","a.txt/x.log/","a.txt/x.log/keep/","a.txt/x.log/keep/x.log","a/","c/","c/.git","c/é/","c/é/b.md","x.log/","x.log/keep"]}
+{"sent":["a/","a/b.md/","a/b.md/src/","node_modules/","node_modules/é","é/","é/.env/","é/.env/keep"]}
+{"sent":[".dockerignore/",".dockerignore/.env/",".dockerignore/.env/dist/",".env/",".env/node_modules/",".env/node_modules/dist/",".env/node_modules/dist/c","Dockerfile/","Dockerfile/.dockerignore","a/","a/a","a/c","ab","dist","é/","é/.env/","é/.env/.env/","é/.env/.env/Dockerfile/"]}
+{"sent":["c/","c/b/","c/b/node_modules","dist","x.log/","x.log/b.md/","x.log/b.md/node_modules","x.log/y.log/","x.log/y.log/node_modules/","x.log/y.log/node_modules/.git","é/","é/ab/","é/ab/.dockerignore"]}
+{"sent":["Dockerfile/","Dockerfile/Dockerfile/","Dockerfile/Dockerfile/b/","a b/","a b/.env","b.md/","b.md/node_modules/","b.md/node_modules/dist/","b.md/node_modules/dist/c","dist/","dist/b.md/","dist/b.md/src/","dist/b.md/src/b","src/","src/a.txt/","src/a.txt/b/","src/a.txt/b/src"]}
+{"sent":[".env/",".env/b",".git/",".git/a/",".git/a/.env/",".git/a/.env/é","b.md/","b.md/keep","c/","c/keep/","c/keep/y.log/","c/keep/y.log/a","c/src","keep/","keep/é/","keep/é/.env/","keep/é/.env/x.log","é/","é/dist/","é/dist/a b/","é/dist/a b/b.md"]}
+{"sent":[".dockerignore/",".dockerignore/a","a","keep/","keep/y.log","y.log/","y.log/ab"]}
+{"sent":[".dockerignore","Dockerfile/","Dockerfile/x.log","a/","a/.dockerignore/","a/.dockerignore/src/","a/.dockerignore/src/c","a/b.md/","a/b.md/é/","ab","c/","c/a b"]}
+{"sent":[".env/",".env/a.txt/",".env/a.txt/dist",".env/y.log/",".env/y.log/é/",".git/",".git/a b/",".git/a b/.dockerignore/",".git/a b/.dockerignore/node_modules","ab/","ab/Dockerfile/","ab/Dockerfile/b/","b/","b/.env/","b/.env/keep/","b/.env/keep/a.txt","b/x.log","node_modules/","node_modules/.dockerignore/","node_modules/.dockerignore/c","y.log/","y.log/.env/","y.log/.env/x.log","y.log/src/","y.log/src/a b/","y.log/src/a b/b","y.log/x.log/","y.log/x.log/src/","y.log/x.log/src/ab"]}
+{"sent":["a/","a/y.log","ab/","ab/b","b.md","src/","src/node_modules/","src/node_modules/.env/"]}
+{"sent":["a b/","a b/x.log/","a b/x.log/é","b.md/","b.md/keep/","b.md/keep/.git/","b.md/keep/.git/a b"]}
+{"sent":[".git"]}
+{"sent":[".dockerignore/",".dockerignore/Dockerfile",".git/",".git/é","a/","a/c/","a/c/a/","a/c/a/y.log","b.md/","b.md/y.log/","b.md/y.log/.git","b/","b/.git/","b/.git/keep","x.log/"]}
+{"sent":["a b/","a b/Dockerfile","a b/x.log/","a b/x.log/a.txt/","a b/x.log/a.txt/.git/","dist","src/","src/b.md/","src/b.md/dist","x.log/","x.log/a b","x.log/x.log/","x.log/x.log/keep","é/","é/y.log/","é/y.log/b"]}
+{"sent":[".dockerignore/",".dockerignore/dist/",".dockerignore/dist/.env/",".dockerignore/dist/.env/c","a b/","a b/dist/","a b/dist/a/","a b/dist/a/a b","a.txt/","a.txt/x.log/","a.txt/x.log/y.log","b.md/","b.md/keep/","b.md/keep/keep/","b.md/keep/keep/y.log","node_modules/","node_modules/b.md/","node_modules/b.md/b.md/","node_modules/b.md/b.md/b","src","x.log/","x.log/a b","x.log/a.txt/","x.log/a.txt/.dockerignore/","x.log/a.txt/.dockerignore/y.log","y.log/","y.log/c/","y.log/c/ab"]}
+{"sent":[".dockerignore/",".dockerignore/a.txt","a b/","a b/dist/","a b/dist/b/","a b/dist/b/b.md","b.md/","b.md/b/","b.md/b/Dockerfile/","b.md/b/Dockerfile/é","é/"]}
+{"sent":[]}
+{"sent":[".env/",".env/keep/",".env/keep/src","a","a b/","a b/Dockerfile/","a b/Dockerfile/.env/","a b/Dockerfile/.env/.env","node_modules/","node_modules/src/","node_modules/src/src/","node_modules/src/src/.git","x.log","y.log/","y.log/ab/","y.log/ab/b.md","é/","é/.dockerignore/","é/.dockerignore/ab/","é/.dockerignore/ab/Dockerfile"]}
+{"sent":["a.txt","ab/","ab/x.log/","ab/x.log/keep","b/","b/y.log","dist/","dist/a b","dist/é/","dist/é/Dockerfile","node_modules/","node_modules/b.md/","node_modules/b.md/dist","y.log/","y.log/dist/","y.log/dist/a b/","y.log/dist/a b/keep"]}
+{"sent":[".dockerignore","ab/","ab/src/","ab/src/dist","b.md/","b.md/.git/","b.md/.git/.dockerignore","b/","keep/","keep/src","y.log/","y.log/dist"]}
+{"sent":[".env/",".env/dist/",".env/dist/a.txt","a b/","a b/Dockerfile/","a b/Dockerfile/keep/","dist/","dist/y.log/","dist/y.log/node_modules/","src/","src/a.txt","y.log/","y.log/c/","y.log/c/é","é/","é/node_modules"]}
+{"sent":[".env","Dockerfile/","Dockerfile/c/","Dockerfile/c/node_modules","src/","src/b/","src/b/keep"]}
+{"sent":["keep/","keep/ab/","keep/ab/keep"]}
+{"sent":[]}
+{"sent":[]}
+{"sent":["a b/","a b/dist","a/","a/.dockerignore/","a/.dockerignore/a b","b/","b/dist","c/","c/Dockerfile","dist/","dist/Dockerfile/","dist/Dockerfile/.dockerignore","y.log/","y.log/a b/","y.log/a b/src/","y.log/a b/src/b/","é/","é/b.md"]}
+{"sent":["b.md/","b.md/.dockerignore/","b.md/.dockerignore/keep","b.md/é/","b.md/é/dist/","b.md/é/dist/a.txt","keep","x.log/","x.log/y.log/","x.log/y.log/ab/","x.log/y.log/ab/.dockerignore"]}
+{"sent":[".dockerignore/",".dockerignore/a.txt",".git/",".git/node_modules/",".git/node_modules/dist","ab/","ab/.env/","ab/.env/dist","b","b.md/","b.md/é","keep/","keep/b","keep/dist/","keep/dist/Dockerfile","src/","y.log"]}
+{"sent":[".dockerignore","Dockerfile","a b/","a b/a b"]}
+{"sent":[".git","a b/","a b/b.md/","a b/b.md/a/","a b/b.md/a/y.log","ab/","ab/ab/","ab/ab/b.md/","ab/ab/b.md/b.md","c/","c/é/","c/é/Dockerfile/","c/é/Dockerfile/é","src/","src/a b","x.log/","x.log/a"]}
+{"sent":[".dockerignore/",".dockerignore/node_modules/",".dockerignore/node_modules/keep/","keep/","keep/node_modules/","keep/node_modules/a.txt","keep/y.log/","keep/y.log/y.log","x.log/","x.log/.env"]}
+{"sent":["Dockerfile/","Dockerfile/a/","Dockerfile/a/é/","Dockerfile/a/é/b","a b","a.txt/","a.txt/a/","a.txt/a/y.log/","a.txt/a/y.log/c","b.md/","b.md/.dockerignore/","b.md/.dockerignore/c","b.md/ab/","b.md/ab/ab","keep/","keep/a/","keep/a/x.log"]}
+{"sent":[".git","Dockerfile","a","c/","c/b","node_modules","src/","src/keep/","src/keep/b.md/","src/keep/b.md/c","src/node_modules/","src/node_modules/.dockerignore","x.log/","x.log/a.txt/","x.log/a.txt/x.log/","x.log/a.txt/x.log/node_modules","y.log"]}
+{"sent":[]}
+{"sent":[".git/",".git/.env/",".git/.env/keep/",".git/.env/keep/é","a.txt/","a.txt/.dockerignore/","a.txt/.dockerignore/c/","a.txt/.dockerignore/c/Dockerfile","ab/","ab/b/","ab/b/b.md/","ab/b/b.md/a b","b/","b/a b/","b/a b/a/","b/a b/a/.git","dist/","dist/y.log","x.log/","x.log/a/","x.log/a/a.txt"]}
+{"sent":[".dockerignore/",".dockerignore/a/",".dockerignore/a/keep",".git/",".git/a.txt/",".git/a.txt/é/",".git/a.txt/é/dist","a.txt/","a.txt/.dockerignore/","a.txt/.dockerignore/b","b/","b/keep/","b/keep/src/","b/keep/src/.env/","keep/","keep/é/","keep/é/x.log/","src/","src/a.txt","x.log/","x.log/Dockerfile/","x.log/Dockerfile/a b","é"]}
+{"sent":["a/","a/.git/","a/.git/src","b.md/","b.md/dist/","b.md/dist/node_modules","c/","c/.git/","keep/","keep/y.log/","keep/y.log/.env/","keep/y.log/.env/keep"]}
+{"sent":["a b/","a b/keep","a.txt/","a.txt/y.log/","a.txt/y.log/src/","a.txt/y.log/src/a","node_modules","y.log/","y.log/Dockerfile/","y.log/y.log/","y.log/y.log/x.log/","y.log/y.log/x.log/src"]}
+{"sent":[]}
+{"sent":["c/","c/src","dist/","dist/b.md/","dist/b.md/ab","node_modules"]}
+{"sent":[".dockerignore/",".dockerignore/src/",".dockerignore/src/c/",".dockerignore/src/c/b.md","a.txt","c/","c/é/","c/é/node_modules","keep/","keep/a.txt/","keep/a.txt/src","é/","é/x.log/","é/x.log/dist/","é/x.log/dist/a.txt"]}
+{"sent":["node_modules/","node_modules/dist","src"]}
+{"sent":[".git/",".git/node_modules","a.txt/","a.txt/.dockerignore/","a.txt/.dockerignore/.env/","a.txt/.dockerignore/.env/Dockerfile","ab/","ab/.git/","ab/.git/node_modules","b","c/","c/src/","c/src/a/","c/src/a/x.log","node_modules/","node_modules/a b/","node_modules/a b/y.log","node_modules/ab/","node_modules/ab/ab","src/","src/.git/","src/.git/a.txt"]}
+{"sent":["a.txt/","a.txt/a/","a.txt/a/keep/","a.txt/a/keep/b","a/","a/y.log","b.md/","b.md/b.md","keep","node_modules/","node_modules/Dockerfile","src/","src/Dockerfile/","src/Dockerfile/.git","x.log/","x.log/a/","x.log/a/.dockerignore/","x.log/a/.dockerignore/a b","é/","é/dist/","é/dist/.git/","é/dist/.git/a b"]}
+{"sent":[".git/",".git/keep/",".git/keep/é",".git/x.log","a b/","a b/.git/","a/","a/é","c/","c/.dockerignore"]}
+{"sent":[]}
+{"sent":[".env/",".env/x.log/",".env/x.log/keep/",".env/x.log/keep/.dockerignore","dist/","dist/b.md","keep","node_modules","src/","src/.dockerignore"]}
+{"sent":[".dockerignore/",".dockerignore/c/",".dockerignore/c/node_modules",".env/",".env/a.txt",".git/",".git/é/",".git/é/src/",".git/é/src/y.log","a.txt","b/","b/b.md","dist/","dist/node_modules/","dist/node_modules/Dockerfile","node_modules/","node_modules/c/","node_modules/c/é"]}
+{"sent":[".git"]}
+{"sent":["Dockerfile","a b/","a b/c","a.txt","a/","a/ab/","a/ab/b.md","keep/","keep/a/","keep/a/c","keep/node_modules/","keep/node_modules/c","src","x.log/","x.log/node_modules","é/","é/Dockerfile"]}
+{"sent":[".dockerignore/",".dockerignore/Dockerfile",".dockerignore/a.txt/",".dockerignore/a.txt/src"]}
+{"sent":[]}
+{"sent":[]}
+{"sent":["Dockerfile/","Dockerfile/ab/","Dockerfile/ab/x.log/","Dockerfile/ab/x.log/é","Dockerfile/x.log","a/","a/.env","ab/","ab/dist/","b.md/","b.md/keep/","b.md/keep/.git/","b.md/keep/.git/.git","b/","b/Dockerfile/","b/Dockerfile/a/","b/Dockerfile/a/node_modules","keep/","keep/x.log/","keep/x.log/.git/","keep/x.log/.git/dist","node_modules/","node_modules/a.txt"]}
+{"sent":[".dockerignore","a b","ab/","ab/.dockerignore/","b.md/","b.md/b.md","b/","b/ab/","b/ab/b","b/b/","b/b/a.txt","c/","c/a.txt","dist/","dist/é/","dist/é/é/","src/","src/keep/","src/keep/y.log","x.log"]}
+{"sent":[".dockerignore/",".dockerignore/dist/",".env/",".env/b.md/",".env/b.md/é",".git/",".git/Dockerfile/",".git/Dockerfile/b/",".git/Dockerfile/b/b.md","a.txt/","a.txt/.dockerignore/","a.txt/.dockerignore/a.txt/","a.txt/.dockerignore/a.txt/b.md","dist/","dist/node_modules","node_modules/","node_modules/ab","x.log/","x.log/node_modules/","x.log/node_modules/a","y.log/","y.log/b"]}
+{"sent":["a/","a/y.log/","a/y.log/node_modules/","a/y.log/node_modules/a b"]}
+{"sent":[".git/",".git/src","Dockerfile/","b.md/","b.md/é/","b.md/é/node_modules","b/","b/.dockerignore/","b/.dockerignore/b/","b/.dockerignore/b/dist","c/","c/.dockerignore/","c/.dockerignore/y.log","x.log/","x.log/x.log/","x.log/x.log/x.log","y.log/","y.log/.env","é/","é/b.md"]}
+{"sent":["a b","b.md/","b.md/Dockerfile/","b.md/Dockerfile/x.log/","b.md/Dockerfile/x.log/x.log","dist","x.log/","x.log/c"]}
+{"sent":[".env/",".env/.git/",".env/.git/Dockerfile/",".env/.git/Dockerfile/b.md","Dockerfile/","Dockerfile/b.md/","Dockerfile/b.md/x.log/","Dockerfile/b.md/x.log/Dockerfile","a.txt/","a.txt/src/","a.txt/src/src/","a.txt/src/src/.dockerignore","ab/","ab/a.txt/","b.md/","b.md/ab","b/","b/.dockerignore/","b/.dockerignore/.dockerignore","é/","é/a/","é/a/ab"]}
+{"sent":["Dockerfile/","Dockerfile/a.txt","Dockerfile/x.log/","Dockerfile/x.log/dist","a b","a.txt/","a.txt/Dockerfile","b.md/","b/","b/src/","b/src/a b/","b/src/a b/.env/","keep/"]}
+{"sent":["a b/","a b/x.log/","a b/x.log/x.log"]}
+{"sent":[".env"]}
+{"sent":[".dockerignore/",".dockerignore/.dockerignore","ab","x.log/","x.log/x.log/","x.log/x.log/.git"]}
+{"sent":[".env/",".env/.dockerignore/",".env/.dockerignore/Dockerfile",".env/Dockerfile/",".env/Dockerfile/c/",".env/Dockerfile/c/keep",".env/src/",".env/src/ab","dist/","dist/.dockerignore","node_modules/","node_modules/.env/","y.log/","y.log/a.txt"]}
+{"sent":[".env/",".env/b.md/",".env/b.md/b.md","ab","dist/","dist/b/","dist/b/src/","dist/b/src/x.log","keep/","keep/b.md/","keep/b.md/.env","node_modules/","node_modules/ab/","node_modules/ab/y.log","y.log/","y.log/x.log"]}
+{"sent":["a.txt","b"]}
+{"sent":[".dockerignore/",".dockerignore/a","a b/","a.txt/","a.txt/a/","a.txt/a/a/","a.txt/a/a/y.log","ab/","ab/Dockerfile","b.md","b/","b/b.md/","b/b.md/.env/","node_modules","src/","src/é/","src/é/b.md","é/","é/c/","é/c/a"]}
+{"sent":[".git/",".git/ab/",".git/ab/y.log"]}
+{"sent":[".env",".git/",".git/keep/",".git/keep/a",".git/src/",".git/src/ab","Dockerfile/","Dockerfile/é/","Dockerfile/é/b.md/","Dockerfile/é/b.md/src","node_modules/","node_modules/x.log/","node_modules/x.log/a b/"]}
+{"sent":["Dockerfile/","Dockerfile/node_modules/","Dockerfile/node_modules/node_modules/","Dockerfile/node_modules/node_modules/node_modules/","a","a.txt/","a.txt/dist","b.md/","b.md/c","b/","b/a b/","b/a b/Dockerfile/","b/a b/Dockerfile/b.md","keep/","keep/Dockerfile/","keep/Dockerfile/é/","keep/Dockerfile/é/.env","node_modules/","node_modules/c/","src/","src/a.txt/","src/a.txt/é/","src/a.txt/é/Dockerfile","y.log"]}
+{"sent":[".dockerignore/",".dockerignore/a/",".dockerignore/a/dist",".git/",".git/keep/",".git/keep/.git","a","keep/","keep/b"]}
+{"sent":["é/","é/node_modules/","é/node_modules/Dockerfile/","é/node_modules/Dockerfile/x.log"]}
+{"sent":[".dockerignore",".env/",".env/é/",".env/é/x.log/",".env/é/x.log/.git",".git","a/","a/y.log/","a/y.log/dist/","a/y.log/dist/a","ab","b.md/","b.md/ab","dist","x.log/","x.log/a b","y.log/","y.log/ab"]}
+{"sent":["b/","b/b.md/","b/b.md/node_modules/","b/b.md/node_modules/a","c/","c/a b","src"]}
+{"sent":[".env/",".env/é/",".env/é/.git/",".env/é/.git/dist","a","a.txt/","a.txt/a.txt/","a.txt/a.txt/dist/","a.txt/a.txt/dist/Dockerfile","b","c","node_modules/","node_modules/ab/","node_modules/ab/.git/","node_modules/ab/.git/.git","node_modules/é/","node_modules/é/é","src","y.log/","y.log/c"]}
+{"sent":[".env","keep/","keep/.dockerignore/","keep/.dockerignore/x.log/","keep/.dockerignore/x.log/a","keep/dist/","keep/dist/é/","node_modules/","node_modules/ab/","node_modules/ab/Dockerfile","src/","y.log/","y.log/y.log/"]}
+{"sent":[".dockerignore/",".dockerignore/a b/",".dockerignore/a b/y.log",".dockerignore/x.log/",".dockerignore/x.log/Dockerfile","b.md/","b.md/keep/","b.md/keep/b","c/","c/b/","c/b/node_modules"]}
+{"sent":["src/","src/Dockerfile/","src/Dockerfile/.dockerignore"]}
+{"sent":[".dockerignore/",".dockerignore/a/",".dockerignore/a/dist/",".dockerignore/a/dist/dist",".env","a/","a/node_modules/","a/node_modules/a b","dist/","dist/x.log/","dist/x.log/.env/","dist/x.log/.env/Dockerfile"]}
+{"sent":[".dockerignore/",".dockerignore/a/",".env",".git","a b/","a b/node_modules/","a b/node_modules/a/","a b/node_modules/a/a.txt","c/","c/b","é/","é/b.md"]}
+{"sent":["Dockerfile/","Dockerfile/node_modules","b/","b/x.log/","b/x.log/src/","b/x.log/src/a b","dist/","dist/a/","dist/a/dist","x.log/","x.log/Dockerfile/","x.log/Dockerfile/x.log/","x.log/Dockerfile/x.log/node_modules"]}
+{"sent":[".dockerignore/",".dockerignore/dist/",".dockerignore/dist/x.log","Dockerfile/","Dockerfile/.git/","b/","b/src/","b/src/.env","c/","c/y.log/","c/y.log/.git/","c/y.log/.git/c/","node_modules/","node_modules/x.log/","node_modules/x.log/é/","node_modules/x.log/é/node_modules","é/"]}
+{"sent":[".env","ab/","ab/a.txt","keep/","keep/a.txt/","keep/a.txt/keep/","keep/a.txt/keep/a.txt","keep/a/","keep/a/keep/"]}
+{"sent":[]}
+{"sent":[".env/",".env/dist/",".env/dist/Dockerfile",".env/y.log/",".env/y.log/src/",".env/y.log/src/a","b.md/","b.md/.git/","b.md/.git/.dockerignore","é"]}
+{"sent":["Dockerfile/","Dockerfile/y.log","dist/","dist/a/","dist/a/.env/","dist/a/.env/Dockerfile/","x.log/","x.log/c"]}
+{"sent":[".env/",".env/a b/",".env/a b/é/",".env/a b/é/x.log",".git","Dockerfile/","Dockerfile/b","b/","b/.git/","b/.git/b.md/","b/.git/b.md/.env","b/.git/x.log","keep/","keep/b.md","src/","src/a b","x.log","é"]}
+{"sent":[]}
+{"sent":[]}
+{"sent":["a.txt/","a.txt/b/","a.txt/b/b.md","a.txt/x.log/","c/","c/.env/","c/.env/.env/","c/.env/.env/c"]}
+{"sent":[".dockerignore/",".dockerignore/.git","ab","dist","y.log/","y.log/b/","y.log/b/node_modules"]}
+{"sent":[],"error":"invalid excludepatterns: [! !a b/a*/keep]: illegal exclusion pattern: \"!\""}
+{"sent":[".dockerignore"]}
+{"sent":[".git/",".git/b.md","y.log/","y.log/.env/"]}
+{"sent":["b/","b/Dockerfile","node_modules/","node_modules/a","src/","src/keep/","src/keep/.git/","src/keep/.git/a b","y.log/","y.log/a"]}
