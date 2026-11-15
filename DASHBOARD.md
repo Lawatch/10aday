@@ -1,4 +1,4 @@
-# Où en est 10aday — 14/11 à 20h20 (heure UTC)
+# Où en est 10aday — 15/11 à 00h19 (heure UTC)
 
 _Généré automatiquement à chaque passage d'agent. Tout est fait par les agents, rien ne t'attend._
 
@@ -12,7 +12,7 @@ _Généré automatiquement à chaque passage d'agent. Tout est fait par les agen
 1 piste testée : 1 en test.
 - **Une bibliothèque Go pour lire les plages de versions NuGet, Gradle et Maven** — _en test_
   - Fait : Les trois parties sont en ligne sur le registre Go (NuGet, Gradle, Maven), testées contre les vrais outils. Depuis le 14/11 à 12 h 20, une commande s'utilise en une ligne, sans rien installer d'autre que Go.
-  - Résultat : 1er dans la recherche du registre Go sur « nuget version range », « maven version range » et « gradle version range ». Au 14/11 à 12 h 20 : 0 projet qui l'utilise, 0 étoile, 17 visites sur le site.
+  - Résultat : 1er dans la recherche du registre Go sur « nuget version range », « maven version range » et « gradle version range ». Au 15/11 à 0 h 20 : 0 projet qui l'utilise, 0 étoile, 17 visites sur le site (aucun changement depuis le 14/11).
 
 ### Outils pour assistants IA
 1 piste testée : 1 en test.
@@ -50,10 +50,11 @@ _Généré automatiquement à chaque passage d'agent. Tout est fait par les agen
   - Décision : Arrêtée le 13/11 par l'humain. Elle dépendait d'une clé et d'un compte qu'il fallait lui demander ; une piste qui ne se mène pas à 100 % sans lui n'est pas gardée.
 
 ## Pistes en test : la suite
-- **Une bibliothèque Go pour lire les plages de versions NuGet, Gradle et Maven** : Compter les utilisateurs chaque jour jusqu'au 20/11, sans rien ajouter. Décision le 20/11. Décision le 20/11 (dans 6 jours). On arrête si : Le 20/11, le paquet n'apparaît pas dans la recherche de pkg.go.dev, ou aucun signal extérieur (aucun projet qui l'utilise, 0 étoile, 0 visite venue du registre).
-- **Un outil pour les assistants IA qui dit quelle version d'une bibliothèque sera installée** : Ne rien publier de nouveau : une version de plus ferait monter le compteur par des robots, pas par des gens. Recompter le 20/11. Le chiffre qui compte est le fichier « un clic » (19) : s'il dépasse 30 le 20/11 sans nouvelle version, ce sont des gens. Décision le 20/11 (dans 6 jours). On arrête si : Moins de 5 téléchargements le 20/11, ou publication toujours impossible le 15/11.
+- **Une bibliothèque Go pour lire les plages de versions NuGet, Gradle et Maven** : Compter les utilisateurs chaque jour jusqu'au 20/11, sans rien ajouter. Décision le 20/11. Décision le 20/11 (dans 5 jours). On arrête si : Le 20/11, le paquet n'apparaît pas dans la recherche de pkg.go.dev, ou aucun signal extérieur (aucun projet qui l'utilise, 0 étoile, 0 visite venue du registre).
+- **Un outil pour les assistants IA qui dit quelle version d'une bibliothèque sera installée** : Ne rien publier de nouveau : une version de plus ferait monter le compteur par des robots, pas par des gens. Recompter le 20/11. Le chiffre qui compte est le fichier « un clic » (19) : s'il dépasse 30 le 20/11 sans nouvelle version, ce sont des gens. Décision le 20/11 (dans 5 jours). On arrête si : Moins de 5 téléchargements le 20/11, ou publication toujours impossible le 15/11.
 
 ## Derniers passages d'agents
+- **15/11 00h20** · Une bibliothèque Go pour lire les plages de versions NuGet, Gradle et Maven · travail sur la piste — j'ai recompté qui utilise notre bibliothèque Go, sans rien ajouter.
 - **14/11 20h20** · Un outil pour les assistants IA qui dit quelle version d'une bibliothèque sera installée · travail sur la piste — j'ai recompté les téléchargements de l'outil pour assistants IA et cherché son nom dans les annuaires.
 - **14/11 16h20** · Un outil pour les assistants IA qui dit quelle version d'une bibliothèque sera installée · travail sur la piste — j'ai recompté les téléchargements de l'outil pour assistants IA et cherché s'il apparaît dans les annuaires d'outils.
 - **14/11 12h20** · Une bibliothèque Go pour lire les plages de versions NuGet, Gradle et Maven · travail sur la piste — j'ai ajouté à la bibliothèque Go une commande qu'un développeur lance en une ligne pour tester une règle de versions NuGet, Maven ou Gradle.
@@ -61,4 +62,3 @@ _Généré automatiquement à chaque passage d'agent. Tout est fait par les agen
 - **14/11 04h18** · Un outil pour les assistants IA qui dit quelle version d'une bibliothèque sera installée · travail sur la piste — notre outil pour assistants IA va maintenant chercher lui-même les versions publiées d'une bibliothèque et dit laquelle sera installée aujourd'hui.
 - **14/11 00h18** · Une bibliothèque Go pour lire les plages de versions NuGet, Gradle et Maven · travail sur la piste — j'ai ajouté à notre bibliothèque Go la partie Maven (l'outil de construction le plus courant en Java).
 - **13/11 20h18** · Un outil pour les assistants IA qui dit quelle version d'une bibliothèque sera installée · travail sur la piste — notre outil pour assistants IA s'installe maintenant en un clic dans Claude Desktop, en plus de la version technique.
-- **13/11 16h36** · Une bibliothèque Go pour lire les plages de versions NuGet, Gradle et Maven · travail sur la piste — j'ai ajouté à notre bibliothèque Go la partie qui lit les versions comme Gradle (l'outil de construction des projets Java et Android).
