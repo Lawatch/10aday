@@ -63,6 +63,8 @@ function randTree() {
   cp.execSync('git init -q', { cwd: d }); fs.writeFileSync(path.join(d, '.gitattributes'), '* builtin_zz ok\n');
   const o = cp.spawnSync('git', ['check-attr', 'ok', '--', 'f'], { cwd: d }).stdout.toString();
   E.OPTIONS.reserveBuiltin = !/ok: set/.test(o);
+  fs.writeFileSync(path.join(d, '.gitattributes'), '.env**/** ok\n');
+  E.OPTIONS.keepPrefix = !/ok: set/.test(cp.spawnSync('git', ['check-attr', 'ok', '--', '.env'], { cwd: d }).stdout.toString());
   fs.rmSync(d, { recursive: true, force: true });
 }
 const fmt = s => s === true ? 'set' : s === false ? 'unset' : s;
@@ -97,5 +99,5 @@ for (let r = 0; r < ROUNDS; r++) {
   }
 }
 fs.rmSync(tmpRoot, { recursive: true, force: true });
-console.log(total + ' paths compared with git ' + cp.execSync('git --version').toString().trim().split(' ')[2] + (E.OPTIONS.reserveBuiltin ? ' [reserves builtin_*]' : '') + ' (' + attrsSeen + ' attribute values), ' + bad + ' differences (via macro ' + stat.macro + ', nested file ' + stat.nested + ', info/attributes ' + stat.info + ')');
+console.log(total + ' paths compared with git ' + cp.execSync('git --version').toString().trim().split(' ')[2] + (E.OPTIONS.reserveBuiltin ? ' [reserves builtin_*]' : '') + (E.OPTIONS.keepPrefix ? ' [glued ** = *]' : '') + ' (' + attrsSeen + ' attribute values), ' + bad + ' differences (via macro ' + stat.macro + ', nested file ' + stat.nested + ', info/attributes ' + stat.info + ')');
 process.exit(bad ? 1 : 0);

@@ -110,7 +110,7 @@ const span = (s, i) => { while (i < s.length && isBlank(s[i])) i++; return i; };
 const cspan = (s, i) => { while (i < s.length && !isBlank(s[i])) i++; return i; };
 const validName = n => n.length > 0 && n[0] !== '-' && /^[-._0-9A-Za-z]+$/.test(n);
 // Names starting with "builtin_" are reserved by recent git versions (whole line ignored); older ones (2.43) accept them.
-const OPTIONS = { reserveBuiltin: true };
+const OPTIONS = { reserveBuiltin: true, keepPrefix: true };
 const reserved = n => OPTIONS.reserveBuiltin && n.startsWith('builtin_');
 
 // C-style unquoting as in git's quote.c (unquote_c_style). Returns { value, end } or null.
@@ -205,6 +205,10 @@ function matchPathname(path, x) {
   if (prefix > 0) {
     if (prefix > name.length) return false;
     if (name.slice(0, prefix) !== pat.slice(0, prefix)) return false;
+    if (prefix === pat.length && prefix === name.length) return true;
+    // Recent git (seen in 2.56) matches the rest with the literal prefix still in place, so a "**" glued to it
+    // (".env**/**") acts like "*". Git 2.43 cut the prefix first, turning it into a leading "**/".
+    if (OPTIONS.keepPrefix) return wildmatch(pat, name, true);
     pat = pat.slice(prefix); name = name.slice(prefix);
     if (!pat.length && !name.length) return true;
   }

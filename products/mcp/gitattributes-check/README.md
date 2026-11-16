@@ -29,7 +29,7 @@ Only some attributes: `"attributes": ["text", "eol"]` (unspecified ones are then
 ## How exact is it?
 `engine.js` is a port of git's `attr.c` (line parsing, quoting, macros, precedence between files, per-attribute
 last-match-wins) and `wildmatch.c`. `test.js` compares it with the real `git check-attr -a` on random `.gitattributes`
-files and trees: about 77,000 paths, 0 differences (git 2.43).
+files and trees: about 77,000 paths, 0 differences (git 2.43), and again on every release with the current git (2.56). Where the two versions differ (a `**` glued to text, reserved `builtin_*` names), the server follows the current git.
 
 ## Install
 - Claude Desktop: open `gitattributes-check-1.0.0.mcpb` from the [GitHub release](https://github.com/Lawatch/10aday/releases/tag/gitattributes-check-v1.0.0).

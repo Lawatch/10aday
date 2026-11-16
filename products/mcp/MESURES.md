@@ -5,3 +5,7 @@
 | 2026-11-15 21:45 | version-range-mcp | 99 (inchangé) | 22 (inchangé) | page ghcr (web-fetch) + API versions |
 | 2026-11-15 21:45 | gitignore-check | 6 | 5 | idem |
 | 2026-11-15 21:45 | dockerignore-check | 0 | 0 | sortie à 21:40 |
+| 2026-11-16 00:30 | version-range-mcp | 102 (1.0.0 : 21, 1.1.0 : 24, 1.2.0 : 57) | 22 (inchangé) | page ghcr (web-fetch) + API versions |
+| 2026-11-16 00:30 | gitignore-check | 6 | 6 | idem |
+| 2026-11-16 00:30 | dockerignore-check | 6 | 5 | idem |
+| 2026-11-16 00:50 | gitattributes-check | 0 | 0 | sortie à 00:50 |
