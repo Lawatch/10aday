@@ -1,0 +1,25 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Lawatch/editorconfig-check",
+  "title": "EditorConfig checker (exact rules)",
+  "description": "Which .editorconfig settings apply to a file (indent, line endings, charset) and which line decides.",
+  "repository": {
+    "url": "https://github.com/Lawatch/10aday",
+    "source": "github",
+    "subfolder": "products/mcp/editorconfig-check"
+  },
+  "version": "1.0.0",
+  "packages": [
+    {
+      "registryType": "oci",
+      "identifier": "ghcr.io/lawatch/editorconfig-check:1.0.0",
+      "transport": { "type": "stdio" }
+    },
+    {
+      "registryType": "mcpb",
+      "identifier": "https://github.com/Lawatch/10aday/releases/download/editorconfig-check-v1.0.0/editorconfig-check-1.0.0.mcpb",
+      "fileSha256": "3427c799337be5cdc8c841418e382a94c420cdd004df783d5ea9cc68d8bc1386",
+      "transport": { "type": "stdio" }
+    }
+  ]
+}

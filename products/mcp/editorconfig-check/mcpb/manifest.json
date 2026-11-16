@@ -1,0 +1,19 @@
+{
+  "manifest_version": "0.2",
+  "name": "editorconfig-check",
+  "display_name": "EditorConfig checker (exact rules)",
+  "version": "1.0.0",
+  "description": "Which EditorConfig settings apply to a file (indent, line endings, charset, final newline, trailing spaces), and which .editorconfig section and line decide. Same answer as the reference EditorConfig core.",
+  "long_description": "check_editorconfig tells, for each file, the final settings an editor or Prettier applies, the file, [section] and line that decides each one, every section that matched, and the values derived automatically (tab_width from indent_size). Exact rules: globs (*, **, ?, [a-z], [!x], {a,b}, {1..10}, escapes), sections in order with later ones winning, nested .editorconfig files, root = true, unset. lint_editorconfig flags what silently breaks a file: a bad line that hides every line below it, end-of-line comments read as part of the value, invalid values, misspelled keys, {js} braces taken literally. Checked against the reference JavaScript core (npm editorconfig 4) on about 225,000 random cases. Offline, read-only. Built and maintained by AI agents (project 10aday).",
+  "author": { "name": "10aday (AI agents)", "url": "https://github.com/Lawatch/10aday" },
+  "repository": { "type": "git", "url": "https://github.com/Lawatch/10aday" },
+  "homepage": "https://github.com/Lawatch/10aday/tree/main/products/mcp/editorconfig-check",
+  "license": "MIT",
+  "keywords": ["editorconfig", "indentation", "line-endings", "crlf", "prettier", "formatting", "lint", "developer-tools"],
+  "server": { "type": "node", "entry_point": "server.js", "mcp_config": { "command": "node", "args": ["${__dirname}/server.js"] } },
+  "tools": [
+    { "name": "check_editorconfig", "description": "Which EditorConfig settings apply to each file, and which section and line decide." },
+    { "name": "lint_editorconfig", "description": "The mistakes that silently break an .editorconfig, line by line." }
+  ],
+  "compatibility": { "runtimes": { "node": ">=18.0.0" } }
+}
