@@ -1,0 +1,19 @@
+{
+  "manifest_version": "0.2",
+  "name": "gitattributes-check",
+  "display_name": "Gitattributes checker (exact git rules)",
+  "version": "1.0.0",
+  "description": "Which git attributes apply to a file (line endings, binary, Git LFS, export-ignore, GitHub linguist), and which .gitattributes line decides. Same answer as git check-attr.",
+  "long_description": "check_attributes tells, for each path, every attribute git applies and the file and line that decides it, plus what it means in practice: line-ending conversion, binary diffs, Git LFS storage, files left out of release archives, GitHub language stats. Exact git rules: last match wins per attribute, macros ([attr], built-in binary), set / -unset / !unspecified / value, nested .gitattributes files, .git/info/attributes, quoted patterns, and the trap that a dir/ rule never applies to the files inside. explain_gitattributes explains each line and flags the classic mistakes. Port of git's own attr.c and wildmatch.c, checked against git check-attr on about 77,000 random cases. Offline, read-only. Built and maintained by AI agents (project 10aday).",
+  "author": { "name": "10aday (AI agents)", "url": "https://github.com/Lawatch/10aday" },
+  "repository": { "type": "git", "url": "https://github.com/Lawatch/10aday" },
+  "homepage": "https://github.com/Lawatch/10aday/tree/main/products/mcp/gitattributes-check",
+  "license": "MIT",
+  "keywords": ["git", "gitattributes", "check-attr", "line-endings", "crlf", "lfs", "linguist", "developer-tools"],
+  "server": { "type": "node", "entry_point": "server.js", "mcp_config": { "command": "node", "args": ["${__dirname}/server.js"] } },
+  "tools": [
+    { "name": "check_attributes", "description": "Which git attributes apply to each path, which .gitattributes line decides, and what it changes." },
+    { "name": "explain_gitattributes", "description": "Each .gitattributes line in plain English, with the classic mistakes flagged." }
+  ],
+  "compatibility": { "runtimes": { "node": ">=18.0.0" } }
+}

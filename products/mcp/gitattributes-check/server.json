@@ -1,0 +1,25 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Lawatch/gitattributes-check",
+  "title": "Gitattributes checker (exact git rules)",
+  "description": "Which git attributes apply to a file (line endings, binary, LFS, linguist) and which line decides.",
+  "repository": {
+    "url": "https://github.com/Lawatch/10aday",
+    "source": "github",
+    "subfolder": "products/mcp/gitattributes-check"
+  },
+  "version": "1.0.0",
+  "packages": [
+    {
+      "registryType": "oci",
+      "identifier": "ghcr.io/lawatch/gitattributes-check:1.0.0",
+      "transport": { "type": "stdio" }
+    },
+    {
+      "registryType": "mcpb",
+      "identifier": "https://github.com/Lawatch/10aday/releases/download/gitattributes-check-v1.0.0/gitattributes-check-1.0.0.mcpb",
+      "fileSha256": "0a49531a4d0da3113cccc816d7216c7b94860d2fb72028ceca34e33953d5a910",
+      "transport": { "type": "stdio" }
+    }
+  ]
+}
