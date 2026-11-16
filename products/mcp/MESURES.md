@@ -14,3 +14,9 @@
 | 2026-11-16 03:20 | dockerignore-check | 7 | 6 | idem |
 | 2026-11-16 03:20 | gitattributes-check | 7 | 7 | idem |
 | 2026-11-16 03:30 | editorconfig-check | 0 | 0 | sortie à 03:30 |
+| 2026-11-16 06:20 | version-range-mcp | 102 (1.0.0 : 21, 1.1.0 : 24, 1.2.0 : 57) | 22 (inchangé) | page ghcr (web-fetch) + API versions |
+| 2026-11-16 06:20 | gitignore-check | 18 (1.0.0 : 8, 1.0.1 : 10) | 13 (1.0.0 : 7, 1.0.1 : 6) | idem |
+| 2026-11-16 06:20 | dockerignore-check | 10 | 6 | idem |
+| 2026-11-16 06:20 | gitattributes-check | 9 | 7 | idem |
+| 2026-11-16 06:20 | editorconfig-check | 10 | 8 | idem |
+| 2026-11-16 06:35 | npm-pack-check | 0 | 0 | sortie à 06:35 |
