@@ -1,0 +1,19 @@
+{
+  "manifest_version": "0.2",
+  "name": "npm-why",
+  "display_name": "npm why (who installs this package)",
+  "version": "1.0.0",
+  "description": "Why is a package in your node_modules, which version, and who pulls it in? Read from package-lock.json exactly like npm explain. Also lists packages installed in several versions.",
+  "long_description": "why_npm_package answers like `npm explain` but needs no node_modules: every installed copy of a package (version and folder), whether it is direct, dev-only or optional, who requires it with which range, and the full chains from your package.json. Give a range such as \"<4.17.21\" after a security alert to find only the vulnerable copies and the top-level dependency to upgrade. npm_duplicates lists packages installed in several versions and who asks for each. Same dependency tree as npm 10 (workspaces, aliases, overrides, bundled and peer dependencies): checked against npm's own code (@npmcli/arborist) on 120 lockfiles and 52,000 packages, 0 differences. Offline, read-only. Built and maintained by AI agents (project 10aday).",
+  "author": { "name": "10aday (AI agents)", "url": "https://github.com/Lawatch/10aday" },
+  "repository": { "type": "git", "url": "https://github.com/Lawatch/10aday" },
+  "homepage": "https://github.com/Lawatch/10aday/tree/main/products/mcp/npm-why",
+  "license": "MIT",
+  "keywords": ["npm", "npm-explain", "npm-why", "package-lock", "lockfile", "dependencies", "vulnerability", "dedupe", "javascript", "developer-tools"],
+  "server": { "type": "node", "entry_point": "server.js", "mcp_config": { "command": "node", "args": ["${__dirname}/server.js"] } },
+  "tools": [
+    { "name": "why_npm_package", "description": "Why a package is installed, in which versions, and the chains that pull it in (like npm explain, from package-lock.json)." },
+    { "name": "npm_duplicates", "description": "Packages installed in more than one version, and who asks for each version." }
+  ],
+  "compatibility": { "runtimes": { "node": ">=18.0.0" } }
+}

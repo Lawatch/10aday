@@ -1,0 +1,25 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Lawatch/npm-why",
+  "title": "npm why (who installs this package)",
+  "description": "Why a package is in node_modules, which versions, who pulls it in: npm explain from package-lock.",
+  "repository": {
+    "url": "https://github.com/Lawatch/10aday",
+    "source": "github",
+    "subfolder": "products/mcp/npm-why"
+  },
+  "version": "1.0.0",
+  "packages": [
+    {
+      "registryType": "oci",
+      "identifier": "ghcr.io/lawatch/npm-why:1.0.0",
+      "transport": { "type": "stdio" }
+    },
+    {
+      "registryType": "mcpb",
+      "identifier": "https://github.com/Lawatch/10aday/releases/download/npm-why-v1.0.0/npm-why-1.0.0.mcpb",
+      "fileSha256": "10ae92afe77c256afad4dc27af918c5f66810c0202bf37653704278af7a5f69d",
+      "transport": { "type": "stdio" }
+    }
+  ]
+}
