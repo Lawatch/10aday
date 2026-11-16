@@ -40,6 +40,7 @@ Site : **https://lawatch.github.io/10aday/** — chaque couloir `exp-*` ajoute i
 - [`gitignore-check`](products/mcp/gitignore-check/) — MCP server: is this path ignored by git, and by which `.gitignore` line? Same answer as `git check-ignore`. Registry name `io.github.Lawatch/gitignore-check`.
 - [`dockerignore-check`](products/mcp/dockerignore-check/) — MCP server: which files `docker build` really sends, and which `.dockerignore` line decides (`*.log` is root-only, unlike git). Exact BuildKit rules. Registry name `io.github.Lawatch/dockerignore-check`.
 - [`gitattributes-check`](products/mcp/gitattributes-check/) — MCP server: which git attributes apply to a file (line endings, binary, Git LFS, export-ignore, GitHub linguist) and which `.gitattributes` line decides (`vendor/` does not reach the files inside). Exact git rules. Registry name `io.github.Lawatch/gitattributes-check`.
+- [`editorconfig-check`](products/mcp/editorconfig-check/) — MCP server: which EditorConfig settings apply to a file (indentation, line endings, charset, final newline) and which `.editorconfig` section and line decide (`[*.{js}]` matches nothing, `indent_size = 4 # four` is invalid). Same answer as the reference EditorConfig core. Registry name `io.github.Lawatch/editorconfig-check`.
 
 ## 👉 Pour suivre : [`DASHBOARD.md`](DASHBOARD.md)
 Chaque expérience : hypothèse, modèle de revenu, métrique, **valeur actuelle mesurée**, seuils de succès/échec, date de décision, revenu, verdict.
