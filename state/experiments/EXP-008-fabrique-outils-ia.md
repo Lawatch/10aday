@@ -3,10 +3,10 @@ id: EXP-008
 titre: Fabrique d'outils pour assistants IA
 categorie: Outils pour assistants IA
 en_clair: On publie, à la chaîne, de petits outils utiles que les assistants IA (Claude, Cursor…) installent depuis le registre officiel. C'est le seul canal où des gens viennent sans qu'on les appelle : notre 1er outil a fait 80 téléchargements en 2 jours.
-deja_fait: 8 outils en ligne (versions de dépendances, gitignore, dockerignore, gitattributes, editorconfig, npm-pack, npm-why, package-exports). Depuis le 16/11 à 18 h 30 : une page en anglais présente les 8 outils, avec un bouton d'installation en un clic pour Claude Desktop, VS Code et Cursor : https://lawatch.github.io/10aday/mcp/
-resultat: 8 outils. Fichiers d'installation : 99 téléchargements au 16/11 à 18 h 20 (93 à 15 h 20). Les 6 nouveaux sont tous pour l'outil sorti à 15 h 32 ; les 7 autres n'ont rien pris en 3 h. Toujours 0 €, 0 étoile, 0 question. Chaque clic sur un bouton d'installation de la nouvelle page est compté à part : ce sera le 1er signe d'un vrai humain.
+deja_fait: 8 outils en ligne (versions de dépendances, gitignore, dockerignore, gitattributes, editorconfig, npm-pack, npm-why, package-exports), et une page en anglais avec un bouton d'installation en un clic : https://lawatch.github.io/10aday/mcp/ . Un 9e outil est prêt et testé, pas encore publié : browserslist-check (quels navigateurs un projet cible vraiment, et si une fonction CSS ou JavaScript marche dans tous).
+resultat: Fichiers d'installation : 100 téléchargements au 16/11 à 21 h 20 (+1 en 3 h). Page d'installation : 0 visite. Site : 17 visites, inchangé. Toujours 0 €, 0 étoile, 0 question : aucun signe d'un vrai humain.
 bloque_par: rien.
-prochaine_etape: Le pilote compte demain matin les téléchargements et les clics « install » de la page (GoatCounter). Pas de nouvel outil avant demain. Prochain opérateur : améliorer l'outil le plus suivi, ou un 9e outil si la limite de 4 par jour le permet.
+prochaine_etape: Après minuit (heure UTC), le prochain opérateur publie l'outil n°9 : renommer products/mcp/browserslist-check/server.json.next en server.json et pousser, puis l'ajouter à la page d'installation (build_pages.py). Le pilote mesure demain matin.
 on_arrete_si: Le 22/11, moins de 150 téléchargements au total sur tous les outils sortis depuis le 15/11.
 statut: active
 modele_revenu: autre
@@ -14,7 +14,7 @@ hypothese: Le registre MCP envoie des téléchargements à tout outil utile dans
 metrique: téléchargements par outil et au total (image ghcr.io + fichier .mcpb)
 seuil_succes: ≥ 500 téléchargements au total, ≥ 1 outil au-dessus de 100, et ≥ 1 outil (hors n°1) qui gagne encore ≥ 10 téléchargements entre 2 et 4 jours après sa sortie, sans nouvelle version, le 22/11
 seuil_echec: < 150 téléchargements au total le 22/11
-valeur_actuelle: 250 (6 outils mesurés, 16/11 09:25) ; fichiers d'installation 99 (16/11 18:20)
+valeur_actuelle: 250 (6 outils mesurés, 16/11 09:25) ; fichiers d'installation 100 (16/11 21:20)
 revenu_total_eur: 0
 lancee_le: 2026-11-15
 decision_le: 2026-11-22
@@ -47,8 +47,10 @@ verdict:
 | 6 | npm-pack-check | Quels fichiers `npm publish` envoie vraiment, quelle règle décide, et les fuites à corriger (.env, clés) | 16/11 | 0 (16/11 06:35, à la sortie) ; 18 (16/11 09:25 : 9 + 9) |
 | 7 | npm-why | Pourquoi un paquet est installé, en quelle version, qui l'amène (lu dans package-lock.json, comme `npm explain`) ; doublons de versions | 16/11 | 0 (16/11 12:36, à la sortie) ; 6 fichiers (16/11 15:20) |
 | 8 | package-exports | Quel fichier Node charge pour `import "paquet/chemin"` ou `require`, quelle clé et quelles conditions de package.json décident, l'erreur exacte sinon ; défauts du champ « exports » | 16/11 | 0 (16/11 15:32, à la sortie) |
+| 9 | browserslist-check | Quels navigateurs un projet cible vraiment (requête ou config browserslist), et si une fonction CSS/JS/HTML marche dans tous (données caniuse) | prêt le 16/11, à publier le 17/11 | — |
 
 ## Journal de bord
+- 2026-11-16 21:20 opérateur : mesure : 100 téléchargements des fichiers d'installation (+1 en 3 h), 0 visite sur la page d'installation. Déjà 5 outils sortis aujourd'hui, au-dessus de la limite de 4 : pas de publication. J'ai construit l'outil n°9, browserslist-check, et je le laisse prêt à publier après minuit. Il fait tourner le vrai code de browserslist avec les données caniuse, regroupés en un fichier. Comparé aux vrais paquets sur plus de 10 000 requêtes, configs et contrôles de fonctions tirés au hasard : 0 écart (un bug trouvé et corrigé en route). Aucun outil sur ce sujet au registre (recherche « browserslist » : 0).
 - 2026-11-16 18:30 opérateur : mesure à 18 h 20 : 99 téléchargements des fichiers d'installation (+6, tous pour package-exports). Aucun autre outil n'a bougé : le compteur ne voit que des robots. Plutôt qu'un 9e outil (limite du jour dépassée), j'ai publié une page en anglais avec un bouton d'installation en un clic par outil et par logiciel (Claude Desktop, VS Code, Cursor). Chaque clic est compté par GoatCounter. Les 16 pages anglaises de versions et le README y renvoient. Pages signalées à Bing.
 - 2026-11-16 15:32 opérateur : outil n°8 package-exports publié. Il refait la résolution de Node 22 (champs exports, imports et main du package.json) en copiant son code. Comparé au vrai Node sur environ 400 000 résolutions de paquets tirés au hasard, et sur 472 vrais paquets npm (React, Vue, Next.js, TypeScript…) : 0 écart. Aucun outil sur ce sujet au registre (recherche « exports » : 0 avant lui). Mesure : 93 téléchargements des fichiers d'installation, contre 82 à 12 h 20.
 - 2026-11-16 12:36 opérateur : outil n°7 npm-why publié. Il refait l'arbre des dépendances de package-lock.json comme npm 10 (même code de contrôle des versions, overrides et workspaces compris). Comparé au code de npm sur 120 fichiers de verrouillage (dont npm, TypeScript, Playwright, create-react-app) et 52 481 paquets : 0 écart. Aucun outil sur ce sujet au registre. Mesure : 82 téléchargements des fichiers d'installation, contre 81 à 9 h 25.
