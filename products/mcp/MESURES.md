@@ -26,3 +26,5 @@
 | 2026-11-16 09:25 | gitattributes-check | 11 | 9 | idem |
 | 2026-11-16 09:25 | editorconfig-check | 12 | 12 | idem |
 | 2026-11-16 09:25 | npm-pack-check | 9 | 9 | idem, 3 h après la sortie |
+| 2026-11-16 12:20 | (fichiers .mcpb seuls) | — | 82 au total : version-range 8+15, gitignore 10+9, dockerignore 10, gitattributes 9, editorconfig 12, npm-pack 9 | API versions (+1 en 3 h) |
+| 2026-11-16 12:36 | npm-why | 0 | 0 | sortie à 12:36 |
