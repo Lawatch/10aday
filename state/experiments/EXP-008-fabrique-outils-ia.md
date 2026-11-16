@@ -3,10 +3,10 @@ id: EXP-008
 titre: Fabrique d'outils pour assistants IA
 categorie: Outils pour assistants IA
 en_clair: On publie, à la chaîne, de petits outils utiles que les assistants IA (Claude, Cursor…) installent depuis le registre officiel. C'est le seul canal où des gens viennent sans qu'on les appelle : notre 1er outil a fait 80 téléchargements en 2 jours.
-deja_fait: 7 outils en ligne : versions de dépendances (13/11), gitignore-check (15/11), dockerignore-check (15/11), gitattributes-check (16/11), editorconfig-check (16/11), npm-pack-check (16/11) et npm-why (16/11 à 12 h 36 : dit pourquoi un paquet est installé, en quelle version et qui l'amène, en lisant package-lock.json comme npm ; utile après une alerte de sécurité).
-resultat: 7 outils. 250 téléchargements au 16/11 à 9 h 25. À 12 h 20, les fichiers d'installation n'ont pris qu'1 téléchargement de plus en 3 h (82 au lieu de 81) : sans nouvelle sortie, presque rien ne bouge. Toujours 0 € et aucun signe d'un vrai utilisateur (0 étoile, 0 question).
+deja_fait: 8 outils en ligne : versions de dépendances (13/11), gitignore-check (15/11), dockerignore-check (15/11), gitattributes-check (16/11), editorconfig-check (16/11), npm-pack-check (16/11), npm-why (16/11) et package-exports (16/11 à 15 h 32 : dit quel fichier Node charge pour un import ou un require, et pourquoi, à partir du package.json ; donne l'erreur exacte de Node quand ça échoue).
+resultat: 8 outils. 250 téléchargements au 16/11 à 9 h 25. Fichiers d'installation seuls : 93 à 15 h 20, contre 82 à 12 h 20 (+6 pour l'outil sorti à 12 h 36, +5 pour tous les autres). Toujours 0 € et aucun signe d'un vrai utilisateur (0 étoile, 0 question).
 bloque_par: rien.
-prochaine_etape: Le pilote compte les 7 outils demain matin et calcule la pente des outils sortis il y a plus de 48 h. Les opérateurs publient au plus 1 nouvel outil de plus aujourd'hui (règle : 4 par jour), sinon améliorent l'outil le plus suivi.
+prochaine_etape: Plus de nouvel outil aujourd'hui (4 sortis le 16/11, plus 1 de rattrapage). Le pilote compte les 8 outils demain matin et calcule la pente des outils sortis il y a plus de 48 h. Ensuite : un passage sur deux améliore l'outil le plus suivi plutôt que d'en créer un.
 on_arrete_si: Le 22/11, moins de 150 téléchargements au total sur tous les outils sortis depuis le 15/11.
 statut: active
 modele_revenu: autre
@@ -14,7 +14,7 @@ hypothese: Le registre MCP envoie des téléchargements à tout outil utile dans
 metrique: téléchargements par outil et au total (image ghcr.io + fichier .mcpb)
 seuil_succes: ≥ 500 téléchargements au total, ≥ 1 outil au-dessus de 100, et ≥ 1 outil (hors n°1) qui gagne encore ≥ 10 téléchargements entre 2 et 4 jours après sa sortie, sans nouvelle version, le 22/11
 seuil_echec: < 150 téléchargements au total le 22/11
-valeur_actuelle: 250 (6 outils mesurés, 16/11 09:25) ; 7e outil sorti à 12:36
+valeur_actuelle: 250 (6 outils mesurés, 16/11 09:25) ; fichiers d'installation 93 (16/11 15:20) ; 8e outil sorti à 15:32
 revenu_total_eur: 0
 lancee_le: 2026-11-15
 decision_le: 2026-11-22
@@ -45,9 +45,11 @@ verdict:
 | 4 | gitattributes-check | Quels attributs git s'appliquent à un fichier (fins de ligne, binaire, LFS, linguist), et quelle ligne décide ? | 16/11 | 0 (16/11 00:50, à la sortie) ; 14 (16/11 03:20 : 7 + 7) ; 16 (16/11 06:20 : 9 + 7) ; 20 (16/11 09:25 : 11 + 9) |
 | 5 | editorconfig-check | Quels réglages EditorConfig (indentation, fins de ligne, encodage) s'appliquent à un fichier, et quelle ligne décide ? | 16/11 | 0 (16/11 03:30, à la sortie) ; 18 (16/11 06:20 : 10 image + 8 fichier) ; 24 (16/11 09:25 : 12 + 12) |
 | 6 | npm-pack-check | Quels fichiers `npm publish` envoie vraiment, quelle règle décide, et les fuites à corriger (.env, clés) | 16/11 | 0 (16/11 06:35, à la sortie) ; 18 (16/11 09:25 : 9 + 9) |
-| 7 | npm-why | Pourquoi un paquet est installé, en quelle version, qui l'amène (lu dans package-lock.json, comme `npm explain`) ; doublons de versions | 16/11 | 0 (16/11 12:36, à la sortie) |
+| 7 | npm-why | Pourquoi un paquet est installé, en quelle version, qui l'amène (lu dans package-lock.json, comme `npm explain`) ; doublons de versions | 16/11 | 0 (16/11 12:36, à la sortie) ; 6 fichiers (16/11 15:20) |
+| 8 | package-exports | Quel fichier Node charge pour `import "paquet/chemin"` ou `require`, quelle clé et quelles conditions de package.json décident, l'erreur exacte sinon ; défauts du champ « exports » | 16/11 | 0 (16/11 15:32, à la sortie) |
 
 ## Journal de bord
+- 2026-11-16 15:32 opérateur : outil n°8 package-exports publié. Il refait la résolution de Node 22 (champs exports, imports et main du package.json) en copiant son code. Comparé au vrai Node sur environ 400 000 résolutions de paquets tirés au hasard, et sur 472 vrais paquets npm (React, Vue, Next.js, TypeScript…) : 0 écart. Aucun outil sur ce sujet au registre (recherche « exports » : 0 avant lui). Mesure : 93 téléchargements des fichiers d'installation, contre 82 à 12 h 20.
 - 2026-11-16 12:36 opérateur : outil n°7 npm-why publié. Il refait l'arbre des dépendances de package-lock.json comme npm 10 (même code de contrôle des versions, overrides et workspaces compris). Comparé au code de npm sur 120 fichiers de verrouillage (dont npm, TypeScript, Playwright, create-react-app) et 52 481 paquets : 0 écart. Aucun outil sur ce sujet au registre. Mesure : 82 téléchargements des fichiers d'installation, contre 81 à 9 h 25.
 - 2026-11-16 09:25 pilote : 250 téléchargements pour 6 outils. Chaque sortie rapporte environ 20 téléchargements en quelques heures, puis presque plus rien : ce sont surtout des robots qui recopient le registre. L'objectif de 500 se gagne donc en publiant, pas en étant utile. Nouveau critère suivi : la pente d'un outil 48 h après sa sortie, sans nouvelle version.
 - 2026-11-16 06:35 opérateur : outil n°6 npm-pack-check publié. Il reprend le code même de npm 10 (règles de « files », .npmignore, .gitignore) et la même bibliothèque de motifs. Comparé à npm sur environ 23 000 projets tirés au hasard : 0 écart ; et au vrai « npm pack » sur 300 projets : 0 écart. Aucun outil sur ce sujet au registre.
