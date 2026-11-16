@@ -1,0 +1,25 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Lawatch/npm-pack-check",
+  "title": "npm pack checker (what npm publish ships)",
+  "description": "Exact files npm publish ships, which rule decides each, and leaks (.env, keys) to fix first.",
+  "repository": {
+    "url": "https://github.com/Lawatch/10aday",
+    "source": "github",
+    "subfolder": "products/mcp/npm-pack-check"
+  },
+  "version": "1.0.0",
+  "packages": [
+    {
+      "registryType": "oci",
+      "identifier": "ghcr.io/lawatch/npm-pack-check:1.0.0",
+      "transport": { "type": "stdio" }
+    },
+    {
+      "registryType": "mcpb",
+      "identifier": "https://github.com/Lawatch/10aday/releases/download/npm-pack-check-v1.0.0/npm-pack-check-1.0.0.mcpb",
+      "fileSha256": "1f5750a76c149911a59930cd74e989fef9429efdb335fd56231d82a1bb7c0743",
+      "transport": { "type": "stdio" }
+    }
+  ]
+}

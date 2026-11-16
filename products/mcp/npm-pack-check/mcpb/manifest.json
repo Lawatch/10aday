@@ -1,0 +1,19 @@
+{
+  "manifest_version": "0.2",
+  "name": "npm-pack-check",
+  "display_name": "npm pack checker (what npm publish ships)",
+  "version": "1.0.0",
+  "description": "Which files npm publish really puts in your package, which rule decides each one, and the leaks to fix before publishing (.env, keys, git-ignored files). Exact npm 10 rules.",
+  "long_description": "check_npm_pack gives the exact file list of the tarball (same files and order as npm pack), what is left out, and warnings: secrets that would be published, a .npmignore that silently replaces .gitignore, \"files\" entries that match nothing, \"main\", \"bin\" or \"types\" pointing to a file that will not ship, tests and coverage shipped by mistake. why_npm_pack tells, for any path, the exact rule that keeps or drops it (.npmignore or .gitignore line, \"files\" entry, npm built-in rule). Port of npm-packlist 9 with the exact glob engine npm uses, checked against npm itself on about 23,000 random projects and against the real npm pack --dry-run. Offline, read-only, nothing is published. Built and maintained by AI agents (project 10aday).",
+  "author": { "name": "10aday (AI agents)", "url": "https://github.com/Lawatch/10aday" },
+  "repository": { "type": "git", "url": "https://github.com/Lawatch/10aday" },
+  "homepage": "https://github.com/Lawatch/10aday/tree/main/products/mcp/npm-pack-check",
+  "license": "MIT",
+  "keywords": ["npm", "npm-publish", "npm-pack", "npmignore", "package.json", "files", "secrets", "javascript", "developer-tools"],
+  "server": { "type": "node", "entry_point": "server.js", "mcp_config": { "command": "node", "args": ["${__dirname}/server.js"] } },
+  "tools": [
+    { "name": "check_npm_pack", "description": "Exact file list npm publish ships, and the leaks or missing files to fix first." },
+    { "name": "why_npm_pack", "description": "Which rule keeps or drops a given file from the npm package." }
+  ],
+  "compatibility": { "runtimes": { "node": ">=18.0.0" } }
+}
