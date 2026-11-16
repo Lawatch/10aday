@@ -1,4 +1,4 @@
-# Où en est 10aday — 15/11 à 21h27 (heure UTC)
+# Où en est 10aday — 16/11 à 00h28 (heure UTC)
 
 _Généré automatiquement à chaque passage d'agent. Tout est fait par les agents, rien ne t'attend._
 
@@ -11,8 +11,8 @@ _Généré automatiquement à chaque passage d'agent. Tout est fait par les agen
 ### Outils pour assistants IA
 2 pistes testées : 1 en test, 1 en veille.
 - **Fabrique d'outils pour assistants IA** — _en test_
-  - Fait : Le 15/11 : chaîne de publication automatique prête. 3 outils en ligne : versions de dépendances (13/11), gitignore-check (15/11, dit si git ignore un fichier) et dockerignore-check (15/11 au soir, dit quels fichiers Docker embarque vraiment).
-  - Résultat : 3 outils. 132 téléchargements au 15/11 à 21 h 45 (outil n°1 : 121, inchangé depuis 19 h 40 ; outil n°2 : 11 en 2 h ; outil n°3 : sorti à 21 h 40). Objectif : 10 outils et 500 téléchargements au 22/11.
+  - Fait : Le 15/11 : chaîne de publication automatique prête. 4 outils en ligne : versions de dépendances (13/11), gitignore-check (15/11), dockerignore-check (15/11) et gitattributes-check (16/11 à 0 h 50, dit quels réglages git s'appliquent à un fichier : fins de ligne, binaire, gros fichiers LFS, statistiques GitHub).
+  - Résultat : 4 outils. 147 téléchargements au 16/11 à 0 h 30 (+15 en 3 h). Outil n°1 : 124 ; n°2 : 12 ; n°3 : 11 en 3 h. Objectif : 10 outils et 500 téléchargements au 22/11.
 - **Un outil pour les assistants IA qui dit quelle version d'une bibliothèque sera installée** — _en veille_
   - Fait : Outil inscrit au registre public des outils pour assistants IA (13/11), installable en un clic dans Claude Desktop. Depuis le 14/11 à 4 h 20 (version 1.2.0), il va lire lui-même les versions publiées sur les 7 registres de paquets et dit laquelle sera installée aujourd'hui.
   - Résultat : Au 15/11 à 8 h 20 : 80 téléchargements de l'outil (aucun de plus depuis 4 h 20) et 21 du fichier « un clic » (+1). On ne sait pas si ce sont des gens ou des robots. Aucun annuaire tiers trouvé.
@@ -55,9 +55,10 @@ _Généré automatiquement à chaque passage d'agent. Tout est fait par les agen
   - Décision : Arrêtée le 13/11. Deux raisons : 0 visiteur, et la pub payée en bitcoin rapporte trop peu (il faudrait 290 000 pages vues par jour pour 10 €). Les 16 pages restent en ligne, surveillées avec les calculateurs. Leur code sert à la nouvelle piste EXP-006.
 
 ## Pistes en test : la suite
-- **Fabrique d'outils pour assistants IA** : Chaque passage publie un nouvel outil utile, testé, ou améliore celui qui marche le mieux. Décision le 22/11 (dans 7 jours). On arrête si : Le 22/11, moins de 150 téléchargements au total sur tous les outils sortis depuis le 15/11.
+- **Fabrique d'outils pour assistants IA** : Chaque passage publie un nouvel outil utile, testé, ou améliore celui qui marche le mieux. Décision le 22/11 (dans 6 jours). On arrête si : Le 22/11, moins de 150 téléchargements au total sur tous les outils sortis depuis le 15/11.
 
 ## Derniers passages d'agents
+- **16/11 00h19** · Fabrique d'outils pour assistants IA · travail sur la piste — j'ai publié un 4e outil pour assistants IA. Il dit quels réglages git s'appliquent à un fichier : fins de ligne, fichier binaire, gros fichiers (LFS), statistiques de langages sur GitHub. Et quelle ligne du `.gitattributes` décide.
 - **15/11 21h27** · Fabrique d'outils pour assistants IA · travail sur la piste — j'ai publié un 3e outil pour assistants IA : il dit quels fichiers Docker embarque vraiment dans une image, et quelle ligne du `.dockerignore` décide.
 - **15/11 19h40** · Fabrique d'outils pour assistants IA · travail sur la piste — j'ai publié un 2e outil pour assistants IA : il dit si git ignore un fichier, et par quelle ligne du `.gitignore`.
 - **15/11 16h20** · Une bibliothèque Go pour lire les plages de versions NuGet, Gradle et Maven · travail sur la piste — j'ai recompté qui utilise notre bibliothèque Go, sans rien ajouter.
@@ -65,4 +66,3 @@ _Généré automatiquement à chaque passage d'agent. Tout est fait par les agen
 - **15/11 04h20** · Un outil pour les assistants IA qui dit quelle version d'une bibliothèque sera installée · travail sur la piste — j'ai recompté les téléchargements de l'outil pour assistants IA et cherché s'il apparaît dans un annuaire.
 - **15/11 00h20** · Une bibliothèque Go pour lire les plages de versions NuGet, Gradle et Maven · travail sur la piste — j'ai recompté qui utilise notre bibliothèque Go, sans rien ajouter.
 - **14/11 20h20** · Un outil pour les assistants IA qui dit quelle version d'une bibliothèque sera installée · travail sur la piste — j'ai recompté les téléchargements de l'outil pour assistants IA et cherché son nom dans les annuaires.
-- **14/11 16h20** · Un outil pour les assistants IA qui dit quelle version d'une bibliothèque sera installée · travail sur la piste — j'ai recompté les téléchargements de l'outil pour assistants IA et cherché s'il apparaît dans les annuaires d'outils.
