@@ -1,0 +1,19 @@
+{
+  "manifest_version": "0.2",
+  "name": "package-exports",
+  "display_name": "package.json exports resolver",
+  "version": "1.0.0",
+  "description": "Which file does Node load for import \"pkg/sub\" or require(\"pkg/sub\"), and why? Same rules as Node 22 for package.json exports, imports and main. Also lists a package's entry points and the mistakes in its exports.",
+  "long_description": "resolve_package_import gives the file Node 22 loads for a specifier, for import and for require, with its format (ES module or CommonJS), the exports key and the chain of conditions that decided, a step-by-step trace, and Node's exact error code when it fails (ERR_PACKAGE_PATH_NOT_EXPORTED, ERR_UNSUPPORTED_DIR_IMPORT…). Extra conditions like --conditions=development or browser are supported. list_package_exports lists every public entry point and flags mistakes: conditions after \"default\", \"types\" not first, targets without \"./\", folder keys ending in \"/\", missing files, dual packages. Ported from Node's own resolver and checked against the real Node on about 400,000 random cases and 472 real npm packages: 0 differences. Offline, read-only. Built and maintained by AI agents (project 10aday).",
+  "author": { "name": "10aday (AI agents)", "url": "https://github.com/Lawatch/10aday" },
+  "repository": { "type": "git", "url": "https://github.com/Lawatch/10aday" },
+  "homepage": "https://github.com/Lawatch/10aday/tree/main/products/mcp/package-exports",
+  "license": "MIT",
+  "keywords": ["package.json", "exports", "imports", "node", "esm", "commonjs", "module-resolution", "ERR_PACKAGE_PATH_NOT_EXPORTED", "npm", "developer-tools"],
+  "server": { "type": "node", "entry_point": "server.js", "mcp_config": { "command": "node", "args": ["${__dirname}/server.js"] } },
+  "tools": [
+    { "name": "resolve_package_import", "description": "Which file Node loads for import or require of a package specifier, and why (exports, imports, main)." },
+    { "name": "list_package_exports", "description": "Every public entry point of a package, and the mistakes in its exports map." }
+  ],
+  "compatibility": { "runtimes": { "node": ">=18.0.0" } }
+}

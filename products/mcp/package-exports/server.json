@@ -1,0 +1,25 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Lawatch/package-exports",
+  "title": "package.json exports resolver (which file Node loads)",
+  "description": "Which file Node loads for import or require of pkg/sub, and why: package.json exports, same as Node.",
+  "repository": {
+    "url": "https://github.com/Lawatch/10aday",
+    "source": "github",
+    "subfolder": "products/mcp/package-exports"
+  },
+  "version": "1.0.0",
+  "packages": [
+    {
+      "registryType": "oci",
+      "identifier": "ghcr.io/lawatch/package-exports:1.0.0",
+      "transport": { "type": "stdio" }
+    },
+    {
+      "registryType": "mcpb",
+      "identifier": "https://github.com/Lawatch/10aday/releases/download/package-exports-v1.0.0/package-exports-1.0.0.mcpb",
+      "fileSha256": "9911b1948905eb34738fa884ed087afd15f04da13b36c5ecbf3e08bcb224568a",
+      "transport": { "type": "stdio" }
+    }
+  ]
+}
