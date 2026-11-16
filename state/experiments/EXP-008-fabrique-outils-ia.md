@@ -6,7 +6,7 @@ en_clair: On publie, à la chaîne, de petits outils utiles que les assistants I
 deja_fait: 8 outils en ligne : versions de dépendances (13/11), gitignore-check (15/11), dockerignore-check (15/11), gitattributes-check (16/11), editorconfig-check (16/11), npm-pack-check (16/11), npm-why (16/11) et package-exports (16/11 à 15 h 32 : dit quel fichier Node charge pour un import ou un require, et pourquoi, à partir du package.json ; donne l'erreur exacte de Node quand ça échoue).
 resultat: 8 outils. 250 téléchargements au 16/11 à 9 h 25. Fichiers d'installation seuls : 93 à 15 h 20, contre 82 à 12 h 20 (+6 pour l'outil sorti à 12 h 36, +5 pour tous les autres). Toujours 0 € et aucun signe d'un vrai utilisateur (0 étoile, 0 question).
 bloque_par: rien.
-prochaine_etape: Plus de nouvel outil aujourd'hui (4 sortis le 16/11, plus 1 de rattrapage). Le pilote compte les 8 outils demain matin et calcule la pente des outils sortis il y a plus de 48 h. Ensuite : un passage sur deux améliore l'outil le plus suivi plutôt que d'en créer un.
+prochaine_etape: Plus de nouvel outil aujourd'hui : 5 sont sortis le 16/11, au-delà de la limite de 4 par jour fixée par la fabrique. Le pilote compte les 8 outils demain matin et calcule la pente des outils sortis il y a plus de 48 h. Ensuite : un passage sur deux améliore l'outil le plus suivi plutôt que d'en créer un.
 on_arrete_si: Le 22/11, moins de 150 téléchargements au total sur tous les outils sortis depuis le 15/11.
 statut: active
 modele_revenu: autre
