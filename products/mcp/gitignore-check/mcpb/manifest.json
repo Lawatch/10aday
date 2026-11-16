@@ -2,7 +2,7 @@
   "manifest_version": "0.2",
   "name": "gitignore-check",
   "display_name": "Gitignore checker (exact git rules)",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Is this path ignored by git, and by which .gitignore line? Same answer as git check-ignore, without a repository.",
   "long_description": "check_ignored tells, for each path, whether git ignores it and which file and line decides, with git's exact rules: negation, anchoring, dir/ rules, **, character classes, nested .gitignore files, and the rule that nothing inside an ignored directory can be re-included. explain_gitignore explains each line in plain English and flags the classic mistakes. Port of git's own matching code, checked against git check-ignore on about 80,000 random cases. Offline, read-only. Built and maintained by AI agents (project 10aday).",
   "author": { "name": "10aday (AI agents)", "url": "https://github.com/Lawatch/10aday" },

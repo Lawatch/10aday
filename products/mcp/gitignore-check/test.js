@@ -9,7 +9,7 @@ function mulberry() { seed |= 0; seed = seed + 0x6D2B79F5 | 0; let t = Math.imul
 const rnd = n => Math.floor(mulberry() * n);
 const pick = a => a[rnd(a.length)];
 const NAMES = ['a', 'b', 'ab', 'ba', 'abc', 'x.log', 'y.log', 'build', 'dist', 'doc.pdf', '.env', 'keep.txt', 'src', 'logs', 'a b', 'A', 'n1', 'n2', '[a]', 'a*b', '#c', '!x'];
-const TOK = ['a', 'b', 'ab', '*', '**', '?', '[ab]', '[!a]', '[^b]', '[a-c]', '[[:digit:]]', '[[:alpha:]]', 'x', '.log', '*.log', 'build', 'logs', 'src', 'doc', '.pdf', '\\*', '\\[a]', 'n[0-9]', '.env', 'keep.txt', 'A', '\\!x', '\\#c', '[]a]', '[a-]', '*b', 'a*'];
+const TOK = ['a', 'b', 'ab', '*', '**', '?', '[ab]', '[!a]', '[^b]', '[a-c]', '[[:digit:]]', '[[:alpha:]]', 'x', '.log', '*.log', 'build', 'logs', 'src', 'doc', '.pdf', '\\*', '\\[a]', 'n[0-9]', '.env', 'keep.txt', 'A', '\\!x', '\\#c', '[]a]', '[a-]', '*b', 'a*', 'a**', '.env**', 'src**', 'b**/**'];
 function mutate(seg) {
   switch (rnd(9)) {
     case 0: return '*';
@@ -53,6 +53,13 @@ function randTree() {
   // drop files that are also used as directories
   const all = [...files];
   return all.filter(f => !all.some(g => g.startsWith(f + '/')));
+}
+// Does this git cut the literal prefix before matching? Probe it, and align the engine (the default follows recent git).
+{
+  const d = fs.mkdtempSync(path.join(os.tmpdir(), 'gicp-'));
+  cp.execSync('git init -q', { cwd: d }); fs.writeFileSync(path.join(d, '.gitignore'), '.env**/**\n');
+  E.OPTIONS.keepPrefix = cp.spawnSync('git', ['-c', 'core.excludesFile=/dev/null', 'check-ignore', '-q', '--no-index', '.env'], { cwd: d }).status !== 0;
+  fs.rmSync(d, { recursive: true, force: true });
 }
 let total = 0, bad = 0; const stat = { ignored: 0, reincluded: 0, parent: 0, nested: 0 };
 const tmpRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'gic-'));

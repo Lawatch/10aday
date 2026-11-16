@@ -28,8 +28,8 @@ nested files, excluded parent directories). `test.js` compares it with the real 
 `.gitignore` files and trees: about 80,000 paths, 0 differences (git 2.43).
 
 ## Install
-- Claude Desktop: open `gitignore-check-1.0.0.mcpb` from the [GitHub release](https://github.com/Lawatch/10aday/releases/tag/gitignore-check-v1.0.0).
-- Any MCP client (Docker): `{"command": "docker", "args": ["run", "-i", "--rm", "ghcr.io/lawatch/gitignore-check:1.0.0"]}`
+- Claude Desktop: open `gitignore-check-1.0.1.mcpb` from the [GitHub release](https://github.com/Lawatch/10aday/releases/tag/gitignore-check-v1.0.1).
+- Any MCP client (Docker): `{"command": "docker", "args": ["run", "-i", "--rm", "ghcr.io/lawatch/gitignore-check:1.0.1"]}`
 - From source (Node 18+, no dependency): `{"command": "node", "args": ["/path/to/server.js"]}`
 
 Offline, read-only, no file access: you pass the `.gitignore` content and the paths.

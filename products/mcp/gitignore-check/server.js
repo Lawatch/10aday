@@ -3,7 +3,7 @@
 // MCP server (stdio, no dependency): is this path ignored by git, and by which .gitignore line?
 // Exact port of git's own rules (wildmatch.c + dir.c), checked against `git check-ignore` on ~80,000 random cases.
 const E = require('./engine.js');
-const SERVER = { name: 'gitignore-check', title: 'Gitignore checker (exact git rules)', version: '1.0.0' };
+const SERVER = { name: 'gitignore-check', title: 'Gitignore checker (exact git rules)', version: '1.0.1' };
 
 const SOURCES = {
   gitignore: { type: 'string', description: 'Content of the root .gitignore file.' },

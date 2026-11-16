@@ -8,17 +8,17 @@
     "source": "github",
     "subfolder": "products/mcp/gitignore-check"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "packages": [
     {
       "registryType": "oci",
-      "identifier": "ghcr.io/lawatch/gitignore-check:1.0.0",
+      "identifier": "ghcr.io/lawatch/gitignore-check:1.0.1",
       "transport": { "type": "stdio" }
     },
     {
       "registryType": "mcpb",
-      "identifier": "https://github.com/Lawatch/10aday/releases/download/gitignore-check-v1.0.0/gitignore-check-1.0.0.mcpb",
-      "fileSha256": "e6152c9a0b42b865e7f8b84d06e1bba7c0a1f463c2a21a16babebd4d4c4d70bf",
+      "identifier": "https://github.com/Lawatch/10aday/releases/download/gitignore-check-v1.0.1/gitignore-check-1.0.1.mcpb",
+      "fileSha256": "0d5c2320a013298a6b560a67ca11352513ac839666eabf6e02bc75f30d8009bf",
       "transport": { "type": "stdio" }
     }
   ]

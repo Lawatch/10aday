@@ -137,6 +137,8 @@ function parseGitignore(text, base, source) {
   return out;
 }
 
+const OPTIONS = { keepPrefix: true };
+
 function matchBasename(basename, x) {
   if (x.prefix === x.pattern.length) return basename === x.pattern;
   if (x.endsWith) return basename.endsWith(x.pattern.slice(1));
@@ -150,6 +152,9 @@ function matchPathname(path, x) {
   if (prefix > 0) {
     if (prefix > name.length) return false;
     if (name.slice(0, prefix) !== pat.slice(0, prefix)) return false;
+    // Recent git (seen in 2.56) matches the rest with the literal prefix still in place, so a "**" glued to it
+    // (".env**/**") acts like "*". Git 2.43 cut the prefix first, turning it into a leading "**/".
+    if (OPTIONS.keepPrefix) return wildmatch(pat, name, true);
     pat = pat.slice(prefix); name = name.slice(prefix);
     if (!pat.length && !name.length) return true;
   }
@@ -254,4 +259,4 @@ function explain(byDir) {
 }
 function wildmatchBroken(p) { return dowild(p, 0, 'x', 0, true) === ABORT_ALL && dowild(p, 0, '[', 0, true) === ABORT_ALL && dowild(p, 0, ']', 0, true) === ABORT_ALL; }
 
-module.exports = { wildmatch, parseGitignore, compile, check, explain };
+module.exports = { OPTIONS, wildmatch, parseGitignore, compile, check, explain };
