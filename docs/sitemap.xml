@@ -113,4 +113,40 @@
     <loc>https://lawatch.github.io/10aday/tools/go-pseudo-version/</loc>
     <lastmod>2026-11-13</lastmod>
   </url>
+  <url>
+    <loc>https://lawatch.github.io/10aday/mcp/</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://lawatch.github.io/10aday/mcp/package-exports/</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://lawatch.github.io/10aday/mcp/npm-why/</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://lawatch.github.io/10aday/mcp/npm-pack-check/</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://lawatch.github.io/10aday/mcp/gitignore-check/</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://lawatch.github.io/10aday/mcp/dockerignore-check/</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://lawatch.github.io/10aday/mcp/gitattributes-check/</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://lawatch.github.io/10aday/mcp/editorconfig-check/</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://lawatch.github.io/10aday/mcp/version-range-mcp/</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
 </urlset>

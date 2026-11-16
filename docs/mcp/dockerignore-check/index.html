@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dockerignore checker (exact Docker rules) — MCP server for Claude, Cursor, VS Code</title>
+<meta name="description" content="Which files does docker build send, and which .dockerignore line decides? Exact BuildKit rules.">
+<link rel="canonical" href="https://lawatch.github.io/10aday/mcp/dockerignore-check/">
+<meta property="og:title" content="Dockerignore checker (exact Docker rules) — MCP server for Claude, Cursor, VS Code">
+<meta property="og:description" content="Which files does docker build send, and which .dockerignore line decides? Exact BuildKit rules.">
+<meta property="og:url" content="https://lawatch.github.io/10aday/mcp/dockerignore-check/">
+<style>body{font-family:system-ui,-apple-system,Segoe UI,sans-serif;max-width:900px;margin:2rem auto;padding:0 1rem;line-height:1.6;color:#1d1d1f}
+h1{font-size:1.6rem;margin:.2rem 0 .6rem}h2{font-size:1.2rem;margin-top:2rem}h3{font-size:1.05rem;margin:.2rem 0}
+code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.9em}
+pre{background:#f6f8fa;padding:.7rem;overflow-x:auto;border-radius:6px}
+table{border-collapse:collapse;width:100%;margin:.6rem 0;font-size:.92rem}th,td{border:1px solid #ddd;padding:.35rem .5rem;text-align:left;vertical-align:top}th{background:#f6f6f6}
+.muted{color:#666}.card{border:1px solid #ddd;border-radius:8px;padding:.8rem 1rem;margin:.8rem 0}
+.btns{display:flex;flex-wrap:wrap;gap:.5rem;margin:.6rem 0}.btn{display:inline-block;padding:.35rem .7rem;border-radius:6px;border:1px solid #b8cdf5;background:#eef4ff;text-decoration:none;color:#1a4fb4;font-size:.9rem}
+footer{margin-top:3rem;font-size:.85rem;color:#666;border-top:1px solid #ddd;padding-top:1rem}</style>
+</head>
+<body>
+<p class="muted"><a href="../">MCP tools</a> › dockerignore-check</p>
+<h1>Dockerignore checker (exact Docker rules) — MCP server</h1>
+<p><strong>Which files does docker build send, and which .dockerignore line decides? Exact BuildKit rules.</strong></p>
+<div class="btns"><a class="btn" href="https://github.com/Lawatch/10aday/releases/download/dockerignore-check-v1.0.0/dockerignore-check-1.0.0.mcpb" data-goatcounter-click="install-dockerignore-check-claude">Claude Desktop (.mcpb)</a><a class="btn" href="vscode:mcp/install?%7B%22name%22%3A%22dockerignore-check%22%2C%22command%22%3A%22docker%22%2C%22args%22%3A%5B%22run%22%2C%22-i%22%2C%22--rm%22%2C%22-v%22%2C%22%24%7BworkspaceFolder%7D%3A%24%7BworkspaceFolder%7D%3Aro%22%2C%22-w%22%2C%22%24%7BworkspaceFolder%7D%22%2C%22ghcr.io/lawatch/dockerignore-check%3A1.0.0%22%5D%7D" data-goatcounter-click="install-dockerignore-check-vscode">Install in VS Code</a><a class="btn" href="cursor://anysphere.cursor-deeplink/mcp/install?name=dockerignore-check&amp;config=eyJjb21tYW5kIjoiZG9ja2VyIiwiYXJncyI6WyJydW4iLCItaSIsIi0tcm0iLCItdiIsIiR7d29ya3NwYWNlRm9sZGVyfToke3dvcmtzcGFjZUZvbGRlcn06cm8iLCItdyIsIiR7d29ya3NwYWNlRm9sZGVyfSIsImdoY3IuaW8vbGF3YXRjaC9kb2NrZXJpZ25vcmUtY2hlY2s6MS4wLjAiXX0%3D" data-goatcounter-click="install-dockerignore-check-cursor">Install in Cursor</a><a class="btn" href="https://github.com/Lawatch/10aday/tree/main/products/mcp/dockerignore-check" data-goatcounter-click="source-dockerignore-check">Source</a></div>
+<p class="muted">Registry name <code>io.github.Lawatch/dockerignore-check</code>, version 1.0.0. The VS Code and Cursor buttons run the Docker image and give it read-only access to the open project.</p>
+<h2>Other clients</h2>
+<pre><code>docker run -i --rm -v &quot;$PWD:$PWD:ro&quot; -w &quot;$PWD&quot; ghcr.io/lawatch/dockerignore-check:1.0.0</code></pre>
+<p>JSON config (Claude Desktop, Windsurf, Cline…), replace the path:</p>
+<pre><code>{
+  &quot;mcpServers&quot;: {
+    &quot;dockerignore-check&quot;: {
+      &quot;command&quot;: &quot;docker&quot;,
+      &quot;args&quot;: [
+        &quot;run&quot;,
+        &quot;-i&quot;,
+        &quot;--rm&quot;,
+        &quot;-v&quot;,
+        &quot;/path/to/project:/path/to/project:ro&quot;,
+        &quot;-w&quot;,
+        &quot;/path/to/project&quot;,
+        &quot;ghcr.io/lawatch/dockerignore-check:1.0.0&quot;
+      ]
+    }
+  }
+}</code></pre>
+<h2>Documentation</h2>
+<p><strong>Which files does <code>docker build</code> really send, and which <code>.dockerignore</code> line decides?</strong> Docker's exact rules, without Docker.</p>
+<p><code>.dockerignore</code> is not <code>.gitignore</code>, and AI assistants often mix them up:
+- <code>*.log</code> only matches at the <strong>root</strong> of the context. <code>api/debug.log</code> is still sent. Use <code>**/*.log</code>.
+- <code>node_modules</code> does not exclude <code>packages/web/node_modules</code>. Use <code>**/node_modules</code>.
+- A trailing <code>/</code> is ignored (<code>build/</code> also matches a file named <code>build</code>), a leading <code>/</code> is removed.
+- <code>#</code> is a comment only in column 1. <code># secrets</code> is a pattern.
+- The last matching line wins, and <code>!</code> can re-include a file inside an excluded directory (unlike git).</p>
+<h2>Tools</h2>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>check_dockerignore</code></td>
+<td>For each path: sent or excluded, the line that decides, and why. Also the full list of what Docker sends, and a warning when secrets (<code>.env</code>, <code>.git/</code>, keys, <code>.npmrc</code>) end up in the context. Up to 5,000 paths per call.</td>
+</tr>
+<tr>
+<td><code>explain_dockerignore</code></td>
+<td>Every line in plain English, as Docker reads it, plus warnings for the classic mistakes (root-only patterns, indented <code>#</code>, <code>!</code> with nothing to re-include, invalid patterns).</td>
+</tr>
+</tbody>
+</table>
+<h2>Example</h2>
+<pre><code class="language-json">{ &quot;name&quot;: &quot;check_dockerignore&quot;, &quot;arguments&quot;: {
+  &quot;dockerignore&quot;: &quot;*.log\nnode_modules\n.env\n!node_modules/keep\n&quot;,
+  &quot;paths&quot;: [&quot;app.log&quot;, &quot;api/debug.log&quot;, &quot;node_modules/x/y.js&quot;, &quot;packages/web/node_modules/z.js&quot;, &quot;api/.env&quot;, &quot;node_modules/keep&quot;] } }
+</code></pre>
+<p>Result: <code>app.log</code> excluded (line 1), <code>api/debug.log</code> <strong>sent</strong> (<code>*.log</code> is root-only), <code>node_modules/x/y.js</code> excluded (line 2),
+<code>packages/web/node_modules/z.js</code> <strong>sent</strong>, <code>api/.env</code> <strong>sent</strong> + secret warning, <code>node_modules/keep</code> sent (line 4).</p>
+<p>Tip: pass the output of <code>git ls-files</code> or <code>find . -type f</code> as <code>paths</code>.</p>
+<h2>How exact is it?</h2>
+<p><code>engine.js</code> is a line-by-line port of the code Docker BuildKit uses to send the build context:
+<code>moby/patternmatcher</code> (parsing with <code>ignorefile.ReadAll</code>, pattern compilation, matching with parent results) and the
+filtered walk of <code>tonistiigi/fsutil</code>. <code>oracle/main.go</code> runs that real Go code on real temporary directories.
+<code>test.js</code> compares both on random <code>.dockerignore</code> files and trees: 42,000 cases, 0 differences.
+<code>test.sh</code> replays 1,000 recorded cases and, when Go is installed, 2,000 new live ones.</p>
+<h2>Install</h2>
+<ul>
+<li>Claude Desktop: open <code>dockerignore-check-1.0.0.mcpb</code> from the <a href="https://github.com/Lawatch/10aday/releases/tag/dockerignore-check-v1.0.0">GitHub release</a>.</li>
+<li>Any MCP client (Docker): <code>{"command": "docker", "args": ["run", "-i", "--rm", "ghcr.io/lawatch/dockerignore-check:1.0.0"]}</code></li>
+<li>From source (Node 18+, no dependency): <code>{"command": "node", "args": ["/path/to/server.js"]}</code></li>
+</ul>
+<p>Offline, read-only, no file access: you pass the <code>.dockerignore</code> content and the paths.</p>
+<p>Built by AI agents (project <a href="https://github.com/Lawatch/10aday">10aday</a>). MIT license.</p>
+<h2>More tools from the same factory</h2>
+<p><a href="../package-exports/">package-exports</a> · <a href="../npm-why/">npm-why</a> · <a href="../npm-pack-check/">npm-pack-check</a> · <a href="../gitignore-check/">gitignore-check</a> · <a href="../gitattributes-check/">gitattributes-check</a> · <a href="../editorconfig-check/">editorconfig-check</a> · <a href="../version-range-mcp/">version-range-mcp</a></p>
+<footer>Free, open source (MIT), offline, read-only. Built and maintained by AI agents (project <a href="https://github.com/Lawatch/10aday">10aday</a>). Listed on the <a href="https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Lawatch">official MCP registry</a>.</footer>
+<script data-goatcounter="https://10aday.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

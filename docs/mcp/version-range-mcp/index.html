@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Version range checker (8 package managers) — MCP server for Claude, Cursor, VS Code</title>
+<meta name="description" content="Which version a dependency constraint installs: npm, Cargo, pip, Maven, Gradle, NuGet, Composer, Gem">
+<link rel="canonical" href="https://lawatch.github.io/10aday/mcp/version-range-mcp/">
+<meta property="og:title" content="Version range checker (8 package managers) — MCP server for Claude, Cursor, VS Code">
+<meta property="og:description" content="Which version a dependency constraint installs: npm, Cargo, pip, Maven, Gradle, NuGet, Composer, Gem">
+<meta property="og:url" content="https://lawatch.github.io/10aday/mcp/version-range-mcp/">
+<style>body{font-family:system-ui,-apple-system,Segoe UI,sans-serif;max-width:900px;margin:2rem auto;padding:0 1rem;line-height:1.6;color:#1d1d1f}
+h1{font-size:1.6rem;margin:.2rem 0 .6rem}h2{font-size:1.2rem;margin-top:2rem}h3{font-size:1.05rem;margin:.2rem 0}
+code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.9em}
+pre{background:#f6f8fa;padding:.7rem;overflow-x:auto;border-radius:6px}
+table{border-collapse:collapse;width:100%;margin:.6rem 0;font-size:.92rem}th,td{border:1px solid #ddd;padding:.35rem .5rem;text-align:left;vertical-align:top}th{background:#f6f6f6}
+.muted{color:#666}.card{border:1px solid #ddd;border-radius:8px;padding:.8rem 1rem;margin:.8rem 0}
+.btns{display:flex;flex-wrap:wrap;gap:.5rem;margin:.6rem 0}.btn{display:inline-block;padding:.35rem .7rem;border-radius:6px;border:1px solid #b8cdf5;background:#eef4ff;text-decoration:none;color:#1a4fb4;font-size:.9rem}
+footer{margin-top:3rem;font-size:.85rem;color:#666;border-top:1px solid #ddd;padding-top:1rem}</style>
+</head>
+<body>
+<p class="muted"><a href="../">MCP tools</a> › version-range-mcp</p>
+<h1>Version range checker (8 package managers) — MCP server</h1>
+<p><strong>Which version a dependency constraint installs: npm, Cargo, pip, Maven, Gradle, NuGet, Composer, Gem</strong></p>
+<div class="btns"><a class="btn" href="https://github.com/Lawatch/10aday/releases/download/exp007-v1.2.0/version-range-mcp-1.2.0.mcpb" data-goatcounter-click="install-version-range-mcp-claude">Claude Desktop (.mcpb)</a><a class="btn" href="vscode:mcp/install?%7B%22name%22%3A%22version-range-mcp%22%2C%22command%22%3A%22docker%22%2C%22args%22%3A%5B%22run%22%2C%22-i%22%2C%22--rm%22%2C%22ghcr.io/lawatch/version-range-mcp%3A1.2.0%22%5D%7D" data-goatcounter-click="install-version-range-mcp-vscode">Install in VS Code</a><a class="btn" href="cursor://anysphere.cursor-deeplink/mcp/install?name=version-range-mcp&amp;config=eyJjb21tYW5kIjoiZG9ja2VyIiwiYXJncyI6WyJydW4iLCItaSIsIi0tcm0iLCJnaGNyLmlvL2xhd2F0Y2gvdmVyc2lvbi1yYW5nZS1tY3A6MS4yLjAiXX0%3D" data-goatcounter-click="install-version-range-mcp-cursor">Install in Cursor</a><a class="btn" href="https://github.com/Lawatch/10aday/tree/main/products/EXP-007-serveur-mcp-versions" data-goatcounter-click="source-version-range-mcp">Source</a></div>
+<p class="muted">Registry name <code>io.github.Lawatch/version-range-mcp</code>, version 1.2.0. The VS Code and Cursor buttons run the Docker image and give it read-only access to the open project.</p>
+<h2>Other clients</h2>
+<pre><code>docker run -i --rm ghcr.io/lawatch/version-range-mcp:1.2.0</code></pre>
+<p>JSON config (Claude Desktop, Windsurf, Cline…), replace the path:</p>
+<pre><code>{
+  &quot;mcpServers&quot;: {
+    &quot;version-range-mcp&quot;: {
+      &quot;command&quot;: &quot;docker&quot;,
+      &quot;args&quot;: [
+        &quot;run&quot;,
+        &quot;-i&quot;,
+        &quot;--rm&quot;,
+        &quot;ghcr.io/lawatch/version-range-mcp:1.2.0&quot;
+      ]
+    }
+  }
+}</code></pre>
+<h2>Documentation</h2>
+<p>An MCP server that tells an AI assistant <strong>which version a dependency constraint really installs today</strong>,
+using the exact rules of each package manager: npm, Cargo, Composer, pip, RubyGems, Maven, Gradle, NuGet.
+It reads the published versions live from npmjs, crates.io, Packagist, PyPI, RubyGems, Maven Central and NuGet (read-only, no key).</p>
+<p>Why: the same text means different things. <code>[1.0,2.0)</code> takes <code>2.0-rc1</code> in Maven but not in Gradle; <code>1.0</code> means "1.0 or higher, lowest wins" in NuGet;
+<code>^0.2</code> stops before <code>0.3.0</code>. Assistants often guess these rules wrong.</p>
+<p>The engines are line-by-line ports of each tool's own code, checked against the real tools (several million cases, 0 mismatch,
+see <code>../EXP-004-outils-dev-pub-crypto/</code>). No key, no dependency. Only <code>resolve_from_registry</code> uses the network.</p>
+<h2>Tools</h2>
+<ul>
+<li><code>resolve_from_registry(ecosystem, package, constraint)</code> → the version installed today, the newest published one, and the 10 newest that match. Example: <code>pip</code>, <code>requests</code>, <code>~=2.31</code> → <code>2.34.2</code>.</li>
+<li><code>check_version_constraint(ecosystem, constraint, versions)</code> → for each version: accepted or not; plus the version the tool would pick.</li>
+<li><code>compare_across_ecosystems(constraint, versions)</code> → the same constraint in every package manager, grouped by identical result.</li>
+<li><code>sort_versions(ecosystem, versions)</code> → versions in that tool's order.</li>
+</ul>
+<h2>Install</h2>
+<ul>
+<li><strong>Claude Desktop, one click</strong>: download <a href="https://github.com/Lawatch/10aday/releases/download/exp007-v1.2.0/version-range-mcp-1.2.0.mcpb">version-range-mcp-1.2.0.mcpb</a> and open it.</li>
+<li><strong>Docker</strong> (any MCP client):</li>
+</ul>
+<pre><code class="language-json">{ &quot;mcpServers&quot;: { &quot;version-range&quot;: { &quot;command&quot;: &quot;docker&quot;, &quot;args&quot;: [&quot;run&quot;, &quot;-i&quot;, &quot;--rm&quot;, &quot;ghcr.io/lawatch/version-range-mcp:1.2.0&quot;] } } }
+</code></pre>
+<ul>
+<li><strong>Node 18+, no Docker</strong>: copy this folder, then</li>
+</ul>
+<pre><code class="language-json">{ &quot;mcpServers&quot;: { &quot;version-range&quot;: { &quot;command&quot;: &quot;node&quot;, &quot;args&quot;: [&quot;/path/to/server.js&quot;] } } }
+</code></pre>
+<p>Listed in the official MCP registry as <code>io.github.Lawatch/version-range-mcp</code>.</p>
+<h2>Example</h2>
+<p>Ask your assistant: <em>"Which Guava version does <code>[32.0,33.0)</code> give me in Maven?"</em> → <code>32.1.3-jre</code> (newest published: <code>33.8.0-jre</code>).
+Or: <em>"Does Maven's <code>[1.0,2.0)</code> accept 2.0-rc1? And Gradle's?"</em> → Maven: yes. Gradle: no.</p>
+<p>Built and maintained by AI agents (project <a href="https://github.com/Lawatch/10aday">10aday</a>). MIT licence; node-semver is ISC (<code>engines/semver.LICENSE</code>). Tests: <code>node test.js</code>.</p>
+<h2>More tools from the same factory</h2>
+<p><a href="../package-exports/">package-exports</a> · <a href="../npm-why/">npm-why</a> · <a href="../npm-pack-check/">npm-pack-check</a> · <a href="../gitignore-check/">gitignore-check</a> · <a href="../dockerignore-check/">dockerignore-check</a> · <a href="../gitattributes-check/">gitattributes-check</a> · <a href="../editorconfig-check/">editorconfig-check</a></p>
+<footer>Free, open source (MIT), offline, read-only. Built and maintained by AI agents (project <a href="https://github.com/Lawatch/10aday">10aday</a>). Listed on the <a href="https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Lawatch">official MCP registry</a>.</footer>
+<script data-goatcounter="https://10aday.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

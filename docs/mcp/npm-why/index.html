@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>npm why (who installs this package) — MCP server for Claude, Cursor, VS Code</title>
+<meta name="description" content="Why a package is in node_modules, which versions, who pulls it in: npm explain from package-lock.">
+<link rel="canonical" href="https://lawatch.github.io/10aday/mcp/npm-why/">
+<meta property="og:title" content="npm why (who installs this package) — MCP server for Claude, Cursor, VS Code">
+<meta property="og:description" content="Why a package is in node_modules, which versions, who pulls it in: npm explain from package-lock.">
+<meta property="og:url" content="https://lawatch.github.io/10aday/mcp/npm-why/">
+<style>body{font-family:system-ui,-apple-system,Segoe UI,sans-serif;max-width:900px;margin:2rem auto;padding:0 1rem;line-height:1.6;color:#1d1d1f}
+h1{font-size:1.6rem;margin:.2rem 0 .6rem}h2{font-size:1.2rem;margin-top:2rem}h3{font-size:1.05rem;margin:.2rem 0}
+code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.9em}
+pre{background:#f6f8fa;padding:.7rem;overflow-x:auto;border-radius:6px}
+table{border-collapse:collapse;width:100%;margin:.6rem 0;font-size:.92rem}th,td{border:1px solid #ddd;padding:.35rem .5rem;text-align:left;vertical-align:top}th{background:#f6f6f6}
+.muted{color:#666}.card{border:1px solid #ddd;border-radius:8px;padding:.8rem 1rem;margin:.8rem 0}
+.btns{display:flex;flex-wrap:wrap;gap:.5rem;margin:.6rem 0}.btn{display:inline-block;padding:.35rem .7rem;border-radius:6px;border:1px solid #b8cdf5;background:#eef4ff;text-decoration:none;color:#1a4fb4;font-size:.9rem}
+footer{margin-top:3rem;font-size:.85rem;color:#666;border-top:1px solid #ddd;padding-top:1rem}</style>
+</head>
+<body>
+<p class="muted"><a href="../">MCP tools</a> › npm-why</p>
+<h1>npm why (who installs this package) — MCP server</h1>
+<p><strong>Why a package is in node_modules, which versions, who pulls it in: npm explain from package-lock.</strong></p>
+<div class="btns"><a class="btn" href="https://github.com/Lawatch/10aday/releases/download/npm-why-v1.0.0/npm-why-1.0.0.mcpb" data-goatcounter-click="install-npm-why-claude">Claude Desktop (.mcpb)</a><a class="btn" href="vscode:mcp/install?%7B%22name%22%3A%22npm-why%22%2C%22command%22%3A%22docker%22%2C%22args%22%3A%5B%22run%22%2C%22-i%22%2C%22--rm%22%2C%22-v%22%2C%22%24%7BworkspaceFolder%7D%3A%24%7BworkspaceFolder%7D%3Aro%22%2C%22-w%22%2C%22%24%7BworkspaceFolder%7D%22%2C%22ghcr.io/lawatch/npm-why%3A1.0.0%22%5D%7D" data-goatcounter-click="install-npm-why-vscode">Install in VS Code</a><a class="btn" href="cursor://anysphere.cursor-deeplink/mcp/install?name=npm-why&amp;config=eyJjb21tYW5kIjoiZG9ja2VyIiwiYXJncyI6WyJydW4iLCItaSIsIi0tcm0iLCItdiIsIiR7d29ya3NwYWNlRm9sZGVyfToke3dvcmtzcGFjZUZvbGRlcn06cm8iLCItdyIsIiR7d29ya3NwYWNlRm9sZGVyfSIsImdoY3IuaW8vbGF3YXRjaC9ucG0td2h5OjEuMC4wIl19" data-goatcounter-click="install-npm-why-cursor">Install in Cursor</a><a class="btn" href="https://github.com/Lawatch/10aday/tree/main/products/mcp/npm-why" data-goatcounter-click="source-npm-why">Source</a></div>
+<p class="muted">Registry name <code>io.github.Lawatch/npm-why</code>, version 1.0.0. The VS Code and Cursor buttons run the Docker image and give it read-only access to the open project.</p>
+<h2>Other clients</h2>
+<pre><code>docker run -i --rm -v &quot;$PWD:$PWD:ro&quot; -w &quot;$PWD&quot; ghcr.io/lawatch/npm-why:1.0.0</code></pre>
+<p>JSON config (Claude Desktop, Windsurf, Cline…), replace the path:</p>
+<pre><code>{
+  &quot;mcpServers&quot;: {
+    &quot;npm-why&quot;: {
+      &quot;command&quot;: &quot;docker&quot;,
+      &quot;args&quot;: [
+        &quot;run&quot;,
+        &quot;-i&quot;,
+        &quot;--rm&quot;,
+        &quot;-v&quot;,
+        &quot;/path/to/project:/path/to/project:ro&quot;,
+        &quot;-w&quot;,
+        &quot;/path/to/project&quot;,
+        &quot;ghcr.io/lawatch/npm-why:1.0.0&quot;
+      ]
+    }
+  }
+}</code></pre>
+<h2>Documentation</h2>
+<p>Answers <strong>"why is X in my node_modules, which version, and who pulls it in?"</strong> straight from <code>package-lock.json</code>,
+exactly like <code>npm explain X</code>, but without node_modules and without running npm.
+Built for AI assistants (Claude, Cursor, VS Code…): a lockfile is thousands of lines, the same package often has
+several copies in nested <code>node_modules</code>, and which copy a package gets depends on npm's resolution rules,
+overrides and workspaces. Assistants guess; this server computes it.</p>
+<h2>Tools</h2>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>What it answers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>why_npm_package</code></td>
+<td>Every installed copy of a package (version, folder), direct or not, dev-only / optional / peer, who requires it with which range, and the full chains from your <code>package.json</code>. Give <code>version: "&lt;4.17.21"</code> after a security alert to keep only the vulnerable copies and see which top-level dependency to upgrade.</td>
+</tr>
+<tr>
+<td><code>npm_duplicates</code></td>
+<td>Packages installed in more than one version (e.g. 4 versions of <code>chalk</code>), where, and which package asks for each version. Useful for bundle size, "two copies of React" bugs, <code>npm dedupe</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>Input: <code>lockfile_path</code> (the <code>package-lock.json</code> / <code>npm-shrinkwrap.json</code>, or the project folder; the <code>package.json</code>
+next to it is read for <code>overrides</code>) or <code>lockfile</code> (the file content). Lockfile versions 2 and 3 (npm 7 and later).</p>
+<h2>Example</h2>
+<pre><code class="language-json">{ &quot;name&quot;: &quot;why_npm_package&quot;, &quot;arguments&quot;: { &quot;lockfile_path&quot;: &quot;.&quot;, &quot;package&quot;: &quot;nth-check&quot;, &quot;version&quot;: &quot;&lt;2.0.1&quot; } }
+</code></pre>
+<pre><code class="language-text">nth-check &lt;2.0.1: 2 copies in node_modules, version 1.0.2. Only pulled in by other packages: cra-docs, svg-term-cli@2.1.1, react-scripts@5.0.1.
+  node_modules/svgo/node_modules/nth-check (installed in production)
+  your project › dev ^2.1.1 → svg-term-cli@2.1.1 › ^1.0.3 → svgo@1.3.2 › ^2.0.0 → css-select@2.1.0 › ^1.0.2 → nth-check@1.0.2
+</code></pre>
+<h2>Exact, not approximate</h2>
+<p>The engine rebuilds the tree the way npm 10 does (<code>@npmcli/arborist</code> 8 <code>loadVirtual</code>): lockfile order, nested
+<code>node_modules</code> resolution, workspaces, <code>npm:</code> aliases, <code>file:</code> dependencies, bundled and peer dependencies,
+<code>acceptDependencies</code>, and <code>overrides</code> (including nested ones and <code>$references</code>). Version checks use npm's own code
+(<code>dep-valid.js</code>, <code>semver</code>, <code>npm-package-arg</code>, bundled unmodified in <code>depvalid.js</code>).</p>
+<p>Tested against npm's own code on <strong>120 lockfiles and 52,481 packages</strong> (real projects such as npm/cli, TypeScript,
+Playwright, create-react-app, socket.io, plus 80 random projects and override cases): <strong>0 differences</strong> in versions,
+dependents, specs, overrides and dev/optional flags. <code>test.sh</code> replays recorded answers and, when the npm registry is
+reachable, compares fresh lockfiles made by the real npm.</p>
+<p>One deliberate difference: when a workspace entry of the lockfile has no <code>"name"</code>, npm's lockfile-only reader loses
+the workspace name; we take it from the <code>node_modules</code> link, which is what a real install shows.</p>
+<h2>Install</h2>
+<ul>
+<li><strong>Claude Desktop</strong>: download <code>npm-why-1.0.0.mcpb</code> from the <a href="https://github.com/Lawatch/10aday/releases">releases</a> and open it.</li>
+<li><strong>Any MCP client (Node 18+)</strong>: <code>node server.js</code> (no dependency) from this folder.</li>
+<li><strong>Docker</strong>: <code>docker run -i --rm -v "$PWD:/work:ro" -w /work ghcr.io/lawatch/npm-why:1.0.0</code> (mount the project to use <code>lockfile_path</code>).</li>
+<li>Registry name: <code>io.github.Lawatch/npm-why</code>.</li>
+</ul>
+<p>Offline, read-only. MIT license. Built and maintained by AI agents (project <a href="https://github.com/Lawatch/10aday">10aday</a>).</p>
+<h2>More tools from the same factory</h2>
+<p><a href="../package-exports/">package-exports</a> · <a href="../npm-pack-check/">npm-pack-check</a> · <a href="../gitignore-check/">gitignore-check</a> · <a href="../dockerignore-check/">dockerignore-check</a> · <a href="../gitattributes-check/">gitattributes-check</a> · <a href="../editorconfig-check/">editorconfig-check</a> · <a href="../version-range-mcp/">version-range-mcp</a></p>
+<footer>Free, open source (MIT), offline, read-only. Built and maintained by AI agents (project <a href="https://github.com/Lawatch/10aday">10aday</a>). Listed on the <a href="https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Lawatch">official MCP registry</a>.</footer>
+<script data-goatcounter="https://10aday.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
