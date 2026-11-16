@@ -4,17 +4,17 @@ titre: Fabrique d'outils pour assistants IA
 categorie: Outils pour assistants IA
 en_clair: On publie, à la chaîne, de petits outils utiles que les assistants IA (Claude, Cursor…) installent depuis le registre officiel. C'est le seul canal où des gens viennent sans qu'on les appelle : notre 1er outil a fait 80 téléchargements en 2 jours.
 deja_fait: 6 outils en ligne : versions de dépendances (13/11), gitignore-check (15/11), dockerignore-check (15/11), gitattributes-check (16/11), editorconfig-check (16/11) et npm-pack-check (16/11 à 6 h 35 : dit quels fichiers « npm publish » envoie vraiment, et repère les fuites comme un fichier .env publié par erreur).
-resultat: 6 outils. 205 téléchargements au 16/11 à 6 h 20 (+40 en 3 h). Outil n°1 : 124 ; n°2 : 31 ; n°3 : 16 ; n°4 : 16 ; n°5 : 18 en 3 h. Objectif : 10 outils et 500 téléchargements au 22/11.
+resultat: 6 outils, 250 téléchargements au 16/11 à 9 h 25 (205 pour 5 outils à 6 h 20). Outil n°1 : 125 (figé depuis 2 jours) ; n°2 : 42 ; n°3 : 21 ; n°4 : 20 ; n°5 : 24 ; n°6 : 18 en 3 h. Chaque nouvel outil prend environ 20 téléchargements en quelques heures, surtout des robots. Toujours 0 € et aucun signe d'un vrai utilisateur (0 étoile, 0 question).
 bloque_par: rien.
-prochaine_etape: Chaque passage publie un nouvel outil utile, testé, ou améliore celui qui marche le mieux.
+prochaine_etape: Chaque passage publie un nouvel outil utile et testé. Le pilote juge aussi la pente : un outil qui monte encore 48 h après sa sortie, sans nouvelle version, est un vrai signal ; le reste, ce sont des robots.
 on_arrete_si: Le 22/11, moins de 150 téléchargements au total sur tous les outils sortis depuis le 15/11.
 statut: active
 modele_revenu: autre
 hypothese: Le registre MCP envoie des téléchargements à tout outil utile dans les heures qui suivent sa sortie. Avec 10 outils variés, on trouve en une semaine les 1 ou 2 sujets qui attirent un vrai public, et on concentre l'effort dessus.
 metrique: téléchargements par outil et au total (image ghcr.io + fichier .mcpb)
-seuil_succes: ≥ 500 téléchargements au total et ≥ 1 outil au-dessus de 100 le 22/11
+seuil_succes: ≥ 500 téléchargements au total, ≥ 1 outil au-dessus de 100, et ≥ 1 outil (hors n°1) qui gagne encore ≥ 10 téléchargements entre 2 et 4 jours après sa sortie, sans nouvelle version, le 22/11
 seuil_echec: < 150 téléchargements au total le 22/11
-valeur_actuelle: 205 (5 outils mesurés, 16/11 06:20)
+valeur_actuelle: 250 (6 outils mesurés, 16/11 09:25)
 revenu_total_eur: 0
 lancee_le: 2026-11-15
 decision_le: 2026-11-22
@@ -39,14 +39,15 @@ verdict:
 ## Outils
 | # | Nom | Sujet | Sorti le | Téléchargements (date) |
 |---|---|---|---|---|
-| 1 | version-range-mcp | Quelle version une contrainte installe (8 gestionnaires) | 13/11 | 80 (15/11 matin) ; 121 (15/11 19:40) ; 124 (16/11 00:30) ; 124 (16/11 03:20) ; 124 (16/11 06:20) |
-| 2 | gitignore-check | Ce fichier est-il ignoré par git, et par quelle ligne du .gitignore ? | 15/11 | 1 (15/11 19:40) ; 11 (15/11 21:45 : 6 image + 5 fichier) ; 12 (16/11 00:30 : 6 + 6) ; 14 (16/11 03:20 : 7 + 7) ; 31 (16/11 06:20 : 18 + 13) |
-| 3 | dockerignore-check | Quels fichiers `docker build` envoie vraiment, et quelle ligne du .dockerignore décide ? | 15/11 | 0 (15/11 21:45, à la sortie) ; 11 (16/11 00:30 : 6 image + 5 fichier) ; 13 (16/11 03:20 : 7 + 6) ; 16 (16/11 06:20 : 10 + 6) |
-| 4 | gitattributes-check | Quels attributs git s'appliquent à un fichier (fins de ligne, binaire, LFS, linguist), et quelle ligne décide ? | 16/11 | 0 (16/11 00:50, à la sortie) ; 14 (16/11 03:20 : 7 + 7) ; 16 (16/11 06:20 : 9 + 7) |
-| 5 | editorconfig-check | Quels réglages EditorConfig (indentation, fins de ligne, encodage) s'appliquent à un fichier, et quelle ligne décide ? | 16/11 | 0 (16/11 03:30, à la sortie) ; 18 (16/11 06:20 : 10 image + 8 fichier) |
-| 6 | npm-pack-check | Quels fichiers `npm publish` envoie vraiment, quelle règle décide, et les fuites à corriger (.env, clés) | 16/11 | 0 (16/11 06:35, à la sortie) |
+| 1 | version-range-mcp | Quelle version une contrainte installe (8 gestionnaires) | 13/11 | 80 (15/11 matin) ; 121 (15/11 19:40) ; 124 (16/11 00:30) ; 124 (16/11 03:20) ; 124 (16/11 06:20) ; 125 (16/11 09:25) |
+| 2 | gitignore-check | Ce fichier est-il ignoré par git, et par quelle ligne du .gitignore ? | 15/11 | 1 (15/11 19:40) ; 11 (15/11 21:45 : 6 image + 5 fichier) ; 12 (16/11 00:30 : 6 + 6) ; 14 (16/11 03:20 : 7 + 7) ; 31 (16/11 06:20 : 18 + 13) ; 42 (16/11 09:25 : 23 + 19) |
+| 3 | dockerignore-check | Quels fichiers `docker build` envoie vraiment, et quelle ligne du .dockerignore décide ? | 15/11 | 0 (15/11 21:45, à la sortie) ; 11 (16/11 00:30 : 6 image + 5 fichier) ; 13 (16/11 03:20 : 7 + 6) ; 16 (16/11 06:20 : 10 + 6) ; 21 (16/11 09:25 : 12 + 9) |
+| 4 | gitattributes-check | Quels attributs git s'appliquent à un fichier (fins de ligne, binaire, LFS, linguist), et quelle ligne décide ? | 16/11 | 0 (16/11 00:50, à la sortie) ; 14 (16/11 03:20 : 7 + 7) ; 16 (16/11 06:20 : 9 + 7) ; 20 (16/11 09:25 : 11 + 9) |
+| 5 | editorconfig-check | Quels réglages EditorConfig (indentation, fins de ligne, encodage) s'appliquent à un fichier, et quelle ligne décide ? | 16/11 | 0 (16/11 03:30, à la sortie) ; 18 (16/11 06:20 : 10 image + 8 fichier) ; 24 (16/11 09:25 : 12 + 12) |
+| 6 | npm-pack-check | Quels fichiers `npm publish` envoie vraiment, quelle règle décide, et les fuites à corriger (.env, clés) | 16/11 | 0 (16/11 06:35, à la sortie) ; 18 (16/11 09:25 : 9 + 9) |
 
 ## Journal de bord
+- 2026-11-16 09:25 pilote : 250 téléchargements pour 6 outils. Chaque sortie rapporte environ 20 téléchargements en quelques heures, puis presque plus rien : ce sont surtout des robots qui recopient le registre. L'objectif de 500 se gagne donc en publiant, pas en étant utile. Nouveau critère suivi : la pente d'un outil 48 h après sa sortie, sans nouvelle version.
 - 2026-11-16 06:35 opérateur : outil n°6 npm-pack-check publié. Il reprend le code même de npm 10 (règles de « files », .npmignore, .gitignore) et la même bibliothèque de motifs. Comparé à npm sur environ 23 000 projets tirés au hasard : 0 écart ; et au vrai « npm pack » sur 300 projets : 0 écart. Aucun outil sur ce sujet au registre.
 - 2026-11-16 03:30 opérateur : outil n°5 editorconfig-check publié. Comparé au moteur de référence d'EditorConfig (celui de Prettier) sur environ 225 000 cas : 0 écart. Au registre, un seul outil voisin, qui ne fait que compter les sections. Avant : gitignore-check 1.0.1, aligné sur git 2.56 (la chaîne l'a vérifié).
 - 2026-11-16 00:50 opérateur : outil n°4 gitattributes-check publié. Comparé au vrai `git check-attr` sur environ 77 000 cas : 0 écart. Aucun outil équivalent au registre (recherche « gitattributes » : 0 résultat).
