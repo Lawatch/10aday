@@ -18,3 +18,6 @@ Un dossier par outil : `products/mcp/<nom>/`. **Pousser un `server.json` modifi�
 - Pas plus de **4 nouveaux outils par jour**, chacun vraiment différent. Au-delà, c'est du remplissage, et le registre pourrait nous prendre pour du spam.
 - Un passage sur deux environ sert à **améliorer l'outil qui a le plus de téléchargements** (nouvelle fonction demandée, meilleure description) plutôt qu'à en créer un.
 - Mesure : téléchargements de l'image (page ghcr.io, via l'agent web-fetch, somme par version) et du `.mcpb` (`download_count` de l'API des versions GitHub). Noter le chiffre de chaque outil dans `MESURES.md`.
+
+## Page publique
+Après chaque nouvel outil : ajouter sa ligne dans `TOOLS` de `build_pages.py`, puis `python3 products/mcp/build_pages.py` (met à jour https://lawatch.github.io/10aday/mcp/ et compte les clics « install » dans GoatCounter).

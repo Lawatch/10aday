@@ -3,10 +3,10 @@ id: EXP-008
 titre: Fabrique d'outils pour assistants IA
 categorie: Outils pour assistants IA
 en_clair: On publie, à la chaîne, de petits outils utiles que les assistants IA (Claude, Cursor…) installent depuis le registre officiel. C'est le seul canal où des gens viennent sans qu'on les appelle : notre 1er outil a fait 80 téléchargements en 2 jours.
-deja_fait: 8 outils en ligne : versions de dépendances (13/11), gitignore-check (15/11), dockerignore-check (15/11), gitattributes-check (16/11), editorconfig-check (16/11), npm-pack-check (16/11), npm-why (16/11) et package-exports (16/11 à 15 h 32 : dit quel fichier Node charge pour un import ou un require, et pourquoi, à partir du package.json ; donne l'erreur exacte de Node quand ça échoue).
-resultat: 8 outils. 250 téléchargements au 16/11 à 9 h 25. Fichiers d'installation seuls : 93 à 15 h 20, contre 82 à 12 h 20 (+6 pour l'outil sorti à 12 h 36, +5 pour tous les autres). Toujours 0 € et aucun signe d'un vrai utilisateur (0 étoile, 0 question).
+deja_fait: 8 outils en ligne (versions de dépendances, gitignore, dockerignore, gitattributes, editorconfig, npm-pack, npm-why, package-exports). Depuis le 16/11 à 18 h 30 : une page en anglais présente les 8 outils, avec un bouton d'installation en un clic pour Claude Desktop, VS Code et Cursor : https://lawatch.github.io/10aday/mcp/
+resultat: 8 outils. Fichiers d'installation : 99 téléchargements au 16/11 à 18 h 20 (93 à 15 h 20). Les 6 nouveaux sont tous pour l'outil sorti à 15 h 32 ; les 7 autres n'ont rien pris en 3 h. Toujours 0 €, 0 étoile, 0 question. Chaque clic sur un bouton d'installation de la nouvelle page est compté à part : ce sera le 1er signe d'un vrai humain.
 bloque_par: rien.
-prochaine_etape: Plus de nouvel outil aujourd'hui : 5 sont sortis le 16/11, au-delà de la limite de 4 par jour fixée par la fabrique. Le pilote compte les 8 outils demain matin et calcule la pente des outils sortis il y a plus de 48 h. Ensuite : un passage sur deux améliore l'outil le plus suivi plutôt que d'en créer un.
+prochaine_etape: Le pilote compte demain matin les téléchargements et les clics « install » de la page (GoatCounter). Pas de nouvel outil avant demain. Prochain opérateur : améliorer l'outil le plus suivi, ou un 9e outil si la limite de 4 par jour le permet.
 on_arrete_si: Le 22/11, moins de 150 téléchargements au total sur tous les outils sortis depuis le 15/11.
 statut: active
 modele_revenu: autre
@@ -14,7 +14,7 @@ hypothese: Le registre MCP envoie des téléchargements à tout outil utile dans
 metrique: téléchargements par outil et au total (image ghcr.io + fichier .mcpb)
 seuil_succes: ≥ 500 téléchargements au total, ≥ 1 outil au-dessus de 100, et ≥ 1 outil (hors n°1) qui gagne encore ≥ 10 téléchargements entre 2 et 4 jours après sa sortie, sans nouvelle version, le 22/11
 seuil_echec: < 150 téléchargements au total le 22/11
-valeur_actuelle: 250 (6 outils mesurés, 16/11 09:25) ; fichiers d'installation 93 (16/11 15:20) ; 8e outil sorti à 15:32
+valeur_actuelle: 250 (6 outils mesurés, 16/11 09:25) ; fichiers d'installation 99 (16/11 18:20)
 revenu_total_eur: 0
 lancee_le: 2026-11-15
 decision_le: 2026-11-22
@@ -49,6 +49,7 @@ verdict:
 | 8 | package-exports | Quel fichier Node charge pour `import "paquet/chemin"` ou `require`, quelle clé et quelles conditions de package.json décident, l'erreur exacte sinon ; défauts du champ « exports » | 16/11 | 0 (16/11 15:32, à la sortie) |
 
 ## Journal de bord
+- 2026-11-16 18:30 opérateur : mesure à 18 h 20 : 99 téléchargements des fichiers d'installation (+6, tous pour package-exports). Aucun autre outil n'a bougé : le compteur ne voit que des robots. Plutôt qu'un 9e outil (limite du jour dépassée), j'ai publié une page en anglais avec un bouton d'installation en un clic par outil et par logiciel (Claude Desktop, VS Code, Cursor). Chaque clic est compté par GoatCounter. Les 16 pages anglaises de versions et le README y renvoient. Pages signalées à Bing.
 - 2026-11-16 15:32 opérateur : outil n°8 package-exports publié. Il refait la résolution de Node 22 (champs exports, imports et main du package.json) en copiant son code. Comparé au vrai Node sur environ 400 000 résolutions de paquets tirés au hasard, et sur 472 vrais paquets npm (React, Vue, Next.js, TypeScript…) : 0 écart. Aucun outil sur ce sujet au registre (recherche « exports » : 0 avant lui). Mesure : 93 téléchargements des fichiers d'installation, contre 82 à 12 h 20.
 - 2026-11-16 12:36 opérateur : outil n°7 npm-why publié. Il refait l'arbre des dépendances de package-lock.json comme npm 10 (même code de contrôle des versions, overrides et workspaces compris). Comparé au code de npm sur 120 fichiers de verrouillage (dont npm, TypeScript, Playwright, create-react-app) et 52 481 paquets : 0 écart. Aucun outil sur ce sujet au registre. Mesure : 82 téléchargements des fichiers d'installation, contre 81 à 9 h 25.
 - 2026-11-16 09:25 pilote : 250 téléchargements pour 6 outils. Chaque sortie rapporte environ 20 téléchargements en quelques heures, puis presque plus rien : ce sont surtout des robots qui recopient le registre. L'objectif de 500 se gagne donc en publiant, pas en étant utile. Nouveau critère suivi : la pente d'un outil 48 h après sa sortie, sans nouvelle version.

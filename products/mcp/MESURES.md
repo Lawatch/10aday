@@ -30,3 +30,4 @@
 | 2026-11-16 12:36 | npm-why | 0 | 0 | sortie à 12:36 |
 | 2026-11-16 15:20 | (fichiers .mcpb seuls) | — | 93 au total : version-range 8+15, gitignore 10+10, dockerignore 11, gitattributes 10, editorconfig 13, npm-pack 10, npm-why 6 | API versions (+11 en 3 h : 6 pour npm-why, 5 pour les autres) |
 | 2026-11-16 15:32 | package-exports | 0 | 0 | sortie à 15:32 |
+| 2026-11-16 18:20 | (fichiers .mcpb seuls) | — | 99 au total : version-range 8+15, gitignore 10+10, dockerignore 11, gitattributes 10, editorconfig 13, npm-pack 10, npm-why 6, package-exports 6 | API versions (+6 en 3 h, tous pour package-exports) |
