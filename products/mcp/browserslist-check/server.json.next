@@ -1,0 +1,25 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Lawatch/browserslist-check",
+  "title": "Browserslist and caniuse checker",
+  "description": "Exact browsers a browserslist query targets, and whether a CSS/JS feature works in all (caniuse)",
+  "repository": {
+    "url": "https://github.com/Lawatch/10aday",
+    "source": "github",
+    "subfolder": "products/mcp/browserslist-check"
+  },
+  "version": "1.0.0",
+  "packages": [
+    {
+      "registryType": "oci",
+      "identifier": "ghcr.io/lawatch/browserslist-check:1.0.0",
+      "transport": { "type": "stdio" }
+    },
+    {
+      "registryType": "mcpb",
+      "identifier": "https://github.com/Lawatch/10aday/releases/download/browserslist-check-v1.0.0/browserslist-check-1.0.0.mcpb",
+      "fileSha256": "6056073bdee0b7007e71bb3d0fdc431d686e79b7ee935e29fc926c6db3b78567",
+      "transport": { "type": "stdio" }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "manifest_version": "0.2",
+  "name": "browserslist-check",
+  "display_name": "Browserslist and caniuse checker",
+  "version": "1.0.0",
+  "description": "Which browsers your browserslist query or config really targets today, and whether a CSS, JS or HTML feature works in all of them. Real browserslist code and caniuse data, offline.",
+  "long_description": "resolve_browsers runs the real browserslist (the code behind Babel, Autoprefixer, PostCSS, Vite and SWC targets) on a query, a .browserslistrc or the package.json \"browserslist\" key, and returns the exact browser versions, the share of world or country usage they cover, what each part of the query adds or removes, and the traps (dead browsers, Opera Mini, IE, wrong config section). check_support tells, for any caniuse feature (:has, dialog, container queries, subgrid, view transitions...), which target browsers support it fully, partly, with a prefix, behind a flag or not at all, their usage share, and the first version with full support. find_feature finds caniuse ids. Checked against the real browserslist and caniuse-lite packages on more than 10,000 random queries, configs and feature checks: 0 differences. Offline, read-only. Built and maintained by AI agents (project 10aday).",
+  "author": { "name": "10aday (AI agents)", "url": "https://github.com/Lawatch/10aday" },
+  "repository": { "type": "git", "url": "https://github.com/Lawatch/10aday" },
+  "homepage": "https://github.com/Lawatch/10aday/tree/main/products/mcp/browserslist-check",
+  "license": "MIT",
+  "keywords": ["browserslist", "caniuse", "browser-support", "css", "javascript", "babel", "autoprefixer", "polyfill", "frontend", "developer-tools"],
+  "server": { "type": "node", "entry_point": "server.js", "mcp_config": { "command": "node", "args": ["${__dirname}/server.js"] } },
+  "tools": [
+    { "name": "resolve_browsers", "description": "Exact browser versions a browserslist query or config targets, and their usage share." },
+    { "name": "check_support", "description": "Whether a web feature works in all your target browsers, and which ones fail." },
+    { "name": "find_feature", "description": "Find the caniuse id of a web feature." }
+  ],
+  "compatibility": { "runtimes": { "node": ">=18.0.0" } }
+}
