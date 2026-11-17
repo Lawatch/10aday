@@ -3,6 +3,11 @@
 **Which EditorConfig settings apply to this file, and which `.editorconfig` section and line decide?** The same answer
 your editor and Prettier get from the reference EditorConfig core, without opening the project.
 
+<!-- web -->
+> **One-click install** for Claude Desktop, VS Code and Cursor: **https://lawatch.github.io/10aday/mcp/editorconfig-check/**  
+> Question, wrong answer or missing case? [Open an issue](https://github.com/Lawatch/10aday/issues/new?title=%5Beditorconfig-check%5D%20) — we read them.
+<!-- /web -->
+
 AI assistants often get `.editorconfig` wrong: `[*.{js}]` (one choice in braces is literal: it matches nothing),
 `indent_size = 4 # four` (end-of-line comments are part of the value, so the setting is invalid), a stray line that
 makes editors silently ignore **every line below it**, forgetting that later sections win, or that `root = true` stops the search.

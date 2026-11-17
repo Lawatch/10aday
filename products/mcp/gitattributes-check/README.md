@@ -3,6 +3,11 @@
 **Which git attributes apply to this file, and which `.gitattributes` line decides?** The same answer as `git check-attr -a`,
 without a repository, plus what it changes in practice.
 
+<!-- web -->
+> **One-click install** for Claude Desktop, VS Code and Cursor: **https://lawatch.github.io/10aday/mcp/gitattributes-check/**  
+> Question, wrong answer or missing case? [Open an issue](https://github.com/Lawatch/10aday/issues/new?title=%5Bgitattributes-check%5D%20) — we read them.
+<!-- /web -->
+
 AI assistants often get `.gitattributes` wrong: `vendor/ linguist-vendored` (does nothing for the files inside),
 `!*.md text` (negative patterns are ignored), Git LFS rules without `-text`, macros in a sub-directory file,
 an invalid attribute name that silently drops the whole line. This server answers with git's own rules.

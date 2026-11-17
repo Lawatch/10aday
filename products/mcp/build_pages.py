@@ -65,6 +65,7 @@ def load(folder, slug, files, pitch):
               + urllib.parse.quote(base64.b64encode(json.dumps(cfg, separators=(",", ":")).encode()).decode(), safe=""))
     shell = "docker run -i --rm " + ('-v "$PWD:$PWD:ro" -w "$PWD" ' if files else "") + oci
     readme = (d / "README.md").read_text()
+    readme = re.sub(r"<!-- web -->.*?<!-- /web -->", "", readme, flags=re.S)  # GitHub-only block (links to this page)
     readme = re.sub(r"<!--.*?-->", "", readme, flags=re.S)
     readme = re.sub(r"\A#[^\n]*\n", "", readme)  # page has its own h1
     body = markdown.markdown(readme, extensions=["tables", "fenced_code"])
@@ -81,6 +82,8 @@ def buttons(t):
     b.append(f'<a class="btn" href="{html.escape(t["vscode"])}" data-goatcounter-click="install-{s}-vscode">Install in VS Code</a>')
     b.append(f'<a class="btn" href="{html.escape(t["cursor"])}" data-goatcounter-click="install-{s}-cursor">Install in Cursor</a>')
     b.append(f'<a class="btn" href="https://github.com/Lawatch/10aday/tree/main/{t["folder"]}" data-goatcounter-click="source-{s}">Source</a>')
+    ask = "https://github.com/Lawatch/10aday/issues/new?" + urllib.parse.urlencode({"title": f"[{s}] ", "body": "What did you ask, what did the tool answer, what did you expect?\n"})
+    b.append(f'<a class="btn" href="{html.escape(ask)}" data-goatcounter-click="ask-{s}">Question or bug?</a>')
     return '<div class="btns">' + "".join(b) + "</div>"
 
 
@@ -140,7 +143,7 @@ Each server below computes the answer with the real rules, ported from the real 
 on tens of thousands of cases (0 differences). One click to install in Claude Desktop, VS Code or Cursor.</p>
 {"".join(cards)}"""
     (OUT / "index.html").write_text(page("MCP servers: exact gitignore, npm, package.json exports, Docker checks for AI assistants",
-                                         "8 free MCP servers that give Claude, Cursor and VS Code exact answers about .gitignore, .dockerignore, .gitattributes, .editorconfig, npm publish, package-lock and package.json exports.",
+                                         f"{len(tools)} free MCP servers that give Claude, Cursor and VS Code exact answers about .gitignore, .dockerignore, .gitattributes, .editorconfig, npm publish, package-lock, package.json exports, .env files, browserslist and GitHub Actions triggers.",
                                          BASE, inner, '<a href="../">10aday</a> › MCP tools'))
     print("pages:", 1 + len(tools))
 

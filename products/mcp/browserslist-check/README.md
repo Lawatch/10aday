@@ -3,6 +3,11 @@
 **Which browsers does my browserslist query really target today, and can I use this CSS/JS feature in all of them?**
 The exact answer of the real browserslist code with the caniuse data, offline.
 
+<!-- web -->
+> **One-click install** for Claude Desktop, VS Code and Cursor: **https://lawatch.github.io/10aday/mcp/browserslist-check/**  
+> Question, wrong answer or missing case? [Open an issue](https://github.com/Lawatch/10aday/issues/new?title=%5Bbrowserslist-check%5D%20) — we read them.
+<!-- /web -->
+
 AI assistants answer browser support questions from memory, and memory is wrong here:
 - `defaults`, `> 0.5%` or `last 2 versions` select different browsers every month (usage data changes).
 - Configs have traps: `[production]` / `[development]` sections, `NODE_ENV`, the `package.json` key that wins.

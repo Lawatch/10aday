@@ -2,6 +2,11 @@
 
 **Which files does `docker build` really send, and which `.dockerignore` line decides?** Docker's exact rules, without Docker.
 
+<!-- web -->
+> **One-click install** for Claude Desktop, VS Code and Cursor: **https://lawatch.github.io/10aday/mcp/dockerignore-check/**  
+> Question, wrong answer or missing case? [Open an issue](https://github.com/Lawatch/10aday/issues/new?title=%5Bdockerignore-check%5D%20) — we read them.
+<!-- /web -->
+
 `.dockerignore` is not `.gitignore`, and AI assistants often mix them up:
 - `*.log` only matches at the **root** of the context. `api/debug.log` is still sent. Use `**/*.log`.
 - `node_modules` does not exclude `packages/web/node_modules`. Use `**/node_modules`.

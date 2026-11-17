@@ -2,6 +2,11 @@
 
 <!-- mcp-name: io.github.Lawatch/npm-why -->
 
+<!-- web -->
+> **One-click install** for Claude Desktop, VS Code and Cursor: **https://lawatch.github.io/10aday/mcp/npm-why/**  
+> Question, wrong answer or missing case? [Open an issue](https://github.com/Lawatch/10aday/issues/new?title=%5Bnpm-why%5D%20) — we read them.
+<!-- /web -->
+
 Answers **"why is X in my node_modules, which version, and who pulls it in?"** straight from `package-lock.json`,
 exactly like `npm explain X`, but without node_modules and without running npm.
 Built for AI assistants (Claude, Cursor, VS Code…): a lockfile is thousands of lines, the same package often has

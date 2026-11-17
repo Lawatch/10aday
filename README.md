@@ -1,5 +1,26 @@
 # 10aday
 
+## MCP servers for AI assistants (English)
+**11 free MCP servers that give Claude, Cursor and VS Code exact answers about developer config files.**
+Each one ports the real tool's rules and is checked against the real tool (git, npm, Node, Docker, browserslist…) on thousands of cases.
+One-click install for Claude Desktop, VS Code and Cursor: **https://lawatch.github.io/10aday/mcp/** — listed on the [official MCP registry](https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Lawatch).
+
+| Server | What it answers |
+|---|---|
+| [gha-trigger-check](https://lawatch.github.io/10aday/mcp/gha-trigger-check/) | Why didn't my GitHub Actions workflow run? Will this push or PR trigger it? Branch, tag and path filters with the exact glob rules (`*` stops at `/`, last `!` wins), base branch for PRs, default types, `[skip ci]`, and the workflow line that decides. |
+| [dotenv-check](https://lawatch.github.io/10aday/mcp/dotenv-check/) | Why is my env variable empty or wrong? The exact value of each `.env` variable and the file and line that decide it, with dotenv, node --env-file, Vite and Next.js. Flags the traps: `#` in passwords, trailing spaces, `$VAR`, secrets exposed to the browser. |
+| [browserslist-check](https://lawatch.github.io/10aday/mcp/browserslist-check/) | Exactly which browsers a browserslist query or config targets today, and whether a CSS/JS feature (`:has()`, container queries…) works in all of them. Real browserslist code and caniuse data. |
+| [package-exports](https://lawatch.github.io/10aday/mcp/package-exports/) | Which file Node loads for `import "pkg/sub"` or `require`, which `exports` key decides, and the exact Node error when it fails. |
+| [npm-why](https://lawatch.github.io/10aday/mcp/npm-why/) | Why a package is in `node_modules`, which versions, who pulls it in. Same answer as `npm explain`, read from package-lock.json. |
+| [npm-pack-check](https://lawatch.github.io/10aday/mcp/npm-pack-check/) | Exactly which files `npm publish` ships, which rule decides each one, and leaks (.env, keys) to fix first. |
+| [gitignore-check](https://lawatch.github.io/10aday/mcp/gitignore-check/) | Is this path ignored by git, and by which .gitignore line? Same answer as `git check-ignore`. |
+| [dockerignore-check](https://lawatch.github.io/10aday/mcp/dockerignore-check/) | Which files `docker build` really sends, and which .dockerignore line decides. Exact BuildKit rules. |
+| [gitattributes-check](https://lawatch.github.io/10aday/mcp/gitattributes-check/) | Which git attributes apply to a file (line endings, binary, LFS, linguist) and which line decides. Same as `git check-attr`. |
+| [editorconfig-check](https://lawatch.github.io/10aday/mcp/editorconfig-check/) | Which .editorconfig settings apply to a file (indent, line endings, charset) and which section decides. |
+| [version-range-mcp](https://lawatch.github.io/10aday/mcp/version-range-mcp/) | Which version a dependency constraint installs, in npm, Cargo, pip, Maven, Gradle, NuGet, Composer and RubyGems. |
+
+Question, wrong answer, missing case? [Open an issue](https://github.com/Lawatch/10aday/issues/new). Built and maintained by AI agents.
+
 Système d'agents IA autonomes qui se relaient pour atteindre **10 € nets / jour**.
 Chaque heure, une session Claude Code fraîche se lance, lit l'état du système dans ce dépôt,
 joue un rôle, livre quelque chose de concret, puis passe le relais.
@@ -36,7 +57,7 @@ Site : **https://lawatch.github.io/10aday/** — chaque couloir `exp-*` ajoute i
 - [NuGet Version Range Checker](https://lawatch.github.io/10aday/tools/nuget-version-range-checker/) (EN) — which version `dotnet restore` picks for `[1.0,2.0)`, `1.*` or `1.0.0-*`.
 - [Gradle Dynamic Version Checker](https://lawatch.github.io/10aday/tools/gradle-dynamic-version-checker/) (EN) — what `1.+`, `[1.0,2.0)` or `latest.release` resolve to.
 - [`verrange`](verrange/) — Go library: NuGet version ranges read exactly like `dotnet restore` ([nuget](https://pkg.go.dev/github.com/Lawatch/10aday/verrange/nuget)), Gradle dynamic versions read exactly like Gradle ([gradle](https://pkg.go.dev/github.com/Lawatch/10aday/verrange/gradle)), Maven ranges resolved exactly like `mvn` ([maven](https://pkg.go.dev/github.com/Lawatch/10aday/verrange/maven)). Command line, no install: `go run github.com/Lawatch/10aday/verrange/cmd/verrange@latest nuget "[1.0,2.0)" 1.5.0`.
-- **One-click install page for all 8 MCP servers (Claude Desktop, VS Code, Cursor): https://lawatch.github.io/10aday/mcp/**
+- **One-click install page for all 11 MCP servers (Claude Desktop, VS Code, Cursor): https://lawatch.github.io/10aday/mcp/**
 - [`version-range-mcp`](products/EXP-007-serveur-mcp-versions/) — MCP server for AI assistants: which version a dependency constraint installs today, read live from the registries of npm, Cargo, pip, Maven, NuGet, Gradle, Composer, Gems. Listed in the [official MCP registry](https://registry.modelcontextprotocol.io/v0/servers?search=version-range) as `io.github.Lawatch/version-range-mcp`; image `ghcr.io/lawatch/version-range-mcp`; [one-click install for Claude Desktop](https://github.com/Lawatch/10aday/releases/download/exp007-v1.2.0/version-range-mcp-1.2.0.mcpb).
 - [`gitignore-check`](products/mcp/gitignore-check/) — MCP server: is this path ignored by git, and by which `.gitignore` line? Same answer as `git check-ignore`. Registry name `io.github.Lawatch/gitignore-check`.
 - [`dockerignore-check`](products/mcp/dockerignore-check/) — MCP server: which files `docker build` really sends, and which `.dockerignore` line decides (`*.log` is root-only, unlike git). Exact BuildKit rules. Registry name `io.github.Lawatch/dockerignore-check`.

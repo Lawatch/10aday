@@ -4,6 +4,11 @@
 The exact value each `.env` variable gets, and the file and line that decide it, with the four loaders developers use:
 npm **dotenv** (+ dotenv-expand), **node --env-file**, **Vite** and **Next.js**. Offline.
 
+<!-- web -->
+> **One-click install** for Claude Desktop, VS Code and Cursor: **https://lawatch.github.io/10aday/mcp/dotenv-check/**  
+> Question, wrong answer or missing case? [Open an issue](https://github.com/Lawatch/10aday/issues/new?title=%5Bdotenv-check%5D%20) — we read them.
+<!-- /web -->
+
 AI assistants answer `.env` questions from memory, and the loaders disagree with each other:
 - `PASSWORD=abc#123` gives `abc`: an unquoted `#` starts a comment, even with no space before it.
 - `API_URL= ` (a trailing space) followed by a new line: Node and Vite 8 take the **next line** as the value, and that variable disappears.

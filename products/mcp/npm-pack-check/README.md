@@ -3,6 +3,11 @@
 **Which files will `npm publish` really ship, and which rule decides each one?** The exact answer npm 10 gives, before
 you publish, without touching the registry.
 
+<!-- web -->
+> **One-click install** for Claude Desktop, VS Code and Cursor: **https://lawatch.github.io/10aday/mcp/npm-pack-check/**  
+> Question, wrong answer or missing case? [Open an issue](https://github.com/Lawatch/10aday/issues/new?title=%5Bnpm-pack-check%5D%20) — we read them.
+<!-- /web -->
+
 npm's packing rules are full of traps that AI assistants (and humans) get wrong:
 - Adding a `.npmignore` makes npm **ignore the `.gitignore`** of that folder completely: your git-ignored `.env`,
   keys and coverage reports get published.

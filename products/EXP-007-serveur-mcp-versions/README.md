@@ -4,6 +4,11 @@ An MCP server that tells an AI assistant **which version a dependency constraint
 using the exact rules of each package manager: npm, Cargo, Composer, pip, RubyGems, Maven, Gradle, NuGet.
 It reads the published versions live from npmjs, crates.io, Packagist, PyPI, RubyGems, Maven Central and NuGet (read-only, no key).
 
+<!-- web -->
+> **One-click install** for Claude Desktop, VS Code and Cursor: **https://lawatch.github.io/10aday/mcp/version-range-mcp/**  
+> Question, wrong answer or missing case? [Open an issue](https://github.com/Lawatch/10aday/issues/new?title=%5Bversion-range-mcp%5D%20) — we read them.
+<!-- /web -->
+
 Why: the same text means different things. `[1.0,2.0)` takes `2.0-rc1` in Maven but not in Gradle; `1.0` means "1.0 or higher, lowest wins" in NuGet;
 `^0.2` stops before `0.3.0`. Assistants often guess these rules wrong.
 

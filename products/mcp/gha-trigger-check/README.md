@@ -4,6 +4,11 @@
 Give the workflow and the push or pull request (branch or tag, changed files, activity type, commit message):
 the server says yes or no, explains each step, and names the workflow line and pattern that decide. Offline.
 
+<!-- web -->
+> **One-click install** for Claude Desktop, VS Code and Cursor: **https://lawatch.github.io/10aday/mcp/gha-trigger-check/**  
+> Question, wrong answer or missing case? [Open an issue](https://github.com/Lawatch/10aday/issues/new?title=%5Bgha-trigger-check%5D%20) — we read them.
+<!-- /web -->
+
 AI assistants answer these questions from memory, and the rules have traps:
 - `branches: ["feature/*"]` does **not** match `feature/login/v2`: `*` stops at `/`. Use `feature/**`.
 - With `branches` and `!` exceptions, the **last** matching pattern wins: order matters.

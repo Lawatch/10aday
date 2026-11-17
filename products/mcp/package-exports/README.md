@@ -2,6 +2,11 @@
 
 An MCP server for AI assistants (Claude, Cursor, VS Code…). It answers **"which file does `import 'pkg/sub'` or `require('pkg/sub')` load?"** exactly like Node 22, from `package.json` `"exports"`, `"imports"` and `"main"`, and explains every step.
 
+<!-- web -->
+> **One-click install** for Claude Desktop, VS Code and Cursor: **https://lawatch.github.io/10aday/mcp/package-exports/**  
+> Question, wrong answer or missing case? [Open an issue](https://github.com/Lawatch/10aday/issues/new?title=%5Bpackage-exports%5D%20) — we read them.
+<!-- /web -->
+
 Assistants often guess these rules wrong: condition order, `"default"` placement, `*` pattern priority, `null` targets, trailing slashes, and import vs require giving different files. This server does not guess: its resolver is a line-by-line port of Node's own (`lib/internal/modules/esm/resolve.js` and the CommonJS loader).
 
 ## Tools

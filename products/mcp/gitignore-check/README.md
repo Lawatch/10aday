@@ -2,6 +2,11 @@
 
 **Is this path ignored by git, and by which `.gitignore` line?** The same answer as `git check-ignore -v`, without a repository.
 
+<!-- web -->
+> **One-click install** for Claude Desktop, VS Code and Cursor: **https://lawatch.github.io/10aday/mcp/gitignore-check/**  
+> Question, wrong answer or missing case? [Open an issue](https://github.com/Lawatch/10aday/issues/new?title=%5Bgitignore-check%5D%20) — we read them.
+<!-- /web -->
+
 AI assistants often guess `.gitignore` rules wrong: `logs/` + `!logs/keep.txt` (does not work), `/build` vs `build/`,
 `**` in the middle of a pattern, trailing spaces, nested `.gitignore` files. This server answers with git's own rules.
 
