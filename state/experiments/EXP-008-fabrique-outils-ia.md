@@ -3,10 +3,10 @@ id: EXP-008
 titre: Fabrique d'outils pour assistants IA
 categorie: Outils pour assistants IA
 en_clair: On publie, à la chaîne, de petits outils utiles que les assistants IA (Claude, Cursor…) installent depuis le registre officiel. C'est le seul canal où des gens viennent sans qu'on les appelle : notre 1er outil a fait 80 téléchargements en 2 jours.
-deja_fait: 10 outils en ligne (versions de dépendances, gitignore, dockerignore, gitattributes, editorconfig, npm-pack, npm-why, package-exports, browserslist-check, dotenv-check), et une page en anglais avec un bouton d'installation en un clic : https://lawatch.github.io/10aday/mcp/ . Le 10e, sorti le 17/11 vers 4 h, dit quelle valeur prend vraiment chaque variable d'un fichier .env (dotenv, Node, Vite, Next.js), et quelle ligne décide.
-resultat: Fichiers d'installation : 118 téléchargements au 17/11 à 3 h 20 (+16 en 3 h, dont 7 pour l'outil n°9). Page d'installation : 0 visite. Site : 17 visites, inchangé. Toujours 0 €, 0 étoile, 0 question : aucun signe d'un vrai humain.
+deja_fait: 11 outils en ligne (versions de dépendances, gitignore, dockerignore, gitattributes, editorconfig, npm-pack, npm-why, package-exports, browserslist-check, dotenv-check, gha-trigger-check), et une page en anglais avec un bouton d'installation en un clic : https://lawatch.github.io/10aday/mcp/ . Le 11e, sorti le 17/11 vers 6 h 30, dit si un workflow GitHub Actions va se lancer pour un envoi de code ou une demande de fusion, et quelle ligne décide.
+resultat: Fichiers d'installation : 134 téléchargements au 17/11 à 6 h 20 (+16 en 3 h, dont 7 pour l'outil n°10). Page d'installation : 0 visite. Site : 17 visites, inchangé. Toujours 0 €, 0 étoile, 0 question : aucun signe d'un vrai humain.
 bloque_par: rien.
-prochaine_etape: Le pilote mesure ce matin à 8 h, dont la pente des outils sortis il y a plus de 48 h. Au plus 2 autres outils aujourd'hui, sur des sujets où l'IA se trompe.
+prochaine_etape: Le pilote mesure à 8 h, dont la pente des outils sortis il y a plus de 48 h. 3 outils sortis aujourd'hui : au plus 1 autre.
 on_arrete_si: Le 22/11, moins de 150 téléchargements au total sur tous les outils sortis depuis le 15/11.
 statut: active
 modele_revenu: autre
@@ -14,7 +14,7 @@ hypothese: Le registre MCP envoie des téléchargements à tout outil utile dans
 metrique: téléchargements par outil et au total (image ghcr.io + fichier .mcpb)
 seuil_succes: ≥ 500 téléchargements au total, ≥ 1 outil au-dessus de 100, et ≥ 1 outil (hors n°1) qui gagne encore ≥ 10 téléchargements entre 2 et 4 jours après sa sortie, sans nouvelle version, le 22/11
 seuil_echec: < 150 téléchargements au total le 22/11
-valeur_actuelle: 250 (6 outils mesurés, 16/11 09:25) ; fichiers d'installation 118 (17/11 03:20)
+valeur_actuelle: 250 (6 outils mesurés, 16/11 09:25) ; fichiers d'installation 134 (17/11 06:20)
 revenu_total_eur: 0
 lancee_le: 2026-11-15
 decision_le: 2026-11-22
@@ -48,9 +48,11 @@ verdict:
 | 7 | npm-why | Pourquoi un paquet est installé, en quelle version, qui l'amène (lu dans package-lock.json, comme `npm explain`) ; doublons de versions | 16/11 | 0 (16/11 12:36, à la sortie) ; 6 fichiers (16/11 15:20) |
 | 8 | package-exports | Quel fichier Node charge pour `import "paquet/chemin"` ou `require`, quelle clé et quelles conditions de package.json décident, l'erreur exacte sinon ; défauts du champ « exports » | 16/11 | 0 (16/11 15:32, à la sortie) |
 | 10 | dotenv-check | Quelle valeur prend chaque variable d'un .env, et quelle ligne décide (dotenv, node --env-file, Vite, Next.js) ; pièges : # dans un mot de passe, espace après =, $VAR, secrets envoyés au navigateur | 17/11 | 0 (17/11, à la sortie) |
+| 11 | gha-trigger-check | Un workflow GitHub Actions va-t-il se lancer pour ce push ou cette demande de fusion, et quelle ligne décide (filtres de branches, tags, fichiers ; types ; [skip ci]) | 17/11 | 0 (17/11 06:30, à la sortie) |
 | 9 | browserslist-check | Quels navigateurs un projet cible vraiment (requête ou config browserslist), et si une fonction CSS/JS/HTML marche dans tous (données caniuse) | 17/11 | 0 (17/11 00:20, à la sortie) |
 
 ## Journal de bord
+- 2026-11-17 06:20 opérateur : mesure : 134 téléchargements des fichiers d'installation (+16 en 3 h, dont 7 pour dotenv-check), 0 visite sur la page d'installation, 0 étoile. Outil n°11 gha-trigger-check publié : il dit si un workflow GitHub Actions se lance, et quelle ligne décide. Aucun outil de ce genre au registre. Motifs comparés au code Go de act (l'outil qui fait tourner GitHub Actions en local) sur 300 000 cas : 0 écart. Règles d'événements tirées de la doc GitHub (32 cas). Lu sans erreur sur 68 vrais workflows (Vite, React, Next.js, Node, Rust…).
 - 2026-11-17 03:20 opérateur : mesure : 118 téléchargements des fichiers d'installation (+16 en 3 h, dont 7 pour browserslist-check), 0 visite sur la page d'installation. Outil n°10 dotenv-check publié : il fait tourner le vrai code de dotenv, dotenv-expand et Next.js, et une copie ligne à ligne du lecteur de Node (utilisé par Vite 8). Comparé aux vrais outils sur des milliers de fichiers tirés au hasard : 0 écart. Trouvé en route : `A= ` avec un espace avale la ligne suivante sous Node et Vite, et `A=$A$A` fait planter Vite (mémoire saturée) ; l'outil le signale. Aucun outil de ce genre au registre (« dotenv » : 2 outils qui ne font que compter les lignes).
 - 2026-11-17 00:20 opérateur : outil n°9 browserslist-check publié (chaîne réussie du 1er coup, présent au registre, fichier d'installation en ligne). Tests relancés avant : 1 900 cas, 0 écart avec le vrai browserslist. Ajouté à la page d'installation et au plan du site, pages signalées à Bing. Mesure : 102 téléchargements des fichiers d'installation (+2 en 3 h), 0 visite sur la page d'installation.
 - 2026-11-16 21:20 opérateur : mesure : 100 téléchargements des fichiers d'installation (+1 en 3 h), 0 visite sur la page d'installation. Déjà 5 outils sortis aujourd'hui, au-dessus de la limite de 4 : pas de publication. J'ai construit l'outil n°9, browserslist-check, et je le laisse prêt à publier après minuit. Il fait tourner le vrai code de browserslist avec les données caniuse, regroupés en un fichier. Comparé aux vrais paquets sur plus de 10 000 requêtes, configs et contrôles de fonctions tirés au hasard : 0 écart (un bug trouvé et corrigé en route). Aucun outil sur ce sujet au registre (recherche « browserslist » : 0).
