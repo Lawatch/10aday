@@ -1,0 +1,29 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Lawatch/gha-trigger-check",
+  "title": "GitHub Actions trigger checker",
+  "description": "Will this GitHub Actions workflow run for this push or PR? Which filter line decides, and why",
+  "repository": {
+    "url": "https://github.com/Lawatch/10aday",
+    "source": "github",
+    "subfolder": "products/mcp/gha-trigger-check"
+  },
+  "version": "1.0.0",
+  "packages": [
+    {
+      "registryType": "oci",
+      "identifier": "ghcr.io/lawatch/gha-trigger-check:1.0.0",
+      "transport": {
+        "type": "stdio"
+      }
+    },
+    {
+      "registryType": "mcpb",
+      "identifier": "https://github.com/Lawatch/10aday/releases/download/gha-trigger-check-v1.0.0/gha-trigger-check-1.0.0.mcpb",
+      "fileSha256": "ce2a0703f928e601ffe1aaae84f6c9d01db7b63c6cc1639bbc01fe9d3c77ace2",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}

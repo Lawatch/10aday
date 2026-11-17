@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GitHub Actions trigger checker — MCP server for Claude, Cursor, VS Code</title>
+<meta name="description" content="Will this GitHub Actions workflow run for this push or PR? Which filter line decides, and why">
+<link rel="canonical" href="https://lawatch.github.io/10aday/mcp/gha-trigger-check/">
+<meta property="og:title" content="GitHub Actions trigger checker — MCP server for Claude, Cursor, VS Code">
+<meta property="og:description" content="Will this GitHub Actions workflow run for this push or PR? Which filter line decides, and why">
+<meta property="og:url" content="https://lawatch.github.io/10aday/mcp/gha-trigger-check/">
+<style>body{font-family:system-ui,-apple-system,Segoe UI,sans-serif;max-width:900px;margin:2rem auto;padding:0 1rem;line-height:1.6;color:#1d1d1f}
+h1{font-size:1.6rem;margin:.2rem 0 .6rem}h2{font-size:1.2rem;margin-top:2rem}h3{font-size:1.05rem;margin:.2rem 0}
+code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.9em}
+pre{background:#f6f8fa;padding:.7rem;overflow-x:auto;border-radius:6px}
+table{border-collapse:collapse;width:100%;margin:.6rem 0;font-size:.92rem}th,td{border:1px solid #ddd;padding:.35rem .5rem;text-align:left;vertical-align:top}th{background:#f6f6f6}
+.muted{color:#666}.card{border:1px solid #ddd;border-radius:8px;padding:.8rem 1rem;margin:.8rem 0}
+.btns{display:flex;flex-wrap:wrap;gap:.5rem;margin:.6rem 0}.btn{display:inline-block;padding:.35rem .7rem;border-radius:6px;border:1px solid #b8cdf5;background:#eef4ff;text-decoration:none;color:#1a4fb4;font-size:.9rem}
+footer{margin-top:3rem;font-size:.85rem;color:#666;border-top:1px solid #ddd;padding-top:1rem}</style>
+</head>
+<body>
+<p class="muted"><a href="../">MCP tools</a> › gha-trigger-check</p>
+<h1>GitHub Actions trigger checker — MCP server</h1>
+<p><strong>Will this GitHub Actions workflow run for this push or PR? Which filter line decides, and why</strong></p>
+<div class="btns"><a class="btn" href="https://github.com/Lawatch/10aday/releases/download/gha-trigger-check-v1.0.0/gha-trigger-check-1.0.0.mcpb" data-goatcounter-click="install-gha-trigger-check-claude">Claude Desktop (.mcpb)</a><a class="btn" href="vscode:mcp/install?%7B%22name%22%3A%22gha-trigger-check%22%2C%22command%22%3A%22docker%22%2C%22args%22%3A%5B%22run%22%2C%22-i%22%2C%22--rm%22%2C%22-v%22%2C%22%24%7BworkspaceFolder%7D%3A%24%7BworkspaceFolder%7D%3Aro%22%2C%22-w%22%2C%22%24%7BworkspaceFolder%7D%22%2C%22ghcr.io/lawatch/gha-trigger-check%3A1.0.0%22%5D%7D" data-goatcounter-click="install-gha-trigger-check-vscode">Install in VS Code</a><a class="btn" href="cursor://anysphere.cursor-deeplink/mcp/install?name=gha-trigger-check&amp;config=eyJjb21tYW5kIjoiZG9ja2VyIiwiYXJncyI6WyJydW4iLCItaSIsIi0tcm0iLCItdiIsIiR7d29ya3NwYWNlRm9sZGVyfToke3dvcmtzcGFjZUZvbGRlcn06cm8iLCItdyIsIiR7d29ya3NwYWNlRm9sZGVyfSIsImdoY3IuaW8vbGF3YXRjaC9naGEtdHJpZ2dlci1jaGVjazoxLjAuMCJdfQ%3D%3D" data-goatcounter-click="install-gha-trigger-check-cursor">Install in Cursor</a><a class="btn" href="https://github.com/Lawatch/10aday/tree/main/products/mcp/gha-trigger-check" data-goatcounter-click="source-gha-trigger-check">Source</a></div>
+<p class="muted">Registry name <code>io.github.Lawatch/gha-trigger-check</code>, version 1.0.0. The VS Code and Cursor buttons run the Docker image and give it read-only access to the open project.</p>
+<h2>Other clients</h2>
+<pre><code>docker run -i --rm -v &quot;$PWD:$PWD:ro&quot; -w &quot;$PWD&quot; ghcr.io/lawatch/gha-trigger-check:1.0.0</code></pre>
+<p>JSON config (Claude Desktop, Windsurf, Cline…), replace the path:</p>
+<pre><code>{
+  &quot;mcpServers&quot;: {
+    &quot;gha-trigger-check&quot;: {
+      &quot;command&quot;: &quot;docker&quot;,
+      &quot;args&quot;: [
+        &quot;run&quot;,
+        &quot;-i&quot;,
+        &quot;--rm&quot;,
+        &quot;-v&quot;,
+        &quot;/path/to/project:/path/to/project:ro&quot;,
+        &quot;-w&quot;,
+        &quot;/path/to/project&quot;,
+        &quot;ghcr.io/lawatch/gha-trigger-check:1.0.0&quot;
+      ]
+    }
+  }
+}</code></pre>
+<h2>Documentation</h2>
+<p><strong>Why didn't my GitHub Actions workflow run? Will this push or pull request trigger it?</strong>
+Give the workflow and the push or pull request (branch or tag, changed files, activity type, commit message):
+the server says yes or no, explains each step, and names the workflow line and pattern that decide. Offline.</p>
+<p>AI assistants answer these questions from memory, and the rules have traps:
+- <code>branches: ["feature/*"]</code> does <strong>not</strong> match <code>feature/login/v2</code>: <code>*</code> stops at <code>/</code>. Use <code>feature/**</code>.
+- With <code>branches</code> and <code>!</code> exceptions, the <strong>last</strong> matching pattern wins: order matters.
+- On <code>pull_request</code>, branch filters are compared with the <strong>base</strong> branch (the target), not the PR branch.
+- <code>on.push</code> with only <code>branches</code> never runs for a <strong>tag</strong> push (and only <code>tags</code> never runs for a branch push).
+- <code>paths</code> filters are <strong>not evaluated</strong> for tag pushes; <code>paths-ignore</code> skips the run only if <strong>every</strong> changed file is ignored.
+- Default <code>pull_request</code> types are <code>opened</code>, <code>synchronize</code>, <code>reopened</code>: <code>labeled</code> or <code>closed</code> need <code>types:</code>.
+- <code>[skip ci]</code>, <code>[ci skip]</code>, <code>[no ci]</code>, <code>[skip actions]</code>, <code>[actions skip]</code> or a <code>skip-checks: true</code> trailer skip push and pull_request runs.
+- More than 3 tags pushed at once: no push event at all. A pull request with a merge conflict: no <code>pull_request</code> run.
+- <code>branches</code> together with <code>branches-ignore</code> (or <code>paths</code> with <code>paths-ignore</code>) makes GitHub reject the whole file.</p>
+<h2>Tools</h2>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>will_workflow_run</code></td>
+<td>One workflow (YAML text or path) and one push / pull request. Returns <code>runs</code> (true, false, or null with the missing input), the reasoning step by step, the deciding line and pattern, per-file decisions for path filters, and warnings (300-file diff limit, <code>!</code>-only lists, useless filters).</td>
+</tr>
+<tr>
+<td><code>which_workflows_run</code></td>
+<td>Every workflow of the repository (given as contents, or read from <code>.github/workflows/</code>) for one push or pull request: which run, which do not, and why.</td>
+</tr>
+<tr>
+<td><code>test_filter_patterns</code></td>
+<td>Test branch, tag or path patterns against names: selected or not, which pattern decides, the exact regular expression, and GitHub's error for an invalid pattern.</td>
+</tr>
+</tbody>
+</table>
+<h2>Example</h2>
+<pre><code class="language-json">{ &quot;name&quot;: &quot;will_workflow_run&quot;, &quot;arguments&quot;: {
+  &quot;workflow&quot;: &quot;on:\n  push:\n    branches: [main, 'releases/**', '!releases/**-alpha']\n    paths: ['src/**', '!src/**/*.md']\n&quot;,
+  &quot;branch&quot;: &quot;main&quot;, &quot;changed_files&quot;: [&quot;src/api/README.md&quot;, &quot;docs/setup.md&quot;] } }
+</code></pre>
+<p>Result: <code>runs: false</code>. Branch <code>main</code> matches line 3, but no changed file is selected by <code>paths</code>:
+<code>src/api/README.md</code> is excluded again by <code>!src/**/*.md</code>.</p>
+<h2>How exact is it?</h2>
+<p>The pattern engine is a line-by-line port of <code>pkg/workflowpattern</code> from <a href="https://github.com/nektos/act">nektos/act</a>
+(the tool that runs GitHub Actions locally), itself written from GitHub's documented filter syntax and cheat sheet.
+<code>test.js</code> builds act's Go code and compares both on random patterns and names (<code>*</code>, <code>**</code>, <code>?</code>, <code>+</code>, ranges, <code>!</code>,
+escapes, invalid patterns): 300,000 cases, 0 differences. 4,000 recorded answers stay in <code>fixtures.json</code>.
+The event rules (branch vs tag filters, base branch, types, <code>[skip ci]</code>, 3 tags, merge conflicts) follow GitHub's
+"Workflow syntax" and "Events that trigger workflows" docs, with 32 test cases. Checked on 68 real workflows
+(Vite, React, Next.js, Node.js, Rust, CPython, Deno...).</p>
+<p>Limits: GitHub's own matcher is not public. A <code>!</code> pattern inside a <code>*-ignore</code> list is undocumented: the server applies
+"last match wins" and warns. Only push, pull_request and pull_request_target filters are evaluated; other events are
+only checked for presence. Job-level <code>if:</code> conditions are not evaluated.</p>
+<h2>Install</h2>
+<ul>
+<li>Claude Desktop: open <code>gha-trigger-check-1.0.0.mcpb</code> from the <a href="https://github.com/Lawatch/10aday/releases/tag/gha-trigger-check-v1.0.0">GitHub release</a>.</li>
+<li>Any MCP client (Docker, read access to the project for <code>which_workflows_run</code>):
+  <code>{"command": "docker", "args": ["run", "-i", "--rm", "-v", "${workspaceFolder}:${workspaceFolder}:ro", "-w", "${workspaceFolder}", "ghcr.io/lawatch/gha-trigger-check:1.0.0"]}</code></li>
+<li>From source (Node 18+, no install): <code>{"command": "node", "args": ["/path/to/server.js"]}</code></li>
+</ul>
+<p>Offline, read-only, nothing is sent anywhere.</p>
+<h2>Licenses</h2>
+<p>Server code: MIT. Bundled unchanged: <code>yaml</code> 2.9.1 (ISC, Eemeli Aro), license in <code>vendor/</code>.
+Pattern engine ported from nektos/act (MIT).</p>
+<p>Built by AI agents (project <a href="https://github.com/Lawatch/10aday">10aday</a>).</p>
+<h2>More tools from the same factory</h2>
+<p><a href="../dotenv-check/">dotenv-check</a> · <a href="../browserslist-check/">browserslist-check</a> · <a href="../package-exports/">package-exports</a> · <a href="../npm-why/">npm-why</a> · <a href="../npm-pack-check/">npm-pack-check</a> · <a href="../gitignore-check/">gitignore-check</a> · <a href="../dockerignore-check/">dockerignore-check</a> · <a href="../gitattributes-check/">gitattributes-check</a> · <a href="../editorconfig-check/">editorconfig-check</a> · <a href="../version-range-mcp/">version-range-mcp</a></p>
+<footer>Free, open source (MIT), offline, read-only. Built and maintained by AI agents (project <a href="https://github.com/Lawatch/10aday">10aday</a>). Listed on the <a href="https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Lawatch">official MCP registry</a>.</footer>
+<script data-goatcounter="https://10aday.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

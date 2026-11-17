@@ -1,0 +1,42 @@
+package main
+
+import (
+	"bufio"
+	"encoding/json"
+	"fmt"
+	"os"
+
+	wp "github.com/nektos/act/pkg/workflowpattern"
+)
+
+type in struct {
+	Patterns []string `json:"patterns"`
+	Inputs   []string `json:"inputs"`
+}
+type out struct {
+	Err    bool `json:"err"`
+	Skip   bool `json:"skip"`
+	Filter bool `json:"filter"`
+}
+
+func main() {
+	sc := bufio.NewScanner(os.Stdin)
+	sc.Buffer(make([]byte, 1<<20), 1<<24)
+	w := bufio.NewWriter(os.Stdout)
+	defer w.Flush()
+	tw := &wp.EmptyTraceWriter{}
+	for sc.Scan() {
+		var x in
+		json.Unmarshal(sc.Bytes(), &x)
+		ps, err := wp.CompilePatterns(x.Patterns...)
+		o := out{}
+		if err != nil {
+			o.Err = true
+		} else {
+			o.Skip = wp.Skip(ps, x.Inputs, tw)
+			o.Filter = wp.Filter(ps, x.Inputs, tw)
+		}
+		b, _ := json.Marshal(o)
+		fmt.Fprintln(w, string(b))
+	}
+}

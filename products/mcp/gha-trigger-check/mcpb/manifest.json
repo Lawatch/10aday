@@ -1,0 +1,20 @@
+{
+  "manifest_version": "0.2",
+  "name": "gha-trigger-check",
+  "display_name": "GitHub Actions trigger checker",
+  "version": "1.0.0",
+  "description": "Will this GitHub Actions workflow run for this push or pull request, and which line of the workflow decides? Branch, tag and path filters, types, [skip ci]. Offline.",
+  "long_description": "will_workflow_run answers \"why didn't my workflow run?\" for a push or pull request: branches, branches-ignore, tags, tags-ignore, paths and paths-ignore with GitHub's exact glob rules (\"*\" stops at \"/\", \"**\", \"!\" exceptions where the last matching pattern wins), pull_request branch filters compared with the base branch, tag pushes ignored when only branch filters exist, default pull_request types, [skip ci] markers, more than 3 tags pushed at once, merge conflicts, and filters that make GitHub reject the file. which_workflows_run checks all workflows of a repository at once. test_filter_patterns tests patterns against branch names or paths. Pattern engine checked against the Go code of nektos/act on 300,000 random cases: 0 differences. Offline, read-only. Built and maintained by AI agents (project 10aday).",
+  "author": { "name": "10aday (AI agents)", "url": "https://github.com/Lawatch/10aday" },
+  "repository": { "type": "git", "url": "https://github.com/Lawatch/10aday" },
+  "homepage": "https://github.com/Lawatch/10aday/tree/main/products/mcp/gha-trigger-check",
+  "license": "MIT",
+  "keywords": ["github-actions", "ci", "workflow", "on-push", "pull-request", "paths-filter", "branches", "glob", "devops", "developer-tools"],
+  "server": { "type": "node", "entry_point": "server.js", "mcp_config": { "command": "node", "args": ["${__dirname}/server.js"] } },
+  "tools": [
+    { "name": "will_workflow_run", "description": "Will this workflow run for this push or pull request, and which line decides." },
+    { "name": "which_workflows_run", "description": "Which workflows of the repository run for this push or pull request." },
+    { "name": "test_filter_patterns", "description": "Test branch, tag or path filter patterns against names." }
+  ],
+  "compatibility": { "runtimes": { "node": ">=18.0.0" } }
+}

@@ -16,6 +16,8 @@ GC = '<script data-goatcounter="https://10aday.goatcounter.com/count" async src=
 
 # (folder, slug, needs project files, short pitch for the index)
 TOOLS = [
+    ("products/mcp/gha-trigger-check", "gha-trigger-check", True,
+     "Why didn't my GitHub Actions workflow run? Will this push or PR trigger it? Branch, tag and path filters with the exact glob rules (<code>*</code> stops at <code>/</code>, last <code>!</code> wins), base branch for PRs, default types, <code>[skip ci]</code>, and the workflow line that decides."),
     ("products/mcp/dotenv-check", "dotenv-check", False,
      "Why is my env variable empty or wrong? The exact value of each <code>.env</code> variable and the file and line that decide it, with dotenv, node --env-file, Vite and Next.js. Flags the traps: <code>#</code> in passwords, trailing spaces, <code>$VAR</code>, secrets exposed to the browser."),
     ("products/mcp/browserslist-check", "browserslist-check", False,

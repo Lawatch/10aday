@@ -1,0 +1,16 @@
+#!/usr/bin/env python3
+"""One-click install file for Claude Desktop (.mcpb = zip with manifest.json at the root). Deterministic, so the
+SHA-256 in server.json stays valid. Usage: python3 build_mcpb.py -> dist/gha-trigger-check-<version>.mcpb and its sha256."""
+import hashlib, json, os, zipfile
+HERE = os.path.dirname(os.path.abspath(__file__))
+manifest = json.load(open(os.path.join(HERE, 'mcpb', 'manifest.json')))
+files = [('manifest.json', 'mcpb/manifest.json'), ('server.js', 'server.js'), ('engine.js', 'engine.js')] + [('vendor/' + f, 'vendor/' + f) for f in sorted(os.listdir(os.path.join(HERE, 'vendor')))]
+os.makedirs(os.path.join(HERE, 'dist'), exist_ok=True)
+out = os.path.join(HERE, 'dist', '%s-%s.mcpb' % (manifest['name'], manifest['version']))
+with zipfile.ZipFile(out, 'w', zipfile.ZIP_DEFLATED) as z:
+    for arc, src in files:
+        info = zipfile.ZipInfo(arc, date_time=(2026, 1, 1, 0, 0, 0))
+        info.compress_type = zipfile.ZIP_DEFLATED
+        info.external_attr = 0o644 << 16
+        z.writestr(info, open(os.path.join(HERE, src), 'rb').read())
+print(os.path.relpath(out, HERE), hashlib.sha256(open(out, 'rb').read()).hexdigest())
