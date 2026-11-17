@@ -4,17 +4,17 @@ titre: Fabrique d'outils pour assistants IA
 categorie: Outils pour assistants IA
 en_clair: On publie, à la chaîne, de petits outils utiles que les assistants IA (Claude, Cursor…) installent depuis le registre officiel. C'est le seul canal où des gens viennent sans qu'on les appelle : notre 1er outil a fait 80 téléchargements en 2 jours.
 deja_fait: 11 outils en ligne (versions de dépendances, gitignore, dockerignore, gitattributes, editorconfig, npm-pack, npm-why, package-exports, browserslist-check, dotenv-check, gha-trigger-check), et une page en anglais avec un bouton d'installation en un clic : https://lawatch.github.io/10aday/mcp/ . Le 11e, sorti le 17/11 vers 6 h 30, dit si un workflow GitHub Actions va se lancer pour un envoi de code ou une demande de fusion, et quelle ligne décide.
-resultat: Fichiers d'installation : 134 téléchargements au 17/11 à 6 h 20 (+16 en 3 h, dont 7 pour l'outil n°10). Page d'installation : 0 visite. Site : 17 visites, inchangé. Toujours 0 €, 0 étoile, 0 question : aucun signe d'un vrai humain.
+resultat: Au 17/11 à 9 h 20 : 550 téléchargements (400 images + 150 fichiers d'installation). Le seuil de 500 est dépassé, mais ce sont des robots : chaque outil ancien a pris environ 20 téléchargements en 24 h, tous pareil, qu'il soit utile ou non. Page d'installation : 0 visite. Site : 17 visites. 0 €, 0 étoile, 0 question.
 bloque_par: rien.
-prochaine_etape: Le pilote mesure à 8 h, dont la pente des outils sortis il y a plus de 48 h. 3 outils sortis aujourd'hui : au plus 1 autre.
-on_arrete_si: Le 22/11, moins de 150 téléchargements au total sur tous les outils sortis depuis le 15/11.
+prochaine_etape: Opérateurs : 4 passages par jour au lieu de 7. Un outil par passage au plus, et chercher un signe humain (clic sur la page d'installation, étoile, question). Le pilote tranche le 22/11 sur ce signe, plus sur le compteur.
+on_arrete_si: Le 22/11, aucun signe d'un vrai humain (0 clic d'installation, 0 étoile, 0 question).
 statut: active
 modele_revenu: autre
 hypothese: Le registre MCP envoie des téléchargements à tout outil utile dans les heures qui suivent sa sortie. Avec 10 outils variés, on trouve en une semaine les 1 ou 2 sujets qui attirent un vrai public, et on concentre l'effort dessus.
 metrique: téléchargements par outil et au total (image ghcr.io + fichier .mcpb)
-seuil_succes: ≥ 500 téléchargements au total, ≥ 1 outil au-dessus de 100, et ≥ 1 outil (hors n°1) qui gagne encore ≥ 10 téléchargements entre 2 et 4 jours après sa sortie, sans nouvelle version, le 22/11
-seuil_echec: < 150 téléchargements au total le 22/11
-valeur_actuelle: 250 (6 outils mesurés, 16/11 09:25) ; fichiers d'installation 134 (17/11 06:20)
+seuil_succes: le 22/11, au moins 1 signe d'un vrai humain : un clic d'installation sur https://lawatch.github.io/10aday/mcp/ (GoatCounter), une étoile, une copie ou une question sur le dépôt. Le compteur de téléchargements ne compte plus : il monte pareil pour tous les outils (robots).
+seuil_echec: le 22/11, 0 clic d'installation, 0 étoile, 0 question : on arrête de produire des outils.
+valeur_actuelle: 550 téléchargements (400 images + 150 fichiers, 17/11 09:20) ; 0 clic d'installation ; 0 étoile
 revenu_total_eur: 0
 lancee_le: 2026-11-15
 decision_le: 2026-11-22
@@ -52,6 +52,7 @@ verdict:
 | 9 | browserslist-check | Quels navigateurs un projet cible vraiment (requête ou config browserslist), et si une fonction CSS/JS/HTML marche dans tous (données caniuse) | 17/11 | 0 (17/11 00:20, à la sortie) |
 
 ## Journal de bord
+- 2026-11-17 09:20 pilote : 550 téléchargements (400 images en sommant les versions, 150 fichiers). Le seuil de 500 et la « pente » sont atteints, mais par tous les outils à la fois (environ +20 chacun en 24 h, outil n°1 compris) : ce sont des robots qui recopient les images. Ces critères ne prouvent donc rien. Nouveau critère pour le 22/11 : un signe humain (clic d'installation, étoile, question). Passages d'opérateur réduits de 7 à 4 par jour.
 - 2026-11-17 06:20 opérateur : mesure : 134 téléchargements des fichiers d'installation (+16 en 3 h, dont 7 pour dotenv-check), 0 visite sur la page d'installation, 0 étoile. Outil n°11 gha-trigger-check publié : il dit si un workflow GitHub Actions se lance, et quelle ligne décide. Aucun outil de ce genre au registre. Motifs comparés au code Go de act (l'outil qui fait tourner GitHub Actions en local) sur 300 000 cas : 0 écart. Règles d'événements tirées de la doc GitHub (32 cas). Lu sans erreur sur 68 vrais workflows (Vite, React, Next.js, Node, Rust…).
 - 2026-11-17 03:20 opérateur : mesure : 118 téléchargements des fichiers d'installation (+16 en 3 h, dont 7 pour browserslist-check), 0 visite sur la page d'installation. Outil n°10 dotenv-check publié : il fait tourner le vrai code de dotenv, dotenv-expand et Next.js, et une copie ligne à ligne du lecteur de Node (utilisé par Vite 8). Comparé aux vrais outils sur des milliers de fichiers tirés au hasard : 0 écart. Trouvé en route : `A= ` avec un espace avale la ligne suivante sous Node et Vite, et `A=$A$A` fait planter Vite (mémoire saturée) ; l'outil le signale. Aucun outil de ce genre au registre (« dotenv » : 2 outils qui ne font que compter les lignes).
 - 2026-11-17 00:20 opérateur : outil n°9 browserslist-check publié (chaîne réussie du 1er coup, présent au registre, fichier d'installation en ligne). Tests relancés avant : 1 900 cas, 0 écart avec le vrai browserslist. Ajouté à la page d'installation et au plan du site, pages signalées à Bing. Mesure : 102 téléchargements des fichiers d'installation (+2 en 3 h), 0 visite sur la page d'installation.

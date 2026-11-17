@@ -23,7 +23,9 @@ PILOT_HOUR = 9        # heure UTC du passage quotidien du pilote
 SINGLE_TRACK_HOURS = tuple(range(0, 24, 3))  # propriétaire 15/11 : une piste seule produit aussi à chaque créneau
 # Pilote 2026-11-15 : jusqu'au 20/11 les pistes ne font que recompter (rien à construire). Les passages d'opérateur sont limités à ces heures UTC.
 # Avec 2 pistes de poids 1 : EXP-007 à 16 h, EXP-006 à 20 h. Remettre à None pour revenir au rythme normal.
-OPERATOR_HOURS = None  # propriétaire 15/11 : fin du mode « on recompte », tous les créneaux produisent
+# Pilote 17/11 : les téléchargements montent de façon égale sur tous les outils (robots). Un outil de plus ne prouve rien.
+# On passe de 7 à 4 passages d'opérateur par jour (0 h, 6 h, 12 h, 18 h UTC). Remettre à None si un vrai humain apparaît.
+OPERATOR_HOURS = (0, 6, 12, 18)
 
 
 def prompt_template():
