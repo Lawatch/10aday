@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>.env checker: dotenv, Node, Vite, Next.js — MCP server for Claude, Cursor, VS Code</title>
+<meta name="description" content="Real value of each .env variable and the file:line that decides, for dotenv, node, Vite, Next.js">
+<link rel="canonical" href="https://lawatch.github.io/10aday/mcp/dotenv-check/">
+<meta property="og:title" content=".env checker: dotenv, Node, Vite, Next.js — MCP server for Claude, Cursor, VS Code">
+<meta property="og:description" content="Real value of each .env variable and the file:line that decides, for dotenv, node, Vite, Next.js">
+<meta property="og:url" content="https://lawatch.github.io/10aday/mcp/dotenv-check/">
+<style>body{font-family:system-ui,-apple-system,Segoe UI,sans-serif;max-width:900px;margin:2rem auto;padding:0 1rem;line-height:1.6;color:#1d1d1f}
+h1{font-size:1.6rem;margin:.2rem 0 .6rem}h2{font-size:1.2rem;margin-top:2rem}h3{font-size:1.05rem;margin:.2rem 0}
+code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.9em}
+pre{background:#f6f8fa;padding:.7rem;overflow-x:auto;border-radius:6px}
+table{border-collapse:collapse;width:100%;margin:.6rem 0;font-size:.92rem}th,td{border:1px solid #ddd;padding:.35rem .5rem;text-align:left;vertical-align:top}th{background:#f6f6f6}
+.muted{color:#666}.card{border:1px solid #ddd;border-radius:8px;padding:.8rem 1rem;margin:.8rem 0}
+.btns{display:flex;flex-wrap:wrap;gap:.5rem;margin:.6rem 0}.btn{display:inline-block;padding:.35rem .7rem;border-radius:6px;border:1px solid #b8cdf5;background:#eef4ff;text-decoration:none;color:#1a4fb4;font-size:.9rem}
+footer{margin-top:3rem;font-size:.85rem;color:#666;border-top:1px solid #ddd;padding-top:1rem}</style>
+</head>
+<body>
+<p class="muted"><a href="../">MCP tools</a> › dotenv-check</p>
+<h1>.env checker: dotenv, Node, Vite, Next.js — MCP server</h1>
+<p><strong>Real value of each .env variable and the file:line that decides, for dotenv, node, Vite, Next.js</strong></p>
+<div class="btns"><a class="btn" href="https://github.com/Lawatch/10aday/releases/download/dotenv-check-v1.0.0/dotenv-check-1.0.0.mcpb" data-goatcounter-click="install-dotenv-check-claude">Claude Desktop (.mcpb)</a><a class="btn" href="vscode:mcp/install?%7B%22name%22%3A%22dotenv-check%22%2C%22command%22%3A%22docker%22%2C%22args%22%3A%5B%22run%22%2C%22-i%22%2C%22--rm%22%2C%22ghcr.io/lawatch/dotenv-check%3A1.0.0%22%5D%7D" data-goatcounter-click="install-dotenv-check-vscode">Install in VS Code</a><a class="btn" href="cursor://anysphere.cursor-deeplink/mcp/install?name=dotenv-check&amp;config=eyJjb21tYW5kIjoiZG9ja2VyIiwiYXJncyI6WyJydW4iLCItaSIsIi0tcm0iLCJnaGNyLmlvL2xhd2F0Y2gvZG90ZW52LWNoZWNrOjEuMC4wIl19" data-goatcounter-click="install-dotenv-check-cursor">Install in Cursor</a><a class="btn" href="https://github.com/Lawatch/10aday/tree/main/products/mcp/dotenv-check" data-goatcounter-click="source-dotenv-check">Source</a></div>
+<p class="muted">Registry name <code>io.github.Lawatch/dotenv-check</code>, version 1.0.0. The VS Code and Cursor buttons run the Docker image and give it read-only access to the open project.</p>
+<h2>Other clients</h2>
+<pre><code>docker run -i --rm ghcr.io/lawatch/dotenv-check:1.0.0</code></pre>
+<p>JSON config (Claude Desktop, Windsurf, Cline…), replace the path:</p>
+<pre><code>{
+  &quot;mcpServers&quot;: {
+    &quot;dotenv-check&quot;: {
+      &quot;command&quot;: &quot;docker&quot;,
+      &quot;args&quot;: [
+        &quot;run&quot;,
+        &quot;-i&quot;,
+        &quot;--rm&quot;,
+        &quot;ghcr.io/lawatch/dotenv-check:1.0.0&quot;
+      ]
+    }
+  }
+}</code></pre>
+<h2>Documentation</h2>
+<p><strong>Why is my environment variable empty, wrong or <code>undefined</code>?</strong>
+The exact value each <code>.env</code> variable gets, and the file and line that decide it, with the four loaders developers use:
+npm <strong>dotenv</strong> (+ dotenv-expand), <strong>node --env-file</strong>, <strong>Vite</strong> and <strong>Next.js</strong>. Offline.</p>
+<p>AI assistants answer <code>.env</code> questions from memory, and the loaders disagree with each other:
+- <code>PASSWORD=abc#123</code> gives <code>abc</code>: an unquoted <code>#</code> starts a comment, even with no space before it.
+- <code>API_URL=</code> (a trailing space) followed by a new line: Node and Vite 8 take the <strong>next line</strong> as the value, and that variable disappears.
+- Which file wins? dotenv and Next.js: the <strong>first</strong> file that defines it. Node and Vite: the <strong>last</strong>. The shell environment wins over all files.
+- <code>$VAR</code> is expanded by dotenv-expand, Vite and Next.js, <strong>even inside single quotes</strong>, but never by Node or plain dotenv.
+- Vite only exposes <code>VITE_*</code> to client code, Next.js only <code>NEXT_PUBLIC_*</code>, and <code>.env.local</code> is skipped by Next.js when <code>NODE_ENV=test</code>.
+- <code>A=$A$A</code> makes Vite and dotenv-expand loop until the process runs out of memory.</p>
+<h2>Tools</h2>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>resolve_env</code></td>
+<td>Give the <code>.env</code> files and the loader (<code>dotenv</code>, <code>node</code>, <code>vite</code>, <code>nextjs</code>) with the mode. For each variable: final value, the <code>file:line</code> that decides, the definitions that lose and why, the text before <code>$VAR</code> expansion, whether it reaches browser code. Plus every trap found and the files the loader never reads in this mode.</td>
+</tr>
+<tr>
+<td><code>parse_env_file</code></td>
+<td>One file, parsed with the real dotenv or Node parser: each value with its line, lines silently ignored, values cut at <code>#</code>, unclosed quotes, multi-line values, duplicate keys.</td>
+</tr>
+<tr>
+<td><code>compare_env_parsers</code></td>
+<td>The variables that read differently with dotenv and with Node's parser (node --env-file, Vite 8). Run it before switching.</td>
+</tr>
+</tbody>
+</table>
+<h2>Example</h2>
+<pre><code class="language-json">{ &quot;name&quot;: &quot;resolve_env&quot;, &quot;arguments&quot;: { &quot;loader&quot;: &quot;vite&quot;, &quot;mode&quot;: &quot;production&quot;, &quot;files&quot;: {
+  &quot;.env&quot;: &quot;VITE_API_URL=http://localhost:3000\nDB_PASSWORD=abc#123\n&quot;,
+  &quot;.env.production&quot;: &quot;VITE_API_URL= \nVITE_TITLE=My app\n&quot; } } }
+</code></pre>
+<p>Result: <code>VITE_API_URL</code> = <code>"VITE_TITLE=My app"</code> (from <code>.env.production:1</code>, the <code>.env:1</code> value loses), <code>VITE_TITLE</code> does not
+exist, <code>DB_PASSWORD</code> is cut to <code>abc</code> and is not in <code>import.meta.env</code> anyway (no <code>VITE_</code> prefix).</p>
+<h2>How exact is it?</h2>
+<p>The real code runs inside: npm <code>dotenv</code> 17.4.2 and <code>dotenv-expand</code> 12.0.3 (unchanged), the copy of dotenv-expand bundled
+in Vite 8.3.8 (unchanged), <code>@next/env</code> 16.4.6 (unchanged, run with the files in memory), and a line-by-line port of
+Node's C++ parser (<code>src/node_dotenv.cc</code>, identical in Node 22 to 25). The only addition: a guard that stops a value
+growing without end, where the real loader would crash. <code>test.js</code> compares the server with <code>util.parseEnv</code>,
+<code>node --env-file</code>, Vite's <code>loadEnv</code>, Next's <code>loadEnvConfig</code> and dotenv + dotenv-expand on thousands of random files
+(quotes, <code>#</code>, <code>$VAR</code>, <code>${VAR:-default}</code>, multi-line values, CRLF, <code>export</code>, several files, mode, shell variables): 0 differences.</p>
+<p>Limits: <code>.env.vault</code> / dotenvx encryption and Docker Compose <code>.env</code> rules are not covered. Vite's <code>envDir</code> and
+<code>define</code> are not read: give the files Vite would see.</p>
+<h2>Install</h2>
+<ul>
+<li>Claude Desktop: open <code>dotenv-check-1.0.0.mcpb</code> from the <a href="https://github.com/Lawatch/10aday/releases/tag/dotenv-check-v1.0.0">GitHub release</a>.</li>
+<li>Any MCP client (Docker): <code>{"command": "docker", "args": ["run", "-i", "--rm", "ghcr.io/lawatch/dotenv-check:1.0.0"]}</code></li>
+<li>From source (Node 18+, no install): <code>{"command": "node", "args": ["/path/to/server.js"]}</code></li>
+</ul>
+<p>Offline, read-only, no file access: you pass the file contents, nothing is sent anywhere.</p>
+<h2>Licenses</h2>
+<p>Server code: MIT. Bundled unchanged: dotenv and dotenv-expand (BSD-2-Clause, Scott Motte and contributors),
+@next/env (MIT, Vercel). License texts in <code>vendor/</code>.</p>
+<p>Built by AI agents (project <a href="https://github.com/Lawatch/10aday">10aday</a>).</p>
+<h2>More tools from the same factory</h2>
+<p><a href="../browserslist-check/">browserslist-check</a> · <a href="../package-exports/">package-exports</a> · <a href="../npm-why/">npm-why</a> · <a href="../npm-pack-check/">npm-pack-check</a> · <a href="../gitignore-check/">gitignore-check</a> · <a href="../dockerignore-check/">dockerignore-check</a> · <a href="../gitattributes-check/">gitattributes-check</a> · <a href="../editorconfig-check/">editorconfig-check</a> · <a href="../version-range-mcp/">version-range-mcp</a></p>
+<footer>Free, open source (MIT), offline, read-only. Built and maintained by AI agents (project <a href="https://github.com/Lawatch/10aday">10aday</a>). Listed on the <a href="https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Lawatch">official MCP registry</a>.</footer>
+<script data-goatcounter="https://10aday.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

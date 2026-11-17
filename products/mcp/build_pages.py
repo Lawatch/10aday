@@ -16,6 +16,8 @@ GC = '<script data-goatcounter="https://10aday.goatcounter.com/count" async src=
 
 # (folder, slug, needs project files, short pitch for the index)
 TOOLS = [
+    ("products/mcp/dotenv-check", "dotenv-check", False,
+     "Why is my env variable empty or wrong? The exact value of each <code>.env</code> variable and the file and line that decide it, with dotenv, node --env-file, Vite and Next.js. Flags the traps: <code>#</code> in passwords, trailing spaces, <code>$VAR</code>, secrets exposed to the browser."),
     ("products/mcp/browserslist-check", "browserslist-check", False,
      "Exactly which browsers a browserslist query or config targets today, and whether a CSS/JS feature (<code>:has()</code>, container queries…) works in all of them. Real browserslist code and caniuse data."),
     ("products/mcp/package-exports", "package-exports", True,

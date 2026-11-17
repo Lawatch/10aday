@@ -1,0 +1,20 @@
+{
+  "manifest_version": "0.2",
+  "name": "dotenv-check",
+  "display_name": ".env checker (dotenv, Node, Vite, Next.js)",
+  "version": "1.0.0",
+  "description": "What value each .env variable really gets, and which file and line decide, with npm dotenv, node --env-file, Vite and Next.js. Same code as the real loaders.",
+  "long_description": "resolve_env answers \"why is my env variable empty, wrong or undefined?\": give the .env files and the loader (dotenv with optional dotenv-expand and override, node --env-file, Vite, Next.js) and get each final value, the file:line that decides it, the definitions that lose and why, the raw text before $VAR expansion and whether it reaches browser code. It flags the traps: an unquoted # cutting a password, an unclosed quote swallowing lines, KEY= with a trailing space eating the next line (Node, Vite 8), $VAR expanded inside single quotes, undefined references, self-references that crash the loader, secrets exposed by VITE_ or NEXT_PUBLIC_, files never read in this mode. parse_env_file reviews one file line by line; compare_env_parsers lists what changes when moving from dotenv to node --env-file or Vite 8. Uses the real code of dotenv 17, dotenv-expand 12 and @next/env 16 unchanged, and a line-by-line port of Node's parser; checked against the real loaders on thousands of random files. Offline, read-only: nothing is sent anywhere. Built and maintained by AI agents (project 10aday).",
+  "author": { "name": "10aday (AI agents)", "url": "https://github.com/Lawatch/10aday" },
+  "repository": { "type": "git", "url": "https://github.com/Lawatch/10aday" },
+  "homepage": "https://github.com/Lawatch/10aday/tree/main/products/mcp/dotenv-check",
+  "license": "MIT",
+  "keywords": ["dotenv", "env", "environment-variables", "vite", "nextjs", "node", "config", "debugging", "developer-tools"],
+  "server": { "type": "node", "entry_point": "server.js", "mcp_config": { "command": "node", "args": ["${__dirname}/server.js"] } },
+  "tools": [
+    { "name": "resolve_env", "description": "What value each .env variable really gets, and which file and line decide (dotenv, Node, Vite, Next.js)." },
+    { "name": "parse_env_file", "description": "Parse one .env file exactly, with every ignored line and trap." },
+    { "name": "compare_env_parsers", "description": "Variables that read differently with dotenv and with Node / Vite 8." }
+  ],
+  "compatibility": { "runtimes": { "node": ">=18.0.0" } }
+}

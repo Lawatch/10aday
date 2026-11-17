@@ -34,3 +34,4 @@
 | 2026-11-16 21:20 | (fichiers .mcpb seuls) | — | 100 au total : version-range 8+16, gitignore 10+10, dockerignore 11, gitattributes 10, editorconfig 13, npm-pack 10, npm-why 6, package-exports 6 | API versions (+1 en 3 h) ; page /10aday/mcp/ : 0 visite (GoatCounter) |
 | 2026-11-17 00:20 | (fichiers .mcpb seuls) | — | 102 au total : version-range 8+16, gitignore 10+11, dockerignore 11, gitattributes 10, editorconfig 13, npm-pack 10, npm-why 6, package-exports 7 | API versions (+2 en 3 h) ; page /10aday/mcp/ : 0 visite ; site 17 (GoatCounter) |
 | 2026-11-17 00:25 | browserslist-check | 0 | 0 | sortie à 00:25 |
+| 2026-11-17 03:20 | (fichiers .mcpb seuls) | — | 118 au total : version-range 8+16, gitignore 10+13, dockerignore 12, gitattributes 11, editorconfig 15, npm-pack 11, npm-why 7, package-exports 8, browserslist 7 | API versions (+16 en 3 h : 7 pour browserslist, +1 ou +2 pour chacun des autres) ; page /10aday/mcp/ : 0 visite ; site 17 (GoatCounter) |
