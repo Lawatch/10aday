@@ -16,6 +16,8 @@ GC = '<script data-goatcounter="https://10aday.goatcounter.com/count" async src=
 
 # (folder, slug, needs project files, short pitch for the index)
 TOOLS = [
+    ("products/mcp/browserslist-check", "browserslist-check", False,
+     "Exactly which browsers a browserslist query or config targets today, and whether a CSS/JS feature (<code>:has()</code>, container queries…) works in all of them. Real browserslist code and caniuse data."),
     ("products/mcp/package-exports", "package-exports", True,
      "Which file Node loads for <code>import \"pkg/sub\"</code> or <code>require</code>, which <code>exports</code> key decides, and the exact Node error when it fails."),
     ("products/mcp/npm-why", "npm-why", True,
@@ -129,7 +131,7 @@ def main():
                                            sj["description"], BASE + t["slug"] + "/", inner,
                                            '<a href="../">MCP tools</a> › ' + t["slug"]))
     inner = f"""<h1>Exact developer-file tools for AI assistants (MCP servers)</h1>
-<p>AI assistants often guess how git, npm, Node and Docker read their config files, and guess wrong.
+<p>AI assistants often guess how git, npm, Node, Docker and browserslist read their config files, and guess wrong.
 Each server below computes the answer with the real rules, ported from the real tool and checked against it
 on tens of thousands of cases (0 differences). One click to install in Claude Desktop, VS Code or Cursor.</p>
 {"".join(cards)}"""
