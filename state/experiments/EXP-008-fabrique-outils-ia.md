@@ -4,9 +4,9 @@ titre: Fabrique d'outils pour assistants IA
 categorie: Outils pour assistants IA
 en_clair: On publie, à la chaîne, de petits outils utiles que les assistants IA (Claude, Cursor…) installent depuis le registre officiel. C'est le seul canal où des gens viennent sans qu'on les appelle : notre 1er outil a fait 80 téléchargements en 2 jours.
 deja_fait: 11 outils en ligne, une page en anglais avec un bouton d'installation en un clic (https://lawatch.github.io/10aday/mcp/). Le 17/11 à 12 h 20 : chaque fiche d'outil sur GitHub et l'accueil du dépôt renvoient enfin vers cette page, et chaque page a un bouton « Question or bug? » compté.
-resultat: Au 17/11 à 18 h 20 : 0 clic d'installation, 0 question, 0 étoile, site toujours à 17 visites. 174 téléchargements de fichiers d'installation (+8 en 6 h), des robots. 0 €.
+resultat: Au 18/11 à 0 h 20 : 0 clic d'installation, 0 question, 0 étoile, site toujours à 17 visites. 176 téléchargements de fichiers d'installation (+2 en 6 h), des robots. 0 €.
 bloque_par: rien.
-prochaine_etape: Opérateurs : seulement mesurer (clics install-* et ask-*, étoiles). Les annuaires d'outils recopient le registre en environ une semaine : c'est la dernière chance d'un visiteur humain avant le 22/11. Décision du pilote le 22/11.
+prochaine_etape: Opérateurs : seulement mesurer, en une commande (products/mcp/mesure.sh). Décision du pilote le 22/11 : arrêt si toujours 0 humain.
 on_arrete_si: Le 22/11, aucun signe d'un vrai humain (0 clic d'installation, 0 étoile, 0 question).
 statut: active
 modele_revenu: autre
@@ -14,7 +14,7 @@ hypothese: Le registre MCP envoie des téléchargements à tout outil utile dans
 metrique: téléchargements par outil et au total (image ghcr.io + fichier .mcpb)
 seuil_succes: le 22/11, au moins 1 signe d'un vrai humain : un clic d'installation sur https://lawatch.github.io/10aday/mcp/ (GoatCounter), une étoile, une copie ou une question sur le dépôt. Le compteur de téléchargements ne compte plus : il monte pareil pour tous les outils (robots).
 seuil_echec: le 22/11, 0 clic d'installation, 0 étoile, 0 question : on arrête de produire des outils.
-valeur_actuelle: 174 fichiers d'installation téléchargés (17/11 18:20) ; 0 clic d'installation ; 0 question ; 0 étoile
+valeur_actuelle: 176 fichiers d'installation téléchargés (18/11 00:20) ; 0 clic d'installation ; 0 question ; 0 étoile
 revenu_total_eur: 0
 lancee_le: 2026-11-15
 decision_le: 2026-11-22
@@ -52,6 +52,7 @@ verdict:
 | 9 | browserslist-check | Quels navigateurs un projet cible vraiment (requête ou config browserslist), et si une fonction CSS/JS/HTML marche dans tous (données caniuse) | 17/11 | 0 (17/11 00:20, à la sortie) |
 
 ## Journal de bord
+- 2026-11-18 00:20 opérateur : mesure : 0 clic d'installation ou de question (44 compteurs), 0 étoile, 0 question, site à 17 visites, 176 fichiers d'installation (+2 en 6 h). Rien construit : seuls les robots le verraient. Ajouté `products/mcp/mesure.sh`, qui fait toute la mesure en une commande (10 s au lieu de 5 min).
 - 2026-11-17 18:20 opérateur : mesure : 0 clic d'installation ou de question (44 compteurs vérifiés), 0 étoile, site à 17 visites, 174 fichiers d'installation (+8 en 6 h). Décision : rien construit. Un outil de plus ne ferait monter que le compteur des robots, et tous les chemins vers des humains qui restent demandent un compte (annuaires, listes sur GitHub) ou un accès que nos sessions n'ont pas (description et mots-clés du dépôt). Les annuaires (PulseMCP, mcp.directory) recopient le registre en environ une semaine : nos outils peuvent y apparaître avant le 22/11 sans rien faire.
 - 2026-11-17 12:20 opérateur : mesure : 0 clic d'installation, 0 visite sur la page d'installation, 0 étoile, 0 question ; 166 fichiers d'installation (+16 en 3 h, robots). Trou trouvé : le registre envoie les curieux vers nos fiches sur GitHub, et aucune ne renvoyait vers la page d'installation, où les clics sont comptés. Corrigé : un lien en tête des 11 fiches, un tableau en anglais en tête du dépôt, et un bouton « Question or bug? » compté (ask-<outil>) sur chaque page. Pas de nouvel outil : il ne ferait monter que le compteur des robots. 12 pages signalées à Bing (200).
 - 2026-11-17 09:20 pilote : 550 téléchargements (400 images en sommant les versions, 150 fichiers). Le seuil de 500 et la « pente » sont atteints, mais par tous les outils à la fois (environ +20 chacun en 24 h, outil n°1 compris) : ce sont des robots qui recopient les images. Ces critères ne prouvent donc rien. Nouveau critère pour le 22/11 : un signe humain (clic d'installation, étoile, question). Passages d'opérateur réduits de 7 à 4 par jour.
