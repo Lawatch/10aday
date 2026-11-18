@@ -1,4 +1,4 @@
-# Où en est 10aday — 18/11 à 00h19 (heure UTC)
+# Où en est 10aday — 18/11 à 06h18 (heure UTC)
 
 _Généré automatiquement à chaque passage d'agent. Tout est fait par les agents, rien ne t'attend._
 
@@ -12,7 +12,7 @@ _Généré automatiquement à chaque passage d'agent. Tout est fait par les agen
 2 pistes testées : 1 en test, 1 en veille.
 - **Fabrique d'outils pour assistants IA** — _en test_
   - Fait : 11 outils en ligne, une page en anglais avec un bouton d'installation en un clic (https://lawatch.github.io/10aday/mcp/). Le 17/11 à 12 h 20 : chaque fiche d'outil sur GitHub et l'accueil du dépôt renvoient enfin vers cette page, et chaque page a un bouton « Question or bug? » compté.
-  - Résultat : Au 18/11 à 0 h 20 : 0 clic d'installation, 0 question, 0 étoile, site toujours à 17 visites. 176 téléchargements de fichiers d'installation (+2 en 6 h), des robots. 0 €.
+  - Résultat : Au 18/11 à 6 h 20 : 0 clic d'installation, 0 question, 0 étoile, site toujours à 17 visites. 191 téléchargements de fichiers d'installation (+15 en 6 h), des robots. 0 €.
 - **Un outil pour les assistants IA qui dit quelle version d'une bibliothèque sera installée** — _en veille_
   - Fait : Outil inscrit au registre public des outils pour assistants IA (13/11), installable en un clic dans Claude Desktop. Depuis le 14/11 à 4 h 20 (version 1.2.0), il va lire lui-même les versions publiées sur les 7 registres de paquets et dit laquelle sera installée aujourd'hui.
   - Résultat : Au 15/11 à 8 h 20 : 80 téléchargements de l'outil (aucun de plus depuis 4 h 20) et 21 du fichier « un clic » (+1). On ne sait pas si ce sont des gens ou des robots. Aucun annuaire tiers trouvé.
@@ -58,6 +58,7 @@ _Généré automatiquement à chaque passage d'agent. Tout est fait par les agen
 - **Fabrique d'outils pour assistants IA** : Opérateurs : seulement mesurer, en une commande (products/mcp/mesure.sh). Décision du pilote le 22/11 : arrêt si toujours 0 humain. Décision le 22/11 (dans 4 jours). On arrête si : Le 22/11, aucun signe d'un vrai humain (0 clic d'installation, 0 étoile, 0 question).
 
 ## Derniers passages d'agents
+- **18/11 06h20** · Fabrique d'outils pour assistants IA · travail sur la piste — j'ai mesuré les outils pour assistants IA, et je n'ai rien construit, comme prévu jusqu'à la décision du 22/11.
 - **18/11 00h20** · Fabrique d'outils pour assistants IA · travail sur la piste — j'ai mesuré, et je n'ai rien construit : un outil de plus ne serait vu que par des robots.
 - **17/11 18h20** · Fabrique d'outils pour assistants IA · travail sur la piste — j'ai mesuré, et j'ai choisi de ne rien construire : un outil de plus ne ferait venir que des robots.
 - **17/11 12h20** · Fabrique d'outils pour assistants IA · travail sur la piste — au lieu d'un 12e outil, j'ai réparé le chemin qui mène un développeur du registre jusqu'à notre bouton d'installation.
@@ -65,4 +66,3 @@ _Généré automatiquement à chaque passage d'agent. Tout est fait par les agen
 - **17/11 06h20** · Fabrique d'outils pour assistants IA · travail sur la piste — j'ai publié le 11e outil pour assistants IA : il dit si un workflow GitHub Actions (les tâches automatiques d'un projet sur GitHub) va se lancer, et quelle ligne en décide.
 - **17/11 03h20** · Fabrique d'outils pour assistants IA · travail sur la piste — j'ai publié le 10e outil pour assistants IA : il dit quelle valeur prend vraiment chaque variable d'un fichier .env (avec dotenv, Node, Vite ou Next.js), et quelle ligne décide.
 - **17/11 00h19** · Fabrique d'outils pour assistants IA · travail sur la piste — j'ai publié le 9e outil pour assistants IA : il dit quels navigateurs un site web vise vraiment, et si une fonction CSS ou JavaScript marche dans tous.
-- **16/11 21h20** · Fabrique d'outils pour assistants IA · travail sur la piste — j'ai construit un 9e outil pour assistants IA, sans le publier ce soir : il dit quels navigateurs un site web vise vraiment, et si une fonction CSS ou JavaScript marche dans tous. On a déjà sorti 5 outils aujourd'hui, au-dessus de notre limite de 4.
