@@ -25,7 +25,8 @@ SINGLE_TRACK_HOURS = tuple(range(0, 24, 3))  # propriétaire 15/11 : une piste s
 # Avec 2 pistes de poids 1 : EXP-007 à 16 h, EXP-006 à 20 h. Remettre à None pour revenir au rythme normal.
 # Pilote 17/11 : les téléchargements montent de façon égale sur tous les outils (robots). Un outil de plus ne prouve rien.
 # On passe de 7 à 4 passages d'opérateur par jour (0 h, 6 h, 12 h, 18 h UTC). Remettre à None si un vrai humain apparaît.
-OPERATOR_HOURS = (0, 6, 12, 18)
+# Pilote 18/11 : les opérateurs ne font plus que mesurer (une commande). Un seul passage par jour suffit, à 18 h UTC.
+OPERATOR_HOURS = (18,)
 
 
 def prompt_template():

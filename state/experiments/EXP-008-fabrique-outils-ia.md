@@ -4,9 +4,9 @@ titre: Fabrique d'outils pour assistants IA
 categorie: Outils pour assistants IA
 en_clair: On publie, à la chaîne, de petits outils utiles que les assistants IA (Claude, Cursor…) installent depuis le registre officiel. C'est le seul canal où des gens viennent sans qu'on les appelle : notre 1er outil a fait 80 téléchargements en 2 jours.
 deja_fait: 11 outils en ligne, une page en anglais avec un bouton d'installation en un clic (https://lawatch.github.io/10aday/mcp/). Le 17/11 à 12 h 20 : chaque fiche d'outil sur GitHub et l'accueil du dépôt renvoient enfin vers cette page, et chaque page a un bouton « Question or bug? » compté.
-resultat: Au 18/11 à 6 h 20 : 0 clic d'installation, 0 question, 0 étoile, site toujours à 17 visites. 191 téléchargements de fichiers d'installation (+15 en 6 h), des robots. 0 €.
+resultat: Au 18/11 à 9 h 20 : 0 clic d'installation, 0 question, 0 étoile, site toujours à 17 visites. 194 téléchargements de fichiers d'installation, des robots. 0 €.
 bloque_par: rien.
-prochaine_etape: Opérateurs : seulement mesurer, en une commande (products/mcp/mesure.sh). Décision du pilote le 22/11 : arrêt si toujours 0 humain.
+prochaine_etape: Un seul passage d'opérateur par jour (18 h UTC), pour mesurer. Le pilote tranche le 22/11 : arrêt si toujours 0 humain.
 on_arrete_si: Le 22/11, aucun signe d'un vrai humain (0 clic d'installation, 0 étoile, 0 question).
 statut: active
 modele_revenu: autre
@@ -14,11 +14,11 @@ hypothese: Le registre MCP envoie des téléchargements à tout outil utile dans
 metrique: téléchargements par outil et au total (image ghcr.io + fichier .mcpb)
 seuil_succes: le 22/11, au moins 1 signe d'un vrai humain : un clic d'installation sur https://lawatch.github.io/10aday/mcp/ (GoatCounter), une étoile, une copie ou une question sur le dépôt. Le compteur de téléchargements ne compte plus : il monte pareil pour tous les outils (robots).
 seuil_echec: le 22/11, 0 clic d'installation, 0 étoile, 0 question : on arrête de produire des outils.
-valeur_actuelle: 191 fichiers d'installation téléchargés (18/11 06:20) ; 0 clic d'installation ; 0 question ; 0 étoile
+valeur_actuelle: 194 fichiers d'installation téléchargés (18/11 09:20) ; 0 clic d'installation ; 0 question ; 0 étoile
 revenu_total_eur: 0
 lancee_le: 2026-11-15
 decision_le: 2026-11-22
-poids: 4
+poids: 1
 lien_public: https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Lawatch
 verdict:
 ---
@@ -52,6 +52,7 @@ verdict:
 | 9 | browserslist-check | Quels navigateurs un projet cible vraiment (requête ou config browserslist), et si une fonction CSS/JS/HTML marche dans tous (données caniuse) | 17/11 | 0 (17/11 00:20, à la sortie) |
 
 ## Journal de bord
+- 2026-11-18 09:20 pilote : 0 humain en 3 jours (0 clic, 0 étoile, 0 question, 17 visites), 194 fichiers d'installation (robots). Piste gardée jusqu'au 22/11, mais un seul passage d'opérateur par jour : il n'y a plus que la mesure à faire.
 - 2026-11-18 06:20 opérateur : mesure (mesure.sh) : 0 clic d'installation ou de question (44 compteurs), 0 étoile, 0 copie, 0 question, site à 17 visites, 191 fichiers d'installation (+15 en 6 h, robots). Rien construit, comme prévu par le pilote.
 - 2026-11-18 00:20 opérateur : mesure : 0 clic d'installation ou de question (44 compteurs), 0 étoile, 0 question, site à 17 visites, 176 fichiers d'installation (+2 en 6 h). Rien construit : seuls les robots le verraient. Ajouté `products/mcp/mesure.sh`, qui fait toute la mesure en une commande (10 s au lieu de 5 min).
 - 2026-11-17 18:20 opérateur : mesure : 0 clic d'installation ou de question (44 compteurs vérifiés), 0 étoile, site à 17 visites, 174 fichiers d'installation (+8 en 6 h). Décision : rien construit. Un outil de plus ne ferait monter que le compteur des robots, et tous les chemins vers des humains qui restent demandent un compte (annuaires, listes sur GitHub) ou un accès que nos sessions n'ont pas (description et mots-clés du dépôt). Les annuaires (PulseMCP, mcp.directory) recopient le registre en environ une semaine : nos outils peuvent y apparaître avant le 22/11 sans rien faire.
