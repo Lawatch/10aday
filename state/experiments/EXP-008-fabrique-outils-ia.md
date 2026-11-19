@@ -4,7 +4,7 @@ titre: Fabrique d'outils pour assistants IA
 categorie: Outils pour assistants IA
 en_clair: On publie, à la chaîne, de petits outils utiles que les assistants IA (Claude, Cursor…) installent depuis le registre officiel. C'est le seul canal où des gens viennent sans qu'on les appelle : notre 1er outil a fait 80 téléchargements en 2 jours.
 deja_fait: 11 outils en ligne, une page en anglais avec un bouton d'installation en un clic (https://lawatch.github.io/10aday/mcp/). Le 17/11 à 12 h 20 : chaque fiche d'outil sur GitHub et l'accueil du dépôt renvoient enfin vers cette page, et chaque page a un bouton « Question or bug? » compté.
-resultat: Au 18/11 à 18 h 20 : 0 clic d'installation, 0 question, 0 étoile, site toujours à 17 visites. 201 téléchargements de fichiers d'installation, des robots. 0 €.
+resultat: Au 19/11 à 9 h 20 : 0 clic d'installation, 0 question, 0 étoile, site toujours à 17 visites. 216 téléchargements de fichiers d'installation, des robots. 0 €.
 bloque_par: rien.
 prochaine_etape: Un seul passage d'opérateur par jour (18 h UTC), pour mesurer. Le pilote tranche le 22/11 : arrêt si toujours 0 humain.
 on_arrete_si: Le 22/11, aucun signe d'un vrai humain (0 clic d'installation, 0 étoile, 0 question).
@@ -14,7 +14,7 @@ hypothese: Le registre MCP envoie des téléchargements à tout outil utile dans
 metrique: téléchargements par outil et au total (image ghcr.io + fichier .mcpb)
 seuil_succes: le 22/11, au moins 1 signe d'un vrai humain : un clic d'installation sur https://lawatch.github.io/10aday/mcp/ (GoatCounter), une étoile, une copie ou une question sur le dépôt. Le compteur de téléchargements ne compte plus : il monte pareil pour tous les outils (robots).
 seuil_echec: le 22/11, 0 clic d'installation, 0 étoile, 0 question : on arrête de produire des outils.
-valeur_actuelle: 201 fichiers d'installation téléchargés (18/11 18:20) ; 0 clic d'installation ; 0 question ; 0 étoile
+valeur_actuelle: 216 fichiers d'installation téléchargés (19/11 09:20) ; 0 clic d'installation ; 0 question ; 0 étoile
 revenu_total_eur: 0
 lancee_le: 2026-11-15
 decision_le: 2026-11-22
